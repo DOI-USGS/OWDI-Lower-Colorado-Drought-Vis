@@ -21,8 +21,7 @@
   </path>
     <path class="path" fill="none" stroke="#B20000" stroke-width="10" stroke-miterlimit="1" d="M96.039,233.545c0,0-31-47,8-17s49-4,65,8
   	s30,61,53,27s66,4,58,55" style="stroke-dasharray: 1000px" stroke-linecap="round" stroke-dashoffset="1000px">
-  		<animate attributeName="stroke-dashoffset" begin="timeAdvanceStart.begin" from="1000px" to="0px" dur="5s" fill="freeze" values="1000; 400; 350; 0"
-    keyTimes="0; 0.5; 0.8; 5"/>
+  		<animate attributeName="stroke-dashoffset" begin="timeAdvanceStart.begin" from="1000px" to="0px" dur="5s" fill="freeze" values="1000; 100; 50; 0" keyTimes="0; 0.8; 0.9; 1.0"/>
   </path>
   
 </svg>
