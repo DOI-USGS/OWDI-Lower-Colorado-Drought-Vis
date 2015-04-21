@@ -1,0 +1,973 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" width="900" height="600">
+  <style>
+                         
+                         text{
+                         font-size: 16px;
+                         cursor: default;
+                         font-family: Tahoma, Geneva, sans-serif;
+                         }
+                         .dater{
+                         font-size: 21px;
+                         }
+                         .tooltip{
+                         font-size: 12px;
+                         }
+                         .caption{
+                         font-size: 12px;
+                         font-family: Tahoma, Geneva, sans-serif;
+                         }
+                         </style>
+  <script type="text/ecmascript"><![CDATA[
+                         
+                         function init(evt)
+{
+                         if ( window.svgDocument == null )
+{
+                         svgDocument = evt.target.ownerDocument;
+                         svgDocument.timeAdvance = this.timeAdvance;
+}
+                         
+                         tooltip = svgDocument.getElementById("tooltip");
+                         tooltip_bg = svgDocument.getElementById("tooltip_bg");
+}
+                         
+                         function ShowTooltip(evt, mouseovertext)
+{
+                         tooltip.setAttributeNS(null,"x",evt.clientX+8);
+                         tooltip.setAttributeNS(null,"y",evt.clientY+4);
+                         tooltip.firstChild.data = mouseovertext;
+                         tooltip.setAttributeNS(null,"visibility","visible");
+                         length = tooltip.getComputedTextLength();
+                         tooltip_bg.setAttributeNS(null,"width",length+16);
+                         tooltip_bg.setAttributeNS(null,"y",evt.clientY-16);
+                         tooltip_bg.setAttributeNS(null,"x",evt.clientX+1);
+                         tooltip_bg.setAttributeNS(null,"visibility","visible");
+}
+                         
+                         function HideTooltip(evt)
+{
+                         tooltip.setAttributeNS(null,"visibility","hidden");
+                         tooltip_bg.setAttributeNS(null,"visibility","hidden");
+                         tooltip.setAttributeNS(null,"transition","1s");
+                         tooltip_bg.setAttributeNS(null,"transition","1s");
+}   
+                         function MakeTransparent(evt) {
+                         evt.target.setAttributeNS(null,"fill-opacity","0.5");
+                         evt.target.setAttributeNS(null,"transition","1s");
+                         }
+                         
+                         function MakeOpaque(evt) {
+                         evt.target.setAttributeNS(null,"fill-opacity","1");
+                         evt.target.setAttributeNS(null,"transition","1s");
+                         }
+                         function timeAdvance(){
+  							          var ele = document.getElementById("timeAdvance");
+								          ele.beginElement();
+							           }
+                         ]]></script>
+  <g id="surface0">
+    <rect id="axis.box" x="80.0" y="10.0" width="680.0" height="480.0" style="fill:#FFFFFF;stroke:black"/>
+    <text transform="translate(50.0,250.0)rotate(270)" text-anchor="middle">Volume (million acre-feet)</text>
+    <line x1="80.0" y1="490.0" x2="80.0" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(85.0,495.0)rotate(270)" text-anchor="end">1900</text>
+    <line x1="139.6" y1="490.0" x2="139.6" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(144.6,495.0)rotate(270)" text-anchor="end">1910</text>
+    <line x1="199.3" y1="490.0" x2="199.3" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(204.3,495.0)rotate(270)" text-anchor="end">1920</text>
+    <line x1="258.9" y1="490.0" x2="258.9" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(263.9,495.0)rotate(270)" text-anchor="end">1930</text>
+    <line x1="318.6" y1="490.0" x2="318.6" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(323.6,495.0)rotate(270)" text-anchor="end">1940</text>
+    <line x1="378.2" y1="490.0" x2="378.2" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(383.2,495.0)rotate(270)" text-anchor="end">1950</text>
+    <line x1="437.9" y1="490.0" x2="437.9" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(442.9,495.0)rotate(270)" text-anchor="end">1960</text>
+    <line x1="497.5" y1="490.0" x2="497.5" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(502.5,495.0)rotate(270)" text-anchor="end">1970</text>
+    <line x1="557.2" y1="490.0" x2="557.2" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(562.2,495.0)rotate(270)" text-anchor="end">1980</text>
+    <line x1="616.8" y1="490.0" x2="616.8" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(621.8,495.0)rotate(270)" text-anchor="end">1990</text>
+    <line x1="676.5" y1="490.0" x2="676.5" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(681.5,495.0)rotate(270)" text-anchor="end">2000</text>
+    <line x1="736.1" y1="490.0" x2="736.1" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(741.1,495.0)rotate(270)" text-anchor="end">2010</text>
+    <line x1="80.0" y1="490.0" x2="85.0" y2="490.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,495.0)rotate(0)" text-anchor="end">0</text>
+    <line x1="80.0" y1="401.1" x2="85.0" y2="401.1" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,406.1)rotate(0)" text-anchor="end">5</text>
+    <line x1="80.0" y1="312.2" x2="85.0" y2="312.2" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,317.2)rotate(0)" text-anchor="end">10</text>
+    <line x1="80.0" y1="223.3" x2="85.0" y2="223.3" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,228.3)rotate(0)" text-anchor="end">15</text>
+    <line x1="80.0" y1="134.4" x2="85.0" y2="134.4" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,139.4)rotate(0)" text-anchor="end">20</text>
+    <line x1="80.0" y1="45.6" x2="85.0" y2="45.6" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,50.6)rotate(0)" text-anchor="end">25</text>
+    <path id="test" d="M115.8,138.5 L121.8,87.6 L127.7,251.3 L133.7,61.9 L139.6,196.6 L145.6,188.3 L151.6,140.7 L157.5,213.6 L163.5,88.6 L169.5,229.5 L175.4,94.0 L181.4,57.6 L187.4,184.8 L193.3,228.0 L199.3,62.9 L205.3,53.0 L211.2,129.0 L217.2,111.0 L223.2,206.1 L229.1,207.5 L235.1,201.7 L241.1,111.7 L247.0,181.3 L253.0,93.5 L258.9,213.1 L264.9,315.5 L270.9,142.2 L276.8,253.4 L282.8,360.8 L288.8,257.7 L294.7,222.7 L300.7,217.5 L306.7,154.6 L312.6,267.7 L318.6,293.3 L324.6,91.5 L330.5,165.2 L336.5,232.8 L342.5,200.1 L348.4,218.6 L354.4,275.5 L360.4,178.2 L366.3,207.6 L372.3,167.8 L378.2,240.4 L384.2,251.8 L390.2,90.9 L396.1,270.8 L402.1,319.4 L408.1,292.1 L414.0,269.2 L420.0,85.9 L426.0,177.3 L431.9,296.3 L437.9,261.6 L443.9,291.6 L449.8,166.1 L455.8,319.4 L461.8,290.9 L467.7,108.6 L473.7,279.8 L479.6,261.6 L485.6,226.2 L491.6,197.5 L497.5,204.4 L503.5,207.1 L509.5,239.9 L515.4,138.9 L521.4,246.9 L527.4,183.7 L533.3,277.4 L539.3,378.8 L545.3,192.2 L551.2,144.9 L557.2,140.7 L563.2,311.0 L569.1,158.8 L575.1,39.1 L581.1,28.1 L587.0,90.4 L593.0,65.6 L598.9,190.3 L604.9,265.2 L610.9,300.1 L616.8,303.9 L622.8,246.9 L628.8,262.2 L634.7,98.2 L640.7,283.7 L646.7,98.5 L652.6,219.8 L658.6,87.1 L664.6,169.7 L670.5,188.7 L676.5,287.6 L682.5,280.7 L688.4,369.6 L694.4,286.9 L700.4,292.3 L706.3,141.0 L712.3,234.6 L718.2,271.3 L724.2,183.9 L730.2,224.9 L736.1,242.0 L742.1,114.1 L748.1,340.4 " fill="none" style="stroke:#0066CC;stroke-width:3;stroke-dasharray:8814;stroke-linecap:round;stroke-dashoffset:8814">
+      <animate attributeName="stroke-dashoffset" id="timeAdvance" begin="indefinite" dur="15.000000s" fill="freeze" values="8761.27188739838;8597.48105001577;8407.94688014419;8273.06947736926;8262.81156496171;8214.85954751616;8141.65220432288;8016.4548094939;7875.37935194523;7739.75357581648;7702.82967102052;7575.482092755;7531.87943220102;7366.69768808514;7355.07325868146;7278.75776248165;7259.79803179658;7164.56359622414;7158.42643066291;7150.10730773313;7059.85514995017;6989.93139304014;6901.86575583091;6782.11536158893;6679.55682741449;6506.14693612078;6394.73365164632;6287.18444853085;6183.91979681506;6148.42944710851;6140.48011461281;6077.33465807038;5964.06685572183;5937.81298875741;5735.92426456132;5661.92947581933;5594.1286763027;5560.93758511665;5541.49035692325;5484.31398826356;5386.83985730865;5356.88411387962;5316.64611404523;5243.75674540895;5230.86341843605;5069.84434503419;4889.88727379347;4840.86573693961;4812.89491774591;4789.19326556393;4605.77219613874;4514.09883743729;4395.01615974491;4359.80610567265;4329.14667765788;4203.4358907905;4049.94231025005;4020.76466439106;3838.34711430742;3667.01636805021;3647.84352749825;3611.97980619374;3582.68451037553;3573.61563500903;3567.05865677411;3533.72883847888;3432.54623272605;3324.3040111008;3260.7383848389;3166.82341468281;3065.26982622542;2878.59091298015;2830.94491119933;2823.6198509382;2653.21023179096;2500.90230797452;2381.12524464972;2368.60057202543;2306.07794319178;2280.58826415491;2155.75784643136;2080.56697173998;2045.22611764172;2038.11867377942;1980.74464805178;1964.2706903468;1800.17880798363;1614.5857545221;1429.26804297415;1307.78103846278;1174.89868357302;1092.07117512562;1072.1692018171;973.079317343705;963.951120421108;874.842043421262;791.925397884084;783.888343103426;632.49022322784;538.743339066179;501.574740305836;414.000091039694;372.533202629271;354.490720920832;226.463742978163;0"/>
+    </path>
+    <circle id="usage-1" cx="115.8" cy="138.5" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1906')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.000s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-2" cx="121.8" cy="87.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1907')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.142s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-3" cx="127.7" cy="251.3" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1908')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.283s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-4" cx="133.7" cy="61.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1909')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.425s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-5" cx="139.6" cy="196.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1910')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.566s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-6" cx="145.6" cy="188.3" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1911')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.708s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-7" cx="151.6" cy="140.7" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1912')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.849s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-8" cx="157.5" cy="213.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1913')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.991s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-9" cx="163.5" cy="88.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1914')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.132s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-10" cx="169.5" cy="229.5" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1915')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.274s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-11" cx="175.4" cy="94.0" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1916')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.415s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-12" cx="181.4" cy="57.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1917')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.557s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-13" cx="187.4" cy="184.8" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1918')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.698s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-14" cx="193.3" cy="228.0" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1919')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.840s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-15" cx="199.3" cy="62.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1920')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.981s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-16" cx="205.3" cy="53.0" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1921')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.123s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-17" cx="211.2" cy="129.0" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1922')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.264s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-18" cx="217.2" cy="111.0" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1923')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.406s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-19" cx="223.2" cy="206.1" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1924')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.547s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-20" cx="229.1" cy="207.5" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1925')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.689s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-21" cx="235.1" cy="201.7" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1926')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.830s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-22" cx="241.1" cy="111.7" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1927')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.972s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-23" cx="247.0" cy="181.3" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1928')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.113s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-24" cx="253.0" cy="93.5" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1929')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.255s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-25" cx="258.9" cy="213.1" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1930')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.396s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-26" cx="264.9" cy="315.5" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1931')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.538s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-27" cx="270.9" cy="142.2" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1932')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.679s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-28" cx="276.8" cy="253.4" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1933')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.821s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-29" cx="282.8" cy="360.8" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1934')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.962s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-30" cx="288.8" cy="257.7" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1935')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.104s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-31" cx="294.7" cy="222.7" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1936')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.245s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-32" cx="300.7" cy="217.5" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1937')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.387s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-33" cx="306.7" cy="154.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1938')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.528s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-34" cx="312.6" cy="267.7" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1939')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.670s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-35" cx="318.6" cy="293.3" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1940')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.811s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-36" cx="324.6" cy="91.5" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1941')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.953s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-37" cx="330.5" cy="165.2" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1942')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.094s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-38" cx="336.5" cy="232.8" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1943')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.236s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-39" cx="342.5" cy="200.1" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1944')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.377s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-40" cx="348.4" cy="218.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1945')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.519s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-41" cx="354.4" cy="275.5" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1946')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.660s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-42" cx="360.4" cy="178.2" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1947')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.802s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-43" cx="366.3" cy="207.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1948')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.943s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-44" cx="372.3" cy="167.8" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1949')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.085s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-45" cx="378.2" cy="240.4" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1950')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.226s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-46" cx="384.2" cy="251.8" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1951')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.368s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-47" cx="390.2" cy="90.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1952')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.509s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-48" cx="396.1" cy="270.8" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1953')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.651s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-49" cx="402.1" cy="319.4" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1954')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.792s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-50" cx="408.1" cy="292.1" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1955')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.934s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-51" cx="414.0" cy="269.2" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1956')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.075s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-52" cx="420.0" cy="85.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1957')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.217s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-53" cx="426.0" cy="177.3" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1958')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.358s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-54" cx="431.9" cy="296.3" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1959')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.500s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-55" cx="437.9" cy="261.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1960')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.642s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-56" cx="443.9" cy="291.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1961')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.783s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-57" cx="449.8" cy="166.1" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1962')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.925s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-58" cx="455.8" cy="319.4" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1963')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.066s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-59" cx="461.8" cy="290.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1964')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.208s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-60" cx="467.7" cy="108.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1965')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.349s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-61" cx="473.7" cy="279.8" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1966')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.491s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-62" cx="479.6" cy="261.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1967')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.632s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-63" cx="485.6" cy="226.2" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1968')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.774s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-64" cx="491.6" cy="197.5" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1969')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.915s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-65" cx="497.5" cy="204.4" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1970')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.057s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-66" cx="503.5" cy="207.1" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1971')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.198s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-67" cx="509.5" cy="239.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1972')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.340s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-68" cx="515.4" cy="138.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1973')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.481s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-69" cx="521.4" cy="246.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1974')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.623s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-70" cx="527.4" cy="183.7" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1975')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.764s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-71" cx="533.3" cy="277.4" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1976')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.906s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-72" cx="539.3" cy="378.8" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1977')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.047s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-73" cx="545.3" cy="192.2" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1978')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.189s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-74" cx="551.2" cy="144.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1979')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.330s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-75" cx="557.2" cy="140.7" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1980')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.472s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-76" cx="563.2" cy="311.0" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1981')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.613s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-77" cx="569.1" cy="158.8" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1982')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.755s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-78" cx="575.1" cy="39.1" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1983')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.896s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-79" cx="581.1" cy="28.1" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1984')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.038s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-80" cx="587.0" cy="90.4" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1985')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.179s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-81" cx="593.0" cy="65.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1986')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.321s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-82" cx="598.9" cy="190.3" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1987')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.462s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-83" cx="604.9" cy="265.2" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1988')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.604s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-84" cx="610.9" cy="300.1" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1989')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.745s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-85" cx="616.8" cy="303.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1990')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.887s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-86" cx="622.8" cy="246.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1991')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.028s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-87" cx="628.8" cy="262.2" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1992')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.170s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-88" cx="634.7" cy="98.2" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1993')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.311s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-89" cx="640.7" cy="283.7" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1994')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.453s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-90" cx="646.7" cy="98.5" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1995')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.594s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-91" cx="652.6" cy="219.8" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1996')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.736s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-92" cx="658.6" cy="87.1" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1997')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.877s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-93" cx="664.6" cy="169.7" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1998')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.019s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-94" cx="670.5" cy="188.7" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1999')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.160s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-95" cx="676.5" cy="287.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2000')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.302s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-96" cx="682.5" cy="280.7" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2001')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.443s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-97" cx="688.4" cy="369.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2002')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.585s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-98" cx="694.4" cy="286.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2003')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.726s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-99" cx="700.4" cy="292.3" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2004')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.868s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-100" cx="706.3" cy="141.0" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2005')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.009s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-101" cx="712.3" cy="234.6" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2006')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.151s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-102" cx="718.2" cy="271.3" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2007')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.292s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-103" cx="724.2" cy="183.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2008')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.434s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-104" cx="730.2" cy="224.9" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2009')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.575s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-105" cx="736.1" cy="242.0" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2010')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.717s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-106" cx="742.1" cy="114.1" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2011')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.858s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <circle id="usage-107" cx="748.1" cy="340.4" r="1.5" style="fill:#0066CC;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2012')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+15.000s" fill="freeze" from="0" to="1" dur="0.1s"/>
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+    </circle>
+    <path id="test" d="M115.8,396.2 L121.8,392.6 L127.7,396.3 L133.7,386.3 L139.6,378.1 L145.6,378.8 L151.6,375.8 L157.5,374.5 L163.5,371.4 L169.5,377.5 L175.4,372.9 L181.4,380.6 L187.4,373.5 L193.3,365.8 L199.3,361.4 L205.3,361.4 L211.2,371.7 L217.2,355.6 L223.2,366.3 L229.1,359.9 L235.1,357.5 L241.1,352.6 L247.0,353.6 L253.0,352.1 L258.9,349.7 L264.9,354.8 L270.9,354.4 L276.8,353.8 L282.8,345.1 L288.8,336.1 L294.7,347.7 L300.7,343.8 L306.7,343.9 L312.6,345.6 L318.6,330.7 L324.6,324.7 L330.5,337.3 L336.5,323.5 L342.5,323.7 L348.4,329.1 L354.4,322.2 L360.4,326.1 L366.3,320.5 L372.3,323.2 L378.2,322.6 L384.2,324.9 L390.2,309.9 L396.1,315.2 L402.1,309.3 L408.1,314.0 L414.0,316.1 L420.0,299.4 L426.0,312.7 L431.9,298.6 L437.9,294.9 L443.9,307.8 L449.8,293.6 L455.8,289.8 L461.8,288.3 L467.7,291.7 L473.7,298.7 L479.6,293.1 L485.6,292.9 L491.6,278.8 L497.5,292.8 L503.5,281.9 L509.5,279.1 L515.4,274.2 L521.4,272.9 L527.4,283.8 L533.3,271.0 L539.3,269.1 L545.3,263.9 L551.2,275.7 L557.2,276.8 L563.2,273.7 L569.1,273.1 L575.1,255.9 L581.1,266.2 L587.0,258.0 L593.0,258.5 L598.9,260.9 L604.9,258.9 L610.9,255.3 L616.8,248.6 L622.8,247.9 L628.8,242.5 L634.7,240.6 L640.7,237.2 L646.7,250.7 L652.6,236.1 L658.6,247.4 L664.6,241.8 L670.5,233.5 L676.5,240.6 L682.5,224.2 L688.4,230.0 L694.4,228.4 L700.4,219.2 L706.3,222.9 L712.3,231.8 L718.2,228.4 L724.2,229.0 L730.2,216.6 L736.1,209.7 L742.1,214.6 L748.1,221.4 " fill="none" style="stroke:#B22C2C;stroke-width:3;stroke-dasharray:984px;stroke-linecap:round;stroke-dashoffset:984">
+      <animate attributeName="stroke-dashoffset" id="usage" begin="timeAdvance.begin" dur="15.000000s" fill="freeze" values="976.211384918729;969.202022075016;957.597206927116;947.429788803371;941.42213234337;934.754958066328;928.647596756718;921.94156551268;913.434335109708;905.911985553102;896.170429175287;886.86748466668;877.124204940694;869.736407489119;863.771402459932;851.84383481928;834.690897807498;822.463700615859;813.696146495202;807.264200476225;799.569419458596;793.523993272195;787.372113247473;780.955408848758;773.105032913309;767.127725001182;761.129283223265;750.530366696279;739.748957776347;726.637648977157;719.482110548213;713.515227463154;707.339194793536;691.292091224849;682.894939020544;669.031767435696;654.011283984525;648.041561258281;640.034897034251;630.970969914918;623.842173426538;615.653097843035;609.120336700464;603.122823065505;596.732699148924;580.639911848539;572.638252819407;564.23439166912;556.624122169898;550.327783547765;532.618907303783;518.04199924319;502.747827578474;495.714790534074;481.460509278996;466.041803364187;458.957552620831;452.819309382208;445.956065132106;436.751165835798;428.528381068451;422.559475380747;407.269346967739;392.082564506124;379.729864771142;373.121162696313;365.379114743993;359.281470293503;346.809609621061;332.682391732112;326.412679240666;318.488486675844;305.216212231781;299.151241268613;292.394654659907;286.399618471506;268.217795062456;256.274888314417;246.111337278313;240.128679044892;233.702850083848;227.435581412298;220.433516986267;211.514930608163;205.500864918969;197.462558370041;191.207494701697;184.337996991867;169.595341310918;153.841058354395;141.062623247226;132.896473095179;122.631035934583;113.321209363451;95.8244170511456;87.4741926143128;81.3035341675177;70.2896428203609;63.2594165042129;52.496229723545;45.6215054718116;39.6243847925226;25.7759155207387;16.7134803522328;8.99545772781278;0"/>
+    </path>
+    <rect id="year_1979" x="40" y="40" width="40" height="40"/>
+    <circle id="supply-1" cx="115.8" cy="396.2" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1906')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.000s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-2" cx="121.8" cy="392.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1907')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.142s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-3" cx="127.7" cy="396.3" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1908')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.283s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-4" cx="133.7" cy="386.3" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1909')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.425s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-5" cx="139.6" cy="378.1" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1910')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.566s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-6" cx="145.6" cy="378.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1911')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.708s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-7" cx="151.6" cy="375.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1912')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.849s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-8" cx="157.5" cy="374.5" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1913')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+0.991s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-9" cx="163.5" cy="371.4" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1914')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.132s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-10" cx="169.5" cy="377.5" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1915')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.274s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-11" cx="175.4" cy="372.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1916')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.415s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-12" cx="181.4" cy="380.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1917')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.557s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-13" cx="187.4" cy="373.5" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1918')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.698s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-14" cx="193.3" cy="365.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1919')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.840s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-15" cx="199.3" cy="361.4" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1920')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+1.981s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-16" cx="205.3" cy="361.4" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1921')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.123s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-17" cx="211.2" cy="371.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1922')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.264s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-18" cx="217.2" cy="355.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1923')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.406s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-19" cx="223.2" cy="366.3" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1924')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.547s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-20" cx="229.1" cy="359.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1925')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.689s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-21" cx="235.1" cy="357.5" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1926')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.830s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-22" cx="241.1" cy="352.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1927')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+2.972s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-23" cx="247.0" cy="353.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1928')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.113s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-24" cx="253.0" cy="352.1" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1929')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.255s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-25" cx="258.9" cy="349.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1930')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.396s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-26" cx="264.9" cy="354.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1931')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.538s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-27" cx="270.9" cy="354.4" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1932')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.679s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-28" cx="276.8" cy="353.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1933')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.821s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-29" cx="282.8" cy="345.1" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1934')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+3.962s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-30" cx="288.8" cy="336.1" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1935')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.104s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-31" cx="294.7" cy="347.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1936')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.245s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-32" cx="300.7" cy="343.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1937')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.387s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-33" cx="306.7" cy="343.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1938')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.528s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-34" cx="312.6" cy="345.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1939')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.670s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-35" cx="318.6" cy="330.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1940')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.811s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-36" cx="324.6" cy="324.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1941')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+4.953s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-37" cx="330.5" cy="337.3" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1942')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.094s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-38" cx="336.5" cy="323.5" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1943')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.236s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-39" cx="342.5" cy="323.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1944')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.377s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-40" cx="348.4" cy="329.1" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1945')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.519s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-41" cx="354.4" cy="322.2" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1946')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.660s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-42" cx="360.4" cy="326.1" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1947')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.802s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-43" cx="366.3" cy="320.5" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1948')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+5.943s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-44" cx="372.3" cy="323.2" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1949')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.085s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-45" cx="378.2" cy="322.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1950')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.226s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-46" cx="384.2" cy="324.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1951')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.368s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-47" cx="390.2" cy="309.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1952')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.509s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-48" cx="396.1" cy="315.2" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1953')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.651s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-49" cx="402.1" cy="309.3" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1954')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.792s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-50" cx="408.1" cy="314.0" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1955')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+6.934s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-51" cx="414.0" cy="316.1" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1956')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.075s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-52" cx="420.0" cy="299.4" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1957')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.217s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-53" cx="426.0" cy="312.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1958')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.358s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-54" cx="431.9" cy="298.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1959')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.500s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-55" cx="437.9" cy="294.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1960')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.642s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-56" cx="443.9" cy="307.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1961')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.783s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-57" cx="449.8" cy="293.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1962')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+7.925s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-58" cx="455.8" cy="289.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1963')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.066s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-59" cx="461.8" cy="288.3" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1964')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.208s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-60" cx="467.7" cy="291.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1965')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.349s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-61" cx="473.7" cy="298.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1966')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.491s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-62" cx="479.6" cy="293.1" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1967')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.632s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-63" cx="485.6" cy="292.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1968')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.774s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-64" cx="491.6" cy="278.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1969')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+8.915s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-65" cx="497.5" cy="292.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1970')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.057s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-66" cx="503.5" cy="281.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1971')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.198s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-67" cx="509.5" cy="279.1" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1972')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.340s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-68" cx="515.4" cy="274.2" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1973')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.481s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-69" cx="521.4" cy="272.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1974')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.623s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-70" cx="527.4" cy="283.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1975')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.764s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-71" cx="533.3" cy="271.0" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1976')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+9.906s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-72" cx="539.3" cy="269.1" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1977')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.047s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-73" cx="545.3" cy="263.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1978')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.189s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-74" cx="551.2" cy="275.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1979')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.330s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-75" cx="557.2" cy="276.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1980')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.472s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-76" cx="563.2" cy="273.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1981')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.613s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-77" cx="569.1" cy="273.1" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1982')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.755s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-78" cx="575.1" cy="255.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1983')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+10.896s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-79" cx="581.1" cy="266.2" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1984')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.038s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-80" cx="587.0" cy="258.0" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1985')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.179s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-81" cx="593.0" cy="258.5" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1986')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.321s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-82" cx="598.9" cy="260.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1987')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.462s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-83" cx="604.9" cy="258.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1988')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.604s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-84" cx="610.9" cy="255.3" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1989')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.745s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-85" cx="616.8" cy="248.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1990')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+11.887s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-86" cx="622.8" cy="247.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1991')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.028s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-87" cx="628.8" cy="242.5" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1992')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.170s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-88" cx="634.7" cy="240.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1993')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.311s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-89" cx="640.7" cy="237.2" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1994')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.453s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-90" cx="646.7" cy="250.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1995')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.594s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-91" cx="652.6" cy="236.1" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1996')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.736s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-92" cx="658.6" cy="247.4" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1997')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+12.877s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-93" cx="664.6" cy="241.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1998')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.019s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-94" cx="670.5" cy="233.5" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '1999')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.160s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-95" cx="676.5" cy="240.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2000')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.302s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-96" cx="682.5" cy="224.2" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2001')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.443s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-97" cx="688.4" cy="230.0" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2002')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.585s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-98" cx="694.4" cy="228.4" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2003')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.726s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-99" cx="700.4" cy="219.2" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2004')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+13.868s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-100" cx="706.3" cy="222.9" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2005')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.009s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-101" cx="712.3" cy="231.8" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2006')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.151s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-102" cx="718.2" cy="228.4" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2007')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.292s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-103" cx="724.2" cy="229.0" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2008')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.434s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-104" cx="730.2" cy="216.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2009')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.575s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-105" cx="736.1" cy="209.7" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2010')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.717s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-106" cx="742.1" cy="214.6" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2011')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+14.858s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <circle id="supply-107" cx="748.1" cy="221.4" r="1.5" style="fill:#B22C2C;fill-opacity:0" fill-opacity="0.7" onmouseover="evt.target.setAttribute('r', '5');" onmousemove="ShowTooltip(evt, '2012')" onmouseout="HideTooltip(evt);evt.target.setAttribute('r', '1.5');">
+      <set attributeName="r" to="5" begin="year_1979.mouseover" end="year_1979.mouseout"/>
+      <animate attributeName="fill-opacity" begin="timeAdvance.begin+15.000s" fill="freeze" from="0" to="1" dur="0.1s"/>
+    </circle>
+    <rect class="label" id="tooltip_bg" x="0" y="0" rx="4" ry="4" width="55" height="28" style="fill:#f6f6f6;fill-opacity:0.85;stroke:#696969;stroke-width:0.5;" visibility="hidden">Tooltip</rect>
+    <text class="label" id="tooltip" x="0" y="0" visibility="hidden">Tooltip</text>
+  </g>
+</svg>
