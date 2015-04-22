@@ -54,14 +54,11 @@ line_nd <- dinosvg:::linepath(g_id, x,y,style =sprintf("stroke:#0066CC;stroke-wi
 dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
                             begin = "indefinite", id = "timeAdvance", dur = sprintf('%fs',ani_time), values = values, keyTimes = keyTimes)
 for (i in 1:length(x)){
-  nd <- dinosvg:::circle(g_id, x[i], y[i], style="fill:#0066CC;fill-opacity:0", id = paste0('usage-',i), r = 1.5, tip_name = years[i])
+  nd <- dinosvg:::circle(g_id, x[i], y[i], style="fill:#0066CC;fill-opacity:0", id = paste0('usage-',years[i]), r = 1.5, tip_name = years[i])
   newXMLNode("animate", 'parent' = nd,
              attrs = c('attributeName' = "fill-opacity",
                        'begin' = sprintf("timeAdvance.begin+%0.3fs",difTimes[i]),
                        'fill' = "freeze", 'from'='0','to'='1',dur="0.1s"))
-  newXMLNode('set', 'parent' = nd,
-             attrs = c('attributeName' = "r",
-                       to="5", begin=sprintf('year_%s.mouseover',years[i]), end=sprintf('year_%s.mouseout',years[i])))
 }
 
 # --- for usage ----
@@ -79,9 +76,14 @@ tot_time <- tail(years,1) - head(years,1)
 for (i in 1:length(x)){
   #refine this so it is actually halfway points
   width <- x2[i]-x1[i]
+  if (is.na(width)){
+    width = 10 # for the last one. Can/should improve this
+  }
   newXMLNode('rect','parent' = g_id, 
-           attrs = c(id = sprintf('year_%s',years[i]), x = x1[i]-width/2, y = fig$px_lim$y[2], width = width, height = fig$px_lim$y[1]-fig$px_lim$y[2],
-                     'fill-opacity'="0.0"))
+           attrs = c(id = sprintf('year_%s',years[i]), x = x[i]-width/2, y = fig$px_lim$y[2], width = width, height = fig$px_lim$y[1]-fig$px_lim$y[2],
+                     'fill-opacity'="0.0", 
+                     onmouseover=sprintf("document.getElementById('supply-%s').setAttribute('r', '5');document.getElementById('usage-%s').setAttribute('r', '5')",years[i],years[i]),
+                     onmouseout=sprintf("document.getElementById('supply-%s').setAttribute('r', '1.5');document.getElementById('usage-%s').setAttribute('r', '1.5')",years[i],years[i])))
 }
 values <- paste(tot_len- cumsum(line_len),collapse=';')
 
@@ -90,10 +92,7 @@ dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset",
                             begin = "timeAdvance.begin", id = "usage", dur = sprintf('%fs',ani_time), values = values, keyTimes = keyTimes)
 
 for (i in 1:length(x)){
-  nd <- dinosvg:::circle(g_id, x[i], y[i], style="fill:#B22C2C;fill-opacity:0", id = paste0('supply-',i), r = 1.5, tip_name = years[i])
-  newXMLNode('set', 'parent' = nd,
-             attrs = c('attributeName' = "r",
-                       to="5", begin=sprintf('year_%s.mouseover',years[i]), end=sprintf('year_%s.mouseout',years[i])))
+  nd <- dinosvg:::circle(g_id, x[i], y[i], style="fill:#B22C2C;fill-opacity:0", id = paste0('supply-',years[i]), r = 1.5, tip_name = years[i])
   newXMLNode("animate", 'parent' = nd,
              attrs = c('attributeName' = "fill-opacity",
                        'begin' = sprintf("timeAdvance.begin+%0.3fs",difTimes[i]),
