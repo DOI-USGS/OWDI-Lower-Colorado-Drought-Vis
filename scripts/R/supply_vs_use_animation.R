@@ -3,7 +3,7 @@
 library(dinosvg)
 library(XML)
 data <- read.csv('../src_data/NaturalFlow.csv', stringsAsFactors = F)
-flows <- data$Natural.Flow.above.Imperial/1000000
+flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
 years <- data$Year
 usage <- seq(5,15, length.out = length(years)) + runif(length(years))
 # --- pixel dims ---
@@ -63,8 +63,7 @@ for (i in 1:length(x)){
 
 # --- for usage ----
 y <- sapply(usage, FUN = function(y) dinosvg:::tran_y(y, axes, fig))
-x1 <- head(x,-1)
-x2 <- tail(x,-1)
+# note x is the same as above
 y1 <- head(y,-1)
 y2 <- tail(y,-1)
 line_len <- line_length(x1,y1,x2,y2)
@@ -84,14 +83,6 @@ for (i in 1:length(x)){
                      'fill-opacity'="0.0", 
                      onmouseover=sprintf("document.getElementById('supply-%s').setAttribute('r', '5');document.getElementById('usage-%s').setAttribute('r', '5')",years[i],years[i]),
                      onmouseout=sprintf("document.getElementById('supply-%s').setAttribute('r', '1.5');document.getElementById('usage-%s').setAttribute('r', '1.5')",years[i],years[i])))
-}
-values <- paste(tot_len- cumsum(line_len),collapse=';')
-
-line_nd <- dinosvg:::linepath(g_id, x,y,style =sprintf("stroke:#B22C2C;stroke-width:3;stroke-dasharray:%0.0fpx;stroke-linecap:round;stroke-dashoffset:%0.0f",tot_len+1,tot_len+1), id = 'test')
-dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
-                            begin = "timeAdvance.begin", id = "usage", dur = sprintf('%fs',ani_time), values = values, keyTimes = keyTimes)
-
-for (i in 1:length(x)){
   nd <- dinosvg:::circle(g_id, x[i], y[i], style="fill:#B22C2C;fill-opacity:0", id = paste0('supply-',years[i]), r = 1.5, tip_name = years[i])
   newXMLNode("animate", 'parent' = nd,
              attrs = c('attributeName' = "fill-opacity",
@@ -99,6 +90,15 @@ for (i in 1:length(x)){
                        'fill' = "freeze", 'from'='0','to'='1',dur="0.1s"))
 }
 
+# -----usage line
+values <- paste(tot_len- cumsum(line_len),collapse=';')
+
+line_nd <- dinosvg:::linepath(g_id, x,y,style =sprintf("stroke:#B22C2C;stroke-width:3;stroke-dasharray:%0.0fpx;stroke-linecap:round;stroke-dashoffset:%0.0f",tot_len+1,tot_len+1), id = 'test')
+dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
+                            begin = "timeAdvance.begin", id = "usage", dur = sprintf('%fs',ani_time), values = values, keyTimes = keyTimes)
+# -----
+
+# --- tool tips
 newXMLNode("rect", parent = g_id, newXMLTextNode('Tooltip'),
            attrs = c(class="label", id="tooltip_bg", x="0", y="0", rx="4", ry="4", 
                      width="55", height="28", style="fill:#f6f6f6;fill-opacity:0.85;stroke:#696969;stroke-width:0.5;",
@@ -107,6 +107,7 @@ newXMLNode("rect", parent = g_id, newXMLTextNode('Tooltip'),
 newXMLNode("text", parent = g_id, newXMLTextNode('Tooltip'),
            attrs = c(class="label", id="tooltip", x="0", y="0", 
                      visibility="hidden"))
+# -----
 
 root_nd <- xmlRoot(g_id)
 
