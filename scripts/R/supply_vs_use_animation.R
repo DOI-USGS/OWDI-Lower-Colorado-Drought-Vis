@@ -61,7 +61,7 @@ for (i in 1:length(x)){
                        'fill' = "freeze", 'from'='0','to'='1',dur="0.1s"))
   newXMLNode('set', 'parent' = nd,
              attrs = c('attributeName' = "r",
-                       to="5", begin="year_1979.mouseover", end="year_1979.mouseout"))
+                       to="5", begin=sprintf('year_%s.mouseover',years[i]), end=sprintf('year_%s.mouseout',years[i])))
 }
 
 # --- for usage ----
@@ -75,17 +75,25 @@ tot_len <- sum(line_len)
 tot_time <- tail(years,1) - head(years,1)
 
 # calc_lengths 
+
+for (i in 1:length(x)){
+  #refine this so it is actually halfway points
+  width <- x2[i]-x1[i]
+  newXMLNode('rect','parent' = g_id, 
+           attrs = c(id = sprintf('year_%s',years[i]), x = x1[i]-width/2, y = fig$px_lim$y[2], width = width, height = fig$px_lim$y[1]-fig$px_lim$y[2],
+                     'fill-opacity'="0.0"))
+}
 values <- paste(tot_len- cumsum(line_len),collapse=';')
+
 line_nd <- dinosvg:::linepath(g_id, x,y,style =sprintf("stroke:#B22C2C;stroke-width:3;stroke-dasharray:%0.0fpx;stroke-linecap:round;stroke-dashoffset:%0.0f",tot_len+1,tot_len+1), id = 'test')
 dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
                             begin = "timeAdvance.begin", id = "usage", dur = sprintf('%fs',ani_time), values = values, keyTimes = keyTimes)
-newXMLNode('rect','parent' = g_id, 
-           attrs = c(id = 'year_1979', x = 40, y = 40, width = 40, height = 40))
+
 for (i in 1:length(x)){
   nd <- dinosvg:::circle(g_id, x[i], y[i], style="fill:#B22C2C;fill-opacity:0", id = paste0('supply-',i), r = 1.5, tip_name = years[i])
   newXMLNode('set', 'parent' = nd,
              attrs = c('attributeName' = "r",
-                       to="5", begin="year_1979.mouseover", end="year_1979.mouseout"))
+                       to="5", begin=sprintf('year_%s.mouseover',years[i]), end=sprintf('year_%s.mouseout',years[i])))
   newXMLNode("animate", 'parent' = nd,
              attrs = c('attributeName' = "fill-opacity",
                        'begin' = sprintf("timeAdvance.begin+%0.3fs",difTimes[i]),
