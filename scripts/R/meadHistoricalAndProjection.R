@@ -13,9 +13,29 @@ create24MSFigure <- function()
   
   ## TO CHECK
   # I think this assumes the data is ordered in time already
-  startDate <- as.numeric(strsplit(as.character(meadData$Timestep[1]),'/')[[1]])
-  mead <- ts(meadData$Value, frequency = 12, start = startDate[1:2])
+  ## TO DO
+  # modify so that the data selection is dynamic and can handle min/most/max proable
   
-  dygraph(mead)
-    
+  # Get the 24-MS projected elevations
+  simData <- dplyr::filter(meadData, Model == 'March Most Probable')
+  startDate <- as.numeric(strsplit(as.character(simData$Timestep[1]),'/')[[1]])
+  mead <- ts(simData$Value, frequency = 12, start = startDate[1:2])
+  
+  # combine with the historical data
+  hData <- dplyr::filter(meadData, Model == 'Historical')
+  startDate <- as.numeric(strsplit(as.character(hData$Timestep[1]),'/')[[1]])
+  mead <- cbind(mead, ts(hData$Value, frequency = 12, start = startDate[1:2]))
+  colnames(mead) <- c('March Most Probable','Historical')
+  
+  ## TO DO
+  # Try to get historical and projected labels to show up on different lines
+  # Compute the historical vs. projected event data
+  
+  # Used mid month instead of end of month
+  hVsPDate <- '2015-02-14'
+  dygraph(mead, main = 'Lake Mead Historical and Projected Elevations') %>%
+    dyAxis('y', label = 'Elevation [feet]') %>%
+    dyLegend(width = 400) %>%
+    dyEvent(date = hVsPDate, "Historical\nProjected", labelLoc = 'bottom')
+     
 }
