@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Steps leading up to running this script (commented out due to expense)
+# wget ftp://rockyftp.cr.usgs.gov/vdelivery/Datasets/Staged/WBD/Shape/WBD_National.zip
+# unzip WBD_National.zip
+
 OUTFILE=LowerCO.json
 
 if [[ -e $OUTFILE ]]; then
