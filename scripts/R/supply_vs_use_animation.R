@@ -5,7 +5,8 @@ library(XML)
 data <- read.csv('../src_data/NaturalFlow.csv', stringsAsFactors = F)
 flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
 years <- data$Year
-usage <- seq(5,15, length.out = length(years)) + runif(length(years))
+data <- read.table('../src_data/Basin_Depletion_yearly_PROVISIONAL.tsv', stringsAsFactors = F, sep = '\t', header = T)
+usage <- c(data$depletion/1000,NA,NA) #into millions acre-feet units
 # --- pixel dims ---
 axes <- list('tick_len' = 5,
              'y_label' = "Volume (million acre-feet)",
@@ -67,7 +68,8 @@ y <- sapply(usage, FUN = function(y) dinosvg:::tran_y(y, axes, fig))
 y1 <- head(y,-1)
 y2 <- tail(y,-1)
 line_len <- line_length(x1,y1,x2,y2)
-tot_len <- sum(line_len)
+line_len[is.na(line_len)] = 0
+tot_len <- sum(line_len, na.rm = T)
 tot_time <- tail(years,1) - head(years,1)
 
 # calc_lengths 
