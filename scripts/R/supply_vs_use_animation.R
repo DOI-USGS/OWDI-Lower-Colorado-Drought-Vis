@@ -47,9 +47,9 @@ leg_id <- newXMLNode("g", 'parent' = g_id,
 newXMLNode("text", parent = leg_id, newXMLTextNode('year'),
            attrs = c(class="label", id="year_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp, 'alignment-baseline' = "central"))
 newXMLNode("text", parent = leg_id, newXMLTextNode('use_text'),
-           attrs = c(class="label", id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, 'alignment-baseline' = "central", fill = "#0066CC"))
+           attrs = c(class="label", id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, 'alignment-baseline' = "central", fill = "#B22C2C"))
 newXMLNode("text", parent = leg_id, newXMLTextNode('supply_text'),
-           attrs = c(class="label", id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, 'alignment-baseline' = "central", fill = "#B22C2C"))
+           attrs = c(class="label", id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, 'alignment-baseline' = "central", fill = "#0066CC"))
 #------
 
 x1 <- head(x,-1)
