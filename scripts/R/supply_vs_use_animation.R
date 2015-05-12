@@ -14,7 +14,7 @@ axes <- list('tick_len' = 5,
              'y_tk_label' = seq(0,25,5),
              'x_ticks' = seq(1900,2010,10),
              'x_tk_label' = seq(1900,2010,10),
-             'y_lim' = c(0,27),
+             'y_lim' = c(0,29),
              'x_lim' = c(1900,2014))
 
 fig <- list('w' = 900,
@@ -89,21 +89,11 @@ tot_time <- tail(years,1) - head(years,1)
 # calc_lengths 
 
 for (i in 1:length(x)){
-  #refine this so it is actually halfway points
-  width <- x2[i]-x1[i]
-  if (is.na(width)){
-    width = 10 # for the last one. Can/should improve this
-  }
-  newXMLNode('rect','parent' = g_id, 
-           attrs = c(id = sprintf('year_%s',years[i]), x = x[i]-width/2, y = fig$px_lim$y[2], width = width, height = fig$px_lim$y[1]-fig$px_lim$y[2],
-                     'fill-opacity'="0.0", 
-                     onmouseover=sprintf("document.getElementById('supply-%s').setAttribute('r', '5');document.getElementById('usage-%s').setAttribute('r', '5');document.getElementById('legend').setAttribute('visibility', 'visible');ChangeText(evt, 'year_text','%s');ChangeText(evt, 'use_text','usage: %1.1f');ChangeText(evt, 'supply_text','supply: %1.1f')",years[i],years[i],years[i],usage[i],flows[i]),
-                     onmouseout=sprintf("document.getElementById('supply-%s').setAttribute('r', '1.5');document.getElementById('usage-%s').setAttribute('r', '1.5');document.getElementById('legend').setAttribute('visibility', 'hidden')",years[i],years[i])))
-  nd <- dinosvg:::circle(g_id, x[i], y[i], style="fill:#B22C2C;fill-opacity:0", id = paste0('supply-',years[i]), r = 1.5)
   newXMLNode("animate", 'parent' = nd,
              attrs = c('attributeName' = "fill-opacity",
                        'begin' = sprintf("timeAdvance.begin+%0.3fs",difTimes[i]),
                        'fill' = "freeze", 'from'='0','to'='1',dur="0.1s"))
+  nd <- dinosvg:::circle(g_id, x[i], y[i], style="fill:#B22C2C;fill-opacity:0", id = paste0('supply-',years[i]), r = 1.5)
 }
 
 # -----usage line
@@ -113,6 +103,22 @@ line_nd <- dinosvg:::linepath(g_id, x,y,style =sprintf("stroke:#B22C2C;stroke-wi
 dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
                             begin = "timeAdvance.begin", id = "usage", dur = sprintf('%fs',ani_time), values = values, keyTimes = keyTimes)
 # -----
+
+
+for (i in 1:length(x)){
+  #refine this so it is actually halfway points
+  width <- x2[i]-x1[i]
+  if (is.na(width)){
+    width = 10 # for the last one. Can/should improve this
+  }
+  
+  
+  newXMLNode('rect','parent' = g_id, 
+             attrs = c(id = sprintf('year_%s',years[i]), x = x[i]-width/2, y = fig$px_lim$y[2], width = width, height = fig$px_lim$y[1]-fig$px_lim$y[2],
+                       'fill-opacity'="0.0", 
+                       onmouseover=sprintf("document.getElementById('supply-%s').setAttribute('r', '5');document.getElementById('usage-%s').setAttribute('r', '5');document.getElementById('legend').setAttribute('visibility', 'visible');ChangeText(evt, 'year_text','%s');ChangeText(evt, 'use_text','usage: %1.1f');ChangeText(evt, 'supply_text','supply: %1.1f')",years[i],years[i],years[i],usage[i],flows[i]),
+                       onmouseout=sprintf("document.getElementById('supply-%s').setAttribute('r', '1.5');document.getElementById('usage-%s').setAttribute('r', '1.5');document.getElementById('legend').setAttribute('visibility', 'hidden')",years[i],years[i])))
+}
 
 root_nd <- xmlRoot(g_id)
 
