@@ -76,7 +76,7 @@ flow_data <- read_flow_data()
 #' @import dygraphs
 plot_flow_data <- function(flow_data) {
   # the figure
-  dygraph(flow_data, main = 'Colorado River Natural Flow at Lees Ferry, AZ') %>%
+  dg <- dygraph(flow_data, main = 'Colorado River Natural Flow at Lees Ferry, AZ') %>%
     dyRangeSelector(dateWindow = as.Date(c("1812", "2012"), format="%Y")) %>% 
     dySeries(c("TreeRingsLwr", "TreeRings", "TreeRingsUpr"), label = "Tree Rings", color="navy") %>%
     dySeries(c("FlowGage"), label = "Flow Gage", color="skyblue") %>%
@@ -91,7 +91,13 @@ plot_flow_data <- function(flow_data) {
   # dyEvent(date = as.Date("2000-1-1"), "Y2K", labelLoc = 'bottom')
   # dyCSS("dygraph.css")
   
-  # export dg to html/js/etc here
+  # export dg to html. having trouble specifying fancy file locations - "file"
+  # arg seems to only work if there aren't any folders in the file name, and
+  # "libdir" seems to have to be a descendent of the folder where "file" is
+  # located.
+  oldwd <- setwd("public_html/widgets/slide_3")
+  htmlwidgets::saveWidget(dg, "natural_flow_history.html", selfcontained = FALSE, libdir = "js")
+  setwd(oldwd)
   
   # return
 }
