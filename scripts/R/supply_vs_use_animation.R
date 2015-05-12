@@ -5,7 +5,8 @@ library(XML)
 data <- read.csv('../src_data/NaturalFlow.csv', stringsAsFactors = F)
 flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
 years <- data$Year
-usage <- seq(5,15, length.out = length(years)) + runif(length(years))
+data <- read.table('../src_data/Basin_Depletion_yearly_PROVISIONAL.tsv', stringsAsFactors = F, sep = '\t', header = T)
+usage <- c(data$depletion/1000,NA,NA) #into millions acre-feet units
 # --- pixel dims ---
 axes <- list('tick_len' = 5,
              'y_label' = "Volume (million acre-feet)",
@@ -13,7 +14,7 @@ axes <- list('tick_len' = 5,
              'y_tk_label' = seq(0,25,5),
              'x_ticks' = seq(1900,2010,10),
              'x_tk_label' = seq(1900,2010,10),
-             'y_lim' = c(0,27),
+             'y_lim' = c(0,29),
              'x_lim' = c(1900,2014))
 
 fig <- list('w' = 900,
@@ -37,6 +38,20 @@ line_length <- function(x1,y1,x2,y2){
   return(len)
 }
 
+#-- legend --
+l_bmp = 20 # px from axes
+t_bmp = 20 # px from axes
+leg_id <- newXMLNode("g", 'parent' = g_id,
+           attrs = c('id' = "legend", visibility="hidden"))
+
+newXMLNode("text", parent = leg_id, newXMLTextNode('year'),
+           attrs = c(class="label", id="year_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp, 'alignment-baseline' = "central"))
+newXMLNode("text", parent = leg_id, newXMLTextNode('use_text'),
+           attrs = c(class="label", id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, 'alignment-baseline' = "central", fill = "#B22C2C"))
+newXMLNode("text", parent = leg_id, newXMLTextNode('supply_text'),
+           attrs = c(class="label", id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, 'alignment-baseline' = "central", fill = "#0066CC"))
+#------
+
 x1 <- head(x,-1)
 x2 <- tail(x,-1)
 y1 <- head(y,-1)
@@ -54,7 +69,7 @@ line_nd <- dinosvg:::linepath(g_id, x,y,style =sprintf("stroke:#0066CC;stroke-wi
 dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
                             begin = "indefinite", id = "timeAdvance", dur = sprintf('%fs',ani_time), values = values, keyTimes = keyTimes)
 for (i in 1:length(x)){
-  nd <- dinosvg:::circle(g_id, x[i], y[i], style="fill:#0066CC;fill-opacity:0", id = paste0('usage-',years[i]), r = 1.5, tip_name = years[i])
+  nd <- dinosvg:::circle(g_id, x[i], y[i], style="fill:#0066CC;fill-opacity:0", id = paste0('usage-',years[i]), r = 1.5)
   newXMLNode("animate", 'parent' = nd,
              attrs = c('attributeName' = "fill-opacity",
                        'begin' = sprintf("timeAdvance.begin+%0.3fs",difTimes[i]),
@@ -67,27 +82,18 @@ y <- sapply(usage, FUN = function(y) dinosvg:::tran_y(y, axes, fig))
 y1 <- head(y,-1)
 y2 <- tail(y,-1)
 line_len <- line_length(x1,y1,x2,y2)
-tot_len <- sum(line_len)
+line_len[is.na(line_len)] = 0
+tot_len <- sum(line_len, na.rm = T)
 tot_time <- tail(years,1) - head(years,1)
 
 # calc_lengths 
 
 for (i in 1:length(x)){
-  #refine this so it is actually halfway points
-  width <- x2[i]-x1[i]
-  if (is.na(width)){
-    width = 10 # for the last one. Can/should improve this
-  }
-  newXMLNode('rect','parent' = g_id, 
-           attrs = c(id = sprintf('year_%s',years[i]), x = x[i]-width/2, y = fig$px_lim$y[2], width = width, height = fig$px_lim$y[1]-fig$px_lim$y[2],
-                     'fill-opacity'="0.0", 
-                     onmouseover=sprintf("document.getElementById('supply-%s').setAttribute('r', '5');document.getElementById('usage-%s').setAttribute('r', '5')",years[i],years[i]),
-                     onmouseout=sprintf("document.getElementById('supply-%s').setAttribute('r', '1.5');document.getElementById('usage-%s').setAttribute('r', '1.5')",years[i],years[i])))
-  nd <- dinosvg:::circle(g_id, x[i], y[i], style="fill:#B22C2C;fill-opacity:0", id = paste0('supply-',years[i]), r = 1.5, tip_name = years[i])
   newXMLNode("animate", 'parent' = nd,
              attrs = c('attributeName' = "fill-opacity",
                        'begin' = sprintf("timeAdvance.begin+%0.3fs",difTimes[i]),
                        'fill' = "freeze", 'from'='0','to'='1',dur="0.1s"))
+  nd <- dinosvg:::circle(g_id, x[i], y[i], style="fill:#B22C2C;fill-opacity:0", id = paste0('supply-',years[i]), r = 1.5)
 }
 
 # -----usage line
@@ -98,17 +104,22 @@ dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset",
                             begin = "timeAdvance.begin", id = "usage", dur = sprintf('%fs',ani_time), values = values, keyTimes = keyTimes)
 # -----
 
-# --- tool tips
-newXMLNode("rect", parent = g_id, newXMLTextNode('Tooltip'),
-           attrs = c(class="label", id="tooltip_bg", x="0", y="0", rx="4", ry="4", 
-                     width="55", height="28", style="fill:#f6f6f6;fill-opacity:0.85;stroke:#696969;stroke-width:0.5;",
-                     visibility="hidden"))
 
-newXMLNode("text", parent = g_id, newXMLTextNode('Tooltip'),
-           attrs = c(class="label", id="tooltip", x="0", y="0", 
-                     visibility="hidden"))
-# -----
+for (i in 1:length(x)){
+  #refine this so it is actually halfway points
+  width <- x2[i]-x1[i]
+  if (is.na(width)){
+    width = 10 # for the last one. Can/should improve this
+  }
+  
+  
+  newXMLNode('rect','parent' = g_id, 
+             attrs = c(id = sprintf('year_%s',years[i]), x = x[i]-width/2, y = fig$px_lim$y[2], width = width, height = fig$px_lim$y[1]-fig$px_lim$y[2],
+                       'fill-opacity'="0.0", 
+                       onmouseover=sprintf("document.getElementById('supply-%s').setAttribute('r', '5');document.getElementById('usage-%s').setAttribute('r', '5');document.getElementById('legend').setAttribute('visibility', 'visible');ChangeText(evt, 'year_text','%s');ChangeText(evt, 'use_text','usage: %1.1f');ChangeText(evt, 'supply_text','supply: %1.1f')",years[i],years[i],years[i],usage[i],flows[i]),
+                       onmouseout=sprintf("document.getElementById('supply-%s').setAttribute('r', '1.5');document.getElementById('usage-%s').setAttribute('r', '1.5');document.getElementById('legend').setAttribute('visibility', 'hidden')",years[i],years[i])))
+}
 
 root_nd <- xmlRoot(g_id)
 
-saveXML(root_nd, file = './flow_animation.svg')
+saveXML(root_nd, file = '../public_html/img/flow_animation.svg')
