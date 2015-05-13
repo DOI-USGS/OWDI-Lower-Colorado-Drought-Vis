@@ -1,0 +1,2141 @@
+Year,State,PlotCategory,Basin,SumOfDepletion_kafy
+1906,AllUpper,All,Upper Basin,1153.469077
+1907,AllUpper,All,Upper Basin,1163.490615
+1908,AllUpper,All,Upper Basin,1202.161154
+1909,AllUpper,All,Upper Basin,1501.499692
+1910,AllUpper,All,Upper Basin,1676.095231
+1911,AllUpper,All,Upper Basin,1531.197769
+1912,AllUpper,All,Upper Basin,1532.410308
+1913,AllUpper,All,Upper Basin,1675.571846
+1914,AllLower,All,Lower Basin,1711.5
+1914,AllUpper,All,Upper Basin,1654.413385
+1914,Mexico,Unassigned,Lower Basin,1500
+1915,AllLower,All,Lower Basin,1791.192
+1915,AllUpper,All,Upper Basin,1652.177923
+1915,Mexico,Unassigned,Lower Basin,1500
+1916,AllLower,All,Lower Basin,2019.095
+1916,AllUpper,All,Upper Basin,1828.290462
+1916,Mexico,Unassigned,Lower Basin,1500
+1917,AllLower,All,Lower Basin,2097.791
+1917,AllUpper,All,Upper Basin,2025.603
+1917,Mexico,Unassigned,Lower Basin,1500
+1918,AllLower,All,Lower Basin,2402.496
+1918,AllUpper,All,Upper Basin,2135.637538
+1918,Mexico,Unassigned,Lower Basin,1500
+1919,AllLower,All,Lower Basin,2352.802
+1919,AllUpper,All,Upper Basin,2117.269077
+1919,Mexico,Unassigned,Lower Basin,1500
+1920,AllLower,All,Lower Basin,2515.595
+1920,AllUpper,All,Upper Basin,2178.633615
+1920,Mexico,Unassigned,Lower Basin,1500
+1921,AllLower,All,Lower Basin,2143.897
+1921,AllUpper,All,Upper Basin,2037.557154
+1921,Mexico,Unassigned,Lower Basin,1500
+1922,AllLower,All,Lower Basin,2484
+1922,AllUpper,All,Upper Basin,2387.387692
+1922,Mexico,Unassigned,Lower Basin,1500
+1923,AllLower,All,Lower Basin,2859.599
+1923,AllUpper,All,Upper Basin,2076.062231
+1923,Mexico,Unassigned,Lower Basin,1500
+1924,AllLower,All,Lower Basin,2867.305
+1924,AllUpper,All,Upper Basin,2273.091769
+1924,Mexico,Unassigned,Lower Basin,1500
+1925,AllLower,All,Lower Basin,2888.902
+1925,AllUpper,All,Upper Basin,2131.413308
+1925,Mexico,Unassigned,Lower Basin,1500
+1926,AllLower,All,Lower Basin,2851.91
+1926,AllUpper,All,Upper Basin,2175.451846
+1926,Mexico,Unassigned,Lower Basin,1500
+1927,AllLower,All,Lower Basin,2994.407
+1927,AllUpper,All,Upper Basin,2004.932385
+1927,Mexico,Unassigned,Lower Basin,1500
+1928,AllLower,All,Lower Basin,3061.994
+1928,AllUpper,All,Upper Basin,2241.611923
+1928,Mexico,Unassigned,Lower Basin,1500
+1929,AllLower,All,Lower Basin,3245.496
+1929,AllUpper,All,Upper Basin,2220.715462
+1929,Mexico,Unassigned,Lower Basin,1500
+1930,AllLower,All,Lower Basin,3382.895
+1930,AllUpper,All,Upper Basin,2256.261
+1930,Mexico,Unassigned,Lower Basin,1500
+1931,AllLower,All,Lower Basin,2875.103
+1931,AllUpper,All,Upper Basin,2306.911538
+1931,Mexico,Unassigned,Lower Basin,1500
+1932,AllLower,All,Lower Basin,2797.2
+1932,AllUpper,All,Upper Basin,2289.089077
+1932,Mexico,Unassigned,Lower Basin,1500
+1933,AllLower,All,Lower Basin,2911.416
+1933,AllUpper,All,Upper Basin,2436.710615
+1933,Mexico,Unassigned,Lower Basin,1500
+1934,AllLower,All,Lower Basin,2137.933
+1934,AllUpper,All,Upper Basin,2245.196154
+1934,Mexico,Unassigned,Lower Basin,1500
+1935,AllLower,All,Lower Basin,2826.063
+1935,AllUpper,All,Upper Basin,2365.264092
+1935,Mexico,Unassigned,Lower Basin,1500
+1935,Misc,Reservoir Evaporation,Lower Basin,293.632
+1936,AllLower,All,Lower Basin,3388.676
+1936,AllUpper,All,Upper Basin,2504.791131
+1936,Mexico,Unassigned,Lower Basin,1500
+1936,Misc,Reservoir Evaporation,Lower Basin,398.303
+1937,AllLower,All,Lower Basin,3513.334
+1937,AllUpper,All,Upper Basin,2270.005769
+1937,Mexico,Unassigned,Lower Basin,1500
+1937,Misc,Reservoir Evaporation,Lower Basin,566.406
+1938,AllLower,All,Lower Basin,3300.797
+1938,AllUpper,All,Upper Basin,2434.892508
+1938,Mexico,Unassigned,Lower Basin,1500
+1938,Misc,Reservoir Evaporation,Lower Basin,799.039
+1939,AllLower,All,Lower Basin,3311.955
+1939,AllUpper,All,Upper Basin,2400.893946
+1939,Mexico,Unassigned,Lower Basin,1500
+1939,Misc,Reservoir Evaporation,Lower Basin,1006.936547
+1940,AllLower,All,Lower Basin,3369.057
+1940,AllUpper,All,Upper Basin,2369.733385
+1940,Mexico,Unassigned,Lower Basin,1500
+1940,Misc,Reservoir Evaporation,Lower Basin,1003.760313
+1941,AllLower,All,Lower Basin,3182.669
+1941,AllUpper,All,Upper Basin,2129.745923
+1941,Mexico,Unassigned,Lower Basin,1500
+1941,Misc,Reservoir Evaporation,Lower Basin,1118.775414
+1942,AllLower,All,Lower Basin,3102.119
+1942,AllUpper,All,Upper Basin,2445.956462
+1942,Mexico,Unassigned,Lower Basin,1500
+1942,Misc,Reservoir Evaporation,Lower Basin,1096.471117
+1943,AllLower,All,Lower Basin,3097.652
+1943,AllUpper,All,Upper Basin,2252.471
+1943,Mexico,Unassigned,Lower Basin,1500
+1943,Misc,Reservoir Evaporation,Lower Basin,1105.029766
+1944,AllLower,All,Lower Basin,3250.725
+1944,AllUpper,All,Upper Basin,2381.280538
+1944,Mexico,Unassigned,Lower Basin,1500
+1944,Misc,Reservoir Evaporation,Lower Basin,1063.7065
+1945,AllLower,All,Lower Basin,3393.476
+1945,AllUpper,All,Upper Basin,2259.636077
+1945,Mexico,Unassigned,Lower Basin,1500
+1945,Misc,Reservoir Evaporation,Lower Basin,1018.711969
+1946,AllLower,All,Lower Basin,3672.767
+1946,AllUpper,All,Upper Basin,2345.418215
+1946,Mexico,Unassigned,Lower Basin,1500
+1946,Misc,Reservoir Evaporation,Lower Basin,969.1521719
+1947,AllLower,All,Lower Basin,3777.844
+1947,AllUpper,All,Upper Basin,2314.848154
+1947,Mexico,Unassigned,Lower Basin,1500
+1947,Misc,Reservoir Evaporation,Lower Basin,1002.891375
+1948,AllLower,All,Lower Basin,3874.713
+1948,AllUpper,All,Upper Basin,2362.158692
+1948,Mexico,Unassigned,Lower Basin,1500
+1948,Misc,Reservoir Evaporation,Lower Basin,1047.813453
+1949,AllLower,All,Lower Basin,4172.985
+1949,AllUpper,All,Upper Basin,2243.610231
+1949,Mexico,Unassigned,Lower Basin,1500
+1949,Misc,Reservoir Evaporation,Lower Basin,1043.026859
+1950,AllLower,All,Lower Basin,4635.66
+1950,AllUpper,All,Upper Basin,2332.831769
+1950,Mexico,Unassigned,Lower Basin,1500
+1950,Misc,Reservoir Evaporation,Lower Basin,982.8217656
+1951,AllLower,All,Lower Basin,4940.634
+1951,AllUpper,All,Upper Basin,2424.064108
+1951,Mexico,Unassigned,Lower Basin,1500
+1951,Misc,Reservoir Evaporation,Lower Basin,1133.486703
+1952,AllLower,All,Lower Basin,5183.069
+1952,AllUpper,All,Upper Basin,2557.539846
+1952,Mexico,Unassigned,Lower Basin,1500
+1952,Misc,Reservoir Evaporation,Lower Basin,1213.957844
+1953,AllLower,All,Lower Basin,5476.325
+1953,AllUpper,All,Upper Basin,2570.763385
+1953,Mexico,Unassigned,Lower Basin,1500
+1953,Misc,Reservoir Evaporation,Lower Basin,1132.938734
+1954,AllLower,All,Lower Basin,5565.277
+1954,AllUpper,All,Upper Basin,2621.937923
+1954,Mexico,Unassigned,Lower Basin,1500
+1954,Misc,Reservoir Evaporation,Lower Basin,1012.469922
+1955,AllLower,All,Lower Basin,5506.637
+1955,AllUpper,All,Upper Basin,2530.298062
+1955,Mexico,Unassigned,Lower Basin,1500
+1955,Misc,Reservoir Evaporation,Lower Basin,930.4205469
+1956,AllLower,All,Lower Basin,5616.254
+1956,AllUpper,All,Upper Basin,2817.785
+1956,Mexico,Unassigned,Lower Basin,1500
+1956,Misc,Reservoir Evaporation,Lower Basin,943.3283906
+1957,AllLower,All,Lower Basin,5452.712
+1957,AllUpper,All,Upper Basin,2322.531838
+1957,Mexico,Unassigned,Lower Basin,1500
+1957,Misc,Reservoir Evaporation,Lower Basin,1127.32975
+1958,AllLower,All,Lower Basin,5425.948
+1958,AllUpper,All,Upper Basin,2862.610677
+1958,Mexico,Unassigned,Lower Basin,1500
+1958,Misc,Reservoir Evaporation,Lower Basin,1267.140625
+1959,AllLower,All,Lower Basin,5777.912
+1959,AllUpper,All,Upper Basin,2604.505115
+1959,Mexico,Unassigned,Lower Basin,1500
+1959,Misc,Reservoir Evaporation,Lower Basin,1208.221984
+1960,AllLower,All,Lower Basin,6102.348
+1960,AllUpper,All,Upper Basin,2767.810654
+1960,Mexico,Unassigned,Lower Basin,1500
+1960,Misc,Reservoir Evaporation,Lower Basin,1195.994859
+1961,AllLower,All,Lower Basin,6198.165
+1961,AllUpper,All,Upper Basin,2509.618792
+1961,Mexico,Unassigned,Lower Basin,1500
+1961,Misc,Reservoir Evaporation,Lower Basin,1133.330078
+1962,AllLower,All,Lower Basin,6225.995
+1962,AllUpper,All,Upper Basin,2880.186431
+1962,Mexico,Unassigned,Lower Basin,1500
+1962,Misc,Reservoir Evaporation,Lower Basin,1260.362047
+1963,AllLower,All,Lower Basin,6277.63
+1963,AllUpper,All,Upper Basin,2718.241769
+1963,Colorado,Reservoir Evaporation,Upper Basin,11.14676696
+1963,Mexico,Unassigned,Lower Basin,1500
+1963,Misc,Reservoir Evaporation,Lower Basin,1152.058813
+1963,New Mexico,Reservoir Evaporation,Upper Basin,2.423210209
+1963,Utah,Reservoir Evaporation,Upper Basin,4.954118649
+1963,Wyoming,Reservoir Evaporation,Upper Basin,3.015550482
+1964,AllLower,All,Lower Basin,6217.165
+1964,AllUpper,All,Upper Basin,2738.918308
+1964,Colorado,Reservoir Evaporation,Upper Basin,78.82770234
+1964,Mexico,Unassigned,Lower Basin,1500
+1964,Misc,Fish and Wildlife and Recreation,Lower Basin,609.6919165
+1964,Misc,Reservoir Evaporation,Lower Basin,955.0452813
+1964,New Mexico,Reservoir Evaporation,Upper Basin,17.13645703
+1964,Utah,Reservoir Evaporation,Upper Basin,35.03453438
+1964,Wyoming,Reservoir Evaporation,Upper Basin,21.32536875
+1965,AllLower,All,Lower Basin,5931.234
+1965,AllUpper,All,Upper Basin,2431.817846
+1965,Colorado,Reservoir Evaporation,Upper Basin,118.6450721
+1965,Mexico,Unassigned,Lower Basin,1500
+1965,Misc,Fish and Wildlife and Recreation,Lower Basin,575.8625697
+1965,Misc,Reservoir Evaporation,Lower Basin,983.6189219
+1965,Misc,Unassigned,Lower Basin,187.661
+1965,New Mexico,Reservoir Evaporation,Upper Basin,25.79240698
+1965,Utah,Reservoir Evaporation,Upper Basin,52.73114316
+1965,Wyoming,Reservoir Evaporation,Upper Basin,32.09721758
+1966,AllLower,All,Lower Basin,6196.623
+1966,AllUpper,All,Upper Basin,2873.962585
+1966,Colorado,Reservoir Evaporation,Upper Basin,147.0505238
+1966,Mexico,Unassigned,Lower Basin,1500
+1966,Misc,Fish and Wildlife and Recreation,Lower Basin,596.4147262
+1966,Misc,Reservoir Evaporation,Lower Basin,1025.028422
+1966,Misc,Unassigned,Lower Basin,74.34803846
+1966,New Mexico,Reservoir Evaporation,Upper Basin,31.96750518
+1966,Utah,Reservoir Evaporation,Upper Basin,65.35578836
+1966,Wyoming,Reservoir Evaporation,Upper Basin,39.78178422
+1967,AllLower,All,Lower Basin,6020.818
+1967,AllUpper,All,Upper Basin,2616.472723
+1967,Colorado,Reservoir Evaporation,Upper Basin,137.7784862
+1967,Mexico,Unassigned,Lower Basin,1500
+1967,Misc,Fish and Wildlife and Recreation,Lower Basin,558.2499677
+1967,Misc,Reservoir Evaporation,Lower Basin,1002.859938
+1967,Misc,Unassigned,Lower Basin,58.977
+1967,New Mexico,Reservoir Evaporation,Upper Basin,29.95184482
+1967,Utah,Reservoir Evaporation,Upper Basin,61.23488274
+1967,Wyoming,Reservoir Evaporation,Upper Basin,37.27340688
+1968,AllLower,All,Lower Basin,6261.687
+1968,AllUpper,All,Upper Basin,2666.184462
+1968,Colorado,Reservoir Evaporation,Upper Basin,148.2022625
+1968,Mexico,Unassigned,Lower Basin,1500
+1968,Misc,Fish and Wildlife and Recreation,Lower Basin,534.83156
+1968,Misc,Reservoir Evaporation,Lower Basin,1013.810234
+1968,Misc,Unassigned,Lower Basin,62.737
+1968,New Mexico,Reservoir Evaporation,Upper Basin,32.21788315
+1968,Utah,Reservoir Evaporation,Upper Basin,65.86767223
+1968,Wyoming,Reservoir Evaporation,Upper Basin,40.0933657
+1969,AllLower,All,Lower Basin,6072.004
+1969,AllUpper,All,Upper Basin,2776.1451
+1969,Colorado,Reservoir Evaporation,Upper Basin,180.836233
+1969,Mexico,Unassigned,Lower Basin,1500
+1969,Misc,Fish and Wildlife and Recreation,Lower Basin,530.9518453
+1969,Misc,Reservoir Evaporation,Lower Basin,1045.631844
+1969,Misc,Unassigned,Lower Basin,65.784
+1969,New Mexico,Reservoir Evaporation,Upper Basin,39.31222456
+1969,Utah,Reservoir Evaporation,Upper Basin,80.3716591
+1969,Wyoming,Reservoir Evaporation,Upper Basin,48.92187945
+1970,AllLower,All,Lower Basin,6254.767
+1970,AllUpper,All,Upper Basin,2936.847538
+1970,Colorado,Reservoir Evaporation,Upper Basin,206.1263428
+1970,Mexico,Unassigned,Lower Basin,1500
+1970,Misc,Fish and Wildlife and Recreation,Lower Basin,494.2443766
+1970,Misc,Reservoir Evaporation,Lower Basin,1074.201922
+1970,Misc,Unassigned,Lower Basin,83.186
+1970,New Mexico,Reservoir Evaporation,Upper Basin,44.81007451
+1970,Utah,Reservoir Evaporation,Upper Basin,91.61170789
+1970,Wyoming,Reservoir Evaporation,Upper Basin,55.76364828
+1971,Arizona,Agricultural,Lower Basin,1245.621
+1971,Arizona,Agricultural,Upper Basin,2.5
+1971,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1971,Arizona,CAP M&I Recharge,Lower Basin,0
+1971,Arizona,CAP Tribes,Lower Basin,0
+1971,Arizona,Energy,Lower Basin,0.695
+1971,Arizona,Energy,Upper Basin,0
+1971,Arizona,Export,Upper Basin,0
+1971,Arizona,Fish and Wildlife and Recreation,Lower Basin,32.774
+1971,Arizona,Minerals,Lower Basin,0
+1971,Arizona,Minerals,Upper Basin,0
+1971,Arizona,Municipal and Industrial,Lower Basin,17.84
+1971,Arizona,Municipal and Industrial,Upper Basin,2.9
+1971,Arizona,Reservoir Evaporation,Upper Basin,5.7
+1971,California,Agricultural,Lower Basin,3971.8566
+1971,California,Fish and Wildlife and Recreation,Lower Basin,0
+1971,California,Municipal and Industrial,Lower Basin,1244.4224
+1971,Colorado,Agricultural,Upper Basin,1519.795385
+1971,Colorado,Energy,Upper Basin,4.959
+1971,Colorado,Minerals,Upper Basin,17.94
+1971,Colorado,Municipal and Industrial,Upper Basin,234.6570074
+1971,Colorado,Reservoir Evaporation,Upper Basin,315.4129409
+1971,Mexico,Unassigned,Lower Basin,1500
+1971,Misc,,Lower Basin,55.208
+1971,Misc,Fish and Wildlife and Recreation,Lower Basin,451.9307356
+1971,Misc,Reservoir Evaporation,Lower Basin,1079.008563
+1971,Misc,Unassigned,Lower Basin,6.414
+1971,Nevada,Agricultural,Lower Basin,0.043
+1971,Nevada,Energy,Lower Basin,5.446
+1971,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.802
+1971,Nevada,Municipal and Industrial,Lower Basin,44.295
+1971,New Mexico,Agricultural,Upper Basin,102.4013666
+1971,New Mexico,Energy,Upper Basin,15.794604
+1971,New Mexico,Fish and Wildlife and Recreation,Upper Basin,3.652436054
+1971,New Mexico,Minerals,Upper Basin,2.44
+1971,New Mexico,Municipal and Industrial,Upper Basin,39.10948356
+1971,New Mexico,Reservoir Evaporation,Upper Basin,81.927831
+1971,Utah,Agricultural,Upper Basin,673.3845997
+1971,Utah,Energy,Upper Basin,1.872
+1971,Utah,Minerals,Upper Basin,9.76
+1971,Utah,Municipal and Industrial,Upper Basin,21.964
+1971,Utah,Reservoir Evaporation,Upper Basin,169.2036282
+1971,Wyoming,Agricultural,Upper Basin,313.9043397
+1971,Wyoming,Energy,Upper Basin,5.7
+1971,Wyoming,Minerals,Upper Basin,11.08
+1971,Wyoming,Municipal and Industrial,Upper Basin,7.796
+1971,Wyoming,Reservoir Evaporation,Upper Basin,95.62275451
+1972,Arizona,Agricultural,Lower Basin,1145.194
+1972,Arizona,Agricultural,Upper Basin,2.9
+1972,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1972,Arizona,CAP M&I Recharge,Lower Basin,0
+1972,Arizona,CAP Tribes,Lower Basin,0
+1972,Arizona,Energy,Lower Basin,1.072
+1972,Arizona,Energy,Upper Basin,0
+1972,Arizona,Export,Upper Basin,0
+1972,Arizona,Fish and Wildlife and Recreation,Lower Basin,36.206
+1972,Arizona,Minerals,Lower Basin,0
+1972,Arizona,Minerals,Upper Basin,0
+1972,Arizona,Municipal and Industrial,Lower Basin,20.571
+1972,Arizona,Municipal and Industrial,Upper Basin,3.6
+1972,Arizona,Reservoir Evaporation,Upper Basin,5.7
+1972,California,Agricultural,Lower Basin,3985.564
+1972,California,Fish and Wildlife and Recreation,Lower Basin,0
+1972,California,Municipal and Industrial,Lower Basin,1245.071
+1972,Colorado,Agricultural,Upper Basin,1540.935637
+1972,Colorado,Energy,Upper Basin,4.959
+1972,Colorado,Minerals,Upper Basin,18.11
+1972,Colorado,Municipal and Industrial,Upper Basin,273.4818065
+1972,Colorado,Reservoir Evaporation,Upper Basin,314.8373345
+1972,Mexico,Unassigned,Lower Basin,1500
+1972,Misc,,Lower Basin,86.304
+1972,Misc,Fish and Wildlife and Recreation,Lower Basin,449.2814874
+1972,Misc,Reservoir Evaporation,Lower Basin,1105.229156
+1972,Misc,Unassigned,Lower Basin,26.234
+1972,Nevada,Agricultural,Lower Basin,0.061
+1972,Nevada,Energy,Lower Basin,11.169
+1972,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.903
+1972,Nevada,Municipal and Industrial,Lower Basin,68.918
+1972,New Mexico,Agricultural,Upper Basin,113.8628497
+1972,New Mexico,Energy,Upper Basin,17.3794735
+1972,New Mexico,Fish and Wildlife and Recreation,Upper Basin,3.492601949
+1972,New Mexico,Minerals,Upper Basin,2.58
+1972,New Mexico,Municipal and Industrial,Upper Basin,37.76868279
+1972,New Mexico,Reservoir Evaporation,Upper Basin,81.92304963
+1972,Utah,Agricultural,Upper Basin,690.5454828
+1972,Utah,Energy,Upper Basin,1.696
+1972,Utah,Minerals,Upper Basin,9.82
+1972,Utah,Municipal and Industrial,Upper Basin,23.158
+1972,Utah,Reservoir Evaporation,Upper Basin,172.3610174
+1972,Wyoming,Agricultural,Upper Basin,295.683833
+1972,Wyoming,Energy,Upper Basin,4.47
+1972,Wyoming,Minerals,Upper Basin,11.96
+1972,Wyoming,Municipal and Industrial,Upper Basin,10.593
+1972,Wyoming,Reservoir Evaporation,Upper Basin,99.24260429
+1973,Arizona,Agricultural,Lower Basin,1205.348
+1973,Arizona,Agricultural,Upper Basin,4
+1973,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1973,Arizona,CAP M&I Recharge,Lower Basin,0
+1973,Arizona,CAP Tribes,Lower Basin,0
+1973,Arizona,Energy,Lower Basin,1.138
+1973,Arizona,Energy,Upper Basin,0
+1973,Arizona,Export,Upper Basin,0
+1973,Arizona,Fish and Wildlife and Recreation,Lower Basin,41.386
+1973,Arizona,Minerals,Lower Basin,0
+1973,Arizona,Minerals,Upper Basin,0
+1973,Arizona,Municipal and Industrial,Lower Basin,20.872
+1973,Arizona,Municipal and Industrial,Upper Basin,3.2
+1973,Arizona,Reservoir Evaporation,Upper Basin,4.2
+1973,California,Agricultural,Lower Basin,4117.17
+1973,California,Fish and Wildlife and Recreation,Lower Basin,0.015
+1973,California,Municipal and Industrial,Lower Basin,1200.362
+1973,Colorado,Agricultural,Upper Basin,1345.399365
+1973,Colorado,Energy,Upper Basin,4.959
+1973,Colorado,Minerals,Upper Basin,18.29
+1973,Colorado,Municipal and Industrial,Upper Basin,227.1131788
+1973,Colorado,Reservoir Evaporation,Upper Basin,342.0756975
+1973,Mexico,Unassigned,Lower Basin,1500
+1973,Misc,,Lower Basin,119.139
+1973,Misc,Fish and Wildlife and Recreation,Lower Basin,415.8262891
+1973,Misc,Reservoir Evaporation,Lower Basin,1204.390125
+1973,Misc,Unassigned,Lower Basin,74.34803846
+1973,Nevada,Agricultural,Lower Basin,0.076
+1973,Nevada,Energy,Lower Basin,12.188
+1973,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.833
+1973,Nevada,Municipal and Industrial,Lower Basin,79.552
+1973,New Mexico,Agricultural,Upper Basin,135.1272595
+1973,New Mexico,Energy,Upper Basin,26.055224
+1973,New Mexico,Fish and Wildlife and Recreation,Upper Basin,9.221761097
+1973,New Mexico,Minerals,Upper Basin,2.72
+1973,New Mexico,Municipal and Industrial,Upper Basin,93.19777698
+1973,New Mexico,Reservoir Evaporation,Upper Basin,105.7709553
+1973,Utah,Agricultural,Upper Basin,673.3136367
+1973,Utah,Energy,Upper Basin,1.912
+1973,Utah,Minerals,Upper Basin,9.88
+1973,Utah,Municipal and Industrial,Upper Basin,22.579
+1973,Utah,Reservoir Evaporation,Upper Basin,182.998093
+1973,Wyoming,Agricultural,Upper Basin,284.6298194
+1973,Wyoming,Energy,Upper Basin,7.65
+1973,Wyoming,Minerals,Upper Basin,12.84
+1973,Wyoming,Municipal and Industrial,Upper Basin,11.624
+1973,Wyoming,Reservoir Evaporation,Upper Basin,106.9579924
+1974,Arizona,Agricultural,Lower Basin,1269.577
+1974,Arizona,Agricultural,Upper Basin,4.25
+1974,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1974,Arizona,CAP M&I Recharge,Lower Basin,0
+1974,Arizona,CAP Tribes,Lower Basin,0
+1974,Arizona,Energy,Lower Basin,1.207
+1974,Arizona,Energy,Upper Basin,5.269
+1974,Arizona,Export,Upper Basin,0
+1974,Arizona,Fish and Wildlife and Recreation,Lower Basin,32.392
+1974,Arizona,Minerals,Lower Basin,0
+1974,Arizona,Minerals,Upper Basin,0
+1974,Arizona,Municipal and Industrial,Lower Basin,22.455
+1974,Arizona,Municipal and Industrial,Upper Basin,3.7
+1974,Arizona,Reservoir Evaporation,Upper Basin,5.906
+1974,California,Agricultural,Lower Basin,4260.9312
+1974,California,Fish and Wildlife and Recreation,Lower Basin,0.015
+1974,California,Municipal and Industrial,Lower Basin,1153.0938
+1974,Colorado,Agricultural,Upper Basin,1608.109056
+1974,Colorado,Energy,Upper Basin,2.904
+1974,Colorado,Minerals,Upper Basin,18.46
+1974,Colorado,Municipal and Industrial,Upper Basin,297.2620494
+1974,Colorado,Reservoir Evaporation,Upper Basin,391.8279944
+1974,Mexico,Unassigned,Lower Basin,1500
+1974,Misc,,Lower Basin,159.185
+1974,Misc,Fish and Wildlife and Recreation,Lower Basin,403.2177382
+1974,Misc,Reservoir Evaporation,Lower Basin,1169.423609
+1974,Misc,Unassigned,Lower Basin,6.173
+1974,Nevada,Agricultural,Lower Basin,0.057
+1974,Nevada,Energy,Lower Basin,13.44
+1974,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.815
+1974,Nevada,Municipal and Industrial,Lower Basin,80.557
+1974,New Mexico,Agricultural,Upper Basin,115.0518039
+1974,New Mexico,Energy,Upper Basin,23.44310379
+1974,New Mexico,Fish and Wildlife and Recreation,Upper Basin,2.840490798
+1974,New Mexico,Minerals,Upper Basin,2.86
+1974,New Mexico,Municipal and Industrial,Upper Basin,31.88233129
+1974,New Mexico,Reservoir Evaporation,Upper Basin,98.57631621
+1974,Utah,Agricultural,Upper Basin,699.7057088
+1974,Utah,Energy,Upper Basin,1.832
+1974,Utah,Minerals,Upper Basin,9.94
+1974,Utah,Municipal and Industrial,Upper Basin,19.838
+1974,Utah,Reservoir Evaporation,Upper Basin,217.767774
+1974,Wyoming,Agricultural,Upper Basin,348.6023533
+1974,Wyoming,Energy,Upper Basin,10.101
+1974,Wyoming,Minerals,Upper Basin,13.72
+1974,Wyoming,Municipal and Industrial,Upper Basin,10.665
+1974,Wyoming,Reservoir Evaporation,Upper Basin,119.4513214
+1975,Arizona,Agricultural,Lower Basin,1304.907
+1975,Arizona,Agricultural,Upper Basin,3.54
+1975,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1975,Arizona,CAP M&I Recharge,Lower Basin,0
+1975,Arizona,CAP Tribes,Lower Basin,0
+1975,Arizona,Energy,Lower Basin,1.018
+1975,Arizona,Energy,Upper Basin,12.414
+1975,Arizona,Export,Upper Basin,0
+1975,Arizona,Fish and Wildlife and Recreation,Lower Basin,34.219
+1975,Arizona,Minerals,Lower Basin,0
+1975,Arizona,Minerals,Upper Basin,0
+1975,Arizona,Municipal and Industrial,Lower Basin,17.859
+1975,Arizona,Municipal and Industrial,Upper Basin,2.9
+1975,Arizona,Reservoir Evaporation,Upper Basin,4.82
+1975,California,Agricultural,Lower Basin,4173.9636
+1975,California,Fish and Wildlife and Recreation,Lower Basin,0.015
+1975,California,Municipal and Industrial,Lower Basin,809.7264
+1975,Colorado,Agricultural,Upper Basin,1519.689682
+1975,Colorado,Energy,Upper Basin,3.773
+1975,Colorado,Minerals,Upper Basin,18.63
+1975,Colorado,Municipal and Industrial,Upper Basin,317.6955662
+1975,Colorado,Reservoir Evaporation,Upper Basin,398.1512962
+1975,Mexico,Unassigned,Lower Basin,1500
+1975,Misc,,Lower Basin,214.729
+1975,Misc,Fish and Wildlife and Recreation,Lower Basin,351.4807795
+1975,Misc,Reservoir Evaporation,Lower Basin,1186.922797
+1975,Misc,Unassigned,Lower Basin,12.844
+1975,Nevada,Agricultural,Lower Basin,0.028
+1975,Nevada,Energy,Lower Basin,14.422
+1975,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.83
+1975,Nevada,Municipal and Industrial,Lower Basin,56.86
+1975,New Mexico,Agricultural,Upper Basin,132.819729
+1975,New Mexico,Energy,Upper Basin,25.27494646
+1975,New Mexico,Fish and Wildlife and Recreation,Upper Basin,8.725490196
+1975,New Mexico,Minerals,Upper Basin,3
+1975,New Mexico,Municipal and Industrial,Upper Basin,88.91372549
+1975,New Mexico,Reservoir Evaporation,Upper Basin,115.177018
+1975,Utah,Agricultural,Upper Basin,572.5419087
+1975,Utah,Energy,Upper Basin,6.996
+1975,Utah,Minerals,Upper Basin,10
+1975,Utah,Municipal and Industrial,Upper Basin,21.236
+1975,Utah,Reservoir Evaporation,Upper Basin,207.8359288
+1975,Wyoming,Agricultural,Upper Basin,263.306833
+1975,Wyoming,Energy,Upper Basin,12.92
+1975,Wyoming,Minerals,Upper Basin,14.6
+1975,Wyoming,Municipal and Industrial,Upper Basin,8.886
+1975,Wyoming,Reservoir Evaporation,Upper Basin,120.2739258
+1976,Arizona,Agricultural,Lower Basin,1179.161
+1976,Arizona,Agricultural,Upper Basin,2.69
+1976,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1976,Arizona,CAP M&I Recharge,Lower Basin,0
+1976,Arizona,CAP Tribes,Lower Basin,0
+1976,Arizona,Energy,Lower Basin,0.776
+1976,Arizona,Energy,Upper Basin,19.931
+1976,Arizona,Export,Upper Basin,0
+1976,Arizona,Fish and Wildlife and Recreation,Lower Basin,50.364
+1976,Arizona,Minerals,Lower Basin,0
+1976,Arizona,Minerals,Upper Basin,0
+1976,Arizona,Municipal and Industrial,Lower Basin,17.719
+1976,Arizona,Municipal and Industrial,Upper Basin,2.9
+1976,Arizona,Reservoir Evaporation,Upper Basin,4.986
+1976,California,Agricultural,Lower Basin,3884.4562
+1976,California,Fish and Wildlife and Recreation,Lower Basin,0.015
+1976,California,Municipal and Industrial,Lower Basin,822.1228
+1976,Colorado,Agricultural,Upper Basin,1433.270525
+1976,Colorado,Energy,Upper Basin,5.504
+1976,Colorado,Minerals,Upper Basin,18.9
+1976,Colorado,Municipal and Industrial,Upper Basin,289.691225
+1976,Colorado,Reservoir Evaporation,Upper Basin,378.9028913
+1976,Mexico,Unassigned,Lower Basin,1500
+1976,Misc,,Lower Basin,205.395
+1976,Misc,Fish and Wildlife and Recreation,Lower Basin,333.00048
+1976,Misc,Reservoir Evaporation,Lower Basin,1212.124984
+1976,Misc,Unassigned,Lower Basin,68.829
+1976,Nevada,Agricultural,Lower Basin,0.078
+1976,Nevada,Energy,Lower Basin,14.709
+1976,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.822
+1976,Nevada,Municipal and Industrial,Lower Basin,57.583
+1976,New Mexico,Agricultural,Upper Basin,169.6093497
+1976,New Mexico,Energy,Upper Basin,28.10119976
+1976,New Mexico,Fish and Wildlife and Recreation,Upper Basin,5.125706724
+1976,New Mexico,Minerals,Upper Basin,3.1
+1976,New Mexico,Municipal and Industrial,Upper Basin,54.47181282
+1976,New Mexico,Reservoir Evaporation,Upper Basin,108.9051992
+1976,Utah,Agricultural,Upper Basin,584.401
+1976,Utah,Energy,Upper Basin,5.054
+1976,Utah,Minerals,Upper Basin,10
+1976,Utah,Municipal and Industrial,Upper Basin,24.824
+1976,Utah,Reservoir Evaporation,Upper Basin,189.4607966
+1976,Wyoming,Agricultural,Upper Basin,249.366
+1976,Wyoming,Energy,Upper Basin,20.388
+1976,Wyoming,Minerals,Upper Basin,15.5
+1976,Wyoming,Municipal and Industrial,Upper Basin,10.744
+1976,Wyoming,Reservoir Evaporation,Upper Basin,119.611746
+1977,Arizona,Agricultural,Lower Basin,1166.538
+1977,Arizona,Agricultural,Upper Basin,3.81
+1977,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1977,Arizona,CAP M&I Recharge,Lower Basin,0
+1977,Arizona,CAP Tribes,Lower Basin,0
+1977,Arizona,Energy,Lower Basin,1.01
+1977,Arizona,Energy,Upper Basin,21.761
+1977,Arizona,Export,Upper Basin,0
+1977,Arizona,Fish and Wildlife and Recreation,Lower Basin,43.647
+1977,Arizona,Minerals,Lower Basin,0
+1977,Arizona,Minerals,Upper Basin,0
+1977,Arizona,Municipal and Industrial,Lower Basin,20.079
+1977,Arizona,Municipal and Industrial,Upper Basin,3.1
+1977,Arizona,Reservoir Evaporation,Upper Basin,5.2
+1977,California,Agricultural,Lower Basin,3789.6274
+1977,California,Fish and Wildlife and Recreation,Lower Basin,0.015
+1977,California,Municipal and Industrial,Lower Basin,1307.7006
+1977,Colorado,Agricultural,Upper Basin,1298.603455
+1977,Colorado,Energy,Upper Basin,7.639
+1977,Colorado,Minerals,Upper Basin,19
+1977,Colorado,Municipal and Industrial,Upper Basin,293.0890554
+1977,Colorado,Reservoir Evaporation,Upper Basin,341.3805954
+1977,Mexico,Unassigned,Lower Basin,1500
+1977,Misc,,Lower Basin,206.822
+1977,Misc,Fish and Wildlife and Recreation,Lower Basin,363.2516043
+1977,Misc,Reservoir Evaporation,Lower Basin,1208.312594
+1977,Misc,Unassigned,Lower Basin,72.082
+1977,Nevada,Agricultural,Lower Basin,0.065
+1977,Nevada,Energy,Lower Basin,14.327
+1977,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.897
+1977,Nevada,Municipal and Industrial,Lower Basin,57.885
+1977,New Mexico,Agricultural,Upper Basin,143.3123043
+1977,New Mexico,Energy,Upper Basin,29.60151276
+1977,New Mexico,Fish and Wildlife and Recreation,Upper Basin,1.039057059
+1977,New Mexico,Minerals,Upper Basin,3.3
+1977,New Mexico,Municipal and Industrial,Upper Basin,17.39514739
+1977,New Mexico,Reservoir Evaporation,Upper Basin,89.24458696
+1977,Utah,Agricultural,Upper Basin,328.67
+1977,Utah,Energy,Upper Basin,7.303
+1977,Utah,Minerals,Upper Basin,10.2
+1977,Utah,Municipal and Industrial,Upper Basin,22.057
+1977,Utah,Reservoir Evaporation,Upper Basin,171.0437135
+1977,Wyoming,Agricultural,Upper Basin,151.067
+1977,Wyoming,Energy,Upper Basin,28.52
+1977,Wyoming,Minerals,Upper Basin,16.4
+1977,Wyoming,Municipal and Industrial,Upper Basin,7.687
+1977,Wyoming,Reservoir Evaporation,Upper Basin,106.0760844
+1978,Arizona,Agricultural,Lower Basin,1168.728
+1978,Arizona,Agricultural,Upper Basin,4.3
+1978,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1978,Arizona,CAP M&I Recharge,Lower Basin,0
+1978,Arizona,CAP Tribes,Lower Basin,0
+1978,Arizona,Energy,Lower Basin,1.183
+1978,Arizona,Energy,Upper Basin,19.365
+1978,Arizona,Export,Upper Basin,0
+1978,Arizona,Fish and Wildlife and Recreation,Lower Basin,43.978
+1978,Arizona,Minerals,Lower Basin,0
+1978,Arizona,Minerals,Upper Basin,0
+1978,Arizona,Municipal and Industrial,Lower Basin,21.053
+1978,Arizona,Municipal and Industrial,Upper Basin,3.8
+1978,Arizona,Reservoir Evaporation,Upper Basin,5.41
+1978,California,Agricultural,Lower Basin,3761.1056
+1978,California,Fish and Wildlife and Recreation,Lower Basin,0.015
+1978,California,Municipal and Industrial,Lower Basin,742.2194
+1978,Colorado,Agricultural,Upper Basin,1582.313836
+1978,Colorado,Energy,Upper Basin,8.747
+1978,Colorado,Minerals,Upper Basin,19.1
+1978,Colorado,Municipal and Industrial,Upper Basin,367.6078942
+1978,Colorado,Reservoir Evaporation,Upper Basin,345.195978
+1978,Mexico,Unassigned,Lower Basin,1500
+1978,Misc,,Lower Basin,182.036
+1978,Misc,Fish and Wildlife and Recreation,Lower Basin,376.4221974
+1978,Misc,Reservoir Evaporation,Lower Basin,1229.526797
+1978,Misc,Unassigned,Lower Basin,44.997
+1978,Nevada,Agricultural,Lower Basin,0.066
+1978,Nevada,Energy,Lower Basin,9.053
+1978,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.896
+1978,Nevada,Municipal and Industrial,Lower Basin,61.278
+1978,New Mexico,Agricultural,Upper Basin,188.1380311
+1978,New Mexico,Energy,Upper Basin,27.5375476
+1978,New Mexico,Fish and Wildlife and Recreation,Upper Basin,5.520298919
+1978,New Mexico,Minerals,Upper Basin,3.4
+1978,New Mexico,Municipal and Industrial,Upper Basin,71.04219175
+1978,New Mexico,Reservoir Evaporation,Upper Basin,96.95077435
+1978,Utah,Agricultural,Upper Basin,607.159
+1978,Utah,Energy,Upper Basin,13.155
+1978,Utah,Minerals,Upper Basin,10.2
+1978,Utah,Municipal and Industrial,Upper Basin,24.993
+1978,Utah,Reservoir Evaporation,Upper Basin,173.6332435
+1978,Wyoming,Agricultural,Upper Basin,274.636
+1978,Wyoming,Energy,Upper Basin,24.97
+1978,Wyoming,Minerals,Upper Basin,17.2
+1978,Wyoming,Municipal and Industrial,Upper Basin,10.583
+1978,Wyoming,Reservoir Evaporation,Upper Basin,106.7237587
+1979,Arizona,Agricultural,Lower Basin,1081.093
+1979,Arizona,Agricultural,Upper Basin,5.32
+1979,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1979,Arizona,CAP M&I Recharge,Lower Basin,0
+1979,Arizona,CAP Tribes,Lower Basin,0
+1979,Arizona,Energy,Lower Basin,1.079
+1979,Arizona,Energy,Upper Basin,20.413
+1979,Arizona,Export,Upper Basin,0
+1979,Arizona,Fish and Wildlife and Recreation,Lower Basin,48.855
+1979,Arizona,Minerals,Lower Basin,0
+1979,Arizona,Minerals,Upper Basin,0
+1979,Arizona,Municipal and Industrial,Lower Basin,19.826
+1979,Arizona,Municipal and Industrial,Upper Basin,3.6
+1979,Arizona,Reservoir Evaporation,Upper Basin,4.58
+1979,California,Agricultural,Lower Basin,3951.063
+1979,California,Fish and Wildlife and Recreation,Lower Basin,0.015
+1979,California,Municipal and Industrial,Lower Basin,837.345
+1979,Colorado,Agricultural,Upper Basin,1520.487157
+1979,Colorado,Energy,Upper Basin,7.326
+1979,Colorado,Minerals,Upper Basin,19.4
+1979,Colorado,Municipal and Industrial,Upper Basin,259.3384881
+1979,Colorado,Reservoir Evaporation,Upper Basin,395.0792353
+1979,Mexico,Unassigned,Lower Basin,1700
+1979,Misc,,Lower Basin,177.99
+1979,Misc,Fish and Wildlife and Recreation,Lower Basin,395.1690702
+1979,Misc,Reservoir Evaporation,Lower Basin,1269.530953
+1979,Misc,Unassigned,Lower Basin,74.34803846
+1979,Nevada,Agricultural,Lower Basin,0.066
+1979,Nevada,Energy,Lower Basin,11.934
+1979,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.958
+1979,Nevada,Municipal and Industrial,Lower Basin,47.116
+1979,New Mexico,Agricultural,Upper Basin,225.0474114
+1979,New Mexico,Energy,Upper Basin,33.35181882
+1979,New Mexico,Fish and Wildlife and Recreation,Upper Basin,8.698908204
+1979,New Mexico,Minerals,Upper Basin,3.6
+1979,New Mexico,Municipal and Industrial,Upper Basin,109.0304273
+1979,New Mexico,Reservoir Evaporation,Upper Basin,116.8770172
+1979,Utah,Agricultural,Upper Basin,653.683
+1979,Utah,Energy,Upper Basin,16.769
+1979,Utah,Minerals,Upper Basin,10.3
+1979,Utah,Municipal and Industrial,Upper Basin,23.839
+1979,Utah,Reservoir Evaporation,Upper Basin,195.6709623
+1979,Wyoming,Agricultural,Upper Basin,271.195
+1979,Wyoming,Energy,Upper Basin,27.234
+1979,Wyoming,Minerals,Upper Basin,18.1
+1979,Wyoming,Municipal and Industrial,Upper Basin,12.131
+1979,Wyoming,Reservoir Evaporation,Upper Basin,121.6475673
+1980,Arizona,Agricultural,Lower Basin,1141.155
+1980,Arizona,Agricultural,Upper Basin,6.29
+1980,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1980,Arizona,CAP M&I Recharge,Lower Basin,0
+1980,Arizona,CAP Tribes,Lower Basin,0
+1980,Arizona,Energy,Lower Basin,1.094
+1980,Arizona,Energy,Upper Basin,22.322
+1980,Arizona,Export,Upper Basin,0
+1980,Arizona,Fish and Wildlife and Recreation,Lower Basin,58.155
+1980,Arizona,Minerals,Lower Basin,0
+1980,Arizona,Minerals,Upper Basin,0
+1980,Arizona,Municipal and Industrial,Lower Basin,21.159
+1980,Arizona,Municipal and Industrial,Upper Basin,3.6
+1980,Arizona,Reservoir Evaporation,Upper Basin,4.66
+1980,California,Agricultural,Lower Basin,3885.9182
+1980,California,Fish and Wildlife and Recreation,Lower Basin,0.015
+1980,California,Municipal and Industrial,Lower Basin,847.0738
+1980,Colorado,Agricultural,Upper Basin,1506.489253
+1980,Colorado,Energy,Upper Basin,9.8093
+1980,Colorado,Minerals,Upper Basin,19.5
+1980,Colorado,Municipal and Industrial,Upper Basin,239.1075574
+1980,Colorado,Reservoir Evaporation,Upper Basin,448.9856183
+1980,Mexico,Unassigned,Lower Basin,1700
+1980,Misc,,Lower Basin,154.63
+1980,Misc,Fish and Wildlife and Recreation,Lower Basin,414.8190347
+1980,Misc,Reservoir Evaporation,Lower Basin,1296.009906
+1980,Misc,Unassigned,Lower Basin,74.34803846
+1980,Nevada,Agricultural,Lower Basin,0.064
+1980,Nevada,Energy,Lower Basin,10.163
+1980,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.083
+1980,Nevada,Municipal and Industrial,Lower Basin,81.116
+1980,New Mexico,Agricultural,Upper Basin,244.2616949
+1980,New Mexico,Energy,Upper Basin,34.6212839
+1980,New Mexico,Fish and Wildlife and Recreation,Upper Basin,7.611193555
+1980,New Mexico,Minerals,Upper Basin,3.7
+1980,New Mexico,Municipal and Industrial,Upper Basin,96.31620182
+1980,New Mexico,Reservoir Evaporation,Upper Basin,124.9262394
+1980,Utah,Agricultural,Upper Basin,614.025
+1980,Utah,Energy,Upper Basin,17.77
+1980,Utah,Minerals,Upper Basin,10.3
+1980,Utah,Municipal and Industrial,Upper Basin,22.228
+1980,Utah,Reservoir Evaporation,Upper Basin,213.7037993
+1980,Wyoming,Agricultural,Upper Basin,264.297
+1980,Wyoming,Energy,Upper Basin,31.46
+1980,Wyoming,Minerals,Upper Basin,19
+1980,Wyoming,Municipal and Industrial,Upper Basin,11.97
+1980,Wyoming,Reservoir Evaporation,Upper Basin,132.0468241
+1981,Arizona,Agricultural,Lower Basin,1338.191
+1981,Arizona,Agricultural,Upper Basin,6.975
+1981,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1981,Arizona,CAP M&I Recharge,Lower Basin,0
+1981,Arizona,CAP Tribes,Lower Basin,0
+1981,Arizona,Energy,Lower Basin,1.022
+1981,Arizona,Energy,Upper Basin,21.14
+1981,Arizona,Export,Upper Basin,0
+1981,Arizona,Fish and Wildlife and Recreation,Lower Basin,54.185
+1981,Arizona,Minerals,Lower Basin,0
+1981,Arizona,Minerals,Upper Basin,0
+1981,Arizona,Municipal and Industrial,Lower Basin,22.452
+1981,Arizona,Municipal and Industrial,Upper Basin,6.58
+1981,Arizona,Reservoir Evaporation,Upper Basin,6.698
+1981,California,Agricultural,Lower Basin,3939.673
+1981,California,Fish and Wildlife and Recreation,Lower Basin,0.015
+1981,California,Municipal and Industrial,Lower Basin,856.261
+1981,Colorado,Agricultural,Upper Basin,1672.504771
+1981,Colorado,Energy,Upper Basin,14.408
+1981,Colorado,Minerals,Upper Basin,15.88
+1981,Colorado,Municipal and Industrial,Upper Basin,325.0281496
+1981,Colorado,Reservoir Evaporation,Upper Basin,441.0955636
+1981,Mexico,Unassigned,Lower Basin,1700
+1981,Misc,,Lower Basin,148.426
+1981,Misc,Fish and Wildlife and Recreation,Lower Basin,447.9450458
+1981,Misc,Reservoir Evaporation,Lower Basin,1270.367031
+1981,Misc,Unassigned,Lower Basin,74.34803846
+1981,Nevada,Agricultural,Lower Basin,0.066
+1981,Nevada,Energy,Lower Basin,13.983
+1981,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.185
+1981,Nevada,Municipal and Industrial,Lower Basin,94.783
+1981,New Mexico,Agricultural,Upper Basin,166.2717095
+1981,New Mexico,Energy,Upper Basin,31.51491434
+1981,New Mexico,Fish and Wildlife and Recreation,Upper Basin,2.844521849
+1981,New Mexico,Minerals,Upper Basin,4.2
+1981,New Mexico,Municipal and Industrial,Upper Basin,43.52617036
+1981,New Mexico,Reservoir Evaporation,Upper Basin,110.625921
+1981,Utah,Agricultural,Upper Basin,543.646515
+1981,Utah,Energy,Upper Basin,20.12
+1981,Utah,Minerals,Upper Basin,9.99
+1981,Utah,Municipal and Industrial,Upper Basin,25.919
+1981,Utah,Reservoir Evaporation,Upper Basin,221.9461283
+1981,Wyoming,Agricultural,Upper Basin,240.789534
+1981,Wyoming,Energy,Upper Basin,28.02
+1981,Wyoming,Minerals,Upper Basin,16.44
+1981,Wyoming,Municipal and Industrial,Upper Basin,11.111
+1981,Wyoming,Reservoir Evaporation,Upper Basin,143.4561437
+1982,Arizona,Agricultural,Lower Basin,1171.463
+1982,Arizona,Agricultural,Upper Basin,8.064
+1982,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1982,Arizona,CAP M&I Recharge,Lower Basin,0
+1982,Arizona,CAP Tribes,Lower Basin,0
+1982,Arizona,Energy,Lower Basin,0.8
+1982,Arizona,Energy,Upper Basin,19.36
+1982,Arizona,Export,Upper Basin,0
+1982,Arizona,Fish and Wildlife and Recreation,Lower Basin,47.796
+1982,Arizona,Minerals,Lower Basin,0
+1982,Arizona,Minerals,Upper Basin,0
+1982,Arizona,Municipal and Industrial,Lower Basin,20.325
+1982,Arizona,Municipal and Industrial,Upper Basin,6.61
+1982,Arizona,Reservoir Evaporation,Upper Basin,5.3
+1982,California,Agricultural,Lower Basin,3557.077
+1982,California,Fish and Wildlife and Recreation,Lower Basin,0.015
+1982,California,Municipal and Industrial,Lower Basin,742.707
+1982,Colorado,Agricultural,Upper Basin,1625.957813
+1982,Colorado,Energy,Upper Basin,12.2433
+1982,Colorado,Minerals,Upper Basin,12.26
+1982,Colorado,Municipal and Industrial,Upper Basin,318.1362266
+1982,Colorado,Reservoir Evaporation,Upper Basin,450.3273166
+1982,Mexico,Unassigned,Lower Basin,1500
+1982,Misc,,Lower Basin,149.698
+1982,Misc,Fish and Wildlife and Recreation,Lower Basin,433.4400773
+1982,Misc,Reservoir Evaporation,Lower Basin,1285.487734
+1982,Misc,Unassigned,Lower Basin,49.318
+1982,Nevada,Agricultural,Lower Basin,0.065
+1982,Nevada,Energy,Lower Basin,17.294
+1982,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.052
+1982,Nevada,Municipal and Industrial,Lower Basin,83.915
+1982,New Mexico,Agricultural,Upper Basin,228.2074438
+1982,New Mexico,Energy,Upper Basin,41.58994067
+1982,New Mexico,Fish and Wildlife and Recreation,Upper Basin,6.91582225
+1982,New Mexico,Minerals,Upper Basin,3.9
+1982,New Mexico,Municipal and Industrial,Upper Basin,91.82706576
+1982,New Mexico,Reservoir Evaporation,Upper Basin,122.2068187
+1982,Utah,Agricultural,Upper Basin,517.602333
+1982,Utah,Energy,Upper Basin,19.96
+1982,Utah,Minerals,Upper Basin,9.68
+1982,Utah,Municipal and Industrial,Upper Basin,25.895
+1982,Utah,Reservoir Evaporation,Upper Basin,222.0218229
+1982,Wyoming,Agricultural,Upper Basin,228.023601
+1982,Wyoming,Energy,Upper Basin,31.1
+1982,Wyoming,Minerals,Upper Basin,13.87
+1982,Wyoming,Municipal and Industrial,Upper Basin,15.501
+1982,Wyoming,Reservoir Evaporation,Upper Basin,145.1951018
+1983,Arizona,Agricultural,Lower Basin,1011.593
+1983,Arizona,Agricultural,Upper Basin,8.923
+1983,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1983,Arizona,CAP M&I Recharge,Lower Basin,0
+1983,Arizona,CAP Tribes,Lower Basin,0
+1983,Arizona,Energy,Lower Basin,0.241
+1983,Arizona,Energy,Upper Basin,20.21
+1983,Arizona,Export,Upper Basin,0
+1983,Arizona,Fish and Wildlife and Recreation,Lower Basin,28.446
+1983,Arizona,Minerals,Lower Basin,0
+1983,Arizona,Minerals,Upper Basin,0
+1983,Arizona,Municipal and Industrial,Lower Basin,21.889
+1983,Arizona,Municipal and Industrial,Upper Basin,6.97
+1983,Arizona,Reservoir Evaporation,Upper Basin,5.1
+1983,California,Agricultural,Lower Basin,3311.8768
+1983,California,Fish and Wildlife and Recreation,Lower Basin,0.015
+1983,California,Municipal and Industrial,Lower Basin,933.1532
+1983,Colorado,Agricultural,Upper Basin,1562.39104
+1983,Colorado,Energy,Upper Basin,8.576
+1983,Colorado,Minerals,Upper Basin,8.45
+1983,Colorado,Municipal and Industrial,Upper Basin,250.2018102
+1983,Colorado,Reservoir Evaporation,Upper Basin,490.6072465
+1983,Mexico,Unassigned,Lower Basin,1700
+1983,Misc,,Lower Basin,179.157
+1983,Misc,Fish and Wildlife and Recreation,Lower Basin,476.8780654
+1983,Misc,Reservoir Evaporation,Lower Basin,1351.566703
+1983,Misc,Unassigned,Lower Basin,74.34803846
+1983,Nevada,Agricultural,Lower Basin,0.059
+1983,Nevada,Energy,Lower Basin,14.676
+1983,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.126
+1983,Nevada,Municipal and Industrial,Lower Basin,70.735
+1983,New Mexico,Agricultural,Upper Basin,232.7456172
+1983,New Mexico,Energy,Upper Basin,40.49121974
+1983,New Mexico,Fish and Wildlife and Recreation,Upper Basin,6.877031877
+1983,New Mexico,Minerals,Upper Basin,5.4
+1983,New Mexico,Municipal and Industrial,Upper Basin,90.76305531
+1983,New Mexico,Reservoir Evaporation,Upper Basin,132.4380051
+1983,Utah,Agricultural,Upper Basin,492.906797
+1983,Utah,Energy,Upper Basin,21.43
+1983,Utah,Minerals,Upper Basin,9.36
+1983,Utah,Municipal and Industrial,Upper Basin,10.735
+1983,Utah,Reservoir Evaporation,Upper Basin,241.1414002
+1983,Wyoming,Agricultural,Upper Basin,256.996552
+1983,Wyoming,Energy,Upper Basin,26.91
+1983,Wyoming,Minerals,Upper Basin,11.3
+1983,Wyoming,Municipal and Industrial,Upper Basin,11.197
+1983,Wyoming,Reservoir Evaporation,Upper Basin,153.0976562
+1984,Arizona,Agricultural,Lower Basin,1086.645
+1984,Arizona,Agricultural,Upper Basin,8.2
+1984,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,0
+1984,Arizona,CAP M&I Recharge,Lower Basin,0
+1984,Arizona,CAP Tribes,Lower Basin,0
+1984,Arizona,Energy,Lower Basin,0.06
+1984,Arizona,Energy,Upper Basin,22.1
+1984,Arizona,Export,Upper Basin,0
+1984,Arizona,Fish and Wildlife and Recreation,Lower Basin,5.946
+1984,Arizona,Minerals,Lower Basin,0
+1984,Arizona,Minerals,Upper Basin,0
+1984,Arizona,Municipal and Industrial,Lower Basin,23.465
+1984,Arizona,Municipal and Industrial,Upper Basin,7.5
+1984,Arizona,Reservoir Evaporation,Upper Basin,5.8
+1984,California,Agricultural,Lower Basin,3412.4316
+1984,California,Fish and Wildlife and Recreation,Lower Basin,0.015
+1984,California,Municipal and Industrial,Lower Basin,1264.6564
+1984,Colorado,Agricultural,Upper Basin,1495.730652
+1984,Colorado,Energy,Upper Basin,11.242
+1984,Colorado,Minerals,Upper Basin,5.01
+1984,Colorado,Municipal and Industrial,Upper Basin,261.5041936
+1984,Colorado,Reservoir Evaporation,Upper Basin,481.3268147
+1984,Mexico,Unassigned,Lower Basin,1700
+1984,Misc,,Lower Basin,125.615
+1984,Misc,Fish and Wildlife and Recreation,Lower Basin,499.0471803
+1984,Misc,Reservoir Evaporation,Lower Basin,1324.447719
+1984,Misc,Unassigned,Lower Basin,74.34803846
+1984,Nevada,Agricultural,Lower Basin,0.119
+1984,Nevada,Energy,Lower Basin,14.198
+1984,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.025
+1984,Nevada,Municipal and Industrial,Lower Basin,86.15
+1984,New Mexico,Agricultural,Upper Basin,205.9766252
+1984,New Mexico,Energy,Upper Basin,44.080207
+1984,New Mexico,Fish and Wildlife and Recreation,Upper Basin,5.996094575
+1984,New Mexico,Minerals,Upper Basin,4.2
+1984,New Mexico,Municipal and Industrial,Upper Basin,79.9252833
+1984,New Mexico,Reservoir Evaporation,Upper Basin,129.0745122
+1984,Utah,Agricultural,Upper Basin,530.582105
+1984,Utah,Energy,Upper Basin,21.94
+1984,Utah,Minerals,Upper Basin,9.05
+1984,Utah,Municipal and Industrial,Upper Basin,11.783
+1984,Utah,Reservoir Evaporation,Upper Basin,237.6163865
+1984,Wyoming,Agricultural,Upper Basin,228.905139
+1984,Wyoming,Energy,Upper Basin,27.75
+1984,Wyoming,Minerals,Upper Basin,8.7
+1984,Wyoming,Municipal and Industrial,Upper Basin,8.912
+1984,Wyoming,Reservoir Evaporation,Upper Basin,148.3921116
+1985,Arizona,Agricultural,Lower Basin,1141.105
+1985,Arizona,Agricultural,Upper Basin,8.2
+1985,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,21.719
+1985,Arizona,CAP M&I Recharge,Lower Basin,0
+1985,Arizona,CAP Tribes,Lower Basin,0
+1985,Arizona,Energy,Lower Basin,0.04
+1985,Arizona,Energy,Upper Basin,25.301
+1985,Arizona,Export,Upper Basin,0
+1985,Arizona,Fish and Wildlife and Recreation,Lower Basin,6.819
+1985,Arizona,Minerals,Lower Basin,0
+1985,Arizona,Minerals,Upper Basin,0
+1985,Arizona,Municipal and Industrial,Lower Basin,24.525
+1985,Arizona,Municipal and Industrial,Upper Basin,7.17
+1985,Arizona,Reservoir Evaporation,Upper Basin,5
+1985,California,Agricultural,Lower Basin,3480.3494
+1985,California,Fish and Wildlife and Recreation,Lower Basin,0.018
+1985,California,Municipal and Industrial,Lower Basin,1298.3816
+1985,Colorado,Agricultural,Upper Basin,1585.038871
+1985,Colorado,Energy,Upper Basin,15.601
+1985,Colorado,Minerals,Upper Basin,1.39
+1985,Colorado,Municipal and Industrial,Upper Basin,295.0674012
+1985,Colorado,Reservoir Evaporation,Upper Basin,475.1542712
+1985,Mexico,Unassigned,Lower Basin,1700
+1985,Misc,,Lower Basin,129.704
+1985,Misc,Fish and Wildlife and Recreation,Lower Basin,517.259477
+1985,Misc,Reservoir Evaporation,Lower Basin,1330.100766
+1985,Misc,Unassigned,Lower Basin,74.34803846
+1985,Nevada,Agricultural,Lower Basin,0.063
+1985,Nevada,Energy,Lower Basin,6.255
+1985,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.945
+1985,Nevada,Municipal and Industrial,Lower Basin,94.446
+1985,New Mexico,Agricultural,Upper Basin,229.1947359
+1985,New Mexico,Energy,Upper Basin,43.152718
+1985,New Mexico,Fish and Wildlife and Recreation,Upper Basin,4.844152417
+1985,New Mexico,Minerals,Upper Basin,5.6
+1985,New Mexico,Municipal and Industrial,Upper Basin,65.84575121
+1985,New Mexico,Reservoir Evaporation,Upper Basin,125.8541624
+1985,Utah,Agricultural,Upper Basin,626.653995
+1985,Utah,Energy,Upper Basin,26.666
+1985,Utah,Minerals,Upper Basin,8.74
+1985,Utah,Municipal and Industrial,Upper Basin,28.482
+1985,Utah,Reservoir Evaporation,Upper Basin,239.3586434
+1985,Wyoming,Agricultural,Upper Basin,249.473112
+1985,Wyoming,Energy,Upper Basin,35.1266
+1985,Wyoming,Minerals,Upper Basin,6.2
+1985,Wyoming,Municipal and Industrial,Upper Basin,16.497
+1985,Wyoming,Reservoir Evaporation,Upper Basin,144.8772243
+1986,Arizona,Agricultural,Lower Basin,1239.52
+1986,Arizona,Agricultural,Upper Basin,5.3389
+1986,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,15.825
+1986,Arizona,CAP M&I Recharge,Lower Basin,0
+1986,Arizona,CAP Tribes,Lower Basin,0
+1986,Arizona,Energy,Lower Basin,0.512
+1986,Arizona,Energy,Upper Basin,18.701
+1986,Arizona,Export,Upper Basin,0
+1986,Arizona,Fish and Wildlife and Recreation,Lower Basin,45.209
+1986,Arizona,Minerals,Lower Basin,0
+1986,Arizona,Minerals,Upper Basin,0
+1986,Arizona,Municipal and Industrial,Lower Basin,55.864
+1986,Arizona,Municipal and Industrial,Upper Basin,6.789
+1986,Arizona,Reservoir Evaporation,Upper Basin,6.3124
+1986,California,Agricultural,Lower Basin,3475.5927
+1986,California,Fish and Wildlife and Recreation,Lower Basin,0.019
+1986,California,Municipal and Industrial,Lower Basin,1329.3383
+1986,Colorado,Agricultural,Upper Basin,1401.602297
+1986,Colorado,Energy,Upper Basin,14.584
+1986,Colorado,Minerals,Upper Basin,4.923
+1986,Colorado,Municipal and Industrial,Upper Basin,310.0382926
+1986,Colorado,Reservoir Evaporation,Upper Basin,461.8447583
+1986,Mexico,Unassigned,Lower Basin,1700
+1986,Misc,,Lower Basin,129.704
+1986,Misc,Fish and Wildlife and Recreation,Lower Basin,527.1912504
+1986,Misc,Reservoir Evaporation,Lower Basin,1312.481406
+1986,Misc,Unassigned,Lower Basin,74.34803846
+1986,Nevada,Agricultural,Lower Basin,0
+1986,Nevada,Energy,Lower Basin,13.262
+1986,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.919
+1986,Nevada,Municipal and Industrial,Lower Basin,98.036
+1986,New Mexico,Agricultural,Upper Basin,220.5633715
+1986,New Mexico,Energy,Upper Basin,39.561821
+1986,New Mexico,Fish and Wildlife and Recreation,Upper Basin,4.706618113
+1986,New Mexico,Minerals,Upper Basin,1.7708
+1986,New Mexico,Municipal and Industrial,Upper Basin,64.26027586
+1986,New Mexico,Reservoir Evaporation,Upper Basin,126.2586509
+1986,Utah,Agricultural,Upper Basin,592.9807806
+1986,Utah,Energy,Upper Basin,24.6147
+1986,Utah,Minerals,Upper Basin,6.412
+1986,Utah,Municipal and Industrial,Upper Basin,35.045
+1986,Utah,Reservoir Evaporation,Upper Basin,246.8549603
+1986,Wyoming,Agricultural,Upper Basin,384.6375
+1986,Wyoming,Energy,Upper Basin,29.359
+1986,Wyoming,Minerals,Upper Basin,7.107
+1986,Wyoming,Municipal and Industrial,Upper Basin,17.778
+1986,Wyoming,Reservoir Evaporation,Upper Basin,136.1518274
+1987,Arizona,Agricultural,Lower Basin,1461.766
+1987,Arizona,Agricultural,Upper Basin,4.8771
+1987,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,52.594
+1987,Arizona,CAP M&I Recharge,Lower Basin,0
+1987,Arizona,CAP Tribes,Lower Basin,18.809
+1987,Arizona,Energy,Lower Basin,0.398
+1987,Arizona,Energy,Upper Basin,20.13
+1987,Arizona,Export,Upper Basin,0
+1987,Arizona,Fish and Wildlife and Recreation,Lower Basin,45.009
+1987,Arizona,Minerals,Lower Basin,0
+1987,Arizona,Minerals,Upper Basin,0
+1987,Arizona,Municipal and Industrial,Lower Basin,155.596
+1987,Arizona,Municipal and Industrial,Upper Basin,6.663
+1987,Arizona,Reservoir Evaporation,Upper Basin,6.418
+1987,California,Agricultural,Lower Basin,3582.288
+1987,California,Fish and Wildlife and Recreation,Lower Basin,0
+1987,California,Municipal and Industrial,Lower Basin,1309.672
+1987,Colorado,Agricultural,Upper Basin,1563.836701
+1987,Colorado,Energy,Upper Basin,14.838
+1987,Colorado,Minerals,Upper Basin,4.261
+1987,Colorado,Municipal and Industrial,Upper Basin,224.2101094
+1987,Colorado,Reservoir Evaporation,Upper Basin,471.5891778
+1987,Mexico,Unassigned,Lower Basin,1700
+1987,Misc,,Lower Basin,97.741
+1987,Misc,Fish and Wildlife and Recreation,Lower Basin,536.3582282
+1987,Misc,Reservoir Evaporation,Lower Basin,1320.7535
+1987,Misc,Unassigned,Lower Basin,74.34803846
+1987,Nevada,Agricultural,Lower Basin,0
+1987,Nevada,Energy,Lower Basin,13.655
+1987,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.892
+1987,Nevada,Municipal and Industrial,Lower Basin,94.316
+1987,New Mexico,Agricultural,Upper Basin,187.254517
+1987,New Mexico,Energy,Upper Basin,43.329271
+1987,New Mexico,Fish and Wildlife and Recreation,Upper Basin,4.382890015
+1987,New Mexico,Minerals,Upper Basin,1.5102
+1987,New Mexico,Municipal and Industrial,Upper Basin,62.18834036
+1987,New Mexico,Reservoir Evaporation,Upper Basin,119.8482147
+1987,Utah,Agricultural,Upper Basin,568.6383274
+1987,Utah,Energy,Upper Basin,30.686
+1987,Utah,Minerals,Upper Basin,6.041
+1987,Utah,Municipal and Industrial,Upper Basin,93.131
+1987,Utah,Reservoir Evaporation,Upper Basin,246.9146947
+1987,Wyoming,Agricultural,Upper Basin,381.9432
+1987,Wyoming,Energy,Upper Basin,39.871
+1987,Wyoming,Minerals,Upper Basin,9.327
+1987,Wyoming,Municipal and Industrial,Upper Basin,13.994
+1987,Wyoming,Reservoir Evaporation,Upper Basin,134.2833833
+1988,Arizona,Agricultural,Lower Basin,1665.518
+1988,Arizona,Agricultural,Upper Basin,4.7751
+1988,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,30.933
+1988,Arizona,CAP M&I Recharge,Lower Basin,0
+1988,Arizona,CAP Tribes,Lower Basin,63.865
+1988,Arizona,Energy,Lower Basin,0.528
+1988,Arizona,Energy,Upper Basin,23.058
+1988,Arizona,Export,Upper Basin,0
+1988,Arizona,Fish and Wildlife and Recreation,Lower Basin,49.751
+1988,Arizona,Minerals,Lower Basin,0
+1988,Arizona,Minerals,Upper Basin,0
+1988,Arizona,Municipal and Industrial,Lower Basin,112.142
+1988,Arizona,Municipal and Industrial,Upper Basin,7.57
+1988,Arizona,Reservoir Evaporation,Upper Basin,5.938
+1988,California,Agricultural,Lower Basin,3808.9152
+1988,California,Fish and Wildlife and Recreation,Lower Basin,0.104
+1988,California,Municipal and Industrial,Lower Basin,1230.6598
+1988,Colorado,Agricultural,Upper Basin,1850.284014
+1988,Colorado,Energy,Upper Basin,18.415
+1988,Colorado,Minerals,Upper Basin,3.544
+1988,Colorado,Municipal and Industrial,Upper Basin,318.1958464
+1988,Colorado,Reservoir Evaporation,Upper Basin,461.5659901
+1988,Mexico,Unassigned,Lower Basin,1700
+1988,Misc,,Lower Basin,128.178
+1988,Misc,Fish and Wildlife and Recreation,Lower Basin,531.5416509
+1988,Misc,Reservoir Evaporation,Lower Basin,1299.550203
+1988,Misc,Unassigned,Lower Basin,74.34803846
+1988,Nevada,Agricultural,Lower Basin,0
+1988,Nevada,Energy,Lower Basin,15.985
+1988,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.82
+1988,Nevada,Municipal and Industrial,Lower Basin,112.615
+1988,New Mexico,Agricultural,Upper Basin,177.1464939
+1988,New Mexico,Energy,Upper Basin,42.372724
+1988,New Mexico,Fish and Wildlife and Recreation,Upper Basin,3.34070843
+1988,New Mexico,Minerals,Upper Basin,1.5353
+1988,New Mexico,Municipal and Industrial,Upper Basin,48.91932091
+1988,New Mexico,Reservoir Evaporation,Upper Basin,116.0385251
+1988,Utah,Agricultural,Upper Basin,545.3237642
+1988,Utah,Energy,Upper Basin,33.801
+1988,Utah,Minerals,Upper Basin,5.708
+1988,Utah,Municipal and Industrial,Upper Basin,95.036
+1988,Utah,Reservoir Evaporation,Upper Basin,243.0650704
+1988,Wyoming,Agricultural,Upper Basin,466.2782
+1988,Wyoming,Energy,Upper Basin,39.689
+1988,Wyoming,Minerals,Upper Basin,11.545
+1988,Wyoming,Municipal and Industrial,Upper Basin,12.658
+1988,Wyoming,Reservoir Evaporation,Upper Basin,129.1218217
+1989,Arizona,Agricultural,Lower Basin,1923.596
+1989,Arizona,Agricultural,Upper Basin,4.87176
+1989,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,43.642
+1989,Arizona,CAP M&I Recharge,Lower Basin,0
+1989,Arizona,CAP Tribes,Lower Basin,62.486
+1989,Arizona,Energy,Lower Basin,0.62
+1989,Arizona,Energy,Upper Basin,23.874
+1989,Arizona,Export,Upper Basin,0
+1989,Arizona,Fish and Wildlife and Recreation,Lower Basin,56.08
+1989,Arizona,Minerals,Lower Basin,0
+1989,Arizona,Minerals,Upper Basin,0
+1989,Arizona,Municipal and Industrial,Lower Basin,143.274
+1989,Arizona,Municipal and Industrial,Upper Basin,7.486
+1989,Arizona,Reservoir Evaporation,Upper Basin,3.3
+1989,California,Agricultural,Lower Basin,3911.5236
+1989,California,Fish and Wildlife and Recreation,Lower Basin,0
+1989,California,Municipal and Industrial,Lower Basin,1232.8934
+1989,Colorado,Agricultural,Upper Basin,1957.078824
+1989,Colorado,Energy,Upper Basin,18.228
+1989,Colorado,Minerals,Upper Basin,2.882
+1989,Colorado,Municipal and Industrial,Upper Basin,333.9538062
+1989,Colorado,Reservoir Evaporation,Upper Basin,431.5766249
+1989,Mexico,Unassigned,Lower Basin,1500
+1989,Misc,,Lower Basin,138.624
+1989,Misc,Fish and Wildlife and Recreation,Lower Basin,540.6006196
+1989,Misc,Reservoir Evaporation,Lower Basin,1247.804406
+1989,Misc,Unassigned,Lower Basin,89.608
+1989,Nevada,Agricultural,Lower Basin,0
+1989,Nevada,Energy,Lower Basin,14.265
+1989,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.077
+1989,Nevada,Municipal and Industrial,Lower Basin,140.871
+1989,New Mexico,Agricultural,Upper Basin,226.0838681
+1989,New Mexico,Energy,Upper Basin,46.376589
+1989,New Mexico,Fish and Wildlife and Recreation,Upper Basin,2.634380912
+1989,New Mexico,Minerals,Upper Basin,1.3987
+1989,New Mexico,Municipal and Industrial,Upper Basin,42.40882495
+1989,New Mexico,Reservoir Evaporation,Upper Basin,110.5700719
+1989,Utah,Agricultural,Upper Basin,560.4320296
+1989,Utah,Energy,Upper Basin,32.21916
+1989,Utah,Minerals,Upper Basin,5.334
+1989,Utah,Municipal and Industrial,Upper Basin,89.136
+1989,Utah,Reservoir Evaporation,Upper Basin,225.3015297
+1989,Wyoming,Agricultural,Upper Basin,373.1626
+1989,Wyoming,Energy,Upper Basin,36.037
+1989,Wyoming,Minerals,Upper Basin,13.767
+1989,Wyoming,Municipal and Industrial,Upper Basin,18.048
+1989,Wyoming,Reservoir Evaporation,Upper Basin,126.9690857
+1990,Arizona,Agricultural,Lower Basin,1866.052
+1990,Arizona,Agricultural,Upper Basin,5.12
+1990,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,34.548
+1990,Arizona,CAP M&I Recharge,Lower Basin,0
+1990,Arizona,CAP Tribes,Lower Basin,114.516
+1990,Arizona,Energy,Lower Basin,0.678
+1990,Arizona,Energy,Upper Basin,20.668
+1990,Arizona,Export,Upper Basin,0
+1990,Arizona,Fish and Wildlife and Recreation,Lower Basin,60.727
+1990,Arizona,Minerals,Lower Basin,0
+1990,Arizona,Minerals,Upper Basin,0
+1990,Arizona,Municipal and Industrial,Lower Basin,183.751
+1990,Arizona,Municipal and Industrial,Upper Basin,7.172
+1990,Arizona,Reservoir Evaporation,Upper Basin,2.92
+1990,California,Agricultural,Lower Basin,3974.321
+1990,California,Fish and Wildlife and Recreation,Lower Basin,0
+1990,California,Municipal and Industrial,Lower Basin,1245.136
+1990,Colorado,Agricultural,Upper Basin,1728.639044
+1990,Colorado,Energy,Upper Basin,19.185
+1990,Colorado,Minerals,Upper Basin,2.22
+1990,Colorado,Municipal and Industrial,Upper Basin,268.8328164
+1990,Colorado,Reservoir Evaporation,Upper Basin,377.6747861
+1990,Mexico,Unassigned,Lower Basin,1500
+1990,Misc,,Lower Basin,133.667
+1990,Misc,Fish and Wildlife and Recreation,Lower Basin,525.5859205
+1990,Misc,Reservoir Evaporation,Lower Basin,1203.775719
+1990,Misc,Unassigned,Lower Basin,41.988
+1990,Nevada,Agricultural,Lower Basin,0
+1990,Nevada,Energy,Lower Basin,17.273
+1990,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.837
+1990,Nevada,Municipal and Industrial,Lower Basin,160.001
+1990,New Mexico,Agricultural,Upper Basin,212.830404
+1990,New Mexico,Energy,Upper Basin,41.83576
+1990,New Mexico,Fish and Wildlife and Recreation,Upper Basin,3.979780564
+1990,New Mexico,Minerals,Upper Basin,1.0181
+1990,New Mexico,Municipal and Industrial,Upper Basin,57.98216298
+1990,New Mexico,Reservoir Evaporation,Upper Basin,102.5094614
+1990,Utah,Agricultural,Upper Basin,608.2878748
+1990,Utah,Energy,Upper Basin,30.556
+1990,Utah,Minerals,Upper Basin,4.977
+1990,Utah,Municipal and Industrial,Upper Basin,87.676
+1990,Utah,Reservoir Evaporation,Upper Basin,202.5919158
+1990,Wyoming,Agricultural,Upper Basin,405.1928
+1990,Wyoming,Energy,Upper Basin,38.555
+1990,Wyoming,Minerals,Upper Basin,15.996
+1990,Wyoming,Municipal and Industrial,Upper Basin,19.464
+1990,Wyoming,Reservoir Evaporation,Upper Basin,117.3568662
+1991,Arizona,Agricultural,Lower Basin,1583.677
+1991,Arizona,Agricultural,Upper Basin,6
+1991,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,32.851
+1991,Arizona,CAP M&I Recharge,Lower Basin,0
+1991,Arizona,CAP Tribes,Lower Basin,71.562
+1991,Arizona,Energy,Lower Basin,0.385
+1991,Arizona,Energy,Upper Basin,23.866
+1991,Arizona,Export,Upper Basin,0
+1991,Arizona,Fish and Wildlife and Recreation,Lower Basin,64.94
+1991,Arizona,Minerals,Lower Basin,0
+1991,Arizona,Minerals,Upper Basin,0
+1991,Arizona,Municipal and Industrial,Lower Basin,110.945
+1991,Arizona,Municipal and Industrial,Upper Basin,5.964
+1991,Arizona,Reservoir Evaporation,Upper Basin,3.1
+1991,California,Agricultural,Lower Basin,3708.356
+1991,California,Fish and Wildlife and Recreation,Lower Basin,0.107
+1991,California,Municipal and Industrial,Lower Basin,1297.132
+1991,Colorado,Agricultural,Upper Basin,1757.328969
+1991,Colorado,Energy,Upper Basin,18.315
+1991,Colorado,Minerals,Upper Basin,2.577
+1991,Colorado,Municipal and Industrial,Upper Basin,299.2166972
+1991,Colorado,Reservoir Evaporation,Upper Basin,365.6138047
+1991,Mexico,Unassigned,Lower Basin,1500
+1991,Misc,,Lower Basin,140.684
+1991,Misc,Fish and Wildlife and Recreation,Lower Basin,574.2582176
+1991,Misc,Reservoir Evaporation,Lower Basin,1172.480484
+1991,Misc,Unassigned,Lower Basin,20.873
+1991,Nevada,Agricultural,Lower Basin,0
+1991,Nevada,Energy,Lower Basin,14.821
+1991,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.7326
+1991,Nevada,Municipal and Industrial,Lower Basin,164.67
+1991,New Mexico,Agricultural,Upper Basin,219.6287356
+1991,New Mexico,Energy,Upper Basin,39.776533
+1991,New Mexico,Fish and Wildlife and Recreation,Upper Basin,5.924346917
+1991,New Mexico,Minerals,Upper Basin,1.1
+1991,New Mexico,Municipal and Industrial,Upper Basin,82.40033629
+1991,New Mexico,Reservoir Evaporation,Upper Basin,105.4363832
+1991,Utah,Agricultural,Upper Basin,639.914
+1991,Utah,Energy,Upper Basin,33.048
+1991,Utah,Minerals,Upper Basin,5.078
+1991,Utah,Municipal and Industrial,Upper Basin,90.664
+1991,Utah,Reservoir Evaporation,Upper Basin,205.3494983
+1991,Wyoming,Agricultural,Upper Basin,329.2875
+1991,Wyoming,Energy,Upper Basin,39.064
+1991,Wyoming,Minerals,Upper Basin,13.451
+1991,Wyoming,Municipal and Industrial,Upper Basin,22.019
+1991,Wyoming,Reservoir Evaporation,Upper Basin,109.7469511
+1992,Arizona,Agricultural,Lower Basin,1586.927
+1992,Arizona,Agricultural,Upper Basin,5.29
+1992,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,55.263
+1992,Arizona,CAP M&I Recharge,Lower Basin,0
+1992,Arizona,CAP Tribes,Lower Basin,70.664
+1992,Arizona,Energy,Lower Basin,0.333
+1992,Arizona,Energy,Upper Basin,23.575
+1992,Arizona,Export,Upper Basin,0
+1992,Arizona,Fish and Wildlife and Recreation,Lower Basin,54.325
+1992,Arizona,Minerals,Lower Basin,0
+1992,Arizona,Minerals,Upper Basin,0
+1992,Arizona,Municipal and Industrial,Lower Basin,138.559
+1992,Arizona,Municipal and Industrial,Upper Basin,5.695
+1992,Arizona,Reservoir Evaporation,Upper Basin,5.39
+1992,California,Agricultural,Lower Basin,3279.3804
+1992,California,Fish and Wildlife and Recreation,Lower Basin,0.113
+1992,California,Municipal and Industrial,Lower Basin,1266.7006
+1992,Colorado,Agricultural,Upper Basin,1802.254381
+1992,Colorado,Energy,Upper Basin,17.683
+1992,Colorado,Minerals,Upper Basin,2.914
+1992,Colorado,Municipal and Industrial,Upper Basin,293.7888506
+1992,Colorado,Reservoir Evaporation,Upper Basin,356.1006742
+1992,Mexico,Unassigned,Lower Basin,1500
+1992,Misc,,Lower Basin,101.109
+1992,Misc,Fish and Wildlife and Recreation,Lower Basin,598.594197
+1992,Misc,Reservoir Evaporation,Lower Basin,1176.348766
+1992,Misc,Unassigned,Lower Basin,74.34803846
+1992,Nevada,Agricultural,Lower Basin,0
+1992,Nevada,Energy,Lower Basin,13.931
+1992,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.921
+1992,Nevada,Municipal and Industrial,Lower Basin,162.699
+1992,New Mexico,Agricultural,Upper Basin,200.086392
+1992,New Mexico,Energy,Upper Basin,40.19286
+1992,New Mexico,Fish and Wildlife and Recreation,Upper Basin,4.548641588
+1992,New Mexico,Minerals,Upper Basin,1.6
+1992,New Mexico,Municipal and Industrial,Upper Basin,64.75136485
+1992,New Mexico,Reservoir Evaporation,Upper Basin,101.9501927
+1992,Utah,Agricultural,Upper Basin,689.5493
+1992,Utah,Energy,Upper Basin,32.82
+1992,Utah,Minerals,Upper Basin,5.156
+1992,Utah,Municipal and Industrial,Upper Basin,88.585
+1992,Utah,Reservoir Evaporation,Upper Basin,200.4481119
+1992,Wyoming,Agricultural,Upper Basin,435.3431
+1992,Wyoming,Energy,Upper Basin,45.364
+1992,Wyoming,Minerals,Upper Basin,10.906
+1992,Wyoming,Municipal and Industrial,Upper Basin,18.021
+1992,Wyoming,Reservoir Evaporation,Upper Basin,103.0556917
+1993,Arizona,Agricultural,Lower Basin,1549.628
+1993,Arizona,Agricultural,Upper Basin,6.02
+1993,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,51.24
+1993,Arizona,CAP M&I Recharge,Lower Basin,0
+1993,Arizona,CAP Tribes,Lower Basin,76.701
+1993,Arizona,Energy,Lower Basin,0.472
+1993,Arizona,Energy,Upper Basin,23.382
+1993,Arizona,Export,Upper Basin,0
+1993,Arizona,Fish and Wildlife and Recreation,Lower Basin,60.868
+1993,Arizona,Minerals,Lower Basin,0
+1993,Arizona,Minerals,Upper Basin,0
+1993,Arizona,Municipal and Industrial,Lower Basin,507.786
+1993,Arizona,Municipal and Industrial,Upper Basin,5.678
+1993,Arizona,Reservoir Evaporation,Upper Basin,4.52
+1993,California,Agricultural,Lower Basin,3489.6978
+1993,California,Fish and Wildlife and Recreation,Lower Basin,0.1042
+1993,California,Municipal and Industrial,Lower Basin,1345.217
+1993,Colorado,Agricultural,Upper Basin,1602.458769
+1993,Colorado,Energy,Upper Basin,18.0549
+1993,Colorado,Minerals,Upper Basin,3.26199989
+1993,Colorado,Municipal and Industrial,Upper Basin,347.907697
+1993,Colorado,Reservoir Evaporation,Upper Basin,398.6229772
+1993,Mexico,Unassigned,Lower Basin,1500
+1993,Misc,,Lower Basin,61.438
+1993,Misc,Fish and Wildlife and Recreation,Lower Basin,622.9301764
+1993,Misc,Reservoir Evaporation,Lower Basin,1231.221188
+1993,Misc,Unassigned,Lower Basin,74.34803846
+1993,Nevada,Agricultural,Lower Basin,0
+1993,Nevada,Energy,Lower Basin,14.807
+1993,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.1588
+1993,Nevada,Municipal and Industrial,Lower Basin,188.436
+1993,New Mexico,Agricultural,Upper Basin,216.3767886
+1993,New Mexico,Energy,Upper Basin,47.84075
+1993,New Mexico,Fish and Wildlife and Recreation,Upper Basin,5.162434692
+1993,New Mexico,Minerals,Upper Basin,1.8
+1993,New Mexico,Municipal and Industrial,Upper Basin,73.48796266
+1993,New Mexico,Reservoir Evaporation,Upper Basin,112.7423001
+1993,Utah,Agricultural,Upper Basin,631.703
+1993,Utah,Energy,Upper Basin,34.708
+1993,Utah,Minerals,Upper Basin,5.246
+1993,Utah,Municipal and Industrial,Upper Basin,97.542
+1993,Utah,Reservoir Evaporation,Upper Basin,223.1031427
+1993,Wyoming,Agricultural,Upper Basin,299.9614
+1993,Wyoming,Energy,Upper Basin,43.927
+1993,Wyoming,Minerals,Upper Basin,8.374
+1993,Wyoming,Municipal and Industrial,Upper Basin,28.872
+1993,Wyoming,Reservoir Evaporation,Upper Basin,120.1846506
+1994,Arizona,Agricultural,Lower Basin,1625.309959
+1994,Arizona,Agricultural,Upper Basin,6.37
+1994,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,36.5799
+1994,Arizona,CAP M&I Recharge,Lower Basin,0
+1994,Arizona,CAP Tribes,Lower Basin,79.724
+1994,Arizona,Energy,Lower Basin,0.428
+1994,Arizona,Energy,Upper Basin,24.086
+1994,Arizona,Export,Upper Basin,0
+1994,Arizona,Fish and Wildlife and Recreation,Lower Basin,65.551
+1994,Arizona,Minerals,Lower Basin,0
+1994,Arizona,Minerals,Upper Basin,0
+1994,Arizona,Municipal and Industrial,Lower Basin,137.4031413
+1994,Arizona,Municipal and Industrial,Upper Basin,5.804
+1994,Arizona,Reservoir Evaporation,Upper Basin,4.482
+1994,California,Agricultural,Lower Basin,3784.99973
+1994,California,Fish and Wildlife and Recreation,Lower Basin,0
+1994,California,Municipal and Industrial,Lower Basin,1404.41927
+1994,Colorado,Agricultural,Upper Basin,1808.406117
+1994,Colorado,Energy,Upper Basin,19.927
+1994,Colorado,Minerals,Upper Basin,3.60899989
+1994,Colorado,Municipal and Industrial,Upper Basin,323.568391
+1994,Colorado,Reservoir Evaporation,Upper Basin,411.8672424
+1994,Mexico,Unassigned,Lower Basin,1500
+1994,Misc,,Lower Basin,124.434
+1994,Misc,Fish and Wildlife and Recreation,Lower Basin,647.268529
+1994,Misc,Reservoir Evaporation,Lower Basin,1199.621844
+1994,Misc,Unassigned,Lower Basin,74.34803846
+1994,Nevada,Agricultural,Lower Basin,0
+1994,Nevada,Energy,Lower Basin,13.982
+1994,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.2032
+1994,Nevada,Municipal and Industrial,Lower Basin,210.643
+1994,New Mexico,Agricultural,Upper Basin,223.0780139
+1994,New Mexico,Energy,Upper Basin,47.559349
+1994,New Mexico,Fish and Wildlife and Recreation,Upper Basin,4.294200627
+1994,New Mexico,Minerals,Upper Basin,1.8
+1994,New Mexico,Municipal and Industrial,Upper Basin,62.9354675
+1994,New Mexico,Reservoir Evaporation,Upper Basin,111.5248794
+1994,Utah,Agricultural,Upper Basin,766.9928
+1994,Utah,Energy,Upper Basin,35.555
+1994,Utah,Minerals,Upper Basin,5.324
+1994,Utah,Municipal and Industrial,Upper Basin,95.631
+1994,Utah,Reservoir Evaporation,Upper Basin,224.4909045
+1994,Wyoming,Agricultural,Upper Basin,493.8111
+1994,Wyoming,Energy,Upper Basin,46.651
+1994,Wyoming,Minerals,Upper Basin,5.829
+1994,Wyoming,Municipal and Industrial,Upper Basin,19.863
+1994,Wyoming,Reservoir Evaporation,Upper Basin,120.3154637
+1995,Arizona,Agricultural,Lower Basin,1679.161498
+1995,Arizona,Agricultural,Upper Basin,6.89
+1995,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,39.2631
+1995,Arizona,CAP M&I Recharge,Lower Basin,0
+1995,Arizona,CAP Tribes,Lower Basin,76.345
+1995,Arizona,Energy,Lower Basin,0.389
+1995,Arizona,Energy,Upper Basin,22.18
+1995,Arizona,Export,Upper Basin,0
+1995,Arizona,Fish and Wildlife and Recreation,Lower Basin,71.634
+1995,Arizona,Minerals,Lower Basin,0
+1995,Arizona,Minerals,Upper Basin,0
+1995,Arizona,Municipal and Industrial,Lower Basin,162.0164024
+1995,Arizona,Municipal and Industrial,Upper Basin,6.35
+1995,Arizona,Reservoir Evaporation,Upper Basin,4.393
+1995,California,Agricultural,Lower Basin,3807.529961
+1995,California,Fish and Wildlife and Recreation,Lower Basin,0.1147
+1995,California,Municipal and Industrial,Lower Basin,1029.158339
+1995,Colorado,Agricultural,Upper Basin,1332.488915
+1995,Colorado,Energy,Upper Basin,18.501
+1995,Colorado,Minerals,Upper Basin,3.96599989
+1995,Colorado,Municipal and Industrial,Upper Basin,278.00925
+1995,Colorado,Reservoir Evaporation,Upper Basin,432.4399685
+1995,Mexico,Unassigned,Lower Basin,1500
+1995,Misc,,Lower Basin,125.476
+1995,Misc,Fish and Wildlife and Recreation,Lower Basin,645.884
+1995,Misc,Reservoir Evaporation,Lower Basin,1207.210688
+1995,Misc,Unassigned,Lower Basin,74.34803846
+1995,Nevada,Agricultural,Lower Basin,0
+1995,Nevada,Energy,Lower Basin,13.281
+1995,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.2724
+1995,Nevada,Municipal and Industrial,Lower Basin,201.164
+1995,New Mexico,Agricultural,Upper Basin,218.3488691
+1995,New Mexico,Energy,Upper Basin,45.76503
+1995,New Mexico,Fish and Wildlife and Recreation,Upper Basin,4.506844305
+1995,New Mexico,Minerals,Upper Basin,2.2
+1995,New Mexico,Municipal and Industrial,Upper Basin,65.47578988
+1995,New Mexico,Reservoir Evaporation,Upper Basin,119.8225202
+1995,Utah,Agricultural,Upper Basin,600.8223
+1995,Utah,Energy,Upper Basin,35.839
+1995,Utah,Minerals,Upper Basin,5.426
+1995,Utah,Municipal and Industrial,Upper Basin,93.767
+1995,Utah,Reservoir Evaporation,Upper Basin,242.7857092
+1995,Wyoming,Agricultural,Upper Basin,346.8099
+1995,Wyoming,Energy,Upper Basin,32.434
+1995,Wyoming,Minerals,Upper Basin,3.284
+1995,Wyoming,Municipal and Industrial,Upper Basin,17.59
+1995,Wyoming,Reservoir Evaporation,Upper Basin,130.5619992
+1996,Arizona,Agricultural,Lower Basin,1857.502754
+1996,Arizona,Agricultural,Upper Basin,0.669179769
+1996,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,59.80295
+1996,Arizona,CAP M&I Recharge,Lower Basin,124.17605
+1996,Arizona,CAP Tribes,Lower Basin,81.983
+1996,Arizona,Energy,Lower Basin,0.783
+1996,Arizona,Energy,Upper Basin,21.427
+1996,Arizona,Export,Upper Basin,0
+1996,Arizona,Fish and Wildlife and Recreation,Lower Basin,54.886
+1996,Arizona,Minerals,Lower Basin,0.018
+1996,Arizona,Minerals,Upper Basin,0
+1996,Arizona,Municipal and Industrial,Lower Basin,373.6472462
+1996,Arizona,Municipal and Industrial,Upper Basin,5.6897473
+1996,Arizona,Reservoir Evaporation,Upper Basin,6.487790621
+1996,California,Agricultural,Lower Basin,3966.218285
+1996,California,Fish and Wildlife and Recreation,Lower Basin,0.1097
+1996,California,Municipal and Industrial,Lower Basin,1259.838015
+1996,Colorado,Agricultural,Upper Basin,1757.230101
+1996,Colorado,Energy,Upper Basin,18.4522
+1996,Colorado,Minerals,Upper Basin,3.93399989
+1996,Colorado,Municipal and Industrial,Upper Basin,294.0434394
+1996,Colorado,Reservoir Evaporation,Upper Basin,451.599157
+1996,Mexico,Unassigned,Lower Basin,1500.002
+1996,Misc,,Lower Basin,112.391
+1996,Misc,Fish and Wildlife and Recreation,Lower Basin,669.626
+1996,Misc,Reservoir Evaporation,Lower Basin,1245.597578
+1996,Misc,Unassigned,Lower Basin,5.332
+1996,Nevada,Agricultural,Lower Basin,0
+1996,Nevada,Energy,Lower Basin,13.149
+1996,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.263
+1996,Nevada,Municipal and Industrial,Lower Basin,234.089
+1996,New Mexico,Agricultural,Upper Basin,222.317138
+1996,New Mexico,Energy,Upper Basin,43.47498
+1996,New Mexico,Fish and Wildlife and Recreation,Upper Basin,3.057628004
+1996,New Mexico,Minerals,Upper Basin,1.2432
+1996,New Mexico,Municipal and Industrial,Upper Basin,51.18529063
+1996,New Mexico,Reservoir Evaporation,Upper Basin,116.2261717
+1996,Utah,Agricultural,Upper Basin,566.805379
+1996,Utah,Energy,Upper Basin,37.85296
+1996,Utah,Minerals,Upper Basin,5.359
+1996,Utah,Municipal and Industrial,Upper Basin,100.296
+1996,Utah,Reservoir Evaporation,Upper Basin,244.4578764
+1996,Wyoming,Agricultural,Upper Basin,390.7041504
+1996,Wyoming,Energy,Upper Basin,39.32383
+1996,Wyoming,Minerals,Upper Basin,2.779
+1996,Wyoming,Municipal and Industrial,Upper Basin,22.406
+1996,Wyoming,Reservoir Evaporation,Upper Basin,133.8065338
+1997,Arizona,Agricultural,Lower Basin,1792.28969
+1997,Arizona,Agricultural,Upper Basin,0.642079769
+1997,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,70.6965
+1997,Arizona,CAP M&I Recharge,Lower Basin,303.1425
+1997,Arizona,CAP Tribes,Lower Basin,72.751
+1997,Arizona,Energy,Lower Basin,0.68
+1997,Arizona,Energy,Upper Basin,22.364
+1997,Arizona,Export,Upper Basin,0
+1997,Arizona,Fish and Wildlife and Recreation,Lower Basin,55.434
+1997,Arizona,Minerals,Lower Basin,0.015
+1997,Arizona,Minerals,Upper Basin,0
+1997,Arizona,Municipal and Industrial,Lower Basin,401.9653096
+1997,Arizona,Municipal and Industrial,Upper Basin,4.933268896
+1997,Arizona,Reservoir Evaporation,Upper Basin,6.372691327
+1997,California,Agricultural,Lower Basin,3892.543549
+1997,California,Fish and Wildlife and Recreation,Lower Basin,0.0962
+1997,California,Municipal and Industrial,Lower Basin,1269.252251
+1997,Colorado,Agricultural,Upper Basin,1491.933821
+1997,Colorado,Energy,Upper Basin,18.9251
+1997,Colorado,Minerals,Upper Basin,3.90099989
+1997,Colorado,Municipal and Industrial,Upper Basin,315.9892448
+1997,Colorado,Reservoir Evaporation,Upper Basin,459.5132982
+1997,Mexico,Unassigned,Lower Basin,1700
+1997,Misc,,Lower Basin,89.154
+1997,Misc,Fish and Wildlife and Recreation,Lower Basin,603.77
+1997,Misc,Reservoir Evaporation,Lower Basin,1293.708109
+1997,Misc,Unassigned,Lower Basin,74.34803846
+1997,Nevada,Agricultural,Lower Basin,0
+1997,Nevada,Energy,Lower Basin,13.127
+1997,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.252
+1997,Nevada,Municipal and Industrial,Lower Basin,227.668
+1997,New Mexico,Agricultural,Upper Basin,216.8053223
+1997,New Mexico,Energy,Upper Basin,45.857026
+1997,New Mexico,Fish and Wildlife and Recreation,Upper Basin,7.432288401
+1997,New Mexico,Minerals,Upper Basin,0.640977
+1997,New Mexico,Municipal and Industrial,Upper Basin,103.2429279
+1997,New Mexico,Reservoir Evaporation,Upper Basin,126.7510212
+1997,Utah,Agricultural,Upper Basin,567.5196489
+1997,Utah,Energy,Upper Basin,33.81794
+1997,Utah,Minerals,Upper Basin,5.22
+1997,Utah,Municipal and Industrial,Upper Basin,108.313
+1997,Utah,Reservoir Evaporation,Upper Basin,247.573323
+1997,Wyoming,Agricultural,Upper Basin,340.371322
+1997,Wyoming,Energy,Upper Basin,40.07286
+1997,Wyoming,Minerals,Upper Basin,2.273
+1997,Wyoming,Municipal and Industrial,Upper Basin,19.459
+1997,Wyoming,Reservoir Evaporation,Upper Basin,137.8227872
+1998,Arizona,Agricultural,Lower Basin,1583.396959
+1998,Arizona,Agricultural,Upper Basin,0.706579769
+1998,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,61.41165
+1998,Arizona,CAP M&I Recharge,Lower Basin,357.79335
+1998,Arizona,CAP Tribes,Lower Basin,76.818
+1998,Arizona,Energy,Lower Basin,0.629
+1998,Arizona,Energy,Upper Basin,25.017
+1998,Arizona,Export,Upper Basin,0
+1998,Arizona,Fish and Wildlife and Recreation,Lower Basin,51.703
+1998,Arizona,Minerals,Lower Basin,0.002
+1998,Arizona,Minerals,Upper Basin,0
+1998,Arizona,Municipal and Industrial,Lower Basin,291.1110413
+1998,Arizona,Municipal and Industrial,Upper Basin,5.268707492
+1998,Arizona,Reservoir Evaporation,Upper Basin,6.130973553
+1998,California,Agricultural,Lower Basin,3848.198512
+1998,California,Fish and Wildlife and Recreation,Lower Basin,0.0063
+1998,California,Municipal and Industrial,Lower Basin,1105.027188
+1998,Colorado,Agricultural,Upper Basin,1641.231834
+1998,Colorado,Energy,Upper Basin,20.8695
+1998,Colorado,Minerals,Upper Basin,3.86899989
+1998,Colorado,Municipal and Industrial,Upper Basin,252.2749464
+1998,Colorado,Reservoir Evaporation,Upper Basin,478.2763101
+1998,Mexico,Unassigned,Lower Basin,1700
+1998,Misc,,Lower Basin,113.769
+1998,Misc,Fish and Wildlife and Recreation,Lower Basin,580.919
+1998,Misc,Reservoir Evaporation,Lower Basin,1334.523984
+1998,Misc,Unassigned,Lower Basin,74.34803846
+1998,Nevada,Agricultural,Lower Basin,0
+1998,Nevada,Energy,Lower Basin,12.851
+1998,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.893
+1998,Nevada,Municipal and Industrial,Lower Basin,230.765
+1998,New Mexico,Agricultural,Upper Basin,217.0373748
+1998,New Mexico,Energy,Upper Basin,42.61052
+1998,New Mexico,Fish and Wildlife and Recreation,Upper Basin,5.05245559
+1998,New Mexico,Minerals,Upper Basin,0.4636067
+1998,New Mexico,Municipal and Industrial,Upper Basin,78.19312177
+1998,New Mexico,Reservoir Evaporation,Upper Basin,124.8189553
+1998,Utah,Agricultural,Upper Basin,649.164986
+1998,Utah,Energy,Upper Basin,35.75551131
+1998,Utah,Minerals,Upper Basin,5.081
+1998,Utah,Municipal and Industrial,Upper Basin,100.216
+1998,Utah,Reservoir Evaporation,Upper Basin,256.8590296
+1998,Wyoming,Agricultural,Upper Basin,282.3795421
+1998,Wyoming,Energy,Upper Basin,46.83856
+1998,Wyoming,Minerals,Upper Basin,1.767
+1998,Wyoming,Municipal and Industrial,Upper Basin,20.156
+1998,Wyoming,Reservoir Evaporation,Upper Basin,139.2805634
+1999,Arizona,Agricultural,Lower Basin,1682.028219
+1999,Arizona,Agricultural,Upper Basin,0.733378289
+1999,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,69.40825
+1999,Arizona,CAP M&I Recharge,Lower Basin,317.39175
+1999,Arizona,CAP Tribes,Lower Basin,102.136
+1999,Arizona,Energy,Lower Basin,0.776
+1999,Arizona,Energy,Upper Basin,26.697
+1999,Arizona,Export,Upper Basin,0
+1999,Arizona,Fish and Wildlife and Recreation,Lower Basin,49.226
+1999,Arizona,Minerals,Lower Basin,0.002
+1999,Arizona,Minerals,Upper Basin,0
+1999,Arizona,Municipal and Industrial,Lower Basin,358.7337813
+1999,Arizona,Municipal and Industrial,Upper Basin,5.306330413
+1999,Arizona,Reservoir Evaporation,Upper Basin,5.792904154
+1999,California,Agricultural,Lower Basin,3861.545966
+1999,California,Fish and Wildlife and Recreation,Lower Basin,0.072
+1999,California,Municipal and Industrial,Lower Basin,1245.559034
+1999,Colorado,Agricultural,Upper Basin,1450.661529
+1999,Colorado,Energy,Upper Basin,20.1307
+1999,Colorado,Minerals,Upper Basin,3.83699989
+1999,Colorado,Municipal and Industrial,Upper Basin,246.7502866
+1999,Colorado,Reservoir Evaporation,Upper Basin,478.2465027
+1999,Mexico,Unassigned,Lower Basin,1700
+1999,Misc,,Lower Basin,78.675
+1999,Misc,Fish and Wildlife and Recreation,Lower Basin,584.927
+1999,Misc,Reservoir Evaporation,Lower Basin,1317.396281
+1999,Misc,Unassigned,Lower Basin,74.34803846
+1999,Nevada,Agricultural,Lower Basin,0
+1999,Nevada,Energy,Lower Basin,12.148
+1999,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.234
+1999,Nevada,Municipal and Industrial,Lower Basin,276.148
+1999,New Mexico,Agricultural,Upper Basin,181.9201606
+1999,New Mexico,Energy,Upper Basin,44.954091
+1999,New Mexico,Fish and Wildlife and Recreation,Upper Basin,5.816780822
+1999,New Mexico,Minerals,Upper Basin,0.6419645
+1999,New Mexico,Municipal and Industrial,Upper Basin,94.04620064
+1999,New Mexico,Reservoir Evaporation,Upper Basin,124.7420798
+1999,Utah,Agricultural,Upper Basin,650.5763826
+1999,Utah,Energy,Upper Basin,32.83114403
+1999,Utah,Minerals,Upper Basin,4.94
+1999,Utah,Municipal and Industrial,Upper Basin,108.044
+1999,Utah,Reservoir Evaporation,Upper Basin,256.4466561
+1999,Wyoming,Agricultural,Upper Basin,312.7045543
+1999,Wyoming,Energy,Upper Basin,42.72337
+1999,Wyoming,Minerals,Upper Basin,1.262
+1999,Wyoming,Municipal and Industrial,Upper Basin,18.484
+1999,Wyoming,Reservoir Evaporation,Upper Basin,139.6258625
+2000,Arizona,Agricultural,Lower Basin,1849.452972
+2000,Arizona,Agricultural,Upper Basin,0.899405227
+2000,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,71.2079
+2000,Arizona,CAP M&I Recharge,Lower Basin,106.2311
+2000,Arizona,CAP Tribes,Lower Basin,119.004
+2000,Arizona,Energy,Lower Basin,0.613
+2000,Arizona,Energy,Upper Basin,28.709
+2000,Arizona,Export,Upper Basin,0
+2000,Arizona,Fish and Wildlife and Recreation,Lower Basin,62.75
+2000,Arizona,Minerals,Lower Basin,0.012
+2000,Arizona,Minerals,Upper Basin,0
+2000,Arizona,Municipal and Industrial,Lower Basin,424.2440279
+2000,Arizona,Municipal and Industrial,Upper Basin,5.194437105
+2000,Arizona,Reservoir Evaporation,Upper Basin,5.389691237
+2000,California,Agricultural,Lower Basin,3739.535395
+2000,California,Fish and Wildlife and Recreation,Lower Basin,0.0352
+2000,California,Municipal and Industrial,Lower Basin,1332.445405
+2000,Colorado,Agricultural,Upper Basin,1905.04219
+2000,Colorado,Energy,Upper Basin,15.5688
+2000,Colorado,Minerals,Upper Basin,3.80399989
+2000,Colorado,Municipal and Industrial,Upper Basin,351.9493436
+2000,Colorado,Reservoir Evaporation,Upper Basin,458.2644273
+2000,Mexico,Unassigned,Lower Basin,1700
+2000,Misc,,Lower Basin,107.444
+2000,Misc,Fish and Wildlife and Recreation,Lower Basin,598.54
+2000,Misc,Reservoir Evaporation,Lower Basin,1290.429359
+2000,Misc,Unassigned,Lower Basin,337.138
+2000,Nevada,Agricultural,Lower Basin,0
+2000,Nevada,Energy,Lower Basin,13.402
+2000,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.1421
+2000,Nevada,Municipal and Industrial,Lower Basin,305.312
+2000,New Mexico,Agricultural,Upper Basin,191.0423598
+2000,New Mexico,Energy,Upper Basin,44.435561
+2000,New Mexico,Fish and Wildlife and Recreation,Upper Basin,2.09109589
+2000,New Mexico,Minerals,Upper Basin,0.7830528
+2000,New Mexico,Municipal and Industrial,Upper Basin,45.54653086
+2000,New Mexico,Reservoir Evaporation,Upper Basin,113.1280903
+2000,Utah,Agricultural,Upper Basin,555.6415514
+2000,Utah,Energy,Upper Basin,36.65458403
+2000,Utah,Minerals,Upper Basin,4.8
+2000,Utah,Municipal and Industrial,Upper Basin,116.757
+2000,Utah,Reservoir Evaporation,Upper Basin,245.3036317
+2000,Wyoming,Agricultural,Upper Basin,323.6954802
+2000,Wyoming,Energy,Upper Basin,39.97994
+2000,Wyoming,Minerals,Upper Basin,0.758
+2000,Wyoming,Municipal and Industrial,Upper Basin,20.049
+2000,Wyoming,Reservoir Evaporation,Upper Basin,130.0566236
+2001,Arizona,Agricultural,Lower Basin,1577.25714
+2001,Arizona,Agricultural,Upper Basin,0.733197072
+2001,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,76.1546
+2001,Arizona,CAP M&I Recharge,Lower Basin,426.4754
+2001,Arizona,CAP Tribes,Lower Basin,123.584
+2001,Arizona,Energy,Lower Basin,0.8042
+2001,Arizona,Energy,Upper Basin,27.62
+2001,Arizona,Export,Upper Basin,0
+2001,Arizona,Fish and Wildlife and Recreation,Lower Basin,42.295
+2001,Arizona,Minerals,Lower Basin,0.025
+2001,Arizona,Minerals,Upper Basin,0
+2001,Arizona,Municipal and Industrial,Lower Basin,441.2161602
+2001,Arizona,Municipal and Industrial,Upper Basin,4.929997876
+2001,Arizona,Reservoir Evaporation,Upper Basin,5.258926643
+2001,California,Agricultural,Lower Basin,3879.650009
+2001,California,Fish and Wildlife and Recreation,Lower Basin,0.031
+2001,California,Municipal and Industrial,Lower Basin,1288.961991
+2001,Colorado,Agricultural,Upper Basin,1902.361072
+2001,Colorado,Energy,Upper Basin,19.3774
+2001,Colorado,Minerals,Upper Basin,3.77099989
+2001,Colorado,Municipal and Industrial,Upper Basin,377.4205082
+2001,Colorado,Reservoir Evaporation,Upper Basin,434.005376
+2001,Mexico,Unassigned,Lower Basin,1500
+2001,Misc,,Lower Basin,103.744
+2001,Misc,Fish and Wildlife and Recreation,Lower Basin,617.128
+2001,Misc,Reservoir Evaporation,Lower Basin,1215.502578
+2001,Misc,Unassigned,Lower Basin,200.577
+2001,Nevada,Agricultural,Lower Basin,0
+2001,Nevada,Energy,Lower Basin,12.968
+2001,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.0357
+2001,Nevada,Municipal and Industrial,Lower Basin,299.933
+2001,New Mexico,Agricultural,Upper Basin,219.4783728
+2001,New Mexico,Energy,Upper Basin,48.315641
+2001,New Mexico,Fish and Wildlife and Recreation,Upper Basin,5.305662188
+2001,New Mexico,Minerals,Upper Basin,0.8897
+2001,New Mexico,Municipal and Industrial,Upper Basin,88.89027751
+2001,New Mexico,Reservoir Evaporation,Upper Basin,111.8876695
+2001,Utah,Agricultural,Upper Basin,684.0693012
+2001,Utah,Energy,Upper Basin,32.65278736
+2001,Utah,Minerals,Upper Basin,4.658
+2001,Utah,Municipal and Industrial,Upper Basin,124.205
+2001,Utah,Reservoir Evaporation,Upper Basin,232.5101026
+2001,Wyoming,Agricultural,Upper Basin,347.3568993
+2001,Wyoming,Energy,Upper Basin,40.32053
+2001,Wyoming,Minerals,Upper Basin,0.758
+2001,Wyoming,Municipal and Industrial,Upper Basin,17.753
+2001,Wyoming,Reservoir Evaporation,Upper Basin,125.1967087
+2002,Arizona,Agricultural,Lower Basin,1741.130564
+2002,Arizona,Agricultural,Upper Basin,0.654497072
+2002,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,55.918
+2002,Arizona,CAP M&I Recharge,Lower Basin,354.771
+2002,Arizona,CAP Tribes,Lower Basin,134.897
+2002,Arizona,Energy,Lower Basin,1.1926
+2002,Arizona,Energy,Upper Basin,28.415
+2002,Arizona,Export,Upper Basin,0
+2002,Arizona,Fish and Wildlife and Recreation,Lower Basin,49.883
+2002,Arizona,Minerals,Lower Basin,0.03
+2002,Arizona,Minerals,Upper Basin,0
+2002,Arizona,Municipal and Industrial,Lower Basin,468.1638359
+2002,Arizona,Municipal and Industrial,Upper Basin,5.099556253
+2002,Arizona,Reservoir Evaporation,Upper Basin,4.299026765
+2002,California,Agricultural,Lower Basin,4000.991444
+2002,California,Fish and Wildlife and Recreation,Lower Basin,0.0025
+2002,California,Municipal and Industrial,Lower Basin,1274.613056
+2002,Colorado,Agricultural,Upper Basin,1767.563226
+2002,Colorado,Energy,Upper Basin,19.1727
+2002,Colorado,Minerals,Upper Basin,3.73799989
+2002,Colorado,Municipal and Industrial,Upper Basin,301.990586
+2002,Colorado,Reservoir Evaporation,Upper Basin,367.0903981
+2002,Mexico,Unassigned,Lower Basin,1500
+2002,Misc,,Lower Basin,121.749
+2002,Misc,Fish and Wildlife and Recreation,Lower Basin,618.964
+2002,Misc,Reservoir Evaporation,Lower Basin,1114.68675
+2002,Misc,Unassigned,Lower Basin,123.163
+2002,Nevada,Agricultural,Lower Basin,0
+2002,Nevada,Energy,Lower Basin,12.297
+2002,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.1911
+2002,Nevada,Municipal and Industrial,Lower Basin,311.739
+2002,New Mexico,Agricultural,Upper Basin,240.3959599
+2002,New Mexico,Energy,Upper Basin,45.62012
+2002,New Mexico,Fish and Wildlife and Recreation,Upper Basin,0.302399232
+2002,New Mexico,Minerals,Upper Basin,0.8902
+2002,New Mexico,Municipal and Industrial,Upper Basin,20.52549353
+2002,New Mexico,Reservoir Evaporation,Upper Basin,86.01840829
+2002,Utah,Agricultural,Upper Basin,514.1299328
+2002,Utah,Energy,Upper Basin,35.54503736
+2002,Utah,Minerals,Upper Basin,4.516
+2002,Utah,Municipal and Industrial,Upper Basin,135.928
+2002,Utah,Reservoir Evaporation,Upper Basin,204.7038736
+2002,Wyoming,Agricultural,Upper Basin,356.4290216
+2002,Wyoming,Energy,Upper Basin,38.57581
+2002,Wyoming,Minerals,Upper Basin,0.758
+2002,Wyoming,Municipal and Industrial,Upper Basin,11.868
+2002,Wyoming,Reservoir Evaporation,Upper Basin,112.539778
+2003,Arizona,Agricultural,Lower Basin,1644.184534
+2003,Arizona,Agricultural,Upper Basin,0.706097072
+2003,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,84.2595
+2003,Arizona,CAP M&I Recharge,Lower Basin,276.1325
+2003,Arizona,CAP Tribes,Lower Basin,139.367
+2003,Arizona,Energy,Lower Basin,0.614821386
+2003,Arizona,Energy,Upper Basin,26.284
+2003,Arizona,Export,Upper Basin,0
+2003,Arizona,Fish and Wildlife and Recreation,Lower Basin,16.1617993
+2003,Arizona,Minerals,Lower Basin,0.032
+2003,Arizona,Minerals,Upper Basin,0
+2003,Arizona,Municipal and Industrial,Lower Basin,669.8470189
+2003,Arizona,Municipal and Industrial,Upper Basin,5.096239263
+2003,Arizona,Reservoir Evaporation,Upper Basin,4.517279113
+2003,California,Agricultural,Lower Basin,3666.216668
+2003,California,Fish and Wildlife and Recreation,Lower Basin,0.003
+2003,California,Municipal and Industrial,Lower Basin,742.5266377
+2003,Colorado,Agricultural,Upper Basin,1678.144734
+2003,Colorado,Energy,Upper Basin,19.4791
+2003,Colorado,Minerals,Upper Basin,3.70499989
+2003,Colorado,Municipal and Industrial,Upper Basin,302.677081
+2003,Colorado,Reservoir Evaporation,Upper Basin,329.1516101
+2003,Mexico,Unassigned,Lower Basin,1500
+2003,Misc,,Lower Basin,114.734
+2003,Misc,Fish and Wildlife and Recreation,Lower Basin,657.071
+2003,Misc,Reservoir Evaporation,Lower Basin,1045.561375
+2003,Misc,Unassigned,Lower Basin,61.855
+2003,Nevada,Agricultural,Lower Basin,0
+2003,Nevada,Energy,Lower Basin,11.564
+2003,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.1195
+2003,Nevada,Municipal and Industrial,Lower Basin,285.7083395
+2003,New Mexico,Agricultural,Upper Basin,244.8145569
+2003,New Mexico,Energy,Upper Basin,46.99025
+2003,New Mexico,Fish and Wildlife and Recreation,Upper Basin,3.00878119
+2003,New Mexico,Minerals,Upper Basin,0.8905
+2003,New Mexico,Municipal and Industrial,Upper Basin,60.97023098
+2003,New Mexico,Reservoir Evaporation,Upper Basin,77.50238387
+2003,Utah,Agricultural,Upper Basin,605.9535945
+2003,Utah,Energy,Upper Basin,34.76953736
+2003,Utah,Minerals,Upper Basin,4.374
+2003,Utah,Municipal and Industrial,Upper Basin,122.224
+2003,Utah,Reservoir Evaporation,Upper Basin,185.143703
+2003,Wyoming,Agricultural,Upper Basin,322.1843856
+2003,Wyoming,Energy,Upper Basin,38.31816
+2003,Wyoming,Minerals,Upper Basin,0.758
+2003,Wyoming,Municipal and Industrial,Upper Basin,21.956
+2003,Wyoming,Reservoir Evaporation,Upper Basin,101.9159299
+2004,Arizona,Agricultural,Lower Basin,1460.917193
+2004,Arizona,Agricultural,Upper Basin,0.798597072
+2004,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,83.31635
+2004,Arizona,CAP M&I Recharge,Lower Basin,276.97065
+2004,Arizona,CAP Tribes,Lower Basin,191.477
+2004,Arizona,Energy,Lower Basin,0.526
+2004,Arizona,Energy,Upper Basin,27.375
+2004,Arizona,Export,Upper Basin,0
+2004,Arizona,Fish and Wildlife and Recreation,Lower Basin,15.24567844
+2004,Arizona,Minerals,Lower Basin,0.101
+2004,Arizona,Minerals,Upper Basin,0
+2004,Arizona,Municipal and Industrial,Lower Basin,756.091389
+2004,Arizona,Municipal and Industrial,Upper Basin,4.809953192
+2004,Arizona,Reservoir Evaporation,Upper Basin,4.537928422
+2004,California,Agricultural,Lower Basin,3477.082
+2004,California,Fish and Wildlife and Recreation,Lower Basin,0.009
+2004,California,Municipal and Industrial,Lower Basin,839.094
+2004,Colorado,Agricultural,Upper Basin,1493.175402
+2004,Colorado,Energy,Upper Basin,19.6593
+2004,Colorado,Minerals,Upper Basin,3.67199989
+2004,Colorado,Municipal and Industrial,Upper Basin,301.0934194
+2004,Colorado,Reservoir Evaporation,Upper Basin,296.0834349
+2004,Mexico,Unassigned,Lower Basin,1500
+2004,Misc,,Lower Basin,100.762
+2004,Misc,Fish and Wildlife and Recreation,Lower Basin,672.039
+2004,Misc,Reservoir Evaporation,Lower Basin,999.3475781
+2004,Misc,Unassigned,Lower Basin,93.142
+2004,Nevada,Agricultural,Lower Basin,0
+2004,Nevada,Energy,Lower Basin,12.038
+2004,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.896
+2004,Nevada,Municipal and Industrial,Lower Basin,270.072
+2004,New Mexico,Agricultural,Upper Basin,247.4427385
+2004,New Mexico,Energy,Upper Basin,48.97431
+2004,New Mexico,Fish and Wildlife and Recreation,Upper Basin,4.072792706
+2004,New Mexico,Minerals,Upper Basin,1.1519
+2004,New Mexico,Municipal and Industrial,Upper Basin,74.41441076
+2004,New Mexico,Reservoir Evaporation,Upper Basin,74.65350569
+2004,Utah,Agricultural,Upper Basin,563.6171647
+2004,Utah,Energy,Upper Basin,35.04643403
+2004,Utah,Minerals,Upper Basin,4.232
+2004,Utah,Municipal and Industrial,Upper Basin,121.086
+2004,Utah,Reservoir Evaporation,Upper Basin,167.4361423
+2004,Wyoming,Agricultural,Upper Basin,290.268312
+2004,Wyoming,Energy,Upper Basin,37.34566
+2004,Wyoming,Minerals,Upper Basin,0.758
+2004,Wyoming,Municipal and Industrial,Upper Basin,18.723
+2004,Wyoming,Reservoir Evaporation,Upper Basin,92.80647863
+2005,Arizona,Agricultural,Lower Basin,1439.081893
+2005,Arizona,Agricultural,Upper Basin,0.827597072
+2005,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,65.99355
+2005,Arizona,CAP M&I Recharge,Lower Basin,212.35245
+2005,Arizona,CAP Tribes,Lower Basin,137.705
+2005,Arizona,Energy,Lower Basin,0.798
+2005,Arizona,Energy,Upper Basin,26.2
+2005,Arizona,Export,Upper Basin,0
+2005,Arizona,Fish and Wildlife and Recreation,Lower Basin,13.1812
+2005,Arizona,Minerals,Lower Basin,0.108
+2005,Arizona,Minerals,Upper Basin,0
+2005,Arizona,Municipal and Industrial,Lower Basin,559.2490044
+2005,Arizona,Municipal and Industrial,Upper Basin,5.032074645
+2005,Arizona,Reservoir Evaporation,Upper Basin,4.396654195
+2005,California,Agricultural,Lower Basin,3387.835
+2005,California,Fish and Wildlife and Recreation,Lower Basin,0.014
+2005,California,Municipal and Industrial,Lower Basin,956.409
+2005,Colorado,Agricultural,Upper Basin,1429.770278
+2005,Colorado,Energy,Upper Basin,19.1753
+2005,Colorado,Minerals,Upper Basin,3.63899989
+2005,Colorado,Municipal and Industrial,Upper Basin,285.326595
+2005,Colorado,Reservoir Evaporation,Upper Basin,315.6280533
+2005,Mexico,Unassigned,Lower Basin,1500
+2005,Misc,,Lower Basin,108.426
+2005,Misc,Fish and Wildlife and Recreation,Lower Basin,641.81
+2005,Misc,Reservoir Evaporation,Lower Basin,1026.866344
+2005,Misc,Unassigned,Lower Basin,74.34803846
+2005,Nevada,Agricultural,Lower Basin,0
+2005,Nevada,Energy,Lower Basin,12.401
+2005,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.004
+2005,Nevada,Municipal and Industrial,Lower Basin,278.373
+2005,New Mexico,Agricultural,Upper Basin,243.2481857
+2005,New Mexico,Energy,Upper Basin,51.18484
+2005,New Mexico,Fish and Wildlife and Recreation,Upper Basin,7.449424184
+2005,New Mexico,Minerals,Upper Basin,1.3193
+2005,New Mexico,Municipal and Industrial,Upper Basin,121.9590329
+2005,New Mexico,Reservoir Evaporation,Upper Basin,94.15484209
+2005,Utah,Agricultural,Upper Basin,620.1459715
+2005,Utah,Energy,Upper Basin,34.76953736
+2005,Utah,Minerals,Upper Basin,4.09
+2005,Utah,Municipal and Industrial,Upper Basin,141.102
+2005,Utah,Reservoir Evaporation,Upper Basin,181.6788563
+2005,Wyoming,Agricultural,Upper Basin,322.4522425
+2005,Wyoming,Energy,Upper Basin,37.59894
+2005,Wyoming,Minerals,Upper Basin,0.758
+2005,Wyoming,Municipal and Industrial,Upper Basin,22.685
+2005,Wyoming,Reservoir Evaporation,Upper Basin,98.81487781
+2006,Arizona,Agricultural,Lower Basin,1547.235
+2006,Arizona,Agricultural,Upper Basin,0.790497072
+2006,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,80.83565
+2006,Arizona,CAP M&I Recharge,Lower Basin,384.59735
+2006,Arizona,CAP Tribes,Lower Basin,145.094
+2006,Arizona,Energy,Lower Basin,1.312
+2006,Arizona,Energy,Upper Basin,26.66
+2006,Arizona,Export,Upper Basin,0
+2006,Arizona,Fish and Wildlife and Recreation,Lower Basin,14.938
+2006,Arizona,Minerals,Lower Basin,34.999
+2006,Arizona,Minerals,Upper Basin,0
+2006,Arizona,Municipal and Industrial,Lower Basin,573.855
+2006,Arizona,Municipal and Industrial,Upper Basin,5.089690855
+2006,Arizona,Reservoir Evaporation,Upper Basin,4.434958259
+2006,California,Agricultural,Lower Basin,3601.945
+2006,California,Fish and Wildlife and Recreation,Lower Basin,0.019
+2006,California,Municipal and Industrial,Lower Basin,733.335
+2006,Colorado,Agricultural,Upper Basin,1627.908014
+2006,Colorado,Energy,Upper Basin,20.2277
+2006,Colorado,Minerals,Upper Basin,3.60599989
+2006,Colorado,Municipal and Industrial,Upper Basin,397.18978
+2006,Colorado,Reservoir Evaporation,Upper Basin,337.4558129
+2006,Mexico,Unassigned,Lower Basin,1500
+2006,Misc,,Lower Basin,107.314
+2006,Misc,Fish and Wildlife and Recreation,Lower Basin,637.468
+2006,Misc,Reservoir Evaporation,Lower Basin,997.5836094
+2006,Misc,Unassigned,Lower Basin,36.232
+2006,Nevada,Agricultural,Lower Basin,0
+2006,Nevada,Energy,Lower Basin,1.248
+2006,Nevada,Fish and Wildlife and Recreation,Lower Basin,1.131
+2006,Nevada,Municipal and Industrial,Lower Basin,290.485
+2006,New Mexico,Agricultural,Upper Basin,228.8713881
+2006,New Mexico,Energy,Upper Basin,50.436958
+2006,New Mexico,Fish and Wildlife and Recreation,Upper Basin,3.781669866
+2006,New Mexico,Minerals,Upper Basin,0.97171
+2006,New Mexico,Municipal and Industrial,Upper Basin,68.74975038
+2006,New Mexico,Reservoir Evaporation,Upper Basin,91.43014824
+2006,Utah,Agricultural,Upper Basin,718.2192689
+2006,Utah,Energy,Upper Basin,34.76953736
+2006,Utah,Minerals,Upper Basin,3.948
+2006,Utah,Municipal and Industrial,Upper Basin,91.794
+2006,Utah,Reservoir Evaporation,Upper Basin,188.6064052
+2006,Wyoming,Agricultural,Upper Basin,218.840623
+2006,Wyoming,Energy,Upper Basin,39.69522
+2006,Wyoming,Minerals,Upper Basin,0.758
+2006,Wyoming,Municipal and Industrial,Upper Basin,22.123
+2006,Wyoming,Reservoir Evaporation,Upper Basin,102.6296308
+2007,Arizona,Agricultural,Lower Basin,1527.181
+2007,Arizona,Agricultural,Upper Basin,1.080515896
+2007,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,80.53765
+2007,Arizona,CAP M&I Recharge,Lower Basin,199.61335
+2007,Arizona,CAP Tribes,Lower Basin,154.227
+2007,Arizona,Energy,Lower Basin,1.695
+2007,Arizona,Energy,Upper Basin,27.604
+2007,Arizona,Export,Upper Basin,0
+2007,Arizona,Fish and Wildlife and Recreation,Lower Basin,15.432
+2007,Arizona,Minerals,Lower Basin,54.951
+2007,Arizona,Minerals,Upper Basin,0
+2007,Arizona,Municipal and Industrial,Lower Basin,749.686
+2007,Arizona,Municipal and Industrial,Upper Basin,3.68986749
+2007,Arizona,Reservoir Evaporation,Upper Basin,4.38912452
+2007,California,Agricultural,Lower Basin,3573.038
+2007,California,Fish and Wildlife and Recreation,Lower Basin,0.055
+2007,California,Municipal and Industrial,Lower Basin,797.602
+2007,Colorado,Agricultural,Upper Basin,1809.891137
+2007,Colorado,Energy,Upper Basin,18.8339119
+2007,Colorado,Minerals,Upper Basin,3.57299989
+2007,Colorado,Municipal and Industrial,Upper Basin,322.6518018
+2007,Colorado,Reservoir Evaporation,Upper Basin,337.4057382
+2007,Mexico,Unassigned,Lower Basin,1500
+2007,Misc,,Lower Basin,105.276
+2007,Misc,Fish and Wildlife and Recreation,Lower Basin,665.272
+2007,Misc,Reservoir Evaporation,Lower Basin,960.6720781
+2007,Misc,Unassigned,Lower Basin,21.603
+2007,Nevada,Agricultural,Lower Basin,0
+2007,Nevada,Energy,Lower Basin,0.396
+2007,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.878
+2007,Nevada,Municipal and Industrial,Lower Basin,299.038
+2007,New Mexico,Agricultural,Upper Basin,234.761748
+2007,New Mexico,Energy,Upper Basin,46.34050108
+2007,New Mexico,Fish and Wildlife and Recreation,Upper Basin,5.036900192
+2007,New Mexico,Minerals,Upper Basin,1.0564
+2007,New Mexico,Municipal and Industrial,Upper Basin,83.35461526
+2007,New Mexico,Reservoir Evaporation,Upper Basin,95.09540111
+2007,Utah,Agricultural,Upper Basin,752.647282
+2007,Utah,Energy,Upper Basin,34.76953736
+2007,Utah,Minerals,Upper Basin,3.806
+2007,Utah,Municipal and Industrial,Upper Basin,116.047
+2007,Utah,Reservoir Evaporation,Upper Basin,188.4473159
+2007,Wyoming,Agricultural,Upper Basin,328.0119932
+2007,Wyoming,Energy,Upper Basin,36.88501
+2007,Wyoming,Minerals,Upper Basin,0.758
+2007,Wyoming,Municipal and Industrial,Upper Basin,17.316
+2007,Wyoming,Reservoir Evaporation,Upper Basin,100.3187206
+2008,Arizona,Agricultural,Lower Basin,1522.943741
+2008,Arizona,Agricultural,Upper Basin,1.325414226
+2008,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,78.08595
+2008,Arizona,CAP M&I Recharge,Lower Basin,195.8250189
+2008,Arizona,CAP Tribes,Lower Basin,184.336
+2008,Arizona,Energy,Lower Basin,2.050306891
+2008,Arizona,Energy,Upper Basin,26.334
+2008,Arizona,Export,Upper Basin,0
+2008,Arizona,Fish and Wildlife and Recreation,Lower Basin,17.5051913
+2008,Arizona,Minerals,Lower Basin,62.9595013
+2008,Arizona,Minerals,Upper Basin,0
+2008,Arizona,Municipal and Industrial,Lower Basin,688.791573
+2008,Arizona,Municipal and Industrial,Upper Basin,3.870513072
+2008,Arizona,Reservoir Evaporation,Upper Basin,4.364596449
+2008,California,Agricultural,Lower Basin,3509.734
+2008,California,Fish and Wildlife and Recreation,Lower Basin,0.062
+2008,California,Municipal and Industrial,Lower Basin,989.014
+2008,Colorado,Agricultural,Upper Basin,1869.294415
+2008,Colorado,Energy,Upper Basin,19.04482607
+2008,Colorado,Minerals,Upper Basin,3.53999989
+2008,Colorado,Municipal and Industrial,Upper Basin,407.1951344
+2008,Colorado,Reservoir Evaporation,Upper Basin,358.9027421
+2008,Mexico,Unassigned,Lower Basin,1500
+2008,Misc,,Lower Basin,115.434
+2008,Misc,Fish and Wildlife and Recreation,Lower Basin,641.638
+2008,Misc,Reservoir Evaporation,Lower Basin,939.0290625
+2008,Misc,Unassigned,Lower Basin,91.379
+2008,Nevada,Agricultural,Lower Basin,0
+2008,Nevada,Energy,Lower Basin,0.491
+2008,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.785
+2008,Nevada,Municipal and Industrial,Lower Basin,268.378
+2008,New Mexico,Agricultural,Upper Basin,242.1141509
+2008,New Mexico,Energy,Upper Basin,46.47123288
+2008,New Mexico,Fish and Wildlife and Recreation,Upper Basin,6.713243762
+2008,New Mexico,Minerals,Upper Basin,1.0564
+2008,New Mexico,Municipal and Industrial,Upper Basin,106.5786791
+2008,New Mexico,Reservoir Evaporation,Upper Basin,98.75790573
+2008,Utah,Agricultural,Upper Basin,680.1023141
+2008,Utah,Energy,Upper Basin,35.04643403
+2008,Utah,Minerals,Upper Basin,3.664
+2008,Utah,Municipal and Industrial,Upper Basin,102.117
+2008,Utah,Reservoir Evaporation,Upper Basin,196.9954023
+2008,Wyoming,Agricultural,Upper Basin,292.4703491
+2008,Wyoming,Energy,Upper Basin,37.65427047
+2008,Wyoming,Minerals,Upper Basin,0.758
+2008,Wyoming,Municipal and Industrial,Upper Basin,23.787
+2008,Wyoming,Reservoir Evaporation,Upper Basin,107.8716584
+2009,Arizona,Agricultural,Lower Basin,1515.97
+2009,Arizona,Agricultural,Upper Basin,1.377577727
+2009,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,82.9904
+2009,Arizona,CAP M&I Recharge,Lower Basin,86.1006
+2009,Arizona,CAP Tribes,Lower Basin,233.539
+2009,Arizona,Energy,Lower Basin,1.897
+2009,Arizona,Energy,Upper Basin,26.073
+2009,Arizona,Export,Upper Basin,0
+2009,Arizona,Fish and Wildlife and Recreation,Lower Basin,16.761
+2009,Arizona,Minerals,Lower Basin,91.139
+2009,Arizona,Minerals,Upper Basin,0
+2009,Arizona,Municipal and Industrial,Lower Basin,803.314
+2009,Arizona,Municipal and Industrial,Upper Basin,4.428126614
+2009,Arizona,Reservoir Evaporation,Upper Basin,4.485493235
+2009,California,Agricultural,Lower Basin,3141.534
+2009,California,Fish and Wildlife and Recreation,Lower Basin,1.712
+2009,California,Municipal and Industrial,Lower Basin,1214.828
+2009,Colorado,Agricultural,Upper Basin,1855.59714
+2009,Colorado,Energy,Upper Basin,18.94635483
+2009,Colorado,Minerals,Upper Basin,3.51599989
+2009,Colorado,Municipal and Industrial,Upper Basin,343.284234
+2009,Colorado,Reservoir Evaporation,Upper Basin,380.2072151
+2009,Mexico,Unassigned,Lower Basin,1500
+2009,Misc,,Lower Basin,114.771
+2009,Misc,Fish and Wildlife and Recreation,Lower Basin,631.0754286
+2009,Misc,Reservoir Evaporation,Lower Basin,913.3409219
+2009,Misc,Unassigned,Lower Basin,64.923
+2009,Nevada,Agricultural,Lower Basin,0
+2009,Nevada,Energy,Lower Basin,0.52
+2009,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.721
+2009,Nevada,Municipal and Industrial,Lower Basin,247.372
+2009,New Mexico,Agricultural,Upper Basin,234.8429458
+2009,New Mexico,Energy,Upper Basin,46.61444598
+2009,New Mexico,Fish and Wildlife and Recreation,Upper Basin,5.055422265
+2009,New Mexico,Minerals,Upper Basin,1.0564
+2009,New Mexico,Municipal and Industrial,Upper Basin,83.61122006
+2009,New Mexico,Reservoir Evaporation,Upper Basin,100.6918723
+2009,Utah,Agricultural,Upper Basin,720.0995182
+2009,Utah,Energy,Upper Basin,34.76953736
+2009,Utah,Minerals,Upper Basin,3.522
+2009,Utah,Municipal and Industrial,Upper Basin,101.0440721
+2009,Utah,Reservoir Evaporation,Upper Basin,208.5819747
+2009,Wyoming,Agricultural,Upper Basin,305.6165864
+2009,Wyoming,Energy,Upper Basin,37.65427047
+2009,Wyoming,Minerals,Upper Basin,0.738
+2009,Wyoming,Municipal and Industrial,Upper Basin,15.3508
+2009,Wyoming,Reservoir Evaporation,Upper Basin,113.7988828
+2010,Arizona,Agricultural,Lower Basin,1476.274
+2010,Arizona,Agricultural,Upper Basin,2.17319845
+2010,Arizona,CAP Canal and Reservoir Evaporation,Lower Basin,82.638
+2010,Arizona,CAP M&I Recharge,Lower Basin,186.861
+2010,Arizona,CAP Tribes,Lower Basin,332.819
+2010,Arizona,Energy,Lower Basin,1.426
+2010,Arizona,Energy,Upper Basin,23.948
+2010,Arizona,Export,Upper Basin,0
+2010,Arizona,Fish and Wildlife and Recreation,Lower Basin,18.26
+2010,Arizona,Minerals,Lower Basin,40.408
+2010,Arizona,Minerals,Upper Basin,0
+2010,Arizona,Municipal and Industrial,Lower Basin,641.681
+2010,Arizona,Municipal and Industrial,Upper Basin,5.507368485
+2010,Arizona,Reservoir Evaporation,Upper Basin,4.223211191
+2010,California,Agricultural,Lower Basin,3065.1788
+2010,California,Fish and Wildlife and Recreation,Lower Basin,1.744
+2010,California,Municipal and Industrial,Lower Basin,1289.9152
+2010,Colorado,Agricultural,Upper Basin,1789.049587
+2010,Colorado,Energy,Upper Basin,19.32406587
+2010,Colorado,Minerals,Upper Basin,3.48299989
+2010,Colorado,Municipal and Industrial,Upper Basin,295.5621251
+2010,Colorado,Reservoir Evaporation,Upper Basin,374.7752198
+2010,Mexico,Unassigned,Lower Basin,1500
+2010,Misc,,Lower Basin,117.646
+2010,Misc,Fish and Wildlife and Recreation,Lower Basin,631.0754286
+2010,Misc,Reservoir Evaporation,Lower Basin,896.7143906
+2010,Misc,Unassigned,Lower Basin,74.34803846
+2010,Nevada,Agricultural,Lower Basin,0
+2010,Nevada,Energy,Lower Basin,0.37
+2010,Nevada,Fish and Wildlife and Recreation,Lower Basin,0.63
+2010,Nevada,Municipal and Industrial,Lower Basin,240.437
+2010,New Mexico,Agricultural,Upper Basin,231.4856775
+2010,New Mexico,Energy,Upper Basin,47.88314433
+2010,New Mexico,Fish and Wildlife and Recreation,Upper Basin,4.289971209
+2010,New Mexico,Minerals,Upper Basin,1.0564
+2010,New Mexico,Municipal and Industrial,Upper Basin,73.00666113
+2010,New Mexico,Reservoir Evaporation,Upper Basin,100.1148684
+2010,Utah,Agricultural,Upper Basin,749.7764588
+2010,Utah,Energy,Upper Basin,34.68204218
+2010,Utah,Minerals,Upper Basin,3.414
+2010,Utah,Municipal and Industrial,Upper Basin,111.8841315
+2010,Utah,Reservoir Evaporation,Upper Basin,205.3453369
+2010,Wyoming,Agricultural,Upper Basin,285.206735
+2010,Wyoming,Energy,Upper Basin,38.22754121
+2010,Wyoming,Minerals,Upper Basin,0.738
+2010,Wyoming,Municipal and Industrial,Upper Basin,17.85816
+2010,Wyoming,Reservoir Evaporation,Upper Basin,109.498336
