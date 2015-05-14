@@ -32,6 +32,7 @@ create24MSFigure <- function()
   # Try to get historical and projected labels to show up on different lines
   # Compute the historical vs. projected event data
   
+  # javascript to create function to format date as Jan '12 for January 2012. 
   jsFormatXAxis <- "function(x) {var monAbb = ['Jan', 'Feb','Mar','Apr','May','Jun','Jul',
                       'Aug','Sep','Oct','Nov','Dec'];
                       var yrStr = x.getFullYear().toString()
@@ -44,6 +45,11 @@ create24MSFigure <- function()
     dyLegend(width = 400) %>%
     dyEvent(date = hVsPDate, "Historical<br/>Projected", labelLoc = 'bottom') %>%
     dyAxis('x', axisLabelFormatter = JS(jsFormatXAxis))
+  
+  oldwd <- setwd("../public_html/widgets/slide_10")
+  htmlwidgets::saveWidget(meadDG, "mead_historical_and_projected.html", 
+                          selfcontained = FALSE, libdir = "js")
+  setwd(oldwd)
   
   meadDG
 }
