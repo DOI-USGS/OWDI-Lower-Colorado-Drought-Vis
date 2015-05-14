@@ -1,6 +1,7 @@
 # creates the 24-MS figure for Mead elevation projections (Slide 10 from mockup presentation)
 library(dplyr)
 library(dygraphs)
+library(htmlwidgets)
 
 create24MSFigure <- function()
 {
@@ -31,11 +32,18 @@ create24MSFigure <- function()
   # Try to get historical and projected labels to show up on different lines
   # Compute the historical vs. projected event data
   
+  jsFormatXAxis <- "function(x) {var monAbb = ['Jan', 'Feb','Mar','Apr','May','Jun','Jul',
+                      'Aug','Sep','Oct','Nov','Dec'];
+                      var yrStr = x.getFullYear().toString()
+                      return monAbb[x.getMonth()] + \" \'\" + yrStr[2] + yrStr[3]}"
+  
   # Used mid month instead of end of month
   hVsPDate <- '2015-02-14'
-  dygraph(mead, main = 'Lake Mead Historical and Projected Elevations') %>%
+  meadDG <- dygraph(mead, main = 'Lake Mead Historical and Projected Elevations') %>%
     dyAxis('y', label = 'Elevation [feet]') %>%
     dyLegend(width = 400) %>%
-    dyEvent(date = hVsPDate, "Historical\nProjected", labelLoc = 'bottom')
-     
+    dyEvent(date = hVsPDate, "Historical<br/>Projected", labelLoc = 'bottom') %>%
+    dyAxis('x', axisLabelFormatter = JS(jsFormatXAxis))
+  
+  meadDG
 }
