@@ -111,5 +111,5 @@ reformatLBDec <- function(yrs = 2000:2013, rowsToRead = rbind(c(4,274),c(3,108),
     }
   }
   allWUData$WaterUser <- as.factor(allWUData$WaterUser)
-  write.csv(allWUData,'../src_data/LBDecreeAccounting/DecreeData.csv')
+  write.csv(allWUData,'../src_data/LBDecreeAccounting/DecreeData.csv', row.names = F)
 }
