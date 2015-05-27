@@ -68,8 +68,8 @@ wae_brk <- as.numeric(as.character(cut(wat_acc_examp$LastFiveMean,
                                        quantile(wat_acc_examp$LastFiveMean, c(0,0.25,0.75,1)),
                                        c(5,15,25),
                                        include.lowest=TRUE)))
-wae_coord <- coordinates(wat_acc_examp[,5:6])
-wae_data <- wat_acc_examp[,2:3]
+wae_coord <- coordinates(wat_acc_examp[,3:4])
+wae_data <- wat_acc_examp[,1:2]
 wat_acc_sp <- SpatialPointsDataFrame(wae_coord,data=wae_data,
                                      proj4string = CRS(proj4string(wbdhu2_lco)))
 
