@@ -24,3 +24,12 @@ MOHAVE COUNTY WATER AUTHORITY (CVIDD) so that can distinguish this from
 the MOHAVE COUNTY WATER AUTHORITY main user that only has data in 2013
 -- same with Hopi, AZ Game and Fish, and az recreational facilities.
 - Moved the "Nevada Totals COMPUTED" label up one row.
+- Moved LAS VEGAS WASH RETURN FLOWS, "RETURNS", to be line item under
+-- changed "RETURNS" to "MEAS. RETURNS"
+-- changed Robert G. Griffith Consumptive Use to be equal to Diversion at Saddle Island
+minus the Las Vegas Wash Return Flows.
+- combined row 70 and 71 "unassigned returns from Yuma Project" in CA user
+to be on the same line
+- Removed the small water users and injected storage from the NV sheet.
+- IID includes water exchanged w/SDCWA for Salt Sea Mitigation
+-- this may necessitate a note if IID water use is shown on any figures.
