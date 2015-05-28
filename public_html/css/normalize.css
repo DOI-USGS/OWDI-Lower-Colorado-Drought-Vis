@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{padding:0; margin:0;}
+
+a{text-decoration:none;}
+
+ul{list-style:none;}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{font-weight:normal;}
+
+html,
+body{
+	height:100%;
+	font-family:"Open Sans", Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+header, 
+section, 
+footer, 
+aside, 
+nav, 
+article, 
+figure, 
+audio, 
+video, 
+canvas { display:block; }
