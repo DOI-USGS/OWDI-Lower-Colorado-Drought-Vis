@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<script src="test_files/htmlwidgets-0.3.2/htmlwidgets.js"></script>
+<script src="test_files/jquery-1.11.1/jquery.min.js"></script>
+<link href="test_files/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
+<script src="test_files/leaflet-0.7.3/leaflet.js"></script>
+<link href="test_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="test_files/leaflet-binding-0.0.15/leaflet.js"></script>
+
+</head>
+<body style="background-color:white;">
+<div id="htmlwidget_container">
+  <div id="htmlwidget-1114" style="width:100%;height:400px;" class="leaflet"></div>
+</div>
+<script type="application/json" data-for="htmlwidget-1114">{ "x": {
+ "calls": [
+ {
+ "method": "addTiles",
+"args": [
+ "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+null,
+{
+ "minZoom":                 0,
+"maxZoom":                18,
+"maxNativeZoom": null,
+"tileSize":               256,
+"subdomains": "abc",
+"errorTileUrl": "",
+"tms": false,
+"continuousWorld": false,
+"noWrap": false,
+"zoomOffset":                 0,
+"zoomReverse": false,
+"opacity":                 1,
+"zIndex": null,
+"unloadInvisibleTiles": null,
+"updateWhenIdle": null,
+"detectRetina": false,
+"reuseTiles": false,
+"attribution": "&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>" 
+} 
+] 
+},
+{
+ "method": "addMarkers",
+"args": [
+ [ 24.17406523938519, 24.63196774840583,  24.2222574806143, 25.98976168062766, 25.92398426093389, 24.78900469619077, 25.74639902518359, 27.40884775797133, 27.51381791874994, 26.41677152130981, 24.98301817810391, 26.73589170666639, 23.74503175721732, 25.90381326939207, 26.43513715405245, 25.27769509892207, 23.95138120272425, 24.86901006832015, 25.46566215439928, 25.43261036889855 ],
+[ -93.1560614493835, -93.1583885497573, -88.79877800337702, -94.84938545135513, -86.31286222703487, -89.81219830207259, -91.77360243845463, -89.33303092822165, -89.76178304042399, -93.00765368837595, -88.04746325809241, -85.80555929552496, -88.38073255942867, -94.6466163264747, -95.60201450466842, -92.11218281632021, -95.04541270184994, -87.17921013461158, -88.60032259702415, -88.27011583588749 ],
+null,
+"locations",
+{
+ "clickable": true,
+"draggable": false,
+"keyboard": true,
+"title": "",
+"alt": "",
+"zIndexOffset":                 0,
+"opacity":                 1,
+"riseOnHover": true,
+"riseOffset":               250 
+},
+null 
+] 
+},
+{
+ "method": "addControl",
+"args": [
+ "<h1>Test</h1>",
+"topleft",
+null,
+"info legend" 
+] 
+} 
+],
+"limits": {
+ "lat": [ 23.74503175721732, 27.51381791874994 ],
+"lng": [ -95.60201450466842, -85.80555929552496 ] 
+} 
+},"evals": [  ] }</script>
+<script type="application/htmlwidget-sizing" data-for="htmlwidget-1114">{ "viewer": {
+ "width": "100%",
+"height":               400,
+"padding":                 0,
+"fill": true 
+},"browser": {
+ "width": "100%",
+"height":               400,
+"padding":                 0,
+"fill": true 
+} }</script>
+<script>L.control.layers(locations).addTo(map);</script>
+</body>
+</html>
