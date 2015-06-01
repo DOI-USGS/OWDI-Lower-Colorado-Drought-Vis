@@ -10,6 +10,26 @@
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
+	<style type="text/css">
+		header, section, footer, aside, nav, article, figure, audio, video, canvas { display:block; }
+	</style>
+
+	<!-- populate sections -->
+	<script type="text/javascript">
+		mkTemplate = function(section) {
+			$.ajax({
+				url: "sections/" + section + "/" + section + ".html",
+				success: function(data) {
+					var template = Handlebars.compile(data);
+					$("#" + section).html(template());
+				}
+			});
+		}
+		$(document).ready(function() {
+			mkTemplate("section1");
+		});
+	</script>
 </head>
 <body>
 	<header>
@@ -29,6 +49,9 @@
             </div>
             
 		</article>
+	<section id="section1">
+	</section>
+	<section id="section2">
 	</section>
 	<aside>
 		Sidebar
