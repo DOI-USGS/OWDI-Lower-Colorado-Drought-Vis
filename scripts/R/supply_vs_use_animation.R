@@ -2,6 +2,8 @@
 
 library(dinosvg)
 library(XML)
+
+
 data <- read.csv('../src_data/NaturalFlow.csv', stringsAsFactors = F)
 flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
 years <- data$Year
@@ -73,10 +75,25 @@ dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset",
                             begin = "indefinite", id = "timeAdvance", 
                             fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
 
-usage_id <- newXMLNode("g", 'parent' = g_id,
-                     attrs = c('id' = "supply", style="fill:#0066CC", r = '0'))
 
-#dinosvg:::animate_attribute(usage_id, attr_name = "r", begin = 'timeAdvance.begin', to = '0')
+#!! consider reusing defs:
+# <defs>
+#   <circle id="animation" r="0"
+#     fill="#0066CC" visibility = 'hidden'>
+#       <animate attributeName="r" 
+#         from="0" to="1.5" 
+#         dur="0.01s"/>
+#   </rect>
+# </defs>
+#     
+# <!-- use  multiple times -->
+# <use xlink:href="#animation"/>
+# <use xlink:href="#animation" x="100" />
+#     
+
+usage_id <- newXMLNode("g", 'parent' = g_id,
+                     attrs = c('id' = "supply", style="fill:#0066CC", r = '0', visibility = 'hidden'))
+
 
 for (i in 1:length(x)){
   
@@ -86,8 +103,8 @@ for (i in 1:length(x)){
     # / otherwise, radius is never > 0
     newXMLNode('animate', 'parent' = nd,
                attrs = c('attributeName' = "r",
-                         'begin' = sprintf("timeAdvance.begin+%0.3fs",difTimes[i]),
-                         'fill' = "freeze", 'from'='0','to'='1.5',dur="0.1s"))
+                         'begin' = sprintf("timeAdvance.begin+%0.3fs",max(difTimes[i]-0.2,0)),
+                         'fill' = "freeze", 'from'='0','to'='1.5',dur="0.01s"))
   }
   
   
@@ -104,23 +121,6 @@ tot_len <- sum(line_len, na.rm = T)
 tot_time <- tail(years,1) - head(years,1)
 
 # calc_lengths 
-
-supply_id <- newXMLNode("g", 'parent' = g_id,
-                       attrs = c('id' = "usage", style="fill:#B22C2C;", r = '0'))
-
-for (i in 1:length(x)){
-  
-    
-  nd <- dinosvg:::circle(supply_id, x[i], ifelse(is.na(y[i]),0,y[i]), id = paste0('usage-',years[i]))
-  
-  if(!is.na(y[i])){
-    # / otherwise, radius is never > 0
-    newXMLNode('animate', 'parent' = nd,
-             attrs = c('attributeName' = "r",
-                       'begin' = sprintf("timeAdvance.begin+%0.3fs",difTimes[i]),
-                       'fill' = "freeze", 'from'='0','to'='1.5',dur="0.1s"))
-  }
-}
 
 # -----usage line
 values <- paste(tot_len- cumsum(line_len),collapse=';')
