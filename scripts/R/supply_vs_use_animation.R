@@ -66,14 +66,17 @@ ani_time <- 15
 # calc_lengths 
 values <- paste(tot_len- cumsum(line_len),collapse=';')
 difTimes <- cumsum(diff(years)/tot_time)
-keyTimes <- paste(difTimes,collapse=';')
+keyTimes <- paste(difTimes,collapse=';') # not used?
 difTimes <- c(0,difTimes)*ani_time # now same length as elements
 line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none', style =sprintf("stroke:#0066CC;stroke-width:3;stroke-dasharray:%0.0f;stroke-linecap:round;stroke-dashoffset:%0.0f",tot_len+1,tot_len+1))
 dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
-                            begin = "indefinite", id = "timeAdvance", dur = sprintf('%fs',ani_time), values = values, keyTimes = keyTimes)
+                            begin = "indefinite", id = "timeAdvance", 
+                            fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
 
 usage_id <- newXMLNode("g", 'parent' = g_id,
                      attrs = c('id' = "supply", style="fill:#0066CC", r = '0'))
+
+#dinosvg:::animate_attribute(usage_id, attr_name = "r", begin = 'timeAdvance.begin', to = '0')
 
 for (i in 1:length(x)){
   
@@ -125,7 +128,8 @@ values <- paste(tot_len- cumsum(line_len),collapse=';')
 line_nd <- dinosvg:::linepath(g_id, x,y, fill = 'none',
                               style =sprintf("stroke:#B22C2C;stroke-width:3;stroke-dasharray:%0.0fpx;stroke-linecap:round;stroke-dashoffset:%0.0f",tot_len+1,tot_len+1))
 dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
-                            begin = "timeAdvance.begin", id = "usage", dur = sprintf('%fs',ani_time), values = values, keyTimes = keyTimes)
+                            begin = "timeAdvance.begin", id = "usage", 
+                            fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
 # -----
 
 
