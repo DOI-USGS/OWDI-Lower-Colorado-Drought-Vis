@@ -6,16 +6,10 @@ library(dygraphs)
 
 #' Read data
 #' 
-#' text file is in src_data, downloaded from 
+#' Text files are in src_data, downloaded from 
 #' ftp://ftp.ncdc.noaa.gov/pub/data/paleo/treering/reconstructions/northamerica/usa/upper-colorado-flow2007.txt
+#' and supplied by this group (Alan Butler?) in NaturalFlow.csv 
 #' 
-#' @section Issues:
-#'   
-#'   should 15-year average be the preceding 15 years rather than 7 before, 1
-#'   during, and 7 after?
-#'   
-#'   more recent natural flow data available? have up through 2012
-#'   
 #' @import dplyr
 #' @import xts
 #' @return an xts object
@@ -23,18 +17,20 @@ read_flow_data <- function() {
   flow_file <- 'src_data/upper-colorado-flow2007.txt'
   lines <- readLines(flow_file)
   header_line <- grep("Year   Model  RecBCM  RMSE_BCM", lines)
-  running_mean <- function(x,n=5) {
-    stats::filter(x,rep(1/n,n), sides=2) %>%
-      as.numeric()
+  running_mean <- function(x,n=15,sides=1) {
+    stats::filter(x, rep(1/n,n), sides=1) %>% as.numeric()
   }
   flow_df <- read.csv(flow_file, skip=(header_line-1), sep="", stringsAsFactors = F) %>%
-    mutate(TreeRings=RecBCM, TreeRingsLwr=TreeRings-RMSE_BCM, TreeRingsUpr=TreeRings+RMSE_BCM, 
-           #FlowGage = suppressWarnings(as.numeric(ObsBCM)),
-           TreeRings15YrRunMean = running_mean(TreeRings),
-           TreeRingsAllYrMean = mean(TreeRings)) %>%
+    # rename key columns
+    mutate(TreeRings=RecBCM, TreeRingsLwr=TreeRings-RMSE_BCM, TreeRingsUpr=TreeRings+RMSE_BCM) %>%
+    # these come in billion cubic meter (/yr); convert to millions of acre feet
+    # (/yr). 1233.48184 cubic meters per acre feet, 1000 million per billion,
+    # means (1000 million acre feet)/(1233.48184 billion cubic meters) = 0.8107132
+    mutate(TreeRings=TreeRings*0.8107132, TreeRingsLwr=TreeRingsLwr*0.8107132, TreeRingsUpr=TreeRingsUpr*0.8107132) %>%
+    # compute running averages
+    mutate(TreeRings15YrRunMean = running_mean(TreeRings), TreeRingsAllYrMean = mean(TreeRings)) %>%
     select(Year, 
            TreeRings, TreeRingsLwr, TreeRingsUpr, 
-           #FlowGage,
            TreeRings15YrRunMean,
            TreeRingsAllYrMean)
   
@@ -42,8 +38,8 @@ read_flow_data <- function() {
   flow_file_recent <- 'src_data/NaturalFlow.csv'
   flow_df <- flow_df %>% full_join(
     read.csv(flow_file_recent) %>% 
-      # these come in acre feet; convert to billion cubic meter
-      mutate(FlowGage=Natural.Flow.above.Lees.Ferry/810713.182109) %>%
+      # these come in acre feet; convert to million acre feet
+      mutate(FlowGage=Natural.Flow.above.Lees.Ferry/1000000) %>%
       select(Year, FlowGage), by="Year")
   
   flow_df <- flow_df %>% 
@@ -54,24 +50,7 @@ read_flow_data <- function() {
 flow_data <- read_flow_data()
 
 #' Make the figure
-#' 
-#' @section Issues:
-#'   
-#'   is this the right file structure to use?
-#'   
-#'   how to export to js or png or something?
-#'   
-#'   how to include exponents in y axis?
-#'   
-#'   year labels disappear when date range spans > 1000 years
-#'   
-#'   can you opt into seeing the averages or not, seeing the yearly data or not?
-#'   it's pretty noisy.
-#'   
-#'   can you opt into seeing the numbers pop up for the averages or not?
-#'   
-#'   label for shaded drought years
-#'   
+#'    
 #' @import dplyr
 #' @import dygraphs
 plot_flow_data <- function(flow_data) {
@@ -82,7 +61,7 @@ plot_flow_data <- function(flow_data) {
     dySeries(c("FlowGage"), label = "Flow Gage", color="skyblue") %>%
     dySeries(c("TreeRings15YrRunMean"), label = "15-Year Average", color="red") %>%
     dySeries(c("TreeRingsAllYrMean"), label = "Average", "forestgreen") %>%
-    dyAxis("y", label = "Flow (10^9 m^3 y^-1)") %>%
+    dyAxis("y", label = "Flow (million acre-ft per yr)") %>%
     dyAxis("x", label = "Year") %>%
     dyLegend(width = 400) %>%
     dyShading(from = "2000-1-1", to = "2013-1-1")
