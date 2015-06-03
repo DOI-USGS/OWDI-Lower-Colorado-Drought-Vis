@@ -21,6 +21,7 @@ axes <- list('tick_len' = 5,
              'y_lim' = c(0,29),
              'x_lim' = c(1904,2014))
 
+
 fig <- list('w' = 900,
             'h' = 600,
             'margins' = c(100,80,10, 60)) #bot, left, top, right
@@ -31,6 +32,7 @@ fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[2]-fig$margins[4]),
 usage_col <- '#B22C2C'
 supply_col <- '#0066CC'
 line_width <- '3'
+ani_time <- 15 # duration of line animation
 
 l_bmp = 20 # px from axes
 t_bmp = 20 # px from axes
@@ -55,7 +57,6 @@ newXMLNode("text", parent = leg_id, newXMLTextNode('supply_text'),
 #------
 
 
-
 # --- for flows (supply) ---
 x <- sapply(years, FUN = function(x) dinosvg:::tran_x(x, axes, fig))
 y <- sapply(flows, FUN = function(y) dinosvg:::tran_y(y, axes, fig))
@@ -71,11 +72,10 @@ y2 <- tail(y,-1)
 line_len <- line_length(x1,y1,x2,y2)
 tot_len <- sum(line_len)
 tot_time <- tail(years,1) - head(years,1)
-ani_time <- 15
+
 # calc_lengths 
 values <- paste(tot_len- cumsum(line_len),collapse=';')
 difTimes <- cumsum(diff(years)/tot_time)
-keyTimes <- paste(difTimes,collapse=';') # not used?
 difTimes <- c(0,difTimes)*ani_time # now same length as elements
 line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none', style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0f;stroke-linejoin:round;stroke-dashoffset:%0.0f",
                                                                       supply_col,line_width,tot_len+1,tot_len+1))
@@ -115,6 +115,18 @@ tot_len <- sum(line_len, na.rm = T)
 tot_time <- tail(years,1) - head(years,1)
 width <- x2[1]-x1[1] # assumes continuous years!!
 
+
+
+# -----usage line
+values <- paste(tot_len- cumsum(line_len),collapse=';')
+
+line_nd <- dinosvg:::linepath(g_id, x[!is.na(y)],y[!is.na(y)], fill = 'none',
+                              style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0fpx;stroke-linejoin:round;stroke-dashoffset:%0.0f",
+                                             usage_col, line_width, tot_len+1,tot_len+1))
+dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
+                            begin = "timeAdvance.begin", id = "usage", 
+                            fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
+# -----
 for (i in 1:length(x)){
   #refine this so it is actually halfway points
   
@@ -131,20 +143,6 @@ for (i in 1:length(x)){
                        onmouseout=paste0("document.getElementById('legend').setAttribute('visibility', 'hidden');",
                                          sprintf("highlightViz(evt,'supply-%s','0.0');",years[i]))))
 }
-
-# -----usage line
-values <- paste(tot_len- cumsum(line_len),collapse=';')
-
-x<-x[!is.na(y)]
-y<-y[!is.na(y)]
-line_nd <- dinosvg:::linepath(g_id, x,y, fill = 'none',
-                              style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0fpx;stroke-linejoin:round;stroke-dashoffset:%0.0f",
-                                             usage_col, line_width, tot_len+1,tot_len+1))
-dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
-                            begin = "timeAdvance.begin", id = "usage", 
-                            fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
-# -----
-
 
 root_nd <- xmlRoot(g_id)
 
