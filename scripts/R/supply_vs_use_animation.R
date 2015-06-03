@@ -28,6 +28,9 @@ fig <- list('w' = 900,
 fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[2]-fig$margins[4]),
                    "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
 
+usage_col <- '#B22C2C'
+supply_col <- '#0066CC'
+line_width <- '3'
 
 l_bmp = 20 # px from axes
 t_bmp = 20 # px from axes
@@ -46,9 +49,9 @@ leg_id <- newXMLNode("g", 'parent' = g_id,
 newXMLNode("text", parent = leg_id, newXMLTextNode('year'),
            attrs = c(class="label", id="year_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp, 'alignment-baseline' = "central"))
 newXMLNode("text", parent = leg_id, newXMLTextNode('use_text'),
-           attrs = c(class="label", id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, 'alignment-baseline' = "central", fill = "#B22C2C"))
+           attrs = c(class="label", id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, 'alignment-baseline' = "central", fill = usage_col))
 newXMLNode("text", parent = leg_id, newXMLTextNode('supply_text'),
-           attrs = c(class="label", id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, 'alignment-baseline' = "central", fill = "#0066CC"))
+           attrs = c(class="label", id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, 'alignment-baseline' = "central", fill = supply_col))
 #------
 
 
@@ -74,7 +77,8 @@ values <- paste(tot_len- cumsum(line_len),collapse=';')
 difTimes <- cumsum(diff(years)/tot_time)
 keyTimes <- paste(difTimes,collapse=';') # not used?
 difTimes <- c(0,difTimes)*ani_time # now same length as elements
-line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none', style =sprintf("stroke:#0066CC;stroke-width:3;stroke-dasharray:%0.0f;stroke-linejoin:round;stroke-dashoffset:%0.0f",tot_len+1,tot_len+1))
+line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none', style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0f;stroke-linejoin:round;stroke-dashoffset:%0.0f",
+                                                                      supply_col,line_width,tot_len+1,tot_len+1))
 dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
                             begin = "indefinite;visibleAxes.begin+1s", id = "timeAdvance", 
                             fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
@@ -82,7 +86,7 @@ dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset",
 
 
 usage_id <- newXMLNode("g", 'parent' = g_id,
-                     attrs = c('id' = "supply", style="fill:#0066CC", r = '0', visibility = 'hidden'))
+                     attrs = c('id' = "supply", style=paste0("fill:",supply_col), r = '0', visibility = 'hidden'))
 
 
 for (i in 1:length(x)){
@@ -134,7 +138,8 @@ values <- paste(tot_len- cumsum(line_len),collapse=';')
 x<-x[!is.na(y)]
 y<-y[!is.na(y)]
 line_nd <- dinosvg:::linepath(g_id, x,y, fill = 'none',
-                              style =sprintf("stroke:#B22C2C;stroke-width:3;stroke-dasharray:%0.0fpx;stroke-linejoin:round;stroke-dashoffset:%0.0f",tot_len+1,tot_len+1))
+                              style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0fpx;stroke-linejoin:round;stroke-dashoffset:%0.0f",
+                                             usage_col, line_width, tot_len+1,tot_len+1))
 dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
                             begin = "timeAdvance.begin", id = "usage", 
                             fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
