@@ -27,12 +27,9 @@ read_flow_data <- function() {
     # (/yr). 1233.48184 cubic meters per acre feet, 1000 million per billion,
     # means (1000 million acre feet)/(1233.48184 billion cubic meters) = 0.8107132
     mutate(TreeRings=TreeRings*0.8107132, TreeRingsLwr=TreeRingsLwr*0.8107132, TreeRingsUpr=TreeRingsUpr*0.8107132) %>%
-    # compute running averages
-    mutate(TreeRings15YrRunMean = running_mean(TreeRings), TreeRingsAllYrMean = mean(TreeRings)) %>%
-    select(Year, 
-           TreeRings, TreeRingsLwr, TreeRingsUpr, 
-           TreeRings15YrRunMean,
-           TreeRingsAllYrMean)
+    # could compute running averages here: 
+    # mutate(TreeRings15YrRunMean = running_mean(TreeRings), TreeRingsAllYrMean = mean(TreeRings)) %>%
+    select(Year, TreeRings, TreeRingsLwr, TreeRingsUpr) #TreeRings15YrRunMean, TreeRingsAllYrMean)
   
   # add more recent flow data (still only up to 2012)
   flow_file_recent <- 'src_data/NaturalFlow.csv'
@@ -41,6 +38,14 @@ read_flow_data <- function() {
       # these come in acre feet; convert to million acre feet
       mutate(FlowGage=Natural.Flow.above.Lees.Ferry/1000000) %>%
       select(Year, FlowGage), by="Year")
+  
+  # compute running means on the average of TreeRings and FlowGage (or just one, when only one is available)
+  flow_df <- flow_df %>%
+    mutate(MeanTreeGage = rowMeans(cbind(TreeRings, FlowGage), na.rm=TRUE),
+           TreeGage15YrRunMean = running_mean(MeanTreeGage),
+           TreeGageAllYrMean = mean(MeanTreeGage),
+           Min15YrMean = min(TreeGage15YrRunMean, na.rm=TRUE)) %>%
+    select(-MeanTreeGage)
   
   flow_df <- flow_df %>% 
     mutate(Year = as.Date(paste0(Year, "-1-1")))
@@ -59,8 +64,9 @@ plot_flow_data <- function(flow_data) {
     dyRangeSelector(dateWindow = as.Date(c("1812", "2012"), format="%Y")) %>% 
     dySeries(c("TreeRingsLwr", "TreeRings", "TreeRingsUpr"), label = "Tree Rings", color="navy") %>%
     dySeries(c("FlowGage"), label = "Flow Gage", color="skyblue") %>%
-    dySeries(c("TreeRings15YrRunMean"), label = "15-Year Average", color="red") %>%
-    dySeries(c("TreeRingsAllYrMean"), label = "Average", "forestgreen") %>%
+    dySeries(c("TreeGage15YrRunMean"), label = "15-Year Average", color="red") %>%
+    dySeries(c("TreeGageAllYrMean"), label = "Average", "forestgreen") %>%
+    dySeries(c("Min15YrMean"), label = "Lowest 15-Year Average in Record", color="gold") %>%
     dyAxis("y", label = "Flow (million acre-ft per yr)") %>%
     dyAxis("x", label = "Year") %>%
     dyLegend(width = 400) %>%
