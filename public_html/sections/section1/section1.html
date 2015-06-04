@@ -1,4 +1,21 @@
+
 <div class="widget">
-	<h2>Example content here</h2>
-	<img src="img/flow_animation.svg" alt="Plot of flow" />
+	<h2>JR's Amazing Graph</h2>
+	<object id="animated-object" data="../../img/flow_animation.svg" type="image/svg+xml"></object>
 </div>
+
+
+<script>
+		var animationContainer = document.getElementById('animated-object');
+		var animation = function () {
+		animationSVG = this.getSVGDocument();
+			$(window).scroll(function() {
+			if ($('#animated-object').is(':visible')) {
+			animationSVG.visibleAxes();
+			}
+			});
+		}
+		
+		animationContainer.onload = animation;
+		
+</script>
