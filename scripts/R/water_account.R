@@ -30,7 +30,7 @@ library(miscPackage)
 #Note: Commented out as it is a one off run.  data are availble in 
 #src_data/CO_WBD
 ################################################################################
-library(spgrass6)
+library(spgrass7)
 library(raster) 
 initGRASS("C:\\Program Files (x86)\\GRASS GIS 7.0.1svn",override=TRUE,
           home=tempdir())
@@ -86,7 +86,7 @@ wae_coord <- coordinates(wat_acc_examp[,3:4])
 wae_data <- wat_acc_examp[,1:2]
 wat_acc_sp <- SpatialPointsDataFrame(wae_coord,data=wae_data,
                                      proj4string = CRS(proj4string(wbdhu2_lco)))
-
+wat_acc_sp$radius <- cut(wat_acc_sp$LastFiveMean,breaks=3,c(5,20,50))
 
 ################################################################################
 #rstudio/leaflet implementation
@@ -112,21 +112,34 @@ wat_acc_sp <- SpatialPointsDataFrame(wae_coord,data=wae_data,
 ################################################################################
 lc_huc_gjson <- toGeoJSON(lc_huc_simp,dest="src_data/CO_WBD")
 wae_gjson <- toGeoJSON(wat_acc_sp,dest="src_data/CO_WBD")
-
+range(wat_acc_sp$LastFiveMean)
+seq(100,3000000,by=1000000)
 dat<-list(lc_huc_gjson,wae_gjson)
 lc_huc_sty <- styleSingle(col="red")#, lwd=5, alpha=0.5)
 #wae_brk <- as.numeric(quantile(wat_acc_examp$LastFiveMean, c(0,0.25,0.75,1)))
-#wae_sty <- styleGrad("LastFiveMean",
-#                     breaks= c(0,5000,10000), 
-#                     style.par = "rad",
-#                     style.val=c(5,20))
-wae_sty <- styleSingle(col="green")
+wae_sty <- styleCat(prop="LastFiveMean",
+                     val=c("Low","Med","High"), 
+                     style.par = "rad",
+                     style.val=wat_acc_sp$radius)
+#wae_sty <- styleSingle(col="green")
 sty<-list(lc_huc_sty,wae_sty)
+
+addBaseMap(
+  name="Esri.WorldTopoMap", 
+  title="ESRI World Topo", 
+  url="http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
+  options=list(
+    attribution='Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, 
+    USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, 
+    Esri China (Hong Kong), and the GIS User Community'
+  )
+)
+
 water_account <- leafletR::leaflet(data=dat,
-                                   base.map=list("osm","mqsat"),
+                                   base.map=list("mqsat","Esri.WorldTopoMap"),
                                    style=sty, 
                                    popup = list("HUC2",c("WaterUser","LastFiveMean")),
-                                   dest="public_html/widgets/slide_7/",
-                                   incl.data = FALSE,
+                                   dest="public_html/widgets/slide_7",
+                                   incl.data = T,
                                    controls=c("all"))
 water_account
