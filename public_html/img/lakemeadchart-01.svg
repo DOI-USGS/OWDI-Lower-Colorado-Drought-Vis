@@ -365,9 +365,9 @@
 <text id='shortage1-text' transform="matrix(1 0 0 1 360.4843 444.5387)" font-family="'ArialMT'" font-size="11.0737">Elevation 1,075 feet (9.6 maf)</text>
 <text id='shortage2-text' transform="matrix(1 0 0 1 340.651 480.2054)" font-family="'ArialMT'" font-size="11.0737">Elevation 1,050 feet (7.7 maf)</text>
 <text id='shortage3-text' transform="matrix(1 0 0 1 326.3178 512.2053)" font-family="'ArialMT'" font-size="11.0737">Elevation 1,025 feet (6.0 maf)</text>
-<rect id = 'shortage1-mouse' x="357.9" y="431.3" opacity='0' stroke-width="2" stroke-miterlimit="10" width="152.1" height="19.7" onmouseover="mouserOn(evt,'shortage1')" onmouseout="mouserOff(evt,'shortage1')" />
-<rect id = 'shortage2-mouse' x="337.9" y="466.4" opacity='0' stroke-width="2" stroke-miterlimit="10" width="152.1" height="19.7" onmouseover="mouserOn(evt,'shortage2')" onmouseout="mouserOff(evt,'shortage2')" />
-<rect id = 'shortage3-mouse' x="322.9" y="498.2" opacity='0' stroke-width="2" stroke-miterlimit="10" width="152.1" height="19.7" onmouseover="mouserOn(evt,'shortage3')" onmouseout="mouserOff(evt,'shortage3')" />
+<rect x="357.9" y="431.3" opacity='0' stroke-width="2" stroke-miterlimit="10" width="152.1" height="19.7" onmouseover="mouserOn(evt,'shortage1')" onmouseout="mouserOff(evt,'shortage1')" />
+<rect x="337.9" y="466.4" opacity='0' stroke-width="2" stroke-miterlimit="10" width="152.1" height="19.7" onmouseover="mouserOn(evt,'shortage2')" onmouseout="mouserOff(evt,'shortage2')" />
+<rect x="322.9" y="498.2" opacity='0' stroke-width="2" stroke-miterlimit="10" width="152.1" height="19.7" onmouseover="mouserOn(evt,'shortage3')" onmouseout="mouserOff(evt,'shortage3')" />
 <text transform="matrix(1 0 0 1 268.9845 619.9999)" font-family="'ArialMT'" font-size="11.0737">Elevation 895 feet (0.0 maf)</text>
 <text transform="matrix(1 0 0 1 75.9848 158.9785)" fill="#FFFFFF" font-family="'ArialMT'" font-size="12.3634">Flood Control Surplus or Quantified Surplus Condition</text>
 <text transform="matrix(1 0 0 1 75.9858 174.037)" fill="#FFFFFF" font-family="'ArialMT'" font-size="11.266">Deliver &gt; 7.5 maf</text>
@@ -414,6 +414,9 @@
 <text transform="matrix(1 0 0 1 590.954 516.8705)" font-family="'ArialMT'" font-size="16">20,000</text>
 <text transform="matrix(1 0 0 1 728.4142 516.8702)" font-family="'ArialMT'" font-size="16">480,000</text>
 <text transform="matrix(1 0 0 1 880.6188 516.8702)" font-family="'ArialMT'" font-size="16">125,000</text>
+<rect x="553" y="410.6" opacity = "0" stroke-width="2" stroke-miterlimit="10" width="431" height="40.4" onmouseover="mouserOn(evt,'shortage1')" onmouseout="mouserOff(evt,'shortage1')" />
+<rect x="553" y="451.4" opacity = "0" stroke-width="2" stroke-miterlimit="10" width="431" height="40.4" onmouseover="mouserOn(evt,'shortage2')" onmouseout="mouserOff(evt,'shortage2')" />
+<rect x="553" y="492.4" opacity = "0" stroke-width="2" stroke-miterlimit="10" width="431" height="40.4" onmouseover="mouserOn(evt,'shortage3')" onmouseout="mouserOff(evt,'shortage3')" />
 <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="679" y1="378" x2="679" y2="532"/>
 <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="836" y1="378" x2="836" y2="532"/>
 <line fill="none" stroke="#000000" stroke-width="2.2038" stroke-miterlimit="10" x1="510" y1="437.8" x2="553" y2="438"/>
