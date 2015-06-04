@@ -11,9 +11,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
-	<style type="text/css">
-		header, section, footer, aside, nav, article, figure, audio, video, canvas { display:block; }
-	</style>
 
 	<!-- populate sections -->
 	<script type="text/javascript">
@@ -32,32 +29,91 @@
 	</script>
 </head>
 <body>
-	<header>
-		Header
-	</header>
+	<!-- BEGIN USGS Header Template --> 
+ 
+    <div id="usgscolorband">
+    
+    	<div id="usgsheader">
+        
+            <div id="usgsidentifier">
+            <a href="http://www.usgs.gov/" target="_blank"><img src="img/usgslogo.jpg" alt="USGS - science for a changing world" title="U.S. Geological Survey Home Page"/></a>
+            </div><!--usgsidentifier-->
+            
+        <img src="img/banner.png" alt="banner"/>
+        
+        <div id="usgsccsabox">
+        
+            <div id="usgsccsa">
+                <a href="http://www.usgs.gov/">USGS Home</a>
+                <br /><a href="http://answers.usgs.gov/cgi-bin/gsanswers?tmplt=2">Contact USGS</a>
+                <br /><a href="http://search.usgs.gov/">Search USGS</a>
+                <br />
+            </div><!--usgsccsa-->
+            
+        </div><!--usgsccsabox-->
+    
+    </div><!--usgsheader-->
+    </div><!--colorband-->
+    
+<!-- END USGS Header Template -->
 	<nav>
-		Nav
+		<h3>Colorado Drought</h3>
 	</nav>
+    
 	<section id="content">
 		<article>
-        	<!--placeholder div-->
-			<div id="graph"></div>
-            
-            <!--copy & paste where ever needed-->
-            <div class="content-text">
-            	<p>Aliquam nec est mi. Fusce nibh ipsum, varius in feugiat eget, pharetra non nunc. Mauris eget tincidunt neque. Aliquam vitae nibh at ipsum pulvinar mollis non id velit. Suspendisse nec tellus quam. Quisque libero tellus, dictum id dignissim vitae, aliquam at nisi. Sed et hendrerit nisi, ac egestas augue. Mauris ut risus nec nisl facilisis luctus ut nec quam.</p>
-            </div>
-            
-		</article>
-	<section id="section1">
+        	<section id="section1">
+    			<img src="img/flow_animation.svg"/>
+        <!--copy & paste where ever needed-->
+            	<div class="content-text">
+            		<p>Aliquam nec est mi. Fusce nibh ipsum, varius in feugiat eget, pharetra non nunc. Mauris eget tincidunt neque. Aliquam vitae nibh at ipsum pulvinar mollis non id velit. Suspendisse nec tellus quam. Quisque libero tellus, dictum id dignissim vitae, aliquam at nisi. Sed et hendrerit nisi, ac egestas augue. Mauris ut risus nec nisl facilisis luctus ut nec quam.
+                	</p>
+            	</div>
 	</section>
+    
 	<section id="section2">
-	</section>
+	</section>   
+		</article>
+	
 	<aside>
 		Sidebar
 	</aside>
-	<footer>
-		Footer
-	</footer>
+    
+    </section>
+    
+	<!-- BEGIN USGS Footer Template -->
+       
+        <div id="usgsfooter">
+        
+        	<p id="usgsfooterbar">
+                <a href="http://www.usgs.gov/laws/accessibility.html" title="Accessibility Policy (Section 508)" target="_blank">Accessibility</a>
+                <a href="http://www.usgs.gov/foia/" title="Freedom of Information Act" target="_blank">FOIA</a>
+                <a href="http://www.usgs.gov/laws/privacy.html" title="Privacy policies of the U.S. Geological Survey." target="_blank">Privacy</a>
+                <a href="http://www.usgs.gov/laws/policies_notices.html" title="Policies and notices that govern information posted on USGS Web sites." target="_blank">Policies and Notices</a>
+                
+			</p><!--usgsfooterbar-->
+    
+    
+		<p id="usgsfootertext">
+        
+    		<a href="http://www.usa.gov/" alt="USA.gov logo" title="USAGov: Government Made Easy" width="90" height="26" target="_blank"><img id="usa" src="img/usa_gov.png" alt="usa_gov pic"/></a>
+            
+    		<a href="http://www.doi.gov/" target="_blank">U.S. Department of the Interior</a> |
+            
+			<a href="http://www.usgs.gov/" target="_blank">U.S. Geological Survey</a> |
+            
+			<a href="http://www.doioig.gov/" target="_blank">DOI Inspector General</a>
+    
+    		<p style="margin: 5px 0 5px 0; padding-left: 5px;">URL: http//cida.usgs.gov/ca_drought</p>
+            
+            <p style="margin: 5px 0 5px 0; padding-left: 5px;">Contact Information: <a href="mailto:cida_webmaster@usgs.gov?Subject=Hello%20again" target="_top">gs-cida_ca_drought_cida_app@usgs.gov</a></p>
+    
+    		<p style="margin: 5px 0 5px 0; padding-left: 5px;">Page last modified: <script>document.write(document.lastModified);</script></p>
+    
+    	</p><!--usgsfootertext-->
+
+</div><!--usgsfooter-->
+
+<!-- END USGS Footer Template -->
 </body>
 </html>
