@@ -67,7 +67,10 @@
   							          var ele = document.getElementById("visibleAxes");
 								          ele.beginElement();
 							           }
-                         ]]></script>
+                         ]]>
+						 
+						 </script>
+                         
   <g id="surface0">
     <g id="axes" opacity="0">
       <animate attributeName="opacity" begin="indefinite" id="visibleAxes" fill="freeze" dur="1s" from="0" to="1"/>
