@@ -67,9 +67,7 @@
   							          var ele = document.getElementById("visibleAxes");
 								          ele.beginElement();
 							           }
-                         ]]>
-						 
-						 </script>
+                         ]]></script>
                          
   <g id="surface0">
     <g id="axes" opacity="0">
