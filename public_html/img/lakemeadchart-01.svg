@@ -41,11 +41,8 @@
 <polygon id = 'shortage2-overlay' fill="#708090" opacity = '0.6' points="65,102 65,477 333,477 525,103 " visibility = 'hidden'/>
 <polygon id = 'shortage1-overlay' fill="#708090" opacity = '0.6' points="65,102 65,440 351,440 525,103 " visibility = 'hidden'/>
 <polygon id = 'shortage1-emphasis' opacity="1" fill="#0066CC" points="65,440 65,619 258,619 351,440 " visibility = 'hidden'/>
-<polygon id = 'shortage1-mouse' points="66,440 351,440 333,477 66,477 " onmouseover="mouserOn(evt,'shortage1')" onmouseout="mouserOff(evt,'shortage1')" opacity = '0'/>
 <polygon id = 'shortage2-emphasis' opacity="1" fill="#0066CC" points="65,477 65,619 258,619 333,477 " visibility = 'hidden'/>
-<polygon id = 'shortage2-mouse' points="66,477 66,508 317,508 333,477 " onmouseover="mouserOn(evt,'shortage2')" onmouseout="mouserOff(evt,'shortage2')" opacity = '0'/>
 <polygon id = 'shortage3-emphasis' opacity="1" fill="#0066CC" points="65,508 65,619 258,619 317,508 " visibility = 'hidden'/>
-<polygon id = 'shortage3-mouse' points="66,508 66,619 258,619 315.3,508 " onmouseover="mouserOn(evt,'shortage3')" onmouseout="mouserOff(evt,'shortage3')" opacity = '0'/>
 <text transform="matrix(1 0 0 1 435.0591 34.2695)" font-family="'Arial-BoldMT'" font-size="26.7525">Lake Mead</text>
 <rect x="9" y="47" fill="none" stroke="#000000" stroke-width="1.979" stroke-miterlimit="10" width="989" height="591.3"/>
 <g>
@@ -424,4 +421,7 @@
 <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="475" y1="508" x2="553" y2="508"/>
 <rect x="553" y="340" fill="none" stroke="#000000" stroke-width="2.1611" stroke-miterlimit="10" width="431" height="37.6"/>
 <text transform="matrix(0.583 0 0 0.583 563.2842 363.9973)" font-family="'Arial-BoldMT'" font-size="24.6459">Share Shortage to States and Delivery Reduction for Mexico</text>
+<polygon id = 'shortage3-mouse' points="66,508 66,619 258,619 315.3,508 " onmouseover="mouserOn(evt,'shortage3')" onmouseout="mouserOff(evt,'shortage3')" opacity = '0'/>
+<polygon id = 'shortage2-mouse' points="66,477 66,508 317,508 333,477 " onmouseover="mouserOn(evt,'shortage2')" onmouseout="mouserOff(evt,'shortage2')" opacity = '0'/>
+<polygon id = 'shortage1-mouse' points="66,440 351,440 333,477 66,477 " onmouseover="mouserOn(evt,'shortage1')" onmouseout="mouserOff(evt,'shortage1')" opacity = '0'/>
 </svg>
