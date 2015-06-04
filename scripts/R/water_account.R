@@ -12,10 +12,12 @@
 # devtools::install_github("jhollist/quickmapr)
 # more: https://rstudio.github.io/leaflet/
 
-library(leaflet)
+devtools::install_github("jhollist/leafletR")
+library(leafletR)
 library(htmlwidgets)
 library(rgdal)
 library(sp)
+library(miscPackage)
 
 
 
@@ -93,3 +95,26 @@ setwd("public_html//widgets//slide_7/")
 saveWidget(water_account,file="water_accounting.html",
            selfcontained=FALSE)
 
+################################################################################
+#leafletR implementation
+################################################################################
+huc2_gjson <- toGeoJSON(wbdhu2_lco,dest="play")
+wae_gjson <- toGeoJSON(wat_acc_sp)
+dat<-list(huc2_gjson,wae_gjson)
+huc2_sty <- styleSingle(col="red")#, lwd=5, alpha=0.5)
+huc4_sty <- styleSingle(col="blue") #,lwd=2,alpha=0.5,fill="blue",fill.alpha=0.5)
+#wae_brk <- as.numeric(quantile(wat_acc_examp$LastFiveMean, c(0,0.25,0.75,1)))
+#wae_sty <- styleGrad("LastFiveMean",
+#                     breaks= c(0,5000,10000), 
+#                     style.par = "rad",
+#                     style.val=c(5,20))
+wae_sty <- styleSingle(col="green")
+sty<-list(huc2_sty,wae_sty)
+water_account <- leafletR::leaflet(data=dat,
+                                   base.map=list("osm","mqsat"),
+                                   style=sty, 
+                                   popup = list("HUC2",c("WaterUser","LastFiveMean")),
+                                   dest="play",
+                                   incl.data = T,
+                                   controls=c("all"))
+water_account
