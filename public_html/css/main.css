@@ -6,6 +6,13 @@
 	padding:15px;
 	}
 	
+nav{
+	height:28px;
+	background:#003366;
+	color:#fff;
+	padding:1px 5px;
+	}
+	
 #graph{
 	background:rgb(50,50,50);
 	width:100%;
@@ -16,6 +23,10 @@
 .content-text{
 	margin-bottom:15px;
 	}
+#scroll{
+	height:1000px;
+	}	
+
 	
 @media screen and (min-width:1025px){
 	#content{

@@ -1,0 +1,6 @@
+======================================
+leaflet-zoom-min : leaflet zoom control extended with a button to zoom out to min zoom 
+======================================
+https://github.com/alanshaw/leaflet-zoom-min
+======================================
+

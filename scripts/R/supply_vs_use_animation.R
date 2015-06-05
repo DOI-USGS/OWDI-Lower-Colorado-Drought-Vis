@@ -46,14 +46,15 @@ add_axes(a_id, axes, fig)
 
 #-- legend --
 leg_id <- newXMLNode("g", 'parent' = g_id,
-                     attrs = c('id' = "legend", visibility = 'hidden'))
+                     attrs = c('id' = "legend", visibility = 'hidden',
+                               class="label", 'alignment-baseline' = "central"))
 
 newXMLNode("text", parent = leg_id, newXMLTextNode('year'),
-           attrs = c(class="label", id="year_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp, 'alignment-baseline' = "central"))
+           attrs = c(id="year_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp))
 newXMLNode("text", parent = leg_id, newXMLTextNode('use_text'),
-           attrs = c(class="label", id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, 'alignment-baseline' = "central", fill = usage_col))
+           attrs = c(id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = usage_col))
 newXMLNode("text", parent = leg_id, newXMLTextNode('supply_text'),
-           attrs = c(class="label", id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, 'alignment-baseline' = "central", fill = supply_col))
+           attrs = c(id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = supply_col))
 #------
 
 
@@ -77,8 +78,9 @@ tot_time <- tail(years,1) - head(years,1)
 values <- paste(tot_len- cumsum(line_len),collapse=';')
 difTimes <- cumsum(diff(years)/tot_time)
 difTimes <- c(0,difTimes)*ani_time # now same length as elements
-line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none', style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0f;stroke-linejoin:round;stroke-dashoffset:%0.0f",
-                                                                      supply_col,line_width,tot_len+1,tot_len+1))
+line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none', 
+                              style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0f;stroke-linejoin:round;stroke-dashoffset:%0.0f",
+                                             supply_col,line_width,tot_len+1,tot_len+1))
 dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
                             begin = "indefinite;visibleAxes.begin+1s", id = "timeAdvance", 
                             fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
