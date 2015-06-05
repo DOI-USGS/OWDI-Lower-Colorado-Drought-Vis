@@ -52,7 +52,7 @@
                             
 		]]>
 </script>
-<polygon fill="#FF0000" points="66.1,248 487.1,248 264,686.5 67.1,684.5 "/>
+<polygon id="Reads_path" fill="#FF0000" points="66.1,248 487.1,248 264,686.5 67.1,684.5 "/>
 <g transform="translate(410,441)">
 	<g id="shortage1-paths">
 		<path display="none" fill="none" stroke="#BEE1F6" stroke-width="35" d="M6.9,62.5h-81.4"/>
