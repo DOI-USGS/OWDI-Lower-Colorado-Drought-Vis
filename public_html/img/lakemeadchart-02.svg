@@ -52,7 +52,7 @@
                             
 		]]>
 </script>
-<polygon id="Reads_path" fill="none" stroke="#FF0000" stroke-miterlimit="10" points="66.1,248 487.1,248 264,686.5 67.1,684.5 "/>
+<path id="reads_path" fill="none" stroke="#000000" d="M67.1,684.5l-1-432.2h421L264,686.5L67.1,684.5z"/>
 <g transform="translate(410,441)">
 	<g id="shortage1-paths">
 		<path display="none" fill="none" stroke="#BEE1F6" stroke-width="35" d="M6.9,62.5h-81.4"/>
@@ -85,7 +85,7 @@
 		</path>
 		<path display="none" fill="none" stroke="#BEE1F6" stroke-width="9.4" d="M6.4,63.1L108.1,119h106.8"/>
 		<path display="none" fill="none" stroke="#BEE1F6" stroke-width="11" d="M6.4,63.1h477.9"/>
-		<path display="none" fill="none" stroke="#BEE1F6" d="M6.4,63.1l244.1-61h172.9l50.8-50.8"/>
+		<path fill="none" stroke="#BEE1F6" d="M6.4,63.1l244.1-61h172.9l50.8-50.8"/>
 	</g>
 	
 		<g id="shortage2-events" onmouseover="mouserOn(evt,'shortage2');shortage2start()" onmouseout="shortage2end();mouserOff(evt,'shortage2')">
