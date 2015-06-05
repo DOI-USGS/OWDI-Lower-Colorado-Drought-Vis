@@ -37,8 +37,16 @@
 						 document.getElementById(strname.concat("-circle")).setAttributeNS(null,"r",'20');
 						 document.getElementById(strname.concat("-num")).setAttributeNS(null,"font-size","30");
 						 document.getElementById(strname.concat("-circle")).setAttributeNS(null,"fill",'#ffc966');
-						 document.getElementById(strname.concat("-paths")).setAttributeNS(null,"visibility",'hidden');
+						 setTimeout(function(){document.getElementById(strname.concat("-paths")).setAttributeNS(null,"visibility",'hidden')},100);
 
+}
+						function shortage2start(){
+          			  		var ele = document.getElementById("shortage2start");
+	          			  	ele.beginElement();
+}
+						function shortage2end(){
+          			  		var ele = document.getElementById("shortage2end");
+	          			  	ele.beginElement();
 }
                             ]]></script>
 <g transform="translate(410,441)">
@@ -56,15 +64,22 @@
 </g>
 <g transform="translate(380,476)">
 	<g id='shortage2-paths' visibility='hidden' stroke = '#bee1f6' fill = 'none'>
-		<path d="M0 0 L-80 0" stroke-width="34"/>
-		<path d="M0 0 L20 -65 l230 -100"  stroke-width="20"/>
+		<path d="M0 0 L-80 0" stroke-width="34">
+			<animate id="shortage2start" attributeName="stroke-width" begin="indefinite" fill="freeze" from="5" to="34" dur="0.1s"/>
+			<animate id="shortage2end" attributeName="stroke-width" begin="indefinite" fill="freeze" from="34" to="5" dur="0.1s"/>
+		</path>
+		<path d="M0 0 L20 -65 l230 -100"  stroke-width="20">
+			<animate attributeName="stroke-width" begin="shortage2start.begin" fill="freeze" from="5" to="20" dur="0.1s"/>
+			<animate attributeName="stroke-width" begin="shortage2end.begin" fill="freeze" from="20" to="5" dur="0.1s"/>
+		</path>
 		<path d="M0 0 L100 55 l105 00" stroke-width="9.4"/>
 		<path d="M0 0 L470 0" stroke-width="11"/>
 		<path d="M0 0 L240 -60 l170 0 l50 -50" stroke-width="1"/>
 	</g>
-	<g id='shortage2-events'  onmouseover="mouserOn(evt,'shortage2')" onmouseout="mouserOff(evt,'shortage2')">
+	<g id='shortage2-events'  onmouseover="mouserOn(evt,'shortage2');shortage2start()" onmouseout="shortage2end();mouserOff(evt,'shortage2')">
 		<circle id='shortage2-circle' r="20" fill='#ffc966'/>
 		<text id='shortage2-num' font-family="'ArialMT'" font-size="30" fill='#FFFFFF' alignment-baseline="central" text-anchor="middle">2</text>
+		<circle id='shortage2-circle' r="30" opacity='0'/>
 	</g>
 </g>
 <g transform="translate(350,512)">
