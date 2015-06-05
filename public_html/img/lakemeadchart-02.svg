@@ -328,10 +328,10 @@
 	</g>
 	<defs>
 		<clipPath id="shortage3-AR-clipPath">
-	    	<rect x="45" y="60" width="10" height="2"/>
+	    	<rect x="45" y="60" width="10" height="8"/>
 	    </clipPath>
 		<clipPath id="shortage1-AR-clipPath">
-	    	<rect x="60" y="60" width="10" height="8"/>
+	    	<rect x="60" y="60" width="10" height="2"/>
 	    </clipPath>
 	</defs>
 	<!-- shortage 3 for AR is 4.8 blocks-->
@@ -376,10 +376,10 @@
 	</g>
 	<defs>
 		<clipPath id="shortage3-Mexico-clipPath">
-	    	<rect x="60" y="30" width="10" height="7.5"/>
+	    	<rect x="60" y="30" width="10" height="2.5"/>
 	    </clipPath>
 		<clipPath id="shortage2-Mexico-clipPath">
-	    	<rect x="60" y="30" width="10" height="3"/>
+	    	<rect x="60" y="30" width="10" height="7"/>
 	    </clipPath>
 		<clipPath id="shortage1-Mexico-clipPath">
 	    	<rect x="60" y="30" width="10" height="5"/>
