@@ -1,0 +1,8 @@
+===================================
+Leaflet.Coordinates
+  Leaflet plugin to view mouse coordinates on map
+
+Leaflet.Coordinates-master
+https://github.com/MrMufflon/Leaflet.Coordinates
+12/12/2014
+===================================
