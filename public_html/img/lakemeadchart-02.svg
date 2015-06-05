@@ -20,7 +20,9 @@
 							 document.getElementById(strname.concat("-Mexico")).setAttributeNS(null,"visibility",'visible');
 							 document.getElementById(strname.concat("-NV")).setAttributeNS(null,"visibility",'visible');
 							 document.getElementById(strname.concat("-emphasis")).setAttributeNS(null,"visibility",'visible');
-							 document.getElementById(strname.concat("-events")).setAttributeNS(null,"opacity",'1');
+							 document.getElementById(strname.concat("-circle")).setAttributeNS(null,"r",'30');
+							 document.getElementById(strname.concat("-circle")).setAttributeNS(null,"fill",'#ff2500');
+							 document.getElementById(strname.concat("-num")).setAttributeNS(null,"font-size","42");
 							 document.getElementById(strname.concat("-paths")).setAttributeNS(null,"visibility",'visible');
 
    }
@@ -32,38 +34,51 @@
 						 document.getElementById(strname.concat("-Mexico")).setAttributeNS(null,"visibility",'hidden');
 						 document.getElementById(strname.concat("-NV")).setAttributeNS(null,"visibility",'hidden');
 						 document.getElementById(strname.concat("-emphasis")).setAttributeNS(null,"visibility",'hidden');
-						 document.getElementById(strname.concat("-events")).setAttributeNS(null,"opacity",'0.5');
+						 document.getElementById(strname.concat("-circle")).setAttributeNS(null,"r",'20');
+						 document.getElementById(strname.concat("-num")).setAttributeNS(null,"font-size","30");
+						 document.getElementById(strname.concat("-circle")).setAttributeNS(null,"fill",'#ffc966');
 						 document.getElementById(strname.concat("-paths")).setAttributeNS(null,"visibility",'hidden');
 
 }
                             ]]></script>
 <g transform="translate(410,441)">
-	<g id='shortage1-paths' visibility='hidden'>
-		<path d="M0 0 L-80 0" fill = 'none' stroke = "grey" stroke-width="35"/>
-		<path d="M0 0 L80 -95 l150 00" fill = 'none' stroke = "grey" stroke-width="20"/>
-		<path d="M0 0 L100 95 l85 00" fill = 'none' stroke = "grey" stroke-width="10"/>
-		<path d="M0 0 L10 -45 l125 -180 l230 0 l20 10" fill = 'none' stroke = "grey" stroke-width="1"/>
-		<path d="M0 0 L10 -45 l125 -180 l230 0 l20 10" fill = 'none' stroke = "grey" stroke-width="10" opacity = "0"/>
+	<g id='shortage1-paths' visibility='hidden' stroke = '#bee1f6' fill = 'none'>
+		<path d="M0 0 L-80 0" stroke-width="35"/>
+		<path d="M0 0 L80 -95 l150 00" stroke-width="20"/>
+		<path d="M0 0 L100 95 l85 00" stroke-width="10"/>
+		<path d="M0 0 L340 0 l90 -130 " stroke-width="1"/>
+		<path d="M0 0 L230 40 l210 0 " stroke-width="13"/>
 	</g>							
-	<g id='shortage1-events'  onmouseover="mouserOn(evt,'shortage1')" onmouseout="mouserOff(evt,'shortage1')" opacity='0.5'>	
-		<circle r="20" fill='red'/>
-		<text font-family="'ArialMT'" font-size="30" fill='#FFFFFF' alignment-baseline="central" text-anchor="middle">1</text>	
+	<g id='shortage1-events'  onmouseover="mouserOn(evt,'shortage1')" onmouseout="mouserOff(evt,'shortage1')">	
+		<circle id='shortage1-circle' r="20" fill='#ffc966'/>
+		<text id='shortage1-num' font-family="'ArialMT'" font-size="30" fill='#FFFFFF' alignment-baseline="central" text-anchor="middle">1</text>	
 	</g>
 </g>
 <g transform="translate(380,476)">
-	<g id='shortage2-paths' visibility='hidden'>
-		<path d="M0 0 L-80 0" fill = 'none' stroke = "grey" stroke-width="35"/>
-		<path d="M0 0 L100 55 l105 00" fill = 'none' stroke = "grey" stroke-width="10"/>
+	<g id='shortage2-paths' visibility='hidden' stroke = '#bee1f6' fill = 'none'>
+		<path d="M0 0 L-80 0" stroke-width="34"/>
+		<path d="M0 0 L20 -65 l230 -100"  stroke-width="20"/>
+		<path d="M0 0 L100 55 l105 00" stroke-width="9.4"/>
+		<path d="M0 0 L470 0" stroke-width="11"/>
+		<path d="M0 0 L240 -60 l170 0 l50 -50" stroke-width="1"/>
 	</g>
-	<g id='shortage2-events'  onmouseover="mouserOn(evt,'shortage2')" onmouseout="mouserOff(evt,'shortage2')" opacity='0.5'>
-		<circle r="20" fill='red'/>
-		<text font-family="'ArialMT'" font-size="30" fill='#FFFFFF' alignment-baseline="central" text-anchor="middle">2</text>
+	<g id='shortage2-events'  onmouseover="mouserOn(evt,'shortage2')" onmouseout="mouserOff(evt,'shortage2')">
+		<circle id='shortage2-circle' r="20" fill='#ffc966'/>
+		<text id='shortage2-num' font-family="'ArialMT'" font-size="30" fill='#FFFFFF' alignment-baseline="central" text-anchor="middle">2</text>
 	</g>
 </g>
-<g id='shortage3-events'  onmouseover="mouserOn(evt,'shortage3')" onmouseout="mouserOff(evt,'shortage3')" opacity='0.5' transform="translate(350,512)">	
-	<path d="M0 0 L-80 0" fill = 'none' stroke = "grey" stroke-width="35"/>
-	<circle r="20" fill='red'/>
-	<text font-family="'ArialMT'" font-size="30" fill='#FFFFFF' alignment-baseline="central" text-anchor="middle">3</text>
+<g transform="translate(350,512)">
+	<g id='shortage3-paths' visibility='hidden' stroke = '#bee1f6' fill = 'none'>
+		<path d="M0 0 L-80 0" stroke-width="33"/>
+		<path d="M0 0 L250 0" stroke-width="9.4"/>
+		<path d="M0 0 L20 -65 l130 -100 l130 0" stroke-width="20"/>
+		<path d="M0 0 L140 -50 l350 0" stroke-width="11"/>
+		<path d="M0 0 L165 -100 l270 0 l50 -50" stroke-width="1"/>
+	</g>
+	<g id='shortage3-events'  onmouseover="mouserOn(evt,'shortage3')" onmouseout="mouserOff(evt,'shortage3')">	
+		<circle id='shortage3-circle' r="20" fill='#ffc966'/>
+		<text id='shortage3-num' font-family="'ArialMT'" font-size="30" fill='#FFFFFF' alignment-baseline="central" text-anchor="middle">3</text>
+	</g>
 </g>	 
 <polygon id = 'shortage3' opacity="0.15" fill="#0071BC" points="66,508 66,619 258,619 315.3,508 " visibility = 'hidden'/>
 <polygon id = 'shortage2' opacity="0.3" fill="#0071BC" points="66,477 66,508 317,508 333,477 " visibility = 'hidden'/>
