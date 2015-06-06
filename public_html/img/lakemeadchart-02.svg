@@ -105,9 +105,9 @@
 	</g>
 </g>
 <polygon id='mask-for-sankey' points="66,320 66,619 258,619 414,320 " fill='#FFFFFF'/>	 
-							<!--sdf ""66,320 66,440 351,440 414,320 ""-->
-<path id="Mead-level" fill="#bee1f6" stroke="none" d="M66 320 L66 619 L258 619 L414 320z">
-	<animate id='normal-level' attributeName='d' begin='indefinite' fill='freeze' to="M66 320 L66 619 L258 619 L414 320z" dur='1s'/>
+							<!--sdf "66,192 66,320 412,320 479,191"-->
+<path id="Mead-level" fill="#bee1f6" stroke="none" d="M66 192 L66 619 L258 619 L479 191z">
+	<animate id='normal-level' attributeName='d' begin='indefinite' fill='freeze' to="M66 192 L66 619 L258 619 L479 191z" dur='1s'/>
 	<animate id='shortage1-level' attributeName='d' begin='indefinite' fill='freeze' to="M66 440 L66 619 L258 619 L351 440z" dur='0.3s'/>
 	<animate id='shortage2-level' attributeName='d' begin='indefinite' fill='freeze' to="M66 477 L66 619 L258 619 L333 477z" dur='0.3s'/>
 	<animate id='shortage3-level' attributeName='d' begin='indefinite' fill='freeze' to="M66 508 L66 619 L258 619 L317 508z" dur='0.3s'/>
