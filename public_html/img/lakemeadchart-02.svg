@@ -47,14 +47,12 @@
 	          			  	ele.beginElement();
 }
                             ]]></script>
-
-
 <g transform="translate(410,441)">
 	<g id='shortage1-paths' visibility='hidden' stroke = '#bee1f6' fill = 'none'>
 		<path d="M0 0 L-80 0" stroke-width="35" style='clip-path: url(#shortage1-clipPath);'/>
 		<path d="M0 0 L80 -95 l150 00" stroke-width="20"/>
 		<path d="M0 0 L100 95 l85 00" stroke-width="10"/>
-		<path d="M0 0 L340 0 l90 -130 " stroke-width="1"/>
+		<path d="M0 0 L340 0 l90 -130 " stroke-width="3"/>
 		<path d="M0 0 L230 40 l210 0 " stroke-width="13"/>
 	</g>							
 	<g id='shortage1-events' onmouseover="mouserOn(evt,'shortage1')" onmouseout="mouserOff(evt,'shortage1')">	
@@ -79,11 +77,11 @@
 		</path>
 		<path d="M0 0 L470 0" stroke-width="11">
 			<animate attributeName="stroke-width" begin="shortage2start.begin" fill="freeze" from="5" to="11" dur="0.1s"/>
-			<animate attributeName="stroke-width" begin="shortage2end.begin" fill="freeze" from="1" to="5" dur="0.1s"/>
+			<animate attributeName="stroke-width" begin="shortage2end.begin" fill="freeze" from="11" to="5" dur="0.1s"/>
 		</path>
-		<path d="M0 0 L240 -60 l170 0 l50 -50" stroke-width="1">
-			<animate attributeName="stroke-width" begin="shortage2start.begin" fill="freeze" from="5" to="1" dur="0.1s"/>
-			<animate attributeName="stroke-width" begin="shortage2end.begin" fill="freeze" from="1" to="5" dur="0.1s"/>
+		<path d="M0 0 L240 -60 l170 0 l50 -50" stroke-width="3">
+			<animate attributeName="stroke-width" begin="shortage2start.begin" fill="freeze" from="5" to="3" dur="0.1s"/>
+			<animate attributeName="stroke-width" begin="shortage2end.begin" fill="freeze" from="3" to="5" dur="0.1s"/>
 		</path>
 	</g>
 	<g id='shortage2-events' onmouseover="mouserOn(evt,'shortage2');shortage2start()" onmouseout="shortage2end();mouserOff(evt,'shortage2')">
@@ -98,7 +96,7 @@
 		<path d="M0 0 L250 0" stroke-width="9.4"/>
 		<path d="M0 0 L20 -65 l130 -100 l130 0" stroke-width="20"/>
 		<path d="M0 0 L140 -50 l350 0" stroke-width="11"/>
-		<path d="M0 0 L165 -100 l270 0 l50 -50" stroke-width="1"/>
+		<path d="M0 0 L165 -100 l270 0 l50 -50" stroke-width="3"/>
 	</g>
 	<g id='shortage3-events'  onmouseover="mouserOn(evt,'shortage3')" onmouseout="mouserOff(evt,'shortage3')">	
 		<circle id='shortage3-circle' r="20" fill='#ffc966'/>
@@ -376,7 +374,7 @@
 	</g>
 	<defs>
 		<clipPath id="shortage3-Mexico-clipPath">
-	    	<rect x="60" y="30" width="10" height="2.5"/>
+	    	<rect x="45" y="30" width="10" height="2.5"/>
 	    </clipPath>
 		<clipPath id="shortage2-Mexico-clipPath">
 	    	<rect x="60" y="30" width="10" height="7"/>
@@ -386,8 +384,8 @@
 	    </clipPath>
 	</defs>
 	<g id='shortage3-Mexico' visibility='hidden' fill="#FFFFFF">
-		<rect x="45" y="30" width="10" height="10" rx="2" ry="2"/>
-		<rect x="60" y="30" width="10" height="10" style='clip-path: url(#shortage3-Mexico-clipPath);' rx="2" ry="2"/>
+		<rect x="45" y="30" width="10" height="10" style='clip-path: url(#shortage3-Mexico-clipPath);' rx="2" ry="2"/>
+		<rect x="60" y="30" width="10" height="10" rx="2" ry="2"/>
 	</g>
 	<g id='shortage2-Mexico' visibility='hidden' fill="#FFFFFF">
 		<rect x="60" y="30" width="10" height="10" style='clip-path: url(#shortage2-Mexico-clipPath);' rx="2" ry="2"/>
