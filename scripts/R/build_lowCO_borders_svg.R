@@ -2,8 +2,11 @@
 require(rgdal)
 library(rgeos)
 library(magrittr)
+source('R/manipulate_lowCO_borders_svg.R')
 width=7.5
 height=7.1
+plot_dir = '../public_html/img'
+svg_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
 simp_tol <- 7000
 grey_simp_tol <- 1.3*simp_tol # less res for non-highlighted states
 min_area <- 1e+10
@@ -14,7 +17,9 @@ xlim <- c(-2693054, 5512372)
 lo_co_states <- c("California","Nevada","Arizona")
 keep_non <- c("Texas","Utah","Colorado","New Mexico","Oregon","Wyoming","Oklahoma","Nebraska","Kansas")
 
-plot_dir = '../public_html/img'
+non_lo_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', mask="url(#non-lo-co-mask)")
+lo_co_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#000000')
+mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#000000', mask="url(#mexico-mask)")
 
 mexico = readOGR(dsn = "../src_data/mexico",layer="MEX_adm0") %>%
   spTransform(CRS(epsg_code)) %>%
@@ -35,7 +40,7 @@ for(i in 1:length(mainPolys)){
   }
 }
 
-svg(filename = file.path(plot_dir,paste0('lo_CO_borders','.svg')),width=width, height=height)
+svg(filename = svg_file,width=width, height=height)
 par(omi=c(0,0,0,0),mai=c(0,0,0,0))
 
 # this keeps the svg paths in explicit order, for easy finding later
@@ -60,4 +65,12 @@ for (state in lo_co_states){
 
 dev.off()
 
+svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
+svg <- name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states)) %>%
+  group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states)) %>%
+  group_svg_elements(groups = c(lo_co_states,'Mexico')) %>% # additional <g/> for each lo-co-state and mexico
+  attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles)) %>%
+  add_radial_mask(r=c('250','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300'))
+
+cat(toString.XMLNode(svg), file = svg_file, append = FALSE)
