@@ -3,6 +3,7 @@ require(rgdal)
 library(rgeos)
 library(magrittr)
 source('R/manipulate_lowCO_borders_svg.R')
+source('R/build_usage_pictogram.R')
 width=7.5
 height=7.1
 plot_dir = '../public_html/img'
@@ -97,6 +98,7 @@ svg <- name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Co
   group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = c('upper-Colorado-river-basin','lower-Colorado-river-basin'))) %>%
   group_svg_elements(groups = c(lo_co_states,'Mexico','Colorado-river', 'lower-Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
-  add_radial_mask(r=c('250','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300'))
+  add_radial_mask(r=c('250','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
+  usage_bar_pictogram()
 
 cat(toString.XMLNode(svg), file = svg_file, append = FALSE)

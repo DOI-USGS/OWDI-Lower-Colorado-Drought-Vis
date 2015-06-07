@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="540pt" height="511pt" viewBox="0 0 540 511" version="1.1">
-  <g id="surface269">
+  <g id="surface534">
     <rect x="0" y="0" width="540" height="511" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
     <rect x="0" y="0" width="540" height="511" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
     <path style="fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0 511 L 540 511 L 540 0 L 0 0 Z "/>
@@ -56,5 +56,22 @@
       <circle r="300" stroke="none" fill="url(#Gradient)" cx="300" cy="200"/>
     </mask>
   </defs>
+  <defs>
+    <pattern id="empty-picto-pattern" x="2" y="98" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect x="2.5" y="2.5" rx="2" ry="2" width="9" height="9" stroke="none" fill="#FFFFFF"/>
+    </pattern>
+    <pattern id="full-picto-pattern" x="2" y="98" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect x="2" y="2" rx="2" ry="2" width="10" height="10" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+    </pattern>
+  </defs>
+  <g id="picto-plot-axis" stroke="#000000" fill="none" stroke-width="2.5" transform="translate(50,280)">
+    <path d="M0 0 L0 100 l300 0" id="picto-axes"/>
+    <rect x="0" y="29" width="15" height="70" style="stroke:none;fill:url(#full-picto-pattern);"/>
+    <rect x="0" y="29" width="15" height="6.8" style="stroke:none;fill:url(#empty-picto-pattern);"/>
+    <rect x="14" y="58" width="15" height="42" style="stroke:none;fill:url(#full-picto-pattern);"/>
+    <rect x="14" y="58" width="15" height="2.8" style="stroke:none;fill:url(#empty-picto-pattern);"/>
+    <rect x="28" y="58" width="15" height="42" style="stroke:none;fill:url(#full-picto-pattern);"/>
+    <rect x="28" y="58" width="15" height="7.8" style="stroke:none;fill:url(#empty-picto-pattern);"/>
+  </g>
 </svg>
  
