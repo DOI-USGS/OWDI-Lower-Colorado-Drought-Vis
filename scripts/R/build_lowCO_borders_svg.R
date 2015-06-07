@@ -20,12 +20,18 @@ keep_non <- c("Texas","Utah","Colorado","New Mexico","Oregon","Wyoming","Oklahom
 non_lo_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', mask="url(#non-lo-co-mask)")
 lo_co_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#000000')
 mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#000000', mask="url(#mexico-mask)")
+co_river_styles = c('fill'='none', 'stroke-width'='3.5', 'stroke'='#0066CC', 'stroke-linejoin'="round")
+co_basin_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round")
 
 mexico = readOGR(dsn = "../src_data/mexico",layer="MEX_adm0") %>%
   spTransform(CRS(epsg_code)) %>%
   gSimplify(simp_tol)
 
 states = readOGR(dsn = "../src_data/states_21basic",layer="states") 
+rivers = readOGR(dsn = "../src_data/rivs_cbrfc", layer="rivs_cbrfc")
+co_river <- rivers[substr(rivers$NAME,1,10) == "COLORADO R", ]
+
+co_basin = readOGR("../src_data/CO_WBD/LowerCO.json", "OGRGeoJSON")
 
 area <- lapply(mexico@polygons, function(x) sapply(x@Polygons, function(y) y@area))
 mainPolys <- lapply(area, function(x) which(x > min_area))
@@ -62,15 +68,35 @@ for (state in lo_co_states){
     gSimplify(simp_tol)
   plot(state_border, add=TRUE)
 }
+order <- sort(as.character(co_river@data$SEQUENCE_N), index.return = T)$ix
+co_river_line <- coordinates(co_river@lines[[order[1]]])[[1]]
+for (i in 2:length(co_river@lines)){
+  co_river_line <- rbind(co_river_line, coordinates(co_river@lines[[order[i]]])[[1]])
+}
+line <- Line(co_river_line)
+lines <- Lines(list(line), ID='co-river')
+co_river_join <- SpatialLines(list(lines), proj4string = CRS('+proj=longlat +datum=NAD83 +no_defs +ellps=GRS80 +towgs84=0,0,0'))
 
+
+spTransform(co_river_join, CRS(epsg_code)) %>%
+  gSimplify(simp_tol) %>%
+  plot(add=TRUE)
+
+spTransform(co_basin[1, ], CRS(epsg_code)) %>% # upper only!
+  gSimplify(simp_tol) %>%
+  plot(add=TRUE)
+
+spTransform(co_basin[2, ], CRS(epsg_code)) %>% # lower only!
+  gSimplify(simp_tol) %>%
+  plot(add=TRUE)
 dev.off()
 
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
-svg <- name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states)) %>%
-  group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states)) %>%
-  group_svg_elements(groups = c(lo_co_states,'Mexico')) %>% # additional <g/> for each lo-co-state and mexico
-  attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles)) %>%
+svg <- name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Colorado-river','upper-Colorado-river-basin','lower-Colorado-river-basin')) %>%
+  group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = c('upper-Colorado-river-basin','lower-Colorado-river-basin'))) %>%
+  group_svg_elements(groups = c(lo_co_states,'Mexico','Colorado-river', 'lower-Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
+  attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
   add_radial_mask(r=c('250','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300'))
 
 cat(toString.XMLNode(svg), file = svg_file, append = FALSE)
