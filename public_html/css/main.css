@@ -1,36 +1,80 @@
 @charset "UTF-8";
 /* CSS Document */
-
-#content{
-	min-height:400px;
-	padding:15px;
-	}
-	
 nav{
 	height:28px;
 	background:#003366;
 	color:#fff;
 	padding:1px 5px;
+	margin-top:1px;
 	}
-	
-#graph{
-	background:rgb(50,50,50);
-	width:100%;
-	min-height:400px;
-	margin-bottom:5px;
-	}
-	
-.content-text{
-	margin-bottom:15px;
-	}
-#scroll{
-	height:1000px;
-	}	
 
-	
-@media screen and (min-width:1025px){
-	#content{
-		width:1024px;
-		margin:0 auto;
-		}
+/*=====Container CSS=====*/
+.container {
+	margin:0 0 100px 0;
+	padding: 50px;
+	text-align:center;
+	position:relative;
 	}
+	
+
+
+#container1{
+	background:url('../img/keynotes/welcome.jpg');
+	background-position: center center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	height:100%;
+	}
+	
+/*=====keynote css=====*/	
+.keynote{
+	color:#fff;
+	width:100%;
+	min-height:100px;
+	margin:auto;
+	position:absolute;
+	top:6%;bottom:0;left:0;right:0;
+	}
+	
+.keynote h1,
+.keynote h2{
+	font-weight:100;
+	}
+	
+.keynote h1{
+	font-size:8vw;
+	}
+	
+.keynote h2{
+	font-size:7vw;
+	}
+	
+/*=====Container Content CSS=====*/
+	
+
+		
+@media screen and (min-width:686px){
+	/*optimizes mobile*/
+	#container1{
+		background-image:url('../img/keynotes/welcome-mobile.jpg');
+		}
+	
+	.keynote{
+		top:330px;
+	}
+	
+	.keynote h1{
+		font-size:3vw;
+	}
+	
+	.keynote h2{
+		font-size:2vw;
+	}
+	
+}
+
+
+
+
+
