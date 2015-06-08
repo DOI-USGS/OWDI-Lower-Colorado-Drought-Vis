@@ -18,24 +18,24 @@ usage_bar_pictogram <- function(svg, values, scale=100000){
   
   g_id <- newXMLNode('g', parent=root_nd,
              attrs = c('id'="picto-plot-axis",'stroke'='#000000',fill='none',
-                       'stroke-width'='2.5', 'transform'="translate(50,280)"))
+                       'stroke-width'='2.5', 'transform'="translate(25,380)scale(1)"))
   newXMLNode('path', parent=g_id,
              attrs=c('d'="M0 0 L0 100 l300 0", 'id'="picto-axes"))
   
   newXMLNode('rect',parent=g_id,
-             attrs=c(x="0", y="29", width="15", height="70", style="stroke:none;fill:url(#full-picto-pattern);"))
+             attrs=c(x="1.5", y="-126", width="15", height="225", style="stroke:none;fill:url(#full-picto-pattern);"))
   newXMLNode('rect',parent=g_id,
-             attrs=c(x="0", y="29", width="15", height="6.8", style="stroke:none;fill:url(#empty-picto-pattern);"))
+             attrs=c(x="1.5", y="-126", width="15", height="6.8", style="stroke:none;fill:url(#empty-picto-pattern);"))
   
   newXMLNode('rect',parent=g_id,
-             attrs=c(x="14", y="58", width="15", height="42", style="stroke:none;fill:url(#full-picto-pattern);"))
+             attrs=c(x="14", y="57", width="15", height="42", style="stroke:none;fill:url(#full-picto-pattern);"))
   newXMLNode('rect',parent=g_id,
-             attrs=c(x="14", y="58", width="15", height="2.8", style="stroke:none;fill:url(#empty-picto-pattern);"))
+             attrs=c(x="14", y="57", width="15", height="2.8", style="stroke:none;fill:url(#empty-picto-pattern);"))
   
   newXMLNode('rect',parent=g_id,
-             attrs=c(x="28", y="58", width="15", height="42", style="stroke:none;fill:url(#full-picto-pattern);"))
+             attrs=c(x="28", y="57", width="15", height="42", style="stroke:none;fill:url(#full-picto-pattern);"))
   newXMLNode('rect',parent=g_id,
-             attrs=c(x="28", y="58", width="15", height="7.8", style="stroke:none;fill:url(#empty-picto-pattern);"))
+             attrs=c(x="28", y="57", width="15", height="7.8", style="stroke:none;fill:url(#empty-picto-pattern);"))
   
   invisible(svg)
   
