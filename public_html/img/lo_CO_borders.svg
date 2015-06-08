@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="540pt" height="511pt" viewBox="0 0 540 511" version="1.1">
-  <g id="surface574">
+  <g id="surface579">
     <rect x="0" y="0" width="540" height="511" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
     <rect x="0" y="0" width="540" height="511" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
     <path style="fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0 511 L 540 511 L 540 0 L 0 0 Z "/>
@@ -64,7 +64,7 @@
       <rect x="2" y="2" rx="2" ry="2" width="10" height="10" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
     </pattern>
   </defs>
-  <g id="picto-plot-axis" stroke="#000000" fill="none" stroke-width="2.5" transform="translate(25,380)scale(0.8)">
+  <g id="picto-plot-axis" stroke="#000000" fill="none" stroke-width="2.5" transform="translate(25,380)scale(1)">
     <path d="M0 0 L0 100 l300 0" id="picto-axes"/>
     <rect x="1.5" y="-126" width="15" height="225" style="stroke:none;fill:url(#full-picto-pattern);"/>
     <rect x="1.5" y="-126" width="15" height="6.8" style="stroke:none;fill:url(#empty-picto-pattern);"/>
