@@ -8,9 +8,12 @@
 	<title>HTML5 basic skeleton</title>
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+   	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,100,300' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script type="text/javascript" src="//rawgit.com/janpaepke/ScrollMagic/master/js/jquery.scrollmagic.js"></script>
+    <script type="text/javascript" src="//rawgit.com/janpaepke/ScrollMagic/master/js/jquery.scrollmagic.debug.js"></script>
 	<!-- populate sections -->
 	<script type="text/javascript">
 		mkTemplate = function(section) {
@@ -24,6 +27,7 @@
 		}
 		$(document).ready(function() {
 			mkTemplate("section1");
+			mkTemplate("section2");
 		});
 	</script>
 </head>
@@ -59,26 +63,17 @@
 		<h3>Colorado Drought</h3>
 	</nav>
     
-	<section id="content">
-		<article>
-        	<div id="scroll"></div>
-        	<section id="section1">
-        <!--copy & paste where ever needed-->
-            	<div class="content-text">
-            		<p>Aliquam nec est mi. Fusce nibh ipsum, varius in feugiat eget, pharetra non nunc. Mauris eget tincidunt neque. Aliquam vitae nibh at ipsum pulvinar mollis non id velit. Suspendisse nec tellus quam. Quisque libero tellus, dictum id dignissim vitae, aliquam at nisi. Sed et hendrerit nisi, ac egestas augue. Mauris ut risus nec nisl facilisis luctus ut nec quam.
-                	</p>
-            	</div>
-			</section>
+
+        	<div id="container1" class="container">
+            	<section id="section1"></section>
+            </div>
     
-	<section id="section2">
-	</section>   
-		</article>
+    		<div id="container2" class="container">
+				<section id="section2"></section>
+            </div>
+              
 	
-	<aside>
-		Sidebar
-	</aside>
     
-    </section>
     
 	<!-- BEGIN USGS Footer Template -->
        
@@ -114,5 +109,8 @@
 </div><!--usgsfooter-->
 
 <!-- END USGS Footer Template -->
+
+<!--parallax
+<script type="text/javascript" src="js/scrollMagicTriggers.js"></script>-->
 </body>
 </html>
