@@ -8,8 +8,8 @@
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<link rel="dat1" type="application/json" href="lc_huc_simp.geojson" />
-	<link rel="dat2" type="application/json" href="wat_acc_sp.geojson" />
+	<link rel="dat1" type="application/json" href="wat_acc_sp.geojson" />
+	<link rel="dat2" type="application/json" href="lc_huc_simp.geojson" />
 	<style type="text/css">
 		body {
 			padding: 0;
@@ -93,29 +93,10 @@
 			text-align: center;
 		    height:52px;
 		}
-    
-    .grad-legend {
-      background: #0033ff;
-      border-radius: 50%; 
-      margin-top: 8px;
-      text-align: center;
-      clear: both;
-    }
 	</style>
 </head>
 <body>
-	<div id="map">
-    <div class="leaflet-bottom leaflet-right" style="margin-bottom: 25px">
-      <div class="info legend leaflet-control">
-        <i class="grad-legend" style="width: 7px; height: 7px;"></i></br>
-        <p style="float: left;">Low Use</p> 
-        <i class="grad-legend" style="width: 20px; height: 20px; "></i></br>
-        <p style="float: left;">Medium Use</p>
-        <i class="grad-legend" style="width: 33px; height: 33px; "></i></br>
-        <p style="float: left;">High Use</p>
-      </div>
-    </div>    
-	</div>
+	<div id="map"></div>
 	<script type="text/javascript">
 		var map = L.map('map');
 		
@@ -133,9 +114,6 @@
 
 		// popup
 		function onEachFeature(feature, layer) {
-			if (feature.properties &&  feature.properties[""]) {
-				layer.bindPopup(": " + feature.properties[""]);
-			}
 			if (feature.properties &&  feature.properties["WaterUser"] && feature.properties["LastFiveMean"]) {
 				layer.bindPopup(
 					"<table>" +
@@ -144,20 +122,11 @@
 					"</table>"
 				);
 			}
+			if (feature.properties &&  feature.properties[""]) {
+				layer.bindPopup(": " + feature.properties[""]);
+			}
 		}
 		// styling
-
-
-
-
-
-
-
-		var style1 = {color: "#708090", weight: 5, opacity: 0.8};
-
-
-
-
 
 
 
@@ -173,13 +142,25 @@
 			       x >= 116.6 ? 7 :
 			       0;
 		}			
-		function style2(feature) {
+		function style1(feature) {
 			return {
 				"radius": getValue(feature.properties["LastFiveMean"]),
 
 				"fillOpacity": 0.5, "color": "#0033ff", "weight": 2, "fillColor": "#0033ff", "opacity": 0.5
 			};
 		}
+
+
+
+
+
+
+
+
+		var style2 = {color: "#708090", weight: 5, opacity: 0.8};
+
+
+
 
 
 
@@ -208,9 +189,9 @@
 		};
 		
 		if(typeof style1 == "undefined") style1 = undefined;
-		$.getJSON($("link[rel='dat1']").attr("href"), function(x) {addDataToMap(x, style1, "lc huc simp")});
+		$.getJSON($("link[rel='dat1']").attr("href"), function(x) {addDataToMap(x, style1, "wat acc sp")});
 		if(typeof style2 == "undefined") style2 = undefined;
-    $.getJSON($("link[rel='dat2']").attr("href"), function(x) {addDataToMap(x, style2, "wat acc sp", "add")});
+    $.getJSON($("link[rel='dat2']").attr("href"), function(x) {addDataToMap(x, style2, "lc huc simp", "add")});
 
 		// legend
 
