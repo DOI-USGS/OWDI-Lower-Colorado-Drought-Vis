@@ -9,12 +9,15 @@
 <script>
 		var animationContainer = document.getElementById('animated-object');
 		var animation = function () {
-		animationSVG = this.getSVGDocument();
-			$(window).scroll(function() {
-			if ($('#animated-object').is(':visible')) {
-			animationSVG.visibleAxes();
+                    var triggered = false;
+                    animationSVG = this.getSVGDocument();
+                    $(window).scroll(function() {
+			if ($('#animated-object').is(':visible') && !triggered) {
+                            
+                            animationSVG.visibleAxes();
+                            triggered = true;
 			}
-			});
+                    });
 		}
 		
 		animationContainer.onload = animation;	
