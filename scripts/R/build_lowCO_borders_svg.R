@@ -2,6 +2,7 @@
 require(rgdal)
 library(rgeos)
 library(magrittr)
+library(XML)
 source('R/manipulate_lowCO_borders_svg.R')
 source('R/build_usage_pictogram.R')
 width=7.5
@@ -29,8 +30,8 @@ mexico = readOGR(dsn = "../src_data/mexico",layer="MEX_adm0") %>%
   gSimplify(simp_tol)
 
 states = readOGR(dsn = "../src_data/states_21basic",layer="states") 
-rivers = readOGR(dsn = "../src_data/rivs_cbrfc", layer="rivs_cbrfc")
-co_river <- rivers[substr(rivers$NAME,1,10) == "COLORADO R", ]
+rivers = readOGR(dsn = "../src_data/CRB_Rivers", layer="CRB_Rivers")
+co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
 co_basin = readOGR("../src_data/CO_WBD/LowerCO.json", "OGRGeoJSON")
 
@@ -69,14 +70,14 @@ for (state in lo_co_states){
     gSimplify(simp_tol)
   plot(state_border, add=TRUE)
 }
-order <- sort(as.character(co_river@data$SEQUENCE_N), index.return = T)$ix
+order <- sort(as.character(co_river@data$OBJECTID), index.return = T)$ix
 co_river_line <- coordinates(co_river@lines[[order[1]]])[[1]]
 for (i in 2:length(co_river@lines)){
   co_river_line <- rbind(co_river_line, coordinates(co_river@lines[[order[i]]])[[1]])
 }
 line <- Line(co_river_line)
 lines <- Lines(list(line), ID='co-river')
-co_river_join <- SpatialLines(list(lines), proj4string = CRS('+proj=longlat +datum=NAD83 +no_defs +ellps=GRS80 +towgs84=0,0,0'))
+co_river_join <- SpatialLines(list(lines), proj4string = CRS('+proj=utm +zone=12 +datum=NAD83 +units=m +no_defs +ellps=GRS80 +towgs84=0,0,0'))
 
 
 spTransform(co_river_join, CRS(epsg_code)) %>%
