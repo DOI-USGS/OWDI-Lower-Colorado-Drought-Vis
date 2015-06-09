@@ -5,13 +5,12 @@ nav{
 	background:#003366;
 	color:#fff;
 	padding:1px 5px;
-	margin-top:1px;
 	}
 
 /*=====Container CSS=====*/
 .container {
 	margin:0 0 100px 0;
-	padding: 50px;
+	padding: 15px;
 	text-align:center;
 	position:relative;
 	}
@@ -19,7 +18,7 @@ nav{
 
 
 #container1{
-	background:url('../img/keynotes/welcome.jpg');
+	background-image:url('../img/keynotes/welcome-mobile.jpg');
 	background-position: center center;
 	background-size:cover;
 	background-repeat:no-repeat;
@@ -51,15 +50,23 @@ nav{
 	}
 	
 /*=====Container Content CSS=====*/
-	
 
-		
-@media screen and (min-width:686px){
-	/*optimizes mobile*/
-	#container1{
-		background-image:url('../img/keynotes/welcome-mobile.jpg');
-		}
 	
+@media screen and (min-width:687px){
+	
+	nav{
+		margin-top:1px;
+		}
+		
+/*======Container CSS======*/
+	.container{
+		padding:50px;
+		}
+		
+	#container1{
+		background-image:url('../img/keynotes/welcome.jpg');
+		}
+/*======keynote CSS======*/
 	.keynote{
 		top:330px;
 	}
@@ -71,8 +78,18 @@ nav{
 	.keynote h2{
 		font-size:2vw;
 	}
+/*======Content CSS======*/
 	
 }
+
+@media screen and (min-width:1025px){
+	
+	#JrGraph{
+		width:1024px;
+		margin:0 auto;
+		}
+	
+	}
 
 
 
