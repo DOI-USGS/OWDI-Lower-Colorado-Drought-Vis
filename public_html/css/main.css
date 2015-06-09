@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /* CSS Document */
 nav{
-	height:28px;
+	height:22px;
 	background:#003366;
 	color:#fff;
-	padding:1px 5px;
+	padding:4px 5px;
 	}
 
 /*=====Container CSS=====*/
@@ -51,11 +51,16 @@ nav{
 	
 /*=====Container Content CSS=====*/
 
+#JrGraph h2{
+	font-size:1em;
+	}
 	
 @media screen and (min-width:687px){
 	
 	nav{
 		margin-top:1px;
+		padding:1px 5px;
+		height:28px;
 		}
 		
 /*======Container CSS======*/
@@ -79,6 +84,10 @@ nav{
 		font-size:2vw;
 	}
 /*======Content CSS======*/
+	
+	#JrGraph h2{
+	font-size:1.5em;
+	}
 	
 }
 
