@@ -81,3 +81,15 @@ add_radial_mask <- function(svg, r, id, ...){
   invisible(svg)
   
 }
+#' @param svg an open svg doc (see xml_doc <- xmlParse(svg_file, useInternalNode=TRUE))
+#' @param attr a character vector of length 1 for an animation attribute name (e.g., 'stroke-dashoffset')
+#' @param parent_id the id of the parent node for the animation
+#' @param ... additional attributes for the animation
+add_animation <- function(svg, attr, parent_id, ...){
+  attrs <- expand.grid(..., stringsAsFactors = FALSE)
+  parent_nd <- xpathApply(svg, sprintf("//*[local-name()='path'][@id='%s']",parent_id))
+  newXMLNode('animate', parent = parent_nd, 
+             attrs = c('attributeName'=attr, attrs))
+  invisible(svg)
+  
+}

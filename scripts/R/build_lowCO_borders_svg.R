@@ -22,7 +22,8 @@ keep_non <- c("Texas","Utah","Colorado","New Mexico","Oregon","Wyoming","Oklahom
 non_lo_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', mask="url(#non-lo-co-mask)")
 lo_co_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#000000')
 mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#000000', mask="url(#mexico-mask)")
-co_river_styles = c('fill'='none', 'stroke-width'='3.5', 'stroke'='#0066CC', 'stroke-linejoin'="round")
+co_river_styles = c('fill'='none', 'stroke-width'='3.5', 'stroke'='#0066CC', 'stroke-linejoin'="round", 
+                    'style'="stroke-dasharray:331;stroke-linejoin:round;stroke-dashoffset:331")
 co_basin_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round")
 
 mexico = readOGR(dsn = "../src_data/mexico",layer="MEX_adm0") %>%
@@ -100,6 +101,7 @@ svg <- name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Co
   group_svg_elements(groups = c(lo_co_states,'Mexico','Colorado-river', 'lower-Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
   add_radial_mask(r=c('250','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
+  add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="2s", fill="freeze", dur="5s", values="331;0;") %>%
   usage_bar_pictogram()
 
 cat(toString.XMLNode(svg), file = svg_file, append = FALSE)
