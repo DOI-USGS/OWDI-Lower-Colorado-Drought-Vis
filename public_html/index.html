@@ -8,12 +8,12 @@
 	<title>HTML5 basic skeleton</title>
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
-   	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,100,300' rel='stylesheet' type='text/css'>
+   	<link href='//fonts.googleapis.com/css?family=Roboto:400,500,700,100,300' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
-    <script type="text/javascript" src="//rawgit.com/janpaepke/ScrollMagic/master/js/jquery.scrollmagic.js"></script>
-    <script type="text/javascript" src="//rawgit.com/janpaepke/ScrollMagic/master/js/jquery.scrollmagic.debug.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 	<!-- populate sections -->
 	<script type="text/javascript">
 		mkTemplate = function(section) {
@@ -28,6 +28,7 @@
 		$(document).ready(function() {
 			mkTemplate("section1");
 			mkTemplate("section2");
+			mkTemplate("section3");
 		});
 	</script>
 </head>
@@ -70,6 +71,10 @@
     
     		<div id="container2" class="container">
 				<section id="section2"></section>
+            </div>
+            
+            <div id="container3" class="container">
+				<section id="section3"></section>
             </div>
               
 	
