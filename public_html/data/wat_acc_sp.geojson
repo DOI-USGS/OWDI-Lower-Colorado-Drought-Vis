@@ -1,0 +1,93 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "WaterUser": "ARIZONA STATE LAND DEPARTMENT",
+        "LastFiveMean": "1316.6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112.09543,33.449245]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "WaterUser": "CENTRAL ARIZONA PROJECT",
+        "LastFiveMean": "1642989.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112.065735,33.701202]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "WaterUser": "CHEMEHUEVI INDIAN RESERVATION",
+        "LastFiveMean": "116.6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-114.41961,34.55366]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "WaterUser": "CITY OF HENDERSON",
+        "LastFiveMean": "15251.8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-114.98839,36.04119]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "WaterUser": "CITY OF YUMA",
+        "LastFiveMean": "14864.6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-114.62361,32.691235]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "WaterUser": "EHRENBURG IMPROVEMENT ASSN.",
+        "LastFiveMean": "244.4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-114.51914,33.60818]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "WaterUser": "IMPERIAL IRRIGATION DISTRICT",
+        "LastFiveMean": "2736636"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.56997,32.847363]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "WaterUser": "UNIVERSITY OF ARIZONA",
+        "LastFiveMean": "729.2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-110.946495,32.236023]
+      }
+    }
+  ]
+}

@@ -110,9 +110,9 @@ wat_acc_sp <- SpatialPointsDataFrame(wae_coord,data=wae_data,
 #leafletR implementation
 ################################################################################
 #Data
-lc_huc_gjson <- toGeoJSON(lc_huc_simp, dest = "src_data/CO_WBD")
-wae_gjson <- toGeoJSON(wat_acc_sp, dest = "src_data/CO_WBD")
-dat<-list(lc_huc_gjson,wae_gjson)
+lc_huc_gjson <- toGeoJSON(lc_huc_simp, dest = "public_html/data")
+wae_gjson <- toGeoJSON(wat_acc_sp, dest = "public_html/data")
+dat<-list(wae_gjson,lc_huc_gjson)
 
 #Styles
 lc_huc_sty <- styleSingle(col="slategray", lwd=5, alpha=0.8)
@@ -120,7 +120,7 @@ wae_brk <- as.numeric(quantile(wat_acc_examp$LastFiveMean, c(0,0.25,0.75,1)))
 wae_sty <- styleGrad(prop="LastFiveMean",breaks = wae_brk,
                      style.par = "rad",
                      style.val=c(7,20,33))
-sty<-list(lc_huc_sty,wae_sty)
+sty<-list(wae_sty,lc_huc_sty)
 
 #New Basemaps
 addBaseMap(
@@ -139,7 +139,7 @@ water_account <- leafletR::leaflet(data=dat,
                                    base.map=list("osm","Esri.WorldTopoMap"),
                                    title="water_accounting",
                                    style=sty, 
-                                   popup = list(c(""),c("WaterUser","LastFiveMean")),
+                                   popup = list(c("WaterUser","LastFiveMean"),c("")),
                                    dest="public_html/widgets/",
                                    incl.data = F,
                                    controls=c("all"))
