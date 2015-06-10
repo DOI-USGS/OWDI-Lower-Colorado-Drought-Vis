@@ -38,8 +38,7 @@ group_svg_elements <- function(svg, groups){
       addChildren(g_id, kids = list(path_nodes))
     }
   }
-  # remove viewBox node
-  #removeNodes(xpathApply(svg, sprintf("//*[local-name()='path']/parent::node()"))[[1]])
+
   invisible(svg)
 }
 
