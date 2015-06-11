@@ -1,11 +1,13 @@
 @charset "UTF-8";
 /* CSS Document */
 nav{
-	height:22px;
+	height:28px;
 	background:#003366;
 	color:#fff;
-	padding:4px 5px;
+	padding:2px 5px;
 	}
+	
+nav h3{color:#fff;}
 
 /*=====Container CSS=====*/
 .container {
@@ -21,6 +23,47 @@ nav{
 	background-image:url('../img/keynotes/welcome-mobile.jpg');
 	background-position: center center;
 	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	height:100%;
+	width:100%;
+	padding:0;
+	}
+	
+#container3{
+	background-image:url('../img/keynotes/keynote2-mobile.jpg');
+	background-position: center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	height:100%;
+	}
+	
+#container5{
+	background-image:url('../img/keynotes/keynote3-mobile.jpg');
+	background-position: center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	height:100%;
+	}
+	
+#container7{
+	background-image:url('../img/keynotes/keynote4-mobile.jpg');
+	background-position: center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 	background-repeat:no-repeat;
 	background-attachment: fixed;
 	height:100%;
@@ -39,18 +82,51 @@ nav{
 .keynote h1,
 .keynote h2{
 	font-weight:100;
+	color:#fff;
 	}
 	
 .keynote h1{
-	font-size:8vw;
+	font-size:6vw;
+	margin-bottom:10px;
 	}
 	
 .keynote h2{
-	font-size:7vw;
+	font-size:5vw;
 	}
 	
 /*=====Container Content CSS=====*/
 
+.sectionContent{
+	min-height:100px;
+	text-align:left;
+	}
+	
+.sectionContent h3{
+	color:#003366;
+	font-weight:100;
+	font-size:1.4em;
+	text-align:center;
+	margin-bottom:10px;
+	}
+	
+.sectionContent p{
+	margin-bottom:10px;
+	}
+	
+.sectionContent p,
+.sectionContent ul{
+	font-weight:300;
+	}
+	
+.sectionContent ul{
+	list-style:disc;
+	margin:0 0 10px 20px;
+	}
+	
+.sectionContent ul li{
+	margin-bottom:5px;
+	}
+	
 #JrGraph h2{
 	font-size:1em;
 	}
@@ -71,19 +147,41 @@ nav{
 	#container1{
 		background-image:url('../img/keynotes/welcome.jpg');
 		}
+		
+	#container3{
+		background-image:url('../img/keynotes/keynote2.jpg');
+		}
+		
+	#container5{
+		background-image:url('../img/keynotes/keynote3.jpg');
+		}
+		
+	#container7{
+		background-image:url('../img/keynotes/keynote4.jpg');
+		}
 /*======keynote CSS======*/
 	.keynote{
 		top:330px;
 	}
 	
 	.keynote h1{
-		font-size:3vw;
+		font-size:5vw;
+		margin-bottom:5px;
 	}
 	
 	.keynote h2{
-		font-size:2vw;
+		font-size:4vw;
 	}
+	
+	#keynote2 h2{
+		margin-top:100px;
+		}
 /*======Content CSS======*/
+
+	.sectionContent{
+		width:90%;
+		margin:0 auto;
+		}
 	
 	#JrGraph h2{
 	font-size:1.5em;
@@ -92,6 +190,25 @@ nav{
 }
 
 @media screen and (min-width:1025px){
+	.keynote{
+		width:960px;
+		}
+	
+	.keynote h1{
+		font-size:3vw;
+	}
+	
+	.keynote h2{
+		font-size:2vw;
+	}
+	
+	.sectionContent{
+		width:900px;
+		}
+		
+	.sectionContent h3{
+		font-size:1.6em;
+		}
 	
 	#JrGraph{
 		width:1024px;
