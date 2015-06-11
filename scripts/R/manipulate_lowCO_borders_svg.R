@@ -38,8 +38,7 @@ group_svg_elements <- function(svg, groups){
       addChildren(g_id, kids = list(path_nodes))
     }
   }
-  # remove viewBox node
-  #removeNodes(xpathApply(svg, sprintf("//*[local-name()='path']/parent::node()"))[[1]])
+
   invisible(svg)
 }
 
@@ -78,6 +77,18 @@ add_radial_mask <- function(svg, r, id, ...){
     newXMLNode('circle', parent = mask_nd,
                attrs = c('r'=r[i], stroke="none", fill="url(#Gradient)", attrs[i,]))
   }
+  invisible(svg)
+  
+}
+#' @param svg an open svg doc (see xml_doc <- xmlParse(svg_file, useInternalNode=TRUE))
+#' @param attr a character vector of length 1 for an animation attribute name (e.g., 'stroke-dashoffset')
+#' @param parent_id the id of the parent node for the animation
+#' @param ... additional attributes for the animation
+add_animation <- function(svg, attr, parent_id, ...){
+  attrs <- expand.grid(..., stringsAsFactors = FALSE)
+  parent_nd <- xpathApply(svg, sprintf("//*[local-name()='path'][@id='%s']",parent_id))
+  newXMLNode('animate', parent = parent_nd, 
+             attrs = c('attributeName'=attr, attrs))
   invisible(svg)
   
 }
