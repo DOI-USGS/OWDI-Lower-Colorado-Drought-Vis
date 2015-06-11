@@ -1,25 +1,18 @@
 <div class="widget">
-	<div class="sectionContent" id="JrGraph">
-		<h2 id="jrsGraph">Water supply and consumptive use in the Colorado River Basin
-</h2>
-		<object id="animated-object" data="../../img/flow_animation.svg" type="image/svg+xml"></object>
+	<div class="sectionContent">
+    	<h3>The Colorado River is a Lifeline</h3>
+        
+        <p>Water from the Colorado River is essential for the life in the southwest United States and Mexico. Key River Facts:</p>
+        
+        <ul>
+        	<li>Supplies more than 1 in 10 Americans water for municipal use, including for drinking water, including 22 federally recognized tribes</li>
+            <li>Supports 4,200 megawatts of electrical generating capacity</li>
+            <li>Provides irrigation for more than 5.5 million acres (~8,590 square miles) of land</li>
+            <li>Serves 7 National Wildlife Refuges, 4 National Recreation Areas, and 11 National Parks</li>
+        </ul>
+        
+        <p>Data source: Bureau of Reclamation Colorado River Basin Study, 2013</p>
     </div>
 </div>
 
 
-<script>
-		var animationContainer = document.getElementById('animated-object');
-		var animation = function () {
-                    var triggered = false;
-                    animationSVG = this.getSVGDocument();
-                    $(window).scroll(function() {
-			if ($('#animated-object').is(':visible') && !triggered) {
-                            
-                            animationSVG.visibleAxes();
-                            triggered = true;
-			}
-                    });
-		}
-		
-		animationContainer.onload = animation;	
-</script>
