@@ -22,12 +22,11 @@ nav h3{color:#fff;}
 #container1{
 	background-image:url('../img/keynotes/welcome-mobile.jpg');
 	background-position: center center;
-	background-size:cover;
+	background-size:contain;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 	background-repeat:no-repeat;
-	background-attachment: fixed;
 	height:100%;
 	width:100%;
 	padding:0;
@@ -41,7 +40,6 @@ nav h3{color:#fff;}
     -moz-background-size: cover;
     -o-background-size: cover;
 	background-repeat:no-repeat;
-	background-attachment: fixed;
 	height:100%;
 	}
 	
@@ -53,7 +51,6 @@ nav h3{color:#fff;}
     -moz-background-size: cover;
     -o-background-size: cover;
 	background-repeat:no-repeat;
-	background-attachment: fixed;
 	height:100%;
 	}
 	
@@ -65,7 +62,6 @@ nav h3{color:#fff;}
     -moz-background-size: cover;
     -o-background-size: cover;
 	background-repeat:no-repeat;
-	background-attachment: fixed;
 	height:100%;
 	}
 	
@@ -142,6 +138,13 @@ nav h3{color:#fff;}
 /*======Container CSS======*/
 	.container{
 		padding:50px;
+		}
+		
+	#container1,
+	#container3,
+	#container5,
+	#container7{
+		background-attachment: fixed;
 		}
 		
 	#container1{
