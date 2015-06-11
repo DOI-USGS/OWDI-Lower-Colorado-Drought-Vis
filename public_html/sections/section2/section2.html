@@ -1,0 +1,25 @@
+<div class="widget">
+	<div class="sectionContent" id="JrGraph">
+		<h2 id="jrsGraph">Water supply and consumptive use in the Colorado River Basin
+</h2>
+		<object id="animated-object" data="../../img/flow_animation.svg" type="image/svg+xml"></object>
+    </div>
+</div>
+
+
+<script>
+		var animationContainer = document.getElementById('animated-object');
+		var animation = function () {
+                    var triggered = false;
+                    animationSVG = this.getSVGDocument();
+                    $(window).scroll(function() {
+			if ($('#animated-object').is(':visible') && !triggered) {
+                            
+                            animationSVG.visibleAxes();
+                            triggered = true;
+			}
+                    });
+		}
+		
+		animationContainer.onload = animation;	
+</script>

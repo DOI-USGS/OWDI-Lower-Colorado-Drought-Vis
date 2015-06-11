@@ -1,0 +1,8 @@
+===================================
+leaflet.fullscreen
+  puts a button on map that toggle the map to full screen mode
+
+Leaflet.fullscreen-gh-pages
+https://github.com/Leaflet/Leaflet.fullscreen
+12/12/2014
+===================================
