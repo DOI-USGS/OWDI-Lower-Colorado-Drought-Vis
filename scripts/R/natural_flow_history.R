@@ -54,6 +54,15 @@ read_flow_data <- function() {
 }
 flow_data <- read_flow_data()
 
+write_flow_data <- function(flow_data) {
+  # http://dygraphs.com/data.html: '"CSV" is actually a bit of a misnomer: the
+  # data can be tab-delimited, too. The delimiter is set by the delimiter
+  # option. It default to ",". If no delimiter is found in the first row, it
+  # switches over to tab.'
+  write.table(flow_data, "public_html/data/natural_flow_history.tsv", sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+}
+write_flow_data(flow_data)
+
 #' Make the figure
 #'    
 #' @import dplyr
@@ -62,12 +71,12 @@ plot_flow_data <- function(flow_data) {
   # the figure
   dg <- dygraph(flow_data, main = 'Colorado River Natural Flow at Lees Ferry, AZ') %>%
     dyRangeSelector(dateWindow = as.Date(c("1812", "2012"), format="%Y")) %>% 
-    dySeries(c("TreeRingsLwr", "TreeRings", "TreeRingsUpr"), label = "Tree Rings", color="navy") %>%
-    dySeries(c("FlowGage"), label = "Flow Gage", color="skyblue") %>%
+    dySeries(c("TreeRingsLwr", "TreeRings", "TreeRingsUpr"), label = "Tree Rings", color="#00CCFF") %>%
+    dySeries(c("FlowGage"), label = "Observed", color="#3333FF") %>%
     dySeries(c("TreeGage15YrRunMean"), label = "15-Year Average", color="red") %>%
     dySeries(c("TreeGageAllYrMean"), label = "Average", "forestgreen") %>%
     dySeries(c("Min15YrMean"), label = "Lowest 15-Year Average in Record", color="gold") %>%
-    dyAxis("y", label = "Flow (million acre-ft per yr)") %>%
+    dyAxis("y", label = "Flow (million acre-feet per year)") %>%
     dyAxis("x", label = "Year") %>%
     dyLegend(width = 400) %>%
     dyShading(from = "2000-1-1", to = "2013-1-1")
@@ -84,6 +93,7 @@ plot_flow_data <- function(flow_data) {
   htmlwidgets::saveWidget(dg, "natural_flow_history.html", selfcontained = FALSE, libdir = "js")
   setwd(oldwd)
   
-  # return
+  # return dygraph for manual inspection if desired
+  dg
 }
-plot_flow_data(flow_data)
+dg <- plot_flow_data(flow_data)
