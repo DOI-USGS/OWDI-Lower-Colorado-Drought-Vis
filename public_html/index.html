@@ -24,11 +24,13 @@
 		<!-- populate sections -->
 		<script type="text/javascript">
 			mkTemplate = function (section) {
+				var path = "sections/" + section;
+				var context = { "relativePath" : path };
 				$.ajax({
-					url: "sections/" + section + "/" + section + ".html",
+					url: path + "/" + section + ".html",
 					success: function (data) {
 						var template = Handlebars.compile(data);
-						$("#" + section).html(template());
+						$("#" + section).html(template(context));
 					}
 				});
 			}
