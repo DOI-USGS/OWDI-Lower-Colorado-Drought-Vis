@@ -5,8 +5,8 @@ library(htmlwidgets)
 
 create24MSFigure <- function()
 {
-  hData <- read.csv('../src_data/PowellMeadHistorical.csv')
-  modData <- read.csv('../src_data/PowellMead24MSResults_reformat.csv')
+  hData <- read.csv('src_data/PowellMeadHistorical.csv')
+  modData <- read.csv('src_data/PowellMead24MSResults_reformat.csv')
   meadData <- rbind(hData, modData)
   
   # limit to only Mead, Pool Elevation
@@ -28,6 +28,9 @@ create24MSFigure <- function()
   mead <- cbind(mead, ts(hData$Value, frequency = 12, start = startDate[1:2]))
   colnames(mead) <- c('March Most Probable','Historical')
   
+  # save the data
+  write.table(mead, "public_html/data/mead_historical_and_projected.tsv", sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+  
   ## TO DO
   # Try to get historical and projected labels to show up on different lines
   # Compute the historical vs. projected event data
@@ -46,10 +49,11 @@ create24MSFigure <- function()
     dyEvent(date = hVsPDate, "Historical<br/>Projected", labelLoc = 'bottom') %>%
     dyAxis('x', axisLabelFormatter = JS(jsFormatXAxis))
   
-  oldwd <- setwd("../public_html/widgets/slide_10")
+  oldwd <- setwd("public_html/widgets/slide_10")
   htmlwidgets::saveWidget(meadDG, "mead_historical_and_projected.html", 
                           selfcontained = FALSE, libdir = "js")
   setwd(oldwd)
   
   meadDG
 }
+meadDG <- create24MSFigure()

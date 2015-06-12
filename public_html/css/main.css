@@ -72,28 +72,43 @@ nav h3{color:#fff;}
 	min-height:100px;
 	margin:auto;
 	position:absolute;
-	top:6%;bottom:0;left:0;right:0;
+	top:30%;bottom:0;left:0;right:0;
+	}
+	
+#keynote3{
+	top:2%;
+	}
+	
+#keynote4{
+	top:15%;
 	}
 	
 .keynote h1,
 .keynote h2{
 	font-weight:100;
 	color:#fff;
+	padding:10px;
+	font-weight:300;
 	}
 	
 .keynote h1{
-	font-size:6vw;
-	margin-bottom:10px;
+	font-size:7vw;
 	}
 	
 .keynote h2{
-	font-size:5vw;
+	font-size:6vw;
 	}
 	
 /*=====Container Content CSS=====*/
 
 .sectionContent{
 	min-height:100px;
+	text-align:center;
+	}
+	
+.sectionContent h3,
+.sectionContent p,
+.sectionContent li{
 	text-align:left;
 	}
 	
@@ -121,6 +136,27 @@ nav h3{color:#fff;}
 	
 .sectionContent ul li{
 	margin-bottom:5px;
+	}
+	
+.supportinginfo{
+	background:none;
+	color:#003366;
+	font-weight:bold;
+	padding:10px;
+	border:1px solid #003366;
+	border-radius:5px;
+	margin-top:20px;
+	}
+	
+.white{
+	border:1px solid #fff;
+	color:#fff;
+	}
+	
+.supportinginfo:hover,
+.supportinginfo:focus{
+	background:#003366;
+	color:#fff;
 	}
 	
 #JrGraph h2{
@@ -163,9 +199,20 @@ nav h3{color:#fff;}
 		background-image:url('../img/keynotes/keynote4.jpg');
 		}
 /*======keynote CSS======*/
-	.keynote{
-		top:330px;
+	.keynote,
+	#keynote3,
+	#keynote4{
+		top:25%;
 	}
+	
+	#keynote1{
+		top:35%;
+		}
+	
+	.keynote h1,
+	.keynote h2{
+		font-weight:100;
+		}
 	
 	.keynote h1{
 		font-size:5vw;
@@ -194,7 +241,7 @@ nav h3{color:#fff;}
 
 @media screen and (min-width:1025px){
 	.keynote{
-		width:960px;
+		width:980px;
 		}
 	
 	.keynote h1{

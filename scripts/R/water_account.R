@@ -15,13 +15,19 @@
 #Package had a bug when styling multiple layers
 #Fix is in my repo, but legends need to be added
 #manually
-devtools::install_github("jhollist/leafletR")
-library(leafletR)
+if(!require(leafletR)){
+	devtools::install_github("jhollist/leafletR")
+	library(leafletR)
+}
+if(!require(miscPackage)){
+	devtools::install_github("jhollist/miscPackage")
+	library(miscPackage)
+}
+
 library(htmlwidgets)
 library(rgdal)
 library(rgeos)
 library(sp)
-library(miscPackage)
 library(dplyr)
 
 
@@ -143,28 +149,28 @@ water_account <- leafletR::leaflet(data=dat,
                                    dest="public_html/widgets/",
                                    incl.data = F,
                                    controls=c("all"))
-water_account
+#water_account
 
 #Legend - Manual changes to output html
 
-#Add to CSS 
-
-.grad-legend {
-  background: #0033ff;
-  border-radius: 50%; 
-  margin-top: 8px;
-  text-align: center;
-  clear: both;
-}
-
-#Add to <div class="map"
-<div class="leaflet-bottom leaflet-right" style="margin-bottom: 25px">
-  <div class="info legend leaflet-control">
-    <i class="grad-legend" style="width: 7px; height: 7px;"></i></br>
-    <p style="float: left;">Low Use</p> 
-    <i class="grad-legend" style="width: 20px; height: 20px; "></i></br>
-    <p style="float: left;">Medium Use</p>
-    <i class="grad-legend" style="width: 33px; height: 33px; "></i></br>
-    <p style="float: left;">High Use</p>
-  </div>
-</div>
+# #Add to CSS 
+# 
+# .grad-legend {
+#   background: #0033ff;
+#   border-radius: 50%; 
+#   margin-top: 8px;
+#   text-align: center;
+#   clear: both;
+# }
+# 
+# #Add to <div class="map"
+# <div class="leaflet-bottom leaflet-right" style="margin-bottom: 25px">
+#   <div class="info legend leaflet-control">
+#     <i class="grad-legend" style="width: 7px; height: 7px;"></i></br>
+#     <p style="float: left;">Low Use</p> 
+#     <i class="grad-legend" style="width: 20px; height: 20px; "></i></br>
+#     <p style="float: left;">Medium Use</p>
+#     <i class="grad-legend" style="width: 33px; height: 33px; "></i></br>
+#     <p style="float: left;">High Use</p>
+#   </div>
+# </div>
