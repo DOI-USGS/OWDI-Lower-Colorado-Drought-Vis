@@ -24,7 +24,8 @@ lo_co_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#000000')
 mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#000000', mask="url(#mexico-mask)")
 co_river_styles = c('fill'='none', 'stroke-width'='3.5', 'stroke'='#0066CC', 'stroke-linejoin'="round", 
                     'style'="stroke-dasharray:331;stroke-linejoin:round;stroke-dashoffset:331;stroke-linecap:round")
-co_basin_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round")
+co_basin_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", opacity = '0')
+pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#000000', opacity = '0')
 
 mexico = readOGR(dsn = "../src_data/mexico",layer="MEX_adm0") %>%
   spTransform(CRS(epsg_code)) %>%
@@ -100,8 +101,13 @@ svg <- name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Co
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
   add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="2s", fill="freeze", dur="5s", values="331;0;") %>%
-  usage_bar_pictogram(values = sort(as.numeric(as.character(usage$LastFiveMean)),decreasing = T), scale=100000)
-
-traceback()
-
-cat(toString.XMLNode(svg), file = svg_file, append = FALSE)
+  add_animation(attr = 'opacity', parent_id='co-basin-polygon', type = 'g', id = 'colorado-basin-draw', begin="colorado-river-draw.end+1s", fill="freeze", dur="1s", values= "0;1") %>%
+  usage_bar_pictogram(values = sort(as.numeric(as.character(usage$LastFiveMean)),decreasing = T), scale=100000, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
+  add_animation(attr = 'opacity', parent_id='pictogram-topfive', type = 'g', id = 'pictogram-topfive-draw', begin="colorado-basin-draw.end+1s", fill="freeze", dur="1s", values= "0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-1", type = 'rect', begin="pictogram-topfive-draw.end+1s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'visibility', parent_id="picto-map-1", type = 'path', begin="pictogram-topfive-draw.end+1s", fill="freeze", dur="3s", values= "hidden;visible;hidden") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-2", type = 'rect', begin="pictogram-topfive-draw.end+2s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-3", type = 'rect', begin="pictogram-topfive-draw.end+3s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-4", type = 'rect', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  toString.XMLNode() %>%
+  cat(file = svg_file, append = FALSE)
