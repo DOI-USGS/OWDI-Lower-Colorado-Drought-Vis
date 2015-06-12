@@ -42,8 +42,14 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
     frac_full <- num_full-values[i]/scale
     x = (bin_full+bin_buffer)*(i-1)
     height_full <- (bin_full+bin_buffer)*num_full
+    
+    #<g id='move-paths' visibility='hidden'>
+    #  <path d="M0 0 Q 200 -100 615 244 " stroke="pink" stroke-width="2" fill="none" id="California-move-path" transform="translate(80,165)scale(1.2)"/>
+    #</g>
+      
     newXMLNode('rect',parent=g_id,
-               attrs=c(x=x, y=y_offset-height_full-bin_buffer/2, width=bin_full+bin_buffer, height=height_full, style="stroke:none;fill:url(#full-picto-pattern);"))
+               attrs=c(x=x, y=y_offset-height_full-bin_buffer/2, width=bin_full+bin_buffer, height=height_full, 
+                       id = paste0('picto-usage-',i),style="stroke:none;fill:url(#full-picto-pattern);"))
     
     empty_height <- (bin_buffer)/2+(bin_empty+2)*frac_full #stroke-width included here
     newXMLNode('rect',parent=g_id,

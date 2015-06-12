@@ -103,7 +103,10 @@ svg <- name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Co
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="2s", fill="freeze", dur="5s", values="331;0;") %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', type = 'g', id = 'colorado-basin-draw', begin="colorado-river-draw.end+1s", fill="freeze", dur="1s", values= "0;1") %>%
   usage_bar_pictogram(values = sort(as.numeric(as.character(usage$LastFiveMean)),decreasing = T), scale=100000, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
-  add_animation(attr = 'opacity', parent_id='pictogram-topfive', type = 'g', id = 'pictogram-topfive-draw', begin="colorado-basin-draw.end+1s", fill="freeze", dur="1s", values= "0;1")
-  
-
-cat(toString.XMLNode(svg), file = svg_file, append = FALSE)
+  add_animation(attr = 'opacity', parent_id='pictogram-topfive', type = 'g', id = 'pictogram-topfive-draw', begin="colorado-basin-draw.end+1s", fill="freeze", dur="1s", values= "0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-1", type = 'rect', begin="pictogram-topfive-draw.end+1s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-2", type = 'rect', begin="pictogram-topfive-draw.end+2s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-3", type = 'rect', begin="pictogram-topfive-draw.end+3s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-4", type = 'rect', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  toString.XMLNode() %>%
+  cat(file = svg_file, append = FALSE)

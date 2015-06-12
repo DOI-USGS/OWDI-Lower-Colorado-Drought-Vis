@@ -138,7 +138,8 @@ nav h3{color:#fff;}
 	margin-bottom:5px;
 	}
 	
-.supportinginfo{
+.supportinginfo,
+.interact{
 	background:none;
 	color:#003366;
 	font-weight:bold;
@@ -154,7 +155,9 @@ nav h3{color:#fff;}
 	}
 	
 .supportinginfo:hover,
-.supportinginfo:focus{
+.supportinginfo:focus,
+.interact:hover,
+.interact:focus{
 	background:#003366;
 	color:#fff;
 	}
@@ -163,6 +166,23 @@ nav h3{color:#fff;}
 .white:focus{
 	background:#fff;
 	color:#003366;
+	}
+	
+#blueDragon img{
+		width:100%;
+		height:auto;
+		margin-bottom:5pxpx;
+		}
+		
+#blueDragon img:first-child{
+	margin-top:10px;
+	}
+		
+.picDescription{
+	background:rgba(0,51,102,.2);
+	width:100%;
+	min-height:100px;
+	margin-bottom:10px;
 	}
 	
 #JrGraph h2{
@@ -238,6 +258,14 @@ nav h3{color:#fff;}
 		width:90%;
 		margin:0 auto;
 		}
+		
+	#blueDragon img{
+		margin-bottom:10px;
+		}
+		
+	.picDescription{
+		display:none;
+	}
 	
 	#JrGraph h2{
 	font-size:1.5em;
@@ -264,6 +292,10 @@ nav h3{color:#fff;}
 		
 	.sectionContent h3{
 		font-size:1.6em;
+		}
+		
+	#blueDragon img{
+		width:960px;
 		}
 	
 	#JrGraph{
