@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="540pt" height="547pt" viewBox="0 0 540 547" version="1.1">
-  <g id="surface806">
+  <g id="surface936">
     <rect x="0" y="0" width="540" height="547" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
     <rect x="0" y="0" width="540" height="547" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
     <path style="fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0 547 L 540 547 L 540 0 L 0 0 Z "/>
@@ -70,29 +70,55 @@
     <path d="M-2.000000 -388.000000 l0 194.000000 l300.000000 0" id="picto-axes"/>
     <text id="x-pictogram-label" x="150" y="-182" fill="#000000" dy=".3em" stroke="none" style="text-anchor: middle;">Water user contracts</text>
     <text id="y-pictogram-label" x="-15" y="-97" fill="#000000" dy=".3em" stroke="none" style="text-anchor: middle;" transform="rotate(-90,-15,-97.5),translate(200,0)">Total water use</text>
-    <rect x="0" y="-588" width="14" height="392" id="picto-usage-1" style="stroke:none;fill:url(#full-picto-pattern);">
-      <animate attributeName="opacity" begin="pictogram-topfive-draw.end+1s" fill="freeze" dur="1s" values="1;0;1"/>
-    </rect>
+    <g>
+      <rect x="0" y="-588" width="14" height="392" id="picto-usage-1" style="stroke:none;fill:url(#full-picto-pattern);">
+        <animate attributeName="opacity" begin="pictogram-topfive-draw.end+1s" fill="freeze" dur="1s" values="1;0;1"/>
+      </rect>
+      <path d="M18.0 -392.0 Q 120 -200 150 -450.0 " stroke="pink" stroke-width="27.4" id="picto-map-1" visibility="hidden">
+        <animate attributeName="visibility" begin="pictogram-topfive-draw.end+1s" fill="freeze" dur="3s" values="hidden;visible;hidden"/>
+      </path>
+    </g>
     <rect x="0" y="-588" width="14" height="8.97004" style="stroke:none;fill:url(#empty-picto-pattern);"/>
-    <rect x="14" y="-434" width="14" height="238" id="picto-usage-2" style="stroke:none;fill:url(#full-picto-pattern);">
-      <animate attributeName="opacity" begin="pictogram-topfive-draw.end+2s" fill="freeze" dur="1s" values="1;0;1"/>
-    </rect>
+    <g>
+      <rect x="14" y="-434" width="14" height="238" id="picto-usage-2" style="stroke:none;fill:url(#full-picto-pattern);">
+        <animate attributeName="opacity" begin="pictogram-topfive-draw.end+2s" fill="freeze" dur="1s" values="1;0;1"/>
+      </rect>
+      <path d="M32.0 -315.0 Q 120 -200 150 -450.0 " stroke="pink" stroke-width="16.4" id="picto-map-2" visibility="hidden"/>
+    </g>
     <rect x="14" y="-434" width="14" height="8.27116600000003" style="stroke:none;fill:url(#empty-picto-pattern);"/>
-    <rect x="28" y="-210" width="14" height="14" id="picto-usage-3" style="stroke:none;fill:url(#full-picto-pattern);">
-      <animate attributeName="opacity" begin="pictogram-topfive-draw.end+3s" fill="freeze" dur="1s" values="1;0;1"/>
-    </rect>
+    <g>
+      <rect x="28" y="-210" width="14" height="14" id="picto-usage-3" style="stroke:none;fill:url(#full-picto-pattern);">
+        <animate attributeName="opacity" begin="pictogram-topfive-draw.end+3s" fill="freeze" dur="1s" values="1;0;1"/>
+      </rect>
+      <path d="M46.0 -203.0 Q 120 -200 150 -450.0 " stroke="pink" stroke-width="1.5" id="picto-map-3" visibility="hidden"/>
+    </g>
     <rect x="28" y="-210" width="14" height="11.322302" style="stroke:none;fill:url(#empty-picto-pattern);"/>
-    <rect x="42" y="-210" width="14" height="14" id="picto-usage-4" style="stroke:none;fill:url(#full-picto-pattern);">
-      <animate attributeName="opacity" begin="pictogram-topfive-draw.end+4s" fill="freeze" dur="1s" values="1;0;1"/>
-    </rect>
+    <g>
+      <rect x="42" y="-210" width="14" height="14" id="picto-usage-4" style="stroke:none;fill:url(#full-picto-pattern);">
+        <animate attributeName="opacity" begin="pictogram-topfive-draw.end+4s" fill="freeze" dur="1s" values="1;0;1"/>
+      </rect>
+      <path d="M60.0 -203.0 Q 120 -200 150 -450.0 " stroke="pink" stroke-width="1.5" id="picto-map-4" visibility="hidden"/>
+    </g>
     <rect x="42" y="-210" width="14" height="11.364894" style="stroke:none;fill:url(#empty-picto-pattern);"/>
-    <rect x="56" y="-210" width="14" height="14" id="picto-usage-5" style="stroke:none;fill:url(#full-picto-pattern);"/>
+    <g>
+      <rect x="56" y="-210" width="14" height="14" id="picto-usage-5" style="stroke:none;fill:url(#full-picto-pattern);"/>
+      <path d="M74.0 -203.0 Q 120 -200 150 -450.0 " stroke="pink" stroke-width="1.5" id="picto-map-5" visibility="hidden"/>
+    </g>
     <rect x="56" y="-210" width="14" height="12.855174" style="stroke:none;fill:url(#empty-picto-pattern);"/>
-    <rect x="70" y="-210" width="14" height="14" id="picto-usage-6" style="stroke:none;fill:url(#full-picto-pattern);"/>
+    <g>
+      <rect x="70" y="-210" width="14" height="14" id="picto-usage-6" style="stroke:none;fill:url(#full-picto-pattern);"/>
+      <path d="M88.0 -203.0 Q 120 -200 150 -450.0 " stroke="pink" stroke-width="1.5" id="picto-map-6" visibility="hidden"/>
+    </g>
     <rect x="70" y="-210" width="14" height="12.919788" style="stroke:none;fill:url(#empty-picto-pattern);"/>
-    <rect x="84" y="-210" width="14" height="14" id="picto-usage-7" style="stroke:none;fill:url(#full-picto-pattern);"/>
+    <g>
+      <rect x="84" y="-210" width="14" height="14" id="picto-usage-7" style="stroke:none;fill:url(#full-picto-pattern);"/>
+      <path d="M102.0 -203.0 Q 120 -200 150 -450.0 " stroke="pink" stroke-width="1.5" id="picto-map-7" visibility="hidden"/>
+    </g>
     <rect x="84" y="-210" width="14" height="12.973116" style="stroke:none;fill:url(#empty-picto-pattern);"/>
-    <rect x="98" y="-210" width="14" height="14" id="picto-usage-8" style="stroke:none;fill:url(#full-picto-pattern);"/>
+    <g>
+      <rect x="98" y="-210" width="14" height="14" id="picto-usage-8" style="stroke:none;fill:url(#full-picto-pattern);"/>
+      <path d="M116.0 -203.0 Q 120 -200 150 -450.0 " stroke="pink" stroke-width="1.5" id="picto-map-8" visibility="hidden"/>
+    </g>
     <rect x="98" y="-210" width="14" height="12.987174" style="stroke:none;fill:url(#empty-picto-pattern);"/>
     <animate attributeName="opacity" id="pictogram-topfive-draw" begin="colorado-basin-draw.end+1s" fill="freeze" dur="1s" values="0;1"/>
   </g>
