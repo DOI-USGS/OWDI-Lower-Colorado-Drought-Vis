@@ -4,10 +4,11 @@
     document.getElementById("natural-flow-graph"),
     
     // data file
-    "../../data/natural_flow_history.tsv",
+    "data/natural_flow_history.tsv",
     
     // options
     {
+      "delimiter": "\t",
       "title": "Colorado River Natural Flow at Lees Ferry, AZ",
       "labels": [ "year", "Tree-Ring Reconstructed", "Observed", "15-Year Average", "Average", "Lowest 15-Year Average in Record" ],
       "axes": {
