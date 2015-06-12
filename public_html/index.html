@@ -21,7 +21,7 @@
 	<script type="text/javascript" src="js/moment-2.8.4/moment.js"></script>
 	<script type="text/javascript" src="js/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
 	<script type="text/javascript" src="js/dygraphs-binding-0.4.3/dygraphs.js"></script>
-    
+
 	<!-- populate sections -->
 	<script type="text/javascript">
 		mkTemplate = function(section) {
@@ -34,6 +34,8 @@
 			});
 		}
 		$(document).ready(function() {
+			window.owdiDrought = window.owdiDrought || {};
+			window.owdiDrought.SMController = new ScrollMagic.Controller();
 			mkTemplate("section1");
 			mkTemplate("section2");
 			mkTemplate("section3");
@@ -43,6 +45,8 @@
 			mkTemplate("section7");
 				});
 	</script>
+    
+
 </head>
 <body>
 	<!-- BEGIN USGS Header Template --> 
