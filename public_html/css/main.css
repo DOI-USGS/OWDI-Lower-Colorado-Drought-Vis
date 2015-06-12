@@ -294,6 +294,10 @@ nav h3{color:#fff;}
 	#meadSVGContainer object{
 		margin-left:10%;
 	}
+	#natural-flow-graph {
+		width: 80%;
+		height: 600px;
+	}
 	
 }
 
