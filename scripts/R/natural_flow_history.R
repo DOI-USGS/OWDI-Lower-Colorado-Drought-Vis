@@ -71,12 +71,12 @@ plot_flow_data <- function(flow_data) {
   # the figure
   dg <- dygraph(flow_data, main = 'Colorado River Natural Flow at Lees Ferry, AZ') %>%
     dyRangeSelector(dateWindow = as.Date(c("1812", "2012"), format="%Y")) %>% 
-    dySeries(c("TreeRingsLwr", "TreeRings", "TreeRingsUpr"), label = "Tree Rings", color="navy") %>%
-    dySeries(c("FlowGage"), label = "Flow Gage", color="skyblue") %>%
+    dySeries(c("TreeRingsLwr", "TreeRings", "TreeRingsUpr"), label = "Tree Rings", color="#00CCFF") %>%
+    dySeries(c("FlowGage"), label = "Observed", color="#3333FF") %>%
     dySeries(c("TreeGage15YrRunMean"), label = "15-Year Average", color="red") %>%
     dySeries(c("TreeGageAllYrMean"), label = "Average", "forestgreen") %>%
     dySeries(c("Min15YrMean"), label = "Lowest 15-Year Average in Record", color="gold") %>%
-    dyAxis("y", label = "Flow (million acre-ft per yr)") %>%
+    dyAxis("y", label = "Flow (million acre-feet per year)") %>%
     dyAxis("x", label = "Year") %>%
     dyLegend(width = 400) %>%
     dyShading(from = "2000-1-1", to = "2013-1-1")
