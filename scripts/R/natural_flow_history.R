@@ -96,4 +96,4 @@ plot_flow_data <- function(flow_data) {
   # return dygraph for manual inspection if desired
   dg
 }
-plot_flow_data(flow_data)
+dg <- plot_flow_data(flow_data)
