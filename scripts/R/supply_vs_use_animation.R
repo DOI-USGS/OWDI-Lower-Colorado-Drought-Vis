@@ -1,13 +1,18 @@
 # build svg line animation
 
-library(dinosvg)
+if(!require(dinosvg)){
+	devtools::install_github('jread-usgs/dinosvg')
+	library(dinosvg)
+}
+
+
 library(XML)
 
 
-data <- read.csv('../src_data/NaturalFlow.csv', stringsAsFactors = F)
+data <- read.csv('src_data/NaturalFlow.csv', stringsAsFactors = F)
 flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
 years <- data$Year
-data <- read.table('../src_data/Basin_Depletion_yearly_PROVISIONAL.tsv', stringsAsFactors = F, sep = '\t', header = T)
+data <- read.table('src_data/Basin_Depletion_yearly_PROVISIONAL.tsv', stringsAsFactors = F, sep = '\t', header = T)
 usage <- c(data$depletion/1000,NA,NA) #into millions acre-feet units
 
 
@@ -148,4 +153,4 @@ for (i in 1:length(x)){
 
 root_nd <- xmlRoot(g_id)
 
-saveXML(root_nd, file = '../public_html/img/flow_animation.svg')
+saveXML(root_nd, file = 'public_html/img/flow_animation.svg')
