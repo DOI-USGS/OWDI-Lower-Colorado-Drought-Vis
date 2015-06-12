@@ -54,6 +54,15 @@ read_flow_data <- function() {
 }
 flow_data <- read_flow_data()
 
+write_flow_data <- function(flow_data) {
+  # http://dygraphs.com/data.html: '"CSV" is actually a bit of a misnomer: the
+  # data can be tab-delimited, too. The delimiter is set by the delimiter
+  # option. It default to ",". If no delimiter is found in the first row, it
+  # switches over to tab.'
+  write.table(flow_data, "public_html/data/natural_flow_history.tsv", sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+}
+write_flow_data(flow_data)
+
 #' Make the figure
 #'    
 #' @import dplyr
@@ -84,6 +93,7 @@ plot_flow_data <- function(flow_data) {
   htmlwidgets::saveWidget(dg, "natural_flow_history.html", selfcontained = FALSE, libdir = "js")
   setwd(oldwd)
   
-  # return
+  # return dygraph for manual inspection if desired
+  dg
 }
-plot_flow_data(flow_data)
+dg <- plot_flow_data(flow_data)
