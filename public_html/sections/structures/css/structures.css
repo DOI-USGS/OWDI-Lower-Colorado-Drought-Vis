@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+#structureContainer {
+	display: flex;
+}
+#storymap {
+	width: 40%;
+}
+
+#bluedragon {
+	flex-grow: 1;
+}
