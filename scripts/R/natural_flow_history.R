@@ -1,4 +1,4 @@
-# dygraph of natural flow record for COlorado River at Lees Ferry, Arizona
+# dygraph of natural flow record for Colorado River at Lees Ferry, Arizona
 
 library(dplyr)
 library(xts)
@@ -49,19 +49,31 @@ read_flow_data <- function() {
   
   flow_df <- flow_df %>% 
     mutate(Year = as.Date(paste0(Year, "-1-1")))
+  
+  # write the data to file; this is how the html will actually access it.
+  # http://dygraphs.com/data.html: '"CSV" is actually a bit of a misnomer: the 
+  # data can be tab-delimited, too. The delimiter is set by the delimiter 
+  # option. It default to ",". If no delimiter is found in the first row, it 
+  # switches over to tab.'
+  custom_bars_format <- function(mid, low, high) {
+    if(missing(low) | missing(high)) low <- high <- mid
+    ifelse(complete.cases(data.frame(low, mid, high)),
+           paste(low, mid, high, sep=";"), 
+           NA)
+  }
+  flow_write <- flow_df %>% 
+    transmute(Year=format(Year, "%Y/%m/%d"),
+              TreeRings=custom_bars_format(TreeRings, TreeRingsLwr, TreeRingsUpr),
+              custom_bars_format(FlowGage), 
+              custom_bars_format(TreeGage15YrRunMean), 
+              custom_bars_format(TreeGageAllYrMean), 
+              custom_bars_format(Min15YrMean))
+  write.table(flow_write, "public_html/data/natural_flow_history.tsv", sep="\t", row.names=FALSE, col.names=FALSE, quote=FALSE, na="")
+    
   flow_xts <- xts(flow_df %>% select(-Year) %>% as.matrix(), order.by=flow_df$Year)
   flow_xts
 }
 flow_data <- read_flow_data()
-
-write_flow_data <- function(flow_data) {
-  # http://dygraphs.com/data.html: '"CSV" is actually a bit of a misnomer: the
-  # data can be tab-delimited, too. The delimiter is set by the delimiter
-  # option. It default to ",". If no delimiter is found in the first row, it
-  # switches over to tab.'
-  write.table(flow_data, "public_html/data/natural_flow_history.tsv", sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
-}
-write_flow_data(flow_data)
 
 #' Make the figure
 #'    
@@ -71,7 +83,7 @@ plot_flow_data <- function(flow_data) {
   # the figure
   dg <- dygraph(flow_data, main = 'Colorado River Natural Flow at Lees Ferry, AZ') %>%
     dyRangeSelector(dateWindow = as.Date(c("1812", "2012"), format="%Y")) %>% 
-    dySeries(c("TreeRingsLwr", "TreeRings", "TreeRingsUpr"), label = "Tree Rings", color="#00CCFF") %>%
+    dySeries(c("TreeRingsLwr", "TreeRings", "TreeRingsUpr"), label = "Tree-Ring Reconstructed", color="#00CCFF") %>%
     dySeries(c("FlowGage"), label = "Observed", color="#3333FF") %>%
     dySeries(c("TreeGage15YrRunMean"), label = "15-Year Average", color="red") %>%
     dySeries(c("TreeGageAllYrMean"), label = "Average", "forestgreen") %>%
