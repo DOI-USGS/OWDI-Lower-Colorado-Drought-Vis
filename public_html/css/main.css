@@ -159,6 +159,12 @@ nav h3{color:#fff;}
 	color:#fff;
 	}
 	
+.white:hover,
+.white:focus{
+	background:#fff;
+	color:#003366;
+	}
+	
 #JrGraph h2{
 	font-size:1em;
 	}
@@ -202,8 +208,12 @@ nav h3{color:#fff;}
 	.keynote,
 	#keynote3,
 	#keynote4{
-		top:330px;
+		top:25%;
 	}
+	
+	#keynote1{
+		top:35%;
+		}
 	
 	.keynote h1,
 	.keynote h2{
@@ -237,7 +247,7 @@ nav h3{color:#fff;}
 
 @media screen and (min-width:1025px){
 	.keynote{
-		width:960px;
+		width:980px;
 		}
 	
 	.keynote h1{

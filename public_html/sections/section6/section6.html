@@ -8,19 +8,26 @@
 
 
 <script>
+	(function() {
+		var scene = new ScrollMagic.Scene({
+			triggerElement: '#container6', duration: 100
+		})
+		.on("enter", function (e) {
+			animation();
+		})
+		.addTo(window.owdiDrought.SMController);
+		
+		
 		var animationContainer = document.getElementById('animated-object');
+		var triggered = false;
 		var animation = function () {
-                    var triggered = false;
-                    animationSVG = this.getSVGDocument();
-                    $(window).scroll(function() {
-			if ($('#animated-object').is(':visible') && !triggered) {
-                            
+			animationSVG = animationContainer.getSVGDocument();
+                    
+			if (!triggered) {           
                             animationSVG.visibleAxes();
                             triggered = true;
 			}
-                    });
 		}
-		
-		animationContainer.onload = animation;	
+	})();
 </script>
 </div>

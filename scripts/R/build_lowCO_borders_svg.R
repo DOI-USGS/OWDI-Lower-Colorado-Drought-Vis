@@ -6,7 +6,7 @@ library(XML)
 source('R/manipulate_lowCO_borders_svg.R')
 source('R/build_usage_pictogram.R')
 width=7.5
-height=7.1
+height=7.6
 plot_dir = '../public_html/img'
 svg_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
 simp_tol <- 7000
@@ -14,8 +14,8 @@ grey_simp_tol <- 1.3*simp_tol # less res for non-highlighted states
 min_area <- 1e+10
 epsg_code <- '+init=epsg:3479' #5070 for USGS CONUS albers?
 
-ylim <- c(-1806051, 2054371) # in epsg_code
-xlim <- c(-2693054, 5512372)
+ylim <- c(-1806051, 1654371) # in epsg_code
+xlim <- c(-3193054, 5512372)
 lo_co_states <- c("California","Nevada","Arizona")
 keep_non <- c("Texas","Utah","Colorado","New Mexico","Oregon","Wyoming","Oklahoma","Nebraska","Kansas")
 
@@ -24,7 +24,8 @@ lo_co_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#000000')
 mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#000000', mask="url(#mexico-mask)")
 co_river_styles = c('fill'='none', 'stroke-width'='3.5', 'stroke'='#0066CC', 'stroke-linejoin'="round", 
                     'style'="stroke-dasharray:331;stroke-linejoin:round;stroke-dashoffset:331;stroke-linecap:round")
-co_basin_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round")
+co_basin_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", opacity = '0')
+pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#000000', opacity = '0')
 
 mexico = readOGR(dsn = "../src_data/mexico",layer="MEX_adm0") %>%
   spTransform(CRS(epsg_code)) %>%
@@ -32,6 +33,7 @@ mexico = readOGR(dsn = "../src_data/mexico",layer="MEX_adm0") %>%
 
 states = readOGR(dsn = "../src_data/states_21basic",layer="states") 
 rivers = readOGR(dsn = "../src_data/CRB_Rivers", layer="CRB_Rivers")
+usage = readOGR("../public_html/data/wat_acc_sp.geojson", "OGRGeoJSON")
 co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
 co_basin = readOGR("../public_html/data/lc_huc_simp.geojson", "OGRGeoJSON")
@@ -97,10 +99,11 @@ svg <- name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Co
   group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = 'Colorado-river-basin')) %>%
   group_svg_elements(groups = c(lo_co_states,'Mexico','Colorado-river', 'Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
-  add_radial_mask(r=c('250','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
+  add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="2s", fill="freeze", dur="5s", values="331;0;") %>%
-  usage_bar_pictogram()
-
-traceback()
+  add_animation(attr = 'opacity', parent_id='co-basin-polygon', type = 'g', id = 'colorado-basin-draw', begin="colorado-river-draw.end+1s", fill="freeze", dur="1s", values= "0;1") %>%
+  usage_bar_pictogram(values = sort(as.numeric(as.character(usage$LastFiveMean)),decreasing = T), scale=100000, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
+  add_animation(attr = 'opacity', parent_id='pictogram-topfive', type = 'g', id = 'pictogram-topfive-draw', begin="colorado-basin-draw.end+1s", fill="freeze", dur="1s", values= "0;1")
+  
 
 cat(toString.XMLNode(svg), file = svg_file, append = FALSE)
