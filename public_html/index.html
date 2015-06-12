@@ -1,125 +1,132 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<!-- ############### VIEWPORT META TAG ############### -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, 	user-scalable=no" />
-		<!-- ################################################# -->
-		<title>HTML5 basic skeleton</title>
-		<link href="css/main.css" rel="stylesheet" type="text/css">
-		<link href="css/normalize.css" rel="stylesheet" type="text/css">
-		<link href='//fonts.googleapis.com/css?family=Roboto:400,500,700,100,300' rel='stylesheet' type='text/css'>
-		<link href="css/dygraph.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
-		<script type="text/javascript" src="//cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-		<script type="text/javascript" src="js/htmlwidgets-0.3.2/htmlwidgets.js"></script>
-		<script type="text/javascript" src="js/dygraphs-1.0.1/dygraph-combined.js"></script>
-		<script type="text/javascript" src="js/jquery-1.11.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/moment-2.8.4/moment.js"></script>
-		<script type="text/javascript" src="js/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
-		<script type="text/javascript" src="js/dygraphs-binding-0.4.3/dygraphs.js"></script>
-		<!-- populate sections -->
-		<script type="text/javascript">
-			mkTemplate = function (section) {
-				var path = "sections/" + section;
-				var context = { "relativePath" : path };
-				$.ajax({
-					url: path + "/" + section + ".html",
-					success: function (data) {
-						var template = Handlebars.compile(data);
-						$("#" + section).html(template(context));
-					}
-				});
-			}
-			$(document).ready(function () {
-				window.owdiDrought = window.owdiDrought || {};
-				window.owdiDrought.SMController = new ScrollMagic.Controller();
-				mkTemplate("section1");
-				mkTemplate("section2");
-				mkTemplate("section3");
-				mkTemplate("structures");
-				mkTemplate("section4");
-				mkTemplate("section5");
-				mkTemplate("section6");
-				mkTemplate("section7");
+
+<head>
+	<meta charset="utf-8" />
+    <!-- ############### VIEWPORT META TAG ############### -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, 	user-scalable=no" />
+	<!-- ################################################# -->
+	<title>HTML5 basic skeleton</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+   	<link href='//fonts.googleapis.com/css?family=Roboto:400,500,700,100,300' rel='stylesheet' type='text/css'>
+    <link href="css/dygraph.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="js/htmlwidgets-0.3.2/htmlwidgets.js"></script>
+	<script type="text/javascript" src="js/dygraphs-1.0.1/dygraph-combined.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/moment-2.8.4/moment.js"></script>
+	<script type="text/javascript" src="js/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+	<script type="text/javascript" src="js/dygraphs-binding-0.4.3/dygraphs.js"></script>
+
+	<!-- populate sections -->
+	<script type="text/javascript">
+		mkTemplate = function(section) {
+			var path = "sections/" + section;
+			var context = { "relativePath" : path };
+			$.ajax({
+				url: path + "/" + section + ".html",
+				success: function(data) {
+					var template = Handlebars.compile(data);
+					$("#" + section).html(template(context));
+				}
 			});
-		</script>
+		}
+		$(document).ready(function() {
+			window.owdiDrought = window.owdiDrought || {};
+			window.owdiDrought.SMController = new ScrollMagic.Controller();
+			mkTemplate("section1");
+			mkTemplate("section2");
+			mkTemplate("section3");
+			mkTemplate("section4");
+			mkTemplate("section5");
+			mkTemplate("section6");
+			mkTemplate("section7");
+			mkTemplate("section8");
+			mkTemplate("section9");
+				});
+	</script>
+    
 
+</head>
+<body>
+	<!-- BEGIN USGS Header Template --> 
+ 
+    <div id="usgscolorband">
+    
+    	<div id="usgsheader">
+        
+            <div id="usgsidentifier">
+            <a href="http://www.usgs.gov/" target="_blank"><img src="img/usgslogo.jpg" alt="USGS - science for a changing world" title="U.S. Geological Survey Home Page"/></a>
+            </div><!--usgsidentifier-->
+            
+        <img src="img/banner.png" alt="banner"/>
+        
+        <div id="usgsccsabox">
+        
+            <div id="usgsccsa">
+                <a href="http://www.usgs.gov/">USGS Home</a>
+                <br /><a href="http://answers.usgs.gov/cgi-bin/gsanswers?tmplt=2">Contact USGS</a>
+                <br /><a href="http://search.usgs.gov/">Search USGS</a>
+                <br />
+            </div><!--usgsccsa-->
+            
+        </div><!--usgsccsabox-->
+    
+    </div><!--usgsheader-->
+    </div><!--colorband-->
+    
+<!-- END USGS Header Template -->
+	<nav>
+		<h3>Colorado Drought</h3>
+	</nav>
+    
 
-	</head>
-	<body>
-		<!-- BEGIN USGS Header Template --> 
-
-		<div id="usgscolorband">
-
-			<div id="usgsheader">
-
-				<div id="usgsidentifier">
-					<a href="http://www.usgs.gov/" target="_blank"><img src="img/usgslogo.jpg" alt="USGS - science for a changing world" title="U.S. Geological Survey Home Page"/></a>
-				</div><!--usgsidentifier-->
-
-				<img src="img/banner.png" alt="banner"/>
-
-				<div id="usgsccsabox">
-
-					<div id="usgsccsa">
-						<a href="http://www.usgs.gov/">USGS Home</a>
-						<br /><a href="http://answers.usgs.gov/cgi-bin/gsanswers?tmplt=2">Contact USGS</a>
-						<br /><a href="http://search.usgs.gov/">Search USGS</a>
-						<br />
-					</div><!--usgsccsa-->
-
-				</div><!--usgsccsabox-->
-
-			</div><!--usgsheader-->
-		</div><!--colorband-->
-
-		<!-- END USGS Header Template -->
-		<nav>
-			<h3>Colorado Drought</h3>
-		</nav>
-
-
-		<div id="container1" class="container">
-			<section id="section1"></section>
-		</div>
-
-		<div id="container2" class="container">
-			<section id="section2"></section>
-		</div>
-
-		<div id="container3" class="container">
-			<section id="section3"></section>
-		</div>
-
-		<div id="containerX" class="container">
-			<section id="structures"></section>
-		</div>
-
-		<div id="container4" class="container">
-			<section id="section4"></section>
-		</div>
-
-		<div id="container5" class="container">
-			<section id="section5"></section>
-		</div>
-
-		<div id="container6" class="container">
-			<section id="section6"></section>
-		</div>
-
-		<div id="container7" class="container">
-			<section id="section7"></section>
-		</div>
-
-
-
-
-		<!-- BEGIN USGS Footer Template -->
-
+        	<div id="container1" class="container">
+            	<section id="section1"></section>
+            </div>
+    
+    		<div id="container2" class="container">
+				<section id="section2"></section>
+            </div>
+            
+            <div id="container3" class="container">
+				<section id="section3"></section>
+            </div>
+            
+            <div id="container4" class="container">
+				<section id="section4"></section>
+            </div>
+            
+            <div id="container5" class="container">
+				<section id="section5"></section>
+            </div>
+            
+            <div id="container6" class="container">
+				<section id="section6"></section>
+            </div>
+            
+            <div id="container7" class="container">
+				<section id="section7"></section>
+            </div>
+            
+            <div id="container8" class="container">
+				<section id="section8"></section>
+            </div>
+            
+            <div id="container9" class="container">
+				<section id="section9"></section>
+            </div>
+              
+	
+    
+    
+	<!-- BEGIN USGS Footer Template -->
+       
         <div id="usgsfooter">
 
 			<p id="usgsfooterbar">

@@ -15,4 +15,3 @@ source('scripts/R/natural_flow_history.R', local=TRUE)
 source('scripts/R/water_account.R', local=TRUE)
 
 source('scripts/R/supply_vs_use_animation.R', local=TRUE)
-
