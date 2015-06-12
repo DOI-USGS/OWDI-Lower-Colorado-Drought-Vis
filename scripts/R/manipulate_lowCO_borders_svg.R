@@ -6,13 +6,27 @@ name_svg_elements <- function(svg, ele_names, keep.attrs = c('d')){
   require(XML)
 
   path_nodes <- xpathApply(svg, "//*[local-name()='path']")
-  for (i in 2:length(path_nodes)){
+  for (i in 1:length(path_nodes)){
     attrs <- xmlAttrs(path_nodes[[i]])
     
     removeAttributes(path_nodes[[i]])
-    addAttributes(path_nodes[[i]], .attrs = c(id=ele_names[i-1], attrs['d'])) # drop style and others
+    addAttributes(path_nodes[[i]], .attrs = c(id=ele_names[i], attrs['d'])) # drop style and others
   }
   
+  invisible(svg)
+}
+
+clean_svg_doc <- function(svg, keep.attrs = c('viewBox','version')){
+  svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
+  attrs <- xmlAttrs(svg_nd[[1]])
+  removeAttributes(svg_nd[[1]])
+  addAttributes(svg_nd[[1]], .attrs = c(preserveAspectRatio= "xMinYMin meet", attrs[keep.attrs]))
+  
+  junk_nd <- xpathApply(svg, "//*[local-name()='rect']")
+  g_nd <- xpathApply(svg, "//*[local-name()='g']")[[1]]
+  removeChildren(g_nd, kids = c(junk_nd, xpathApply(svg, "//*[local-name()='path']")[[1]]))
+  removeAttributes(g_nd)
+  addAttributes(g_nd, .attrs = c('id'='delete_group'))
   invisible(svg)
 }
 
@@ -38,7 +52,6 @@ group_svg_elements <- function(svg, groups){
       addChildren(g_id, kids = list(path_nodes))
     }
   }
-
   invisible(svg)
 }
 

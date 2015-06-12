@@ -20,12 +20,12 @@ lo_co_states <- c("California","Nevada","Arizona")
 keep_non <- c("Texas","Utah","Colorado","New Mexico","Oregon","Wyoming","Oklahoma","Nebraska","Kansas")
 
 non_lo_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', mask="url(#non-lo-co-mask)")
-lo_co_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#000000')
-mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#000000', mask="url(#mexico-mask)")
-co_river_styles = c('fill'='none', 'stroke-width'='3.5', 'stroke'='#0066CC', 'stroke-linejoin'="round", 
+lo_co_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'stroke-linejoin'='round')
+mexico_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', mask="url(#mexico-mask)", 'stroke-linejoin'='round')
+co_river_styles = c('fill'='none', 'stroke-width'='4.5', 'stroke'='#0066CC', 'stroke-linejoin'="round", 
                     'style'="stroke-dasharray:331;stroke-linejoin:round;stroke-dashoffset:331;stroke-linecap:round")
-co_basin_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", opacity = '0')
-pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#000000', opacity = '0')
+co_basin_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", opacity = '0')
+pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', opacity = '0')
 
 mexico = readOGR(dsn = "../src_data/mexico",layer="MEX_adm0") %>%
   spTransform(CRS(epsg_code)) %>%
@@ -95,7 +95,8 @@ dev.off()
 
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
-svg <- name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Colorado-river','Colorado-river-basin')) %>%
+svg <- clean_svg_doc(svg) %>%
+  name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Colorado-river','Colorado-river-basin')) %>%
   group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = 'Colorado-river-basin')) %>%
   group_svg_elements(groups = c(lo_co_states,'Mexico','Colorado-river', 'Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
@@ -111,3 +112,11 @@ svg <- name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Co
   add_animation(attr = 'opacity', parent_id="picto-usage-4", type = 'rect', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0;1") %>%
   toString.XMLNode() %>%
   cat(file = svg_file, append = FALSE)
+
+#<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio= "xMinYMin meet" viewBox="0 0 700 700" version="1.1">
+#  <g id="surface941">
+#  <rect x="0" y="0" width="540" height="547" style="fill:none;fill-opacity:1;stroke:none;"/>
+#  <rect x="0" y="0" width="540" height="547" style="fill:none;fill-opacity:1;stroke:none;"/>
+#  <path style="fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke:none;stroke-opacity:1;stroke-miterlimit:10;" d="M 0 547 L 540 547 L 540 0 L 0 0 Z "/>
+# </g>
+#</svg>

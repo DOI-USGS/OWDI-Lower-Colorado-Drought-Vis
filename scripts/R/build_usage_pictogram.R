@@ -16,6 +16,7 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
   y_offset <- -(bin_full+bin_empty)*10-4
   x_offset <- -2
 
+  
   def_id <- newXMLNode('defs', parent=root_nd)
   pat_1 <- newXMLNode('pattern', parent=def_id,
                       attrs = c(id="empty-picto-pattern", width=bin_full+bin_buffer, height=bin_full+bin_buffer, patternUnits="userSpaceOnUse"))
@@ -31,9 +32,9 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
   axes <- newXMLNode('path', parent=g_id,
              attrs=c('d'=sprintf("M%f %f l0 %f l%f 0",x_offset, 2*y_offset, -y_offset, x_axis_length), 'id'="picto-axes"))
   newXMLNode("text", parent = g_id, newXMLTextNode('Water user contracts'),
-             attrs = c(id="x-pictogram-label",x=x_axis_length/2,y=y_offset+12, 'fill'='#000000', dy=".3em",'stroke'='none', style="text-anchor: middle;"))
+             attrs = c(id="x-pictogram-label",x=x_axis_length/2,y=y_offset+12, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;"))
   newXMLNode("text", parent = g_id, newXMLTextNode('Total water use'),
-             attrs = c(id="y-pictogram-label",x=-15,y=y_offset/2, 'fill'='#000000', dy=".3em",'stroke'='none', style="text-anchor: middle;",
+             attrs = c(id="y-pictogram-label",x=-15,y=y_offset/2, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;",
                        'transform'="rotate(-90,-15,-97.5),translate(200,0)"))
   
   for (i in 1:length(values)){
