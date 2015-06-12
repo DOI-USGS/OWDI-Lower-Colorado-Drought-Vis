@@ -15,13 +15,19 @@
 #Package had a bug when styling multiple layers
 #Fix is in my repo, but legends need to be added
 #manually
-devtools::install_github("jhollist/leafletR")
-library(leafletR)
+if(!require(leafletR)){
+	devtools::install_github("jhollist/leafletR")
+	library(leafletR)
+}
+if(!require(miscPackage)){
+	devtools::install_github("jhollist/miscPackage")
+	library(miscPackage)
+}
+
 library(htmlwidgets)
 library(rgdal)
 library(rgeos)
 library(sp)
-library(miscPackage)
 library(dplyr)
 
 
@@ -143,7 +149,7 @@ water_account <- leafletR::leaflet(data=dat,
                                    dest="public_html/widgets/",
                                    incl.data = F,
                                    controls=c("all"))
-water_account
+#water_account
 
 #Legend - Manual changes to output html
 
