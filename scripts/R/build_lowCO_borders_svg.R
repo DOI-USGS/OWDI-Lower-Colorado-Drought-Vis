@@ -3,11 +3,11 @@ require(rgdal)
 library(rgeos)
 library(magrittr)
 library(XML)
-source('R/manipulate_lowCO_borders_svg.R')
-source('R/build_usage_pictogram.R')
+source('scripts/R/manipulate_lowCO_borders_svg.R')
+source('scripts/R/build_usage_pictogram.R')
 width=7.5
 height=7.6
-plot_dir = '../public_html/img'
+plot_dir = 'public_html/img'
 svg_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
 simp_tol <- 7000
 picto_scale = 100000 # acre-feet per bin
@@ -28,16 +28,16 @@ co_river_styles = c('fill'='none', 'stroke-width'='4.5', 'stroke'='#0066CC', 'st
 co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", opacity = '0')
 pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', opacity = '0')
 
-mexico = readOGR(dsn = "../src_data/mexico",layer="MEX_adm0") %>%
+mexico = readOGR(dsn = "src_data/mexico",layer="MEX_adm0") %>%
   spTransform(CRS(epsg_code)) %>%
   gSimplify(simp_tol)
 
-states = readOGR(dsn = "../src_data/states_21basic",layer="states") 
-rivers = readOGR(dsn = "../src_data/CRB_Rivers", layer="CRB_Rivers")
-usage = readOGR("../public_html/data/wat_acc_sp.geojson", "OGRGeoJSON")
+states = readOGR(dsn = "src_data/states_21basic",layer="states") 
+rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="CRB_Rivers")
+usage = readOGR("public_html/data/wat_acc_sp.geojson", "OGRGeoJSON")
 co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
-co_basin = readOGR("../public_html/data/lc_huc_simp.geojson", "OGRGeoJSON")
+co_basin = readOGR("public_html/data/lc_huc_simp.geojson", "OGRGeoJSON")
 
 area <- lapply(mexico@polygons, function(x) sapply(x@Polygons, function(y) y@area))
 mainPolys <- lapply(area, function(x) which(x > min_area))
