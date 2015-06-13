@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8" />
     <!-- ############### VIEWPORT META TAG ############### -->
@@ -25,11 +26,13 @@
 	<!-- populate sections -->
 	<script type="text/javascript">
 		mkTemplate = function(section) {
+			var path = "sections/" + section;
+			var context = { "relativePath" : path };
 			$.ajax({
-				url: "sections/" + section + "/" + section + ".html",
+				url: path + "/" + section + ".html",
 				success: function(data) {
 					var template = Handlebars.compile(data);
-					$("#" + section).html(template());
+					$("#" + section).html(template(context));
 				}
 			});
 		}
@@ -39,13 +42,14 @@
 			mkTemplate("section1");
 			mkTemplate("section2");
 			mkTemplate("section3");
-			mkTemplate("section4");
+			mkTemplate("structures");
 			mkTemplate("section5");
 			mkTemplate("section6");
 			mkTemplate("section7");
 			mkTemplate("section8");
 			mkTemplate("section9");
-				});
+			mkTemplate("section4");
+		});
 	</script>
     
 
@@ -96,7 +100,7 @@
             </div>
             
             <div id="container4" class="container">
-				<section id="section4"></section>
+				<section id="structures"></section>
             </div>
             
             <div id="container5" class="container">
@@ -119,47 +123,47 @@
 				<section id="section9"></section>
             </div>
               
+			<div id="container10" class="container">
+				<section id="section4"></section>
+            </div>
 	
     
     
 	<!-- BEGIN USGS Footer Template -->
        
         <div id="usgsfooter">
-        
-        	<p id="usgsfooterbar">
-                <a href="http://www.usgs.gov/laws/accessibility.html" title="Accessibility Policy (Section 508)" target="_blank">Accessibility</a>
-                <a href="http://www.usgs.gov/foia/" title="Freedom of Information Act" target="_blank">FOIA</a>
-                <a href="http://www.usgs.gov/laws/privacy.html" title="Privacy policies of the U.S. Geological Survey." target="_blank">Privacy</a>
-                <a href="http://www.usgs.gov/laws/policies_notices.html" title="Policies and notices that govern information posted on USGS Web sites." target="_blank">Policies and Notices</a>
-                
+
+			<p id="usgsfooterbar">
+				<a href="http://www.usgs.gov/laws/accessibility.html" title="Accessibility Policy (Section 508)" target="_blank">Accessibility</a>
+				<a href="http://www.usgs.gov/foia/" title="Freedom of Information Act" target="_blank">FOIA</a>
+				<a href="http://www.usgs.gov/laws/privacy.html" title="Privacy policies of the U.S. Geological Survey." target="_blank">Privacy</a>
+				<a href="http://www.usgs.gov/laws/policies_notices.html" title="Policies and notices that govern information posted on USGS Web sites." target="_blank">Policies and Notices</a>
 			</p><!--usgsfooterbar-->
-    
-    
-		<p id="usgsfootertext">
-        
-    		<a href="http://www.usa.gov/" alt="USA.gov logo" title="USAGov: Government Made Easy" width="90" height="26" target="_blank"><img id="usa" src="img/usa_gov.png" alt="usa_gov pic"/></a>
-            
-    		<a href="http://www.doi.gov/" target="_blank">U.S. Department of the Interior</a> |
-            
-			<a href="http://www.usgs.gov/" target="_blank">U.S. Geological Survey</a> |
-            
-			<a href="http://www.doioig.gov/" target="_blank">DOI Inspector General</a>
-    
-    		<p style="margin: 5px 0 5px 0; padding-left: 5px;">URL: http//cida.usgs.gov/ca_drought</p>
-            
-            <p style="margin: 5px 0 5px 0; padding-left: 5px;">Contact Information: <a href="mailto:cida_webmaster@usgs.gov?Subject=Hello%20again" target="_top">gs-cida_ca_drought_cida_app@usgs.gov</a></p>
-    
-    		<p style="margin: 5px 0 5px 0; padding-left: 5px;">Page last modified: <script>document.write(document.lastModified);</script></p>
-    
-    	</p><!--usgsfootertext-->
 
-</div><!--usgsfooter-->
 
-<!-- END USGS Footer Template -->
+			<p id="usgsfootertext">
 
-<!--Natural Flow History Chart-->
-      	
-		
+				<a href="http://www.usa.gov/" alt="USA.gov logo" title="USAGov: Government Made Easy" width="90" height="26" target="_blank"><img id="usa" src="img/usa_gov.png" alt="usa_gov pic"/></a>
+
+				<a href="http://www.doi.gov/" target="_blank">U.S. Department of the Interior</a> |
+
+				<a href="http://www.usgs.gov/" target="_blank">U.S. Geological Survey</a> |
+
+				<a href="http://www.doioig.gov/" target="_blank">DOI Inspector General</a>
+
+			<p style="margin: 5px 0 5px 0; padding-left: 5px;">URL: http//cida.usgs.gov/ca_drought</p>
+
+			<p style="margin: 5px 0 5px 0; padding-left: 5px;">Contact Information: <a href="mailto:cida_webmaster@usgs.gov?Subject=Hello%20again" target="_top">gs-cida_ca_drought_cida_app@usgs.gov</a></p>
+
+			<p style="margin: 5px 0 5px 0; padding-left: 5px;">Page last modified: <script>document.write(document.lastModified);</script></p>
+
+		</p><!--usgsfootertext-->
+
+	</div><!--usgsfooter-->
+
+	<!-- END USGS Footer Template -->
+
+	<!--Natural Flow History Chart-->
 
 </body>
 </html>
