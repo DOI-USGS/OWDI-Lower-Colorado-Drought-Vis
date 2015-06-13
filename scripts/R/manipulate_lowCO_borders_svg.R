@@ -97,11 +97,20 @@ add_radial_mask <- function(svg, r, id, ...){
 #' @param attr a character vector of length 1 for an animation attribute name (e.g., 'stroke-dashoffset')
 #' @param parent_id the id of the parent node for the animation
 #' @param ... additional attributes for the animation
-add_animation <- function(svg, attr, parent_id, type = 'path', ...){
+add_animation <- function(svg, attr, parent_id, element = 'path', ...){
   attrs <- expand.grid(..., stringsAsFactors = FALSE)
-  parent_nd <- xpathApply(svg, sprintf("//*[local-name()='%s'][@id='%s']",type, parent_id))
+  parent_nd <- xpathApply(svg, sprintf("//*[local-name()='%s'][@id='%s']",element, parent_id))
   newXMLNode('animate', parent = parent_nd, 
              attrs = c('attributeName'=attr, attrs))
+  invisible(svg)
+  
+}
+
+add_animateTransform <- function(svg, attr = "transform", parent_id, element = 'path', ...){
+  attrs <- expand.grid(..., stringsAsFactors = FALSE)
+  parent_nd <- xpathApply(svg, sprintf("//*[local-name()='%s'][@id='%s']",element, parent_id))
+  newXMLNode('animateTransform', parent = parent_nd, 
+             attrs = c('attributeName'=attr, attributeType="XML", attrs))
   invisible(svg)
   
 }

@@ -21,11 +21,11 @@ lo_co_states <- c("California","Nevada","Arizona")
 keep_non <- c("Texas","Utah","Colorado","New Mexico","Oregon","Wyoming","Oklahoma","Nebraska","Kansas")
 
 non_lo_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', mask="url(#non-lo-co-mask)")
-lo_co_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'stroke-linejoin'='round')
-mexico_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', mask="url(#mexico-mask)", 'stroke-linejoin'='round')
+lo_co_styles = c('fill'='#FFFFFF', 'fill-opacity'='0.2', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'stroke-linejoin'='round')
+mexico_styles = c('fill'='#FFFFFF', 'fill-opacity'='0.2', 'stroke-width'='2.5', 'stroke'='#FFFFFF', mask="url(#mexico-mask)", 'stroke-linejoin'='round')
 co_river_styles = c('fill'='none', 'stroke-width'='4.5', 'stroke'='#0066CC', 'stroke-linejoin'="round", 
                     'style'="stroke-dasharray:331;stroke-linejoin:round;stroke-dashoffset:331;stroke-linecap:round")
-co_basin_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", opacity = '0')
+co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", opacity = '0')
 pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', opacity = '0')
 
 mexico = readOGR(dsn = "../src_data/mexico",layer="MEX_adm0") %>%
@@ -105,16 +105,20 @@ svg <- clean_svg_doc(svg) %>%
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
   add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="2s", fill="freeze", dur="5s", values="331;0;") %>%
-  add_animation(attr = 'opacity', parent_id='co-basin-polygon', type = 'g', id = 'colorado-basin-draw', begin="colorado-river-draw.end+1s", fill="freeze", dur="1s", values= "0;1") %>%
+  add_animation(attr = 'opacity', parent_id='co-basin-polygon', element = 'g', id = 'colorado-basin-draw', begin="colorado-river-draw.end+1s", fill="freeze", dur="1s", values= "0;1") %>%
   usage_bar_pictogram(values = sort(as.numeric(as.character(usage$LastFiveMean)),decreasing = T), scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
-  add_animation(attr = 'opacity', parent_id='pictogram-topfive', type = 'g', id = 'pictogram-topfive-draw', begin="colorado-basin-draw.end+1s", fill="freeze", dur="1s", values= "0;1") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-1", type = 'rect', begin="pictogram-topfive-draw.end+1s", fill="freeze", dur="1s", values= "1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-2", type = 'rect', begin="pictogram-topfive-draw.end+2s", fill="freeze", dur="1s", values= "1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-3", type = 'rect', begin="pictogram-topfive-draw.end+3s", fill="freeze", dur="1s", values= "1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-4", type = 'rect', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id='non-lo-co-states', type='g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
-  add_animation(attr = 'opacity', parent_id='pictogram-topfive', type = 'g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
-  add_animation(attr = 'opacity', parent_id='co-river-polyline', type = 'g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
-  add_animation(attr = 'opacity', parent_id='co-basin-polygon', type = 'g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-draw', begin="colorado-basin-draw.end+1s", fill="freeze", dur="1s", values= "0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-1", element = 'rect', begin="pictogram-topfive-draw.end+1s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-2", element = 'rect', begin="pictogram-topfive-draw.end+2s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-3", element = 'rect', begin="pictogram-topfive-draw.end+3s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-4", element = 'rect', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id='non-lo-co-states', element='g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id='co-river-polyline', element = 'g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id='co-basin-polygon', element = 'g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animateTransform(parent_id = 'California', begin="pictogram-topfive-draw.end+4s", type = 'translate', fill="freeze", from="0 0", to="-10 -20", dur="1s") %>%
+  add_animateTransform(parent_id = 'Nevada', begin="pictogram-topfive-draw.end+4s", type = 'translate', fill="freeze", from="0 0", to="0 -25", dur="1s") %>%
+  add_animateTransform(parent_id = 'Arizona', begin="pictogram-topfive-draw.end+4s", type = 'translate', fill="freeze", from="0 0", to="25 -10", dur="1s") %>%
+  add_animateTransform(parent_id = 'Mexico', begin="pictogram-topfive-draw.end+4s", type = 'scale', fill="freeze", from = '1', to="0.7", dur="1s") %>%
   toString.XMLNode() %>%
   cat(file = svg_file, append = FALSE)
