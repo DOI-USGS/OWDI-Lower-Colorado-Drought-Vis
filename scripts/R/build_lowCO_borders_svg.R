@@ -10,6 +10,7 @@ height=7.6
 plot_dir = '../public_html/img'
 svg_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
 simp_tol <- 7000
+picto_scale = 100000 # acre-feet per bin
 grey_simp_tol <- 1.3*simp_tol # less res for non-highlighted states
 min_area <- 1e+10
 epsg_code <- '+init=epsg:3479' #5070 for USGS CONUS albers?
@@ -51,6 +52,7 @@ for(i in 1:length(mainPolys)){
   }
 }
 
+
 svg(filename = svg_file,width=width, height=height)
 par(omi=c(0,0,0,0),mai=c(0,0,0,0))
 
@@ -91,6 +93,7 @@ spTransform(co_basin, CRS(epsg_code)) %>%
   gSimplify(simp_tol) %>%
   plot(add=TRUE)
 
+
 dev.off()
 
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
@@ -103,20 +106,15 @@ svg <- clean_svg_doc(svg) %>%
   add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="2s", fill="freeze", dur="5s", values="331;0;") %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', type = 'g', id = 'colorado-basin-draw', begin="colorado-river-draw.end+1s", fill="freeze", dur="1s", values= "0;1") %>%
-  usage_bar_pictogram(values = sort(as.numeric(as.character(usage$LastFiveMean)),decreasing = T), scale=100000, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
+  usage_bar_pictogram(values = sort(as.numeric(as.character(usage$LastFiveMean)),decreasing = T), scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', type = 'g', id = 'pictogram-topfive-draw', begin="colorado-basin-draw.end+1s", fill="freeze", dur="1s", values= "0;1") %>%
   add_animation(attr = 'opacity', parent_id="picto-usage-1", type = 'rect', begin="pictogram-topfive-draw.end+1s", fill="freeze", dur="1s", values= "1;0;1") %>%
-  add_animation(attr = 'visibility', parent_id="picto-map-1", type = 'path', begin="pictogram-topfive-draw.end+1s", fill="freeze", dur="3s", values= "hidden;visible;hidden") %>%
   add_animation(attr = 'opacity', parent_id="picto-usage-2", type = 'rect', begin="pictogram-topfive-draw.end+2s", fill="freeze", dur="1s", values= "1;0;1") %>%
   add_animation(attr = 'opacity', parent_id="picto-usage-3", type = 'rect', begin="pictogram-topfive-draw.end+3s", fill="freeze", dur="1s", values= "1;0;1") %>%
   add_animation(attr = 'opacity', parent_id="picto-usage-4", type = 'rect', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id='non-lo-co-states', type='g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id='pictogram-topfive', type = 'g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id='co-river-polyline', type = 'g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id='co-basin-polygon', type = 'g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
   toString.XMLNode() %>%
   cat(file = svg_file, append = FALSE)
-
-#<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio= "xMinYMin meet" viewBox="0 0 700 700" version="1.1">
-#  <g id="surface941">
-#  <rect x="0" y="0" width="540" height="547" style="fill:none;fill-opacity:1;stroke:none;"/>
-#  <rect x="0" y="0" width="540" height="547" style="fill:none;fill-opacity:1;stroke:none;"/>
-#  <path style="fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke:none;stroke-opacity:1;stroke-miterlimit:10;" d="M 0 547 L 540 547 L 540 0 L 0 0 Z "/>
-# </g>
-#</svg>
