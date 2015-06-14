@@ -21,7 +21,7 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
   pat_1 <- newXMLNode('pattern', parent=def_id,
                       attrs = c(id="empty-picto-pattern", width=bin_full+bin_buffer, height=bin_full+bin_buffer, patternUnits="userSpaceOnUse"))
   newXMLNode('rect', parent=pat_1,
-             attrs = c(x=(bin_full-bin_empty+bin_buffer)/2,y=(bin_full-bin_empty+bin_buffer)/2,'rx'="2", 'ry'="2", width=bin_empty, height=bin_empty, 'stroke'='none','fill'='#FFFFFF'))
+             attrs = c(x=bin_buffer/2,y=bin_buffer/2,'rx'="2", 'ry'="2", width=bin_full, height=bin_full, 'stroke'='#0066CC','stroke-width'='2','fill'='none'))
   pat_1 <- newXMLNode('pattern', parent=def_id,
                       attrs = c(id="full-picto-pattern", width=bin_full+bin_buffer, height=bin_full+bin_buffer, patternUnits="userSpaceOnUse"))
   newXMLNode('rect', parent=pat_1,
@@ -43,19 +43,17 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
     frac_full <- num_full-values[i]/scale
     x = (bin_full+bin_buffer)*(i-1)
     height_full <- (bin_full+bin_buffer)*num_full
+    height_empty <- (bin_buffer)/2+(bin_empty+2)*frac_full #stroke-width included here
     
-    g_picto <- newXMLNode('g', parent=g_id)
+    g_picto <- newXMLNode('g', parent=g_id, attrs = c(id = paste0('picto-usage-',i)))
     
     newXMLNode('rect',parent=g_picto,
                attrs=c(x=x, y=y_offset-height_full-bin_buffer/2, width=bin_full+bin_buffer, height=height_full, 
-                       id = paste0('picto-usage-',i),style="stroke:none;fill:url(#full-picto-pattern);"))
+                       style="stroke:none;fill:url(#empty-picto-pattern);"))
     
-    newXMLNode('path',parent=g_picto,
-               attrs = c(d=sprintf("M%1.1f %1.1f Q 120 -200 150 %1.1f ",x+bin_full+bin_buffer*2, y_offset-height_full/2-bin_buffer/2, -450), 
-                         stroke="pink", 'stroke-width'=sprintf('%1.1f',max(values[i]/scale, 1.5)), id = paste0('picto-map-',i), visibility = 'hidden'))
-    empty_height <- (bin_buffer)/2+(bin_empty+2)*frac_full #stroke-width included here
-    newXMLNode('rect',parent=g_id,
-               attrs=c(x=x, y=y_offset-height_full-bin_buffer/2, width=bin_full+bin_buffer, height=empty_height, style="stroke:none;fill:url(#empty-picto-pattern);"))
+    newXMLNode('rect',parent=g_picto,
+               attrs=c(x=x, y=y_offset-height_full-bin_buffer/2+height_empty, width=bin_full+bin_buffer, height=height_full-height_empty, 
+                       style="stroke:none;fill:url(#full-picto-pattern);"))
     
   }
   
