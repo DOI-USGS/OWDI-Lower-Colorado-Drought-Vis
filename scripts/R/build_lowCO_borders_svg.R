@@ -101,7 +101,7 @@ svg <- xmlParse(svg_file, useInternalNode=TRUE)
 svg <- clean_svg_doc(svg) %>%
   name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Colorado-river','Colorado-river-basin')) %>%
   group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = 'Colorado-river-basin')) %>%
-  group_svg_elements(groups = c(lo_co_states,'Mexico','Colorado-river', 'Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
+  group_svg_elements(groups = c(lo_co_states,'Mexico','Colorado-river','Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
   add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="2s", fill="freeze", dur="5s", values="331;0;") %>%
@@ -117,8 +117,10 @@ svg <- clean_svg_doc(svg) %>%
   add_animation(attr = 'opacity', parent_id='co-river-polyline', element = 'g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', element = 'g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0") %>%
   add_animateTransform(parent_id = 'California', begin="pictogram-topfive-draw.end+4s", type = 'translate', fill="freeze", from="0 0", to="-10 -20", dur="1s") %>%
-  add_animateTransform(parent_id = 'Nevada', begin="pictogram-topfive-draw.end+4s", type = 'translate', fill="freeze", from="0 0", to="0 -25", dur="1s") %>%
-  add_animateTransform(parent_id = 'Arizona', begin="pictogram-topfive-draw.end+4s", type = 'translate', fill="freeze", from="0 0", to="25 -10", dur="1s") %>%
-  add_animateTransform(parent_id = 'Mexico', begin="pictogram-topfive-draw.end+4s", type = 'scale', fill="freeze", from = '1', to="0.7", dur="1s") %>%
+  add_animateTransform(parent_id = 'Nevada', begin="pictogram-topfive-draw.end+4s", type = 'translate', fill="freeze", from="0 0", to="7 -32", dur="1s") %>%
+  add_animateTransform(parent_id = 'Arizona', begin="pictogram-topfive-draw.end+4s", type = 'translate', fill="freeze", from="0 0", to="22 -17", dur="1s") %>%
+  add_animateTransform(parent_id = 'mexico', begin="pictogram-topfive-draw.end+4s", element = 'g', type = 'translate', fill="freeze", from="0 0", to="0 95", dur="1s") %>%
+  add_animation(attr = 'stroke-width', parent_id="Mexico", begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "2.5;4.55") %>% # original stroke / new scale
+  add_animateTransform(parent_id = 'Mexico', begin="pictogram-topfive-draw.end+4s", type = 'scale', fill="freeze", from = '1', to="0.55", dur="1s") %>%
   toString.XMLNode() %>%
   cat(file = svg_file, append = FALSE)
