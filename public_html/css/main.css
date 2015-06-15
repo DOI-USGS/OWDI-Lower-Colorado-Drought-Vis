@@ -65,6 +65,17 @@ nav h3{color:#fff;}
 	height:100%;
 	}
 	
+#container9{
+	background-image:url('../img/meadbg.jpg');
+	background-position: center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat:no-repeat;
+	height:100%;
+	}
+	
 /*=====keynote css=====*/	
 .keynote{
 	color:#fff;
@@ -189,6 +200,15 @@ nav h3{color:#fff;}
 	font-size:1em;
 	}
 	
+#meadSVGContainer h2{
+	color:#fff;
+	margin-bottom:30px;;
+	}
+	
+#meadSVGContainer object{
+	margin-left:10%;
+	}
+	
 @media screen and (min-width:687px){
 	
 	nav{
@@ -271,6 +291,10 @@ nav h3{color:#fff;}
 	font-size:1.5em;
 	}
 	
+	#meadSVGContainer object{
+		margin-left:10%;
+	}
+	
 }
 
 @media screen and (min-width:1025px){
@@ -298,7 +322,8 @@ nav h3{color:#fff;}
 		width:960px;
 		}
 	
-	#JrGraph{
+	#JrGraph,
+	#meadSVGContainer{
 		width:1024px;
 		margin:0 auto;
 		}
