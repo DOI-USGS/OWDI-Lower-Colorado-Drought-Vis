@@ -15,38 +15,41 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<!--Natural Flow History Chart-->
     <script type="text/javascript" src="js/htmlwidgets-0.3.2/htmlwidgets.js"></script>
 	<script type="text/javascript" src="js/dygraphs-1.0.1/dygraph-combined.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/moment-2.8.4/moment.js"></script>
 	<script type="text/javascript" src="js/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
 	<script type="text/javascript" src="js/dygraphs-binding-0.4.3/dygraphs.js"></script>
-    <script src="js/natural_flow.js" language="javascript" type="text/javascript"></script>
+    <script type="text/javascript" src="js/natural_flow.js" language="javascript" ></script>
 
 	<!-- populate sections -->
 	<script type="text/javascript">
 		mkTemplate = function(section) {
-			$.ajax({
+			return $.ajax({
 				url: "sections/" + section + "/" + section + ".html",
 				success: function(data) {
 					var template = Handlebars.compile(data);
 					$("#" + section).html(template());
+					
 				}
 			});
 		}
 		$(document).ready(function() {
 			window.owdiDrought = window.owdiDrought || {};
 			window.owdiDrought.SMController = new ScrollMagic.Controller();
-			mkTemplate("section1");
-			mkTemplate("section2");
-			mkTemplate("section3");
-			mkTemplate("section4");
-			mkTemplate("section5");
-			mkTemplate("section6");
-			mkTemplate("section7");
-			mkTemplate("section8");
-			mkTemplate("section9");
-				});
+			
+			for (var sIdx = 1;sIdx < 10;sIdx++) {
+				var ajax = mkTemplate("section" + sIdx);
+				
+				if (sIdx === 4) {
+					ajax.done(function (data) {
+						OWDI.createDygraph("natural-flow-graph");	
+					})
+				}
+			}
+		});
 	</script>
     
 
@@ -85,39 +88,39 @@
     
 
         	<div id="container1" class="container">
-            	<section id="section1"></section>
+            	<section id="section1" class="section"></section>
             </div>
     
     		<div id="container2" class="container">
-				<section id="section2"></section>
+				<section id="section2" class="section"></section>
             </div>
             
             <div id="container3" class="container">
-				<section id="section3"></section>
+				<section id="section3" class="section"></section>
             </div>
             
             <div id="container4" class="container">
-				<section id="section4"></section>
+				<section id="section4" class="section"></section>
             </div>
             
             <div id="container5" class="container">
-				<section id="section5"></section>
+				<section id="section5" class="section"></section>
             </div>
             
             <div id="container6" class="container">
-				<section id="section6"></section>
+				<section id="section6" class="section"></section>
             </div>
             
             <div id="container7" class="container">
-				<section id="section7"></section>
+				<section id="section7" class="section"></section>
             </div>
             
             <div id="container8" class="container">
-				<section id="section8"></section>
+				<section id="section8" class="section"></section>
             </div>
             
             <div id="container9" class="container">
-				<section id="section9"></section>
+				<section id="section9" class="section"></section>
             </div>
               
 	
@@ -158,7 +161,7 @@
 
 <!-- END USGS Footer Template -->
 
-<!--Natural Flow History Chart-->
+
       	
 		
 

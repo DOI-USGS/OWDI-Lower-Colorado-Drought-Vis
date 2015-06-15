@@ -1,7 +1,9 @@
-(function () {
-  new Dygraph(
+var OWDI = (OWDI === undefined ? {} : OWDI);
+
+OWDI.createDygraph = function (divId) {
+	return new Dygraph(
     // containing div
-    document.getElementById("natural-flow-graph"),
+    document.getElementById(divId),
     
     // data file
     "data/natural_flow_history.tsv",
@@ -55,4 +57,4 @@
       "hideOverlayOnMouseOut": true 
     }
   );
-})();
+}

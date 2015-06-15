@@ -14,7 +14,6 @@ nav h3{color:#fff;}
 	margin:0 0 100px 0;
 	padding: 15px;
 	text-align:center;
-	position:relative;
 	}
 	
 
@@ -111,6 +110,11 @@ nav h3{color:#fff;}
 	}
 	
 /*=====Container Content CSS=====*/
+
+.section{
+	position:relative;
+	height:100%;
+	}
 
 .sectionContent{
 	min-height:100px;
@@ -226,6 +230,7 @@ nav h3{color:#fff;}
 	#container3,
 	#container5,
 	#container7{
+		-webkit-background-size: cover;
 		background-attachment: fixed;
 		}
 		
