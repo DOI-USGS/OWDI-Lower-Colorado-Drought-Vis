@@ -1,31 +1,9 @@
 <div class="widget">
-	<div id="JrGraph">
-		<h2 id="jrsGraph">Water supply and consumptive use in the Colorado River Basin</h2>
-		<object id="animated-object" data="../../img/flow_animation.svg" type="image/svg+xml"></object>
-    </div>
+	<div class="sectionContent">
+		<p>The Colorado River basin reservoirs contain enough storage to hold about four times the average annual inflow into the system, assuming an annual inflow of 15 million acre-feet. This abundant storage has given the system some level of resiliency in the face of long-term drought.
+		</p>
+        <p>Citation/link for annual inflow of 15 maf (Dan B.)</p>
+        <button class="supportinginfo">Supporting Info</button>
+        
+	</div>
 </div>
-</div>
-
-<script>
-	(function() {
-		var scene = new ScrollMagic.Scene({
-			triggerElement: '#container6', duration: 100
-		})
-		.on("enter", function (e) {
-			animation();
-		})
-		.addTo(window.owdiDrought.SMController);
-		
-		
-		var animationContainer = document.getElementById('animated-object');
-		var triggered = false;
-		var animation = function () {
-			animationSVG = animationContainer.getSVGDocument();
-                    
-			if (!triggered) {           
-                            animationSVG.visibleAxes();
-                            triggered = true;
-			}
-		}
-	})();
-</script>
