@@ -9,6 +9,24 @@ nav{
 	
 nav h3{color:#fff;}
 
+/*=====SVG CSS=====*/
+
+text{
+	font-size: 16px;
+   	cursor: default;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    }
+.dater{
+    font-size: 21px;
+    }
+.tooltip{
+    font-size: 12px;
+    }
+.caption{
+    font-size: 12px;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    }
+
 /*=====Container CSS=====*/
 .container {
 	margin:0 0 100px 0;
