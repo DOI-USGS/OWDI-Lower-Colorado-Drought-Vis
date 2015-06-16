@@ -2,6 +2,29 @@
 <div class="widget">
 	<div id="meadSVGContainer">
 		<h2>Mead SVG Dealio</h2>
-		<object id="mead-object" data="../../img/lo_CO_borders.svg" type="image/svg+xml"></object>
+		<object id="mead-object" data="../../img/lo_CO_borders.svg" type="image/svg+xml" onload="window.owdiDrought.create()"></object>
 	</div>
 </div>
+
+<script>
+	(function() {
+		window.owdiDrought.create = function () {
+			new ScrollMagic.Scene({
+				triggerElement: '#meadSVGContainer', duration: 100
+			})
+			.on("enter", function (e) {
+				meadObject();
+			})
+			.addTo(window.owdiDrought.SMController)
+			.addIndicators();
+			
+			var a = document.getElementById('mead-object');
+			var meadObject = function(){ 
+				meadObjectSVG = a.getSVGDocument();
+				meadObjectSVG.drawRiver();
+			}
+		};
+		
+			
+	})();	
+</script>

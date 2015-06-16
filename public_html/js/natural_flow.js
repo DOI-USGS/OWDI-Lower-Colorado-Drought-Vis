@@ -1,6 +1,6 @@
-var OWDI = (OWDI === undefined ? {} : OWDI);
+var owdiDrought = (owdiDrought === undefined ? {} : owdiDrought);
 
-OWDI.createDygraph = function (divId) {
+owdiDrought.createDygraph = function (divId) {
 	return new Dygraph(
     // containing div
     document.getElementById(divId),
