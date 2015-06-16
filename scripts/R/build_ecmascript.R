@@ -1,4 +1,4 @@
-build_ecmascript <- function(){
+ecmascript_mead_map <- function(){
   
   scripts <- c('function init(evt){',
                'if ( window.svgDocument == null ) {',
@@ -31,5 +31,57 @@ build_ecmascript <- function(){
                'document.getElementById("pictogram-"+user_id+"-draw").beginElement();}'
                )
   
+  
+}
+
+ecmascript_supply_usage <- function(){
+  
+  scripts <- 'function init(evt)
+  {
+  if ( window.svgDocument == null )
+  {
+    svgDocument = evt.target.ownerDocument;
+    svgDocument.timeAdvance = this.timeAdvance;
+    svgDocument.visibleAxes = this.visibleAxes;
+  }
+  
+  legend = svgDocument.getElementById("legend");
+  }
+  function legendViz(evt,elementname)
+  {
+  var r = document.getElementById(elementname).r.animVal.value
+  
+  if (r === 0){
+    legend.setAttributeNS(null,"visibility","hidden");
+  } else {
+    legend.setAttributeNS(null,"visibility","visible");
+  }
+  
+  }
+  function highlightViz(evt,elementname,opacity)
+  {
+  var r = document.getElementById(elementname).r.animVal.value
+  
+  if (r === 0){
+    evt.target.setAttribute("fill-opacity", "0.0");
+  } else {
+    evt.target.setAttribute("fill-opacity", opacity);
+  }
+  
+  }
+  
+  function ChangeText(evt, elementname, legendtext)
+  {
+  textelement = svgDocument.getElementById(elementname);                      
+  textelement.firstChild.data = legendtext;
+  } 
+  function timeAdvance(){
+    var ele = document.getElementById("timeAdvance");
+    ele.beginElement();
+  }
+  function visibleAxes(){
+    var ele = document.getElementById("visibleAxes");
+    ele.beginElement();
+  }'
   
 }

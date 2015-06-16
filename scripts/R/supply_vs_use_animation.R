@@ -7,7 +7,8 @@ if(!require(dinosvg)){
 
 
 library(XML)
-
+source('scripts/R/build_ecmascript.R')
+source('scripts/R/manipulate_lowCO_borders_svg.R')
 
 data <- read.csv('src_data/NaturalFlow.csv', stringsAsFactors = F)
 flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
@@ -42,7 +43,13 @@ ani_time <- 15 # duration of line animation
 l_bmp = 20 # px from axes
 t_bmp = 20 # px from axes
 
-g_id <- svg_init(fig, def_opacity = 0.5)
+svg_nd <- newXMLNode('svg', 
+                     namespace = c("http://www.w3.org/2000/svg", xlink="http://www.w3.org/1999/xlink"), 
+                     attrs = c(version = '1.1', onload="init(evt)", preserveAspectRatio="xMinYMin meet", viewBox=sprintf("0 0 %1.0f %1.0f",fig$w, fig$h)))
+
+add_ecmascript(svg_nd, text = ecmascript_supply_usage())
+g_id <- newXMLNode('g', parent = svg_nd, attrs = c(id="surface0"))
+
 a_id <- newXMLNode('g', parent = g_id, attrs = c('id' = "axes", opacity = '0'))
 dinosvg:::animate_attribute(a_id, attr_name = "opacity", 
                             begin = "indefinite", id = "visibleAxes", 
