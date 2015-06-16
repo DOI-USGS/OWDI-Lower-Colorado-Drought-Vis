@@ -110,10 +110,11 @@ svg <- clean_svg_doc(svg) %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', element = 'g', id = 'colorado-basin-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
   usage_bar_pictogram(values = sort(as.numeric(as.character(usage$LastFiveMean)),decreasing = T), scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-1", element = 'g', begin="pictogram-topfive-draw.end+1s", fill="freeze", dur="1s", values= "1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-2", element = 'g', begin="pictogram-topfive-draw.end+2s", fill="freeze", dur="1s", values= "1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-3", element = 'g', begin="pictogram-topfive-draw.end+3s", fill="freeze", dur="1s", values= "1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-4", element = 'g', begin="pictogram-topfive-draw.end+4s", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-1", element = 'g', id = 'pictogram-1-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-2", element = 'g', id = 'pictogram-2-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-3", element = 'g', id = 'pictogram-3-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-4", element = 'g', id = 'pictogram-4-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-5", element = 'g', id = 'pictogram-5-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
   add_animation(attr = 'opacity', parent_id='non-lo-co-states', id = 'remove-grey-states', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', id = 'remove-pictogram', element = 'g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   add_animation(attr = 'opacity', parent_id='co-river-polyline', id = 'remove-river', element = 'g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%

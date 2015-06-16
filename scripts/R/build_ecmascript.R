@@ -26,7 +26,9 @@ build_ecmascript <- function(){
                'document.getElementById("Nevada-move").beginElement();',
                'document.getElementById("mexico-move").beginElement();',
                'document.getElementById("Mexico-stroke").beginElement();',
-               'document.getElementById("Mexico-scale").beginElement();}'
+               'document.getElementById("Mexico-scale").beginElement();}',
+               'function highlightUser(user_id){',
+               'document.getElementById("pictogram-"+user_id+"-draw").beginElement();}'
                )
   
   
