@@ -114,3 +114,13 @@ add_animateTransform <- function(svg, attr = "transform", parent_id, element = '
   invisible(svg)
   
 }
+
+add_ecmascript <- function(svg, text){
+  svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
+  
+  newXMLNode('script', parent = svg_nd, attrs=c(type='text/ecmascript'), 
+             newXMLTextNode(text, cdata = TRUE))
+
+  invisible(svg)
+  
+}
