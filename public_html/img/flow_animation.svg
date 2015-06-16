@@ -1,22 +1,6 @@
+<?xml-stylesheet href="../css/main.css" type="text/css"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio= "xMinYMin meet" viewBox="0 0 800 700">
-  <style>
-                         
-                         text{
-                         font-size: 16px;
-                         cursor: default;
-                         font-family: Tahoma, Geneva, sans-serif;
-                         }
-                         .dater{
-                         font-size: 21px;
-                         }
-                         .tooltip{
-                         font-size: 12px;
-                         }
-                         .caption{
-                         font-size: 12px;
-                         font-family: Tahoma, Geneva, sans-serif;
-                         }
-                         </style>
+  
 						 
   <script type="text/ecmascript"><![CDATA[
                          
