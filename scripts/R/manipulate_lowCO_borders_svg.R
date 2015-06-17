@@ -20,7 +20,7 @@ clean_svg_doc <- function(svg, keep.attrs = c('viewBox','version')){
   svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
   attrs <- xmlAttrs(svg_nd[[1]])
   removeAttributes(svg_nd[[1]])
-  addAttributes(svg_nd[[1]], .attrs = c(preserveAspectRatio= "xMinYMin meet", attrs[keep.attrs]))
+  addAttributes(svg_nd[[1]], .attrs = c(preserveAspectRatio= "xMinYMin meet", onload='init(evt)', attrs[keep.attrs]))
   
   junk_nd <- xpathApply(svg, "//*[local-name()='rect']")
   g_nd <- xpathApply(svg, "//*[local-name()='g']")[[1]]

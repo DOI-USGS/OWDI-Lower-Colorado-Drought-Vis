@@ -27,6 +27,14 @@ ecmascript_mead_map <- function(){
                'document.getElementById("mexico-move").beginElement();',
                'document.getElementById("Mexico-stroke").beginElement();',
                'document.getElementById("Mexico-scale").beginElement();}',
+               'function resetStates(){',
+               'document.getElementById("California-reset").beginElement();',
+               'document.getElementById("Nevada-reset").beginElement();',
+               'document.getElementById("Arizona-reset").beginElement();',
+               'document.getElementById("Nevada-reset").beginElement();',
+               'document.getElementById("mexico-reset").beginElement();',
+               'document.getElementById("Mexico-stroke-reset").beginElement();',
+               'document.getElementById("Mexico-scale-reset").beginElement();}',
                'function highlightUser(user_id){',
                'document.getElementById("pictogram-"+user_id+"-draw").beginElement();}'
                )
