@@ -33,6 +33,14 @@ See [LC_HUCs_wMexico_20140820.shp.xml](../src_data/CO_WBD/LC_UC_HUCs_wMexico_201
 
 For the Upper Basin boundary, the Upper Colorado Region from the [NRCS HUC data](http://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/water/watersheds/?cid=nrcs143_021630) was used.
 
+##### Lower Colorado River Contract Service Area
+
+The service areas for Lower Colorado contractors were provided by Reclamation's [Water Administration Group](http://www.usbr.gov/lc/region/g4000/contracts/entitlements.html). These data are considered **provisional** by Reclamation. 
+
+[LC_Contracts_update2014](../src_data/LCContractSvcAreas) contain the contract service Areas for water contracts in the Lower Colorado Region. This database was developed based on the exisitng water contracts between Reclamation and the individual water users on the River. The Service Areas of present perfected rights are also included in this database.
+
+[water_account](R/water_account.R) use these boundaries to depict where use is occuring in the Lower Basin.
+
 ***Still Need Documentation*** 
 * LowerCO
 * WBDHU2
