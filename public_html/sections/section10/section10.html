@@ -8,6 +8,8 @@
 
 <script>
 	(function() {
+		owdiDrought.meadObjectSVG = null;
+		
 		owdiDrought.create = function () {
 			new ScrollMagic.Scene({
 				triggerElement: '#meadSVGContainer', duration: 100
@@ -19,11 +21,76 @@
 			
 			var a = document.getElementById('mead-object');
 			var meadObject = function(){ 
-				meadObjectSVG = a.getSVGDocument();
-				meadObjectSVG.drawRiver();
+				owdiDrought.meadObjectSVG = a.getSVGDocument();
 			}
 		};
 		
+		//Draw River
+		new ScrollMagic.Scene({
+			triggerElement: '#container10',
+			duration: 600
+		})
+		.on("start", function (e) {
+				owdiDrought.meadObjectSVG.drawRiver();
+			})
+		.offset(500)
+		.setPin('#container10')
+		.addTo(window.owdiDrought.SMController)
+		.addIndicators();
+		
+		//Draw Basin
+		new ScrollMagic.Scene({
+			triggerElement: '#container10',
+			duration: 600
+		})
+		.on("start", function (e) {
+				owdiDrought.meadObjectSVG.drawBasin();
+			})
+		.offset(1100)
+		.setPin('#container10')
+		.addTo(window.owdiDrought.SMController)
+		.addIndicators();
+		
+		//Draw Pictogram
+		new ScrollMagic.Scene({
+			triggerElement: '#container10',
+			duration: 600
+		})
+		.on("start", function (e) {
+				owdiDrought.meadObjectSVG.drawPictogram();
+			})
+		.offset(1700)
+		.setPin('#container10')
+		.addTo(window.owdiDrought.SMController)
+		.addIndicators();
+		
+		//Remove GreyStates, River, Pictogram
+		new ScrollMagic.Scene({
+			triggerElement: '#container10',
+			duration: 600
+		})
+		.on("start", function (e) {
+				owdiDrought.meadObjectSVG.removeGreyStates();
+				owdiDrought.meadObjectSVG.removeRiver();
+				owdiDrought.meadObjectSVG.removePictogram();
+			})
+		.offset(2300)
+		.setPin('#container10')
+		.addTo(window.owdiDrought.SMController)
+		.addIndicators();
+		
+		//Move States
+		new ScrollMagic.Scene({
+			triggerElement: '#container10',
+			duration: 600
+		})
+		.on("start", function (e) {
+				owdiDrought.meadObjectSVG.moveStates();
+			})
+		.offset(2900)
+		.setPin('#container10')
+		.addTo(window.owdiDrought.SMController)
+		.addIndicators()
 			
 	})();	
 </script>

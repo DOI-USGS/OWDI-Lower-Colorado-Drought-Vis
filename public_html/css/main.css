@@ -91,6 +91,7 @@ text{
     -o-background-size: cover;
 	background-repeat:no-repeat;
 	height:100%;
+	margin-bottom:2400px;
 	}
 	
 /*=====keynote css=====*/	
@@ -350,9 +351,13 @@ text{
 		width:960px;
 		}
 	
-	#JrGraph,
-	#meadSVGContainer{
+	#JrGraph{
 		width:1024px;
+		margin:0 auto;
+		}
+		
+	#meadSVGContainer{
+		width:760px;
 		margin:0 auto;
 		}
 	
