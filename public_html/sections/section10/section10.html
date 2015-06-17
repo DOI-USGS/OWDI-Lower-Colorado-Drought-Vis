@@ -8,15 +8,14 @@
 
 <script>
 	(function() {
-		window.owdiDrought.create = function () {
+		owdiDrought.create = function () {
 			new ScrollMagic.Scene({
 				triggerElement: '#meadSVGContainer', duration: 100
 			})
 			.on("enter", function (e) {
 				meadObject();
 			})
-			.addTo(window.owdiDrought.SMController)
-			.addIndicators();
+			.addTo(window.owdiDrought.SMController);
 			
 			var a = document.getElementById('mead-object');
 			var meadObject = function(){ 
