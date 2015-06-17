@@ -107,17 +107,21 @@ svg <- clean_svg_doc(svg) %>%
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
   add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="indefinite", fill="freeze", dur="5s", values="331;0;") %>%
+  add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-reset', begin="indefinite", fill="freeze", dur="1s", values="0;331;") %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', element = 'g', id = 'colorado-basin-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
   usage_bar_pictogram(values = sort(as.numeric(as.character(usage$LastFiveMean)),decreasing = T), scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
+  add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-reset', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   add_animation(attr = 'opacity', parent_id="picto-usage-1", element = 'g', id = 'pictogram-1-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
   add_animation(attr = 'opacity', parent_id="picto-usage-2", element = 'g', id = 'pictogram-2-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
   add_animation(attr = 'opacity', parent_id="picto-usage-3", element = 'g', id = 'pictogram-3-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
   add_animation(attr = 'opacity', parent_id="picto-usage-4", element = 'g', id = 'pictogram-4-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
   add_animation(attr = 'opacity', parent_id="picto-usage-5", element = 'g', id = 'pictogram-5-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
   add_animation(attr = 'opacity', parent_id='non-lo-co-states', id = 'remove-grey-states', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id='non-lo-co-states', id = 'reset-grey-states', element='g', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', id = 'remove-pictogram', element = 'g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   add_animation(attr = 'opacity', parent_id='co-river-polyline', id = 'remove-river', element = 'g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id='co-river-polyline', id = 'reset-river', element = 'g', begin="indefinite", fill="freeze", dur="1s", values= "1") %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', id = 'remove-basin',element = 'g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   add_animateTransform(parent_id = 'California', id = 'California-move', begin="indefinite", type = 'translate', fill="freeze", from="0 0", to="-10 -20", dur="1s") %>%
   add_animateTransform(parent_id = 'California', id = 'California-reset', begin="indefinite", type = 'translate', fill="freeze", from="-10 -20", to="0 0", dur="1s") %>%
