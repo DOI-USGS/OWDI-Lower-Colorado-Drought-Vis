@@ -1,74 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio= "xMinYMin meet" viewBox="0 0 800 700">
-  <style>
-                         
-                         text{
-                         font-size: 16px;
-                         cursor: default;
-                         font-family: Tahoma, Geneva, sans-serif;
-                         }
-                         .dater{
-                         font-size: 21px;
-                         }
-                         .tooltip{
-                         font-size: 12px;
-                         }
-                         .caption{
-                         font-size: 12px;
-                         font-family: Tahoma, Geneva, sans-serif;
-                         }
-                         </style>
-						 
-  <script type="text/ecmascript"><![CDATA[
-                         
-                         function init(evt)
-{
-                         if ( window.svgDocument == null )
-{
-                         svgDocument = evt.target.ownerDocument;
-                         svgDocument.timeAdvance = this.timeAdvance;
-                         svgDocument.visibleAxes = this.visibleAxes;
-}
-                         
-                         legend = svgDocument.getElementById("legend");
-}
-                         function legendViz(evt,elementname)
-                         {
-                          var r = document.getElementById(elementname).r.animVal.value
-
-                          if (r === 0){
-                            legend.setAttributeNS(null,"visibility","hidden");
-                          } else {
-                            legend.setAttributeNS(null,"visibility","visible");
-                          }
-
-}
-                         function highlightViz(evt,elementname,opacity)
-{
-                          var r = document.getElementById(elementname).r.animVal.value
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio="xMinYMin meet" viewBox="0 0 900 600">
+  <script type="text/ecmascript"><![CDATA[function init(evt)
+  {
+  if ( window.svgDocument == null )
+  {
+    svgDocument = evt.target.ownerDocument;
+    svgDocument.timeAdvance = this.timeAdvance;
+    svgDocument.visibleAxes = this.visibleAxes;
+  }
   
-                          if (r === 0){
-                            evt.target.setAttribute("fill-opacity", "0.0");
-                          } else {
-                            evt.target.setAttribute("fill-opacity", opacity);
-                          }
-                            
-}
-
-                         function ChangeText(evt, elementname, legendtext)
-{
-                         textelement = svgDocument.getElementById(elementname);                      
-                         textelement.firstChild.data = legendtext;
-} 
-                         function timeAdvance(){
-  							          var ele = document.getElementById("timeAdvance");
-								          ele.beginElement();
-                         }
-                         function visibleAxes(){
-  							          var ele = document.getElementById("visibleAxes");
-								          ele.beginElement();
-							           }
-                         ]]></script>
-                         
+  legend = svgDocument.getElementById("legend");
+  }
+  function legendViz(evt,elementname)
+  {
+  var r = document.getElementById(elementname).r.animVal.value
+  
+  if (r === 0){
+    legend.setAttributeNS(null,"visibility","hidden");
+  } else {
+    legend.setAttributeNS(null,"visibility","visible");
+  }
+  
+  }
+  function highlightViz(evt,elementname,opacity)
+  {
+  var r = document.getElementById(elementname).r.animVal.value
+  
+  if (r === 0){
+    evt.target.setAttribute("fill-opacity", "0.0");
+  } else {
+    evt.target.setAttribute("fill-opacity", opacity);
+  }
+  
+  }
+  
+  function ChangeText(evt, elementname, legendtext)
+  {
+  textelement = svgDocument.getElementById(elementname);                      
+  textelement.firstChild.data = legendtext;
+  } 
+  function timeAdvance(){
+    var ele = document.getElementById("timeAdvance");
+    ele.beginElement();
+  }
+  function visibleAxes(){
+    var ele = document.getElementById("visibleAxes");
+    ele.beginElement();
+  }]]></script>
   <g id="surface0">
     <g id="axes" opacity="0">
       <animate attributeName="opacity" begin="indefinite" id="visibleAxes" fill="freeze" dur="1s" from="0" to="1"/>

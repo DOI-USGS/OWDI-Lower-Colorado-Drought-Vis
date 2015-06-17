@@ -9,12 +9,29 @@ nav{
 	
 nav h3{color:#fff;}
 
+/*=====SVG CSS=====*/
+
+text{
+	font-size: 16px;
+   	cursor: default;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    }
+.dater{
+    font-size: 21px;
+    }
+.tooltip{
+    font-size: 12px;
+    }
+.caption{
+    font-size: 12px;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    }
+
 /*=====Container CSS=====*/
 .container {
 	margin:0 0 100px 0;
 	padding: 15px;
 	text-align:center;
-	position:relative;
 	}
 	
 
@@ -65,7 +82,7 @@ nav h3{color:#fff;}
 	height:100%;
 	}
 	
-#container9{
+#container10{
 	background-image:url('../img/meadbg.jpg');
 	background-position: center center;
 	background-size:cover;
@@ -112,9 +129,15 @@ nav h3{color:#fff;}
 	
 /*=====Container Content CSS=====*/
 
+.section{
+	position:relative;
+	height:100%;
+	}
+
 .sectionContent{
 	min-height:100px;
 	text-align:center;
+	margin-bottom:30px;
 	}
 	
 .sectionContent h3,
@@ -158,6 +181,10 @@ nav h3{color:#fff;}
 	border:1px solid #003366;
 	border-radius:5px;
 	margin-top:20px;
+	}
+	
+.spacer{
+	margin-bottom:100px;
 	}
 	
 .white{
@@ -226,6 +253,7 @@ nav h3{color:#fff;}
 	#container3,
 	#container5,
 	#container7{
+		-webkit-background-size: cover;
 		background-attachment: fixed;
 		}
 		
@@ -292,7 +320,7 @@ nav h3{color:#fff;}
 	}
 	
 	#meadSVGContainer object{
-		margin-left:10%;
+		margin-left:0%;
 	}
 	
 }

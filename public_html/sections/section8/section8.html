@@ -1,29 +1,38 @@
 <div class="widget">
-
-	<h2>The Blue Dragon Rawr</h2>
-	
-	<div id="blueDragon">
-    
-    	<img src="../../img/bluedragon-texas/dragon0verview.png"/>
-        
-        <div class="picDescription">
-        	<p>Add text Here</p>
-        </div>
-        
-        <img src="../../img/bluedragon-texas/davisdam.png"/>
-        
-        <div class="picDescription">
-        	<p>Add text Here</p>
-        </div>
-        
-        <img src="../../img/bluedragon-texas/hooverdam.png"/>
-        
-        <div class="picDescription">
-        	<p>Add text Here</p>
-        </div>
-    
+	<div class="sectionContent">
+    	<p>Since the early 1900’s, water use in the Colorado River basin has increased while water supply is, on average, decreasing. The storage capacity available on the Colorado River system has meant that we’ve been able to meet water demands during this sustained drought of the last 15 years. However, water use during the drought has exceeded supplies into the system, drawing down the stored reserves. </p>
+        <button class="supportinginfo spacer">Supporting Info</button>
     </div>
-    
-    <button class="interact">Interact Here</button>
-
+	<div id="JrGraph">
+		<h2 id="jrsGraph">Water supply and consumptive use in the Colorado River Basin</h2>
+		<object id="animated-object" data="img/flow_animation.svg" type="image/svg+xml"></object>
+    </div>
 </div>
+</div>
+
+<script>
+	(function() {
+		var scene = new ScrollMagic.Scene({
+			triggerElement: '#JrGraph', duration: 100
+		})
+		.on("enter", function (e) {
+			animation();
+		})
+		.addTo(window.owdiDrought.SMController);
+		
+		
+		var animationContainer = document.getElementById('animated-object');
+		var triggered = false;
+		var animation = function () {
+			animationSVG = animationContainer.getSVGDocument();
+                    
+			if (!triggered) {           
+                            animationSVG.visibleAxes();
+                            triggered = true;
+			}
+		}		
+	})();
+	
+	
+	
+</script>
