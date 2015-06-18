@@ -15,6 +15,7 @@ picto_scale = 100000 # acre-feet per bin
 grey_simp_tol <- 1.3*simp_tol # less res for non-highlighted states
 min_area <- 1e+10
 epsg_code <- '+init=epsg:3479' #5070 for USGS CONUS albers?
+declaration <- '<?xml-stylesheet type="text/css" href="../css/main.css" ?>'
 
 ylim <- c(-1806051, 1654371) # in epsg_code
 xlim <- c(-3193054, 5512372)
@@ -156,5 +157,6 @@ svg <- clean_svg_doc(svg) %>%
   add_animation(attr = 'stroke-width', parent_id="Mexico", id = 'Mexico-stroke-reset', begin="indefinite", fill="freeze", dur="1s", to= "2.5") %>% # to original stroke 
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale', begin="indefinite", type = 'scale', fill="freeze", from = '1', to="0.55", dur="1s") %>%
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale-reset', begin="indefinite", type = 'scale', fill="freeze", to="1", dur="1s") %>%
-  toString.XMLNode() %>%
-  cat(file = svg_file, append = FALSE)
+  toString.XMLNode()
+
+cat(c(svg, declaration), file = svg_file, append = FALSE)
