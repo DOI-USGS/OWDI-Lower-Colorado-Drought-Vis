@@ -14,6 +14,7 @@ ecmascript_mead_map <- function(){
                'svgDocument.resetBasin = this.resetBasin;',
                'svgDocument.removePictogram = this.removePictogram;',
                'svgDocument.moveStates = this.moveStates;',
+               'svgDocument.highlightUser = this.highlightUser;',
                'svgDocument.resetStates = this.resetStates;}',
                
                '}',
@@ -66,7 +67,8 @@ ecmascript_mead_map <- function(){
                'document.getElementById("Mexico-scale-reset").beginElement();}',
                
                'function highlightUser(user_id){',
-               'document.getElementById("pictogram-"+user_id+"-draw").beginElement();}'
+               'document.getElementById("pictogram-"+user_id+"-draw").beginElement();',
+               'document.getElementById("user-"+user_id+"-draw").beginElement();}'
                )
   
   
