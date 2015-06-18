@@ -123,7 +123,7 @@ document.getElementById("user-"+user_id+"-draw").beginElement();}]]></script>
     <animate attributeName="opacity" id="colorado-basin-draw" begin="indefinite" fill="freeze" dur="1s" values="0;1"/>
     <animate attributeName="opacity" id="remove-basin" begin="indefinite" fill="freeze" dur="1s" to="0"/>
   </g>
-  <g id="top-users" fill="#0066CC" fill-opacity="0.5" stroke-width="2.5" stroke="#B22C2C" stroke-linejoin="round">
+  <g id="top-users" fill="#E6E600" fill-opacity="0.75" stroke-width="2.5" stroke="#E6E600" stroke-linejoin="round">
     <path id="usage-1" d="M 239.960938 205.539062 L 246.929688 206.460938 L 251.808594 206.417969 L 251.699219 208.09375 L 252.511719 208.121094 L 253.09375 210.113281 L 252.847656 211.660156 L 255.71875 214.71875 L 256.9375 213.148438 L 263.589844 227.585938 L 266.132812 224.253906 L 269.386719 223.117188 L 269.757812 253.691406 L 257.035156 253.929688 L 257.074219 258.195312 L 253.441406 258.230469 L 253.453125 260.21875 L 218.378906 247.28125 L 218.929688 206.304688 L 229.199219 206.402344 L 237.335938 208.910156 L 239.285156 205.449219 Z " opacity="0">
       <animate attributeName="opacity" id="user-1-draw" begin="indefinite" fill="freeze" dur="2s" values="0;1;0"/>
     </path>
@@ -168,27 +168,27 @@ document.getElementById("user-"+user_id+"-draw").beginElement();}]]></script>
     <g id="picto-usage-1">
       <rect x="0" y="-392" width="14" height="196" style="stroke:none;fill:url(#empty-picto-pattern);"/>
       <rect x="0" y="-379.0891" width="14" height="183.0891" style="stroke:none;fill:url(#full-picto-pattern);"/>
-      <animate attributeName="opacity" id="pictogram-1-draw" begin="indefinite" fill="freeze" dur="1s" values="1;0;1"/>
+      <animate attributeName="opacity" id="pictogram-1-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
     </g>
     <g id="picto-usage-2">
       <rect x="14" y="-238" width="14" height="42" style="stroke:none;fill:url(#empty-picto-pattern);"/>
       <rect x="14" y="-233.58" width="14" height="37.58" style="stroke:none;fill:url(#full-picto-pattern);"/>
-      <animate attributeName="opacity" id="pictogram-2-draw" begin="indefinite" fill="freeze" dur="1s" values="1;0;1"/>
+      <animate attributeName="opacity" id="pictogram-2-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
     </g>
     <g id="picto-usage-3">
       <rect x="28" y="-224" width="14" height="28" style="stroke:none;fill:url(#empty-picto-pattern);"/>
       <rect x="28" y="-218.9277" width="14" height="22.9277" style="stroke:none;fill:url(#full-picto-pattern);"/>
-      <animate attributeName="opacity" id="pictogram-3-draw" begin="indefinite" fill="freeze" dur="1s" values="1;0;1"/>
+      <animate attributeName="opacity" id="pictogram-3-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
     </g>
     <g id="picto-usage-4">
       <rect x="42" y="-224" width="14" height="28" style="stroke:none;fill:url(#empty-picto-pattern);"/>
       <rect x="42" y="-215.56709" width="14" height="19.56709" style="stroke:none;fill:url(#full-picto-pattern);"/>
-      <animate attributeName="opacity" id="pictogram-4-draw" begin="indefinite" fill="freeze" dur="1s" values="1;0;1"/>
+      <animate attributeName="opacity" id="pictogram-4-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
     </g>
     <g id="picto-usage-5">
       <rect x="56" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);"/>
       <rect x="56" y="-204.40058" width="14" height="8.40058" style="stroke:none;fill:url(#full-picto-pattern);"/>
-      <animate attributeName="opacity" id="pictogram-5-draw" begin="indefinite" fill="freeze" dur="1s" values="1;0;1"/>
+      <animate attributeName="opacity" id="pictogram-5-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
     </g>
     <g id="picto-usage-6">
       <rect x="70" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);"/>
