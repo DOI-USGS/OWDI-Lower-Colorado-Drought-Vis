@@ -4,17 +4,22 @@ ecmascript_mead_map <- function(){
                'if ( window.svgDocument == null ) {',
                'svgDocument = evt.target.ownerDocument;',
                'svgDocument.drawRiver = this.drawRiver;',
+               'svgDocument.showRiver = this.showRiver;',
                'svgDocument.drawBasin = this.drawBasin;',
                'svgDocument.drawPictogram = this.drawPictogram;',
                'svgDocument.removeGreyStates = this.removeGreyStates;',
                'svgDocument.resetGreyStates = this.resetGreyStates;',
                'svgDocument.removeRiver = this.removeRiver;',
+               'svgDocument.resetRiver = this.resetRiver;',
+               'svgDocument.resetBasin = this.resetBasin;',
                'svgDocument.removePictogram = this.removePictogram;',
                'svgDocument.moveStates = this.moveStates;',
                'svgDocument.resetStates = this.resetStates;}',
                
                '}',
-
+               'function showRiver(){',
+               'document.getElementById("show-river").beginElement();}',
+               
                'function drawRiver(){',
                'document.getElementById("colorado-river-draw").beginElement();}',
                'function resetRiver(){',
@@ -23,6 +28,8 @@ ecmascript_mead_map <- function(){
                
                'function drawBasin(){',
                'document.getElementById("colorado-basin-draw").beginElement();}',
+               'function resetBasin(){',
+               'document.getElementById("remove-basin").beginElement();}',
                
                'function drawPictogram(){',
                'document.getElementById("pictogram-topfive-draw").beginElement();}',
