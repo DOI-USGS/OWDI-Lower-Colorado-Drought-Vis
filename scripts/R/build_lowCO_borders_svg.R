@@ -18,6 +18,7 @@ epsg_code <- '+init=epsg:3479' #5070 for USGS CONUS albers?
 
 ylim <- c(-1806051, 1654371) # in epsg_code
 xlim <- c(-3193054, 5512372)
+top_users <- paste0('usage-',c(1:5))
 lo_co_states <- c("California","Nevada","Arizona")
 keep_non <- c("Texas","Utah","Colorado","New Mexico","Oregon","Wyoming","Oklahoma","Nebraska","Kansas")
 
@@ -27,6 +28,7 @@ mexico_styles = c('fill'='#FFFFFF', 'fill-opacity'='0.2', 'stroke-width'='2.5', 
 co_river_styles = c('fill'='none', 'stroke-width'='4.5', 'stroke'='#0066CC', 'stroke-linejoin'="round", 
                     'style'="stroke-dasharray:331;stroke-linejoin:round;stroke-dashoffset:331;stroke-linecap:round")
 co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", opacity = '0')
+top_user_styles = c('fill'='#E6E600', 'fill-opacity'='0.75', 'stroke-width'='2.5', 'stroke'='#E6E600', 'stroke-linejoin'="round")
 pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', opacity = '0')
 
 mexico = readOGR(dsn = "src_data/mexico",layer="MEX_adm0") %>%
@@ -36,7 +38,9 @@ mexico = readOGR(dsn = "src_data/mexico",layer="MEX_adm0") %>%
 states = readOGR(dsn = "src_data/states_21basic",layer="states") 
 rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="CRB_Rivers")
 usage = readOGR("public_html/data/wat_acc_sp.geojson", "OGRGeoJSON")
-
+contracts = readOGR("src_data/LCContractSvcAreas", layer = 'LC_Contacts_update2014')
+ 
+sorted_contracts <- sort(contracts$CU,decreasing = T, index.return = T)
 co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
 co_basin = readOGR("public_html/data/lc_huc_simp.geojson", "OGRGeoJSON")
@@ -57,6 +61,7 @@ for(i in 1:length(mainPolys)){
 
 svg(filename = svg_file,width=width, height=height)
 par(omi=c(0,0,0,0),mai=c(0,0,0,0))
+
 
 # this keeps the svg paths in explicit order, for easy finding later
 for (state in keep_non){
@@ -95,29 +100,44 @@ spTransform(co_basin, CRS(epsg_code)) %>%
   gSimplify(simp_tol) %>%
   plot(add=TRUE)
 
+for (i in 1:5){
+  cont <- spTransform(contracts[sorted_contracts$ix[i],], CRS(epsg_code))
+  if (i != 4){
+    cont <- gSimplify(cont, simp_tol)
+  }
+  plot(cont, add=TRUE)
+}
 
+non_zero_cont <- contracts$CU[sorted_contracts$ix]
+non_zero_cont <- non_zero_cont[non_zero_cont!=0]
 dev.off()
 
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- clean_svg_doc(svg) %>%
   add_ecmascript(ecmascript_mead_map()) %>%
-  name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Colorado-river','Colorado-river-basin')) %>%
-  group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = 'Colorado-river-basin')) %>%
+  name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Colorado-river','Colorado-river-basin',top_users)) %>%
+  group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = 'Colorado-river-basin', 'top-users' = top_users)) %>%
   group_svg_elements(groups = c(lo_co_states,'Mexico','Colorado-river','Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
-  attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
+  attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles, 'top-users'=top_user_styles)) %>%
+  attr_svg_paths(attrs = list('usage-1'=c(opacity = '0'), 'usage-2'=c(opacity = '0'), 'usage-3'=c(opacity = '0'), 'usage-4'=c(opacity = '0'), 'usage-5'=c(opacity = '0'))) %>%
   add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="indefinite", fill="freeze", dur="5s", values="331;0;") %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-reset', begin="indefinite", fill="freeze", dur="1s", values="0;331") %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', element = 'g', id = 'colorado-basin-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
-  usage_bar_pictogram(values = sort(as.numeric(as.character(usage$LastFiveMean)),decreasing = T), scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
+  usage_bar_pictogram(values = non_zero_cont, scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-reset', begin="indefinite", fill="freeze", dur="1s", to= "0") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-1", element = 'g', id = 'pictogram-1-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-2", element = 'g', id = 'pictogram-2-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-3", element = 'g', id = 'pictogram-3-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-4", element = 'g', id = 'pictogram-4-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-5", element = 'g', id = 'pictogram-5-draw', begin="indefinite", fill="freeze", dur="1s", values= "1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-1", element = 'g', id = 'pictogram-1-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id=top_users[1], element = 'path', id = 'user-1-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-2", element = 'g', id = 'pictogram-2-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id=top_users[2], element = 'path', id = 'user-2-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-3", element = 'g', id = 'pictogram-3-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id=top_users[3], element = 'path', id = 'user-3-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-4", element = 'g', id = 'pictogram-4-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id=top_users[4], element = 'path', id = 'user-4-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
+  add_animation(attr = 'opacity', parent_id="picto-usage-5", element = 'g', id = 'pictogram-5-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
+  add_animation(attr = 'opacity', parent_id=top_users[5], element = 'path', id = 'user-5-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
   add_animation(attr = 'opacity', parent_id='non-lo-co-states', id = 'remove-grey-states', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   add_animation(attr = 'opacity', parent_id='non-lo-co-states', id = 'reset-grey-states', element='g', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', id = 'remove-pictogram', element = 'g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
