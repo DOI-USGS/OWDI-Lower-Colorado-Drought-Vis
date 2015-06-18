@@ -28,11 +28,17 @@
 		//Draw River
 		new ScrollMagic.Scene({
 			triggerElement: '#container10',
-			duration: 600
+			duration: 600,
+                        
 		})
 		.on("start", function (e) {
-				owdiDrought.meadObjectSVG.drawRiver();
-			})
+                    if (e.scrollDirection === "FORWARD") {
+                        owdiDrought.meadObjectSVG.drawRiver();
+                    }
+                    else {
+                        owdiDrought.meadObjectSVG.resetRiver(); 
+                    }
+                })       
 		.offset(500)
 		.setPin('#container10')
 		.addTo(window.owdiDrought.SMController)
@@ -44,7 +50,13 @@
 			duration: 600
 		})
 		.on("start", function (e) {
-				owdiDrought.meadObjectSVG.drawBasin();
+                    if (e.scrollDirection === "FORWARD") {
+                        owdiDrought.meadObjectSVG.drawBasin();
+                    }
+                    else {
+                        owdiDrought.meadObjectSVG.resetBasin(); 
+                    }
+				
 			})
 		.offset(1100)
 		.setPin('#container10')
@@ -57,7 +69,12 @@
 			duration: 600
 		})
 		.on("start", function (e) {
-				owdiDrought.meadObjectSVG.drawPictogram();
+                    if (e.scrollDirection === "FORWARD") {
+                        owdiDrought.meadObjectSVG.drawPictogram();
+                    }
+                    else {
+                        owdiDrought.meadObjectSVG.removePictogram();
+                    }
 			})
 		.offset(1700)
 		.setPin('#container10')
@@ -70,9 +87,18 @@
 			duration: 600
 		})
 		.on("start", function (e) {
-				owdiDrought.meadObjectSVG.removeGreyStates();
-				owdiDrought.meadObjectSVG.removeRiver();
-				owdiDrought.meadObjectSVG.removePictogram();
+                    if (e.scrollDirection === "FORWARD") {
+                        owdiDrought.meadObjectSVG.removeGreyStates();
+			owdiDrought.meadObjectSVG.removeRiver();
+			owdiDrought.meadObjectSVG.removePictogram();
+                    }
+                    else {
+                        owdiDrought.meadObjectSVG.resetGreyStates();
+                        owdiDrought.meadObjectSVG.drawPictogram();
+                        owdiDrought.meadObjectSVG.drawBasin();
+                        owdiDrought.meadObjectSVG.showRiver();
+                    }
+				
 			})
 		.offset(2300)
 		.setPin('#container10')
@@ -85,7 +111,12 @@
 			duration: 600
 		})
 		.on("start", function (e) {
-				owdiDrought.meadObjectSVG.moveStates();
+                    if (e.scrollDirection === "FORWARD") {
+                        owdiDrought.meadObjectSVG.moveStates();
+                    }
+                    else {
+                        owdiDrought.meadObjectSVG.resetStates();
+                    }
 			})
 		.offset(2900)
 		.setPin('#container10')
