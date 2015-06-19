@@ -8,13 +8,16 @@
 	<title>HTML5 basic skeleton</title>
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
-   	<link href='//fonts.googleapis.com/css?family=Roboto:400,500,700,100,300' rel='stylesheet' type='text/css'>
+    <link href="css/before-after.css" rel="stylesheet" type="text/css">
+   	<link href="//fonts.googleapis.com/css?family=Roboto:400,500,700,100,300" rel="stylesheet" type="text/css">
     <link href="css/dygraph.css" rel="stylesheet" type="text/css">
+    
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    
 <!--Natural Flow History Chart-->
     <script type="text/javascript" src="js/htmlwidgets-0.3.2/htmlwidgets.js"></script>
 	<script type="text/javascript" src="js/dygraphs-1.0.1/dygraph-combined.js"></script>
@@ -23,7 +26,14 @@
 	<script type="text/javascript" src="js/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
 	<script type="text/javascript" src="js/dygraphs-binding-0.4.3/dygraphs.js"></script>
     <script type="text/javascript" src="js/natural_flow.js" language="javascript" ></script>
-
+    
+<!--Before After JS-->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>	
+    <script type="text/javascript" src="js/before-after.js"></script>	
+    
+    
+    
 	<!-- populate sections -->
 	<script type="text/javascript">
 		mkTemplate = function(section) {
@@ -40,12 +50,19 @@
 			window.owdiDrought = window.owdiDrought || {};
 			window.owdiDrought.SMController = new ScrollMagic.Controller();
 			
-			for (var sIdx = 1;sIdx < 11;sIdx++) {
+			for (var sIdx = 1;sIdx < 17;sIdx++) {
 				var ajax = mkTemplate("section" + sIdx);
 				
-				if (sIdx === 4) {
+				if (sIdx === 5) {
 					ajax.done(function (data) {
 						owdiDrought.createDygraph("natural-flow-graph");	
+					})
+				
+				}
+				
+				if (sIdx === 13) {
+					ajax.done(function (data) {
+						owdiDrought.slider.sliderInit();	
 					})
 				}
 			}
@@ -126,6 +143,30 @@
             <div id="container10" class="container">
 				<section id="section10" class="section"></section>
             </div>
+            
+            <div id="container11" class="container">
+				<section id="section11" class="section"></section>
+            </div>
+            
+            <div id="container12" class="container">
+				<section id="section12" class="section"></section>
+            </div>
+            
+            <div id="container13" class="container">
+				<section id="section13" class="section"></section>
+            </div>
+            
+            <div id="container14" class="container">
+				<section id="section14" class="section"></section>
+            </div>
+            
+            <div id="container15" class="container">
+				<section id="section15" class="section"></section>
+            </div>
+            
+            <div id="container16" class="container">
+				<section id="section16" class="section"></section>
+            </div>
               
 	
     
@@ -165,9 +206,7 @@
 
 <!-- END USGS Footer Template -->
 
-
-      	
-		
+	
 
 </body>
 </html>
