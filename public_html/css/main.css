@@ -49,7 +49,7 @@ text{
 	padding:0;
 	}
 	
-#container3{
+#container2{
 	background-image:url('../img/keynotes/keynote2-mobile.jpg');
 	background-position: center center;
 	background-size:cover;
@@ -60,7 +60,7 @@ text{
 	height:100%;
 	}
 	
-#container5{
+#container4{
 	background-image:url('../img/keynotes/keynote3-mobile.jpg');
 	background-position: center center;
 	background-size:cover;
@@ -71,7 +71,7 @@ text{
 	height:100%;
 	}
 	
-#container7{
+#container6{
 	background-image:url('../img/keynotes/keynote4-mobile.jpg');
 	background-position: center center;
 	background-size:cover;
@@ -82,8 +82,8 @@ text{
 	height:100%;
 	}
 	
-#container10{
-	background-image:url('../img/meadbg.jpg');
+#container8{
+	background-image:url('../img/keynotes/keynote5-mobile.jpg');
 	background-position: center center;
 	background-size:cover;
 	-webkit-background-size: cover;
@@ -91,7 +91,53 @@ text{
     -o-background-size: cover;
 	background-repeat:no-repeat;
 	height:100%;
-	margin-bottom:2400px;
+	}
+	
+#container10{
+	background-image:url('../img/keynotes/keynote6-mobile.jpg');
+	background-position: center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat:no-repeat;
+	height:100%;
+	}
+	
+#container12{
+	background-image:url('../img/keynotes/keynote7-mobile.jpg');
+	background-position: center center;
+	background-position: center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat:no-repeat;
+	height:100%;
+	}
+	
+#container14{
+	background-image:url('../img/keynotes/keynote8-mobile.jpg');
+	background-position: center center;
+	background-position: center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat:no-repeat;
+	height:100%;
+	}
+	
+#container16{
+	background-image:url('../img/keynotes/keynote8-mobile.jpg');
+	background-position: center center;
+	background-position: center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat:no-repeat;
+	height:100%;
 	}
 	
 /*=====keynote css=====*/	
@@ -101,15 +147,7 @@ text{
 	min-height:100px;
 	margin:auto;
 	position:absolute;
-	top:30%;bottom:0;left:0;right:0;
-	}
-	
-#keynote3{
-	top:2%;
-	}
-	
-#keynote4{
-	top:15%;
+	top:25%;bottom:0;left:0;right:0;
 	}
 	
 .keynote h1,
@@ -121,7 +159,7 @@ text{
 	}
 	
 .keynote h1{
-	font-size:7vw;
+	font-size:6vw;
 	}
 	
 .keynote h2{
@@ -134,7 +172,7 @@ text{
 	position:relative;
 	height:100%;
 	}
-
+	
 .sectionContent{
 	min-height:100px;
 	text-align:center;
@@ -210,7 +248,7 @@ text{
 #blueDragon img{
 		width:100%;
 		height:auto;
-		margin-bottom:5pxpx;
+		margin-bottom:5px;
 		}
 		
 #blueDragon img:first-child{
@@ -237,6 +275,10 @@ text{
 	margin-left:10%;
 	}
 	
+.cd-image-container{
+	margin-top:25px;
+	}
+	
 @media screen and (min-width:687px){
 	
 	nav{
@@ -251,9 +293,13 @@ text{
 		}
 		
 	#container1,
-	#container3,
-	#container5,
-	#container7{
+	#container2,
+	#container4,
+	#container6,
+	#container8,
+	#container10,
+	#container12,
+	#container14{
 		-webkit-background-size: cover;
 		background-attachment: fixed;
 		}
@@ -262,27 +308,38 @@ text{
 		background-image:url('../img/keynotes/welcome.jpg');
 		}
 		
-	#container3{
+	#container2{
 		background-image:url('../img/keynotes/keynote2.jpg');
 		}
 		
-	#container5{
+	#container4{
 		background-image:url('../img/keynotes/keynote3.jpg');
 		}
 		
-	#container7{
+	#container6{
 		background-image:url('../img/keynotes/keynote4.jpg');
 		}
+		
+	#container8{
+		background-image:url('../img/keynotes/keynote5.jpg');
+		}
+		
+	#container10{
+		background-image:url('../img/keynotes/keynote6.jpg');
+		}
+		
+	#container12{
+		background-image:url('../img/keynotes/keynote7.jpg');
+		}
+		
+	#container14{
+		background-image:url('../img/keynotes/keynote8.jpg');
+		}
 /*======keynote CSS======*/
-	.keynote,
-	#keynote3,
-	#keynote4{
-		top:25%;
+	.keynote{
+		top:35%;
 	}
 	
-	#keynote1{
-		top:35%;
-		}
 	
 	.keynote h1,
 	.keynote h2{
@@ -348,7 +405,7 @@ text{
 		}
 		
 	#blueDragon img{
-		width:960px;
+		width:900px;
 		}
 	
 	#JrGraph{
