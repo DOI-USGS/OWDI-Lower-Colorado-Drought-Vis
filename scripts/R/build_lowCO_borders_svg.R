@@ -6,6 +6,7 @@ library(XML)
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 source('scripts/R/build_usage_pictogram.R')
 source('scripts/R/build_ecmascript.R')
+source('scripts/R/build_mead_levels.R')
 width=7.5
 height=7.6
 plot_dir = 'public_html/img'
@@ -116,6 +117,7 @@ dev.off()
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- clean_svg_doc(svg) %>%
+  add_rect(width="540", height="547", fill='grey', opacity='0.2') %>%
   add_ecmascript(ecmascript_mead_map()) %>%
   name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Colorado-river','Colorado-river-basin',top_users)) %>%
   group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = 'Colorado-river-basin', 'top-users' = top_users)) %>%
@@ -126,7 +128,9 @@ svg <- clean_svg_doc(svg) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="indefinite", fill="freeze", dur="5s", values="331;0;") %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-reset', begin="indefinite", fill="freeze", dur="1s", values="0;331") %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', element = 'g', id = 'colorado-basin-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
+  
   usage_bar_pictogram(values = non_zero_cont, scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
+  add_mead_levels() %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-reset', begin="indefinite", fill="freeze", dur="1s", to= "0") %>%
   add_animation(attr = 'opacity', parent_id="picto-usage-1", element = 'g', id = 'pictogram-1-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
@@ -157,7 +161,6 @@ svg <- clean_svg_doc(svg) %>%
   add_animation(attr = 'stroke-width', parent_id="Mexico", id = 'Mexico-stroke-reset', begin="indefinite", fill="freeze", dur="1s", to= "2.5") %>% # to original stroke 
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale', begin="indefinite", type = 'scale', fill="freeze", from = '1', to="0.55", dur="1s") %>%
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale-reset', begin="indefinite", type = 'scale', fill="freeze", to="1", dur="1s") %>%
-  add_rect(width="540", height="547", fill='grey', opacity='0.2') %>%
   toString.XMLNode()
 
 cat(c(svg, declaration), file = svg_file, append = FALSE)
