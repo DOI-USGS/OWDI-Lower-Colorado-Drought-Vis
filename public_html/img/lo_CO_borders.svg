@@ -251,8 +251,14 @@ document.getElementById("user-"+user_id+"-draw").beginElement();}]]></script>
     <animate attributeName="opacity" id="remove-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
   <g id="Mead-2D">
-    <rect x="280" y="20" width="255" height="430" fill="#0066CC" stroke="none" clip-path="url(#Mead-clip)"/>
-    <path d="M 535 20 L 535 450 L 400 450 L280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF"/>
+    <rect id="Mead-water-level" x="280" y="20" width="255" height="430" fill="#0066CC" stroke="none" clip-path="url(#Mead-clip)">
+      <animate attributeName="y" id="Mead-surplus" begin="1s" fill="freeze" dur="2s" to="200"/>
+      <animate attributeName="y" id="Mead-normal" begin="5s" fill="freeze" dur="2s" to="300"/>
+      <animate attributeName="y" id="Mead-shortage-1" begin="9s" fill="freeze" dur="2s" to="350"/>
+      <animate attributeName="y" id="Mead-shortage-2" begin="13s" fill="freeze" dur="2s" to="380"/>
+      <animate attributeName="y" id="Mead-shortage-3" begin="17s" fill="freeze" dur="2s" to="400"/>
+    </rect>
+    <path id="Mead-2D-boundary" d="M 535 20 L 535 450 L 400 450 L280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF"/>
   </g>
 </svg>
   <?xml-stylesheet type="text/css" href="../css/main.css" ?>
