@@ -279,6 +279,14 @@ text{
 	margin-top:25px;
 	}
 	
+.supportingInfoContent{
+	background:rgba(0,51,102,.2);
+	display:none;
+	padding:15px;
+	color:#000;
+	margin:-40px 0 40px 0;
+	}
+	
 @media screen and (min-width:687px){
 	
 	nav{
@@ -374,7 +382,23 @@ text{
 	}
 	
 	#JrGraph h2{
-	font-size:1.5em;
+		font-size:1.5em;
+	}
+	
+	.SVGInfo{
+		background:rgba(0,51,102,.3);
+		width:480px;
+		min-height:100px;
+		padding:10px;
+		margin:0 auto;
+		color:#fff;
+		text-align:left;
+		position:absolute;
+		bottom:10px;
+		right:10px;
+		border-radius:5px;
+		line-height:1.7em;
+		display:none;
 	}
 	
 	#meadSVGContainer object{

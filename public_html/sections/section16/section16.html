@@ -3,6 +3,15 @@
 		<h2>Mead SVG Dealio</h2>
 		<object id="mead-object" data="img/lo_CO_borders.svg" type="image/svg+xml" onload="window.owdiDrought.create()"></object>
 	</div>
+    
+    <div class="SVGInfo" id="info1">
+    	<p>Suspendisse fermentum convallis porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin condimentum dictum justo a dapibus. Praesent nec libero nec ipsum ultricies posuere. Duis in pretium est. Etiam gravida pulvinar tellus vitae finibus</p>
+    </div>
+    
+    <div class="SVGInfo" id="info2">
+    	<p>Nunc cursus et diam quis eleifend. Cras venenatis velit quis mattis pulvinar. Cras hendrerit id erat at consequat. Aenean quis interdum leo. Nullam eget massa ultrices magna condimentum interdum.</p>
+    </div>
+    
 </div>
 
 <script>
@@ -32,12 +41,21 @@
 		})
 		.on("start", function (e) {
                     if (e.scrollDirection === "FORWARD") {
+						$('#info1').fadeIn('slow');
                         owdiDrought.meadObjectSVG.drawRiver();
+                    }else {
+						$('#info1').fadeOut('slow');
+                        owdiDrought.meadObjectSVG.resetRiver();	
                     }
-                    else {
-                        owdiDrought.meadObjectSVG.resetRiver(); 
-                    }
-                })       
+                })
+				
+		.on("end", function(e){
+			if(e.scrollDirection === "FORWARD"){
+				$('#info1').fadeOut("slow");
+			}else{
+				$('#info1').fadeIn("slow");
+				}
+		})    
 		.offset(500)
 		.setPin('#container16')
 		.addTo(window.owdiDrought.SMController)
@@ -50,13 +68,23 @@
 		})
 		.on("start", function (e) {
                     if (e.scrollDirection === "FORWARD") {
+						$('#info2').fadeIn('slow').delay(200);
                         owdiDrought.meadObjectSVG.drawBasin();
                     }
                     else {
+						$('#info2').fadeOut('slow');
                         owdiDrought.meadObjectSVG.resetBasin(); 
                     }
 				
 			})
+			
+		.on("end", function(e){
+			if(e.scrollDirection === "FORWARD"){
+				$('#info2').fadeOut("slow");
+			}else{
+				$('#info2').fadeIn("slow");
+				}
+			})    
 		.offset(1100)
 		.setPin('#container16')
 		.addTo(window.owdiDrought.SMController)
