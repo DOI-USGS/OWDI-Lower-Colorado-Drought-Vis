@@ -265,7 +265,7 @@ document.getElementById("user-"+user_id+"-draw").beginElement();}]]></script>
       <animate attributeName="y" id="Mead-shortage-3" begin="17s" fill="freeze" dur="2s" to="356.521739130435"/>
     </rect>
     <path id="Mead-2D-border" d="M 535 20 L 535 450 L 400 450 L 280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round"/>
-    <animate attributeName="opacity" id="mead-draw" begin="indefinite" fill="freeze" dur="1s" values="0;1"/>
+    <animate attributeName="opacity" id="mead-draw" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
     <animate attributeName="opacity" id="mead-remove" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
 </svg>

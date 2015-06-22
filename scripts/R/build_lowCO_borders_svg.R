@@ -136,7 +136,7 @@ svg <- clean_svg_doc(svg) %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', element = 'g', id = 'colorado-basin-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
   usage_bar_pictogram(values = non_zero_cont, scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
-  add_animation(attr = 'opacity', parent_id=mead_names[['group_id']], element = 'g', id = 'mead-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
+  add_animation(attr = 'opacity', parent_id=mead_names[['group_id']], element = 'g', id = 'mead-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.5;1") %>%
   add_animation(attr = 'opacity', parent_id=mead_names[['group_id']], element = 'g', id = 'mead-remove', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-surplus', begin="1s", fill="freeze", dur='2s', to=mead_yvals[2]) %>%
   add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-normal', begin="5s", fill="freeze", dur='2s', to=mead_yvals[3]) %>%
