@@ -8,10 +8,12 @@ svgDocument = evt.target.ownerDocument;
 svgDocument.drawRiver = this.drawRiver;
 svgDocument.showRiver = this.showRiver;
 svgDocument.drawBasin = this.drawBasin;
+svgDocument.drawMead = this.drawMead;
 svgDocument.drawPictogram = this.drawPictogram;
 svgDocument.removeGreyStates = this.removeGreyStates;
 svgDocument.resetGreyStates = this.resetGreyStates;
 svgDocument.removeRiver = this.removeRiver;
+svgDocument.removeMead = this.removeMead;
 svgDocument.resetRiver = this.resetRiver;
 svgDocument.resetBasin = this.resetBasin;
 svgDocument.removePictogram = this.removePictogram;
@@ -21,6 +23,10 @@ svgDocument.resetStates = this.resetStates;}
 }
 function showRiver(){
 document.getElementById("show-river").beginElement();}
+function drawMead(){
+document.getElementById("mead-draw").beginElement();}
+function removeMead(){
+document.getElementById("mead-remove").beginElement();}
 function drawRiver(){
 document.getElementById("colorado-river-draw").beginElement();}
 function resetRiver(){
@@ -102,7 +108,7 @@ document.getElementById("user-"+user_id+"-draw").beginElement();}]]></script>
     </g>
     <g>
       <path id="Arizona" d="M 197.757812 226.210938 L 195.238281 225.914062 L 194.433594 224.710938 L 195.121094 221.117188 L 194.128906 220.300781 L 194.714844 219.339844 L 194.375 218.101562 L 195.777344 217.972656 L 197.878906 215.078125 L 197.820312 212.511719 L 198.546875 211.992188 L 198.289062 206.613281 L 199.878906 205.300781 L 200.242188 203.785156 L 205.273438 200.347656 L 204.332031 198.390625 L 201.007812 196.335938 L 201.042969 194.726562 L 200.078125 193.398438 L 199.597656 191.066406 L 196.898438 187.527344 L 196.882812 184.046875 L 197.558594 183.351562 L 196.890625 182.441406 L 197.996094 182.023438 L 198.257812 180.351562 L 196.496094 174.117188 L 197.105469 172.136719 L 196.339844 169.574219 L 196.890625 166.496094 L 195.6875 164.21875 L 195.882812 162.167969 L 197.722656 161.046875 L 199.277344 160.8125 L 200.726562 161.566406 L 201.8125 160.964844 L 204.246094 163.800781 L 206.03125 163.355469 L 207.667969 159.746094 L 207.917969 143.417969 L 268.164062 143.730469 L 291.710938 143.089844 L 295.085938 261.296875 L 258.746094 262.074219 L 192.140625 237.371094 L 192.433594 234.683594 L 194.210938 232.242188 L 196.699219 232.257812 L 198.707031 230.046875 L 198.652344 227.277344 Z ">
-        <animateTransform attributeName="transform" attributeType="XML" id="Arizona-move" begin="indefinite" type="translate" fill="freeze" from="0 0" to="-8 -17" dur="1s"/>
+        <animateTransform attributeName="transform" attributeType="XML" id="Arizona-move" begin="indefinite" type="translate" fill="freeze" from="0 0" to="-8 12" dur="1s"/>
         <animateTransform attributeName="transform" attributeType="XML" id="Arizona-reset" begin="indefinite" type="translate" fill="freeze" to="0 0" dur="1s"/>
       </path>
     </g>
@@ -154,7 +160,7 @@ document.getElementById("user-"+user_id+"-draw").beginElement();}]]></script>
       <circle r="300" stroke="none" fill="url(#Gradient)" cx="300" cy="200"/>
     </mask>
     <clipPath id="Mead-clip">
-      <path d="M 535 20 L 535 450 L 400 450 L280 20" stroke="none"/>
+      <path d="M 535 20 L 535 450 L 400 450 L 280 20" stroke="none"/>
     </clipPath>
   </defs>
   <defs>
@@ -250,15 +256,17 @@ document.getElementById("user-"+user_id+"-draw").beginElement();}]]></script>
     <animate attributeName="opacity" id="pictogram-topfive-reset" begin="indefinite" fill="freeze" dur="1s" to="0"/>
     <animate attributeName="opacity" id="remove-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
-  <g id="Mead-2D">
+  <g id="Mead-2D" opacity="0">
     <rect id="Mead-water-level" x="280" y="20" width="255" height="430" fill="#0066CC" stroke="none" clip-path="url(#Mead-clip)">
-      <animate attributeName="y" id="Mead-surplus" begin="1s" fill="freeze" dur="2s" to="200"/>
-      <animate attributeName="y" id="Mead-normal" begin="5s" fill="freeze" dur="2s" to="300"/>
-      <animate attributeName="y" id="Mead-shortage-1" begin="9s" fill="freeze" dur="2s" to="350"/>
-      <animate attributeName="y" id="Mead-shortage-2" begin="13s" fill="freeze" dur="2s" to="380"/>
-      <animate attributeName="y" id="Mead-shortage-3" begin="17s" fill="freeze" dur="2s" to="400"/>
+      <animate attributeName="y" id="Mead-surplus" begin="1s" fill="freeze" dur="2s" to="90.1086956521739"/>
+      <animate attributeName="y" id="Mead-normal" begin="5s" fill="freeze" dur="2s" to="197.608695652174"/>
+      <animate attributeName="y" id="Mead-shortage-1" begin="9s" fill="freeze" dur="2s" to="300.434782608696"/>
+      <animate attributeName="y" id="Mead-shortage-2" begin="13s" fill="freeze" dur="2s" to="330.036231884058"/>
+      <animate attributeName="y" id="Mead-shortage-3" begin="17s" fill="freeze" dur="2s" to="356.521739130435"/>
     </rect>
-    <path id="Mead-2D-boundary" d="M 535 20 L 535 450 L 400 450 L280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF"/>
+    <path id="Mead-2D-border" d="M 535 20 L 535 450 L 400 450 L 280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round"/>
+    <animate attributeName="opacity" id="mead-draw" begin="indefinite" fill="freeze" dur="1s" values="0;1"/>
+    <animate attributeName="opacity" id="mead-remove" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
 </svg>
   <?xml-stylesheet type="text/css" href="../css/main.css" ?>
