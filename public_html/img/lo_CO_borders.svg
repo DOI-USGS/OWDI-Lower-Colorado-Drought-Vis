@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="../css/main.css" ?>   
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet" onload="init(evt)" viewBox="0 0 540 547" version="1.1">
   <g id="delete_group"/>
+  <rect width="540" height="547" fill="grey" opacity="0.2"/>
   <script type="text/ecmascript"><![CDATA[function init(evt){
 if ( window.svgDocument == null ) {
 svgDocument = evt.target.ownerDocument;
 svgDocument.drawRiver = this.drawRiver;
 svgDocument.showRiver = this.showRiver;
 svgDocument.drawBasin = this.drawBasin;
+svgDocument.drawMead = this.drawMead;
 svgDocument.drawPictogram = this.drawPictogram;
 svgDocument.removeGreyStates = this.removeGreyStates;
 svgDocument.resetGreyStates = this.resetGreyStates;
 svgDocument.removeRiver = this.removeRiver;
+svgDocument.removeMead = this.removeMead;
 svgDocument.resetRiver = this.resetRiver;
 svgDocument.resetBasin = this.resetBasin;
 svgDocument.removePictogram = this.removePictogram;
@@ -21,6 +23,10 @@ svgDocument.resetStates = this.resetStates;}
 }
 function showRiver(){
 document.getElementById("show-river").beginElement();}
+function drawMead(){
+document.getElementById("mead-draw").beginElement();}
+function removeMead(){
+document.getElementById("mead-remove").beginElement();}
 function drawRiver(){
 document.getElementById("colorado-river-draw").beginElement();}
 function resetRiver(){
@@ -140,25 +146,25 @@ if(element.getAttribute("attributeName") === "transform") {
         <animateTransform attributeName="transform" attributeType="XML" id="Mexico-scale-reset" begin="indefinite" type="scale" fill="freeze" to="1" dur="1s"/>
       </path>
     </g>
-    <animateTransform attributeName="transform" attributeType="XML" id="mexico-move" begin="indefinite" type="translate" fill="freeze" from="0 0" to="0 95" dur="1s"/>
+    <animateTransform attributeName="transform" attributeType="XML" id="mexico-move" begin="indefinite" type="translate" fill="freeze" from="0 0" to="-70 95" dur="1s"/>
     <animateTransform attributeName="transform" attributeType="XML" id="mexico-reset" begin="indefinite" type="translate" fill="freeze" to="0 0" dur="1s"/>
   </g>
   <g id="lo-co-states" fill="#FFFFFF" fill-opacity="0.2" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round">
     <g>
       <path id="California" d="M 72.160156 109.933594 L 72.21875 111.179688 L 70.289062 109.601562 L 69.664062 110.542969 L 68.671875 110.4375 L 68.105469 109.578125 L 68.84375 111.050781 L 68.152344 112.390625 L 69.140625 113.265625 L 68.214844 114.25 L 68.507812 116.355469 L 67.523438 116.5 L 65.21875 114.429688 L 64.769531 114.644531 L 62.878906 112.007812 L 61.292969 111.332031 L 60.601562 112.097656 L 59.710938 111.910156 L 61.300781 108.71875 L 60.75 105.585938 L 59.84375 105.539062 L 59 102.464844 L 56.386719 99.710938 L 50.425781 90.886719 L 51.378906 88.511719 L 50.101562 81.804688 L 51.636719 77.644531 L 51.058594 71.699219 L 47.703125 65.378906 L 44.113281 61.617188 L 44.484375 60.058594 L 43.902344 57.667969 L 50.050781 46.917969 L 49.859375 43.664062 L 51.652344 39.957031 L 52.296875 36.960938 L 51.746094 31.121094 L 50.34375 29.859375 L 51.59375 25.308594 L 117.453125 33.40625 L 111.640625 96.164062 L 197.078125 184.953125 L 196.898438 187.527344 L 199.597656 191.066406 L 200.078125 193.398438 L 201.042969 194.726562 L 201.007812 196.335938 L 204.332031 198.390625 L 205.273438 200.347656 L 200.242188 203.785156 L 199.878906 205.300781 L 198.289062 206.613281 L 198.546875 211.992188 L 197.820312 212.511719 L 197.878906 215.078125 L 195.777344 217.972656 L 194.375 218.101562 L 194.714844 219.339844 L 194.128906 220.300781 L 195.121094 221.117188 L 194.433594 224.710938 L 195.238281 225.914062 L 197.757812 226.210938 L 198.652344 227.277344 L 198.707031 230.046875 L 197.542969 230.761719 L 197.457031 231.566406 L 196.128906 232.476562 L 194.542969 232.117188 L 151.304688 234.796875 L 150.222656 230.910156 L 151.503906 233.398438 L 151.515625 231.804688 L 150.261719 230.480469 L 149.324219 231.671875 L 148.851562 228.054688 L 149.429688 227.308594 L 148.371094 222.566406 L 147.066406 219.925781 L 135.449219 208.484375 L 133.035156 207.78125 L 132.242188 209.203125 L 130.21875 208.351562 L 130.285156 205.316406 L 128.230469 201.9375 L 123.90625 202.050781 L 121.296875 201.414062 L 116.625 198.847656 L 115.886719 196.859375 L 112.335938 193.714844 L 110.257812 192.679688 L 105.664062 192.570312 L 103.292969 191.179688 L 101.074219 190.785156 L 95.53125 190.941406 L 94.746094 189.207031 L 92.546875 187.941406 L 93.476562 185.238281 L 93.058594 184.019531 L 93.640625 182.046875 L 92.730469 180.949219 L 93.894531 177.433594 L 93.644531 176.03125 L 89.929688 174.234375 L 90.109375 169.628906 L 88.160156 168.839844 L 85.847656 164.964844 L 83.796875 164.042969 L 83.070312 161.058594 L 81.238281 159.210938 L 77.707031 152.46875 L 74.703125 149.488281 L 74.070312 143.566406 L 74.941406 142.433594 L 75.617188 143.199219 L 76.699219 142.453125 L 77.871094 138.949219 L 76.125 135.726562 L 73.097656 135.714844 L 71.328125 134.390625 L 67.824219 128.9375 L 68.519531 126.605469 L 67.945312 123.839844 L 66.972656 122.804688 L 67.71875 117.359375 L 69.402344 117.003906 L 70.113281 118.855469 L 69.621094 121.257812 L 73.773438 125.058594 L 75.703125 125.09375 L 73.816406 124.113281 L 72.582031 118.921875 L 70.808594 117.804688 L 71.15625 115.433594 L 70.132812 114.945312 L 70.148438 113.582031 L 71.644531 112.871094 L 76.640625 112.527344 L 81.574219 113.773438 L 82.394531 112.535156 L 83.753906 112.507812 L 84.175781 113.199219 L 84.226562 111.640625 L 82.390625 112.3125 L 82.457031 110.773438 L 80.285156 112.71875 L 78.300781 112.375 L 77.097656 110.828125 L 72.828125 111.808594 Z M 72.121094 109.820312 L 71.765625 108.820312 L 71.351562 109.039062 Z M 126.546875 213.535156 L 130.535156 215.257812 L 131.429688 217.492188 L 128.789062 216.960938 L 128.457031 214.949219 L 127.15625 214.550781 Z M 129.972656 227.667969 L 128.734375 227.867188 L 125.84375 223.167969 L 126.359375 222.882812 Z M 105.148438 199.484375 L 108.554688 200.882812 L 110.273438 200.289062 L 111.101562 200.796875 L 110.773438 201.363281 L 107.683594 202 L 105.335938 201.753906 L 104.664062 200.933594 L 104.972656 200.386719 L 104.078125 199.738281 Z M 99.664062 202.238281 L 98.566406 200.316406 L 101.96875 199.953125 L 103.269531 202.027344 L 100.632812 202.933594 Z ">
-        <animateTransform attributeName="transform" attributeType="XML" id="California-move" begin="indefinite" type="translate" fill="freeze" from="0 0" to="-10 -20" dur="1s"/>
-        <animateTransform attributeName="transform" attributeType="XML" id="California-reset" begin="indefinite" type="translate" fill="freeze" from="-10 -20" to="0 0" dur="1s"/>
+        <animateTransform attributeName="transform" attributeType="XML" id="California-move" begin="indefinite" type="translate" fill="freeze" from="0 0" to="-40 -20" dur="1s"/>
+        <animateTransform attributeName="transform" attributeType="XML" id="California-reset" begin="indefinite" type="translate" fill="freeze" to="0 0" dur="1s"/>
       </path>
     </g>
     <g>
       <path id="Nevada" d="M 124.453125 109.53125 L 111.640625 96.164062 L 117.453125 33.40625 L 164.347656 36.90625 L 210.464844 38.835938 L 207.667969 159.746094 L 206.03125 163.355469 L 204.699219 163.835938 L 203.007812 162.855469 L 202.890625 161.820312 L 201.8125 160.964844 L 200.726562 161.566406 L 199.277344 160.8125 L 197.722656 161.046875 L 195.882812 162.167969 L 195.6875 164.21875 L 196.890625 166.496094 L 196.339844 169.574219 L 197.105469 172.136719 L 196.496094 174.117188 L 198.257812 180.351562 L 197.996094 182.023438 L 196.890625 182.441406 L 197.558594 183.351562 L 196.882812 184.046875 L 197.078125 184.953125 Z ">
-        <animateTransform attributeName="transform" attributeType="XML" id="Nevada-move" begin="indefinite" type="translate" fill="freeze" from="0 0" to="7 -32" dur="1s"/>
+        <animateTransform attributeName="transform" attributeType="XML" id="Nevada-move" begin="indefinite" type="translate" fill="freeze" from="0 0" to="-23 -32" dur="1s"/>
         <animateTransform attributeName="transform" attributeType="XML" id="Nevada-reset" begin="indefinite" type="translate" fill="freeze" to="0 0" dur="1s"/>
       </path>
     </g>
     <g>
       <path id="Arizona" d="M 197.757812 226.210938 L 195.238281 225.914062 L 194.433594 224.710938 L 195.121094 221.117188 L 194.128906 220.300781 L 194.714844 219.339844 L 194.375 218.101562 L 195.777344 217.972656 L 197.878906 215.078125 L 197.820312 212.511719 L 198.546875 211.992188 L 198.289062 206.613281 L 199.878906 205.300781 L 200.242188 203.785156 L 205.273438 200.347656 L 204.332031 198.390625 L 201.007812 196.335938 L 201.042969 194.726562 L 200.078125 193.398438 L 199.597656 191.066406 L 196.898438 187.527344 L 196.882812 184.046875 L 197.558594 183.351562 L 196.890625 182.441406 L 197.996094 182.023438 L 198.257812 180.351562 L 196.496094 174.117188 L 197.105469 172.136719 L 196.339844 169.574219 L 196.890625 166.496094 L 195.6875 164.21875 L 195.882812 162.167969 L 197.722656 161.046875 L 199.277344 160.8125 L 200.726562 161.566406 L 201.8125 160.964844 L 204.246094 163.800781 L 206.03125 163.355469 L 207.667969 159.746094 L 207.917969 143.417969 L 268.164062 143.730469 L 291.710938 143.089844 L 295.085938 261.296875 L 258.746094 262.074219 L 192.140625 237.371094 L 192.433594 234.683594 L 194.210938 232.242188 L 196.699219 232.257812 L 198.707031 230.046875 L 198.652344 227.277344 Z ">
-        <animateTransform attributeName="transform" attributeType="XML" id="Arizona-move" begin="indefinite" type="translate" fill="freeze" from="0 0" to="22 -17" dur="1s"/>
+        <animateTransform attributeName="transform" attributeType="XML" id="Arizona-move" begin="indefinite" type="translate" fill="freeze" from="0 0" to="-8 12" dur="1s"/>
         <animateTransform attributeName="transform" attributeType="XML" id="Arizona-reset" begin="indefinite" type="translate" fill="freeze" to="0 0" dur="1s"/>
       </path>
     </g>
@@ -209,6 +215,9 @@ if(element.getAttribute("attributeName") === "transform") {
     <mask id="mexico-mask">
       <circle r="300" stroke="none" fill="url(#Gradient)" cx="300" cy="200"/>
     </mask>
+    <clipPath id="Mead-clip">
+      <path d="M 535 20 L 535 450 L 400 450 L 280 20" stroke="none"/>
+    </clipPath>
   </defs>
   <defs>
     <pattern id="empty-picto-pattern" width="14" height="14" patternUnits="userSpaceOnUse">
@@ -303,5 +312,17 @@ if(element.getAttribute("attributeName") === "transform") {
     <animate attributeName="opacity" id="pictogram-topfive-reset" begin="indefinite" fill="freeze" dur="1s" to="0"/>
     <animate attributeName="opacity" id="remove-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
+  <g id="Mead-2D" opacity="0">
+    <rect id="Mead-water-level" x="280" y="20" width="255" height="430" fill="#0066CC" stroke="none" clip-path="url(#Mead-clip)">
+      <animate attributeName="y" id="Mead-surplus" begin="1s" fill="freeze" dur="2s" to="90.1086956521739"/>
+      <animate attributeName="y" id="Mead-normal" begin="5s" fill="freeze" dur="2s" to="197.608695652174"/>
+      <animate attributeName="y" id="Mead-shortage-1" begin="9s" fill="freeze" dur="2s" to="300.434782608696"/>
+      <animate attributeName="y" id="Mead-shortage-2" begin="13s" fill="freeze" dur="2s" to="330.036231884058"/>
+      <animate attributeName="y" id="Mead-shortage-3" begin="17s" fill="freeze" dur="2s" to="356.521739130435"/>
+    </rect>
+    <path id="Mead-2D-border" d="M 535 20 L 535 450 L 400 450 L 280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round"/>
+    <animate attributeName="opacity" id="mead-draw" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
+    <animate attributeName="opacity" id="mead-remove" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
+  </g>
 </svg>
- 
+  <?xml-stylesheet type="text/css" href="../css/main.css" ?>
