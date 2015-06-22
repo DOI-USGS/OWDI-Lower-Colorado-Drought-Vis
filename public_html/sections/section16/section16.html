@@ -229,9 +229,11 @@
 		.on("start", function (e) {
                     if (e.scrollDirection === "FORWARD") {
                         owdiDrought.meadObjectSVG.moveStates();
+                        owdiDrought.meadObjectSVG.drawMead();
                     }
                     else {
                         owdiDrought.meadObjectSVG.resetStates();
+                        owdiDrought.meadObjectSVG.removeMead();
                     }
 			})
 		.offset(4400)
