@@ -138,11 +138,11 @@ svg <- clean_svg_doc(svg) %>%
   add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
   add_animation(attr = 'opacity', parent_id=mead_names[['group_id']], element = 'g', id = 'mead-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.5;1") %>%
   add_animation(attr = 'opacity', parent_id=mead_names[['group_id']], element = 'g', id = 'mead-remove', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
-  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-surplus', begin="1s", fill="freeze", dur='2s', to=mead_yvals[2]) %>%
-  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-normal', begin="5s", fill="freeze", dur='2s', to=mead_yvals[3]) %>%
-  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-shortage-1', begin="9s", fill="freeze", dur='2s', to=mead_yvals[4]) %>%
-  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-shortage-2', begin="13s", fill="freeze", dur='2s', to=mead_yvals[5]) %>%
-  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-shortage-3', begin="17s", fill="freeze", dur='2s', to=mead_yvals[6]) %>%
+  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-surplus', begin="indefinite", fill="freeze", dur='1s', to=mead_yvals[2]) %>%
+  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-normal', begin="indefinite", fill="freeze", dur='1s', to=mead_yvals[3]) %>%
+  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-shortage-1', begin="indefinite", fill="freeze", dur='1s', to=mead_yvals[4]) %>%
+  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-shortage-2', begin="indefinite", fill="freeze", dur='1s', to=mead_yvals[5]) %>%
+  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-shortage-3', begin="indefinite", fill="freeze", dur='1s', to=mead_yvals[6]) %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-reset', begin="indefinite", fill="freeze", dur="1s", to= "0") %>%
   add_animation(attr = 'opacity', parent_id="picto-usage-1", element = 'g', id = 'pictogram-1-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%

@@ -75,7 +75,10 @@ ecmascript_mead_map <- function(){
                
                'function highlightUser(user_id){',
                'document.getElementById("pictogram-"+user_id+"-draw").beginElement();',
-               'document.getElementById("user-"+user_id+"-draw").beginElement();}'
+               'document.getElementById("user-"+user_id+"-draw").beginElement();}',
+               
+               'function setMeadCondition(storage_id){',
+               'document.getElementById("Mead-"+storage_id).beginElement();}'
                )
   
   
