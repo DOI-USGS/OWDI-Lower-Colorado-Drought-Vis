@@ -36,7 +36,7 @@
 		//Draw River
 		new ScrollMagic.Scene({
 			triggerElement: '#container16',
-			duration: 600,
+			duration: 300,
                         
 		})
 		.on("start", function (e) {
@@ -56,7 +56,7 @@
 				$('#info1').fadeIn("slow");
 				}
 		})    
-		.offset(500)
+		.offset(200)
 		.setPin('#container16')
 		.addTo(window.owdiDrought.SMController)
 		.addIndicators();
@@ -64,11 +64,11 @@
 		//Draw Basin
 		new ScrollMagic.Scene({
 			triggerElement: '#container16',
-			duration: 600
+			duration: 300
 		})
 		.on("start", function (e) {
                     if (e.scrollDirection === "FORWARD") {
-						$('#info2').fadeIn('slow').delay(200);
+						$('#info2').fadeIn('slow');
                         owdiDrought.meadObjectSVG.drawBasin();
                     }
                     else {
@@ -85,7 +85,7 @@
 				$('#info2').fadeIn("slow");
 				}
 			})    
-		.offset(1100)
+		.offset(500)
 		.setPin('#container16')
 		.addTo(window.owdiDrought.SMController)
 		.addIndicators();
@@ -93,7 +93,7 @@
 		//Draw Pictogram
 		new ScrollMagic.Scene({
 			triggerElement: '#container16',
-			duration: 600
+			duration: 300
 		})
 		.on("start", function (e) {
                     if (e.scrollDirection === "FORWARD") {
@@ -103,7 +103,7 @@
                         owdiDrought.meadObjectSVG.removePictogram();
                     }
 			})
-		.offset(1700)
+		.offset(800)
 		.setPin('#container16')
 		.addTo(window.owdiDrought.SMController)
 		.addIndicators();
@@ -121,7 +121,7 @@
                     }
 				
 			})
-		.offset(2300)
+		.offset(1100)
 		.setPin('#container16')
 		.addTo(window.owdiDrought.SMController)
 		.addIndicators();
@@ -139,7 +139,7 @@
                     }
 				
 			})
-		.offset(2600)
+		.offset(1400)
 		.setPin('#container16')
 		.addTo(window.owdiDrought.SMController)
 		.addIndicators();
@@ -157,7 +157,7 @@
                     }
 				
 			})
-		.offset(2900)
+		.offset(1700)
 		.setPin('#container16')
 		.addTo(window.owdiDrought.SMController)
 		.addIndicators();
@@ -175,7 +175,7 @@
                     }
 				
 			})
-		.offset(3200)
+		.offset(2000)
 		.setPin('#container16')
 		.addTo(window.owdiDrought.SMController)
 		.addIndicators();
@@ -193,14 +193,14 @@
                     }
 				
 			})
-		.offset(3500)
+		.offset(2300)
 		.setPin('#container16')
 		.addTo(window.owdiDrought.SMController)
 		.addIndicators();
 		//Remove GreyStates, River, Pictogram
 		new ScrollMagic.Scene({
 			triggerElement: '#container16',
-			duration: 600
+			duration: 300
 		})
 		.on("start", function (e) {
                     if (e.scrollDirection === "FORWARD") {
@@ -216,7 +216,7 @@
                     }
 				
 			})
-		.offset(3800)
+		.offset(2600)
 		.setPin('#container16')
 		.addTo(window.owdiDrought.SMController)
 		.addIndicators();
@@ -224,7 +224,7 @@
 		//Move States
 		new ScrollMagic.Scene({
 			triggerElement: '#container16',
-			duration: 600
+			duration: 300
 		})
 		.on("start", function (e) {
                     if (e.scrollDirection === "FORWARD") {
@@ -236,10 +236,10 @@
                         owdiDrought.meadObjectSVG.removeMead();
                     }
 			})
-		.offset(4400)
+		.offset(2900)
 		.setPin('#container16')
 		.addTo(window.owdiDrought.SMController)
 		.addIndicators()
 			
-	})();	
+	})();
 </script>

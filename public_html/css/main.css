@@ -271,10 +271,6 @@ text{
 	margin-bottom:30px;;
 	}
 	
-#meadSVGContainer object{
-	margin-left:10%;
-	}
-	
 .cd-image-container{
 	margin-top:25px;
 	}
@@ -285,6 +281,10 @@ text{
 	padding:15px;
 	color:#000;
 	margin:-40px 0 40px 0;
+	}
+	
+.SVGInfo{
+	display:none;
 	}
 	
 @media screen and (min-width:687px){
