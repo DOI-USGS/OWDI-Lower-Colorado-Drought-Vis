@@ -3,6 +3,7 @@
 /* global ScrollMagic */
 /* global owdiDrought */
 /* global Handlebars */
+/* global console */
 $(document).ready(function() {
     "use strict";
     window.owdiDrought = window.owdiDrought || {};
@@ -29,12 +30,12 @@ $(document).ready(function() {
                 });
             },
             templateLoadError = function () {
-                console.warn("Could not load the template for container " + this.containerId + ", section " + this.sectionId)
+                console.warn("Could not load the template for container " + this.containerId + ", section " + this.sectionId);
             },
             // Applies the Handlebars template to the designated container -> section
             applyTemplate = function(data) {
                 var template = Handlebars.compile(data);
-                
+
                 $("#" + this.containerId + " > #" + this.sectionId).html(template());
             },
             // In case anything needs to be initialized in a section, do that here using
