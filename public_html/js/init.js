@@ -19,7 +19,6 @@ $(document).ready(function() {
         var containers = $(".container"),
             // A deferred that is passed back to the caller and resolved when I've loaded all 
             // of the templates and applied them to the dom
-            $sections = $(".container > .section"),
             deferred = $.Deferred(),
             // Loads the Handlebars template and returns a deferred object to the caller.
             // The context is the passed-in container and section ids
@@ -91,5 +90,5 @@ $(document).ready(function() {
         // At this point, the DOM will have been built 
         // TODO: We will have an application overlay that needs to be removed. Do that here
         window.console.trace("Application loaded");
-    })
+    });
 });
