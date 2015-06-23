@@ -211,6 +211,8 @@ text{
 	margin-bottom:5px;
 	}
 	
+/*Supporting Info Buttons CSS*/
+	
 .supportinginfo,
 .interact{
 	background:none;
@@ -245,6 +247,17 @@ text{
 	color:#003366;
 	}
 	
+/*Supporting Info Content CSS*/
+.supportingInfoContent{
+	background:rgba(0,51,102,.2);
+	display:none;
+	padding:15px;
+	color:#000;
+	margin:-40px 0 40px 0;
+	}
+	
+/*Section 5 CSS*/
+	
 #blueDragon img{
 		width:100%;
 		height:auto;
@@ -262,10 +275,19 @@ text{
 	margin-bottom:10px;
 	}
 	
+/*Section 9 CSS*/
 #JrGraph h2{
 	font-size:1em;
 	}
+
 	
+/*Section 15 CSS*/
+	
+#mead-elev-object{
+	margin-top:40px;
+	}
+	
+/*Section 16 CSS*/	
 #meadSVGContainer h2{
 	color:#fff;
 	margin-bottom:30px;;
@@ -273,14 +295,6 @@ text{
 	
 .cd-image-container{
 	margin-top:25px;
-	}
-	
-.supportingInfoContent{
-	background:rgba(0,51,102,.2);
-	display:none;
-	padding:15px;
-	color:#000;
-	margin:-40px 0 40px 0;
 	}
 	
 .SVGInfo{
