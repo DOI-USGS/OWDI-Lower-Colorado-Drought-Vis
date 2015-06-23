@@ -75,7 +75,10 @@ ecmascript_mead_map <- function(){
                
                'function highlightUser(user_id){',
                'document.getElementById("pictogram-"+user_id+"-draw").beginElement();',
-               'document.getElementById("user-"+user_id+"-draw").beginElement();}'
+               'document.getElementById("user-"+user_id+"-draw").beginElement();}',
+               
+               'function setMeadCondition(storage_id){',
+               'document.getElementById("Mead-"+storage_id).beginElement();}'
                )
   
   
@@ -130,5 +133,24 @@ ecmascript_supply_usage <- function(){
     var ele = document.getElementById("visibleAxes");
     ele.beginElement();
   }'
+  
+}
+
+ecmascript_mead_proj <- function(){
+  
+  scripts <- c('function init(evt){',
+               'if ( window.svgDocument == null ) {',
+               'svgDocument = evt.target.ownerDocument;}',
+               '}',
+               "function ChangeText(evt, elementname, legendtext)
+               {
+               textelement = svgDocument.getElementById(elementname);                      
+               textelement.firstChild.data = legendtext;
+               }",
+               'function highlightEle(evt,opacity)
+               {
+                 evt.target.setAttribute("fill-opacity", opacity);
+               }')
+  
   
 }
