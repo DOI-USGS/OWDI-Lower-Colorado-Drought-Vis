@@ -100,7 +100,6 @@ dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset",
                             fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
 
 
-
 usage_id <- newXMLNode("g", 'parent' = g_id,
                      attrs = c('id' = "supply", style=paste0("fill:",supply_col), r = '0', visibility = 'hidden'))
 

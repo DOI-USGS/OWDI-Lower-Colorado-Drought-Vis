@@ -38,7 +38,7 @@ axes <- list('tick_len' = 5,
              'y_tk_label' = seq(1060,1130,10),
              'x_ticks' = seq(2009,2018,1),
              'x_tk_label' = seq(2009,2018,1),
-             'y_lim' = c(1060,1137),
+             'y_lim' = c(1055,1137),
              'x_lim' = c(2008.5,2018.25))
 
 
@@ -87,14 +87,37 @@ time_ids <- strftime(as.POSIXct(meadData$Timestep), '%Y-%m-%d')
 x <- sapply(x, FUN = function(x) dinosvg:::tran_x(x, axes, fig))
 y <- sapply(y, FUN = function(y) dinosvg:::tran_y(y, axes, fig))
 
-
 is.model <- meadData$Model != "Historical"
-line_nd <- dinosvg:::linepath(g_id, x[!is.model],y[!is.model],fill = 'none', 
+
+
+newXMLNode('rect',parent = g_id, attrs = c(id='ddddd',x = x[is.model][1], y = fig$px_lim$y[2], 
+                                           width=fig$px_lim$x[2]-x[is.model][1], height=fig$px_lim$y[1]-fig$px_lim$y[2], 
+                                                      fill='grey', opacity='0.2', stroke='none'))
+
+y_offset <- fig$px_lim$y[1]-40
+x_offset <- c(x[is.model][1] -4, x[is.model][1] + 14)
+
+newXMLNode("text", parent = g_id, newXMLTextNode('Historical'),
+           attrs = c(id="Historical-marker", 
+                     'transform'=sprintf("rotate(-90,%1.1f,%1.1f),translate(%1.1f,%1.1f)",x_offset[1],y_offset,x_offset[1],y_offset)))
+newXMLNode("text", parent = g_id, newXMLTextNode('Projected'),
+           attrs = c(id="Projected-marker", 
+                     'transform'=sprintf("rotate(-90,%1.1f,%1.1f),translate(%1.1f,%1.1f)",x_offset[2],y_offset,x_offset[2],y_offset)))
+
+dinosvg:::linepath(g_id, x[!is.model],y[!is.model],fill = 'none', 
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round",
                                              supply_col,line_width))
-line_nd <- dinosvg:::linepath(g_id, x[is.model],y[is.model],fill = 'none', 
+
+dinosvg:::linepath(g_id, c(x[is.model], rev(x[is.model])),
+                   c(y[is.model]+seq(length.out = length(y[is.model])), 
+                     rev(y[is.model]-seq(length.out = length(y[is.model])))),fill = '#99CCFF', 
+                   style ="stroke:none;",opacity='0.5')
+
+dinosvg:::linepath(g_id, x[is.model],y[is.model],fill = 'none', 
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-dasharray:6;stroke-linecap:round",
                                              '#555555',line_width))
+
+
 
 # -----
 width = 7 # FIX THIS!!!

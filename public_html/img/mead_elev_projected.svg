@@ -35,29 +35,33 @@ function highlightEle(evt,opacity)
     <text transform="translate(677.8,495.0)rotate(270)" text-anchor="end">2017</text>
     <line x1="742.6" y1="490.0" x2="742.6" y2="485.0" style="stroke:black;stroke-width:1.5"/>
     <text transform="translate(747.6,495.0)rotate(270)" text-anchor="end">2018</text>
-    <line x1="80.0" y1="490.0" x2="85.0" y2="490.0" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,495.0)rotate(0)" text-anchor="end">1060</text>
-    <line x1="80.0" y1="427.7" x2="85.0" y2="427.7" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,432.7)rotate(0)" text-anchor="end">1070</text>
-    <line x1="80.0" y1="365.3" x2="85.0" y2="365.3" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,370.3)rotate(0)" text-anchor="end">1080</text>
-    <line x1="80.0" y1="303.0" x2="85.0" y2="303.0" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,308.0)rotate(0)" text-anchor="end">1090</text>
-    <line x1="80.0" y1="240.6" x2="85.0" y2="240.6" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,245.6)rotate(0)" text-anchor="end">1100</text>
-    <line x1="80.0" y1="178.3" x2="85.0" y2="178.3" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,183.3)rotate(0)" text-anchor="end">1110</text>
-    <line x1="80.0" y1="116.0" x2="85.0" y2="116.0" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,121.0)rotate(0)" text-anchor="end">1120</text>
-    <line x1="80.0" y1="53.6" x2="85.0" y2="53.6" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,58.6)rotate(0)" text-anchor="end">1130</text>
+    <line x1="80.0" y1="460.7" x2="85.0" y2="460.7" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,465.7)rotate(0)" text-anchor="end">1060</text>
+    <line x1="80.0" y1="402.2" x2="85.0" y2="402.2" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,407.2)rotate(0)" text-anchor="end">1070</text>
+    <line x1="80.0" y1="343.7" x2="85.0" y2="343.7" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,348.7)rotate(0)" text-anchor="end">1080</text>
+    <line x1="80.0" y1="285.1" x2="85.0" y2="285.1" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,290.1)rotate(0)" text-anchor="end">1090</text>
+    <line x1="80.0" y1="226.6" x2="85.0" y2="226.6" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,231.6)rotate(0)" text-anchor="end">1100</text>
+    <line x1="80.0" y1="168.0" x2="85.0" y2="168.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,173.0)rotate(0)" text-anchor="end">1110</text>
+    <line x1="80.0" y1="109.5" x2="85.0" y2="109.5" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,114.5)rotate(0)" text-anchor="end">1120</text>
+    <line x1="80.0" y1="51.0" x2="85.0" y2="51.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(75.0,56.0)rotate(0)" text-anchor="end">1130</text>
     <g id="legend" class="label" alignment-baseline="central">
       <text id="date_text" x="100" y="30"> </text>
       <text id="elev_text" x="100" y="45" fill="#0066CC"> </text>
       <text id="model_text" x="100" y="60" fill="#000000"> </text>
     </g>
-    <path d="M103.4,191.2 L109.1,195.0 L115.1,172.3 L120.8,167.2 L126.1,169.4 L132.1,194.5 L137.8,232.8 L143.7,259.8 L149.5,270.2 L155.4,276.8 L161.3,279.7 L167.0,280.0 L173.0,282.7 L178.7,281.0 L184.6,263.7 L190.5,240.5 L195.9,220.6 L201.8,236.5 L207.5,253.1 L213.5,276.2 L219.2,307.4 L225.1,321.9 L231.0,322.2 L236.8,341.6 L242.7,350.6 L248.4,353.2 L254.4,326.1 L260.3,292.2 L265.6,267.0 L271.6,263.2 L277.3,267.1 L283.2,253.7 L288.9,225.8 L294.9,196.6 L300.8,156.8 L306.5,140.7 L312.4,109.7 L318.2,79.7 L324.1,36.0 L330.0,27.6 L335.6,34.6 L341.5,57.3 L347.2,91.5 L353.1,119.8 L358.9,141.9 L364.8,141.4 L370.7,137.4 L376.5,146.1 L382.4,137.8 L388.1,133.2 L394.0,113.7 L399.8,101.5 L405.1,102.6 L411.0,124.8 L416.8,160.2 L422.7,188.5 L428.4,203.4 L434.4,203.7 L440.3,202.4 L446.0,197.5 L451.9,215.5 L457.7,201.0 L463.6,198.7 L469.5,186.1 L474.9,191.2 L480.8,230.0 L486.5,274.6 L492.4,318.8 L498.2,348.7 L504.1,361.6 L510.0,355.7 L515.8,357.0 L521.7,347.9 L527.4,343.1 L533.3,316.8 L539.3,312.3 L544.6,309.3 " fill="none" style="stroke:#0066CC;stroke-width:3;stroke-linejoin:round"/>
-    <path d="M550.5,329.4 L556.3,366.6 L562.2,393.3 L567.9,405.6 L573.8,395.5 L579.8,392.9 L585.5,392.2 L591.4,382.5 L597.2,380.9 L603.1,358.2 L609.0,349.1 L614.5,344.8 L620.5,370.5 L626.2,404.7 L632.1,432.0 L637.9,445.4 L643.8,438.1 L649.7,416.4 L655.4,408.2 L661.4,399.7 L667.1,402.4 L673.0,381.2 L678.7,372.3 L684.1,368.2 L690.0,394.9 L695.7,430.1 L701.7,458.4 L707.4,472.5 L713.3,465.7 L719.3,443.9 L725.0,436.0 " fill="none" style="stroke:#555555;stroke-width:3;stroke-linejoin:round;stroke-dasharray:6;stroke-linecap:round"/>
+    <rect id="ddddd" x="550.530382859153" y="10" width="209.469617140847" height="480" fill="grey" opacity="0.2" stroke="none"/>
+    <text id="Historical-marker" transform="rotate(-90,546.5,450.0),translate(546.5,450.0)">Historical</text>
+    <text id="Projected-marker" transform="rotate(-90,564.5,450.0),translate(564.5,450.0)">Projected</text>
+    <path d="M103.4,180.1 L109.1,183.7 L115.1,162.4 L120.8,157.6 L126.1,159.7 L132.1,183.3 L137.8,219.2 L143.7,244.6 L149.5,254.3 L155.4,260.5 L161.3,263.3 L167.0,263.6 L173.0,266.0 L178.7,264.5 L184.6,248.2 L190.5,226.5 L195.9,207.8 L201.8,222.7 L207.5,238.3 L213.5,260.0 L219.2,289.2 L225.1,302.9 L231.0,303.2 L236.8,321.4 L242.7,329.8 L248.4,332.3 L254.4,306.8 L260.3,275.0 L265.6,251.3 L271.6,247.7 L277.3,251.4 L283.2,238.9 L288.9,212.7 L294.9,185.2 L300.8,147.9 L306.5,132.7 L312.4,103.7 L318.2,75.4 L324.1,34.4 L330.0,26.5 L335.6,33.1 L341.5,54.4 L347.2,86.5 L353.1,113.1 L358.9,133.9 L364.8,133.4 L370.7,129.6 L376.5,137.8 L382.4,130.0 L388.1,125.7 L394.0,107.4 L399.8,95.9 L405.1,97.0 L411.0,117.8 L416.8,151.0 L422.7,177.6 L428.4,191.6 L434.4,191.9 L440.3,190.7 L446.0,186.1 L451.9,202.9 L457.7,189.4 L463.6,187.2 L469.5,175.4 L474.9,180.1 L480.8,216.6 L486.5,258.5 L492.4,300.0 L498.2,328.1 L504.1,340.1 L510.0,334.6 L515.8,335.9 L521.7,327.3 L527.4,322.8 L533.3,298.1 L539.3,293.8 L544.6,291.1 " fill="none" style="stroke:#0066CC;stroke-width:3;stroke-linejoin:round"/>
+    <path d="M550.5,310.9 L556.3,346.8 L562.2,372.9 L567.9,385.5 L573.8,377.0 L579.8,375.5 L585.5,375.9 L591.4,367.8 L597.2,367.3 L603.1,347.0 L609.0,339.4 L614.5,336.3 L620.5,361.5 L626.2,394.6 L632.1,421.2 L637.9,434.8 L643.8,429.0 L649.7,409.6 L655.4,402.9 L661.4,396.0 L667.1,399.5 L673.0,380.5 L678.7,373.2 L684.1,370.4 L690.0,396.4 L695.7,430.5 L701.7,458.1 L707.4,472.3 L713.3,466.9 L719.3,447.5 L725.0,441.0 L725.0,379.0 L719.3,387.5 L713.3,408.9 L707.4,416.3 L701.7,404.1 L695.7,378.5 L690.0,346.4 L684.1,322.4 L678.7,327.2 L673.0,336.5 L667.1,357.5 L661.4,356.0 L655.4,364.9 L649.7,373.6 L643.8,395.0 L637.9,402.8 L632.1,391.2 L626.2,366.6 L620.5,335.5 L614.5,312.3 L609.0,317.4 L603.1,327.0 L597.2,349.3 L591.4,351.8 L585.5,361.9 L579.8,363.5 L573.8,367.0 L567.9,377.5 L562.2,366.9 L556.3,342.8 L550.5,308.9 " fill="#99CCFF" style="stroke:none;" opacity="0.5"/>
+    <path d="M550.5,309.9 L556.3,344.8 L562.2,369.9 L567.9,381.5 L573.8,372.0 L579.8,369.5 L585.5,368.9 L591.4,359.8 L597.2,358.3 L603.1,337.0 L609.0,328.4 L614.5,324.3 L620.5,348.5 L626.2,380.6 L632.1,406.2 L637.9,418.8 L643.8,412.0 L649.7,391.6 L655.4,383.9 L661.4,376.0 L667.1,378.5 L673.0,358.5 L678.7,350.2 L684.1,346.4 L690.0,371.4 L695.7,404.5 L701.7,431.1 L707.4,444.3 L713.3,437.9 L719.3,417.5 L725.0,410.0 " fill="none" style="stroke:#555555;stroke-width:3;stroke-linejoin:round;stroke-dasharray:6;stroke-linecap:round"/>
     <rect id="2008-10-31" x="99.91" y="10" width="7.00" height="480" fill-opacity="0.0" onmousemove="ChangeText(evt, 'date_text','2008-10-31');ChangeText(evt, 'elev_text','Elevation: 1107.9 (ft)');ChangeText(evt, 'model_text',' ');" onmouseover="highlightEle(evt,'0.1')" onmouseout="highlightEle(evt,'0.0')"/>
     <rect id="2008-11-30" x="105.64" y="10" width="7.00" height="480" fill-opacity="0.0" onmousemove="ChangeText(evt, 'date_text','2008-11-30');ChangeText(evt, 'elev_text','Elevation: 1107.3 (ft)');ChangeText(evt, 'model_text',' ');" onmouseover="highlightEle(evt,'0.1')" onmouseout="highlightEle(evt,'0.0')"/>
     <rect id="2008-12-31" x="111.56" y="10" width="7.00" height="480" fill-opacity="0.0" onmousemove="ChangeText(evt, 'date_text','2008-12-31');ChangeText(evt, 'elev_text','Elevation: 1111.0 (ft)');ChangeText(evt, 'model_text',' ');" onmouseover="highlightEle(evt,'0.1')" onmouseout="highlightEle(evt,'0.0')"/>
