@@ -51,7 +51,7 @@ owdiDrought.createDygraph = function (divId) {
       "ylabel": "Flow (million acre-feet per year)",
       "xlabel": "Year",
       "legend": "auto",
-      "labelsDivWidth":               400,
+      "labelsDivWidth": 400,
       "labelsShowZeroValues": true,
       "labelsSeparateLines": false,
       "hideOverlayOnMouseOut": true 
