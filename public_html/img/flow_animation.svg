@@ -6,8 +6,8 @@
     svgDocument = evt.target.ownerDocument;
     svgDocument.timeAdvance = this.timeAdvance;
     svgDocument.visibleAxes = this.visibleAxes;
-	svgDocument.setMobile  = this.setMobile;
-	svgDocument.setDesktop  = this.setDesktop;
+    svgDocument.setMobile = this.setMobile;
+    svgDocument.setDesktop = this.setDesktop;
   }
   
   legend = svgDocument.getElementById("legend");
@@ -39,14 +39,14 @@
   {
   textelement = svgDocument.getElementById(elementname);                      
   textelement.firstChild.data = legendtext;
-  } 
+  }
   function setMobile(){
-  	svgDocument.getElementById("legend").setAttribute('transform',"scale(1.5)translate(-40,-8)");
-	svgDocument.getElementById("y-label").setAttribute('y',"-10");       
+  	svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
+    svgDocument.getElementById("y-label").setAttribute("y","-10");       
   }
   function setDesktop(){
-  	svgDocument.getElementById("legend").setAttribute('transform',"scale(1.0)translate(0,0)");     
-	svgDocument.getElementById("y-label").setAttribute('y',"0");                          
+    svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
+    svgDocument.getElementById("y-label").setAttribute("y","0");                          
   }
   function timeAdvance(){
     var ele = document.getElementById("timeAdvance");
@@ -60,10 +60,10 @@
     <g id="axes" opacity="0">
       <animate attributeName="opacity" begin="indefinite" id="visibleAxes" fill="freeze" dur="1s" from="0" to="1"/>
       <rect id="axis.box" x="80.0" y="10.0" width="730.0" height="480.0" style="fill:#FFFFFF;stroke:black"/>
-      <text id="y-label" transform="translate(50,250)rotate(270)" text-anchor="middle">Volume (million acre-feet)</text>
+      <text transform="translate(50.0,250.0)rotate(270)" text-anchor="middle" id="y-label">Volume (million acre-feet)</text>
       <line x1="119.8" y1="490.0" x2="119.8" y2="485.0" style="stroke:black;stroke-width:1.5"/>
-	  <text transform="translate(124.8,495.0)rotate(270)" text-anchor="end">1910</text>
-	  <line x1="186.2" y1="490.0" x2="186.2" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(124.8,495.0)rotate(270)" text-anchor="end">1910</text>
+      <line x1="186.2" y1="490.0" x2="186.2" y2="485.0" style="stroke:black;stroke-width:1.5"/>
       <text transform="translate(191.2,495.0)rotate(270)" text-anchor="end">1920</text>
       <line x1="252.5" y1="490.0" x2="252.5" y2="485.0" style="stroke:black;stroke-width:1.5"/>
       <text transform="translate(257.5,495.0)rotate(270)" text-anchor="end">1930</text>
@@ -96,10 +96,10 @@
       <line x1="80.0" y1="76.2" x2="85.0" y2="76.2" style="stroke:black;stroke-width:1.5"/>
       <text transform="translate(75.0,81.2)rotate(0)" text-anchor="end">25</text>
     </g>
-    <g id="legend" visibility="hidden" class="label" alignment-baseline="central" >
-      <text class='legend' id="year_text" x="100" y="30">year</text>
-      <text class='legend' id="use_text" x="100" y="45" fill="#B22C2C">use_text</text>
-      <text class='legend' id="supply_text" x="100" y="60" fill="#0066CC">supply_text</text>
+    <g id="legend" visibility="hidden" class="label" alignment-baseline="central">
+      <text id="year_text" x="100" y="30" class="legend">year</text>
+      <text id="use_text" x="100" y="45" fill="#B22C2C" class="legend">use_text</text>
+      <text id="supply_text" x="100" y="60" fill="#0066CC" class="legend">supply_text</text>
     </g>
     <path d="M93.3,162.7 L99.9,115.4 L106.5,267.8 L113.2,91.4 L119.8,216.8 L126.5,209.1 L133.1,164.8 L139.7,232.7 L146.4,116.3 L153.0,247.5 L159.6,121.3 L166.3,87.4 L172.9,205.9 L179.5,246.1 L186.2,92.4 L192.8,83.1 L199.5,153.9 L206.1,137.2 L212.7,225.7 L219.4,227.0 L226.0,221.6 L232.6,137.8 L239.3,202.6 L245.9,120.8 L252.5,232.2 L259.2,327.5 L265.8,166.1 L272.5,269.7 L279.1,369.7 L285.7,273.7 L292.4,241.2 L299.0,236.3 L305.6,177.7 L312.3,283.0 L318.9,306.8 L325.5,119.0 L332.2,187.6 L338.8,250.5 L345.5,220.1 L352.1,237.3 L358.7,290.3 L365.4,199.7 L372.0,227.0 L378.6,190.0 L385.3,257.6 L391.9,268.3 L398.5,118.5 L405.2,285.9 L411.8,331.2 L418.5,305.8 L425.1,284.4 L431.7,113.7 L438.4,198.9 L445.0,309.6 L451.6,277.3 L458.3,305.3 L464.9,188.4 L471.5,331.2 L478.2,304.6 L484.8,134.9 L491.5,294.3 L498.1,277.3 L504.7,244.4 L511.4,217.7 L518.0,224.1 L524.6,226.6 L531.3,257.1 L537.9,163.1 L544.5,263.7 L551.2,204.8 L557.8,292.0 L564.5,386.4 L571.1,212.7 L577.7,168.7 L584.4,164.7 L591.0,323.3 L597.6,181.6 L604.3,70.2 L610.9,60.0 L617.5,117.9 L624.2,94.9 L630.8,210.9 L637.5,280.7 L644.1,313.2 L650.7,316.8 L657.4,263.6 L664.0,277.9 L670.6,125.3 L677.3,298.0 L683.9,125.5 L690.5,238.5 L697.2,114.9 L703.8,191.8 L710.5,209.5 L717.1,301.6 L723.7,295.1 L730.4,377.9 L737.0,300.9 L743.6,305.9 L750.3,165.1 L756.9,252.2 L763.5,286.3 L770.2,205.0 L776.8,243.2 L783.5,259.1 L790.1,140.0 L796.7,350.8 " fill="none" style="stroke:#0066CC;stroke-width:3;stroke-dasharray:8227;stroke-linejoin:round;stroke-dashoffset:8227">
       <animate attributeName="stroke-dashoffset" begin="indefinite;visibleAxes.begin+1s" id="timeAdvance" fill="freeze" dur="15.000000s" values="8178.36889580207;8025.83070579953;7849.33046165125;7723.70240358342;7713.48423314129;7668.69166765339;7600.43634587417;7483.81664821536;7352.42029505941;7226.09576541325;7191.52689033709;7072.9062530576;7032.14842333029;6878.31561546867;6866.89934078219;6795.75415697144;6777.73199319823;6688.99104742616;6682.21990825012;6673.66475788423;6589.55838096746;6524.3556543019;6442.2830561562;6330.73213041469;6235.177505654;6073.6860444674;5969.892829604;5869.69492396811;5773.48335154286;5740.24147806179;5731.99673140855;5673.09398208722;5567.57518791027;5542.86340400777;5354.86293178695;5285.8754993321;5222.64615256068;5191.53126470142;5173.0643155036;5119.70731031838;5028.88283909646;5000.75736756146;4963.1186468013;4895.15894878934;4882.61707046258;4732.65874363414;4565.07311882388;4519.28800350511;4492.99399797058;4470.62986453744;4299.81988162485;4214.39153360332;4103.461943343;4070.479459131;4041.70419756163;3924.60674527409;3781.65275440656;3754.24548929883;3584.36960496535;3424.81340362843;3406.59685678222;3373.00942239514;3345.4935839503;3336.30167811678;3329.19761040254;3297.95444268173;3203.67991586249;3102.8372076746;3043.54400578364;2956.03048338716;2861.41081451977;2687.5683408942;2643.05974181052;2635.33249519662;2476.63367140784;2334.78320850239;2223.2074660948;2210.99369663496;2152.66970633036;2128.66144857307;2012.38325292455;1942.28374399309;1909.18021879766;1901.63118844075;1848.09058334154;1832.32833947958;1679.50994558497;1506.6782227678;1334.10279603681;1220.93587175874;1097.16448351036;1019.96368136557;1001.08143946644;908.753830423419;899.511165647879;816.468030250727;739.184330252528;730.866190408022;589.862506798617;502.505343101698;467.709902954724;386.093980899295;347.316307826544;330.129739518404;210.876852895134;0"/>
@@ -539,4 +539,4 @@
     <rect id="year_2012" x="793.41" y="10" width="6.64" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2012');ChangeText(evt, 'year_text','2012');ChangeText(evt, 'use_text','usage: ');ChangeText(evt, 'supply_text','supply: 8.4');" onmouseover="highlightViz(evt,'supply-2012','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2012','0.0');"/>
   </g>
 </svg>
-<?xml-stylesheet type="text/css" href="../css/main.css" ?>
+ <?xml-stylesheet type="text/css" href="../css/main.css" ?>

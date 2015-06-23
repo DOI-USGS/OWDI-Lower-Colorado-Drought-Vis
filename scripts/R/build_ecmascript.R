@@ -93,6 +93,8 @@ ecmascript_supply_usage <- function(){
     svgDocument = evt.target.ownerDocument;
     svgDocument.timeAdvance = this.timeAdvance;
     svgDocument.visibleAxes = this.visibleAxes;
+    svgDocument.setMobile = this.setMobile;
+    svgDocument.setDesktop = this.setDesktop;
   }
   
   legend = svgDocument.getElementById("legend");
@@ -124,7 +126,15 @@ ecmascript_supply_usage <- function(){
   {
   textelement = svgDocument.getElementById(elementname);                      
   textelement.firstChild.data = legendtext;
-  } 
+  }
+  function setMobile(){
+  	svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
+    svgDocument.getElementById("y-label").setAttribute("y","-10");       
+  }
+  function setDesktop(){
+    svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
+    svgDocument.getElementById("y-label").setAttribute("y","0");                          
+  }
   function timeAdvance(){
     var ele = document.getElementById("timeAdvance");
     ele.beginElement();
