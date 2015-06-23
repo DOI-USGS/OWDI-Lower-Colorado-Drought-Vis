@@ -12,7 +12,7 @@ nav h3{color:#fff;}
 /*=====SVG CSS=====*/
 
 text{
-	font-size: 16px;
+	font-size: 2em;
    	cursor: default;
     font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
     }
@@ -102,6 +102,10 @@ text{
     -o-background-size: cover;
 	background-repeat:no-repeat;
 	height:100%;
+	}
+	
+#container11{
+	margin-bottom:20px;
 	}
 	
 #container12{
@@ -397,6 +401,10 @@ text{
 	#JrGraph h2{
 		font-size:1.5em;
 	}
+	
+	text{
+	font-size: 1em;
+    }
 	
 /*Section 16 CSS*/
 	
