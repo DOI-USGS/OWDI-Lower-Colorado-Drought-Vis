@@ -35,7 +35,7 @@ fig <- list('w' = 900,
             'h' = 600,
             'margins' = c(100,80,10, 10)) #bot, left, top, right
 
-fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[2]-fig$margins[4]),
+fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[4]),
                    "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
 
 usage_col <- '#B22C2C'
