@@ -51,7 +51,7 @@
     <g id="axes" opacity="0">
       <animate attributeName="opacity" begin="indefinite" id="visibleAxes" fill="freeze" dur="1s" from="0" to="1"/>
       <rect id="axis.box" x="80.0" y="10.0" width="680.0" height="480.0" style="fill:#FFFFFF;stroke:black"/>
-      <text transform="translate(50.0,250.0)rotate(270)" text-anchor="middle">Volume (million acre-feet)</text>
+      <text id="gimmeSpace" transform="translate(55.0,250.0)rotate(270)" text-anchor="middle">Volume (million acre-feet)</text>
       <line x1="117.1" y1="490.0" x2="117.1" y2="485.0" style="stroke:black;stroke-width:1.5"/>
       <text transform="translate(122.1,495.0)rotate(270)" text-anchor="end">1910</text>
       <line x1="178.9" y1="490.0" x2="178.9" y2="485.0" style="stroke:black;stroke-width:1.5"/>
