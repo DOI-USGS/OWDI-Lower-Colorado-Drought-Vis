@@ -10,6 +10,8 @@ library(XML)
 source('scripts/R/build_ecmascript.R')
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 
+svg_file <- 'public_html/img/flow_animation.svg'
+
 data <- read.csv('src_data/NaturalFlow.csv', stringsAsFactors = F)
 flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
 years <- data$Year
@@ -160,4 +162,5 @@ for (i in 1:length(x)){
 
 root_nd <- xmlRoot(g_id)
 
-saveXML(root_nd, file = 'public_html/img/flow_animation.svg')
+saveXML(root_nd, file = svg_file)
+

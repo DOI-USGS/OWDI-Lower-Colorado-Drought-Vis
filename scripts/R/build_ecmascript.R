@@ -135,3 +135,22 @@ ecmascript_supply_usage <- function(){
   }'
   
 }
+
+ecmascript_mead_proj <- function(){
+  
+  scripts <- c('function init(evt){',
+               'if ( window.svgDocument == null ) {',
+               'svgDocument = evt.target.ownerDocument;}',
+               '}',
+               "function ChangeText(evt, elementname, legendtext)
+               {
+               textelement = svgDocument.getElementById(elementname);                      
+               textelement.firstChild.data = legendtext;
+               }",
+               'function highlightEle(evt,opacity)
+               {
+                 evt.target.setAttribute("fill-opacity", opacity);
+               }')
+  
+  
+}
