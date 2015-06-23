@@ -125,7 +125,7 @@ dev.off()
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- clean_svg_doc(svg) %>%
-  add_rect(width="540", height="547", fill='grey', opacity='0.2') %>%
+  add_rect(width="540", height="547", fill='grey', opacity='0.2', stroke='black', 'stroke-width'='2') %>%
   add_ecmascript(ecmascript_mead_map()) %>%
   name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Colorado-river','Colorado-river-basin',top_users)) %>%
   group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = 'Colorado-river-basin', 'top-users' = top_users)) %>%
