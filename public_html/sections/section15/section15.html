@@ -4,7 +4,26 @@
 </p>
 		<p>Projections made by the Bureau of Reclamation take into account many of the factors that affect water levels, including upper Colorado River Basin snowpack, precipitation, and projected use. 
 </p>
+
+        <button class="supportinginfo spacer" id="section15Button">Supporting Info</button>
         
-        <button class="supportinginfo">Supporting Info</button>
+        <div class="supportingInfoContent" id="section15Info">
+        	<p>
+            Link out to all of the info that goes into the 24 month study. 
+Integral working relationship between data suppliers NWS and USGS?
+			</p>
+        </div>
+        
+        <object id="mead-elev-object" data="../../img/mead_elev_projected.svg" type="image/svg+xml"></object>
     </div>
+    
+    
 </div>
+
+<script>
+	var button = $('#section15Button');
+	
+	button.click(function(){
+		$('#section15Info').toggle();
+		});
+</script>
