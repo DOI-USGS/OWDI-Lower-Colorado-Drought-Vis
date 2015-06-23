@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+	 viewBox="400 0 400 400" preserveAspectRatio="xMinYMin meet">
+	 <rect x="420" width="100" height="200" fill='grey'/>
 <g>
-	<g id='all-objects' transform="scale(4.8)translate(-350,0)">
+	<g id="all-objects">
 		<g id="water" fill="#1E628C">
 			<g id="bottom_half">
 				<path id="section_1_1_" d="M429.1,538.3l2.1,0.4c0,0-2.4,7.6-3,8.5c0,0-5.2,7.1-6,8.7c0,0-4.8,6.4-6.9,7.4
@@ -2964,6 +2965,10 @@
 			<text transform="matrix(1 0 0 1 50.9224 509.1995)" font-family="'Arial-BoldMT'" font-size="2.6557">Below</text>
 			<text transform="matrix(1 0 0 1 50.9224 512.3729)" font-family="'Arial-BoldMT'" font-size="2.6557">sea level</text>
 		</g>
+		<animateTransform id='Mead-Havasu' attributeName="transform" type="translate" values="0 0;-60 -190" begin='indefinite' dur="5s" fill='freeze'/>
+		<animateTransform id='Havasu-Imperial' attributeName="transform" type="translate" values="-60 -190;85 -450" begin='indefinite' dur="5s" fill='freeze'/>
+		<animateTransform id='scale-out' attributeType="xml" attributeName="transform" type="scale" values="1;0.2" keyTimes="0;1.0" begin='indefinite' dur="5s" fill='freeze'/>
 	</g>
+	
 </g>
 </svg>
