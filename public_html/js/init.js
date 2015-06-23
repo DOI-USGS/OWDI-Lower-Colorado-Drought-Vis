@@ -17,6 +17,8 @@ $(document).ready(function() {
         // refactored to include subsections within each section. Some sections have a
         // function that should be triggered after loading it. 
         var containers = $(".container"),
+            // Loads the Handlebars template and returns a deferred object to the caller.
+            // The context is the passed-in container and section ids
             loadTemplate = function(containerId, sectionId) {
                 return $.ajax({
                     url: "sections/" + sectionId + "/" + sectionId + ".html",
@@ -26,10 +28,16 @@ $(document).ready(function() {
                     }
                 });
             },
+            templateLoadError = function () {
+                console.warn("Could not load the template for container " + this.containerId + ", section " + this.sectionId)
+            },
+            // Applies the Handlebars template to the designated container -> section
             applyTemplate = function(data) {
                 var template = Handlebars.compile(data);
                 $("#" + this.containerId + " > #" + this.sectionId).html(template());
             },
+            // In case anything needs to be initialized in a section, do that here using
+            // the section's HTML id attribute
             initializeSections = function () {
                 switch (this.sectionId) {
                     case "section5":
@@ -41,6 +49,7 @@ $(document).ready(function() {
                 }
             };
 
+        // Run through each container and section to load the Handlebars templates and apply them
         for (var cIdx = 0; cIdx < containers.length; cIdx++) {
             var $container = $(containers[cIdx]),
                 sections = $container.find(".section");
@@ -50,7 +59,9 @@ $(document).ready(function() {
                     sectionId = $section.attr("id");
                 var loadTemplateDeferred = loadTemplate(containerId, sectionId);
 
-                loadTemplateDeferred.done(applyTemplate, initializeSections);
+                loadTemplateDeferred
+                    .done(applyTemplate, initializeSections)
+                    .fail(templateLoadError);
             }
         }
     })();
