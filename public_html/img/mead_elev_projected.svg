@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio="xMinYMin meet" viewBox="0 0 900 600">
   <script type="text/ecmascript"><![CDATA[function init(evt){
 if ( window.svgDocument == null ) {
-svgDocument = evt.target.ownerDocument;}
+svgDocument = evt.target.ownerDocument;
+svgDocument.setMobile = this.setMobile;
+svgDocument.setDesktop = this.setDesktop;}
 }
 function ChangeText(evt, elementname, legendtext)
                {
@@ -11,6 +13,14 @@ function ChangeText(evt, elementname, legendtext)
 function highlightEle(evt,opacity)
                {
                  evt.target.setAttribute("fill-opacity", opacity);
+               }
+function setMobile(){
+                 svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
+                 svgDocument.getElementById("y-label").setAttribute("y","-10");       
+               }
+               function setDesktop(){
+                 svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
+                 svgDocument.getElementById("y-label").setAttribute("y","0");                          
                }]]></script>
   <g>
     <rect id="axis.box" x="80.0" y="10.0" width="810.0" height="480.0" style="fill:#FFFFFF;stroke:black"/>

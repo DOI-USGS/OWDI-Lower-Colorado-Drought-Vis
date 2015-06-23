@@ -150,7 +150,9 @@ ecmascript_mead_proj <- function(){
   
   scripts <- c('function init(evt){',
                'if ( window.svgDocument == null ) {',
-               'svgDocument = evt.target.ownerDocument;}',
+               'svgDocument = evt.target.ownerDocument;',
+               'svgDocument.setMobile = this.setMobile;',
+               'svgDocument.setDesktop = this.setDesktop;}',
                '}',
                "function ChangeText(evt, elementname, legendtext)
                {
@@ -160,6 +162,14 @@ ecmascript_mead_proj <- function(){
                'function highlightEle(evt,opacity)
                {
                  evt.target.setAttribute("fill-opacity", opacity);
+               }',
+               'function setMobile(){
+                 svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
+                 svgDocument.getElementById("y-label").setAttribute("y","-10");       
+               }
+               function setDesktop(){
+                 svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
+                 svgDocument.getElementById("y-label").setAttribute("y","0");                          
                }')
   
   
