@@ -28,40 +28,36 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
              attrs = c(x=bin_buffer/2,y=bin_buffer/2,'rx'="2", 'ry'="2", width=bin_full, height=bin_full, 'stroke'='#0066CC','stroke-width'='2','fill'='#0066CC'))
   
   g_id <- newXMLNode('g', parent=root_nd,
-             attrs = c('id'=group_name, group_styles, 'transform'=sprintf("translate(%1.1f,%1.1f)",x_axis_location,y_axis_location)))
-  axes <- newXMLNode('path', parent=g_id,
+             attrs = c('id'=group_name, group_styles ))
+  ax_g <- newXMLNode('g', parent=g_id, attrs = c('transform'=sprintf("translate(%1.1f,%1.1f)",x_axis_location,y_axis_location)))
+  axes <- newXMLNode('path', parent=ax_g,
              attrs=c('d'=sprintf("M%f %f l0 %f l%f 0",x_offset, 2*y_offset, -y_offset, x_axis_length), 'id'="picto-axes"))
-  newXMLNode("text", parent = g_id, newXMLTextNode('Water user contracts'),
+  newXMLNode("text", parent = ax_g, newXMLTextNode('Water user contracts'),
              attrs = c(id="x-pictogram-label",x=x_axis_length/2,y=y_offset+12, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;"))
-  newXMLNode("text", parent = g_id, newXMLTextNode('Total water use'),
+  newXMLNode("text", parent = ax_g, newXMLTextNode('Total water use'),
              attrs = c(id="y-pictogram-label",x=-15,y=y_offset/2, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;",
                        'transform'="rotate(-90,-15,-97.5),translate(200,0)"))
-  
-  
-  newXMLNode('rect',parent=root_nd,
-             attrs=c(x=0,y=0,height=139,width=14,
-                     style="stroke:none;fill:url(#empty-picto-pattern);", id = 'ddddd','transform'="translate(26,340.0)"))
+
   
   for (i in 1:length(values)){
     
     num_full <- ceiling(values[i]/scale)
     frac_full <- num_full-values[i]/scale
-    x1 = (bin_full+bin_buffer)*(i-1)
-    x2 = x1+bin_full+bin_buffer
+    x = (bin_full+bin_buffer)*(i-1)
     height_full <- (bin_full+bin_buffer)*num_full
     height_empty <- (bin_buffer)/2+(bin_empty+2)*frac_full #stroke-width included here
     
     g_picto <- newXMLNode('g', parent=g_id, attrs = c(id = paste0('picto-usage-',i)))
     
-    y1 = y_offset-height_full-bin_buffer/2
-    y2 = y1+height_full
-    newXMLNode('path',parent=g_picto,
-               attrs=c(d = sprintf('M %1.1f %1.3f L %1.1f %1.3f L %1.1f %1.3f L %1.1f %1.3f',x1,y1,x2,y1,x2,y2,x1,y2),
-                       style="stroke:none;fill:url(#empty-picto-pattern);"))
+    newXMLNode('rect',parent=g_picto,
+               attrs=c(x=x, y=y_offset-height_full-bin_buffer/2, width=bin_full+bin_buffer, height=height_full, 
+                       style="stroke:none;fill:url(#empty-picto-pattern);", 
+                       'transform'=sprintf("translate(%1.1f,%1.1f)",x_axis_location,y_axis_location)))
     
     newXMLNode('rect',parent=g_picto,
-               attrs=c(x=x1, y=y_offset-height_full-bin_buffer/2+height_empty, width=bin_full+bin_buffer, height=height_full-height_empty, 
-                       style="stroke:none;fill:url(#full-picto-pattern);"))
+               attrs=c(x=x, y=y_offset-height_full-bin_buffer/2+height_empty, width=bin_full+bin_buffer, height=height_full-height_empty, 
+                       style="stroke:none;fill:url(#full-picto-pattern);", 
+                       'transform'=sprintf("translate(%1.1f,%1.1f)",x_axis_location,y_axis_location)))
     
   }
   
