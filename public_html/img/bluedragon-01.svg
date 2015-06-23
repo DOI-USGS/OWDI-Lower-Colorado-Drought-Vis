@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/css" href="../css/main.css" ?>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
 <g>
-	<g id='all-objects'>
+	<g id='all-objects' transform="scale(4.8)translate(-350,0)">
 		<g id="water" fill="#1E628C">
 			<g id="bottom_half">
 				<path id="section_1_1_" d="M429.1,538.3l2.1,0.4c0,0-2.4,7.6-3,8.5c0,0-5.2,7.1-6,8.7c0,0-4.8,6.4-6.9,7.4
@@ -2965,8 +2964,6 @@
 			<text transform="matrix(1 0 0 1 50.9224 509.1995)" font-family="'Arial-BoldMT'" font-size="2.6557">Below</text>
 			<text transform="matrix(1 0 0 1 50.9224 512.3729)" font-family="'Arial-BoldMT'" font-size="2.6557">sea level</text>
 		</g>
-		<animateTransform attributeName="transform" type="translate" from="0 0" to="-350 0" begin="0s" dur="2s" fill='freeze'/>
 	</g>
-	<animateTransform attributeName="transform" type="scale" from="1" to="4.8" begin="0s" dur="2s" fill='freeze'/>
 </g>
 </svg>
