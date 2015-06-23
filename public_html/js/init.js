@@ -34,6 +34,7 @@ $(document).ready(function() {
             // Applies the Handlebars template to the designated container -> section
             applyTemplate = function(data) {
                 var template = Handlebars.compile(data);
+                
                 $("#" + this.containerId + " > #" + this.sectionId).html(template());
             },
             // In case anything needs to be initialized in a section, do that here using
@@ -56,8 +57,8 @@ $(document).ready(function() {
             for (var sIdx = 0; sIdx < sections.length; sIdx++) {
                 var $section = $(sections[sIdx]),
                     containerId = $container.attr("id"),
-                    sectionId = $section.attr("id");
-                var loadTemplateDeferred = loadTemplate(containerId, sectionId);
+                    sectionId = $section.attr("id"),
+                    loadTemplateDeferred = loadTemplate(containerId, sectionId);
 
                 loadTemplateDeferred
                     .done(applyTemplate, initializeSections)
