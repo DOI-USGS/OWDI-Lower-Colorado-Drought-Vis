@@ -1,0 +1,23 @@
+#overlay {
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: black;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 20003; /* Above the USGS header */
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+#overlay-content-wrap {
+	width: 100%;
+	text-align: center;
+	top: calc(30%);
+	position: fixed;
+}
