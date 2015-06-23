@@ -125,7 +125,7 @@ dev.off()
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- clean_svg_doc(svg) %>%
-  add_rect(width="540", height="547", fill='grey', opacity='0.2') %>%
+  add_rect(width="540", height="547", fill='grey', opacity='0.2', stroke='black', 'stroke-width'='2') %>%
   add_ecmascript(ecmascript_mead_map()) %>%
   name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Colorado-river','Colorado-river-basin',top_users)) %>%
   group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = 'Colorado-river-basin', 'top-users' = top_users)) %>%
@@ -163,14 +163,14 @@ svg <- clean_svg_doc(svg) %>%
   add_animation(attr = 'opacity', parent_id='co-river-polyline', id = 'remove-river', element = 'g', begin="indefinite", fill="freeze", dur="1s", to= "0") %>%
   add_animation(attr = 'opacity', parent_id='co-river-polyline', id = 'show-river', element = 'g', begin="indefinite", fill="freeze", dur="1s", to= "1") %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', id = 'remove-basin',element = 'g', begin="indefinite", fill="freeze", dur="1s", to="0") %>%
-  add_animateTransform(parent_id = 'California', id = 'California-move', begin="indefinite", type = 'translate', fill="freeze", values="0 0;-40 -20", dur="1s") %>%
-  add_animateTransform(parent_id = 'California', id = 'California-reset', begin="indefinite", type = 'translate', fill="freeze", values="-40 -20;0 0", dur="1s") %>%
-  add_animateTransform(parent_id = 'Nevada', id = 'Nevada-move', begin="indefinite", type = 'translate', fill="freeze", values="0 0;-23 -32", dur="1s") %>%
-  add_animateTransform(parent_id = 'Nevada', id = 'Nevada-reset', begin="indefinite", type = 'translate', fill="freeze", values="-23 -32;0 0", dur="1s") %>%
-  add_animateTransform(parent_id = 'Arizona', id = 'Arizona-move', begin="indefinite", type = 'translate', fill="freeze", values="0 0;-8 12", dur="1s") %>%
-  add_animateTransform(parent_id = 'Arizona', id = 'Arizona-reset', begin="indefinite", type = 'translate', fill="freeze", values="-8 12;0 0", dur="1s") %>%
-  add_animateTransform(parent_id = 'mexico', id = 'mexico-move',begin="indefinite", element = 'g', type = 'translate', fill="freeze", values="0 0;-70 95", dur="1s") %>%
-  add_animateTransform(parent_id = 'mexico', id = 'mexico-reset',begin="indefinite", element = 'g', type = 'translate', fill="freeze", values="-70 95;0 0", dur="1s") %>%
+  add_animateTransform(parent_id = 'California', id = 'California-move', begin="indefinite", type = 'translate', fill="freeze", from="0 0",to="-40 -20", dur="1s") %>%
+  add_animateTransform(parent_id = 'California', id = 'California-reset', begin="indefinite", type = 'translate', fill="freeze", from="-40 -20",to="0 0", dur="1s") %>%
+  add_animateTransform(parent_id = 'Nevada', id = 'Nevada-move', begin="indefinite", type = 'translate', fill="freeze", from="0 0",to="-23 -32", dur="1s") %>%
+  add_animateTransform(parent_id = 'Nevada', id = 'Nevada-reset', begin="indefinite", type = 'translate', fill="freeze", from="-23 -32",to="0 0", dur="1s") %>%
+  add_animateTransform(parent_id = 'Arizona', id = 'Arizona-move', begin="indefinite", type = 'translate', fill="freeze", from="0 0",to="-8 12", dur="1s") %>%
+  add_animateTransform(parent_id = 'Arizona', id = 'Arizona-reset', begin="indefinite", type = 'translate', fill="freeze", from="-8 12",to="0 0", dur="1s") %>%
+  add_animateTransform(parent_id = 'mexico', id = 'mexico-move',begin="indefinite", element = 'g', type = 'translate', fill="freeze", from="0 0",to="-70 95", dur="1s") %>%
+  add_animateTransform(parent_id = 'mexico', id = 'mexico-reset',begin="indefinite", element = 'g', type = 'translate', fill="freeze", from="-70 95",to="0 0", dur="1s") %>%
   add_animation(attr = 'stroke-width', parent_id="Mexico", id = 'Mexico-stroke', begin="indefinite", fill="freeze", dur="1s", values= "2.5;4.55") %>% # original stroke / new scale
   add_animation(attr = 'stroke-width', parent_id="Mexico", id = 'Mexico-stroke-reset', begin="indefinite", fill="freeze", dur="1s", values= "4.55;2.5") %>% # to original stroke 
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale', begin="indefinite", type = 'scale', fill="freeze", from = '1', to="0.55", dur="1s") %>%
