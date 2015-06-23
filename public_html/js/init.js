@@ -88,7 +88,13 @@ $(document).ready(function() {
     // The fillDom deferred object will be resolved when the DOM for the application has been loaded
     fillDom.done(function () {
         // At this point, the DOM will have been built 
-        // TODO: We will have an application overlay that needs to be removed. Do that here
+
         window.console.trace("Application loaded");
+
+        var fadeTimeInMs = 1500;
+
+        $("#overlay").fadeOut(fadeTimeInMs, 'swing', function (data) {
+            $(this).remove();
+        });
     });
 });
