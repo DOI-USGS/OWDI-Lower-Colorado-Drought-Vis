@@ -33,7 +33,7 @@ meadData <- dplyr::filter(meadData, Object.Name == 'Mead', Slot.Name == 'Pool El
 
 # --- pixel dims ---
 axes <- list('tick_len' = 5,
-             'y_label' = "Volume (million acre-feet)",
+             'y_label' = "Elevation of Lake Mead (feet)",
              'y_ticks' = seq(1060,1130,10),
              'y_tk_label' = seq(1060,1130,10),
              'x_ticks' = seq(2009,2018,1),
@@ -74,6 +74,8 @@ newXMLNode("text", parent = leg_id, newXMLTextNode(' '),
            attrs = c(id="date_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp))
 newXMLNode("text", parent = leg_id, newXMLTextNode(' '),
            attrs = c(id="elev_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = supply_col))
+newXMLNode("text", parent = leg_id, newXMLTextNode(' '),
+           attrs = c(id="model_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = '#000000'))
 #------
 
 x <- as.numeric(strftime(as.POSIXct(meadData$Timestep), format = "%j"))/365+
@@ -92,7 +94,7 @@ line_nd <- dinosvg:::linepath(g_id, x[!is.model],y[!is.model],fill = 'none',
                                              supply_col,line_width))
 line_nd <- dinosvg:::linepath(g_id, x[is.model],y[is.model],fill = 'none', 
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-dasharray:6;stroke-linecap:round",
-                                             supply_col,line_width))
+                                             '#555555',line_width))
 
 # -----
 width = 7 # FIX THIS!!!
@@ -100,11 +102,22 @@ for (i in 1:length(x)){
   #refine this so it is actually halfway points
   
   elev = ifelse(is.na(meadData$Value[i]), '', sprintf('%1.1f',meadData$Value[i]))
+  
+  
+  if (is.model[i]){
+    elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s (ft)');", elev),
+                        "ChangeText(evt, 'model_text','*Projected');")
+  } else {
+    elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s (ft)');", elev),
+                        "ChangeText(evt, 'model_text',' ');")
+    
+  }
+    
   newXMLNode('rect','parent' = g_id, 
              attrs = c(id = time_ids[i], x = sprintf('%1.2f',x[i]-width/2), y = fig$px_lim$y[2], width = sprintf('%1.2f',width), height = fig$px_lim$y[1]-fig$px_lim$y[2],
                        'fill-opacity'="0.0", 
                        onmousemove=paste0(sprintf("ChangeText(evt, 'date_text','%s');",time_ids[i]),
-                                          sprintf("ChangeText(evt, 'elev_text','Elevation: %s (ft)');", elev)),
+                                          elev_text),
                        onmouseover="highlightEle(evt,'0.1')",
                        onmouseout="highlightEle(evt,'0.0')"))
 }
