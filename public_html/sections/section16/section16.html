@@ -1,7 +1,7 @@
 <div class="widget">
     <div id="meadSVGContainer">
         <h2>Mead SVG Dealio</h2>
-        <object id="mead-object" data="img/lo_CO_borders.svg" type="image/svg+xml" onload="window.owdiDrought.create()"></object>
+        <object id="mead-object" data="img/lo_CO_borders.svg" type="image/svg+xml" onload="window.owdiDrought.createCOScene()"></object>
     </div>
     <div class="SVGInfo" id="info1">
         <p>Suspendisse fermentum convallis porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin condimentum dictum justo a dapibus. Praesent nec libero nec ipsum ultricies posuere. Duis in pretium est. Etiam gravida pulvinar tellus vitae finibus</p>
@@ -21,32 +21,18 @@
 /* global ScrollMagic */
 /* global $ */
 /* global console */
-
 (function() {
     "use strict";
-    owdiDrought.meadObjectSVG = null;
 
-    owdiDrought.create = function() {
-        var meadObjectDomElement = document.getElementById("mead-object"),
-            getMeadObject = function() {
-                if (owdiDrought.meadObjectSVG === null) {
-                    owdiDrought.meadObjectSVG = meadObjectDomElement.getSVGDocument();
-                    
-                }
-            }
-
-        new ScrollMagic.Scene({
-                triggerElement: svgContainer,
-                duration: 100
-            })
-            .on("enter", function() {
-                getMeadObject();
-            })
-            .addTo(window.owdiDrought.SMController);
+    owdiDrought.createCOScene = function() {
+        if (!owdiDrought.meadObjectSVG) {
+            owdiDrought.meadObjectSVG = svgDomElement.getSVGDocument();
+        }
 
     };
-    
-    var svgContainer = "#meadSVGContainer",
+
+    var svgDomElement = document.getElementById("mead-object"),
+        svgContainer = "#meadSVGContainer",
         parentContainer = "#container16",
         defaultDuration = 300,
         addTriggerFunction = function(item) {
@@ -99,7 +85,7 @@
                     } else {
                         $section.fadeOut(fadeSpeed, owdiDrought.meadObjectSVG.resetBasin());
                     }
-                },
+
                 "end": function(e) {
                     var $section = $("#info2");
                     if (e.scrollDirection === "FORWARD") {
@@ -203,19 +189,19 @@
                     } else {
                         owdiDrought.meadObjectSVG.resetStates();
                         owdiDrought.meadObjectSVG.removeMead();
+
                     }
+                };
+
+            // For every action I have, set the ScrollMagic event triggering for it
+            for (var action in actions) {
+                if (actions.hasOwnProperty(action)) {
+                    addTriggerFunction(actions[action]);
+                    console.trace("Set ScrollMagic action in section 16 for action " + action);
                 }
             }
-        };
-
-    // For every action I have, set the ScrollMagic event triggering for it
-    for (var action in actions) {
-        if (actions.hasOwnProperty(action)) {
-            addTriggerFunction(actions[action]);
-            console.trace("Set ScrollMagic action in section 16 for action " + action);
         }
-    }
 
-
+        setScene();
 })();
 </script>
