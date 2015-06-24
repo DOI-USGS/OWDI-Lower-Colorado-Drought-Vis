@@ -16,6 +16,24 @@
   <div class="SVGInfo" id="info4">
     <p>Bacon ipsum dolor amet rump short loin ribeye chuck picanha shank meatball, shankle alcatra ground round. Kielbasa landjaeger turkey, pork loin tri-tip pork belly picanha turducken hamburger frankfurter beef ribs ribeye flank.</p>
   </div>
+  <div class="SVGInfo" id="info5">
+    <p>Pellentesque tincidunt sagittis massa vitae egestas. Quisque fermentum porta purus, scelerisque pharetra diam molestie accumsan. In sed leo nisi. Proin eget eros hendrerit, accumsan lacus fermentum, ornare ante. Aenean pellentesque iaculis sodales.</p>
+  </div>
+  <div class="SVGInfo" id="info6">
+    <p>Aliquam consequat velit sollicitudin condimentum posuere. Morbi dignissim leo eget felis mollis accumsan. Aliquam efficitur, dolor sit amet iaculis auctor, urna mi ultrices turpis, non dictum magna massa sit amet ipsum. Maecenas in orci quis velit condimentum scelerisque.</p>
+  </div>
+  <div class="SVGInfo" id="info7">
+    <p>Mockingbirds don't do one thing but make music for us to enjoy. They don't eat up people's gardens, don't nest in corncribs, they don't do one thing but sing their hearts out for us. That's why it's a sin to kill a mockingbird. </p>
+  </div>
+  <div class="SVGInfo" id="info8">
+    <p>There is neither happiness nor unhappiness in this world; there is only the comparison of one state with another. Only a man who has felt ultimate despair is capable of feeling ultimate bliss</p>
+  </div>
+  <div class="SVGInfo" id="info9">
+    <p>If you live to be a hundred, I want to live to be a hundred minus one day so I never have to live without you.</p>
+  </div>
+  <div class="SVGInfo" id="info10">
+    <p>When you are hurting in your heart, it's no use even if the entire world asks you how you are feeling. All you need is to be held by someone who doesn't need to ask.</p>
+  </div>
 </div>
 <script>
 /* global owdiDrought */
@@ -141,61 +159,125 @@
                     highlightUser2: {
                         "offset": 1200,
                         "start": function(e) {
+							var $section = $("#info5");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                owdiDrought.meadObjectSVG.highlightUser(2);
+                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.highlightUser(2));
+                            }else{
+								$section.fadeOut(fadeSpeed);
+								}
+                        },
+						"end": function(e) {
+                            var $section = $("#info5");
+                            if (e.scrollDirection === "FORWARD") {
+                                $section.fadeOut(fadeSpeed);
+                            } else {
+                                $section.fadeIn(fadeSpeed);
                             }
                         }
                     },
                     highlightUser3: {
                         "offset": 1500,
                         "start": function(e) {
+							var $section = $("#info6");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                owdiDrought.meadObjectSVG.highlightUser(3);
+                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.highlightUser(3));
+                            }else{
+								$section.fadeOut(fadeSpeed);
+								}
+                        },
+						"end": function(e) {
+                            var $section = $("#info6");
+                            if (e.scrollDirection === "FORWARD") {
+                                $section.fadeOut(fadeSpeed);
+                            } else {
+                                $section.fadeIn(fadeSpeed);
                             }
                         }
                     },
                     highlightUser4: {
                         "offset": 1800,
                         "start": function(e) {
+							var $section = $("#info7");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                owdiDrought.meadObjectSVG.highlightUser(4);
+                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.highlightUser(4));
+                            }else{
+								$section.fadeOut(fadeSpeed);
+								}
+                        },
+						"end": function(e) {
+                            var $section = $("#info7");
+                            if (e.scrollDirection === "FORWARD") {
+                                $section.fadeOut(fadeSpeed);
+                            } else {
+                                $section.fadeIn(fadeSpeed);
                             }
                         }
                     },
                     highlightUser5: {
                         "offset": 2100,
                         "start": function(e) {
+							var $section = $("#info8");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                owdiDrought.meadObjectSVG.highlightUser(5);
+                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.highlightUser(5));
+                            }else{
+								$section.fadeOut(fadeSpeed);
+								}
+                        },
+						"end": function(e) {
+                            var $section = $("#info8");
+                            if (e.scrollDirection === "FORWARD") {
+                                $section.fadeOut(fadeSpeed);
+                            } else {
+                                $section.fadeIn(fadeSpeed);
                             }
                         }
+						
                     },
                     removeItems: {
                         "offset": 2400,
                         "start": function(e) {
+							var $section = $("#info9");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                owdiDrought.meadObjectSVG.removeGreyStates();
+                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.removeGreyStates());
                                 owdiDrought.meadObjectSVG.removeRiver();
                                 owdiDrought.meadObjectSVG.removePictogram();
                             } else {
-                                owdiDrought.meadObjectSVG.resetGreyStates();
+                                $section.fadeOut(fadeSpeed, owdiDrought.meadObjectSVG.resetGreyStates());
                                 owdiDrought.meadObjectSVG.drawPictogram();
                                 owdiDrought.meadObjectSVG.drawBasin();
                                 owdiDrought.meadObjectSVG.showRiver();
+                            }
+                        },
+						"end": function(e) {
+                            var $section = $("#info9");
+                            if (e.scrollDirection === "FORWARD") {
+                                $section.fadeOut(fadeSpeed);
+                            } else {
+                                $section.fadeIn(fadeSpeed);
                             }
                         }
                     },
                     moveStates: {
                         "offset": 2700,
                         "start": function(e) {
+							var $section = $("#info10");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                owdiDrought.meadObjectSVG.moveStates();
+                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.moveStates());
                                 owdiDrought.meadObjectSVG.drawMead();
                             } else {
-                                owdiDrought.meadObjectSVG.resetStates();
+                                $section.fadeOut(fadeSpeed,owdiDrought.meadObjectSVG.resetStates());
                                 owdiDrought.meadObjectSVG.removeMead();
                             }
+                        },
+						"end": function(e) {
+                            var $section = $("#info10");
+                            if (e.scrollDirection === "FORWARD") {
+                                $section.fadeOut(fadeSpeed);
+                            } else {
+                                $section.fadeIn(fadeSpeed);
+                            }
                         }
+						
                     }
                 };
 
