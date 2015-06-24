@@ -12,7 +12,12 @@ nav h3{color:#fff;}
 /*=====SVG CSS=====*/
 
 text{
-	font-size: 2em;
+	font-size: 1.5em;
+   	cursor: default;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    }
+.legend{
+	font-size: 16px;
    	cursor: default;
     font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
     }
@@ -356,11 +361,11 @@ text{
 	#container14{
 		background-image:url('../img/keynotes/keynote8.jpg');
 		}
+
 /*======keynote CSS======*/
 	.keynote{
 		top:35%;
 	}
-	
 	
 	.keynote h1,
 	.keynote h2{
