@@ -1,14 +1,21 @@
 <div class="widget">
-    <div id="meadSVGContainer">
-        <h2>Mead SVG Dealio</h2>
-        <object id="mead-object" data="img/lo_CO_borders.svg" type="image/svg+xml" onload="window.owdiDrought.createCOScene()"></object>
-    </div>
-    <div class="SVGInfo" id="info1">
-        <p>Suspendisse fermentum convallis porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin condimentum dictum justo a dapibus. Praesent nec libero nec ipsum ultricies posuere. Duis in pretium est. Etiam gravida pulvinar tellus vitae finibus</p>
-    </div>
-    <div class="SVGInfo" id="info2">
-        <p>Nunc cursus et diam quis eleifend. Cras venenatis velit quis mattis pulvinar. Cras hendrerit id erat at consequat. Aenean quis interdum leo. Nullam eget massa ultrices magna condimentum interdum.</p>
-    </div>
+  <div id="meadSVGContainer">
+    <h2>Mead SVG Dealio</h2>
+    <object id="mead-object" data="img/lo_CO_borders.svg" type="image/svg+xml" onload="window.owdiDrought.createCOScene()">
+    </object>
+  </div>
+  <div class="SVGInfo" id="info1">
+    <p>Suspendisse fermentum convallis porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin condimentum dictum justo a dapibus. Praesent nec libero nec ipsum ultricies posuere. Duis in pretium est. Etiam gravida pulvinar tellus vitae finibus</p>
+  </div>
+  <div class="SVGInfo" id="info2">
+    <p>Nunc cursus et diam quis eleifend. Cras venenatis velit quis mattis pulvinar. Cras hendrerit id erat at consequat. Aenean quis interdum leo. Nullam eget massa ultrices magna condimentum interdum.</p>
+  </div>
+  <div class="SVGInfo" id="info3">
+    <p>Fixie Austin YOLO, health goth American Apparel raw denim Thundercats occupy Williamsburg Pitchfork listicle. Sunt narwhal Wes Anderson, pickled Bushwick put a bird on it cred. Ad shabby chic eu, labore enim plaid kitsch craft beer aliquip mixtape nesciunt pop-up proident cornhole. </p>
+  </div>
+  <div class="SVGInfo" id="info4">
+    <p>Bacon ipsum dolor amet rump short loin ribeye chuck picanha shank meatball, shankle alcatra ground round. Kielbasa landjaeger turkey, pork loin tri-tip pork belly picanha turducken hamburger frankfurter beef ribs ribeye flank.</p>
+  </div>
 </div>
 <script>
 /* global owdiDrought */
@@ -28,6 +35,7 @@
     var svgDomElement = document.getElementById("mead-object"),
         svgContainer = "#meadSVGContainer",
         parentContainer = "#container16",
+		
         setScene = function() {
             var defaultDuration = 300,
                 addTriggerFunction = function(item) {
@@ -35,6 +43,7 @@
                             triggerElement: parentContainer,
                             duration: defaultDuration
                         })
+						.triggerHook(0)
                         .offset(item.offset)
                         .setPin(parentContainer)
                         .addIndicators();
@@ -54,13 +63,12 @@
                     // Each action has a name but the name is currently not used for anything except 
                     // a label to easily identify what the actions within do
                     drawRiver: {
-                        "offset": 200,
                         "start": function(e) {
                             var $section = $("#info1");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.drawRiver);
+                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.drawRiver());
                             } else {
-                                $section.fadeOut(fadeSpeed, owdiDrought.meadObjectSVG.resetRiver);
+                                $section.fadeOut(fadeSpeed, owdiDrought.meadObjectSVG.resetRiver());
                             }
                         },
                         "end": function(e) {
@@ -73,12 +81,13 @@
                         }
                     },
                     drawBasin: {
-                        "offset": 500,
+                        "offset": 300,
                         "start": function(e) {
+							var $section = $("#info2");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                owdiDrought.meadObjectSVG.drawBasin();
+                                $section.fadeIn(fadeSpeed,owdiDrought.meadObjectSVG.drawBasin());
                             } else {
-                                owdiDrought.meadObjectSVG.resetBasin();
+                                $section.fadeOut(fadeSpeed,owdiDrought.meadObjectSVG.resetBasin());
                             }
                         },
                         "end": function(e) {
@@ -91,25 +100,46 @@
                         }
                     },
                     drawPictogram: {
-                        "offset": 800,
+                        "offset": 600,
                         "start": function(e) {
+							var $section = $("#info3");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                owdiDrought.meadObjectSVG.drawPictogram();
+                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.drawPictogram());
                             } else {
-                                owdiDrought.meadObjectSVG.removePictogram();
+                                $section.fadeOut(fadeSpeed, owdiDrought.meadObjectSVG.removePictogram());
+                            }
+                        },
+						"end": function(e) {
+                            var $section = $("#info3");
+                            if (e.scrollDirection === "FORWARD") {
+                                $section.fadeOut(fadeSpeed);
+                            } else {
+                                $section.fadeIn(fadeSpeed);
                             }
                         }
                     },
                     highlightUser1: {
-                        "offset": 1100,
+                        "offset": 900,
                         "start": function(e) {
+							var $section = $("#info4");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                owdiDrought.meadObjectSVG.highlightUser(1);
+                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.highlightUser(1));
+                            }else{
+								$section.fadeOut(fadeSpeed);
+								}
+                        },
+						"end": function(e) {
+                            var $section = $("#info4");
+                            if (e.scrollDirection === "FORWARD") {
+                                $section.fadeOut(fadeSpeed);
+                            } else {
+                                $section.fadeIn(fadeSpeed);
                             }
                         }
+						
                     },
                     highlightUser2: {
-                        "offset": 1400,
+                        "offset": 1200,
                         "start": function(e) {
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
                                 owdiDrought.meadObjectSVG.highlightUser(2);
@@ -117,7 +147,7 @@
                         }
                     },
                     highlightUser3: {
-                        "offset": 1700,
+                        "offset": 1500,
                         "start": function(e) {
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
                                 owdiDrought.meadObjectSVG.highlightUser(3);
@@ -125,7 +155,7 @@
                         }
                     },
                     highlightUser4: {
-                        "offset": 2000,
+                        "offset": 1800,
                         "start": function(e) {
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
                                 owdiDrought.meadObjectSVG.highlightUser(4);
@@ -133,7 +163,7 @@
                         }
                     },
                     highlightUser5: {
-                        "offset": 2300,
+                        "offset": 2100,
                         "start": function(e) {
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
                                 owdiDrought.meadObjectSVG.highlightUser(5);
@@ -141,7 +171,7 @@
                         }
                     },
                     removeItems: {
-                        "offset": 2600,
+                        "offset": 2400,
                         "start": function(e) {
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
                                 owdiDrought.meadObjectSVG.removeGreyStates();
@@ -156,7 +186,7 @@
                         }
                     },
                     moveStates: {
-                        "offset": 2900,
+                        "offset": 2700,
                         "start": function(e) {
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
                                 owdiDrought.meadObjectSVG.moveStates();
@@ -180,4 +210,4 @@
 
         setScene();
 })();
-</script>
+</script> 
