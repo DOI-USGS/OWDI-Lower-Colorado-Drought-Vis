@@ -31,18 +31,22 @@ $(document).ready(function() {
                     }
                 });
             },
-            templateLoadError = function () {
+            templateLoadError = function() {
                 console.warn("Could not load the template for container " + this.containerId + ", section " + this.sectionId);
             },
             // Applies the Handlebars template to the designated container -> section
-            applyTemplate = function(data) {
-                var template = Handlebars.compile(data);
+            applyTemplate = function(templateHTML, status, jqXHR, templateData) {
+                var template = Handlebars.compile(templateHTML),
+                    pathname = window.location.pathname,
+                    extendedTemplateData = $.extend({}, templateData, {
+                        baseUrl: window.location.origin + pathname.substring(0, pathname.indexOf("/"))
+                    });
 
-                $("#" + this.containerId + " > #" + this.sectionId).html(template());
+                $("#" + this.containerId + " > #" + this.sectionId).html(template(extendedTemplateData));
             },
             // In case anything needs to be initialized in a section, do that here using
             // the section's HTML id attribute
-            initializeSections = function () {
+            initializeSections = function() {
                 switch (this.sectionId) {
                     case "section5":
                         owdiDrought.createDygraph("natural-flow-graph");
@@ -86,14 +90,14 @@ $(document).ready(function() {
     })();
 
     // The fillDom deferred object will be resolved when the DOM for the application has been loaded
-    fillDom.done(function () {
+    fillDom.done(function() {
         // At this point, the DOM will have been built 
 
         window.console.trace("Application loaded");
 
         var fadeTimeInMs = 1500;
 
-        $("#overlay").fadeOut(fadeTimeInMs, 'swing', function (data) {
+        $("#overlay").fadeOut(fadeTimeInMs, "swing", function() {
             $(this).remove();
         });
     });
