@@ -408,7 +408,7 @@ text{
 	}
 	
 	text{
-	font-size: 1em;
+		font-size: 1em !important;
     }
 	
 /*Section 16 CSS*/
