@@ -31,8 +31,7 @@ ecmascript_mead_map <- function(){
                'function drawRiver(){',
                'document.getElementById("colorado-river-draw").beginElement();}',
                'function resetRiver(){',
-               'document.getElementById("colorado-river-reset").beginElement();',
-               'document.getElementById("reset-river").beginElement();}',
+               'document.getElementById("colorado-river-reset").beginElement();}',
                
                'function drawBasin(){',
                'document.getElementById("colorado-basin-draw").beginElement();}',
