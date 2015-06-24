@@ -37,9 +37,8 @@ $(document).ready(function() {
             // Applies the Handlebars template to the designated container -> section
             applyTemplate = function(templateHTML, status, jqXHR, templateData) {
                 var template = Handlebars.compile(templateHTML),
-                    pathname = window.location.pathname,
                     extendedTemplateData = $.extend({}, templateData, {
-                        baseUrl: window.location.origin + pathname.substring(0, pathname.indexOf("/"))
+                        baseUrl: window.location.origin + window.location.pathname
                     });
 
                 $("#" + this.containerId + " > #" + this.sectionId).html(template(extendedTemplateData));
