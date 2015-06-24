@@ -19,29 +19,12 @@
     <!-- ################################################# -->
     <title>OWDI Drought</title>
     <link rel="icon" href="img/usgs.ico" type="image/x-icon" />
-    <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/overlay.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href="css/before-after.css" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Roboto:400,500,700,100,300" rel="stylesheet" type="text/css">
     <link href="css/dygraph.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-    <!--Natural Flow History Chart-->
-    <script type="text/javascript" src="js/htmlwidgets-0.3.2/htmlwidgets.js"></script>
-    <script type="text/javascript" src="js/dygraphs-1.0.1/dygraph-combined.js"></script>
-    <script type="text/javascript" src="js/moment-2.8.4/moment.js"></script>
-    <script type="text/javascript" src="js/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
-    <script type="text/javascript" src="js/dygraphs-binding-0.4.3/dygraphs.js"></script>
-    <script type="text/javascript" src="js/natural_flow.js" language="javascript"></script>
-    <!-- Before After JS -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-    <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
-    <script type="text/javascript" src="js/before-after.js"></script>
-    <script type="text/javascript" src="js/init.js"></script>
 </head>
 
 <body>
@@ -61,7 +44,8 @@
         <div id="usgscolorband">
             <div id="usgsheader">
                 <div id="usgsidentifier">
-                    <a href="http://www.usgs.gov/" target="_blank"><img src="img/usgslogo.jpg" alt="USGS - science for a changing world" title="U.S. Geological Survey Home Page" /></a>
+                    <a href="http://www.usgs.gov/" target="_blank"><img src="img/usgslogo.jpg" alt="USGS - science for a changing world" 
+                     title="U.S. Geological Survey Home Page" /></a>
                 </div>
                 <!--usgsidentifier-->
                 <img src="img/banner.png" alt="banner" />
@@ -147,7 +131,7 @@
                 <a href="http://www.doioig.gov/" target="_blank">DOI Inspector General</a>
                 <p style="margin: 5px 0 5px 0; padding-left: 5px;">URL: http//cida.usgs.gov/ca_drought</p>
                 <p style="margin: 5px 0 5px 0; padding-left: 5px;">Contact Information: <a href="mailto:cida_webmaster@usgs.gov?Subject=Hello%20again" target="_top">gs-cida_ca_drought_cida_app@usgs.gov</a></p>
-                <p style="margin: 5px 0 5px 0; padding-left: 5px;">Page last modified: <script> document.write(document.lastModified); </script>
+                <p style="margin: 5px 0 5px 0; padding-left: 5px;">Page last modified: <span id="last-mod-timestamp"></span> </script>
                 </p>
             </p>
             <!--usgsfootertext-->
@@ -155,7 +139,24 @@
         <!--usgsfooter-->
         <!-- END USGS Footer Template -->
     </span>
-    
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <!--Natural Flow History Chart-->
+    <script type="text/javascript" src="js/htmlwidgets-0.3.2/htmlwidgets.js"></script>
+    <script type="text/javascript" src="js/dygraphs-1.0.1/dygraph-combined.js"></script>
+    <script type="text/javascript" src="js/moment-2.8.4/moment.js"></script>
+    <script type="text/javascript" src="js/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+    <script type="text/javascript" src="js/dygraphs-binding-0.4.3/dygraphs.js"></script>
+    <script type="text/javascript" src="js/natural_flow.js" language="javascript"></script>
+    <!-- Before After JS -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+    <script type="text/javascript" src="js/before-after.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
 </body>
 
 </html>
