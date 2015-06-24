@@ -1,7 +1,7 @@
 <div class="widget">
     <div id="meadSVGContainer">
         <h2>Mead SVG Dealio</h2>
-        <object id="mead-object" data="img/lo_CO_borders.svg" type="image/svg+xml" onload="window.owdiDrought.create()"></object>
+        <object id="mead-object" data="img/lo_CO_borders.svg" type="image/svg+xml" onload="window.owdiDrought.createCOScene()"></object>
     </div>
     <div class="SVGInfo" id="info1">
         <p>Suspendisse fermentum convallis porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin condimentum dictum justo a dapibus. Praesent nec libero nec ipsum ultricies posuere. Duis in pretium est. Etiam gravida pulvinar tellus vitae finibus</p>
@@ -15,180 +15,169 @@
 /* global ScrollMagic */
 /* global $ */
 /* global console */
-
 (function() {
     "use strict";
-    owdiDrought.meadObjectSVG = null;
 
-    owdiDrought.create = function() {
-        var meadObjectDomElement = document.getElementById("mead-object"),
-            getMeadObject = function() {
-                if (owdiDrought.meadObjectSVG === null) {
-                    owdiDrought.meadObjectSVG = meadObjectDomElement.getSVGDocument();
-                    
-                }
-            }
-
-        new ScrollMagic.Scene({
-                triggerElement: svgContainer,
-                duration: 100
-            })
-            .on("enter", function() {
-                getMeadObject();
-            })
-            .addTo(window.owdiDrought.SMController);
+    owdiDrought.createCOScene = function() {
+        if (!owdiDrought.meadObjectSVG) {
+            owdiDrought.meadObjectSVG = svgDomElement.getSVGDocument();
+        }
 
     };
-    
-    var svgContainer = "#meadSVGContainer",
+
+    var svgDomElement = document.getElementById("mead-object"),
+        svgContainer = "#meadSVGContainer",
         parentContainer = "#container16",
-        defaultDuration = 300,
-        addTriggerFunction = function(item) {
-            var scene = new ScrollMagic.Scene({
-                    triggerElement: parentContainer,
-                    duration: defaultDuration
-                })
-                .offset(item.offset)
-                .setPin(parentContainer)
-                .addTo(window.owdiDrought.SMController)
-                .addIndicators();
+        setScene = function() {
+            var defaultDuration = 300,
+                addTriggerFunction = function(item) {
+                    var scene = new ScrollMagic.Scene({
+                            triggerElement: parentContainer,
+                            duration: defaultDuration
+                        })
+                        .offset(item.offset)
+                        .setPin(parentContainer)
+                        .addIndicators();
 
-            if (item.start) {
-                scene.on("start", item.start);
-            }
-            if (item.end) {
-                scene.on("end", item.end);
-            }
-        },
-        fadeSpeed = "slow",
-        // Define the actions 
-        actions = {
-            // Each action has a name but the name is currently not used for anything except 
-            // a label to easily identify what the actions within do
-            drawRiver: {
-                "offset": 200,
-                "start": function(e) {
-                    var $section = $("#info1");
-                    if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                        $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.drawRiver);
-                    } else {
-                        $section.fadeOut(fadeSpeed, owdiDrought.meadObjectSVG.resetRiver);
+                    if (item.start) {
+                        scene.on("start", item.start);
                     }
-                },
-                "end": function(e) {
-                    var $section = $("#info1");
-                    if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                        $section.fadeOut(fadeSpeed);
-                    } else {
-                        $section.fadeIn(fadeSpeed);
+                    if (item.end) {
+                        scene.on("end", item.end);
                     }
-                }
-            },
-            drawBasin: {
-                "offset": 500,
-                "start": function(e) {
-                    if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                        owdiDrought.meadObjectSVG.drawBasin();
-                    } else {
-                        owdiDrought.meadObjectSVG.resetBasin();
-                    }
-                },
-                "end": function(e) {
-                    var $section = $("#info2");
-                    if (e.scrollDirection === "FORWARD") {
-                        $section.fadeOut(fadeSpeed);
-                    } else {
-                        $section.fadeIn(fadeSpeed);
-                    }
-                }
-            },
-            drawPictogram: {
-                "offset": 800,
-                "start": function(e) {
-                    if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                        owdiDrought.meadObjectSVG.drawPictogram();
-                    } else {
-                        owdiDrought.meadObjectSVG.removePictogram();
-                    }
-                }
-            },
-            highlightUser1: {
-                "offset": 1100,
-                "start": function(e) {
-                    if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                        owdiDrought.meadObjectSVG.highlightUser(1);
-                    }
-                }
-            },
-            highlightUser2: {
-                "offset": 1400,
-                "start": function(e) {
-                    if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                        owdiDrought.meadObjectSVG.highlightUser(2);
-                    }
-                }
-            },
-            highlightUser3: {
-                "offset": 1700,
-                "start": function(e) {
-                    if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                        owdiDrought.meadObjectSVG.highlightUser(3);
-                    }
-                }
-            },
-            highlightUser4: {
-                "offset": 2000,
-                "start": function(e) {
-                    if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                        owdiDrought.meadObjectSVG.highlightUser(4);
-                    }
-                }
-            },
-            highlightUser5: {
-                "offset": 2300,
-                "start": function(e) {
-                    if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                        owdiDrought.meadObjectSVG.highlightUser(5);
-                    }
-                }
-            },
-            removeItems: {
-                "offset": 2600,
-                "start": function(e) {
-                    if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                        owdiDrought.meadObjectSVG.removeGreyStates();
-                        owdiDrought.meadObjectSVG.removeRiver();
-                        owdiDrought.meadObjectSVG.removePictogram();
-                    } else {
-                        owdiDrought.meadObjectSVG.resetGreyStates();
-                        owdiDrought.meadObjectSVG.drawPictogram();
-                        owdiDrought.meadObjectSVG.drawBasin();
-                        owdiDrought.meadObjectSVG.showRiver();
-                    }
-                }
-            },
-            moveStates: {
-                "offset": 2900,
-                "start": function(e) {
-                    if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                        owdiDrought.meadObjectSVG.moveStates();
-                        owdiDrought.meadObjectSVG.drawMead();
-                    } else {
-                        owdiDrought.meadObjectSVG.resetStates();
-                        owdiDrought.meadObjectSVG.removeMead();
-                    }
-                }
-            }
-        };
 
-    // For every action I have, set the ScrollMagic event triggering for it
-    for (var action in actions) {
-        if (actions.hasOwnProperty(action)) {
-            addTriggerFunction(actions[action]);
-            console.trace("Set ScrollMagic action in section 16 for action " + action);
+                    scene.addTo(window.owdiDrought.SMController);
+                },
+                fadeSpeed = "slow",
+                // Define the actions 
+                actions = {
+                    // Each action has a name but the name is currently not used for anything except 
+                    // a label to easily identify what the actions within do
+                    drawRiver: {
+                        "offset": 200,
+                        "start": function(e) {
+                            var $section = $("#info1");
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.drawRiver);
+                            } else {
+                                $section.fadeOut(fadeSpeed, owdiDrought.meadObjectSVG.resetRiver);
+                            }
+                        },
+                        "end": function(e) {
+                            var $section = $("#info1");
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                $section.fadeOut(fadeSpeed);
+                            } else {
+                                $section.fadeIn(fadeSpeed);
+                            }
+                        }
+                    },
+                    drawBasin: {
+                        "offset": 500,
+                        "start": function(e) {
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                owdiDrought.meadObjectSVG.drawBasin();
+                            } else {
+                                owdiDrought.meadObjectSVG.resetBasin();
+                            }
+                        },
+                        "end": function(e) {
+                            var $section = $("#info2");
+                            if (e.scrollDirection === "FORWARD") {
+                                $section.fadeOut(fadeSpeed);
+                            } else {
+                                $section.fadeIn(fadeSpeed);
+                            }
+                        }
+                    },
+                    drawPictogram: {
+                        "offset": 800,
+                        "start": function(e) {
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                owdiDrought.meadObjectSVG.drawPictogram();
+                            } else {
+                                owdiDrought.meadObjectSVG.removePictogram();
+                            }
+                        }
+                    },
+                    highlightUser1: {
+                        "offset": 1100,
+                        "start": function(e) {
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                owdiDrought.meadObjectSVG.highlightUser(1);
+                            }
+                        }
+                    },
+                    highlightUser2: {
+                        "offset": 1400,
+                        "start": function(e) {
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                owdiDrought.meadObjectSVG.highlightUser(2);
+                            }
+                        }
+                    },
+                    highlightUser3: {
+                        "offset": 1700,
+                        "start": function(e) {
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                owdiDrought.meadObjectSVG.highlightUser(3);
+                            }
+                        }
+                    },
+                    highlightUser4: {
+                        "offset": 2000,
+                        "start": function(e) {
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                owdiDrought.meadObjectSVG.highlightUser(4);
+                            }
+                        }
+                    },
+                    highlightUser5: {
+                        "offset": 2300,
+                        "start": function(e) {
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                owdiDrought.meadObjectSVG.highlightUser(5);
+                            }
+                        }
+                    },
+                    removeItems: {
+                        "offset": 2600,
+                        "start": function(e) {
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                owdiDrought.meadObjectSVG.removeGreyStates();
+                                owdiDrought.meadObjectSVG.removeRiver();
+                                owdiDrought.meadObjectSVG.removePictogram();
+                            } else {
+                                owdiDrought.meadObjectSVG.resetGreyStates();
+                                owdiDrought.meadObjectSVG.drawPictogram();
+                                owdiDrought.meadObjectSVG.drawBasin();
+                                owdiDrought.meadObjectSVG.showRiver();
+                            }
+                        }
+                    },
+                    moveStates: {
+                        "offset": 2900,
+                        "start": function(e) {
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                owdiDrought.meadObjectSVG.moveStates();
+                                owdiDrought.meadObjectSVG.drawMead();
+                            } else {
+                                owdiDrought.meadObjectSVG.resetStates();
+                                owdiDrought.meadObjectSVG.removeMead();
+                            }
+                        }
+                    }
+                };
+
+            // For every action I have, set the ScrollMagic event triggering for it
+            for (var action in actions) {
+                if (actions.hasOwnProperty(action)) {
+                    addTriggerFunction(actions[action]);
+                    console.trace("Set ScrollMagic action in section 16 for action " + action);
+                }
+            }
         }
-    }
 
-
+        setScene();
 })();
 </script>
