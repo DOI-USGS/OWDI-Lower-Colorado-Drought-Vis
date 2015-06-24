@@ -12,6 +12,11 @@ nav h3{color:#fff;}
 /*=====SVG CSS=====*/
 
 text{
+	font-size: 1.5em;
+   	cursor: default;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    }
+.legend{
 	font-size: 16px;
    	cursor: default;
     font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
@@ -102,6 +107,10 @@ text{
     -o-background-size: cover;
 	background-repeat:no-repeat;
 	height:100%;
+	}
+	
+#container11{
+	margin-bottom:20px;
 	}
 	
 #container12{
@@ -211,6 +220,8 @@ text{
 	margin-bottom:5px;
 	}
 	
+/*Supporting Info Buttons CSS*/
+	
 .supportinginfo,
 .interact{
 	background:none;
@@ -220,6 +231,7 @@ text{
 	border:1px solid #003366;
 	border-radius:5px;
 	margin-top:20px;
+	outline:none;
 	}
 	
 .spacer{
@@ -245,6 +257,18 @@ text{
 	color:#003366;
 	}
 	
+/*Supporting Info Content CSS*/
+.supportingInfoContent{
+	background:rgba(0,51,102,.2);
+	display:none;
+	padding:15px;
+	color:#000;
+	margin:-50px 0 40px 0;
+	border-radius:5px;
+	}
+	
+/*Section 5 CSS*/
+	
 #blueDragon img{
 		width:100%;
 		height:auto;
@@ -262,10 +286,12 @@ text{
 	margin-bottom:10px;
 	}
 	
+/*Section 9 CSS*/
 #JrGraph h2{
 	font-size:1em;
 	}
-	
+
+/*Section 16 CSS*/	
 #meadSVGContainer h2{
 	color:#fff;
 	margin-bottom:30px;;
@@ -273,14 +299,6 @@ text{
 	
 .cd-image-container{
 	margin-top:25px;
-	}
-	
-.supportingInfoContent{
-	background:rgba(0,51,102,.2);
-	display:none;
-	padding:15px;
-	color:#000;
-	margin:-40px 0 40px 0;
 	}
 	
 .SVGInfo{
@@ -343,11 +361,11 @@ text{
 	#container14{
 		background-image:url('../img/keynotes/keynote8.jpg');
 		}
+
 /*======keynote CSS======*/
 	.keynote{
 		top:35%;
 	}
-	
 	
 	.keynote h1,
 	.keynote h2{
@@ -373,6 +391,8 @@ text{
 		margin:0 auto;
 		}
 		
+/*Section 5 CSS*/
+		
 	#blueDragon img{
 		margin-bottom:10px;
 		}
@@ -381,9 +401,17 @@ text{
 		display:none;
 	}
 	
+/*Section 9 CSS*/
+	
 	#JrGraph h2{
 		font-size:1.5em;
 	}
+	
+	text{
+		font-size: 1em !important;
+    }
+	
+/*Section 16 CSS*/
 	
 	.SVGInfo{
 		background:rgba(0,51,102,.3);
@@ -408,6 +436,8 @@ text{
 }
 
 @media screen and (min-width:1025px){
+	
+/*Keynote CSS*/
 	.keynote{
 		width:980px;
 		}
@@ -419,7 +449,7 @@ text{
 	.keynote h2{
 		font-size:2vw;
 	}
-	
+/*Section Content CSS*/
 	.sectionContent{
 		width:900px;
 		}
@@ -427,16 +457,16 @@ text{
 	.sectionContent h3{
 		font-size:1.6em;
 		}
-		
+/*Section 5 CSS*/	
 	#blueDragon img{
 		width:900px;
 		}
-	
+/*Section 9 CSS*/	
 	#JrGraph{
 		width:1024px;
 		margin:0 auto;
 		}
-		
+/*Section 16 CSS*/	
 	#meadSVGContainer{
 		width:760px;
 		margin:0 auto;

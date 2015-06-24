@@ -1,4 +1,3 @@
-<?xml-stylesheet type="text/css" href="../css/main.css" ?> 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio="xMinYMin meet" viewBox="0 0 900 600">
   <script type="text/ecmascript"><![CDATA[function init(evt)
   {
@@ -7,6 +6,8 @@
     svgDocument = evt.target.ownerDocument;
     svgDocument.timeAdvance = this.timeAdvance;
     svgDocument.visibleAxes = this.visibleAxes;
+    svgDocument.setMobile = this.setMobile;
+    svgDocument.setDesktop = this.setDesktop;
   }
   
   legend = svgDocument.getElementById("legend");
@@ -38,7 +39,15 @@
   {
   textelement = svgDocument.getElementById(elementname);                      
   textelement.firstChild.data = legendtext;
-  } 
+  }
+  function setMobile(){
+  	svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
+    svgDocument.getElementById("y-label").setAttribute("y","-10");       
+  }
+  function setDesktop(){
+    svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
+    svgDocument.getElementById("y-label").setAttribute("y","0");                          
+  }
   function timeAdvance(){
     var ele = document.getElementById("timeAdvance");
     ele.beginElement();
@@ -50,30 +59,30 @@
   <g id="surface0">
     <g id="axes" opacity="0">
       <animate attributeName="opacity" begin="indefinite" id="visibleAxes" fill="freeze" dur="1s" from="0" to="1"/>
-      <rect id="axis.box" x="80.0" y="10.0" width="680.0" height="480.0" style="fill:#FFFFFF;stroke:black"/>
-      <text transform="translate(50.0,250.0)rotate(270)" text-anchor="middle">Volume (million acre-feet)</text>
-      <line x1="117.1" y1="490.0" x2="117.1" y2="485.0" style="stroke:black;stroke-width:1.5"/>
-      <text transform="translate(122.1,495.0)rotate(270)" text-anchor="end">1910</text>
-      <line x1="178.9" y1="490.0" x2="178.9" y2="485.0" style="stroke:black;stroke-width:1.5"/>
-      <text transform="translate(183.9,495.0)rotate(270)" text-anchor="end">1920</text>
-      <line x1="240.7" y1="490.0" x2="240.7" y2="485.0" style="stroke:black;stroke-width:1.5"/>
-      <text transform="translate(245.7,495.0)rotate(270)" text-anchor="end">1930</text>
-      <line x1="302.5" y1="490.0" x2="302.5" y2="485.0" style="stroke:black;stroke-width:1.5"/>
-      <text transform="translate(307.5,495.0)rotate(270)" text-anchor="end">1940</text>
-      <line x1="364.4" y1="490.0" x2="364.4" y2="485.0" style="stroke:black;stroke-width:1.5"/>
-      <text transform="translate(369.4,495.0)rotate(270)" text-anchor="end">1950</text>
-      <line x1="426.2" y1="490.0" x2="426.2" y2="485.0" style="stroke:black;stroke-width:1.5"/>
-      <text transform="translate(431.2,495.0)rotate(270)" text-anchor="end">1960</text>
-      <line x1="488.0" y1="490.0" x2="488.0" y2="485.0" style="stroke:black;stroke-width:1.5"/>
-      <text transform="translate(493.0,495.0)rotate(270)" text-anchor="end">1970</text>
-      <line x1="549.8" y1="490.0" x2="549.8" y2="485.0" style="stroke:black;stroke-width:1.5"/>
-      <text transform="translate(554.8,495.0)rotate(270)" text-anchor="end">1980</text>
-      <line x1="611.6" y1="490.0" x2="611.6" y2="485.0" style="stroke:black;stroke-width:1.5"/>
-      <text transform="translate(616.6,495.0)rotate(270)" text-anchor="end">1990</text>
-      <line x1="673.5" y1="490.0" x2="673.5" y2="485.0" style="stroke:black;stroke-width:1.5"/>
-      <text transform="translate(678.5,495.0)rotate(270)" text-anchor="end">2000</text>
-      <line x1="735.3" y1="490.0" x2="735.3" y2="485.0" style="stroke:black;stroke-width:1.5"/>
-      <text transform="translate(740.3,495.0)rotate(270)" text-anchor="end">2010</text>
+      <rect id="axis.box" x="80.0" y="10.0" width="810.0" height="480.0" style="fill:#FFFFFF;stroke:black"/>
+      <text transform="translate(50.0,250.0)rotate(270)" text-anchor="middle" id="y-label">Volume (million acre-feet)</text>
+      <line x1="124.2" y1="490.0" x2="124.2" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(129.2,495.0)rotate(270)" text-anchor="end">1910</text>
+      <line x1="197.8" y1="490.0" x2="197.8" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(202.8,495.0)rotate(270)" text-anchor="end">1920</text>
+      <line x1="271.5" y1="490.0" x2="271.5" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(276.5,495.0)rotate(270)" text-anchor="end">1930</text>
+      <line x1="345.1" y1="490.0" x2="345.1" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(350.1,495.0)rotate(270)" text-anchor="end">1940</text>
+      <line x1="418.7" y1="490.0" x2="418.7" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(423.7,495.0)rotate(270)" text-anchor="end">1950</text>
+      <line x1="492.4" y1="490.0" x2="492.4" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(497.4,495.0)rotate(270)" text-anchor="end">1960</text>
+      <line x1="566.0" y1="490.0" x2="566.0" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(571.0,495.0)rotate(270)" text-anchor="end">1970</text>
+      <line x1="639.6" y1="490.0" x2="639.6" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(644.6,495.0)rotate(270)" text-anchor="end">1980</text>
+      <line x1="713.3" y1="490.0" x2="713.3" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(718.3,495.0)rotate(270)" text-anchor="end">1990</text>
+      <line x1="786.9" y1="490.0" x2="786.9" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(791.9,495.0)rotate(270)" text-anchor="end">2000</text>
+      <line x1="860.5" y1="490.0" x2="860.5" y2="485.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(865.5,495.0)rotate(270)" text-anchor="end">2010</text>
       <line x1="80.0" y1="490.0" x2="85.0" y2="490.0" style="stroke:black;stroke-width:1.5"/>
       <text transform="translate(75.0,495.0)rotate(0)" text-anchor="end">0</text>
       <line x1="80.0" y1="407.2" x2="85.0" y2="407.2" style="stroke:black;stroke-width:1.5"/>
@@ -88,445 +97,446 @@
       <text transform="translate(75.0,81.2)rotate(0)" text-anchor="end">25</text>
     </g>
     <g id="legend" visibility="hidden" class="label" alignment-baseline="central">
-      <text id="year_text" x="100" y="30">year</text>
-      <text id="use_text" x="100" y="45" fill="#B22C2C">use_text</text>
-      <text id="supply_text" x="100" y="60" fill="#0066CC">supply_text</text>
+      <text id="year_text" x="100" y="30" class="legend">year</text>
+      <text id="use_text" x="100" y="45" fill="#B22C2C" class="legend">use_text</text>
+      <text id="supply_text" x="100" y="60" fill="#0066CC" class="legend">supply_text</text>
     </g>
-    <path d="M92.4,162.7 L98.5,115.4 L104.7,267.8 L110.9,91.4 L117.1,216.8 L123.3,209.1 L129.5,164.8 L135.6,232.7 L141.8,116.3 L148.0,247.5 L154.2,121.3 L160.4,87.4 L166.5,205.9 L172.7,246.1 L178.9,92.4 L185.1,83.1 L191.3,153.9 L197.5,137.2 L203.6,225.7 L209.8,227.0 L216.0,221.6 L222.2,137.8 L228.4,202.6 L234.5,120.8 L240.7,232.2 L246.9,327.5 L253.1,166.1 L259.3,269.7 L265.5,369.7 L271.6,273.7 L277.8,241.2 L284.0,236.3 L290.2,177.7 L296.4,283.0 L302.5,306.8 L308.7,119.0 L314.9,187.6 L321.1,250.5 L327.3,220.1 L333.5,237.3 L339.6,290.3 L345.8,199.7 L352.0,227.0 L358.2,190.0 L364.4,257.6 L370.5,268.3 L376.7,118.5 L382.9,285.9 L389.1,331.2 L395.3,305.8 L401.5,284.4 L407.6,113.7 L413.8,198.9 L420.0,309.6 L426.2,277.3 L432.4,305.3 L438.5,188.4 L444.7,331.2 L450.9,304.6 L457.1,134.9 L463.3,294.3 L469.5,277.3 L475.6,244.4 L481.8,217.7 L488.0,224.1 L494.2,226.6 L500.4,257.1 L506.5,163.1 L512.7,263.7 L518.9,204.8 L525.1,292.0 L531.3,386.4 L537.5,212.7 L543.6,168.7 L549.8,164.7 L556.0,323.3 L562.2,181.6 L568.4,70.2 L574.5,60.0 L580.7,117.9 L586.9,94.9 L593.1,210.9 L599.3,280.7 L605.5,313.2 L611.6,316.8 L617.8,263.6 L624.0,277.9 L630.2,125.3 L636.4,298.0 L642.5,125.5 L648.7,238.5 L654.9,114.9 L661.1,191.8 L667.3,209.5 L673.5,301.6 L679.6,295.1 L685.8,377.9 L692.0,300.9 L698.2,305.9 L704.4,165.1 L710.5,252.2 L716.7,286.3 L722.9,205.0 L729.1,243.2 L735.3,259.1 L741.5,140.0 L747.6,350.8 " fill="none" style="stroke:#0066CC;stroke-width:3;stroke-dasharray:8218;stroke-linejoin:round;stroke-dashoffset:8218">
-      <animate attributeName="stroke-dashoffset" begin="indefinite;visibleAxes.begin+1s" id="timeAdvance" fill="freeze" dur="15.000000s" values="8169.09937636937;8016.5802858824;7840.09654799667;7714.4916813409;7704.56270551741;7659.83522541059;7591.62259824447;7475.02788380273;7343.65370378092;7217.352237661;7182.86773856719;7064.27166299;7023.5853724513;6869.77150334872;6858.61332780627;6787.50910336647;6769.6493177914;6680.94120649237;6674.6149216853;6666.40735496293;6582.33562254481;6517.17759066582;6435.14049588483;6323.61568883498;6228.09155645539;6066.61813576361;5962.85299226446;5862.68416553909;5766.5028772224;5733.34875672056;5725.46526757583;5666.61199722209;5561.1208152291;5536.52720188411;5348.54222613081;5279.59703492482;5216.41377886073;5185.39266024432;5167.08414401843;5113.78176549688;5022.98937525155;4994.96767468243;4957.40643330012;4889.48961573925;4877.18220879537;4727.24331011027;4559.67506969233;4513.95362681841;4487.77064989124;4465.53716123259;4294.7442345163;4209.34999466719;4098.44666942831;4065.55263017324;4036.87878787569;3919.80621685262;3776.87260618434;3749.57184182866;3579.71310748803;3420.17516548429;3402.11924865021;3368.61866205199;3341.20890249373;3332.33959098881;3325.65817408762;3294.50838945033;3200.26476918502;3099.45095391952;3040.20690490021;2952.72667767167;2858.13780258431;2684.3120875995;2639.86898975394;2632.52842479264;2473.8479589953;2332.01803486005;2220.46840533344;2208.49553106963;2150.2215111399;2126.3349041339;2010.08176509243;1940.02382688304;1907.00842238629;1899.85570171172;1846.36953576099;1830.79321124965;1677.99388184585;1505.17901568652;1332.62047065005;1219.47929200904;1095.73144312813;1018.56838586938;999.841063240234;907.545012700025;898.623106744904;815.615059603024;738.369063984282;730.408850156013;589.42582867775;502.102019765809;467.390404869055;385.810184921588;347.107711064531;330.091492802844;210.863037635038;0"/>
+    <path d="M94.7,162.7 L102.1,115.4 L109.5,267.8 L116.8,91.4 L124.2,216.8 L131.5,209.1 L138.9,164.8 L146.3,232.7 L153.6,116.3 L161.0,247.5 L168.4,121.3 L175.7,87.4 L183.1,205.9 L190.5,246.1 L197.8,92.4 L205.2,83.1 L212.5,153.9 L219.9,137.2 L227.3,225.7 L234.6,227.0 L242.0,221.6 L249.4,137.8 L256.7,202.6 L264.1,120.8 L271.5,232.2 L278.8,327.5 L286.2,166.1 L293.5,269.7 L300.9,369.7 L308.3,273.7 L315.6,241.2 L323.0,236.3 L330.4,177.7 L337.7,283.0 L345.1,306.8 L352.5,119.0 L359.8,187.6 L367.2,250.5 L374.5,220.1 L381.9,237.3 L389.3,290.3 L396.6,199.7 L404.0,227.0 L411.4,190.0 L418.7,257.6 L426.1,268.3 L433.5,118.5 L440.8,285.9 L448.2,331.2 L455.5,305.8 L462.9,284.4 L470.3,113.7 L477.6,198.9 L485.0,309.6 L492.4,277.3 L499.7,305.3 L507.1,188.4 L514.5,331.2 L521.8,304.6 L529.2,134.9 L536.5,294.3 L543.9,277.3 L551.3,244.4 L558.6,217.7 L566.0,224.1 L573.4,226.6 L580.7,257.1 L588.1,163.1 L595.5,263.7 L602.8,204.8 L610.2,292.0 L617.5,386.4 L624.9,212.7 L632.3,168.7 L639.6,164.7 L647.0,323.3 L654.4,181.6 L661.7,70.2 L669.1,60.0 L676.5,117.9 L683.8,94.9 L691.2,210.9 L698.5,280.7 L705.9,313.2 L713.3,316.8 L720.6,263.6 L728.0,277.9 L735.4,125.3 L742.7,298.0 L750.1,125.5 L757.5,238.5 L764.8,114.9 L772.2,191.8 L779.5,209.5 L786.9,301.6 L794.3,295.1 L801.6,377.9 L809.0,300.9 L816.4,305.9 L823.7,165.1 L831.1,252.2 L838.5,286.3 L845.8,205.0 L853.2,243.2 L860.5,259.1 L867.9,140.0 L875.3,350.8 " fill="none" style="stroke:#0066CC;stroke-width:3;stroke-dasharray:8243;stroke-linejoin:round;stroke-dashoffset:8243">
+      <animate attributeName="stroke-dashoffset" begin="indefinite;visibleAxes.begin+1s" id="timeAdvance" fill="freeze" dur="15.000000s" values="8194.11517705081;8041.54361604604;7865.01453061652;7739.34595541939;7728.6411515741;7683.73507468946;7615.40520735923;7498.74186392945;7367.30677180841;7240.94194834672;7206.22611705589;7087.56256997098;7046.68002476814;6892.81412668552;6880.96030258108;6809.74359809648;6791.44113363809;6702.64283818878;6695.15750961062;6686.0266599259;6601.85977536762;6536.57901723166;6454.44441316877;6342.8478592257;6247.23997183487;6085.71698940089;5981.87473754809;5881.62603624977;5785.36156467941;5751.96689488446;5743.12621246974;5684.13709740778;5578.57006778802;5553.65312411859;5365.62557461205;5296.56438685153;5233.2545763059;5201.97649988366;5183.23590141785;5129.78356919074;5038.90306308011;5010.59716321369;4972.82342738252;4904.78885990349;4891.84743300592;4741.85516119378;4574.23916117819;4528.34298919255;4501.85607647643;4479.26545270467;4308.42566787461;4222.93774788664;4111.96227395883;4078.82579733598;4049.87415668181;3932.73323663073;3789.74363797707;3762.15124774231;3592.24539764802;3432.65729281796;3414.16339119656;3380.42472544215;3352.72448747378;3342.99448485126;3335.20669978294;3303.80101005302;3209.47249779307;3108.57931857441;3049.20031884669;2961.62864294392;2866.95518544523;2693.08342967552;2648.46059683656;2640.10044382279;2481.36954421555;2339.4831965824;2227.86183611772;2215.23812895224;2156.82691715832;2132.60753940575;2016.28556984944;1946.11347446521;1912.85651732018;1904.66080639853;1851.0252005702;1834.94321842416;1682.09151470218;1509.23033852276;1336.62541469506;1223.41351351528;1099.60100054865;1022.3342828108;1003.1843251785;910.801592972832;901.023624352774;817.91920717311;740.569662225558;731.660494550933;590.620710767765;503.205289546151;468.2638460556;386.585571397404;347.67683526888;330.196562147668;210.900993134547;0"/>
     </path>
     <g id="supply" style="fill:#0066CC" r="0" visibility="hidden">
-      <circle cx="92.4" cy="162.7" id="supply-1906">
+      <circle cx="94.7" cy="162.7" id="supply-1906">
         <animate attributeName="r" begin="timeAdvance.begin+0.000s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="98.5" cy="115.4" id="supply-1907">
+      <circle cx="102.1" cy="115.4" id="supply-1907">
         <animate attributeName="r" begin="timeAdvance.begin+0.000s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="104.7" cy="267.8" id="supply-1908">
+      <circle cx="109.5" cy="267.8" id="supply-1908">
         <animate attributeName="r" begin="timeAdvance.begin+0.083s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="110.9" cy="91.4" id="supply-1909">
+      <circle cx="116.8" cy="91.4" id="supply-1909">
         <animate attributeName="r" begin="timeAdvance.begin+0.225s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="117.1" cy="216.8" id="supply-1910">
+      <circle cx="124.2" cy="216.8" id="supply-1910">
         <animate attributeName="r" begin="timeAdvance.begin+0.366s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="123.3" cy="209.1" id="supply-1911">
+      <circle cx="131.5" cy="209.1" id="supply-1911">
         <animate attributeName="r" begin="timeAdvance.begin+0.508s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="129.5" cy="164.8" id="supply-1912">
+      <circle cx="138.9" cy="164.8" id="supply-1912">
         <animate attributeName="r" begin="timeAdvance.begin+0.649s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="135.6" cy="232.7" id="supply-1913">
+      <circle cx="146.3" cy="232.7" id="supply-1913">
         <animate attributeName="r" begin="timeAdvance.begin+0.791s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="141.8" cy="116.3" id="supply-1914">
+      <circle cx="153.6" cy="116.3" id="supply-1914">
         <animate attributeName="r" begin="timeAdvance.begin+0.932s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="148.0" cy="247.5" id="supply-1915">
+      <circle cx="161.0" cy="247.5" id="supply-1915">
         <animate attributeName="r" begin="timeAdvance.begin+1.074s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="154.2" cy="121.3" id="supply-1916">
+      <circle cx="168.4" cy="121.3" id="supply-1916">
         <animate attributeName="r" begin="timeAdvance.begin+1.215s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="160.4" cy="87.4" id="supply-1917">
+      <circle cx="175.7" cy="87.4" id="supply-1917">
         <animate attributeName="r" begin="timeAdvance.begin+1.357s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="166.5" cy="205.9" id="supply-1918">
+      <circle cx="183.1" cy="205.9" id="supply-1918">
         <animate attributeName="r" begin="timeAdvance.begin+1.498s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="172.7" cy="246.1" id="supply-1919">
+      <circle cx="190.5" cy="246.1" id="supply-1919">
         <animate attributeName="r" begin="timeAdvance.begin+1.640s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="178.9" cy="92.4" id="supply-1920">
+      <circle cx="197.8" cy="92.4" id="supply-1920">
         <animate attributeName="r" begin="timeAdvance.begin+1.781s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="185.1" cy="83.1" id="supply-1921">
+      <circle cx="205.2" cy="83.1" id="supply-1921">
         <animate attributeName="r" begin="timeAdvance.begin+1.923s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="191.3" cy="153.9" id="supply-1922">
+      <circle cx="212.5" cy="153.9" id="supply-1922">
         <animate attributeName="r" begin="timeAdvance.begin+2.064s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="197.5" cy="137.2" id="supply-1923">
+      <circle cx="219.9" cy="137.2" id="supply-1923">
         <animate attributeName="r" begin="timeAdvance.begin+2.206s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="203.6" cy="225.7" id="supply-1924">
+      <circle cx="227.3" cy="225.7" id="supply-1924">
         <animate attributeName="r" begin="timeAdvance.begin+2.347s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="209.8" cy="227.0" id="supply-1925">
+      <circle cx="234.6" cy="227.0" id="supply-1925">
         <animate attributeName="r" begin="timeAdvance.begin+2.489s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="216.0" cy="221.6" id="supply-1926">
+      <circle cx="242.0" cy="221.6" id="supply-1926">
         <animate attributeName="r" begin="timeAdvance.begin+2.630s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="222.2" cy="137.8" id="supply-1927">
+      <circle cx="249.4" cy="137.8" id="supply-1927">
         <animate attributeName="r" begin="timeAdvance.begin+2.772s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="228.4" cy="202.6" id="supply-1928">
+      <circle cx="256.7" cy="202.6" id="supply-1928">
         <animate attributeName="r" begin="timeAdvance.begin+2.913s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="234.5" cy="120.8" id="supply-1929">
+      <circle cx="264.1" cy="120.8" id="supply-1929">
         <animate attributeName="r" begin="timeAdvance.begin+3.055s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="240.7" cy="232.2" id="supply-1930">
+      <circle cx="271.5" cy="232.2" id="supply-1930">
         <animate attributeName="r" begin="timeAdvance.begin+3.196s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="246.9" cy="327.5" id="supply-1931">
+      <circle cx="278.8" cy="327.5" id="supply-1931">
         <animate attributeName="r" begin="timeAdvance.begin+3.338s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="253.1" cy="166.1" id="supply-1932">
+      <circle cx="286.2" cy="166.1" id="supply-1932">
         <animate attributeName="r" begin="timeAdvance.begin+3.479s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="259.3" cy="269.7" id="supply-1933">
+      <circle cx="293.5" cy="269.7" id="supply-1933">
         <animate attributeName="r" begin="timeAdvance.begin+3.621s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="265.5" cy="369.7" id="supply-1934">
+      <circle cx="300.9" cy="369.7" id="supply-1934">
         <animate attributeName="r" begin="timeAdvance.begin+3.762s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="271.6" cy="273.7" id="supply-1935">
+      <circle cx="308.3" cy="273.7" id="supply-1935">
         <animate attributeName="r" begin="timeAdvance.begin+3.904s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="277.8" cy="241.2" id="supply-1936">
+      <circle cx="315.6" cy="241.2" id="supply-1936">
         <animate attributeName="r" begin="timeAdvance.begin+4.045s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="284.0" cy="236.3" id="supply-1937">
+      <circle cx="323.0" cy="236.3" id="supply-1937">
         <animate attributeName="r" begin="timeAdvance.begin+4.187s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="290.2" cy="177.7" id="supply-1938">
+      <circle cx="330.4" cy="177.7" id="supply-1938">
         <animate attributeName="r" begin="timeAdvance.begin+4.328s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="296.4" cy="283.0" id="supply-1939">
+      <circle cx="337.7" cy="283.0" id="supply-1939">
         <animate attributeName="r" begin="timeAdvance.begin+4.470s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="302.5" cy="306.8" id="supply-1940">
+      <circle cx="345.1" cy="306.8" id="supply-1940">
         <animate attributeName="r" begin="timeAdvance.begin+4.611s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="308.7" cy="119.0" id="supply-1941">
+      <circle cx="352.5" cy="119.0" id="supply-1941">
         <animate attributeName="r" begin="timeAdvance.begin+4.753s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="314.9" cy="187.6" id="supply-1942">
+      <circle cx="359.8" cy="187.6" id="supply-1942">
         <animate attributeName="r" begin="timeAdvance.begin+4.894s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="321.1" cy="250.5" id="supply-1943">
+      <circle cx="367.2" cy="250.5" id="supply-1943">
         <animate attributeName="r" begin="timeAdvance.begin+5.036s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="327.3" cy="220.1" id="supply-1944">
+      <circle cx="374.5" cy="220.1" id="supply-1944">
         <animate attributeName="r" begin="timeAdvance.begin+5.177s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="333.5" cy="237.3" id="supply-1945">
+      <circle cx="381.9" cy="237.3" id="supply-1945">
         <animate attributeName="r" begin="timeAdvance.begin+5.319s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="339.6" cy="290.3" id="supply-1946">
+      <circle cx="389.3" cy="290.3" id="supply-1946">
         <animate attributeName="r" begin="timeAdvance.begin+5.460s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="345.8" cy="199.7" id="supply-1947">
+      <circle cx="396.6" cy="199.7" id="supply-1947">
         <animate attributeName="r" begin="timeAdvance.begin+5.602s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="352.0" cy="227.0" id="supply-1948">
+      <circle cx="404.0" cy="227.0" id="supply-1948">
         <animate attributeName="r" begin="timeAdvance.begin+5.743s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="358.2" cy="190.0" id="supply-1949">
+      <circle cx="411.4" cy="190.0" id="supply-1949">
         <animate attributeName="r" begin="timeAdvance.begin+5.885s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="364.4" cy="257.6" id="supply-1950">
+      <circle cx="418.7" cy="257.6" id="supply-1950">
         <animate attributeName="r" begin="timeAdvance.begin+6.026s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="370.5" cy="268.3" id="supply-1951">
+      <circle cx="426.1" cy="268.3" id="supply-1951">
         <animate attributeName="r" begin="timeAdvance.begin+6.168s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="376.7" cy="118.5" id="supply-1952">
+      <circle cx="433.5" cy="118.5" id="supply-1952">
         <animate attributeName="r" begin="timeAdvance.begin+6.309s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="382.9" cy="285.9" id="supply-1953">
+      <circle cx="440.8" cy="285.9" id="supply-1953">
         <animate attributeName="r" begin="timeAdvance.begin+6.451s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="389.1" cy="331.2" id="supply-1954">
+      <circle cx="448.2" cy="331.2" id="supply-1954">
         <animate attributeName="r" begin="timeAdvance.begin+6.592s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="395.3" cy="305.8" id="supply-1955">
+      <circle cx="455.5" cy="305.8" id="supply-1955">
         <animate attributeName="r" begin="timeAdvance.begin+6.734s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="401.5" cy="284.4" id="supply-1956">
+      <circle cx="462.9" cy="284.4" id="supply-1956">
         <animate attributeName="r" begin="timeAdvance.begin+6.875s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="407.6" cy="113.7" id="supply-1957">
+      <circle cx="470.3" cy="113.7" id="supply-1957">
         <animate attributeName="r" begin="timeAdvance.begin+7.017s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="413.8" cy="198.9" id="supply-1958">
+      <circle cx="477.6" cy="198.9" id="supply-1958">
         <animate attributeName="r" begin="timeAdvance.begin+7.158s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="420.0" cy="309.6" id="supply-1959">
+      <circle cx="485.0" cy="309.6" id="supply-1959">
         <animate attributeName="r" begin="timeAdvance.begin+7.300s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="426.2" cy="277.3" id="supply-1960">
+      <circle cx="492.4" cy="277.3" id="supply-1960">
         <animate attributeName="r" begin="timeAdvance.begin+7.442s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="432.4" cy="305.3" id="supply-1961">
+      <circle cx="499.7" cy="305.3" id="supply-1961">
         <animate attributeName="r" begin="timeAdvance.begin+7.583s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="438.5" cy="188.4" id="supply-1962">
+      <circle cx="507.1" cy="188.4" id="supply-1962">
         <animate attributeName="r" begin="timeAdvance.begin+7.725s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="444.7" cy="331.2" id="supply-1963">
+      <circle cx="514.5" cy="331.2" id="supply-1963">
         <animate attributeName="r" begin="timeAdvance.begin+7.866s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="450.9" cy="304.6" id="supply-1964">
+      <circle cx="521.8" cy="304.6" id="supply-1964">
         <animate attributeName="r" begin="timeAdvance.begin+8.008s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="457.1" cy="134.9" id="supply-1965">
+      <circle cx="529.2" cy="134.9" id="supply-1965">
         <animate attributeName="r" begin="timeAdvance.begin+8.149s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="463.3" cy="294.3" id="supply-1966">
+      <circle cx="536.5" cy="294.3" id="supply-1966">
         <animate attributeName="r" begin="timeAdvance.begin+8.291s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="469.5" cy="277.3" id="supply-1967">
+      <circle cx="543.9" cy="277.3" id="supply-1967">
         <animate attributeName="r" begin="timeAdvance.begin+8.432s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="475.6" cy="244.4" id="supply-1968">
+      <circle cx="551.3" cy="244.4" id="supply-1968">
         <animate attributeName="r" begin="timeAdvance.begin+8.574s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="481.8" cy="217.7" id="supply-1969">
+      <circle cx="558.6" cy="217.7" id="supply-1969">
         <animate attributeName="r" begin="timeAdvance.begin+8.715s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="488.0" cy="224.1" id="supply-1970">
+      <circle cx="566.0" cy="224.1" id="supply-1970">
         <animate attributeName="r" begin="timeAdvance.begin+8.857s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="494.2" cy="226.6" id="supply-1971">
+      <circle cx="573.4" cy="226.6" id="supply-1971">
         <animate attributeName="r" begin="timeAdvance.begin+8.998s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="500.4" cy="257.1" id="supply-1972">
+      <circle cx="580.7" cy="257.1" id="supply-1972">
         <animate attributeName="r" begin="timeAdvance.begin+9.140s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="506.5" cy="163.1" id="supply-1973">
+      <circle cx="588.1" cy="163.1" id="supply-1973">
         <animate attributeName="r" begin="timeAdvance.begin+9.281s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="512.7" cy="263.7" id="supply-1974">
+      <circle cx="595.5" cy="263.7" id="supply-1974">
         <animate attributeName="r" begin="timeAdvance.begin+9.423s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="518.9" cy="204.8" id="supply-1975">
+      <circle cx="602.8" cy="204.8" id="supply-1975">
         <animate attributeName="r" begin="timeAdvance.begin+9.564s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="525.1" cy="292.0" id="supply-1976">
+      <circle cx="610.2" cy="292.0" id="supply-1976">
         <animate attributeName="r" begin="timeAdvance.begin+9.706s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="531.3" cy="386.4" id="supply-1977">
+      <circle cx="617.5" cy="386.4" id="supply-1977">
         <animate attributeName="r" begin="timeAdvance.begin+9.847s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="537.5" cy="212.7" id="supply-1978">
+      <circle cx="624.9" cy="212.7" id="supply-1978">
         <animate attributeName="r" begin="timeAdvance.begin+9.989s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="543.6" cy="168.7" id="supply-1979">
+      <circle cx="632.3" cy="168.7" id="supply-1979">
         <animate attributeName="r" begin="timeAdvance.begin+10.130s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="549.8" cy="164.7" id="supply-1980">
+      <circle cx="639.6" cy="164.7" id="supply-1980">
         <animate attributeName="r" begin="timeAdvance.begin+10.272s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="556.0" cy="323.3" id="supply-1981">
+      <circle cx="647.0" cy="323.3" id="supply-1981">
         <animate attributeName="r" begin="timeAdvance.begin+10.413s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="562.2" cy="181.6" id="supply-1982">
+      <circle cx="654.4" cy="181.6" id="supply-1982">
         <animate attributeName="r" begin="timeAdvance.begin+10.555s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="568.4" cy="70.2" id="supply-1983">
+      <circle cx="661.7" cy="70.2" id="supply-1983">
         <animate attributeName="r" begin="timeAdvance.begin+10.696s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="574.5" cy="60.0" id="supply-1984">
+      <circle cx="669.1" cy="60.0" id="supply-1984">
         <animate attributeName="r" begin="timeAdvance.begin+10.838s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="580.7" cy="117.9" id="supply-1985">
+      <circle cx="676.5" cy="117.9" id="supply-1985">
         <animate attributeName="r" begin="timeAdvance.begin+10.979s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="586.9" cy="94.9" id="supply-1986">
+      <circle cx="683.8" cy="94.9" id="supply-1986">
         <animate attributeName="r" begin="timeAdvance.begin+11.121s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="593.1" cy="210.9" id="supply-1987">
+      <circle cx="691.2" cy="210.9" id="supply-1987">
         <animate attributeName="r" begin="timeAdvance.begin+11.262s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="599.3" cy="280.7" id="supply-1988">
+      <circle cx="698.5" cy="280.7" id="supply-1988">
         <animate attributeName="r" begin="timeAdvance.begin+11.404s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="605.5" cy="313.2" id="supply-1989">
+      <circle cx="705.9" cy="313.2" id="supply-1989">
         <animate attributeName="r" begin="timeAdvance.begin+11.545s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="611.6" cy="316.8" id="supply-1990">
+      <circle cx="713.3" cy="316.8" id="supply-1990">
         <animate attributeName="r" begin="timeAdvance.begin+11.687s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="617.8" cy="263.6" id="supply-1991">
+      <circle cx="720.6" cy="263.6" id="supply-1991">
         <animate attributeName="r" begin="timeAdvance.begin+11.828s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="624.0" cy="277.9" id="supply-1992">
+      <circle cx="728.0" cy="277.9" id="supply-1992">
         <animate attributeName="r" begin="timeAdvance.begin+11.970s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="630.2" cy="125.3" id="supply-1993">
+      <circle cx="735.4" cy="125.3" id="supply-1993">
         <animate attributeName="r" begin="timeAdvance.begin+12.111s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="636.4" cy="298.0" id="supply-1994">
+      <circle cx="742.7" cy="298.0" id="supply-1994">
         <animate attributeName="r" begin="timeAdvance.begin+12.253s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="642.5" cy="125.5" id="supply-1995">
+      <circle cx="750.1" cy="125.5" id="supply-1995">
         <animate attributeName="r" begin="timeAdvance.begin+12.394s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="648.7" cy="238.5" id="supply-1996">
+      <circle cx="757.5" cy="238.5" id="supply-1996">
         <animate attributeName="r" begin="timeAdvance.begin+12.536s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="654.9" cy="114.9" id="supply-1997">
+      <circle cx="764.8" cy="114.9" id="supply-1997">
         <animate attributeName="r" begin="timeAdvance.begin+12.677s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="661.1" cy="191.8" id="supply-1998">
+      <circle cx="772.2" cy="191.8" id="supply-1998">
         <animate attributeName="r" begin="timeAdvance.begin+12.819s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="667.3" cy="209.5" id="supply-1999">
+      <circle cx="779.5" cy="209.5" id="supply-1999">
         <animate attributeName="r" begin="timeAdvance.begin+12.960s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="673.5" cy="301.6" id="supply-2000">
+      <circle cx="786.9" cy="301.6" id="supply-2000">
         <animate attributeName="r" begin="timeAdvance.begin+13.102s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="679.6" cy="295.1" id="supply-2001">
+      <circle cx="794.3" cy="295.1" id="supply-2001">
         <animate attributeName="r" begin="timeAdvance.begin+13.243s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="685.8" cy="377.9" id="supply-2002">
+      <circle cx="801.6" cy="377.9" id="supply-2002">
         <animate attributeName="r" begin="timeAdvance.begin+13.385s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="692.0" cy="300.9" id="supply-2003">
+      <circle cx="809.0" cy="300.9" id="supply-2003">
         <animate attributeName="r" begin="timeAdvance.begin+13.526s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="698.2" cy="305.9" id="supply-2004">
+      <circle cx="816.4" cy="305.9" id="supply-2004">
         <animate attributeName="r" begin="timeAdvance.begin+13.668s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="704.4" cy="165.1" id="supply-2005">
+      <circle cx="823.7" cy="165.1" id="supply-2005">
         <animate attributeName="r" begin="timeAdvance.begin+13.809s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="710.5" cy="252.2" id="supply-2006">
+      <circle cx="831.1" cy="252.2" id="supply-2006">
         <animate attributeName="r" begin="timeAdvance.begin+13.951s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="716.7" cy="286.3" id="supply-2007">
+      <circle cx="838.5" cy="286.3" id="supply-2007">
         <animate attributeName="r" begin="timeAdvance.begin+14.092s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="722.9" cy="205.0" id="supply-2008">
+      <circle cx="845.8" cy="205.0" id="supply-2008">
         <animate attributeName="r" begin="timeAdvance.begin+14.234s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="729.1" cy="243.2" id="supply-2009">
+      <circle cx="853.2" cy="243.2" id="supply-2009">
         <animate attributeName="r" begin="timeAdvance.begin+14.375s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="735.3" cy="259.1" id="supply-2010">
+      <circle cx="860.5" cy="259.1" id="supply-2010">
         <animate attributeName="r" begin="timeAdvance.begin+14.517s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="741.5" cy="140.0" id="supply-2011">
+      <circle cx="867.9" cy="140.0" id="supply-2011">
         <animate attributeName="r" begin="timeAdvance.begin+14.658s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="747.6" cy="350.8" id="supply-2012">
+      <circle cx="875.3" cy="350.8" id="supply-2012">
         <animate attributeName="r" begin="timeAdvance.begin+14.800s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
     </g>
-    <path d="M92.4,470.9 L98.5,470.7 L104.7,470.1 L110.9,465.1 L117.1,462.3 L123.3,464.7 L129.5,464.6 L135.6,462.3 L141.8,409.5 L148.0,408.2 L154.2,401.5 L160.4,396.9 L166.5,390.1 L172.7,391.2 L178.9,387.5 L185.1,396.0 L191.3,384.5 L197.5,383.5 L203.6,380.1 L209.8,382.1 L216.0,382.0 L222.2,382.4 L228.4,377.4 L234.5,374.7 L240.7,371.8 L246.9,379.4 L253.1,381.0 L259.3,376.7 L265.5,392.6 L271.6,374.4 L277.8,361.0 L284.0,360.1 L290.2,357.0 L296.4,353.9 L302.5,353.6 L308.7,358.7 L314.9,355.2 L321.1,358.3 L327.3,354.3 L333.5,354.7 L339.6,349.5 L345.8,347.7 L352.0,344.6 L358.2,341.7 L364.4,333.6 L370.5,324.5 L376.7,317.0 L382.9,313.2 L389.1,312.9 L395.3,316.7 L401.5,310.0 L407.6,317.8 L413.8,307.0 L420.0,306.4 L426.2,298.6 L432.4,302.3 L438.5,293.6 L444.7,296.9 L450.9,288.5 L457.1,294.0 L463.3,282.3 L469.5,291.0 L475.6,286.0 L481.8,285.8 L488.0,279.1 L494.2,269.6 L500.4,267.8 L506.5,264.4 L512.7,256.0 L518.9,265.3 L525.1,273.1 L531.3,276.8 L537.5,272.3 L543.6,263.3 L549.8,261.7 L556.0,256.7 L562.2,270.8 L568.4,270.2 L574.5,264.6 L580.7,256.6 L586.9,255.2 L593.1,246.3 L599.3,233.6 L605.5,229.5 L611.6,234.3 L617.8,243.7 L624.0,247.8 L630.2,239.5 L636.4,228.8 L642.5,246.6 L648.7,223.5 L654.9,222.0 L661.1,227.4 L667.3,225.3 L673.5,213.5 L679.6,214.1 L685.8,222.0 L692.0,239.1 L698.2,247.0 L704.4,250.2 L710.5,242.1 L716.7,237.1 L722.9,233.7 L729.1,236.5 L735.3,239.6 " fill="none" style="stroke:#B22C2C;stroke-width:3;stroke-dasharray:971px;stroke-linejoin:round;stroke-dashoffset:971">
-      <animate attributeName="stroke-dashoffset" begin="timeAdvance.begin" id="usage" fill="freeze" dur="15.000000s" values="963.637049359664;957.422183465921;949.499896607586;942.675957081659;936.045215611343;929.863364851065;923.242961588081;870.076695299642;863.763336394058;854.656586079299;846.969889027256;837.732012844524;831.448383848013;824.238639499903;813.73867942924;800.753229782059;794.480540798644;787.430835774528;780.937358141402;774.754439806276;768.55524590171;760.581693378337;753.839399933796;747.026988051014;737.256292778652;730.874657621411;723.325005846821;706.198081548013;686.941659259649;672.226115435061;665.970262017013;659.07175545383;652.172703376975;645.979412100915;637.931184848304;630.811791722766;623.880571745579;616.527437878466;610.332988163465;602.240572789569;595.804353200178;588.87531923067;582.048984714209;571.82903007931;560.867849935076;551.106887562694;543.8860219664;537.695647083805;530.415375295329;521.235499106857;511.236831653852;498.783772317434;492.574962207723;482.566917485873;475.349648815963;464.679662236951;457.690035558209;447.311447585968;439.0217564407;425.727572765819;415.037522419757;407.087453335255;400.901088288474;391.82365811516;380.485029000052;374.054500740846;366.998543587532;356.560404628327;345.383840339454;335.429889307171;328.222889022626;320.541389646638;309.607567970719;303.221921794247;295.315234516249;279.926432242849;273.71139518454;265.368522658186;255.287599082981;248.94604710783;238.101124815682;223.995474083743;216.559179035886;208.6918772207;197.498838454207;190.086893477896;179.734451495248;167.430900581275;148.597871913701;124.673625690939;118.321016681188;110.113831084435;103.588722174501;90.239705769969;84.0269468194349;74.0266891631383;55.8352987879929;45.8191984953745;38.860789743661;28.6729549918487;20.7198144174461;13.679549107792;6.88060145854047;0;0;0"/>
+    <path d="M94.7,470.9 L102.1,470.7 L109.5,470.1 L116.8,465.1 L124.2,462.3 L131.5,464.7 L138.9,464.6 L146.3,462.3 L153.6,409.5 L161.0,408.2 L168.4,401.5 L175.7,396.9 L183.1,390.1 L190.5,391.2 L197.8,387.5 L205.2,396.0 L212.5,384.5 L219.9,383.5 L227.3,380.1 L234.6,382.1 L242.0,382.0 L249.4,382.4 L256.7,377.4 L264.1,374.7 L271.5,371.8 L278.8,379.4 L286.2,381.0 L293.5,376.7 L300.9,392.6 L308.3,374.4 L315.6,361.0 L323.0,360.1 L330.4,357.0 L337.7,353.9 L345.1,353.6 L352.5,358.7 L359.8,355.2 L367.2,358.3 L374.5,354.3 L381.9,354.7 L389.3,349.5 L396.6,347.7 L404.0,344.6 L411.4,341.7 L418.7,333.6 L426.1,324.5 L433.5,317.0 L440.8,313.2 L448.2,312.9 L455.5,316.7 L462.9,310.0 L470.3,317.8 L477.6,307.0 L485.0,306.4 L492.4,298.6 L499.7,302.3 L507.1,293.6 L514.5,296.9 L521.8,288.5 L529.2,294.0 L536.5,282.3 L543.9,291.0 L551.3,286.0 L558.6,285.8 L566.0,279.1 L573.4,269.6 L580.7,267.8 L588.1,264.4 L595.5,256.0 L602.8,265.3 L610.2,273.1 L617.5,276.8 L624.9,272.3 L632.3,263.3 L639.6,261.7 L647.0,256.7 L654.4,270.8 L661.7,270.2 L669.1,264.6 L676.5,256.6 L683.8,255.2 L691.2,246.3 L698.5,233.6 L705.9,229.5 L713.3,234.3 L720.6,243.7 L728.0,247.8 L735.4,239.5 L742.7,228.8 L750.1,246.6 L757.5,223.5 L764.8,222.0 L772.2,227.4 L779.5,225.3 L786.9,213.5 L794.3,214.1 L801.6,222.0 L809.0,239.1 L816.4,247.0 L823.7,250.2 L831.1,242.1 L838.5,237.1 L845.8,233.7 L853.2,236.5 L860.5,239.6 " fill="none" style="stroke:#B22C2C;stroke-width:3;stroke-dasharray:1066px;stroke-linejoin:round;stroke-dashoffset:1066">
+      <animate attributeName="stroke-dashoffset" begin="timeAdvance.begin" id="usage" fill="freeze" dur="15.000000s" values="1057.85733464241;1050.46593270908;1041.59063589554;1033.68023672;1025.93588413835;1018.57222042487;1010.83671760816;957.52011479519;950.045707451894;940.098790052108;931.433135083631;921.366029202083;913.916716627851;905.671191900588;894.434758927961;880.846890552006;873.406803755102;865.300842652934;857.673686155607;850.309126182217;842.93089675171;834.009809132714;826.169733536451;818.269276579827;807.711116201799;800.178949731058;791.634623755278;774.046565295065;754.378874433893;739.129104123617;731.703205763761;723.728391830816;715.75310600384;708.379835271463;699.391941949194;691.225301089038;683.222172023794;674.850980822387;667.47673701475;658.449253918865;650.870785269747;642.869549351877;634.957084034832;623.981851135153;612.313272189234;601.764118152162;593.508867433828;586.138046200758;577.830783006607;567.816873115936;557.047397023823;543.967375949714;536.581065135697;525.802882375261;517.550777703332;506.15530149305;498.101535568279;486.978435606472;477.77369531971;463.890483009719;452.476218212363;443.576113555048;436.208659655983;426.288578859226;414.264736932754;406.691101203776;398.579702075868;387.401016580942;375.529881261768;364.801908218555;356.558782745518;347.897737939831;336.254855096497;328.719289984715;319.857914912253;303.957490393624;296.565944540491;287.313280791397;276.467392879754;268.969156692732;257.409718817752;242.747602768755;234.30327043863;225.47701968794;213.590372503346;205.167475567335;194.068767558431;181.131007723145;161.877664292549;137.621163683637;130.113573811143;120.983066712281;113.328962535481;99.3932349466081;92.0036044930433;81.232651997784;62.6064621500525;51.8207990024013;43.7941112161017;32.8487815548697;23.9459331646622;15.8481803842219;7.95933043000991;0;0;0"/>
     </path>
-    <rect id="year_1906" x="89.27" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1906');ChangeText(evt, 'year_text','1906');ChangeText(evt, 'use_text','usage: 1.2');ChangeText(evt, 'supply_text','supply: 19.8');" onmouseover="highlightViz(evt,'supply-1906','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1906','0.0');"/>
-    <rect id="year_1907" x="95.45" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1907');ChangeText(evt, 'year_text','1907');ChangeText(evt, 'use_text','usage: 1.2');ChangeText(evt, 'supply_text','supply: 22.6');" onmouseover="highlightViz(evt,'supply-1907','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1907','0.0');"/>
-    <rect id="year_1908" x="101.64" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1908');ChangeText(evt, 'year_text','1908');ChangeText(evt, 'use_text','usage: 1.2');ChangeText(evt, 'supply_text','supply: 13.4');" onmouseover="highlightViz(evt,'supply-1908','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1908','0.0');"/>
-    <rect id="year_1909" x="107.82" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1909');ChangeText(evt, 'year_text','1909');ChangeText(evt, 'use_text','usage: 1.5');ChangeText(evt, 'supply_text','supply: 24.1');" onmouseover="highlightViz(evt,'supply-1909','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1909','0.0');"/>
-    <rect id="year_1910" x="114.00" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1910');ChangeText(evt, 'year_text','1910');ChangeText(evt, 'use_text','usage: 1.7');ChangeText(evt, 'supply_text','supply: 16.5');" onmouseover="highlightViz(evt,'supply-1910','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1910','0.0');"/>
-    <rect id="year_1911" x="120.18" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1911');ChangeText(evt, 'year_text','1911');ChangeText(evt, 'use_text','usage: 1.5');ChangeText(evt, 'supply_text','supply: 17.0');" onmouseover="highlightViz(evt,'supply-1911','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1911','0.0');"/>
-    <rect id="year_1912" x="126.36" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1912');ChangeText(evt, 'year_text','1912');ChangeText(evt, 'use_text','usage: 1.5');ChangeText(evt, 'supply_text','supply: 19.6');" onmouseover="highlightViz(evt,'supply-1912','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1912','0.0');"/>
-    <rect id="year_1913" x="132.55" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1913');ChangeText(evt, 'year_text','1913');ChangeText(evt, 'use_text','usage: 1.7');ChangeText(evt, 'supply_text','supply: 15.5');" onmouseover="highlightViz(evt,'supply-1913','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1913','0.0');"/>
-    <rect id="year_1914" x="138.73" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1914');ChangeText(evt, 'year_text','1914');ChangeText(evt, 'use_text','usage: 4.9');ChangeText(evt, 'supply_text','supply: 22.6');" onmouseover="highlightViz(evt,'supply-1914','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1914','0.0');"/>
-    <rect id="year_1915" x="144.91" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1915');ChangeText(evt, 'year_text','1915');ChangeText(evt, 'use_text','usage: 4.9');ChangeText(evt, 'supply_text','supply: 14.7');" onmouseover="highlightViz(evt,'supply-1915','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1915','0.0');"/>
-    <rect id="year_1916" x="151.09" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1916');ChangeText(evt, 'year_text','1916');ChangeText(evt, 'use_text','usage: 5.3');ChangeText(evt, 'supply_text','supply: 22.3');" onmouseover="highlightViz(evt,'supply-1916','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1916','0.0');"/>
-    <rect id="year_1917" x="157.27" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1917');ChangeText(evt, 'year_text','1917');ChangeText(evt, 'use_text','usage: 5.6');ChangeText(evt, 'supply_text','supply: 24.3');" onmouseover="highlightViz(evt,'supply-1917','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1917','0.0');"/>
-    <rect id="year_1918" x="163.45" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1918');ChangeText(evt, 'year_text','1918');ChangeText(evt, 'use_text','usage: 6.0');ChangeText(evt, 'supply_text','supply: 17.2');" onmouseover="highlightViz(evt,'supply-1918','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1918','0.0');"/>
-    <rect id="year_1919" x="169.64" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1919');ChangeText(evt, 'year_text','1919');ChangeText(evt, 'use_text','usage: 6.0');ChangeText(evt, 'supply_text','supply: 14.7');" onmouseover="highlightViz(evt,'supply-1919','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1919','0.0');"/>
-    <rect id="year_1920" x="175.82" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1920');ChangeText(evt, 'year_text','1920');ChangeText(evt, 'use_text','usage: 6.2');ChangeText(evt, 'supply_text','supply: 24.0');" onmouseover="highlightViz(evt,'supply-1920','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1920','0.0');"/>
-    <rect id="year_1921" x="182.00" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1921');ChangeText(evt, 'year_text','1921');ChangeText(evt, 'use_text','usage: 5.7');ChangeText(evt, 'supply_text','supply: 24.6');" onmouseover="highlightViz(evt,'supply-1921','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1921','0.0');"/>
-    <rect id="year_1922" x="188.18" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1922');ChangeText(evt, 'year_text','1922');ChangeText(evt, 'use_text','usage: 6.4');ChangeText(evt, 'supply_text','supply: 20.3');" onmouseover="highlightViz(evt,'supply-1922','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1922','0.0');"/>
-    <rect id="year_1923" x="194.36" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1923');ChangeText(evt, 'year_text','1923');ChangeText(evt, 'use_text','usage: 6.4');ChangeText(evt, 'supply_text','supply: 21.3');" onmouseover="highlightViz(evt,'supply-1923','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1923','0.0');"/>
-    <rect id="year_1924" x="200.55" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1924');ChangeText(evt, 'year_text','1924');ChangeText(evt, 'use_text','usage: 6.6');ChangeText(evt, 'supply_text','supply: 16.0');" onmouseover="highlightViz(evt,'supply-1924','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1924','0.0');"/>
-    <rect id="year_1925" x="206.73" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1925');ChangeText(evt, 'year_text','1925');ChangeText(evt, 'use_text','usage: 6.5');ChangeText(evt, 'supply_text','supply: 15.9');" onmouseover="highlightViz(evt,'supply-1925','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1925','0.0');"/>
-    <rect id="year_1926" x="212.91" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1926');ChangeText(evt, 'year_text','1926');ChangeText(evt, 'use_text','usage: 6.5');ChangeText(evt, 'supply_text','supply: 16.2');" onmouseover="highlightViz(evt,'supply-1926','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1926','0.0');"/>
-    <rect id="year_1927" x="219.09" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1927');ChangeText(evt, 'year_text','1927');ChangeText(evt, 'use_text','usage: 6.5');ChangeText(evt, 'supply_text','supply: 21.3');" onmouseover="highlightViz(evt,'supply-1927','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1927','0.0');"/>
-    <rect id="year_1928" x="225.27" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1928');ChangeText(evt, 'year_text','1928');ChangeText(evt, 'use_text','usage: 6.8');ChangeText(evt, 'supply_text','supply: 17.4');" onmouseover="highlightViz(evt,'supply-1928','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1928','0.0');"/>
-    <rect id="year_1929" x="231.45" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1929');ChangeText(evt, 'year_text','1929');ChangeText(evt, 'use_text','usage: 7.0');ChangeText(evt, 'supply_text','supply: 22.3');" onmouseover="highlightViz(evt,'supply-1929','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1929','0.0');"/>
-    <rect id="year_1930" x="237.64" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1930');ChangeText(evt, 'year_text','1930');ChangeText(evt, 'use_text','usage: 7.1');ChangeText(evt, 'supply_text','supply: 15.6');" onmouseover="highlightViz(evt,'supply-1930','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1930','0.0');"/>
-    <rect id="year_1931" x="243.82" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1931');ChangeText(evt, 'year_text','1931');ChangeText(evt, 'use_text','usage: 6.7');ChangeText(evt, 'supply_text','supply: 9.8');" onmouseover="highlightViz(evt,'supply-1931','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1931','0.0');"/>
-    <rect id="year_1932" x="250.00" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1932');ChangeText(evt, 'year_text','1932');ChangeText(evt, 'use_text','usage: 6.6');ChangeText(evt, 'supply_text','supply: 19.6');" onmouseover="highlightViz(evt,'supply-1932','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1932','0.0');"/>
-    <rect id="year_1933" x="256.18" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1933');ChangeText(evt, 'year_text','1933');ChangeText(evt, 'use_text','usage: 6.8');ChangeText(evt, 'supply_text','supply: 13.3');" onmouseover="highlightViz(evt,'supply-1933','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1933','0.0');"/>
-    <rect id="year_1934" x="262.36" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1934');ChangeText(evt, 'year_text','1934');ChangeText(evt, 'use_text','usage: 5.9');ChangeText(evt, 'supply_text','supply: 7.3');" onmouseover="highlightViz(evt,'supply-1934','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1934','0.0');"/>
-    <rect id="year_1935" x="268.55" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1935');ChangeText(evt, 'year_text','1935');ChangeText(evt, 'use_text','usage: 7.0');ChangeText(evt, 'supply_text','supply: 13.1');" onmouseover="highlightViz(evt,'supply-1935','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1935','0.0');"/>
-    <rect id="year_1936" x="274.73" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1936');ChangeText(evt, 'year_text','1936');ChangeText(evt, 'use_text','usage: 7.8');ChangeText(evt, 'supply_text','supply: 15.0');" onmouseover="highlightViz(evt,'supply-1936','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1936','0.0');"/>
-    <rect id="year_1937" x="280.91" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1937');ChangeText(evt, 'year_text','1937');ChangeText(evt, 'use_text','usage: 7.8');ChangeText(evt, 'supply_text','supply: 15.3');" onmouseover="highlightViz(evt,'supply-1937','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1937','0.0');"/>
-    <rect id="year_1938" x="287.09" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1938');ChangeText(evt, 'year_text','1938');ChangeText(evt, 'use_text','usage: 8.0');ChangeText(evt, 'supply_text','supply: 18.9');" onmouseover="highlightViz(evt,'supply-1938','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1938','0.0');"/>
-    <rect id="year_1939" x="293.27" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1939');ChangeText(evt, 'year_text','1939');ChangeText(evt, 'use_text','usage: 8.2');ChangeText(evt, 'supply_text','supply: 12.5');" onmouseover="highlightViz(evt,'supply-1939','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1939','0.0');"/>
-    <rect id="year_1940" x="299.45" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1940');ChangeText(evt, 'year_text','1940');ChangeText(evt, 'use_text','usage: 8.2');ChangeText(evt, 'supply_text','supply: 11.1');" onmouseover="highlightViz(evt,'supply-1940','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1940','0.0');"/>
-    <rect id="year_1941" x="305.64" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1941');ChangeText(evt, 'year_text','1941');ChangeText(evt, 'use_text','usage: 7.9');ChangeText(evt, 'supply_text','supply: 22.4');" onmouseover="highlightViz(evt,'supply-1941','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1941','0.0');"/>
-    <rect id="year_1942" x="311.82" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1942');ChangeText(evt, 'year_text','1942');ChangeText(evt, 'use_text','usage: 8.1');ChangeText(evt, 'supply_text','supply: 18.3');" onmouseover="highlightViz(evt,'supply-1942','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1942','0.0');"/>
-    <rect id="year_1943" x="318.00" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1943');ChangeText(evt, 'year_text','1943');ChangeText(evt, 'use_text','usage: 8.0');ChangeText(evt, 'supply_text','supply: 14.5');" onmouseover="highlightViz(evt,'supply-1943','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1943','0.0');"/>
-    <rect id="year_1944" x="324.18" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1944');ChangeText(evt, 'year_text','1944');ChangeText(evt, 'use_text','usage: 8.2');ChangeText(evt, 'supply_text','supply: 16.3');" onmouseover="highlightViz(evt,'supply-1944','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1944','0.0');"/>
-    <rect id="year_1945" x="330.36" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1945');ChangeText(evt, 'year_text','1945');ChangeText(evt, 'use_text','usage: 8.2');ChangeText(evt, 'supply_text','supply: 15.3');" onmouseover="highlightViz(evt,'supply-1945','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1945','0.0');"/>
-    <rect id="year_1946" x="336.55" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1946');ChangeText(evt, 'year_text','1946');ChangeText(evt, 'use_text','usage: 8.5');ChangeText(evt, 'supply_text','supply: 12.1');" onmouseover="highlightViz(evt,'supply-1946','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1946','0.0');"/>
-    <rect id="year_1947" x="342.73" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1947');ChangeText(evt, 'year_text','1947');ChangeText(evt, 'use_text','usage: 8.6');ChangeText(evt, 'supply_text','supply: 17.5');" onmouseover="highlightViz(evt,'supply-1947','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1947','0.0');"/>
-    <rect id="year_1948" x="348.91" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1948');ChangeText(evt, 'year_text','1948');ChangeText(evt, 'use_text','usage: 8.8');ChangeText(evt, 'supply_text','supply: 15.9');" onmouseover="highlightViz(evt,'supply-1948','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1948','0.0');"/>
-    <rect id="year_1949" x="355.09" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1949');ChangeText(evt, 'year_text','1949');ChangeText(evt, 'use_text','usage: 9.0');ChangeText(evt, 'supply_text','supply: 18.1');" onmouseover="highlightViz(evt,'supply-1949','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1949','0.0');"/>
-    <rect id="year_1950" x="361.27" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1950');ChangeText(evt, 'year_text','1950');ChangeText(evt, 'use_text','usage: 9.5');ChangeText(evt, 'supply_text','supply: 14.0');" onmouseover="highlightViz(evt,'supply-1950','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1950','0.0');"/>
-    <rect id="year_1951" x="367.45" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1951');ChangeText(evt, 'year_text','1951');ChangeText(evt, 'use_text','usage: 10.0');ChangeText(evt, 'supply_text','supply: 13.4');" onmouseover="highlightViz(evt,'supply-1951','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1951','0.0');"/>
-    <rect id="year_1952" x="373.64" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1952');ChangeText(evt, 'year_text','1952');ChangeText(evt, 'use_text','usage: 10.5');ChangeText(evt, 'supply_text','supply: 22.4');" onmouseover="highlightViz(evt,'supply-1952','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1952','0.0');"/>
-    <rect id="year_1953" x="379.82" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1953');ChangeText(evt, 'year_text','1953');ChangeText(evt, 'use_text','usage: 10.7');ChangeText(evt, 'supply_text','supply: 12.3');" onmouseover="highlightViz(evt,'supply-1953','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1953','0.0');"/>
-    <rect id="year_1954" x="386.00" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1954');ChangeText(evt, 'year_text','1954');ChangeText(evt, 'use_text','usage: 10.7');ChangeText(evt, 'supply_text','supply: 9.6');" onmouseover="highlightViz(evt,'supply-1954','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1954','0.0');"/>
-    <rect id="year_1955" x="392.18" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1955');ChangeText(evt, 'year_text','1955');ChangeText(evt, 'use_text','usage: 10.5');ChangeText(evt, 'supply_text','supply: 11.1');" onmouseover="highlightViz(evt,'supply-1955','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1955','0.0');"/>
-    <rect id="year_1956" x="398.36" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1956');ChangeText(evt, 'year_text','1956');ChangeText(evt, 'use_text','usage: 10.9');ChangeText(evt, 'supply_text','supply: 12.4');" onmouseover="highlightViz(evt,'supply-1956','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1956','0.0');"/>
-    <rect id="year_1957" x="404.55" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1957');ChangeText(evt, 'year_text','1957');ChangeText(evt, 'use_text','usage: 10.4');ChangeText(evt, 'supply_text','supply: 22.7');" onmouseover="highlightViz(evt,'supply-1957','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1957','0.0');"/>
-    <rect id="year_1958" x="410.73" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1958');ChangeText(evt, 'year_text','1958');ChangeText(evt, 'use_text','usage: 11.1');ChangeText(evt, 'supply_text','supply: 17.6');" onmouseover="highlightViz(evt,'supply-1958','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1958','0.0');"/>
-    <rect id="year_1959" x="416.91" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1959');ChangeText(evt, 'year_text','1959');ChangeText(evt, 'use_text','usage: 11.1');ChangeText(evt, 'supply_text','supply: 10.9');" onmouseover="highlightViz(evt,'supply-1959','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1959','0.0');"/>
-    <rect id="year_1960" x="423.09" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1960');ChangeText(evt, 'year_text','1960');ChangeText(evt, 'use_text','usage: 11.6');ChangeText(evt, 'supply_text','supply: 12.8');" onmouseover="highlightViz(evt,'supply-1960','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1960','0.0');"/>
-    <rect id="year_1961" x="429.27" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1961');ChangeText(evt, 'year_text','1961');ChangeText(evt, 'use_text','usage: 11.3');ChangeText(evt, 'supply_text','supply: 11.2');" onmouseover="highlightViz(evt,'supply-1961','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1961','0.0');"/>
-    <rect id="year_1962" x="435.45" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1962');ChangeText(evt, 'year_text','1962');ChangeText(evt, 'use_text','usage: 11.9');ChangeText(evt, 'supply_text','supply: 18.2');" onmouseover="highlightViz(evt,'supply-1962','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1962','0.0');"/>
-    <rect id="year_1963" x="441.64" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1963');ChangeText(evt, 'year_text','1963');ChangeText(evt, 'use_text','usage: 11.7');ChangeText(evt, 'supply_text','supply: 9.6');" onmouseover="highlightViz(evt,'supply-1963','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1963','0.0');"/>
-    <rect id="year_1964" x="447.82" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1964');ChangeText(evt, 'year_text','1964');ChangeText(evt, 'use_text','usage: 12.2');ChangeText(evt, 'supply_text','supply: 11.2');" onmouseover="highlightViz(evt,'supply-1964','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1964','0.0');"/>
-    <rect id="year_1965" x="454.00" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1965');ChangeText(evt, 'year_text','1965');ChangeText(evt, 'use_text','usage: 11.8');ChangeText(evt, 'supply_text','supply: 21.5');" onmouseover="highlightViz(evt,'supply-1965','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1965','0.0');"/>
-    <rect id="year_1966" x="460.18" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1966');ChangeText(evt, 'year_text','1966');ChangeText(evt, 'use_text','usage: 12.6');ChangeText(evt, 'supply_text','supply: 11.8');" onmouseover="highlightViz(evt,'supply-1966','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1966','0.0');"/>
-    <rect id="year_1967" x="466.36" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1967');ChangeText(evt, 'year_text','1967');ChangeText(evt, 'use_text','usage: 12.0');ChangeText(evt, 'supply_text','supply: 12.8');" onmouseover="highlightViz(evt,'supply-1967','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1967','0.0');"/>
-    <rect id="year_1968" x="472.55" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1968');ChangeText(evt, 'year_text','1968');ChangeText(evt, 'use_text','usage: 12.3');ChangeText(evt, 'supply_text','supply: 14.8');" onmouseover="highlightViz(evt,'supply-1968','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1968','0.0');"/>
-    <rect id="year_1969" x="478.73" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1969');ChangeText(evt, 'year_text','1969');ChangeText(evt, 'use_text','usage: 12.3');ChangeText(evt, 'supply_text','supply: 16.5');" onmouseover="highlightViz(evt,'supply-1969','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1969','0.0');"/>
-    <rect id="year_1970" x="484.91" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1970');ChangeText(evt, 'year_text','1970');ChangeText(evt, 'use_text','usage: 12.7');ChangeText(evt, 'supply_text','supply: 16.1');" onmouseover="highlightViz(evt,'supply-1970','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1970','0.0');"/>
-    <rect id="year_1971" x="491.09" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1971');ChangeText(evt, 'year_text','1971');ChangeText(evt, 'use_text','usage: 13.3');ChangeText(evt, 'supply_text','supply: 15.9');" onmouseover="highlightViz(evt,'supply-1971','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1971','0.0');"/>
-    <rect id="year_1972" x="497.27" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1972');ChangeText(evt, 'year_text','1972');ChangeText(evt, 'use_text','usage: 13.4');ChangeText(evt, 'supply_text','supply: 14.1');" onmouseover="highlightViz(evt,'supply-1972','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1972','0.0');"/>
-    <rect id="year_1973" x="503.45" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1973');ChangeText(evt, 'year_text','1973');ChangeText(evt, 'use_text','usage: 13.6');ChangeText(evt, 'supply_text','supply: 19.8');" onmouseover="highlightViz(evt,'supply-1973','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1973','0.0');"/>
-    <rect id="year_1974" x="509.64" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1974');ChangeText(evt, 'year_text','1974');ChangeText(evt, 'use_text','usage: 14.1');ChangeText(evt, 'supply_text','supply: 13.7');" onmouseover="highlightViz(evt,'supply-1974','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1974','0.0');"/>
-    <rect id="year_1975" x="515.82" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1975');ChangeText(evt, 'year_text','1975');ChangeText(evt, 'use_text','usage: 13.6');ChangeText(evt, 'supply_text','supply: 17.2');" onmouseover="highlightViz(evt,'supply-1975','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1975','0.0');"/>
-    <rect id="year_1976" x="522.00" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1976');ChangeText(evt, 'year_text','1976');ChangeText(evt, 'use_text','usage: 13.1');ChangeText(evt, 'supply_text','supply: 12.0');" onmouseover="highlightViz(evt,'supply-1976','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1976','0.0');"/>
-    <rect id="year_1977" x="528.18" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1977');ChangeText(evt, 'year_text','1977');ChangeText(evt, 'use_text','usage: 12.9');ChangeText(evt, 'supply_text','supply: 6.3');" onmouseover="highlightViz(evt,'supply-1977','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1977','0.0');"/>
-    <rect id="year_1978" x="534.36" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1978');ChangeText(evt, 'year_text','1978');ChangeText(evt, 'use_text','usage: 13.2');ChangeText(evt, 'supply_text','supply: 16.8');" onmouseover="highlightViz(evt,'supply-1978','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1978','0.0');"/>
-    <rect id="year_1979" x="540.55" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1979');ChangeText(evt, 'year_text','1979');ChangeText(evt, 'use_text','usage: 13.7');ChangeText(evt, 'supply_text','supply: 19.4');" onmouseover="highlightViz(evt,'supply-1979','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1979','0.0');"/>
-    <rect id="year_1980" x="546.73" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1980');ChangeText(evt, 'year_text','1980');ChangeText(evt, 'use_text','usage: 13.8');ChangeText(evt, 'supply_text','supply: 19.7');" onmouseover="highlightViz(evt,'supply-1980','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1980','0.0');"/>
-    <rect id="year_1981" x="552.91" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1981');ChangeText(evt, 'year_text','1981');ChangeText(evt, 'use_text','usage: 14.1');ChangeText(evt, 'supply_text','supply: 10.1');" onmouseover="highlightViz(evt,'supply-1981','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1981','0.0');"/>
-    <rect id="year_1982" x="559.09" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1982');ChangeText(evt, 'year_text','1982');ChangeText(evt, 'use_text','usage: 13.2');ChangeText(evt, 'supply_text','supply: 18.6');" onmouseover="highlightViz(evt,'supply-1982','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1982','0.0');"/>
-    <rect id="year_1983" x="565.27" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1983');ChangeText(evt, 'year_text','1983');ChangeText(evt, 'use_text','usage: 13.3');ChangeText(evt, 'supply_text','supply: 25.4');" onmouseover="highlightViz(evt,'supply-1983','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1983','0.0');"/>
-    <rect id="year_1984" x="571.45" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1984');ChangeText(evt, 'year_text','1984');ChangeText(evt, 'use_text','usage: 13.6');ChangeText(evt, 'supply_text','supply: 26.0');" onmouseover="highlightViz(evt,'supply-1984','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1984','0.0');"/>
-    <rect id="year_1985" x="577.64" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1985');ChangeText(evt, 'year_text','1985');ChangeText(evt, 'use_text','usage: 14.1');ChangeText(evt, 'supply_text','supply: 22.5');" onmouseover="highlightViz(evt,'supply-1985','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1985','0.0');"/>
-    <rect id="year_1986" x="583.82" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1986');ChangeText(evt, 'year_text','1986');ChangeText(evt, 'use_text','usage: 14.2');ChangeText(evt, 'supply_text','supply: 23.9');" onmouseover="highlightViz(evt,'supply-1986','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1986','0.0');"/>
-    <rect id="year_1987" x="590.00" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1987');ChangeText(evt, 'year_text','1987');ChangeText(evt, 'use_text','usage: 14.7');ChangeText(evt, 'supply_text','supply: 16.9');" onmouseover="highlightViz(evt,'supply-1987','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1987','0.0');"/>
-    <rect id="year_1988" x="596.18" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1988');ChangeText(evt, 'year_text','1988');ChangeText(evt, 'use_text','usage: 15.5');ChangeText(evt, 'supply_text','supply: 12.6');" onmouseover="highlightViz(evt,'supply-1988','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1988','0.0');"/>
-    <rect id="year_1989" x="602.36" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1989');ChangeText(evt, 'year_text','1989');ChangeText(evt, 'use_text','usage: 15.7');ChangeText(evt, 'supply_text','supply: 10.7');" onmouseover="highlightViz(evt,'supply-1989','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1989','0.0');"/>
-    <rect id="year_1990" x="608.55" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1990');ChangeText(evt, 'year_text','1990');ChangeText(evt, 'use_text','usage: 15.4');ChangeText(evt, 'supply_text','supply: 10.5');" onmouseover="highlightViz(evt,'supply-1990','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1990','0.0');"/>
-    <rect id="year_1991" x="614.73" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1991');ChangeText(evt, 'year_text','1991');ChangeText(evt, 'use_text','usage: 14.9');ChangeText(evt, 'supply_text','supply: 13.7');" onmouseover="highlightViz(evt,'supply-1991','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1991','0.0');"/>
-    <rect id="year_1992" x="620.91" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1992');ChangeText(evt, 'year_text','1992');ChangeText(evt, 'use_text','usage: 14.6');ChangeText(evt, 'supply_text','supply: 12.8');" onmouseover="highlightViz(evt,'supply-1992','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1992','0.0');"/>
-    <rect id="year_1993" x="627.09" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1993');ChangeText(evt, 'year_text','1993');ChangeText(evt, 'use_text','usage: 15.1');ChangeText(evt, 'supply_text','supply: 22.0');" onmouseover="highlightViz(evt,'supply-1993','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1993','0.0');"/>
-    <rect id="year_1994" x="633.27" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1994');ChangeText(evt, 'year_text','1994');ChangeText(evt, 'use_text','usage: 15.8');ChangeText(evt, 'supply_text','supply: 11.6');" onmouseover="highlightViz(evt,'supply-1994','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1994','0.0');"/>
-    <rect id="year_1995" x="639.45" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1995');ChangeText(evt, 'year_text','1995');ChangeText(evt, 'use_text','usage: 14.7');ChangeText(evt, 'supply_text','supply: 22.0');" onmouseover="highlightViz(evt,'supply-1995','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1995','0.0');"/>
-    <rect id="year_1996" x="645.64" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1996');ChangeText(evt, 'year_text','1996');ChangeText(evt, 'use_text','usage: 16.1');ChangeText(evt, 'supply_text','supply: 15.2');" onmouseover="highlightViz(evt,'supply-1996','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1996','0.0');"/>
-    <rect id="year_1997" x="651.82" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1997');ChangeText(evt, 'year_text','1997');ChangeText(evt, 'use_text','usage: 16.2');ChangeText(evt, 'supply_text','supply: 22.7');" onmouseover="highlightViz(evt,'supply-1997','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1997','0.0');"/>
-    <rect id="year_1998" x="658.00" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1998');ChangeText(evt, 'year_text','1998');ChangeText(evt, 'use_text','usage: 15.9');ChangeText(evt, 'supply_text','supply: 18.0');" onmouseover="highlightViz(evt,'supply-1998','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1998','0.0');"/>
-    <rect id="year_1999" x="664.18" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1999');ChangeText(evt, 'year_text','1999');ChangeText(evt, 'use_text','usage: 16.0');ChangeText(evt, 'supply_text','supply: 16.9');" onmouseover="highlightViz(evt,'supply-1999','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1999','0.0');"/>
-    <rect id="year_2000" x="670.36" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2000');ChangeText(evt, 'year_text','2000');ChangeText(evt, 'use_text','usage: 16.7');ChangeText(evt, 'supply_text','supply: 11.4');" onmouseover="highlightViz(evt,'supply-2000','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2000','0.0');"/>
-    <rect id="year_2001" x="676.55" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2001');ChangeText(evt, 'year_text','2001');ChangeText(evt, 'use_text','usage: 16.7');ChangeText(evt, 'supply_text','supply: 11.8');" onmouseover="highlightViz(evt,'supply-2001','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2001','0.0');"/>
-    <rect id="year_2002" x="682.73" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2002');ChangeText(evt, 'year_text','2002');ChangeText(evt, 'use_text','usage: 16.2');ChangeText(evt, 'supply_text','supply: 6.8');" onmouseover="highlightViz(evt,'supply-2002','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2002','0.0');"/>
-    <rect id="year_2003" x="688.91" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2003');ChangeText(evt, 'year_text','2003');ChangeText(evt, 'use_text','usage: 15.2');ChangeText(evt, 'supply_text','supply: 11.4');" onmouseover="highlightViz(evt,'supply-2003','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2003','0.0');"/>
-    <rect id="year_2004" x="695.09" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2004');ChangeText(evt, 'year_text','2004');ChangeText(evt, 'use_text','usage: 14.7');ChangeText(evt, 'supply_text','supply: 11.1');" onmouseover="highlightViz(evt,'supply-2004','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2004','0.0');"/>
-    <rect id="year_2005" x="701.27" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2005');ChangeText(evt, 'year_text','2005');ChangeText(evt, 'use_text','usage: 14.5');ChangeText(evt, 'supply_text','supply: 19.6');" onmouseover="highlightViz(evt,'supply-2005','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2005','0.0');"/>
-    <rect id="year_2006" x="707.45" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2006');ChangeText(evt, 'year_text','2006');ChangeText(evt, 'use_text','usage: 15.0');ChangeText(evt, 'supply_text','supply: 14.4');" onmouseover="highlightViz(evt,'supply-2006','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2006','0.0');"/>
-    <rect id="year_2007" x="713.64" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2007');ChangeText(evt, 'year_text','2007');ChangeText(evt, 'use_text','usage: 15.3');ChangeText(evt, 'supply_text','supply: 12.3');" onmouseover="highlightViz(evt,'supply-2007','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2007','0.0');"/>
-    <rect id="year_2008" x="719.82" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2008');ChangeText(evt, 'year_text','2008');ChangeText(evt, 'use_text','usage: 15.5');ChangeText(evt, 'supply_text','supply: 17.2');" onmouseover="highlightViz(evt,'supply-2008','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2008','0.0');"/>
-    <rect id="year_2009" x="726.00" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2009');ChangeText(evt, 'year_text','2009');ChangeText(evt, 'use_text','usage: 15.3');ChangeText(evt, 'supply_text','supply: 14.9');" onmouseover="highlightViz(evt,'supply-2009','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2009','0.0');"/>
-    <rect id="year_2010" x="732.18" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2010');ChangeText(evt, 'year_text','2010');ChangeText(evt, 'use_text','usage: 15.1');ChangeText(evt, 'supply_text','supply: 14.0');" onmouseover="highlightViz(evt,'supply-2010','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2010','0.0');"/>
-    <rect id="year_2011" x="738.36" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2011');ChangeText(evt, 'year_text','2011');ChangeText(evt, 'use_text','usage: ');ChangeText(evt, 'supply_text','supply: 21.1');" onmouseover="highlightViz(evt,'supply-2011','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2011','0.0');"/>
-    <rect id="year_2012" x="744.55" y="10" width="6.18" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2012');ChangeText(evt, 'year_text','2012');ChangeText(evt, 'use_text','usage: ');ChangeText(evt, 'supply_text','supply: 8.4');" onmouseover="highlightViz(evt,'supply-2012','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2012','0.0');"/>
+    <rect id="year_1906" x="91.05" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1906');ChangeText(evt, 'year_text','1906');ChangeText(evt, 'use_text','usage: 1.2');ChangeText(evt, 'supply_text','supply: 19.8');" onmouseover="highlightViz(evt,'supply-1906','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1906','0.0');"/>
+    <rect id="year_1907" x="98.41" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1907');ChangeText(evt, 'year_text','1907');ChangeText(evt, 'use_text','usage: 1.2');ChangeText(evt, 'supply_text','supply: 22.6');" onmouseover="highlightViz(evt,'supply-1907','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1907','0.0');"/>
+    <rect id="year_1908" x="105.77" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1908');ChangeText(evt, 'year_text','1908');ChangeText(evt, 'use_text','usage: 1.2');ChangeText(evt, 'supply_text','supply: 13.4');" onmouseover="highlightViz(evt,'supply-1908','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1908','0.0');"/>
+    <rect id="year_1909" x="113.14" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1909');ChangeText(evt, 'year_text','1909');ChangeText(evt, 'use_text','usage: 1.5');ChangeText(evt, 'supply_text','supply: 24.1');" onmouseover="highlightViz(evt,'supply-1909','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1909','0.0');"/>
+    <rect id="year_1910" x="120.50" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1910');ChangeText(evt, 'year_text','1910');ChangeText(evt, 'use_text','usage: 1.7');ChangeText(evt, 'supply_text','supply: 16.5');" onmouseover="highlightViz(evt,'supply-1910','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1910','0.0');"/>
+    <rect id="year_1911" x="127.86" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1911');ChangeText(evt, 'year_text','1911');ChangeText(evt, 'use_text','usage: 1.5');ChangeText(evt, 'supply_text','supply: 17.0');" onmouseover="highlightViz(evt,'supply-1911','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1911','0.0');"/>
+    <rect id="year_1912" x="135.23" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1912');ChangeText(evt, 'year_text','1912');ChangeText(evt, 'use_text','usage: 1.5');ChangeText(evt, 'supply_text','supply: 19.6');" onmouseover="highlightViz(evt,'supply-1912','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1912','0.0');"/>
+    <rect id="year_1913" x="142.59" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1913');ChangeText(evt, 'year_text','1913');ChangeText(evt, 'use_text','usage: 1.7');ChangeText(evt, 'supply_text','supply: 15.5');" onmouseover="highlightViz(evt,'supply-1913','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1913','0.0');"/>
+    <rect id="year_1914" x="149.95" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1914');ChangeText(evt, 'year_text','1914');ChangeText(evt, 'use_text','usage: 4.9');ChangeText(evt, 'supply_text','supply: 22.6');" onmouseover="highlightViz(evt,'supply-1914','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1914','0.0');"/>
+    <rect id="year_1915" x="157.32" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1915');ChangeText(evt, 'year_text','1915');ChangeText(evt, 'use_text','usage: 4.9');ChangeText(evt, 'supply_text','supply: 14.7');" onmouseover="highlightViz(evt,'supply-1915','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1915','0.0');"/>
+    <rect id="year_1916" x="164.68" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1916');ChangeText(evt, 'year_text','1916');ChangeText(evt, 'use_text','usage: 5.3');ChangeText(evt, 'supply_text','supply: 22.3');" onmouseover="highlightViz(evt,'supply-1916','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1916','0.0');"/>
+    <rect id="year_1917" x="172.05" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1917');ChangeText(evt, 'year_text','1917');ChangeText(evt, 'use_text','usage: 5.6');ChangeText(evt, 'supply_text','supply: 24.3');" onmouseover="highlightViz(evt,'supply-1917','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1917','0.0');"/>
+    <rect id="year_1918" x="179.41" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1918');ChangeText(evt, 'year_text','1918');ChangeText(evt, 'use_text','usage: 6.0');ChangeText(evt, 'supply_text','supply: 17.2');" onmouseover="highlightViz(evt,'supply-1918','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1918','0.0');"/>
+    <rect id="year_1919" x="186.77" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1919');ChangeText(evt, 'year_text','1919');ChangeText(evt, 'use_text','usage: 6.0');ChangeText(evt, 'supply_text','supply: 14.7');" onmouseover="highlightViz(evt,'supply-1919','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1919','0.0');"/>
+    <rect id="year_1920" x="194.14" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1920');ChangeText(evt, 'year_text','1920');ChangeText(evt, 'use_text','usage: 6.2');ChangeText(evt, 'supply_text','supply: 24.0');" onmouseover="highlightViz(evt,'supply-1920','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1920','0.0');"/>
+    <rect id="year_1921" x="201.50" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1921');ChangeText(evt, 'year_text','1921');ChangeText(evt, 'use_text','usage: 5.7');ChangeText(evt, 'supply_text','supply: 24.6');" onmouseover="highlightViz(evt,'supply-1921','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1921','0.0');"/>
+    <rect id="year_1922" x="208.86" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1922');ChangeText(evt, 'year_text','1922');ChangeText(evt, 'use_text','usage: 6.4');ChangeText(evt, 'supply_text','supply: 20.3');" onmouseover="highlightViz(evt,'supply-1922','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1922','0.0');"/>
+    <rect id="year_1923" x="216.23" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1923');ChangeText(evt, 'year_text','1923');ChangeText(evt, 'use_text','usage: 6.4');ChangeText(evt, 'supply_text','supply: 21.3');" onmouseover="highlightViz(evt,'supply-1923','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1923','0.0');"/>
+    <rect id="year_1924" x="223.59" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1924');ChangeText(evt, 'year_text','1924');ChangeText(evt, 'use_text','usage: 6.6');ChangeText(evt, 'supply_text','supply: 16.0');" onmouseover="highlightViz(evt,'supply-1924','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1924','0.0');"/>
+    <rect id="year_1925" x="230.95" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1925');ChangeText(evt, 'year_text','1925');ChangeText(evt, 'use_text','usage: 6.5');ChangeText(evt, 'supply_text','supply: 15.9');" onmouseover="highlightViz(evt,'supply-1925','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1925','0.0');"/>
+    <rect id="year_1926" x="238.32" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1926');ChangeText(evt, 'year_text','1926');ChangeText(evt, 'use_text','usage: 6.5');ChangeText(evt, 'supply_text','supply: 16.2');" onmouseover="highlightViz(evt,'supply-1926','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1926','0.0');"/>
+    <rect id="year_1927" x="245.68" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1927');ChangeText(evt, 'year_text','1927');ChangeText(evt, 'use_text','usage: 6.5');ChangeText(evt, 'supply_text','supply: 21.3');" onmouseover="highlightViz(evt,'supply-1927','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1927','0.0');"/>
+    <rect id="year_1928" x="253.05" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1928');ChangeText(evt, 'year_text','1928');ChangeText(evt, 'use_text','usage: 6.8');ChangeText(evt, 'supply_text','supply: 17.4');" onmouseover="highlightViz(evt,'supply-1928','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1928','0.0');"/>
+    <rect id="year_1929" x="260.41" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1929');ChangeText(evt, 'year_text','1929');ChangeText(evt, 'use_text','usage: 7.0');ChangeText(evt, 'supply_text','supply: 22.3');" onmouseover="highlightViz(evt,'supply-1929','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1929','0.0');"/>
+    <rect id="year_1930" x="267.77" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1930');ChangeText(evt, 'year_text','1930');ChangeText(evt, 'use_text','usage: 7.1');ChangeText(evt, 'supply_text','supply: 15.6');" onmouseover="highlightViz(evt,'supply-1930','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1930','0.0');"/>
+    <rect id="year_1931" x="275.14" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1931');ChangeText(evt, 'year_text','1931');ChangeText(evt, 'use_text','usage: 6.7');ChangeText(evt, 'supply_text','supply: 9.8');" onmouseover="highlightViz(evt,'supply-1931','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1931','0.0');"/>
+    <rect id="year_1932" x="282.50" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1932');ChangeText(evt, 'year_text','1932');ChangeText(evt, 'use_text','usage: 6.6');ChangeText(evt, 'supply_text','supply: 19.6');" onmouseover="highlightViz(evt,'supply-1932','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1932','0.0');"/>
+    <rect id="year_1933" x="289.86" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1933');ChangeText(evt, 'year_text','1933');ChangeText(evt, 'use_text','usage: 6.8');ChangeText(evt, 'supply_text','supply: 13.3');" onmouseover="highlightViz(evt,'supply-1933','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1933','0.0');"/>
+    <rect id="year_1934" x="297.23" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1934');ChangeText(evt, 'year_text','1934');ChangeText(evt, 'use_text','usage: 5.9');ChangeText(evt, 'supply_text','supply: 7.3');" onmouseover="highlightViz(evt,'supply-1934','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1934','0.0');"/>
+    <rect id="year_1935" x="304.59" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1935');ChangeText(evt, 'year_text','1935');ChangeText(evt, 'use_text','usage: 7.0');ChangeText(evt, 'supply_text','supply: 13.1');" onmouseover="highlightViz(evt,'supply-1935','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1935','0.0');"/>
+    <rect id="year_1936" x="311.95" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1936');ChangeText(evt, 'year_text','1936');ChangeText(evt, 'use_text','usage: 7.8');ChangeText(evt, 'supply_text','supply: 15.0');" onmouseover="highlightViz(evt,'supply-1936','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1936','0.0');"/>
+    <rect id="year_1937" x="319.32" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1937');ChangeText(evt, 'year_text','1937');ChangeText(evt, 'use_text','usage: 7.8');ChangeText(evt, 'supply_text','supply: 15.3');" onmouseover="highlightViz(evt,'supply-1937','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1937','0.0');"/>
+    <rect id="year_1938" x="326.68" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1938');ChangeText(evt, 'year_text','1938');ChangeText(evt, 'use_text','usage: 8.0');ChangeText(evt, 'supply_text','supply: 18.9');" onmouseover="highlightViz(evt,'supply-1938','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1938','0.0');"/>
+    <rect id="year_1939" x="334.05" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1939');ChangeText(evt, 'year_text','1939');ChangeText(evt, 'use_text','usage: 8.2');ChangeText(evt, 'supply_text','supply: 12.5');" onmouseover="highlightViz(evt,'supply-1939','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1939','0.0');"/>
+    <rect id="year_1940" x="341.41" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1940');ChangeText(evt, 'year_text','1940');ChangeText(evt, 'use_text','usage: 8.2');ChangeText(evt, 'supply_text','supply: 11.1');" onmouseover="highlightViz(evt,'supply-1940','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1940','0.0');"/>
+    <rect id="year_1941" x="348.77" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1941');ChangeText(evt, 'year_text','1941');ChangeText(evt, 'use_text','usage: 7.9');ChangeText(evt, 'supply_text','supply: 22.4');" onmouseover="highlightViz(evt,'supply-1941','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1941','0.0');"/>
+    <rect id="year_1942" x="356.14" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1942');ChangeText(evt, 'year_text','1942');ChangeText(evt, 'use_text','usage: 8.1');ChangeText(evt, 'supply_text','supply: 18.3');" onmouseover="highlightViz(evt,'supply-1942','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1942','0.0');"/>
+    <rect id="year_1943" x="363.50" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1943');ChangeText(evt, 'year_text','1943');ChangeText(evt, 'use_text','usage: 8.0');ChangeText(evt, 'supply_text','supply: 14.5');" onmouseover="highlightViz(evt,'supply-1943','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1943','0.0');"/>
+    <rect id="year_1944" x="370.86" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1944');ChangeText(evt, 'year_text','1944');ChangeText(evt, 'use_text','usage: 8.2');ChangeText(evt, 'supply_text','supply: 16.3');" onmouseover="highlightViz(evt,'supply-1944','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1944','0.0');"/>
+    <rect id="year_1945" x="378.23" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1945');ChangeText(evt, 'year_text','1945');ChangeText(evt, 'use_text','usage: 8.2');ChangeText(evt, 'supply_text','supply: 15.3');" onmouseover="highlightViz(evt,'supply-1945','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1945','0.0');"/>
+    <rect id="year_1946" x="385.59" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1946');ChangeText(evt, 'year_text','1946');ChangeText(evt, 'use_text','usage: 8.5');ChangeText(evt, 'supply_text','supply: 12.1');" onmouseover="highlightViz(evt,'supply-1946','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1946','0.0');"/>
+    <rect id="year_1947" x="392.95" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1947');ChangeText(evt, 'year_text','1947');ChangeText(evt, 'use_text','usage: 8.6');ChangeText(evt, 'supply_text','supply: 17.5');" onmouseover="highlightViz(evt,'supply-1947','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1947','0.0');"/>
+    <rect id="year_1948" x="400.32" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1948');ChangeText(evt, 'year_text','1948');ChangeText(evt, 'use_text','usage: 8.8');ChangeText(evt, 'supply_text','supply: 15.9');" onmouseover="highlightViz(evt,'supply-1948','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1948','0.0');"/>
+    <rect id="year_1949" x="407.68" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1949');ChangeText(evt, 'year_text','1949');ChangeText(evt, 'use_text','usage: 9.0');ChangeText(evt, 'supply_text','supply: 18.1');" onmouseover="highlightViz(evt,'supply-1949','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1949','0.0');"/>
+    <rect id="year_1950" x="415.05" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1950');ChangeText(evt, 'year_text','1950');ChangeText(evt, 'use_text','usage: 9.5');ChangeText(evt, 'supply_text','supply: 14.0');" onmouseover="highlightViz(evt,'supply-1950','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1950','0.0');"/>
+    <rect id="year_1951" x="422.41" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1951');ChangeText(evt, 'year_text','1951');ChangeText(evt, 'use_text','usage: 10.0');ChangeText(evt, 'supply_text','supply: 13.4');" onmouseover="highlightViz(evt,'supply-1951','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1951','0.0');"/>
+    <rect id="year_1952" x="429.77" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1952');ChangeText(evt, 'year_text','1952');ChangeText(evt, 'use_text','usage: 10.5');ChangeText(evt, 'supply_text','supply: 22.4');" onmouseover="highlightViz(evt,'supply-1952','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1952','0.0');"/>
+    <rect id="year_1953" x="437.14" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1953');ChangeText(evt, 'year_text','1953');ChangeText(evt, 'use_text','usage: 10.7');ChangeText(evt, 'supply_text','supply: 12.3');" onmouseover="highlightViz(evt,'supply-1953','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1953','0.0');"/>
+    <rect id="year_1954" x="444.50" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1954');ChangeText(evt, 'year_text','1954');ChangeText(evt, 'use_text','usage: 10.7');ChangeText(evt, 'supply_text','supply: 9.6');" onmouseover="highlightViz(evt,'supply-1954','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1954','0.0');"/>
+    <rect id="year_1955" x="451.86" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1955');ChangeText(evt, 'year_text','1955');ChangeText(evt, 'use_text','usage: 10.5');ChangeText(evt, 'supply_text','supply: 11.1');" onmouseover="highlightViz(evt,'supply-1955','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1955','0.0');"/>
+    <rect id="year_1956" x="459.23" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1956');ChangeText(evt, 'year_text','1956');ChangeText(evt, 'use_text','usage: 10.9');ChangeText(evt, 'supply_text','supply: 12.4');" onmouseover="highlightViz(evt,'supply-1956','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1956','0.0');"/>
+    <rect id="year_1957" x="466.59" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1957');ChangeText(evt, 'year_text','1957');ChangeText(evt, 'use_text','usage: 10.4');ChangeText(evt, 'supply_text','supply: 22.7');" onmouseover="highlightViz(evt,'supply-1957','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1957','0.0');"/>
+    <rect id="year_1958" x="473.95" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1958');ChangeText(evt, 'year_text','1958');ChangeText(evt, 'use_text','usage: 11.1');ChangeText(evt, 'supply_text','supply: 17.6');" onmouseover="highlightViz(evt,'supply-1958','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1958','0.0');"/>
+    <rect id="year_1959" x="481.32" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1959');ChangeText(evt, 'year_text','1959');ChangeText(evt, 'use_text','usage: 11.1');ChangeText(evt, 'supply_text','supply: 10.9');" onmouseover="highlightViz(evt,'supply-1959','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1959','0.0');"/>
+    <rect id="year_1960" x="488.68" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1960');ChangeText(evt, 'year_text','1960');ChangeText(evt, 'use_text','usage: 11.6');ChangeText(evt, 'supply_text','supply: 12.8');" onmouseover="highlightViz(evt,'supply-1960','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1960','0.0');"/>
+    <rect id="year_1961" x="496.05" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1961');ChangeText(evt, 'year_text','1961');ChangeText(evt, 'use_text','usage: 11.3');ChangeText(evt, 'supply_text','supply: 11.2');" onmouseover="highlightViz(evt,'supply-1961','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1961','0.0');"/>
+    <rect id="year_1962" x="503.41" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1962');ChangeText(evt, 'year_text','1962');ChangeText(evt, 'use_text','usage: 11.9');ChangeText(evt, 'supply_text','supply: 18.2');" onmouseover="highlightViz(evt,'supply-1962','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1962','0.0');"/>
+    <rect id="year_1963" x="510.77" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1963');ChangeText(evt, 'year_text','1963');ChangeText(evt, 'use_text','usage: 11.7');ChangeText(evt, 'supply_text','supply: 9.6');" onmouseover="highlightViz(evt,'supply-1963','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1963','0.0');"/>
+    <rect id="year_1964" x="518.14" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1964');ChangeText(evt, 'year_text','1964');ChangeText(evt, 'use_text','usage: 12.2');ChangeText(evt, 'supply_text','supply: 11.2');" onmouseover="highlightViz(evt,'supply-1964','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1964','0.0');"/>
+    <rect id="year_1965" x="525.50" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1965');ChangeText(evt, 'year_text','1965');ChangeText(evt, 'use_text','usage: 11.8');ChangeText(evt, 'supply_text','supply: 21.5');" onmouseover="highlightViz(evt,'supply-1965','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1965','0.0');"/>
+    <rect id="year_1966" x="532.86" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1966');ChangeText(evt, 'year_text','1966');ChangeText(evt, 'use_text','usage: 12.6');ChangeText(evt, 'supply_text','supply: 11.8');" onmouseover="highlightViz(evt,'supply-1966','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1966','0.0');"/>
+    <rect id="year_1967" x="540.23" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1967');ChangeText(evt, 'year_text','1967');ChangeText(evt, 'use_text','usage: 12.0');ChangeText(evt, 'supply_text','supply: 12.8');" onmouseover="highlightViz(evt,'supply-1967','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1967','0.0');"/>
+    <rect id="year_1968" x="547.59" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1968');ChangeText(evt, 'year_text','1968');ChangeText(evt, 'use_text','usage: 12.3');ChangeText(evt, 'supply_text','supply: 14.8');" onmouseover="highlightViz(evt,'supply-1968','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1968','0.0');"/>
+    <rect id="year_1969" x="554.95" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1969');ChangeText(evt, 'year_text','1969');ChangeText(evt, 'use_text','usage: 12.3');ChangeText(evt, 'supply_text','supply: 16.5');" onmouseover="highlightViz(evt,'supply-1969','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1969','0.0');"/>
+    <rect id="year_1970" x="562.32" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1970');ChangeText(evt, 'year_text','1970');ChangeText(evt, 'use_text','usage: 12.7');ChangeText(evt, 'supply_text','supply: 16.1');" onmouseover="highlightViz(evt,'supply-1970','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1970','0.0');"/>
+    <rect id="year_1971" x="569.68" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1971');ChangeText(evt, 'year_text','1971');ChangeText(evt, 'use_text','usage: 13.3');ChangeText(evt, 'supply_text','supply: 15.9');" onmouseover="highlightViz(evt,'supply-1971','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1971','0.0');"/>
+    <rect id="year_1972" x="577.05" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1972');ChangeText(evt, 'year_text','1972');ChangeText(evt, 'use_text','usage: 13.4');ChangeText(evt, 'supply_text','supply: 14.1');" onmouseover="highlightViz(evt,'supply-1972','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1972','0.0');"/>
+    <rect id="year_1973" x="584.41" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1973');ChangeText(evt, 'year_text','1973');ChangeText(evt, 'use_text','usage: 13.6');ChangeText(evt, 'supply_text','supply: 19.8');" onmouseover="highlightViz(evt,'supply-1973','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1973','0.0');"/>
+    <rect id="year_1974" x="591.77" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1974');ChangeText(evt, 'year_text','1974');ChangeText(evt, 'use_text','usage: 14.1');ChangeText(evt, 'supply_text','supply: 13.7');" onmouseover="highlightViz(evt,'supply-1974','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1974','0.0');"/>
+    <rect id="year_1975" x="599.14" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1975');ChangeText(evt, 'year_text','1975');ChangeText(evt, 'use_text','usage: 13.6');ChangeText(evt, 'supply_text','supply: 17.2');" onmouseover="highlightViz(evt,'supply-1975','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1975','0.0');"/>
+    <rect id="year_1976" x="606.50" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1976');ChangeText(evt, 'year_text','1976');ChangeText(evt, 'use_text','usage: 13.1');ChangeText(evt, 'supply_text','supply: 12.0');" onmouseover="highlightViz(evt,'supply-1976','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1976','0.0');"/>
+    <rect id="year_1977" x="613.86" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1977');ChangeText(evt, 'year_text','1977');ChangeText(evt, 'use_text','usage: 12.9');ChangeText(evt, 'supply_text','supply: 6.3');" onmouseover="highlightViz(evt,'supply-1977','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1977','0.0');"/>
+    <rect id="year_1978" x="621.23" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1978');ChangeText(evt, 'year_text','1978');ChangeText(evt, 'use_text','usage: 13.2');ChangeText(evt, 'supply_text','supply: 16.8');" onmouseover="highlightViz(evt,'supply-1978','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1978','0.0');"/>
+    <rect id="year_1979" x="628.59" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1979');ChangeText(evt, 'year_text','1979');ChangeText(evt, 'use_text','usage: 13.7');ChangeText(evt, 'supply_text','supply: 19.4');" onmouseover="highlightViz(evt,'supply-1979','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1979','0.0');"/>
+    <rect id="year_1980" x="635.95" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1980');ChangeText(evt, 'year_text','1980');ChangeText(evt, 'use_text','usage: 13.8');ChangeText(evt, 'supply_text','supply: 19.7');" onmouseover="highlightViz(evt,'supply-1980','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1980','0.0');"/>
+    <rect id="year_1981" x="643.32" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1981');ChangeText(evt, 'year_text','1981');ChangeText(evt, 'use_text','usage: 14.1');ChangeText(evt, 'supply_text','supply: 10.1');" onmouseover="highlightViz(evt,'supply-1981','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1981','0.0');"/>
+    <rect id="year_1982" x="650.68" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1982');ChangeText(evt, 'year_text','1982');ChangeText(evt, 'use_text','usage: 13.2');ChangeText(evt, 'supply_text','supply: 18.6');" onmouseover="highlightViz(evt,'supply-1982','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1982','0.0');"/>
+    <rect id="year_1983" x="658.05" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1983');ChangeText(evt, 'year_text','1983');ChangeText(evt, 'use_text','usage: 13.3');ChangeText(evt, 'supply_text','supply: 25.4');" onmouseover="highlightViz(evt,'supply-1983','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1983','0.0');"/>
+    <rect id="year_1984" x="665.41" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1984');ChangeText(evt, 'year_text','1984');ChangeText(evt, 'use_text','usage: 13.6');ChangeText(evt, 'supply_text','supply: 26.0');" onmouseover="highlightViz(evt,'supply-1984','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1984','0.0');"/>
+    <rect id="year_1985" x="672.77" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1985');ChangeText(evt, 'year_text','1985');ChangeText(evt, 'use_text','usage: 14.1');ChangeText(evt, 'supply_text','supply: 22.5');" onmouseover="highlightViz(evt,'supply-1985','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1985','0.0');"/>
+    <rect id="year_1986" x="680.14" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1986');ChangeText(evt, 'year_text','1986');ChangeText(evt, 'use_text','usage: 14.2');ChangeText(evt, 'supply_text','supply: 23.9');" onmouseover="highlightViz(evt,'supply-1986','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1986','0.0');"/>
+    <rect id="year_1987" x="687.50" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1987');ChangeText(evt, 'year_text','1987');ChangeText(evt, 'use_text','usage: 14.7');ChangeText(evt, 'supply_text','supply: 16.9');" onmouseover="highlightViz(evt,'supply-1987','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1987','0.0');"/>
+    <rect id="year_1988" x="694.86" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1988');ChangeText(evt, 'year_text','1988');ChangeText(evt, 'use_text','usage: 15.5');ChangeText(evt, 'supply_text','supply: 12.6');" onmouseover="highlightViz(evt,'supply-1988','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1988','0.0');"/>
+    <rect id="year_1989" x="702.23" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1989');ChangeText(evt, 'year_text','1989');ChangeText(evt, 'use_text','usage: 15.7');ChangeText(evt, 'supply_text','supply: 10.7');" onmouseover="highlightViz(evt,'supply-1989','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1989','0.0');"/>
+    <rect id="year_1990" x="709.59" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1990');ChangeText(evt, 'year_text','1990');ChangeText(evt, 'use_text','usage: 15.4');ChangeText(evt, 'supply_text','supply: 10.5');" onmouseover="highlightViz(evt,'supply-1990','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1990','0.0');"/>
+    <rect id="year_1991" x="716.95" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1991');ChangeText(evt, 'year_text','1991');ChangeText(evt, 'use_text','usage: 14.9');ChangeText(evt, 'supply_text','supply: 13.7');" onmouseover="highlightViz(evt,'supply-1991','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1991','0.0');"/>
+    <rect id="year_1992" x="724.32" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1992');ChangeText(evt, 'year_text','1992');ChangeText(evt, 'use_text','usage: 14.6');ChangeText(evt, 'supply_text','supply: 12.8');" onmouseover="highlightViz(evt,'supply-1992','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1992','0.0');"/>
+    <rect id="year_1993" x="731.68" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1993');ChangeText(evt, 'year_text','1993');ChangeText(evt, 'use_text','usage: 15.1');ChangeText(evt, 'supply_text','supply: 22.0');" onmouseover="highlightViz(evt,'supply-1993','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1993','0.0');"/>
+    <rect id="year_1994" x="739.05" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1994');ChangeText(evt, 'year_text','1994');ChangeText(evt, 'use_text','usage: 15.8');ChangeText(evt, 'supply_text','supply: 11.6');" onmouseover="highlightViz(evt,'supply-1994','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1994','0.0');"/>
+    <rect id="year_1995" x="746.41" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1995');ChangeText(evt, 'year_text','1995');ChangeText(evt, 'use_text','usage: 14.7');ChangeText(evt, 'supply_text','supply: 22.0');" onmouseover="highlightViz(evt,'supply-1995','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1995','0.0');"/>
+    <rect id="year_1996" x="753.77" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1996');ChangeText(evt, 'year_text','1996');ChangeText(evt, 'use_text','usage: 16.1');ChangeText(evt, 'supply_text','supply: 15.2');" onmouseover="highlightViz(evt,'supply-1996','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1996','0.0');"/>
+    <rect id="year_1997" x="761.14" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1997');ChangeText(evt, 'year_text','1997');ChangeText(evt, 'use_text','usage: 16.2');ChangeText(evt, 'supply_text','supply: 22.7');" onmouseover="highlightViz(evt,'supply-1997','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1997','0.0');"/>
+    <rect id="year_1998" x="768.50" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1998');ChangeText(evt, 'year_text','1998');ChangeText(evt, 'use_text','usage: 15.9');ChangeText(evt, 'supply_text','supply: 18.0');" onmouseover="highlightViz(evt,'supply-1998','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1998','0.0');"/>
+    <rect id="year_1999" x="775.86" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1999');ChangeText(evt, 'year_text','1999');ChangeText(evt, 'use_text','usage: 16.0');ChangeText(evt, 'supply_text','supply: 16.9');" onmouseover="highlightViz(evt,'supply-1999','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1999','0.0');"/>
+    <rect id="year_2000" x="783.23" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2000');ChangeText(evt, 'year_text','2000');ChangeText(evt, 'use_text','usage: 16.7');ChangeText(evt, 'supply_text','supply: 11.4');" onmouseover="highlightViz(evt,'supply-2000','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2000','0.0');"/>
+    <rect id="year_2001" x="790.59" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2001');ChangeText(evt, 'year_text','2001');ChangeText(evt, 'use_text','usage: 16.7');ChangeText(evt, 'supply_text','supply: 11.8');" onmouseover="highlightViz(evt,'supply-2001','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2001','0.0');"/>
+    <rect id="year_2002" x="797.95" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2002');ChangeText(evt, 'year_text','2002');ChangeText(evt, 'use_text','usage: 16.2');ChangeText(evt, 'supply_text','supply: 6.8');" onmouseover="highlightViz(evt,'supply-2002','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2002','0.0');"/>
+    <rect id="year_2003" x="805.32" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2003');ChangeText(evt, 'year_text','2003');ChangeText(evt, 'use_text','usage: 15.2');ChangeText(evt, 'supply_text','supply: 11.4');" onmouseover="highlightViz(evt,'supply-2003','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2003','0.0');"/>
+    <rect id="year_2004" x="812.68" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2004');ChangeText(evt, 'year_text','2004');ChangeText(evt, 'use_text','usage: 14.7');ChangeText(evt, 'supply_text','supply: 11.1');" onmouseover="highlightViz(evt,'supply-2004','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2004','0.0');"/>
+    <rect id="year_2005" x="820.05" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2005');ChangeText(evt, 'year_text','2005');ChangeText(evt, 'use_text','usage: 14.5');ChangeText(evt, 'supply_text','supply: 19.6');" onmouseover="highlightViz(evt,'supply-2005','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2005','0.0');"/>
+    <rect id="year_2006" x="827.41" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2006');ChangeText(evt, 'year_text','2006');ChangeText(evt, 'use_text','usage: 15.0');ChangeText(evt, 'supply_text','supply: 14.4');" onmouseover="highlightViz(evt,'supply-2006','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2006','0.0');"/>
+    <rect id="year_2007" x="834.77" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2007');ChangeText(evt, 'year_text','2007');ChangeText(evt, 'use_text','usage: 15.3');ChangeText(evt, 'supply_text','supply: 12.3');" onmouseover="highlightViz(evt,'supply-2007','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2007','0.0');"/>
+    <rect id="year_2008" x="842.14" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2008');ChangeText(evt, 'year_text','2008');ChangeText(evt, 'use_text','usage: 15.5');ChangeText(evt, 'supply_text','supply: 17.2');" onmouseover="highlightViz(evt,'supply-2008','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2008','0.0');"/>
+    <rect id="year_2009" x="849.50" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2009');ChangeText(evt, 'year_text','2009');ChangeText(evt, 'use_text','usage: 15.3');ChangeText(evt, 'supply_text','supply: 14.9');" onmouseover="highlightViz(evt,'supply-2009','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2009','0.0');"/>
+    <rect id="year_2010" x="856.86" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2010');ChangeText(evt, 'year_text','2010');ChangeText(evt, 'use_text','usage: 15.1');ChangeText(evt, 'supply_text','supply: 14.0');" onmouseover="highlightViz(evt,'supply-2010','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2010','0.0');"/>
+    <rect id="year_2011" x="864.23" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2011');ChangeText(evt, 'year_text','2011');ChangeText(evt, 'use_text','usage: ');ChangeText(evt, 'supply_text','supply: 21.1');" onmouseover="highlightViz(evt,'supply-2011','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2011','0.0');"/>
+    <rect id="year_2012" x="871.59" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2012');ChangeText(evt, 'year_text','2012');ChangeText(evt, 'use_text','usage: ');ChangeText(evt, 'supply_text','supply: 8.4');" onmouseover="highlightViz(evt,'supply-2012','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2012','0.0');"/>
   </g>
 </svg>
+ <?xml-stylesheet type="text/css" href="../css/main.css" ?>
