@@ -11,6 +11,7 @@ source('scripts/R/build_ecmascript.R')
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 
 svg_file <- 'public_html/img/flow_animation.svg'
+declaration <- '<?xml-stylesheet type="text/css" href="../css/main.css" ?>'
 
 data <- read.csv('src_data/NaturalFlow.csv', stringsAsFactors = F)
 flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
@@ -32,9 +33,9 @@ axes <- list('tick_len' = 5,
 
 fig <- list('w' = 900,
             'h' = 600,
-            'margins' = c(100,80,10, 60)) #bot, left, top, right
+            'margins' = c(100,80,10, 10)) #bot, left, top, right
 
-fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[2]-fig$margins[4]),
+fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[4]),
                    "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
 
 usage_col <- '#B22C2C'
@@ -64,11 +65,11 @@ leg_id <- newXMLNode("g", 'parent' = g_id,
                                class="label", 'alignment-baseline' = "central"))
 
 newXMLNode("text", parent = leg_id, newXMLTextNode('year'),
-           attrs = c(id="year_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp))
+           attrs = c(id="year_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp,class='legend'))
 newXMLNode("text", parent = leg_id, newXMLTextNode('use_text'),
-           attrs = c(id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = usage_col))
+           attrs = c(id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = usage_col,class='legend'))
 newXMLNode("text", parent = leg_id, newXMLTextNode('supply_text'),
-           attrs = c(id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = supply_col))
+           attrs = c(id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = supply_col,class='legend'))
 #------
 
 
@@ -162,4 +163,5 @@ for (i in 1:length(x)){
 root_nd <- xmlRoot(g_id)
 
 saveXML(root_nd, file = svg_file)
+cat('\n',declaration, file = svg_file, append = TRUE)
 

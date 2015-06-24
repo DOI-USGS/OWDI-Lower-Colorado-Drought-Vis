@@ -31,8 +31,7 @@ ecmascript_mead_map <- function(){
                'function drawRiver(){',
                'document.getElementById("colorado-river-draw").beginElement();}',
                'function resetRiver(){',
-               'document.getElementById("colorado-river-reset").beginElement();',
-               'document.getElementById("reset-river").beginElement();}',
+               'document.getElementById("colorado-river-reset").beginElement();}',
                
                'function drawBasin(){',
                'document.getElementById("colorado-basin-draw").beginElement();}',
@@ -93,6 +92,8 @@ ecmascript_supply_usage <- function(){
     svgDocument = evt.target.ownerDocument;
     svgDocument.timeAdvance = this.timeAdvance;
     svgDocument.visibleAxes = this.visibleAxes;
+    svgDocument.setMobile = this.setMobile;
+    svgDocument.setDesktop = this.setDesktop;
   }
   
   legend = svgDocument.getElementById("legend");
@@ -124,7 +125,15 @@ ecmascript_supply_usage <- function(){
   {
   textelement = svgDocument.getElementById(elementname);                      
   textelement.firstChild.data = legendtext;
-  } 
+  }
+  function setMobile(){
+  	svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
+    svgDocument.getElementById("y-label").setAttribute("y","-10");       
+  }
+  function setDesktop(){
+    svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
+    svgDocument.getElementById("y-label").setAttribute("y","0");                          
+  }
   function timeAdvance(){
     var ele = document.getElementById("timeAdvance");
     ele.beginElement();
@@ -140,7 +149,9 @@ ecmascript_mead_proj <- function(){
   
   scripts <- c('function init(evt){',
                'if ( window.svgDocument == null ) {',
-               'svgDocument = evt.target.ownerDocument;}',
+               'svgDocument = evt.target.ownerDocument;',
+               'svgDocument.setMobile = this.setMobile;',
+               'svgDocument.setDesktop = this.setDesktop;}',
                '}',
                "function ChangeText(evt, elementname, legendtext)
                {
@@ -150,6 +161,14 @@ ecmascript_mead_proj <- function(){
                'function highlightEle(evt,opacity)
                {
                  evt.target.setAttribute("fill-opacity", opacity);
+               }',
+               'function setMobile(){
+                 svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
+                 svgDocument.getElementById("y-label").setAttribute("y","-10");       
+               }
+               function setDesktop(){
+                 svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
+                 svgDocument.getElementById("y-label").setAttribute("y","0");                          
                }')
   
   
