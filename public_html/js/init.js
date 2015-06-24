@@ -101,4 +101,7 @@ $(document).ready(function() {
             $(this).remove();
         });
     });
+
+    // Update the last modified timestamp in the footer
+    $('#last-mod-timestamp').html(document.lastModified);
 });
