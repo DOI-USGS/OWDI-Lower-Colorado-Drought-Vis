@@ -12,7 +12,8 @@ $(document).ready(function() {
     $('#application').unwrap();
     // JQuery Mobile also shoves its own loading indicator into the page. We don't want this. 
     $('.ui-loader').remove();
-    // JQuery Mobile also adds questionable CSS to the body node
+    // JQuery Mobile also adds questionable CSS to the html and body node
+    $('html').removeAttr('class');
     $('body').removeAttr('class');
 
     window.owdiDrought = window.owdiDrought || {};
