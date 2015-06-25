@@ -443,11 +443,11 @@ text{
 		}
 	
 	.keynote h1{
-		font-size:3vw;
+		font-size:2em;
 	}
 	
 	.keynote h2{
-		font-size:2vw;
+		font-size:2em;
 	}
 /*Section Content CSS*/
 	.sectionContent{
