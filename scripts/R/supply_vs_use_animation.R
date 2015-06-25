@@ -17,7 +17,8 @@ data <- read.csv('src_data/NaturalFlow.csv', stringsAsFactors = F)
 flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
 years <- data$Year
 data <- read.table('src_data/Basin_Depletion_yearly_PROVISIONAL.tsv', stringsAsFactors = F, sep = '\t', header = T)
-usage <- c(data$depletion/1000,NA,NA) #into millions acre-feet units
+# will add stuff here to either fill usage w/NAs, or trim to have same supply and use be the same length
+usage <- c(rep(NA,8),data$depletion/1000,NA,NA) #into millions acre-feet units
 
 
 # --- pixel dims ---
