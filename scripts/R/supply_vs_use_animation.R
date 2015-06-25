@@ -58,7 +58,7 @@ a_id <- newXMLNode('g', parent = g_id, attrs = c('id' = "axes", opacity = '0'))
 dinosvg:::animate_attribute(a_id, attr_name = "opacity", 
                             begin = "indefinite", id = "visibleAxes", 
                             fill = 'freeze', dur = '1s', from = "0", to = "1")
-add_axes(a_id, axes, fig)
+dinosvg::add_axes(a_id, axes, fig)
 
 #-- legend --
 leg_id <- newXMLNode("g", 'parent' = g_id,
