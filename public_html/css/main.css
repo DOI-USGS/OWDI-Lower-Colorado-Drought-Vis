@@ -238,23 +238,12 @@ text{
 	margin-bottom:100px;
 	}
 	
-.white{
-	border:1px solid #fff;
-	color:#fff;
-	}
-	
 .supportinginfo:hover,
 .supportinginfo:focus,
 .interact:hover,
 .interact:focus{
 	background:#003366;
 	color:#fff;
-	}
-	
-.white:hover,
-.white:focus{
-	background:#fff;
-	color:#003366;
 	}
 	
 /*Supporting Info Content CSS*/
@@ -443,11 +432,11 @@ text{
 		}
 	
 	.keynote h1{
-		font-size:3vw;
+		font-size:2em;
 	}
 	
 	.keynote h2{
-		font-size:2vw;
+		font-size:2em;
 	}
 /*Section Content CSS*/
 	.sectionContent{

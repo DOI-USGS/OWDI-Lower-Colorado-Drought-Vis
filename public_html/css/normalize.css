@@ -22,7 +22,7 @@ html,
 body{
 	height:100%;
 	font-family:Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color:#000 !important;
+	color:#000;
 	}
 	
 #usgscolorband{

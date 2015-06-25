@@ -9,17 +9,6 @@ Primary style
   box-sizing: border-box;
 }
 
-body {
-  font-size: 100%;
-  font-family: "Open Sans", sans-serif;
-  color: #445b7c;
-}
-
-a {
-  color: #dc717d;
-  text-decoration: none;
-}
-
 img {
   max-width: 100%;
 }
