@@ -6,9 +6,18 @@
 /* global console */
 $(document).ready(function() {
     "use strict";
+    // First order of business is to remove the very rude HTML DOM that JQuery Mobile forces on us
+    // JQuery Mobile wraps the entire application in a div with its own classes. There's no way to
+    // tell it not to do this, so I remove the wrapper div here
+    $('#application').unwrap();
+    // JQuery Mobile also shoves its own loading indicator into the page. We don't want this. 
+    $('.ui-loader').remove();
+    // JQuery Mobile also adds questionable CSS to the html and body node
+    $('html').removeAttr('class');
+    $('body').removeAttr('class');
+
     window.owdiDrought = window.owdiDrought || {};
     window.owdiDrought.SMController = new ScrollMagic.Controller();
-
 
     var fillDom = (function() {
         // For every container, find the sections it holds. Then for each section,
