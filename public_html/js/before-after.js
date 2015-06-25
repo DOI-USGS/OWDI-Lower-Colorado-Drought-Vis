@@ -7,7 +7,7 @@
         var $cdImageContainer = $(".cd-image-container"),
             cdImageLabelClassname = ".cd-image-label",
             cdResizeImgClassName = ".cd-resize-img";
-            
+
         //check if the .cd-image-container is in the viewport 
         //if yes, animate it
         owdiDrought.slider.checkPosition($cdImageContainer);
@@ -47,10 +47,12 @@
 
     //draggable funtionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
     owdiDrought.slider.drags = function(dragElement, resizeElement, container, labelContainer, labelResizeElement) {
-        dragElement.on("mousedown vmousedown", function(e) {
-            var vmouseAndMouseUp = "mouseup vmouseup",
+        var vmouseAndMouseUp = "mouseup vmouseup",
                 draggable = "draggable",
                 resizable = "resizable";
+                
+        dragElement.on("mousedown vmousedown", function(e) {
+            
 
             dragElement.addClass(draggable);
             resizeElement.addClass(resizable);

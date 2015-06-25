@@ -38,9 +38,10 @@ button.click(function() {
         animationSVG = animationContainer.getSVGDocument();
 
         if (!triggered) {
-        	// This does not currently look like it's being used
-        	// TODO: Remove if not being used
-            // animationSVG.visibleAxes();
+            // Only call if SVG is loaded and has this function
+            if (animationSVG.visibleAxes) {
+                animationSVG.visibleAxes();
+            };
             triggered = true;
         }
     }
