@@ -24,6 +24,8 @@ t_bmp = 20 # px from axes
 
 # -- from Alan Butler's code --
 hData <- read.csv('src_data/PowellMeadHistorical.csv', stringsAsFactors = F)
+# add RunType column to historical data
+hData$RunType <- 99
 modData <- read.csv('src_data/PowellMead24MSResults_reformat.csv', stringsAsFactors = F)
 meadData <- rbind(hData, modData)
 
@@ -88,14 +90,17 @@ x <- sapply(x, FUN = function(x) dinosvg:::tran_x(x, axes, fig))
 y <- sapply(y, FUN = function(y) dinosvg:::tran_y(y, axes, fig))
 
 is.model <- meadData$Model != "Historical"
+is.most <- meadData$RunType == 0 # most probable run
+is.hist <- meadData$RunType == 99
+is.minP <- meadData$RunType == 1 # minimum probable run
+is.maxP <- meadData$RunType == 2 # maximum probable run
 
-
-newXMLNode('rect',parent = g_id, attrs = c(id='ddddd',x = x[is.model][1], y = fig$px_lim$y[2], 
+newXMLNode('rect',parent = g_id, attrs = c(id='ddddd',x = x[is.most][1], y = fig$px_lim$y[2], 
                                            width=fig$px_lim$x[2]-x[is.model][1], height=fig$px_lim$y[1]-fig$px_lim$y[2], 
                                                       fill='grey', opacity='0.2', stroke='none'))
 
 y_offset <- fig$px_lim$y[1]-40
-x_offset <- c(x[is.model][1] -4, x[is.model][1] + 14)
+x_offset <- c(x[is.most][1] -4, x[is.most][1] + 14)
 
 newXMLNode("text", parent = g_id, newXMLTextNode('Historical'),
            attrs = c(id="Historical-marker", 
@@ -104,16 +109,15 @@ newXMLNode("text", parent = g_id, newXMLTextNode('Projected'),
            attrs = c(id="Projected-marker", 
                      'transform'=sprintf("rotate(-90,%1.1f,%1.1f),translate(%1.1f,%1.1f)",x_offset[2],y_offset,x_offset[2],y_offset)))
 
-dinosvg:::linepath(g_id, x[!is.model],y[!is.model],fill = 'none', 
+dinosvg:::linepath(g_id, x[is.hist],y[is.hist],fill = 'none', 
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round",
                                              supply_col,line_width))
 
-dinosvg:::linepath(g_id, c(x[is.model], rev(x[is.model])),
-                   c(y[is.model]+seq(length.out = length(y[is.model])), 
-                     rev(y[is.model]-seq(length.out = length(y[is.model])))),fill = '#99CCFF', 
+dinosvg:::linepath(g_id, c(x[is.minP], rev(x[is.maxP])),
+                   c(y[is.minP], rev(y[is.maxP])),fill = '#99CCFF', 
                    style ="stroke:none;",opacity='0.5')
 
-dinosvg:::linepath(g_id, x[is.model],y[is.model],fill = 'none', 
+dinosvg:::linepath(g_id, x[is.most],y[is.most],fill = 'none', 
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-dasharray:6;stroke-linecap:round",
                                              '#555555',line_width))
 
