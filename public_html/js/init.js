@@ -18,6 +18,7 @@ $(document).ready(function() {
 
     window.owdiDrought = window.owdiDrought || {};
     window.owdiDrought.SMController = new ScrollMagic.Controller();
+    window.owdiDrought.formFactor = '';
 
     var fillDom = (function() {
         // For every container, find the sections it holds. Then for each section,
@@ -107,8 +108,31 @@ $(document).ready(function() {
 
         $("#overlay").fadeOut(fadeTimeInMs, "swing", function() {
             $(this).remove();
+            $(window).resize();
         });
     });
+
+    // Track window size and emit events when we pass through width thresholds
+    var magicWidth = 686; // Pixel width to use to base mobile/desktop on
+    $(window).on('resize', function (e) {
+        var formFactor = 'desktop',
+            resizeEvent,
+            eventName = '';
+        if ($(e.currentTarget).width() <= magicWidth) {
+            formFactor = 'mobile';
+        }
+
+        // Create and dispatch event. A bit complicated due to dealing with
+        // IE and non-IE browsers and the way they dispatch events
+        if (window.owdiDrought.formFactor !== formFactor) {
+            window.owdiDrought.formFactor = formFactor;
+            eventName = "form-factor-" + window.owdiDrought.formFactor;
+
+            window.dispatchEvent(new Event(eventName));
+        }
+
+    });
+
 
     // Update the last modified timestamp in the footer
     $('#last-mod-timestamp').html(document.lastModified);
