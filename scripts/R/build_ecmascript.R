@@ -97,6 +97,8 @@ ecmascript_supply_usage <- function(){
   }
   
   legend = svgDocument.getElementById("legend");
+  window.parent.addEventListener("form-factor-desktop", setDesktop, false);
+  window.parent.addEventListener("form-factor-mobile", setMobile, false);  
   }
   function legendViz(evt,elementname)
   {
