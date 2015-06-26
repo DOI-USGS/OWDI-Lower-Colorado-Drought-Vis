@@ -33,14 +33,18 @@ meadData <- rbind(hData, modData)
 meadData <- dplyr::filter(meadData, Object.Name == 'Mead', Slot.Name == 'Pool Elevation')
 
 
+# determine the y-axis limits
+yMinR <- round(min(meadData$Value),-1)
+yMaxR <- round(max(meadData$Value),-1)
+
 # --- pixel dims ---
 axes <- list('tick_len' = 5,
              'y_label' = "Elevation of Lake Mead (feet)",
-             'y_ticks' = seq(1060,1130,10),
-             'y_tk_label' = seq(1060,1130,10),
+             'y_ticks' = seq(yMinR,yMaxR,10),
+             'y_tk_label' = seq(yMinR,yMaxR,10),
              'x_ticks' = seq(2009,2018,1),
              'x_tk_label' = seq(2009,2018,1),
-             'y_lim' = c(1055,1137),
+             'y_lim' = c(yMinR-7,yMaxR+7),
              'x_lim' = c(2008.5,2018.25))
 
 
