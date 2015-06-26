@@ -48,7 +48,31 @@ The service areas for Lower Colorado contractors were provided by Reclamation's 
 * Rivers
 * Others?
 
+#### Natural Flow Data
+
+##### Observed
+
+The observed natural flow data are a computed data set maintained by [Reclamtion](http://www.usbr.gov/lc/region/g4000/NaturalFlow/current.html). The natural flow at Lees Ferry represents the total flow originating in the Upper Basin, while the natural flow at Imperial represents the total flow in the Colorado River Basin. 
+
+[NaturalFlows.csv](../src_data/NaturalFlow.csv) contains the total annual natural flow at Lees Ferry and Imperial, which is a subset of the [posted data](http://www.usbr.gov/lc/region/g4000/NaturalFlow/current.html) available from Reclamation.
+
+[natural_flow_history](R/natural_flow_history.R) uses the natural flow at Lees Ferry to compare to the Paleo reconstructed natural flows in the "Colorado River Natural Flow at Lees Ferry, AZ" figure.
+
+[supply_vs_use_animation](R/supply_vs_use_animation.R) uses the natural flow at Imperial to compare to the total Basin use in the "Water supply and consumptive use in the Colorado River Basin" figure.
+
+##### Paleo
+
+The paleo reconstructed natural flow at Lees Ferry data are available and documented from NOAA at [http://www.ncdc.noaa.gov/paleo/pubs/meko2007/meko2007.html](http://www.ncdc.noaa.gov/paleo/pubs/meko2007/meko2007.html).
+
+[natural_flow_history](R/natural_flow_history.R) uses paleo reconstructed natural flow at Lees Ferry to compare to observed natural flows in the "Colorado River Natural Flow at Lees Ferry, AZ" figure.
+
 #### Water Use Data
+
+##### Basin-wide Historical Use
+
+The Basin-wide historical use data are used in the "Water supply and consumptive use in the Coloardo River Basin" figure. These data were compiled for the Colorado River Basin Water Supply and Demand Study and are documented in [Technical Report C](http://www.usbr.gov/lc/region/programs/crbstudy/finalreport/techrptC.html). Source data include the [Lower Basin Decree Accounting Reports](http://www.usbr.gov/lc/region/g4000/wtracct.html#decree), [Upper Basin Consumptive Uses and Losses Reports](http://www.usbr.gov/uc/library/envdocs/reports/crs/crsul.html), and [Microfiche records](http://www.usbr.gov/lc/region/g4000/NaturalFlow/supportNF.html).
+
+Source data from the Basin Study were obtained from Reclamation ([BasinStudy_TR-C_HistoricalDataDump_Provisional.csv](../src_data/BasinStudy_TR-C_HistoricalDataDump_Provisional.csv)). [reform_usage_data](reform_usage_data.R) is used to aggregate the source data into the total use (Upper Basin, Lower Basin, and Mexico) for each year and creates [Basin_Depletion_yearly_PROVISIONAL.tsv](../src_data/Basin_Depletion_yearly_PROVISIONAL.tsv). [supply_vs_use_animation](R/supply_vs_use_animation.R) uses the Basin_Depletion_yearly_PROVISIONAL.tsv file to create the  "Water supply and consumptive use in the Coloardo River Basin" figure.
 
 ##### Lower Basin Water Accounting Data
 
