@@ -1,7 +1,7 @@
 <div class="widget">
   <div id="meadSVGContainer">
     <h2>Mead SVG Dealio</h2>
-    <object id="mead-object" data="img/lo_CO_borders.svg" type="image/svg+xml" onload="window.owdiDrought.createCOScene()">
+    <object id="mead-object" data="img/lo_CO_borders.svg" type="image/svg+xml" onload="window.owdiDrought.lakeMeadScene.createCOScene()">
     </object>
   </div>
   <div class="SVGInfo" id="info1">
@@ -35,19 +35,19 @@
     <p>When you are hurting in your heart, it's no use even if the entire world asks you how you are feeling. All you need is to be held by someone who doesn't need to ask.</p>
   </div>
 </div>
-<script>
+
+<script type="text/javascript">
 /* global owdiDrought */
 /* global ScrollMagic */
 /* global $ */
 /* global console */
 (function() {
     "use strict";
-
-    owdiDrought.createCOScene = function() {
-        if (!owdiDrought.meadObjectSVG) {
-            owdiDrought.meadObjectSVG = svgDomElement.getSVGDocument();
+    owdiDrought.lakeMeadScene = {};
+    owdiDrought.lakeMeadScene.createCOScene = function() {
+        if (!owdiDrought.lakeMeadScene.meadObjectSVG) {
+            owdiDrought.lakeMeadScene.meadObjectSVG = svgDomElement.getSVGDocument();
         }
-
     };
 
     var svgDomElement = document.getElementById("mead-object"),
@@ -84,9 +84,9 @@
                         "start": function(e) {
                             var $section = $("#info1");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.drawRiver());
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawRiver());
                             } else {
-                                $section.fadeOut(fadeSpeed, owdiDrought.meadObjectSVG.resetRiver());
+                                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetRiver());
                             }
                         },
                         "end": function(e) {
@@ -103,9 +103,9 @@
                         "start": function(e) {
 							var $section = $("#info2");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed,owdiDrought.meadObjectSVG.drawBasin());
+                                $section.fadeIn(fadeSpeed,owdiDrought.lakeMeadScene.meadObjectSVG.drawBasin());
                             } else {
-                                $section.fadeOut(fadeSpeed,owdiDrought.meadObjectSVG.resetBasin());
+                                $section.fadeOut(fadeSpeed,owdiDrought.lakeMeadScene.meadObjectSVG.resetBasin());
                             }
                         },
                         "end": function(e) {
@@ -122,9 +122,9 @@
                         "start": function(e) {
 							var $section = $("#info3");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.drawPictogram());
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawPictogram());
                             } else {
-                                $section.fadeOut(fadeSpeed, owdiDrought.meadObjectSVG.removePictogram());
+                                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removePictogram());
                             }
                         },
 						"end": function(e) {
@@ -141,7 +141,7 @@
                         "start": function(e) {
 							var $section = $("#info4");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.highlightUser(1));
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(1));
                             }else{
 								$section.fadeOut(fadeSpeed);
 								}
@@ -161,7 +161,7 @@
                         "start": function(e) {
 							var $section = $("#info5");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.highlightUser(2));
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(2));
                             }else{
 								$section.fadeOut(fadeSpeed);
 								}
@@ -180,7 +180,7 @@
                         "start": function(e) {
 							var $section = $("#info6");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.highlightUser(3));
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(3));
                             }else{
 								$section.fadeOut(fadeSpeed);
 								}
@@ -199,7 +199,7 @@
                         "start": function(e) {
 							var $section = $("#info7");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.highlightUser(4));
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(4));
                             }else{
 								$section.fadeOut(fadeSpeed);
 								}
@@ -218,7 +218,7 @@
                         "start": function(e) {
 							var $section = $("#info8");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.highlightUser(5));
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(5));
                             }else{
 								$section.fadeOut(fadeSpeed);
 								}
@@ -238,14 +238,14 @@
                         "start": function(e) {
 							var $section = $("#info9");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.removeGreyStates());
-                                owdiDrought.meadObjectSVG.removeRiver();
-                                owdiDrought.meadObjectSVG.removePictogram();
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removeGreyStates());
+                                owdiDrought.lakeMeadScene.meadObjectSVG.removeRiver();
+                                owdiDrought.lakeMeadScene.meadObjectSVG.removePictogram();
                             } else {
-                                $section.fadeOut(fadeSpeed, owdiDrought.meadObjectSVG.resetGreyStates());
-                                owdiDrought.meadObjectSVG.drawPictogram();
-                                owdiDrought.meadObjectSVG.drawBasin();
-                                owdiDrought.meadObjectSVG.showRiver();
+                                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetGreyStates());
+                                owdiDrought.lakeMeadScene.meadObjectSVG.drawPictogram();
+                                owdiDrought.lakeMeadScene.meadObjectSVG.drawBasin();
+                                owdiDrought.lakeMeadScene.meadObjectSVG.showRiver();
                             }
                         },
 						"end": function(e) {
@@ -262,11 +262,11 @@
                         "start": function(e) {
 							var $section = $("#info10");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.moveStates());
-                                owdiDrought.meadObjectSVG.drawMead();
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.moveStates());
+                                owdiDrought.lakeMeadScene.meadObjectSVG.drawMead();
                             } else {
-                                $section.fadeOut(fadeSpeed,owdiDrought.meadObjectSVG.resetStates());
-                                owdiDrought.meadObjectSVG.removeMead();
+                                $section.fadeOut(fadeSpeed,owdiDrought.lakeMeadScene.meadObjectSVG.resetStates());
+                                owdiDrought.lakeMeadScene.meadObjectSVG.removeMead();
                             }
                         },
 						"end": function(e) {
