@@ -75,9 +75,10 @@ $(document).ready(function() {
                 var template = Handlebars.compile(templateHTML),
                     extendedTemplateData = $.extend({}, templateData, {
                         baseUrl: host + window.location.pathname
-                    });
+                    }),
+                    html = template(extendedTemplateData);
 
-                $("#" + this.containerId + " > #" + this.sectionId).html(template(extendedTemplateData));
+                $("#" + this.containerId + " > #" + this.sectionId).html(html);
             },
             // In case anything needs to be initialized in a section, do that here using
             // the section's HTML id attribute
