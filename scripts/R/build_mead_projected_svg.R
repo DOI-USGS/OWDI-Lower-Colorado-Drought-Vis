@@ -67,7 +67,7 @@ svg_nd <- newXMLNode('svg',
                      namespace = c("http://www.w3.org/2000/svg", xlink="http://www.w3.org/1999/xlink"), 
                      attrs = c(version = '1.1', onload="init(evt)", preserveAspectRatio="xMinYMin meet", viewBox=sprintf("0 0 %1.0f %1.0f",fig$w, fig$h)))
 
-add_ecmascript(svg_nd, text = css_mead_model())
+add_css(svg_nd, text = css_mead_model())
 add_ecmascript(svg_nd, text = ecmascript_mead_proj())
 
 
