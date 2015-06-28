@@ -415,6 +415,7 @@
                 if (actions.hasOwnProperty(action)) {
                     var scene = actions[action];
                     scene.parentContainer = parentContainer;
+                    scene.duration = defaultDuration;
                     window.owdiDrought.addScene(scene);
                 }
             }
