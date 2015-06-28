@@ -152,6 +152,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
 parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute("values").split(";")[1]);
 }
 }
+}
 }'
                )
   
