@@ -34,6 +34,12 @@
   <div class="SVGInfo" id="info10">
     <p>When you are hurting in your heart, it's no use even if the entire world asks you how you are feeling. All you need is to be held by someone who doesn't need to ask.</p>
   </div>
+   <div class="SVGInfo" id="info11">
+    <p>So... we may just need to change the the font-size either in css in the svg or externally. I'll start externally and then we can decide if we'd like to move inwards!</p>
+  </div>
+  <div class="SVGInfo" id="info12">
+    <p>Marty is a tender and attentive wordsmith</p>
+  </div>
 </div>
 
 <script type="text/javascript">
@@ -271,6 +277,46 @@
                         },
 						"end": function(e) {
                             var $section = $("#info10");
+                            if (e.scrollDirection === "FORWARD") {
+                                $section.fadeOut(fadeSpeed);
+                            } else {
+                                $section.fadeIn(fadeSpeed);
+                            }
+                        }
+						
+                    },
+                    normalCondition: {
+                        "offset": 3000,
+                        "start": function(e) {
+							var $section = $("#info11");
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.setMeadCondition('normal'));
+                            } else {
+                                $section.fadeOut(fadeSpeed,owdiDrought.meadObjectSVG.setMeadCondition('surplus'));
+                            }
+                        },
+						"end": function(e) {
+                            var $section = $("#info11");
+                            if (e.scrollDirection === "FORWARD") {
+                                $section.fadeOut(fadeSpeed);
+                            } else {
+                                $section.fadeIn(fadeSpeed);
+                            }
+                        }
+						
+                    },
+                    shortageCondition: {
+                        "offset": 3300,
+                        "start": function(e) {
+					        var $section = $("#info12");
+                            if (e.scrollDirection.toUpperCase() === "FORWARD") {
+                                $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.setMeadCondition('shortage-1'));
+                            } else {
+                                $section.fadeOut(fadeSpeed,owdiDrought.meadObjectSVG.setMeadCondition('normal'));
+                            }
+                        },
+						"end": function(e) {
+                            var $section = $("#info12");
                             if (e.scrollDirection === "FORWARD") {
                                 $section.fadeOut(fadeSpeed);
                             } else {
