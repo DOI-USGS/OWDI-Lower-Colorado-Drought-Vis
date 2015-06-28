@@ -19,42 +19,15 @@
 
         //make the .cd-handle element draggable and modify .cd-resize-img width according to its position
         $cdImageContainer.each(function() {
-            var $actual = $(this),
-                $beforeTrigger = $actual.find(".trigger-before"),
-                $afterTrigger = $actual.find(".trigger-after"),
-                $handle = $actual.find(".cd-handle");
+            var actual = $(this);
                 
             owdiDrought.slider.drags(
-                $handle,
-                $actual.find(cdResizeImgClassName),
-                $actual,
-                $actual.find(cdImageLabelClassname + "[data-type='original']"),
-                $actual.find(cdImageLabelClassname + "[data-type='modified']"));
+                actual.find(".cd-handle"),
+                actual.find(cdResizeImgClassName),
+                actual,
+                actual.find(cdImageLabelClassname + "[data-type='original']"),
+                actual.find(cdImageLabelClassname + "[data-type='modified']"));
 
-            $beforeTrigger.on('click', function (e) {
-                var $handle = $(e.target).closest('.cd-image-container').find('.cd-handle');
-
-                var animation = $handle.animate({
-                    left : $handle.position().left - 100
-                }, {
-                    start : function (e) {
-                        var $handle = $(e.elem);
-                        $handle.trigger('mousedown');
-                    },
-                    step : function (now, fx) {
-                        $(fx.elem).parents().trigger('mousemove');
-                    },
-                    done : function (e) {
-                        var $handle = $(e.elem);
-                        $handle.trigger('mouseup');
-                    }
-                });
-            });
-
-            $afterTrigger.on('click', function (e) {
-                debugger;
-            });
-                
         });
 
         //upadate images label visibility

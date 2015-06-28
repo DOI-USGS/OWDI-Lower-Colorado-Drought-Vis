@@ -65,24 +65,24 @@
                 addTriggerFunction = function(item) {
                     var scene = new ScrollMagic.Scene({
                             triggerElement: parentContainer,
-                            duration: defaultDuration
+                            duration: item.duration || defaultDuration
                         })
 						.triggerHook(0)
                         .offset(item.offset)
                         .setPin(parentContainer)
                         .addIndicators();
 
-                    if (item.start) {
+                    if (item.hasOwnProperty('start')) {
                         scene.on("start", item.start);
                     }
-                    if (item.end) {
+                    if (item.hasOwnProperty('end')) {
                         scene.on("end", item.end);
                     }
 
                     scene.addTo(window.owdiDrought.SMController);
                 },
                 fadeSpeed = "slow",
-                // Define the actions 
+                // Define the actions. Each action may have a start and an end as well as a duraiton
                 actions = {
                     // Each action has a name but the name is currently not used for anything except 
                     // a label to easily identify what the actions within do
@@ -90,9 +90,9 @@
                         "start": function(e) {
                             var $section = $("#info1");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawRiver());
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawRiver);
                             } else {
-                                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetRiver());
+                                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetRiver);
                             }
                         },
                         "end": function(e) {
@@ -109,9 +109,9 @@
                         "start": function(e) {
 							var $section = $("#info2");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed,owdiDrought.lakeMeadScene.meadObjectSVG.drawBasin());
+                                $section.fadeIn(fadeSpeed,owdiDrought.lakeMeadScene.meadObjectSVG.drawBasin);
                             } else {
-                                $section.fadeOut(fadeSpeed,owdiDrought.lakeMeadScene.meadObjectSVG.resetBasin());
+                                $section.fadeOut(fadeSpeed,owdiDrought.lakeMeadScene.meadObjectSVG.resetBasin);
                             }
                         },
                         "end": function(e) {
@@ -128,9 +128,9 @@
                         "start": function(e) {
 							var $section = $("#info3");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawPictogram());
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawPictogram);
                             } else {
-                                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removePictogram());
+                                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removePictogram);
                             }
                         },
 						"end": function(e) {
@@ -147,7 +147,9 @@
                         "start": function(e) {
 							var $section = $("#info4");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(1));
+                                $section.fadeIn(fadeSpeed, function () {
+                                    owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(1);
+                                });
                             }else{
 								$section.fadeOut(fadeSpeed);
 								}
@@ -167,7 +169,9 @@
                         "start": function(e) {
 							var $section = $("#info5");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(2));
+                                $section.fadeIn(fadeSpeed, function () {
+                                    owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(2);
+                                });
                             }else{
 								$section.fadeOut(fadeSpeed);
 								}
@@ -186,7 +190,9 @@
                         "start": function(e) {
 							var $section = $("#info6");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(3));
+                                $section.fadeIn(fadeSpeed, function () {
+                                    owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(3);
+                                });
                             }else{
 								$section.fadeOut(fadeSpeed);
 								}
@@ -205,7 +211,9 @@
                         "start": function(e) {
 							var $section = $("#info7");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(4));
+                                $section.fadeIn(fadeSpeed, function () {
+                                    owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(4);
+                                });
                             }else{
 								$section.fadeOut(fadeSpeed);
 								}
@@ -224,7 +232,9 @@
                         "start": function(e) {
 							var $section = $("#info8");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(5));
+                                $section.fadeIn(fadeSpeed, function () {
+                                    owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(5);
+                                });
                             }else{
 								$section.fadeOut(fadeSpeed);
 								}
@@ -244,11 +254,11 @@
                         "start": function(e) {
 							var $section = $("#info9");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removeGreyStates());
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removeGreyStates);
                                 owdiDrought.lakeMeadScene.meadObjectSVG.removeRiver();
                                 owdiDrought.lakeMeadScene.meadObjectSVG.removePictogram();
                             } else {
-                                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetGreyStates());
+                                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetGreyStates);
                                 owdiDrought.lakeMeadScene.meadObjectSVG.drawPictogram();
                                 owdiDrought.lakeMeadScene.meadObjectSVG.drawBasin();
                                 owdiDrought.lakeMeadScene.meadObjectSVG.showRiver();
@@ -268,10 +278,10 @@
                         "start": function(e) {
 							var $section = $("#info10");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.moveStates());
+                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.moveStates);
                                 owdiDrought.lakeMeadScene.meadObjectSVG.drawMead();
                             } else {
-                                $section.fadeOut(fadeSpeed,owdiDrought.lakeMeadScene.meadObjectSVG.resetStates());
+                                $section.fadeOut(fadeSpeed,owdiDrought.lakeMeadScene.meadObjectSVG.resetStates);
                                 owdiDrought.lakeMeadScene.meadObjectSVG.removeMead();
                             }
                         },
@@ -290,9 +300,13 @@
                         "start": function(e) {
 							var $section = $("#info11");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('normal'));
+                                $section.fadeIn(fadeSpeed, function () {
+                                    owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('normal');
+                                });
                             } else {
-                                $section.fadeOut(fadeSpeed,owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('surplus'));
+                                $section.fadeOut(fadeSpeed, function () {
+                                    owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('surplus');
+                                });
                             }
                         },
 						"end": function(e) {
@@ -310,9 +324,13 @@
                         "start": function(e) {
 					        var $section = $("#info12");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
-                                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-1'));
+                                $section.fadeIn(fadeSpeed, function () {
+                                    owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-1');
+                                });
                             } else {
-                                $section.fadeOut(fadeSpeed,owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('normal'));
+                                $section.fadeOut(fadeSpeed, function () {
+                                    owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('normal');
+                                });
                             }
                         },
 						"end": function(e) {

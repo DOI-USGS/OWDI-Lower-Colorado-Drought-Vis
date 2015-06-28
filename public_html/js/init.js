@@ -15,11 +15,14 @@ $(document).ready(function() {
     // JQuery Mobile also adds questionable CSS to the html and body node
     $('html').removeAttr('class');
     $('body').removeAttr('class');
-
+    
+    var scrollMagicOptions = {
+          loglevel : 3 // http://janpaepke.github.io/ScrollMagic/docs/ScrollMagic.Controller.html#loglevel
+    };
     window.owdiDrought = window.owdiDrought || {};
-    window.owdiDrought.SMController = new ScrollMagic.Controller();
+    window.owdiDrought.SMController = new ScrollMagic.Controller(scrollMagicOptions);
     window.owdiDrought.formFactor = '';
-
+    
     var fillDom = (function() {
         // For every container, find the sections it holds. Then for each section,
         // use the section's HTML id attribtue to load the template. Once the template
@@ -103,7 +106,7 @@ $(document).ready(function() {
         // At this point, the DOM will have been built 
 
         window.console.trace("Application loaded");
-
+        window.owdiDrought.SMController.scrollTo(0);
         var fadeTimeInMs = 1500;
 
         $("#overlay").fadeOut(fadeTimeInMs, "swing", function() {
