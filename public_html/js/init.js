@@ -35,10 +35,13 @@ $(document).ready(function() {
         if (sceneItem.hasOwnProperty('start')) {
             scene.on("start", sceneItem.start);
         }
+        
         if (sceneItem.hasOwnProperty('end')) {
             scene.on("end", sceneItem.end);
         }
-
+        
+        scene.name = sceneItem.name;
+        
         scene.addTo(window.owdiDrought.SMController);
     };
     
