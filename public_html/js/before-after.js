@@ -1,5 +1,7 @@
 /* global owdiDrought */
 /* global $ */
+
+// Pulled from http://codyhouse.co/gem/css-jquery-image-comparison-slider/
 (function() {
     "use strict";
     owdiDrought.slider = {};
@@ -17,13 +19,42 @@
 
         //make the .cd-handle element draggable and modify .cd-resize-img width according to its position
         $cdImageContainer.each(function() {
-            var actual = $(this);
+            var $actual = $(this),
+                $beforeTrigger = $actual.find(".trigger-before"),
+                $afterTrigger = $actual.find(".trigger-after"),
+                $handle = $actual.find(".cd-handle");
+                
             owdiDrought.slider.drags(
-                actual.find(".cd-handle"),
-                actual.find(cdResizeImgClassName),
-                actual,
-                actual.find(cdImageLabelClassname + "[data-type='original']"),
-                actual.find(cdImageLabelClassname + "[data-type='modified']"));
+                $handle,
+                $actual.find(cdResizeImgClassName),
+                $actual,
+                $actual.find(cdImageLabelClassname + "[data-type='original']"),
+                $actual.find(cdImageLabelClassname + "[data-type='modified']"));
+
+            $beforeTrigger.on('click', function (e) {
+                var $handle = $(e.target).closest('.cd-image-container').find('.cd-handle');
+
+                var animation = $handle.animate({
+                    left : $handle.position().left - 100
+                }, {
+                    start : function (e) {
+                        var $handle = $(e.elem);
+                        $handle.trigger('mousedown');
+                    },
+                    step : function (now, fx) {
+                        $(fx.elem).parents().trigger('mousemove');
+                    },
+                    done : function (e) {
+                        var $handle = $(e.elem);
+                        $handle.trigger('mouseup');
+                    }
+                });
+            });
+
+            $afterTrigger.on('click', function (e) {
+                debugger;
+            });
+                
         });
 
         //upadate images label visibility
@@ -45,15 +76,13 @@
         });
     };
 
-    //draggable funtionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
+    //draggable functionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
     owdiDrought.slider.drags = function(dragElement, resizeElement, container, labelContainer, labelResizeElement) {
         var vmouseAndMouseUp = "mouseup vmouseup",
                 draggable = "draggable",
                 resizable = "resizable";
                 
         dragElement.on("mousedown vmousedown", function(e) {
-            
-
             dragElement.addClass(draggable);
             resizeElement.addClass(resizable);
 
