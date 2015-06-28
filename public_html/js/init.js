@@ -40,6 +40,10 @@ $( document ).ready( function () {
 			scene.on( "end", sceneItem.end );
 		}
 
+		if ( sceneItem.hasOwnProperty( 'enter' ) ) {
+      	scene.on( "enter", sceneItem.enter );
+		}
+
 		scene.name = sceneItem.name;
 
 		scene.addTo( window.owdiDrought.SMController );
