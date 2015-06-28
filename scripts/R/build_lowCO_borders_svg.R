@@ -6,6 +6,7 @@ library(XML)
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 source('scripts/R/build_usage_pictogram.R')
 source('scripts/R/build_ecmascript.R')
+source('scripts/R/build_css.R')
 source('scripts/R/build_mead_levels.R')
 width=7.5
 height=7.6
@@ -126,6 +127,7 @@ svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- clean_svg_doc(svg) %>%
   add_rect(width="540", height="547", fill='grey', opacity='0.2', stroke='black', 'stroke-width'='2') %>%
+  add_css(css_mead_map()) %>% 
   add_ecmascript(ecmascript_mead_map()) %>%
   name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Colorado-river','Colorado-river-basin',top_users)) %>%
   group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = 'Colorado-river-basin', 'top-users' = top_users)) %>%
