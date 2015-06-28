@@ -133,8 +133,8 @@ svg <- clean_svg_doc(svg) %>%
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles, 'top-users'=top_user_styles)) %>%
   attr_svg_paths(attrs = list('usage-1'=c(opacity = '0'), 'usage-2'=c(opacity = '0'), 'usage-3'=c(opacity = '0'), 'usage-4'=c(opacity = '0'), 'usage-5'=c(opacity = '0'))) %>%
   add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
-  add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values=paste0(seq(331,0,length.out = 11),';',collapse = '')) %>%
-  add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-reset', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values=paste0(seq(0,331,length.out = 11),';',collapse = '')) %>%
+  add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values=paste0(seq(331,0,length.out = 100),';',collapse = '')) %>%
+  add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-reset', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values=paste0(seq(0,331,length.out = 100),';',collapse = '')) %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', element = 'g', id = 'colorado-basin-draw', begin="indefinite", fill="freeze", dur=ani_dur[['basin-draw']], values= "0;1") %>%
   usage_bar_pictogram(values = non_zero_cont, scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
