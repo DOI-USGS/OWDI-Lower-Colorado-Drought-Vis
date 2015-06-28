@@ -22,6 +22,25 @@ $(document).ready(function() {
     window.owdiDrought = window.owdiDrought || {};
     window.owdiDrought.SMController = new ScrollMagic.Controller(scrollMagicOptions);
     window.owdiDrought.formFactor = '';
+    window.owdiDrought.addScene = function (sceneItem) {
+        var scene = new ScrollMagic.Scene({
+                triggerElement: sceneItem.parentContainer,
+                duration: sceneItem.duration
+            })
+			.triggerHook(sceneItem.triggerHook || 0)
+            .offset(sceneItem.offset)
+            .setPin(sceneItem.parentContainer)
+            .addIndicators();
+
+        if (sceneItem.hasOwnProperty('start')) {
+            scene.on("start", sceneItem.start);
+        }
+        if (sceneItem.hasOwnProperty('end')) {
+            scene.on("end", sceneItem.end);
+        }
+
+        scene.addTo(window.owdiDrought.SMController);
+    };
     
     var fillDom = (function() {
         // For every container, find the sections it holds. Then for each section,
