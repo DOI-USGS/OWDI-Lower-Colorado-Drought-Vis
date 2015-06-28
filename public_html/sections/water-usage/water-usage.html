@@ -24,29 +24,22 @@
 </script>
 <script>
   (function() {
-    var scene = new ScrollMagic.Scene({
-        triggerElement: '#JrGraph',
-        duration: 100
-      })
-      .on("enter", function(e) {
-        animation();
-      })
-      .addTo(window.owdiDrought.SMController);
-
-
-    var animationContainer = document.getElementById('animated-object');
     var triggered = false;
     var animation = function() {
-      animationSVG = animationContainer.getSVGDocument();
+      animationSVG = document.getElementById('animated-object').getSVGDocument();
 
-      if (!triggered) {
-        // Only call if SVG is loaded and has this function
-        if (animationSVG.visibleAxes) {
-          animationSVG.visibleAxes();
-        };
-        triggered = true;
-      }
+      // Only call if SVG is loaded and has this function
+      if (animationSVG && animationSVG.visibleAxes) {
+        animationSVG.visibleAxes();
+      };
     }
+
+    window.owdiDrought.addScene({
+      parentContainer: "#container9",
+      duration: 100,
+      enter: animation,
+      offset: 100
+    });
   })();
 
 </script>
