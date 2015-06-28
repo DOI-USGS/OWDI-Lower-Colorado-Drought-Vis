@@ -17,6 +17,7 @@ ecmascript_mead_map <- function(){
                'svgDocument.removePictogram = this.removePictogram;',
                'svgDocument.moveStates = this.moveStates;',
                'svgDocument.highlightUser = this.highlightUser;',
+               'svgDocument.setMeadCondition = this.setMeadCondition;',
                'svgDocument.resetStates = this.resetStates;}',
                
                '}',
