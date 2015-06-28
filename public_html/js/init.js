@@ -68,9 +68,13 @@ $(document).ready(function() {
             },
             // Applies the Handlebars template to the designated container -> section
             applyTemplate = function(templateHTML, status, jqXHR, templateData) {
+                var host = window.location.origin;
+                if (!host) {
+                    host = "//" + window.location.host
+                }
                 var template = Handlebars.compile(templateHTML),
                     extendedTemplateData = $.extend({}, templateData, {
-                        baseUrl: window.location.origin + window.location.pathname
+                        baseUrl: host + window.location.pathname
                     });
 
                 $("#" + this.containerId + " > #" + this.sectionId).html(template(extendedTemplateData));
@@ -151,8 +155,7 @@ $(document).ready(function() {
         if (window.owdiDrought.formFactor !== formFactor) {
             window.owdiDrought.formFactor = formFactor;
             eventName = "form-factor-" + window.owdiDrought.formFactor;
-
-            window.dispatchEvent(new Event(eventName));
+            $(window).trigger(eventName);
         }
 
     });
