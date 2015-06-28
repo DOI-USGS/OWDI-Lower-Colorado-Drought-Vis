@@ -5,7 +5,7 @@
              font-size: 1em !important;
          }
      ]]>
-</style
+</style>
   <script type="text/ecmascript"><![CDATA[function init(evt){
 if ( window.svgDocument == null ) {
 svgDocument = evt.target.ownerDocument;
