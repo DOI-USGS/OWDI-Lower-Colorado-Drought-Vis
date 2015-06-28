@@ -155,6 +155,8 @@ ecmascript_mead_proj <- function(){
                'svgDocument.setMobile = this.setMobile;',
                'svgDocument.setDesktop = this.setDesktop;}',
                '}',
+               'window.parent.addEventListener("form-factor-desktop", setDesktop, false);',
+               'window.parent.addEventListener("form-factor-mobile", setMobile, false);',
                "function ChangeText(evt, elementname, legendtext)
                {
                textelement = svgDocument.getElementById(elementname);                      
