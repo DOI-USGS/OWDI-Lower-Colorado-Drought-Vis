@@ -37,6 +37,9 @@
    <div class="SVGInfo" id="info11">
     <p>So... we may just need to change the the font-size either in css in the svg or externally. I'll start externally and then we can decide if we'd like to move inwards!</p>
   </div>
+  <div class="SVGInfo" id="info12">
+    <p>Marty is a tender and attentive wordsmith</p>
+  </div>
 </div>
 <script>
 /* global owdiDrought */
@@ -305,7 +308,7 @@
                     shortageCondition: {
                         "offset": 3300,
                         "start": function(e) {
-							var $section = $("#info11");
+					        var $section = $("#info12");
                             if (e.scrollDirection.toUpperCase() === "FORWARD") {
                                 $section.fadeIn(fadeSpeed, owdiDrought.meadObjectSVG.setMeadCondition('shortage-1'));
                             } else {
@@ -313,7 +316,7 @@
                             }
                         },
 						"end": function(e) {
-                            var $section = $("#info11");
+                            var $section = $("#info12");
                             if (e.scrollDirection === "FORWARD") {
                                 $section.fadeOut(fadeSpeed);
                             } else {
