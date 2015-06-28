@@ -62,26 +62,8 @@
 		
         setScene = function() {
             var defaultDuration = 300,
-                addTriggerFunction = function(item) {
-                    var scene = new ScrollMagic.Scene({
-                            triggerElement: parentContainer,
-                            duration: item.duration || defaultDuration
-                        })
-						.triggerHook(0)
-                        .offset(item.offset)
-                        .setPin(parentContainer)
-                        .addIndicators();
-
-                    if (item.hasOwnProperty('start')) {
-                        scene.on("start", item.start);
-                    }
-                    if (item.hasOwnProperty('end')) {
-                        scene.on("end", item.end);
-                    }
-
-                    scene.addTo(window.owdiDrought.SMController);
-                },
                 fadeSpeed = "slow",
+                
                 // Define the actions. Each action may have a start and an end as well as a duraiton
                 actions = {
                     // Each action has a name but the name is currently not used for anything except 
@@ -348,8 +330,9 @@
             // For every action I have, set the ScrollMagic event triggering for it
             for (var action in actions) {
                 if (actions.hasOwnProperty(action)) {
-                    addTriggerFunction(actions[action]);
-                    console.trace("Set ScrollMagic action in section 16 for action " + action);
+                    var scene = actions[action];
+                    scene.parentContainer = parentContainer;
+                    window.owdiDrought.addScene(scene);
                 }
             }
         }
