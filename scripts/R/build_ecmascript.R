@@ -155,6 +155,8 @@ ecmascript_mead_proj <- function(){
                'svgDocument.setMobile = this.setMobile;',
                'svgDocument.setDesktop = this.setDesktop;}',
                '}',
+               'window.parent.addEventListener("form-factor-desktop", setDesktop, false);',
+               'window.parent.addEventListener("form-factor-mobile", setMobile, false);',
                "function ChangeText(evt, elementname, legendtext)
                {
                textelement = svgDocument.getElementById(elementname);                      
@@ -166,7 +168,7 @@ ecmascript_mead_proj <- function(){
                }',
                'function setMobile(){
                  svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
-                 svgDocument.getElementById("y-label").setAttribute("y","-10");       
+                 svgDocument.getElementById("y-label").setAttribute("y","-12");       
                }
                function setDesktop(){
                  svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     

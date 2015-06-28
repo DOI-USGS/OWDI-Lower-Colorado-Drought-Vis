@@ -77,11 +77,11 @@ leg_id <- newXMLNode("g", 'parent' = g_id,
                                class="label", 'alignment-baseline' = "central"))
 
 newXMLNode("text", parent = leg_id, newXMLTextNode(' '),
-           attrs = c(id="date_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp))
+           attrs = c(id="date_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp,class='legend'))
 newXMLNode("text", parent = leg_id, newXMLTextNode(' '),
-           attrs = c(id="elev_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = supply_col))
+           attrs = c(id="elev_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = supply_col,class='legend'))
 newXMLNode("text", parent = leg_id, newXMLTextNode(' '),
-           attrs = c(id="model_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = '#000000'))
+           attrs = c(id="model_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = '#000000',class='legend'))
 #------
 
 x <- as.numeric(strftime(as.POSIXct(meadData$Timestep), format = "%j"))/365+
@@ -99,12 +99,14 @@ is.hist <- meadData$RunType == 99
 is.minP <- meadData$RunType == 1 # minimum probable run
 is.maxP <- meadData$RunType == 2 # maximum probable run
 
+prob_run_title <- meadData$Model[is.most][1] # - assuming these are all the same
+
 newXMLNode('rect',parent = g_id, attrs = c(id='ddddd',x = x[is.most][1], y = fig$px_lim$y[2], 
                                            width=fig$px_lim$x[2]-x[is.model][1], height=fig$px_lim$y[1]-fig$px_lim$y[2], 
                                                       fill='grey', opacity='0.2', stroke='none'))
 
 y_offset <- fig$px_lim$y[1]-40
-x_offset <- c(x[is.most][1] -4, x[is.most][1] + 14)
+x_offset <- c(x[is.most][1] -4, x[is.most][1] + 18)
 
 newXMLNode("text", parent = g_id, newXMLTextNode('Historical'),
            attrs = c(id="Historical-marker", 
@@ -136,8 +138,7 @@ for (i in 1:length(x)){
   
   
   if (is.model[i]){
-    elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s (ft)');", elev),
-                        "ChangeText(evt, 'model_text','*Projected');")
+    elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s (ft)');ChangeText(evt, 'model_text','*%s');", elev,prob_run_title))
   } else {
     elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s (ft)');", elev),
                         "ChangeText(evt, 'model_text',' ');")
