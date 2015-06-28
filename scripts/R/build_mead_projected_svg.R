@@ -77,11 +77,11 @@ leg_id <- newXMLNode("g", 'parent' = g_id,
                                class="label", 'alignment-baseline' = "central"))
 
 newXMLNode("text", parent = leg_id, newXMLTextNode(' '),
-           attrs = c(id="date_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp))
+           attrs = c(id="date_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp,class='legend'))
 newXMLNode("text", parent = leg_id, newXMLTextNode(' '),
-           attrs = c(id="elev_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = supply_col))
+           attrs = c(id="elev_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = supply_col,class='legend'))
 newXMLNode("text", parent = leg_id, newXMLTextNode(' '),
-           attrs = c(id="model_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = '#000000'))
+           attrs = c(id="model_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = '#000000',class='legend'))
 #------
 
 x <- as.numeric(strftime(as.POSIXct(meadData$Timestep), format = "%j"))/365+
@@ -104,7 +104,7 @@ newXMLNode('rect',parent = g_id, attrs = c(id='ddddd',x = x[is.most][1], y = fig
                                                       fill='grey', opacity='0.2', stroke='none'))
 
 y_offset <- fig$px_lim$y[1]-40
-x_offset <- c(x[is.most][1] -4, x[is.most][1] + 14)
+x_offset <- c(x[is.most][1] -4, x[is.most][1] + 18)
 
 newXMLNode("text", parent = g_id, newXMLTextNode('Historical'),
            attrs = c(id="Historical-marker", 
