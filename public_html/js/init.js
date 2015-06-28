@@ -28,9 +28,12 @@ $( document ).ready( function () {
 				duration: sceneItem.duration
 			} )
 			.triggerHook( sceneItem.triggerHook || 0 )
-			.offset( sceneItem.offset )
 			.setPin( sceneItem.parentContainer )
 			.addIndicators();
+
+		if ( sceneItem.offset ) {
+			scene.offset( sceneItem.offset )
+		}
 
 		if ( sceneItem.hasOwnProperty( 'start' ) ) {
 			scene.on( "start", sceneItem.start );
@@ -38,6 +41,10 @@ $( document ).ready( function () {
 
 		if ( sceneItem.hasOwnProperty( 'end' ) ) {
 			scene.on( "end", sceneItem.end );
+		}
+
+		if ( sceneItem.hasOwnProperty( 'enter' ) ) {
+			scene.on( "enter", sceneItem.enter );
 		}
 
 		scene.name = sceneItem.name;
