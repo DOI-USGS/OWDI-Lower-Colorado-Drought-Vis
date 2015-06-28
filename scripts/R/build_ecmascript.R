@@ -136,7 +136,7 @@ animateIE(document.getElementById("mexico-reset"));
 animateIE(document.getElementById("Mexico-stroke-reset"));
 animateIE(document.getElementById("Mexico-scale-reset"));
 }
-function setMeadCondition(storage_id){
+function setMeadConditionDOM(storage_id){
 animateIE(document.getElementById("Mead-"+storage_id));
 }
 
