@@ -99,6 +99,8 @@ is.hist <- meadData$RunType == 99
 is.minP <- meadData$RunType == 1 # minimum probable run
 is.maxP <- meadData$RunType == 2 # maximum probable run
 
+prob_run_title <- meadData$Model[is.most][1] # - assuming these are all the same
+
 newXMLNode('rect',parent = g_id, attrs = c(id='ddddd',x = x[is.most][1], y = fig$px_lim$y[2], 
                                            width=fig$px_lim$x[2]-x[is.model][1], height=fig$px_lim$y[1]-fig$px_lim$y[2], 
                                                       fill='grey', opacity='0.2', stroke='none'))
@@ -136,8 +138,7 @@ for (i in 1:length(x)){
   
   
   if (is.model[i]){
-    elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s (ft)');", elev),
-                        "ChangeText(evt, 'model_text','*Projected');")
+    elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s (ft)');ChangeText(evt, 'model_text','*%s');", elev,prob_run_title))
   } else {
     elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s (ft)');", elev),
                         "ChangeText(evt, 'model_text',' ');")
