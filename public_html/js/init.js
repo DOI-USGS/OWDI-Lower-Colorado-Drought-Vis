@@ -118,6 +118,8 @@ $(document).ready(function() {
         var formFactor = 'desktop',
             resizeEvent,
             eventName = '';
+        
+        // Check that we may have moved on to a mobile form factor    
         if ($(e.currentTarget).width() <= magicWidth) {
             formFactor = 'mobile';
         }
