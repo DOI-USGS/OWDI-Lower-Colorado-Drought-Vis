@@ -7,7 +7,7 @@ build_state_pictos <- function(svg, scale=100000){
   # california - 44
   CA_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='California-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',opacity='0'))
-  y_start = 193
+  y_start = 183
   x_start = 112
   y = block_picto(CA_id,x=x_start,y=y_start,number=3)
   y = block_picto(CA_id,x=x_start,y=y,number=3)
@@ -23,7 +23,7 @@ build_state_pictos <- function(svg, scale=100000){
   # nevada - 3
   NV_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='Nevada-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',opacity='0'))
-  y_start = 112
+  y_start = 102
   x_start = 157
   y = block_picto(NV_id,x=x_start,y=y_start,number=1)
   block_picto(NV_id,x=x_start-14,y=y,number=1)
@@ -49,7 +49,7 @@ build_state_pictos <- function(svg, scale=100000){
   AR_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='Arizona-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',opacity='0'))
   x_start = 199
-  y_start = 208
+  y_start = 198
   y = block_picto(AR_id,x=x_start,y=y_start,number=4)
   y = block_picto(AR_id,x=x_start,y=y,number=6)
   y = block_picto(AR_id,x=x_start,y=y,number=6)
@@ -60,7 +60,7 @@ build_state_pictos <- function(svg, scale=100000){
   MX_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='Mexico-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',opacity='0'))
   x_start = 70
-  y_start = 264
+  y_start = 254
   y = block_picto(MX_id,x=x_start+28,y=y_start,number=6)
   y = block_picto(MX_id,x=x_start,y=y,number=5)
   y = block_picto(MX_id,x=x_start,y=y,number=4)
