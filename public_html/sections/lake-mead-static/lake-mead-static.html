@@ -1,0 +1,33 @@
+<div class="widget">
+	<div class="sectionContent">
+    	<p>Projected water elevation for Lakes Mead and Powell determine when water shortages are severe enough to reduce water delivery to some states. The elevations are naturally dynamic through time, but are decreasing as a result of the current drought and steady use. 
+</p>
+		<p>Projections made by the Bureau of Reclamation take into account many of the factors that affect water levels, including upper Colorado River Basin snowpack, precipitation, and projected use. 
+</p>
+
+        <button class="supportinginfo spacer" id="section15Button">Supporting Info</button>
+        
+        <div class="supportingInfoContent" id="section15Info">
+        	<p>
+            Link out to all of the info that goes into the 24 month study. 
+Integral working relationship between data suppliers NWS and USGS?
+			</p>
+        </div>
+        
+        <object id="mead-elev-object" data="{{baseUrl}}/img/mead_elev_projected.svg" type="image/svg+xml"></object>
+        <div class="graphCaption">
+            <p>Over time, the elevation of Lake Mead is dynamic, and tends to be higher in the winter than in the summer months. Projections of Lake Mead elevation are made by the Bureau of Reclamation 24-month study. The projections take into account temperature, snowpack, precipitation, consumptive use, and other factors. Projections for the next two years, shown in the grey box in the figure above, depict the projected elevation approaching a critical threshold of 1075 feet. Uncertainty around the projected elevation is shown by the blue envelop around the line.  </p>
+          
+        </div>
+    </div>
+    
+    
+</div>
+
+<script>
+	var button = $('#section15Button');
+	
+	button.click(function(){
+		$('#section15Info').toggle();
+		});
+</script>

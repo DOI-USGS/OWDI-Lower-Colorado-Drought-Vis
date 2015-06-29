@@ -8,16 +8,18 @@ if(!require(dinosvg)){
 
 library(XML)
 source('scripts/R/build_ecmascript.R')
+source('scripts/R/build_css.R')
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 
-svg_file <- 'public_html/img/flow_animation.svg'
+svg_file <- 'public_html/img/water-usage/flow_animation.svg'
 declaration <- '<?xml-stylesheet type="text/css" href="../css/main.css" ?>'
 
 data <- read.csv('src_data/NaturalFlow.csv', stringsAsFactors = F)
 flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
 years <- data$Year
 data <- read.table('src_data/Basin_Depletion_yearly_PROVISIONAL.tsv', stringsAsFactors = F, sep = '\t', header = T)
-usage <- c(data$depletion/1000,NA,NA) #into millions acre-feet units
+# will add stuff here to either fill usage w/NAs, or trim to have same supply and use be the same length
+usage <- c(rep(NA,8),data$depletion/1000,NA,NA) #into millions acre-feet units
 
 
 # --- pixel dims ---
@@ -50,6 +52,7 @@ svg_nd <- newXMLNode('svg',
                      namespace = c("http://www.w3.org/2000/svg", xlink="http://www.w3.org/1999/xlink"), 
                      attrs = c(version = '1.1', onload="init(evt)", preserveAspectRatio="xMinYMin meet", viewBox=sprintf("0 0 %1.0f %1.0f",fig$w, fig$h)))
 
+add_css(svg_nd, text = css_usage_supply())
 add_ecmascript(svg_nd, text = ecmascript_supply_usage())
 g_id <- newXMLNode('g', parent = svg_nd, attrs = c(id="surface0"))
 
@@ -57,7 +60,7 @@ a_id <- newXMLNode('g', parent = g_id, attrs = c('id' = "axes", opacity = '0'))
 dinosvg:::animate_attribute(a_id, attr_name = "opacity", 
                             begin = "indefinite", id = "visibleAxes", 
                             fill = 'freeze', dur = '1s', from = "0", to = "1")
-add_axes(a_id, axes, fig)
+dinosvg::add_axes(a_id, axes, fig)
 
 #-- legend --
 leg_id <- newXMLNode("g", 'parent' = g_id,
@@ -163,5 +166,9 @@ for (i in 1:length(x)){
 root_nd <- xmlRoot(g_id)
 
 saveXML(root_nd, file = svg_file)
-cat('\n',declaration, file = svg_file, append = TRUE)
+svg <- xmlParse(svg_file, useInternalNode=TRUE) %>%
+  toString.XMLNode()
+lines <- strsplit(svg,'[\n]')[[1]]
+cat(paste(c(lines[1], declaration, lines[-1]),collapse = '\n'), file = svg_file, append = FALSE)
+
 

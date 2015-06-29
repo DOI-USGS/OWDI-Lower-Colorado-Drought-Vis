@@ -1,323 +1,323 @@
 @charset "UTF-8";
 /* CSS Document */
-nav{
-	height:28px;
-	background:#003366;
-	color:#fff;
-	padding:2px 5px;
-	}
-	
-nav h3{color:#fff;}
 
-/*=====SVG CSS=====*/
+nav {
+	height: 28px;
+	background: #003366;
+	color: #fff;
+	padding: 2px 5px;
+}
 
-text{
-	font-size: 1.5em;
-   	cursor: default;
-    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    }
-.legend{
-	font-size: 16px;
-   	cursor: default;
-    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    }
-.dater{
-    font-size: 21px;
-    }
-.tooltip{
-    font-size: 12px;
-    }
-.caption{
-    font-size: 12px;
-    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    }
-
+nav h3 {
+	color: #fff;
+}
 /*=====Container CSS=====*/
+
 .container {
-	margin:0 0 100px 0;
+	margin: 0 0 100px 0;
 	padding: 15px;
-	text-align:center;
-	}
-	
+	text-align: center;
+}
 
+#container1 {
+	background-image: url('../img/keynotes/welcome-mobile.jpg');
+	background-position: center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+}
 
-#container1{
-	background-image:url('../img/keynotes/welcome-mobile.jpg');
+#container2 {
+	background-image: url('../img/keynotes/keynote2-mobile.jpg');
 	background-position: center center;
-	background-size:cover;
+	background-size: cover;
 	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-	background-repeat:no-repeat;
-	height:100%;
-	width:100%;
-	padding:0;
-	}
-	
-#container2{
-	background-image:url('../img/keynotes/keynote2-mobile.jpg');
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+#container4 {
+	background-image: url('../img/keynotes/keynote3-mobile.jpg');
 	background-position: center center;
-	background-size:cover;
+	background-size: cover;
 	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-	background-repeat:no-repeat;
-	height:100%;
-	}
-	
-#container4{
-	background-image:url('../img/keynotes/keynote3-mobile.jpg');
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+#container6 {
+	background-image: url('../img/keynotes/keynote4-mobile.jpg');
 	background-position: center center;
-	background-size:cover;
+	background-size: cover;
 	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-	background-repeat:no-repeat;
-	height:100%;
-	}
-	
-#container6{
-	background-image:url('../img/keynotes/keynote4-mobile.jpg');
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+#container7 {
+	margin-bottom: 0px;
+}
+
+#container8 {
+	background-image: url('../img/keynotes/keynote5-mobile.jpg');
 	background-position: center center;
-	background-size:cover;
+	background-size: cover;
 	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-	background-repeat:no-repeat;
-	height:100%;
-	}
-	
-#container8{
-	background-image:url('../img/keynotes/keynote5-mobile.jpg');
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+#container10 {
+	background-image: url('../img/keynotes/keynote6-mobile.jpg');
 	background-position: center center;
-	background-size:cover;
+	background-size: cover;
 	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-	background-repeat:no-repeat;
-	height:100%;
-	}
-	
-#container10{
-	background-image:url('../img/keynotes/keynote6-mobile.jpg');
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	margin-bottom: 50px;
+}
+
+#container11 {
+	margin-bottom: 20px;
+}
+
+#container12 {
+	background-image: url('../img/keynotes/keynote7-mobile.jpg');
 	background-position: center center;
-	background-size:cover;
+	background-position: center center;
+	background-size: cover;
 	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-	background-repeat:no-repeat;
-	height:100%;
-	}
-	
-#container11{
-	margin-bottom:20px;
-	}
-	
-#container12{
-	background-image:url('../img/keynotes/keynote7-mobile.jpg');
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+#container14 {
+	background-image: url('../img/keynotes/keynote8-mobile.jpg');
 	background-position: center center;
 	background-position: center center;
-	background-size:cover;
+	background-size: cover;
 	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-	background-repeat:no-repeat;
-	height:100%;
-	}
-	
-#container14{
-	background-image:url('../img/keynotes/keynote8-mobile.jpg');
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+#container16 {
+	background-image: url('../img/keynotes/keynote8-mobile.jpg');
 	background-position: center center;
 	background-position: center center;
-	background-size:cover;
+	background-size: cover;
 	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-	background-repeat:no-repeat;
-	height:100%;
-	}
-	
-#container16{
-	background-image:url('../img/keynotes/keynote8-mobile.jpg');
-	background-position: center center;
-	background-position: center center;
-	background-size:cover;
-	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-	background-repeat:no-repeat;
-	height:100%;
-	}
-	
-/*=====keynote css=====*/	
-.keynote{
-	color:#fff;
-	width:100%;
-	min-height:100px;
-	margin:auto;
-	position:absolute;
-	top:25%;bottom:0;left:0;right:0;
-	}
-	
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	margin-bottom: 4200px;
+}
+/*=====keynote css=====*/
+
+.keynote {
+	color: #fff;
+	width: 100%;
+	min-height: 100px;
+	margin: auto;
+	position: absolute;
+	top: 25%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
 .keynote h1,
-.keynote h2{
-	font-weight:100;
-	color:#fff;
-	padding:10px;
-	font-weight:300;
-	}
-	
-.keynote h1{
-	font-size:6vw;
-	}
-	
-.keynote h2{
-	font-size:6vw;
-	}
-	
+.keynote h2 {
+	font-weight: 100;
+	color: #fff;
+	padding: 10px;
+	font-weight: 300;
+}
+
+.keynote h1 {
+	font-size: 6vw;
+}
+
+.keynote h2 {
+	font-size: 6vw;
+}
 /*=====Container Content CSS=====*/
 
-.section{
-	position:relative;
-	height:100%;
-	}
-	
-.sectionContent{
-	min-height:100px;
-	text-align:center;
-	margin-bottom:30px;
-	}
-	
+.section {
+	position: relative;
+	height: 100%;
+}
+
+.sectionContent {
+	min-height: 100px;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
 .sectionContent h3,
 .sectionContent p,
-.sectionContent li{
-	text-align:left;
-	}
-	
-.sectionContent h3{
-	color:#003366;
-	font-weight:100;
-	font-size:1.4em;
-	text-align:center;
-	margin-bottom:10px;
-	}
-	
-.sectionContent p{
-	margin-bottom:10px;
-	}
-	
+.sectionContent li {
+	text-align: left;
+}
+
+.sectionContent h3 {
+	color: #003366;
+	font-weight: 100;
+	font-size: 1.4em;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.sectionContent p {
+	margin-bottom: 10px;
+	line-height: 1.8em;
+	margin-bottom: 20px;
+}
+
 .sectionContent p,
-.sectionContent ul{
-	font-weight:300;
-	}
-	
-.sectionContent ul{
-	list-style:disc;
-	margin:0 0 10px 20px;
-	}
-	
-.sectionContent ul li{
-	margin-bottom:5px;
-	}
-	
+.sectionContent ul {
+	font-weight: 300;
+}
+
+.sectionContent ul {
+	list-style: disc;
+	margin: 0 0 10px 20px;
+}
+
+.sectionContent ul li {
+	margin-bottom: 5px;
+}
 /*Supporting Info Buttons CSS*/
-	
+
 .supportinginfo,
-.interact{
-	background:none;
-	color:#003366;
-	font-weight:bold;
-	padding:10px;
-	border:1px solid #003366;
-	border-radius:5px;
-	margin-top:20px;
-	outline:none;
-	}
-	
-.spacer{
-	margin-bottom:100px;
-	}
-	
-.white{
-	border:1px solid #fff;
-	color:#fff;
-	}
-	
+.interact {
+	background: none;
+	color: #003366;
+	font-weight: bold;
+	padding: 10px;
+	border: 1px solid #003366;
+	border-radius: 5px;
+	margin-top: 20px;
+	outline: none;
+}
+
+.spacer {
+	margin-bottom: 20px;
+}
+
 .supportinginfo:hover,
 .supportinginfo:focus,
 .interact:hover,
-.interact:focus{
-	background:#003366;
-	color:#fff;
-	}
-	
-.white:hover,
-.white:focus{
-	background:#fff;
-	color:#003366;
-	}
-	
+.interact:focus {
+	background: #003366;
+	color: #fff;
+}
 /*Supporting Info Content CSS*/
-.supportingInfoContent{
-	background:rgba(0,51,102,.2);
-	display:none;
-	padding:15px;
-	color:#000;
-	margin:-50px 0 40px 0;
-	border-radius:5px;
-	}
-	
+
+.supportingInfoContent {
+	background: rgba(0, 51, 102, .2);
+	display: none;
+	padding: 15px;
+	color: #000;
+	margin: -50px 0 40px 0;
+	border-radius: 5px;
+}
+
+.supportingInfoContent p {
+	margin-bottom: 10px;
+	line-height: 1.5em;
+}
 /*Section 5 CSS*/
-	
-#blueDragon img{
-		width:100%;
-		height:auto;
-		margin-bottom:5px;
-		}
-		
-#blueDragon img:first-child{
-	margin-top:10px;
-	}
-		
-.picDescription{
+
+#blueDragon img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 5px;
+}
+
+#blueDragon img:first-child {
+	margin-top: 10px;
+}
+
+.picDescription,
+.graphCaption{
 	background:rgba(0,51,102,.2);
 	width:100%;
 	min-height:100px;
+	margin:20px 0 10px 0;
+	padding:10px;
+	border-radius:5px;
+	text-align:left;
+	}
+	
+.graphCaption p{
 	margin-bottom:10px;
 	}
 	
 /*Section 9 CSS*/
-#JrGraph h2{
-	font-size:1em;
+
+#JrGraph h2 {
+	font-size: 1em;
+}
+/*Section 16 CSS*/
+
+#meadSVGContainer h2 {
+	color: #fff;
+	margin-bottom: 30px;
+	;
+}
+
+.cd-image-container {
+	margin-top: 25px;
+}
+
+.SVGInfo {
+		background: rgba(0, 51, 102, .3);
+		width: auto;
+		min-height: 100px;
+		padding: 10px;
+		margin: 0 auto;
+		color: #fff;
+		text-align: left;
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		border-radius: 5px;
+		line-height: 1.7em;
+		display: none;
 	}
 
-/*Section 16 CSS*/	
-#meadSVGContainer h2{
-	color:#fff;
-	margin-bottom:30px;;
+@media screen and (min-width: 687px) {
+	nav {
+		margin-top: 1px;
+		padding: 1px 5px;
+		height: 28px;
 	}
+	/*======Container CSS======*/
 	
-.cd-image-container{
-	margin-top:25px;
+	.container {
+		padding: 50px;
 	}
-	
-.SVGInfo{
-	display:none;
-	}
-	
-@media screen and (min-width:687px){
-	
-	nav{
-		margin-top:1px;
-		padding:1px 5px;
-		height:28px;
-		}
-		
-/*======Container CSS======*/
-	.container{
-		padding:50px;
-		}
-		
 	#container1,
 	#container2,
 	#container4,
@@ -325,156 +325,127 @@ text{
 	#container8,
 	#container10,
 	#container12,
-	#container14{
+	#container14 {
 		-webkit-background-size: cover;
 		background-attachment: fixed;
-		}
-		
-	#container1{
-		background-image:url('../img/keynotes/welcome.jpg');
-		}
-		
-	#container2{
-		background-image:url('../img/keynotes/keynote2.jpg');
-		}
-		
-	#container4{
-		background-image:url('../img/keynotes/keynote3.jpg');
-		}
-		
-	#container6{
-		background-image:url('../img/keynotes/keynote4.jpg');
-		}
-		
-	#container8{
-		background-image:url('../img/keynotes/keynote5.jpg');
-		}
-		
-	#container10{
-		background-image:url('../img/keynotes/keynote6.jpg');
-		}
-		
-	#container12{
-		background-image:url('../img/keynotes/keynote7.jpg');
-		}
-		
-	#container14{
-		background-image:url('../img/keynotes/keynote8.jpg');
-		}
-/*======keynote CSS======*/
-	.keynote{
-		top:35%;
 	}
+	#container1 {
+		background-image: url('../img/keynotes/welcome.jpg');
+	}
+	#container2 {
+		background-image: url('../img/keynotes/keynote2.jpg');
+	}
+	#container4 {
+		background-image: url('../img/keynotes/keynote3.jpg');
+	}
+	#container6 {
+		background-image: url('../img/keynotes/keynote4.jpg');
+	}
+	#container8 {
+		background-image: url('../img/keynotes/keynote5.jpg');
+	}
+	#container10 {
+		background-image: url('../img/keynotes/keynote6.jpg');
+	}
+	#container12 {
+		background-image: url('../img/keynotes/keynote7.jpg');
+	}
+	#container14 {
+		background-image: url('../img/keynotes/keynote8.jpg');
+	}
+	/*======keynote CSS======*/
 	
-	
+	.keynote {
+		top: 35%;
+	}
 	.keynote h1,
-	.keynote h2{
-		font-weight:100;
-		}
+	.keynote h2 {
+		font-weight: 100;
+	}
+	.keynote h1 {
+		font-size: 5vw;
+		margin-bottom: 5px;
+	}
+	.keynote h2 {
+		font-size: 4vw;
+	}
+	#keynote2 h2 {
+		margin-top: 100px;
+	}
+	/*======Content CSS======*/
 	
-	.keynote h1{
-		font-size:5vw;
-		margin-bottom:5px;
+	.sectionContent {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.spacer {
+		margin-bottom: 100px;
+	}
+	/*Section 5 CSS*/
+	
+	#blueDragon img {
+		margin-bottom: 10px;
+	}
+	.picDescription {
+		display: none;
+	}
+	/*Section 9 CSS*/
+	
+	#JrGraph h2 {
+		font-size: 1.5em;
+	}
+	text {
+		font-size: 1em !important;
 	}
 	
-	.keynote h2{
-		font-size:4vw;
+	/*Section 16 CSS*/
+	.SVGInfo {
+		width: 480px;
 	}
-	
-	#keynote2 h2{
-		margin-top:100px;
-		}
-/*======Content CSS======*/
-
-	.sectionContent{
-		width:90%;
-		margin:0 auto;
-		}
-		
-/*Section 5 CSS*/
-		
-	#blueDragon img{
-		margin-bottom:10px;
-		}
-		
-	.picDescription{
-		display:none;
+	#meadSVGContainer object {
+		margin-left: 0%;
 	}
-	
-/*Section 9 CSS*/
-	
-	#JrGraph h2{
-		font-size:1.5em;
+	#natural-flow-graph {
+		width: 80%;
+		height: 600px;
 	}
-	
-	text{
-	font-size: 1em;
-    }
-	
-/*Section 16 CSS*/
-	
-	.SVGInfo{
-		background:rgba(0,51,102,.3);
-		width:480px;
-		min-height:100px;
-		padding:10px;
-		margin:0 auto;
-		color:#fff;
-		text-align:left;
-		position:absolute;
-		bottom:10px;
-		right:10px;
-		border-radius:5px;
-		line-height:1.7em;
-		display:none;
-	}
-	
-	#meadSVGContainer object{
-		margin-left:0%;
-	}
-	
 }
 
-@media screen and (min-width:1025px){
+@media screen and (min-width: 1025px) {
+	/*Keynote CSS*/
 	
-/*Keynote CSS*/
-	.keynote{
-		width:980px;
-		}
-	
-	.keynote h1{
-		font-size:3vw;
+	.keynote {
+		width: 980px;
 	}
-	
-	.keynote h2{
-		font-size:2vw;
+	.keynote h1 {
+		font-size: 2em;
 	}
-/*Section Content CSS*/
-	.sectionContent{
-		width:900px;
-		}
-		
-	.sectionContent h3{
-		font-size:1.6em;
-		}
-/*Section 5 CSS*/	
-	#blueDragon img{
-		width:900px;
-		}
-/*Section 9 CSS*/	
-	#JrGraph{
-		width:1024px;
-		margin:0 auto;
-		}
-/*Section 16 CSS*/	
-	#meadSVGContainer{
-		width:760px;
-		margin:0 auto;
-		}
-	
+	.keynote h2 {
+		font-size: 2em;
 	}
-
-
-
-
-
+	/*Section Content CSS*/
+	
+	.sectionContent {
+		width: 900px;
+	}
+	.sectionContent h3 {
+		font-size: 1.6em;
+	}
+	/*Section 5 CSS*/
+	
+	#blueDragon img {
+		width: 900px;
+	}
+	/*Section 9 CSS*/
+	
+	#JrGraph {
+		width: 1024px;
+		margin: 0 auto;
+	}
+	/*Section 16 CSS*/
+	
+	#meadSVGContainer {
+		width: 760px;
+		margin: 0 auto;
+	}
+}
