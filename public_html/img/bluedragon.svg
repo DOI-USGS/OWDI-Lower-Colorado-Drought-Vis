@@ -2968,32 +2968,41 @@
 	</g>
 	
 </g>
-<g>
-	
-	<clipPath id="zoom-view-clip">
-	         <use xlink:href = "#zoom-view-box">
-	 		 	<animateMotion dur="4s" fill="freeze">
-	 		    	<mpath xlink:href="#Mead-path"/>
-	 		    </animateMotion>
-			 </use>
-	       </clipPath>
-	   </g>
-<image xlink:href="bluedragon-static.png" x="-1500" y="100" height="2400px" width="2400px" clip-path="url(#zoom-view-clip)"> <!-- clip-path="url(#zoom-view-box)" -->
-	 <animateMotion dur="4s" fill="freeze">
-	            <mpath xlink:href="#Mead-opposite"/>
-	         </animateMotion>
-		 </image>
-<rect x='40' y='40' width='350' height='350' id='zoom-view-box' stroke-width='2' fill='none' stroke = 'black'/>
-<path fill='none' stroke='grey' d="m 0 0 L0 50 L-50 150 l45 300" id="Mead-path"/>
-<path fill='none' stroke='grey' d="m 0 0 L0 -50 L50 -150 l-45 -300" id="Mead-opposite"/>
 
- <g>
-	 <rect id='river-view-box' x="-40" y="-40" width="80" height="80" stroke-width='2' fill='none' stroke = 'black'>
-		 <animateMotion dur="4s" fill="freeze">
-		            <mpath xlink:href="#river-path"/>
-		         </animateMotion>
-			 </rect>
-     <path fill='none' d="m 478.77653,28.210986 c 0,0 -34.95631,29.962547 -39.32584,42.446941 -4.36954,12.484395 -3.1211,28.089883 -1.87266,32.459423 1.24844,4.36954 1.24844,8.11486 6.86641,10.61174 5.61798,2.49688 11.23596,3.74532 11.23596,3.74532 0,0 3.1211,3.74531 1.87266,7.49063 -1.24844,3.74532 4.36954,13.10862 4.36954,13.10862 0,0 4.36954,4.99376 9.36329,8.11485 4.99376,3.1211 11.23596,13.73284 10.61174,16.22972 -0.62422,2.49688 -6.2422,14.98127 -6.2422,14.98127" id="river-path"/>
+<path fill="none" stroke='grey' d="m 0 0 L0 50 L-50 150 l45 300" id="Mead-path"/>
+<path fill="none" stroke='grey' d="m 0 0 L0 -50 L50 -150 l-45 -300" id="Mead-opposite"/>
+<path fill="none" stroke='grey' d="m "/>
+<g>
+	<clipPath id="zoom-view-clip">
+		<use xlink:href = "#zoom-view-box">
+			<animateMotion dur="4s" fill="freeze">
+				<mpath xlink:href="#Mead-path"/>
+			</animateMotion>
+		</use>
+	</clipPath>
+	<clipPath id="zoom-view-clip">
+		<use xlink:href = "#zoom-view-box">
+			<animateMotion dur="4s" fill="freeze">
+				<mpath xlink:href="#Mead-path"/>
+			</animateMotion>
+		</use>
+	</clipPath>
+</g>
+<image xlink:href="bluedragon-static.png" x="-1500" y="100" height="2400px" width="2400px" clip-path="url(#zoom-view-clip)"> <!-- clip-path="url(#zoom-view-box)" -->
+	<animateMotion dur="4s" fill="freeze">
+		<mpath xlink:href="#Mead-opposite"/>
+	</animateMotion>
+</image>
+<rect x='40' y='40' width='350' height='350' id='zoom-view-box' stroke-width='2' fill='none' stroke = 'black'/>
+
+
+<g>
+	<rect id='river-view-box' x="-40" y="-40" width="80" height="80" stroke-width='2' fill='none' stroke = 'black'>
+		<animateMotion dur="4s" fill="freeze">
+			<mpath xlink:href="#river-path"/>
+		</animateMotion>
+	</rect>
+	<path fill='none' d="m 478.77653,28.210986 c 0,0 -34.95631,29.962547 -39.32584,42.446941 -4.36954,12.484395 -3.1211,28.089883 -1.87266,32.459423 1.24844,4.36954 1.24844,8.11486 6.86641,10.61174 5.61798,2.49688 11.23596,3.74532 11.23596,3.74532 0,0 3.1211,3.74531 1.87266,7.49063 -1.24844,3.74532 4.36954,13.10862 4.36954,13.10862 0,0 4.36954,4.99376 9.36329,8.11485 4.99376,3.1211 11.23596,13.73284 10.61174,16.22972 -0.62422,2.49688 -6.2422,14.98127 -6.2422,14.98127" id="river-path"/>
 </g>
 
 </svg>
