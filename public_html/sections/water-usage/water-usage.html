@@ -24,7 +24,9 @@
 </script>
 <script>
   (function() {
-    var triggered = false;
+    var triggered = false,
+    parentContainer = "#container9";
+    
     var animation = function() {
       animationSVG = document.getElementById('animated-object').getSVGDocument();
 
@@ -35,9 +37,10 @@
     }
 
     window.owdiDrought.addScene({
-      parentContainer: "#container9",
+      parentContainer: parentContainer,
       duration: 100,
-      enter: animation
+      enter: animation,
+      pin : parentContainer
     });
   })();
 
