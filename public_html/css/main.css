@@ -281,11 +281,18 @@ text{
 	margin-top:10px;
 	}
 		
-.picDescription{
+.picDescription,
+.graphCaption{
 	background:rgba(0,51,102,.2);
 	width:100%;
 	min-height:100px;
-	margin-bottom:10px;
+	margin:20px 0 10px 0;
+	padding:10px;
+	border-radius:5px;
+	}
+	
+.graphCaption p{
+	margin-bottom:0;
 	}
 	
 /*Section 9 CSS*/
