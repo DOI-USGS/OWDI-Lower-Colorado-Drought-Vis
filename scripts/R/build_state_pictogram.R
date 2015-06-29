@@ -27,16 +27,23 @@ build_state_pictos <- function(svg, scale=100000){
   x_start = 157
   y = block_picto(NV_id,x=x_start,y=y_start,number=1)
   block_picto(NV_id,x=x_start-14,y=y,number=1)
-  NV_shr_id <- newXMLNode('g', parent=NV_id,
+  block_picto(NV_id,x=x_start,y=y,number=1,'fill'='none')
+  NV_nrm <- newXMLNode('g', parent=NV_id,
                       attrs = c('id'='Nevada-pictos-normal'))
   # -- full bucket, then partials
-  block_picto(NV_shr_id,x=x_start,y=y,number=1,'fill'='none')
-  block_picto(NV_shr_id,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = 50,'stroke'='none')
+  block_picto(NV_nrm,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
   
-#   NV_normal <- newXMLNode('g', parent=NV_id,
-#                           attrs = c('id'='Nevada-pictos-normal','fill'='none'))
-#   block_picto(NV_shr_id,x=x_start,y=y,rx='0',ry='0',number=1)
+  NV_srt <- newXMLNode('g', parent=NV_id,
+                          attrs = c('id'='Nevada-pictos-shortage1'))
+  block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-13000/scale)*100,'stroke'='none')
   
+  NV_srt <- newXMLNode('g', parent=NV_id,
+                         attrs = c('id'='Nevada-pictos-shortage2'))
+  block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-17000/scale)*100,'stroke'='none')
+  NV_srt <- newXMLNode('g', parent=NV_id,
+                       attrs = c('id'='Nevada-pictos-shortage3'))
+  block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-20000/scale)*100,'stroke'='none')
+
   
   # arizona - 28
   AR_id <- newXMLNode('g', parent=root_nd,

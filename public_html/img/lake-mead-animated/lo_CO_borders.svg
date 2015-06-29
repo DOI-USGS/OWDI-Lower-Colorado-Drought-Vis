@@ -24,6 +24,10 @@ svgDocument.removePictogram = this.removePictogram;
 svgDocument.moveStates = this.moveStates;
 svgDocument.highlightUser = this.highlightUser;
 svgDocument.setMeadCondition = this.setMeadCondition;
+svgDocument.setAllocationsNormal = this.setAllocationsNormal;
+svgDocument.setAllocationsShortage1 = this.setAllocationsShortage1;
+svgDocument.setAllocationsShortage2 = this.setAllocationsShortage2;
+svgDocument.setAllocationsShortage3 = this.setAllocationsShortage3;
 svgDocument.drawStatePicto = this.drawStatePicto;
 svgDocument.removeStatePicto = this.drawStatePicto;
 svgDocument.resetStates = this.resetStates;}
@@ -78,6 +82,23 @@ function drawStatePicto(user_id){
 document.getElementById("draw-"+user_id+"-pictogram").beginElement();}
 function removeStatePicto(user_id){
 document.getElementById("remove-"+user_id+"-pictogram").beginElement();}
+function setAllocationsNormal(){
+	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","visible");
+}
+function setAllocationsShortage1(){
+	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");
+	document.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","visible");
+}
+function setAllocationsShortage2(){
+	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");
+	document.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","hidden");
+	document.getElementById("Nevada-pictos-shortage2").setAttribute("visibility","visible");
+}
+function setAllocationsShortage3(){
+	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");
+	document.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","hidden");
+	document.getElementById("Nevada-pictos-shortage2").setAttribute("visibility","hidden");
+}
 function setMeadCondition(storage_id){
 document.getElementById("Mead-"+storage_id).beginElement();}
 function showRiverDOM(){
@@ -479,9 +500,18 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
   <g id="Nevada-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
     <rect x="159" y="130" width="10" height="10" rx="2" ry="2"/>
     <rect x="145" y="116" width="10" height="10" rx="2" ry="2"/>
+    <rect x="159" y="116" width="10" height="10" rx="2" ry="2" fill="none"/>
     <g id="Nevada-pictos-normal">
-      <rect x="159" y="116" width="10" height="10" rx="2" ry="2" fill="none"/>
-      <rect x="159" y="121" width="10" height="5" rx="0" ry="0" stroke="none"/>
+      <rect x="159" y="116" width="10" height="10" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="Nevada-pictos-shortage1">
+      <rect x="159" y="117.3" width="10" height="8.7" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="Nevada-pictos-shortage2">
+      <rect x="159" y="117.7" width="10" height="8.3" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="Nevada-pictos-shortage3">
+      <rect x="159" y="118" width="10" height="8" rx="0" ry="0" stroke="none"/>
     </g>
     <animate attributeName="opacity" id="draw-nevada-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
     <animate attributeName="opacity" id="remove-nevada-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>

@@ -244,6 +244,7 @@
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, function() {
                   owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('normal-fall');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsNormal();
                 });
               } else {
                 $section.fadeOut(fadeSpeed, function() {
@@ -259,10 +260,12 @@
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, function() {
                   owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-1-fall');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsShortage1();
                 });
               } else {
                 $section.fadeOut(fadeSpeed, function() {
                   owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('normal-rise');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsNormal();
                 });
               }
             }
@@ -274,10 +277,12 @@
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, function() {
                   owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-2-fall');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsShortage2();
                 });
               } else {
                 $section.fadeOut(fadeSpeed, function() {
                   owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-1-rise');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsShortage1();
                 });
               }
             }
@@ -290,10 +295,12 @@
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, function() {
                   owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-3-fall');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsShortage3();
                 });
               } else {
                 $section.fadeOut(fadeSpeed, function() {
                   owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-2-rise');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsShortage2();
                 });
               }
             }
