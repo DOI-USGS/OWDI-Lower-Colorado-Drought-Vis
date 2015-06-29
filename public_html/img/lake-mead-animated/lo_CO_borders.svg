@@ -2,10 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet" onload="init(evt)" viewBox="0 0 540 547" version="1.1">
   <g id="delete_group"/>
   <rect width="540" height="547" fill="grey" opacity="0.2" stroke="black" stroke-width="2"/>
-  <style type="text/css"><![CDATA[
-	text {
-            	font-size: 1em !important;
-          }]]></style>
+  <style type="text/css"><![CDATA[]]></style>
   <script type="text/ecmascript"><![CDATA[function init(evt){
 if ( window.svgDocument == null ) {
 svgDocument = evt.target.ownerDocument;
@@ -81,7 +78,7 @@ document.getElementById("remove-"+user_id+"-pictogram").beginElement();}
 function setMeadCondition(storage_id){
 document.getElementById("Mead-"+storage_id).beginElement();}
 function showRiverDOM(){
-	animateIE(document.getElementById("show-river"));
+  animateIE(document.getElementById("show-river"));
 }
 function drawRiverDOM(){
 animateIE(document.getElementById("colorado-river-draw"));
