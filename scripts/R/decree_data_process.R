@@ -12,9 +12,9 @@ dat<-read.csv("src_data//LBDecreeAccounting//DecreeData.csv",
 five_yr <- dat %>%
   filter(Year>2008)%>%
   filter(Variable=="ConsumptiveUse")%>%
-  group_by(Year,WaterUser)%>%
+  group_by(Year,WaterUser,ContractorID)%>%
   summarise(Value=sum(Value))%>%
-  group_by(WaterUser)%>%
+  group_by(WaterUser,ContractorID)%>%
   summarise(LastFiveMean=mean(Value))%>%
   filter(WaterUser!="NEVADA TOTALS" & 
          WaterUser!="ARIZONA TOTALS" &
