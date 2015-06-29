@@ -9,29 +9,6 @@ nav{
 	
 nav h3{color:#fff;}
 
-/*=====SVG CSS=====*/
-
-text{
-	font-size: 1.5em;
-   	cursor: default;
-    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    }
-.legend{
-	font-size: 16px;
-   	cursor: default;
-    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    }
-.dater{
-    font-size: 21px;
-    }
-.tooltip{
-    font-size: 12px;
-    }
-.caption{
-    font-size: 12px;
-    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    }
-
 /*=====Container CSS=====*/
 .container {
 	margin:0 0 100px 0;
@@ -87,6 +64,10 @@ text{
 	height:100%;
 	}
 	
+#container7{
+	margin-bottom:0px;
+	}
+	
 #container8{
 	background-image:url('../img/keynotes/keynote5-mobile.jpg');
 	background-position: center center;
@@ -107,6 +88,7 @@ text{
     -o-background-size: cover;
 	background-repeat:no-repeat;
 	height:100%;
+	margin-bottom:50px;
 	}
 	
 #container11{
@@ -147,6 +129,7 @@ text{
     -o-background-size: cover;
 	background-repeat:no-repeat;
 	height:100%;
+	margin-bottom:4200px;
 	}
 	
 /*=====keynote css=====*/	
@@ -185,7 +168,7 @@ text{
 .sectionContent{
 	min-height:100px;
 	text-align:center;
-	margin-bottom:30px;
+	margin-bottom:100px;
 	}
 	
 .sectionContent h3,
@@ -204,6 +187,8 @@ text{
 	
 .sectionContent p{
 	margin-bottom:10px;
+	line-height:1.8em;
+	margin-bottom:20px;
 	}
 	
 .sectionContent p,
@@ -235,7 +220,7 @@ text{
 	}
 	
 .spacer{
-	margin-bottom:100px;
+	margin-bottom:20px;
 	}
 	
 .supportinginfo:hover,
@@ -256,6 +241,11 @@ text{
 	border-radius:5px;
 	}
 	
+.supportingInfoContent p{
+	margin-bottom:10px;
+	line-height:1.5em;
+	}
+	
 /*Section 5 CSS*/
 	
 #blueDragon img{
@@ -268,11 +258,18 @@ text{
 	margin-top:10px;
 	}
 		
-.picDescription{
+.picDescription,
+.graphCaption{
 	background:rgba(0,51,102,.2);
 	width:100%;
 	min-height:100px;
-	margin-bottom:10px;
+	margin:20px 0 10px 0;
+	padding:10px;
+	border-radius:5px;
+	}
+	
+.graphCaption p{
+	margin-bottom:0;
 	}
 	
 /*Section 9 CSS*/
@@ -379,6 +376,10 @@ text{
 		width:90%;
 		margin:0 auto;
 		}
+		
+	.spacer{
+		margin-bottom:100px;
+	}
 		
 /*Section 5 CSS*/
 		

@@ -1,23 +1,34 @@
 <div class="widget">
-
-    <h2>The Blue Dragon Rawr</h2>
 	
+	<h2>The Blue Dragon Rawr</h2>
 	<div id="blueDragon">
 		<object id="bluedragon-object" data="img/bluedragon.svg" type="image/svg+xml"></object>
 	</div>
-    
-    <button class="interact spacer">Interact Here</button>
-    
-<!--	<div class="sectionContent">
-    	<p>
-            Since 2000, the upper Colorado River basin has experienced the 15 driest years in the > 100 year historical record (Bureau of Reclamation), and one of the most severe droughts in the last 1200 years (Meko et al. 2007). 
-        </p>
-        <p>
-            90% of total basin water supply comes from upper Colorado River
-        </p>
-            
-        <button class="supportinginfo spacer">Supporting Info</button>
-    </div>
-       
-  <div id="natural-flow-graph"></div>-->
+	<button class="interact spacer">Interact Here</button>
+	<div class="sectionContent">
+		<p> Since 2000, the upper Colorado River basin has experienced the 15 driest years in the > 100 year historical record (Bureau of Reclamation), and one of the most severe droughts in the last 1200 years (Meko et al. 2007). </p>
+		<p> 90% of total basin water supply comes from upper Colorado River </p>
+		<button class="supportinginfo spacer" id="section5Button">Supporting Info</button>
+		
+		<div class="supportingInfoContent" id="section5Info">
+			<p> [Need BoR citations for ‘15 driest years in the >100 year historical record’ and ‘90% of total basin water supply comes from upper Colorado River basin’] </p>
+			<p> Meko, D.M., et al. 2007.Upper Colorado River Flow Reconstruction. IGBP PAGES/World Data Center for Paleoclimatology. Data Contribution Series # 2007-052. NOAA/NCDC Paleoclimatology Program, Boulder CO, USA. </p>
+			<p> Meko, D.M., C.A. Woodhouse, C.H. Baisan, T. Knight, J.J. Lukas, M.K. Hughes, and M.W. Salzer. 2007. Medieval drought in the upper Colorado River Basin. Geophysical Research Letters, Vol. 34, L10705, 24 May 2007. </p>
+		</div>
+		<div id="natural-flow-graph"></div>
+		<div class="graphCaption">
+			<p>Historical, natural flow at Lee’s Ferry, Arizona shows how streamflow decreases in response to drought. The plot above, the Bureau of Reclamation used USGS streamgage data to estimate the flow that would occur without human activities, also known as natural flow, at Lee’s Ferry. Lee’s Ferry is one of the uppermost observed stream gage locations in the Lower Colorado River Basin and is used as a proxy for water entering the Lower Basin via the Colorado River.  Also shown is a tree-ring reconstruction of streamflow going back ~1200 years, estimated by Meko et al. (2012). Because trees grow less during drought, tree ring cores can be used to estimate the historical streamflow conditions going back many centuries. Tree ring samples were collected from many locations in the basin to estimate historical, natural flow; and were validated using observed streamflow data.
+</p>
+		</div>
+	</div>
+	
 </div>
+
+<script>
+  var button = $('#section5Button');
+
+  button.click(function() {
+    $('#section5Info').toggle();
+  });
+
+</script>
