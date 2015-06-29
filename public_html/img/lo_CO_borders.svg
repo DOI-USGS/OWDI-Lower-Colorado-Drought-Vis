@@ -2,8 +2,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet" onload="init(evt)" viewBox="0 0 540 547" version="1.1">
   <g id="delete_group"/>
   <rect width="540" height="547" fill="grey" opacity="0.2" stroke="black" stroke-width="2"/>
-  <style type="text/css"><![CDATA[text {
-            font-size: 1em !important;
+  <style type="text/css"><![CDATA[
+	text {
+            	font-size: 1em !important;
           }]]></style>
   <script type="text/ecmascript"><![CDATA[function init(evt){
 if ( window.svgDocument == null ) {
@@ -244,96 +245,159 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
       <path d="M 535 20 L 535 450 L 400 450 L 280 20" stroke="none"/>
     </clipPath>
   </defs>
-  <defs>
-    <pattern id="empty-picto-pattern" width="14" height="14" patternUnits="userSpaceOnUse">
-      <rect x="2" y="2" rx="2" ry="2" width="10" height="10" stroke="#0066CC" stroke-width="2" fill="none"/>
-    </pattern>
-    <pattern id="full-picto-pattern" width="14" height="14" patternUnits="userSpaceOnUse">
-      <rect x="2" y="2" rx="2" ry="2" width="10" height="10" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-    </pattern>
-  </defs>
   <g id="pictogram-topfive" fill="none" stroke-width="2.5" stroke="#FFFFFF" opacity="0">
     <g transform="translate(25.0,680.0)">
-      <path d="M-2.000000 -388.000000 l0 194.000000 l300.000000 0" id="picto-axes"/>
+      <path d="M-2.0 -388.0 l0 194.0 l300.0 0" id="picto-axes"/>
       <text id="x-pictogram-label" x="150" y="-182" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;">Water user contracts</text>
       <text id="y-pictogram-label" x="-15" y="-97" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;" transform="rotate(-90,-15,-97.5),translate(200,0)">Total water use</text>
     </g>
-    <g id="picto-usage-1">
-      <rect x="0" y="-392" width="14" height="196" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="0" y="-379.0891" width="14" height="183.0891" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <animate attributeName="opacity" id="pictogram-1-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+    <g id="picto-usage-parent-1" transform="translate(25.0,486.0)">
+      <g id="picto-usage-1">
+        <rect x="2" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-42" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-56" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-70" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-84" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-98" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-112" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-126" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-140" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-154" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-168" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-182" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-186.081" width="10" height="0.0810000000000066" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="2" y="-196" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <animate attributeName="opacity" id="pictogram-1-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+      </g>
+      <rect x="2" y="-196" width="10" height="192" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-2">
-      <rect x="14" y="-238" width="14" height="42" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="14" y="-233.58" width="14" height="37.58" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <animate attributeName="opacity" id="pictogram-2-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+    <g id="picto-usage-parent-2" transform="translate(25.0,486.0)">
+      <g id="picto-usage-2">
+        <rect x="16" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="16" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="16" y="-39.8" width="10" height="7.8" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="16" y="-42" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <animate attributeName="opacity" id="pictogram-2-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+      </g>
+      <rect x="16" y="-42" width="10" height="38" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-3">
-      <rect x="28" y="-224" width="14" height="28" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="28" y="-218.9277" width="14" height="22.9277" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <animate attributeName="opacity" id="pictogram-3-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+    <g id="picto-usage-parent-3" transform="translate(25.0,486.0)">
+      <g id="picto-usage-3">
+        <rect x="30" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="30" y="-25.207" width="10" height="7.207" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="30" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <animate attributeName="opacity" id="pictogram-3-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+      </g>
+      <rect x="30" y="-28" width="10" height="24" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-4">
-      <rect x="42" y="-224" width="14" height="28" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="42" y="-215.56709" width="14" height="19.56709" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <animate attributeName="opacity" id="pictogram-4-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+    <g id="picto-usage-parent-4" transform="translate(25.0,486.0)">
+      <g id="picto-usage-4">
+        <rect x="44" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="44" y="-22.1519" width="10" height="4.1519" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="44" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <animate attributeName="opacity" id="pictogram-4-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+      </g>
+      <rect x="44" y="-28" width="10" height="24" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-5">
-      <rect x="56" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="56" y="-204.40058" width="14" height="8.40058" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <animate attributeName="opacity" id="pictogram-5-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+    <g id="picto-usage-parent-5" transform="translate(25.0,486.0)">
+      <g id="picto-usage-5">
+        <rect x="58" y="-10.7278" width="10" height="6.7278" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="58" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <animate attributeName="opacity" id="pictogram-5-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+      </g>
+      <rect x="58" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-6">
-      <rect x="70" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="70" y="-202.33742" width="14" height="6.33742" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-6" transform="translate(25.0,486.0)">
+      <g id="picto-usage-6">
+        <rect x="72" y="-8.8522" width="10" height="4.8522" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="72" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="72" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-7">
-      <rect x="84" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="84" y="-201.53233" width="14" height="5.53233" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-7" transform="translate(25.0,486.0)">
+      <g id="picto-usage-7">
+        <rect x="86" y="-8.1203" width="10" height="4.1203" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="86" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="86" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-8">
-      <rect x="98" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="98" y="-201.11389" width="14" height="5.11389" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-8" transform="translate(25.0,486.0)">
+      <g id="picto-usage-8">
+        <rect x="100" y="-7.7399" width="10" height="3.7399" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="100" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="100" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-9">
-      <rect x="112" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="112" y="-199.53" width="14" height="3.53" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-9" transform="translate(25.0,486.0)">
+      <g id="picto-usage-9">
+        <rect x="114" y="-6.3" width="10" height="2.3" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="114" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="114" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-10">
-      <rect x="126" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="126" y="-198.84723" width="14" height="2.84723" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-10" transform="translate(25.0,486.0)">
+      <g id="picto-usage-10">
+        <rect x="128" y="-5.6793" width="10" height="1.6793" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="128" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="128" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-11">
-      <rect x="140" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="140" y="-197.46761" width="14" height="1.46761" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-11" transform="translate(25.0,486.0)">
+      <g id="picto-usage-11">
+        <rect x="142" y="-4.4251" width="10" height="0.4251" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="142" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="142" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-12">
-      <rect x="154" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="154" y="-197.4411" width="14" height="1.4411" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-12" transform="translate(25.0,486.0)">
+      <g id="picto-usage-12">
+        <rect x="156" y="-4.401" width="10" height="0.401" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="156" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="156" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-13">
-      <rect x="168" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="168" y="-197.16258" width="14" height="1.16258" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-13" transform="translate(25.0,486.0)">
+      <g id="picto-usage-13">
+        <rect x="170" y="-4.1478" width="10" height="0.1478" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="170" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="170" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-14">
-      <rect x="182" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="182" y="-197.1045" width="14" height="1.1045" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-14" transform="translate(25.0,486.0)">
+      <g id="picto-usage-14">
+        <rect x="184" y="-4.095" width="10" height="0.0949999999999995" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="184" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="184" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-15">
-      <rect x="196" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="196" y="-197.1045" width="14" height="1.1045" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-15" transform="translate(25.0,486.0)">
+      <g id="picto-usage-15">
+        <rect x="198" y="-4.095" width="10" height="0.0949999999999995" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="198" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="198" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-16">
-      <rect x="210" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="210" y="-197.044" width="14" height="1.044" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-16" transform="translate(25.0,486.0)">
+      <g id="picto-usage-16">
+        <rect x="212" y="-4.04" width="10" height="0.04" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="212" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="212" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-17">
-      <rect x="224" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="224" y="-197.033" width="14" height="1.033" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-17" transform="translate(25.0,486.0)">
+      <g id="picto-usage-17">
+        <rect x="226" y="-4.03" width="10" height="0.03" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="226" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="226" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
-    <g id="picto-usage-18">
-      <rect x="238" y="-210" width="14" height="14" style="stroke:none;fill:url(#empty-picto-pattern);" transform="translate(25.0,680.0)"/>
-      <rect x="238" y="-197.00275" width="14" height="1.00275" style="stroke:none;fill:url(#full-picto-pattern);" transform="translate(25.0,680.0)"/>
+    <g id="picto-usage-parent-18" transform="translate(25.0,486.0)">
+      <g id="picto-usage-18">
+        <rect x="240" y="-4.0025" width="10" height="0.00249999999999972" rx="0" ry="0" stroke="none" fill="#0066CC"/>
+        <rect x="240" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+      </g>
+      <rect x="240" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <animate attributeName="opacity" id="pictogram-topfive-draw" begin="indefinite" fill="freeze" dur="1s" values="0;1"/>
     <animate attributeName="opacity" id="pictogram-topfive-reset" begin="indefinite" fill="freeze" dur="1s" to="0"/>

@@ -1,7 +1,7 @@
 css_mead_map <- function(){
   
-  text <- 'text {
-            font-size: 1em !important;
+  text <- '\n\ttext {
+            \tfont-size: 1em !important;
           }'
   return(text)
 }
