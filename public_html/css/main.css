@@ -9,29 +9,6 @@ nav{
 	
 nav h3{color:#fff;}
 
-/*=====SVG CSS=====*/
-
-text{
-	font-size: 1.5em;
-   	cursor: default;
-    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    }
-.legend{
-	font-size: 16px;
-   	cursor: default;
-    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    }
-.dater{
-    font-size: 21px;
-    }
-.tooltip{
-    font-size: 12px;
-    }
-.caption{
-    font-size: 12px;
-    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    }
-
 /*=====Container CSS=====*/
 .container {
 	margin:0 0 100px 0;
@@ -289,10 +266,11 @@ text{
 	margin:20px 0 10px 0;
 	padding:10px;
 	border-radius:5px;
+	text-align:left;
 	}
 	
 .graphCaption p{
-	margin-bottom:0;
+	margin-bottom:10px;
 	}
 	
 /*Section 9 CSS*/
