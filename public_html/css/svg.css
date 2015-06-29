@@ -1,0 +1,22 @@
+/*=====SVG CSS=====*/
+
+text{
+	font-size: 1.5em;
+   	cursor: default;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    }
+.legend{
+	font-size: 16px;
+   	cursor: default;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    }
+.dater{
+    font-size: 21px;
+    }
+.tooltip{
+    font-size: 12px;
+    }
+.caption{
+    font-size: 12px;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    }
