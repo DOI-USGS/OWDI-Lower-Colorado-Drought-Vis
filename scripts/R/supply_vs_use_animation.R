@@ -166,5 +166,9 @@ for (i in 1:length(x)){
 root_nd <- xmlRoot(g_id)
 
 saveXML(root_nd, file = svg_file)
-cat('\n',declaration, file = svg_file, append = TRUE)
+svg <- xmlParse(svg_file, useInternalNode=TRUE) %>%
+  toString.XMLNode()
+lines <- strsplit(svg,'[\n]')[[1]]
+cat(paste(c(lines[1], declaration, lines[-1]),collapse = '\n'), file = svg_file, append = FALSE)
+
 

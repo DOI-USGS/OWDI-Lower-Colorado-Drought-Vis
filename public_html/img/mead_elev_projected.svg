@@ -1,3 +1,5 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="../css/main.css" ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio="xMinYMin meet" viewBox="0 0 900 600">
   <style type="text/css"><![CDATA[text {
             font-size: 1em !important;
@@ -256,4 +258,4 @@ function setMobile(){
     <rect id="2017-09-30" x="844.79" y="10" width="7.00" height="480" fill-opacity="0.0" onmousemove="ChangeText(evt, 'date_text','2017-09-30');ChangeText(evt, 'elev_text','Elevation: 1033.9 (ft)');ChangeText(evt, 'model_text','*June Most Probable');" onmouseover="highlightEle(evt,'0.1')" onmouseout="highlightEle(evt,'0.0')"/>
   </g>
 </svg>
- <?xml-stylesheet type="text/css" href="../css/main.css" ?>
+ 

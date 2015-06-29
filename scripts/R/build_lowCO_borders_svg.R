@@ -208,4 +208,5 @@ svg <- clean_svg_doc(svg) %>%
   add_animation(attr = 'opacity', parent_id="Nevada-pictos", id = 'remove-nevada-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   toString.XMLNode()
 
-cat(c(svg, declaration), file = svg_file, append = FALSE)
+lines <- strsplit(svg,'[\n]')[[1]]
+cat(paste(c(lines[1], declaration, lines[-1]),collapse = '\n'), file = svg_file, append = FALSE)
