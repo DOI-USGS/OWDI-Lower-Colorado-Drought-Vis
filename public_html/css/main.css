@@ -266,10 +266,11 @@ nav h3{color:#fff;}
 	margin:20px 0 10px 0;
 	padding:10px;
 	border-radius:5px;
+	text-align:left;
 	}
 	
 .graphCaption p{
-	margin-bottom:0;
+	margin-bottom:10px;
 	}
 	
 /*Section 9 CSS*/
