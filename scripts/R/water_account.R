@@ -60,6 +60,11 @@ row.names(sorted_df)<- row.names(cont.union)
 cont.diss <- SpatialPolygonsDataFrame(cont.union, data = sorted_df)
 writeOGR(cont.diss,"src_data//LCContractSvcAreas","LC_Contracts_diss", driver = "ESRI Shapefile", overwrite_layer = T)
 
+#remove nonwater parts of lake mead shapefile
+mead = readOGR(dsn = "src_data//lake_mead", layer="lakebnds")
+meadclean <- mead[substr(mead$BNDTYPE,1,5) == "water", ]
+writeOGR(meadclean,"src_data//lake_mead","meadwater", driver = "ESRI Shapefile", overwrite_layer = T)
+
 
 ################################################################################
 #rstudio/leaflet implementation
