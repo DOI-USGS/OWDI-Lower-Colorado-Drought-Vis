@@ -55,7 +55,7 @@ library(maptools)
 wat_use_con<-readOGR("src_data//LCContractSvcAreas","LC_Contracts_subset")
 cont.union<-unionSpatialPolygons(wat_use_con,IDs = paste(wat_use_con$Contractor))
 df <- as(wat_use_con, "data.frame")[!duplicated(wat_use_con$Contractor),(1:2)]
-row.names(df) <- paste(df$OBJECTID_1, df$Contractor, sep ="")
+row.names(df)<- row.names(cont.union)
 cont.diss <- SpatialPolygonsDataFrame(cont.union, data = df)
 writeOGR(cont.diss,"src_data//LCContractSvcAreas","LC_Contracts_diss", driver = "ESRI Shapefile", overwrite_layer = T)
 
