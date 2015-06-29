@@ -2978,7 +2978,7 @@
 			 </use>
 	       </clipPath>
 	   </g>
-<image xlink:href="jw-bluedragon.png" x="-1500" y="100" height="2400px" width="2400px" clip-path="url(#zoom-view-clip)"> <!-- clip-path="url(#zoom-view-box)" -->
+<image xlink:href="bluedragon-static.png" x="-1500" y="100" height="2400px" width="2400px" clip-path="url(#zoom-view-clip)"> <!-- clip-path="url(#zoom-view-box)" -->
 	 <animateMotion dur="4s" fill="freeze">
 	            <mpath xlink:href="#Mead-opposite"/>
 	         </animateMotion>

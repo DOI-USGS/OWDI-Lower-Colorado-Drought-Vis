@@ -4,6 +4,8 @@
 #' @import XML
 usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_styles){
   
+  picto_lw <- '1.5'
+  
   root_nd <- xmlRoot(svg)
   
   y_axis_location <- 680
@@ -41,7 +43,7 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
     for (j in seq_len(num_full-1)){
       newXMLNode('rect',parent=g_picto,
                  attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=bin_full, 
-                         rx='2',ry='2','stroke'='#0066CC','stroke-width'='2','fill'='#0066CC'))
+                         rx='2',ry='2','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC'))
     }
     j = num_full
     # -- partial fill --
@@ -51,7 +53,7 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
     # -- full bucket outline --
     newXMLNode('rect',parent=g_picto,
                attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=bin_full, 
-                       rx='2',ry='2','stroke'='#0066CC','stroke-width'='2','fill'='none'))
+                       rx='2',ry='2','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='none'))
     # -- add clear mouseover rect on top --
     newXMLNode('rect',parent=g_pict_par,
                attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=(bin_full+bin_buffer)*j+bin_full-(bin_full+bin_buffer), 
