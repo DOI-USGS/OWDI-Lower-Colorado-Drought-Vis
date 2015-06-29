@@ -253,49 +253,49 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </g>
     <g id="picto-usage-parent-1" transform="translate(25.0,486.0)">
       <g id="picto-usage-1">
-        <rect x="2" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="2" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="2" y="-42" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="2" y="-56" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="2" y="-70" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="2" y="-84" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="2" y="-98" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="2" y="-112" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="2" y="-126" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="2" y="-140" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="2" y="-154" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="2" y="-168" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="2" y="-182" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="2" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="2" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="2" y="-42" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="2" y="-56" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="2" y="-70" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="2" y="-84" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="2" y="-98" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="2" y="-112" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="2" y="-126" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="2" y="-140" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="2" y="-154" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="2" y="-168" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="2" y="-182" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
         <rect x="2" y="-186.081" width="10" height="0.0810000000000066" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="2" y="-196" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="2" y="-196" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
         <animate attributeName="opacity" id="pictogram-1-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
       </g>
       <rect x="2" y="-196" width="10" height="192" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-2" transform="translate(25.0,486.0)">
       <g id="picto-usage-2">
-        <rect x="16" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
-        <rect x="16" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="16" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
+        <rect x="16" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
         <rect x="16" y="-39.8" width="10" height="7.8" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="16" y="-42" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="16" y="-42" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
         <animate attributeName="opacity" id="pictogram-2-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
       </g>
       <rect x="16" y="-42" width="10" height="38" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-3" transform="translate(25.0,486.0)">
       <g id="picto-usage-3">
-        <rect x="30" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="30" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
         <rect x="30" y="-25.207" width="10" height="7.207" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="30" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="30" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
         <animate attributeName="opacity" id="pictogram-3-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
       </g>
       <rect x="30" y="-28" width="10" height="24" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-4" transform="translate(25.0,486.0)">
       <g id="picto-usage-4">
-        <rect x="44" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="#0066CC"/>
+        <rect x="44" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
         <rect x="44" y="-22.1519" width="10" height="4.1519" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="44" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="44" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
         <animate attributeName="opacity" id="pictogram-4-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
       </g>
       <rect x="44" y="-28" width="10" height="24" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
@@ -303,7 +303,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <g id="picto-usage-parent-5" transform="translate(25.0,486.0)">
       <g id="picto-usage-5">
         <rect x="58" y="-10.7278" width="10" height="6.7278" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="58" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="58" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
         <animate attributeName="opacity" id="pictogram-5-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
       </g>
       <rect x="58" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
@@ -311,91 +311,91 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <g id="picto-usage-parent-6" transform="translate(25.0,486.0)">
       <g id="picto-usage-6">
         <rect x="72" y="-8.8522" width="10" height="4.8522" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="72" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="72" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="72" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-7" transform="translate(25.0,486.0)">
       <g id="picto-usage-7">
         <rect x="86" y="-8.1203" width="10" height="4.1203" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="86" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="86" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="86" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-8" transform="translate(25.0,486.0)">
       <g id="picto-usage-8">
         <rect x="100" y="-7.7399" width="10" height="3.7399" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="100" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="100" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="100" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-9" transform="translate(25.0,486.0)">
       <g id="picto-usage-9">
         <rect x="114" y="-6.3" width="10" height="2.3" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="114" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="114" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="114" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-10" transform="translate(25.0,486.0)">
       <g id="picto-usage-10">
         <rect x="128" y="-5.6793" width="10" height="1.6793" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="128" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="128" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="128" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-11" transform="translate(25.0,486.0)">
       <g id="picto-usage-11">
         <rect x="142" y="-4.4251" width="10" height="0.4251" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="142" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="142" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="142" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-12" transform="translate(25.0,486.0)">
       <g id="picto-usage-12">
         <rect x="156" y="-4.401" width="10" height="0.401" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="156" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="156" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="156" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-13" transform="translate(25.0,486.0)">
       <g id="picto-usage-13">
         <rect x="170" y="-4.1478" width="10" height="0.1478" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="170" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="170" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="170" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-14" transform="translate(25.0,486.0)">
       <g id="picto-usage-14">
         <rect x="184" y="-4.095" width="10" height="0.0949999999999995" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="184" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="184" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="184" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-15" transform="translate(25.0,486.0)">
       <g id="picto-usage-15">
         <rect x="198" y="-4.095" width="10" height="0.0949999999999995" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="198" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="198" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="198" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-16" transform="translate(25.0,486.0)">
       <g id="picto-usage-16">
         <rect x="212" y="-4.04" width="10" height="0.04" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="212" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="212" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="212" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-17" transform="translate(25.0,486.0)">
       <g id="picto-usage-17">
         <rect x="226" y="-4.03" width="10" height="0.03" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="226" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="226" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="226" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
     <g id="picto-usage-parent-18" transform="translate(25.0,486.0)">
       <g id="picto-usage-18">
         <rect x="240" y="-4.0025" width="10" height="0.00249999999999972" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="240" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="2" fill="none"/>
+        <rect x="240" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
       </g>
       <rect x="240" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
     </g>
@@ -421,6 +421,104 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <path id="Mead-2D-border" d="M 535 20 L 535 450 L 400 450 L 280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round"/>
     <animate attributeName="opacity" id="mead-draw" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
     <animate attributeName="opacity" id="mead-remove" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
+  </g>
+  <g id="California-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+    <rect x="114" y="201" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="201" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="201" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="187" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="187" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="187" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="173" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="173" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="173" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="173" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="173" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="145" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="145" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="145" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="145" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="145" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="145" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="131" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="131" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="131" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="131" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="131" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="131" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="117" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="117" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="117" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="117" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="117" width="10" height="10" rx="2" ry="2"/>
+    <rect x="30" y="103" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="103" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="103" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="103" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="103" width="10" height="10" rx="2" ry="2"/>
+    <rect x="30" y="89" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="89" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="89" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="89" width="10" height="10" rx="2" ry="2"/>
+  </g>
+  <g id="Nevada-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+    <rect x="159" y="120" width="10" height="10" rx="2" ry="2"/>
+    <rect x="145" y="106" width="10" height="10" rx="2" ry="2"/>
+    <rect x="159" y="106" width="10" height="10" rx="2" ry="2"/>
+  </g>
+  <g id="Arizona-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+    <rect x="201" y="216" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="216" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="216" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="216" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="202" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="202" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="202" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="202" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="202" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="202" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="188" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="188" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="188" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="188" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="188" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="188" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="174" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="174" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="174" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="174" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="174" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="174" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="160" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="160" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="160" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="160" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="160" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="160" width="10" height="10" rx="2" ry="2"/>
+  </g>
+  <g id="Mexico-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+    <rect x="100" y="272" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="272" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="272" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="272" width="10" height="10" rx="2" ry="2"/>
+    <rect x="156" y="272" width="10" height="10" rx="2" ry="2"/>
+    <rect x="170" y="272" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="258" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="258" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="258" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="258" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="258" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="244" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="244" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="244" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="244" width="10" height="10" rx="2" ry="2"/>
   </g>
 </svg>
   <?xml-stylesheet type="text/css" href="../css/main.css" ?>

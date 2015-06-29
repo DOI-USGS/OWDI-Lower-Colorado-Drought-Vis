@@ -5,6 +5,7 @@ library(magrittr)
 library(XML)
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 source('scripts/R/build_usage_pictogram.R')
+source('scripts/R/build_state_pictogram.R')
 source('scripts/R/build_ecmascript.R')
 source('scripts/R/build_css.R')
 source('scripts/R/build_mead_levels.R')
@@ -196,6 +197,7 @@ svg <- clean_svg_doc(svg) %>%
   add_animation(attr = 'stroke-width', parent_id="Mexico", id = 'Mexico-stroke-reset', begin="indefinite", fill="freeze", dur="1s", values= "4.55;2.5") %>% # to original stroke 
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale', begin="indefinite", type = 'scale', fill="freeze", from = '1', to="0.55", dur="1s") %>%
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale-reset', begin="indefinite", type = 'scale', fill="freeze", from="0.55", to="1", dur="1s") %>%
+  build_state_pictos() %>%
   toString.XMLNode()
 
 cat(c(svg, declaration), file = svg_file, append = FALSE)
