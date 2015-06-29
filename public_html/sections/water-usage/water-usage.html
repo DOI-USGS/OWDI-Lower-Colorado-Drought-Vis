@@ -1,7 +1,6 @@
 <div class="widget">
   <div class="sectionContent">
-    <p>Since the early 1900’s, water use in the Colorado River basin has increased while water supply is, on average, decreasing. The storage capacity available on the Colorado River system has allowed us to meet water demands during this sustained, 15 year
-      drought. However, water use during the drought has exceeded supplies into the system, drawing down the stored reserves. </p>
+    <p>Since the early 1900’s, water use in the Colorado River basin has increased while water supply is, on average, decreasing. The storage capacity available on the Colorado River system has allowed us to meet water demands during this sustained, 15 year drought. However, water use during the drought has exceeded supplies into the system, drawing down the stored reserves. </p>
     <button class="supportinginfo spacer" id="section9Button">Supporting Info</button>
     <div class="supportingInfoContent" id="section9Info">
       <p>
@@ -10,46 +9,42 @@
     </div>
   </div>
   <div id="JrGraph">
-    <h2 id="jrsGraph">Water supply and consumptive use<sup>1</sup> in the Colorado River Basin</h2>
-    <object id="animated-object" data="img/flow_animation.svg" type="image/svg+xml"></object>
+    <h2 id="jrsGraph">Water supply and consumptive use in the Colorado River Basin</h2>
+    <object id="animated-object" data="img/water-usage/flow_animation.svg" type="image/svg+xml"></object>
     <div class="graphCaption">
-        <p>Trends in water supply and water used from the Colorado River. When water use exceeds the water supplied, water reserves are reduced. Over the past 30 years, average water supply and average water use have been about the same- under these conditions, reservoirs are much slower to be replenished. Water supply and use data above are estimated by the Bureau of Reclamation using water accounting information, USGS streamgage data, and other sources. </p>
-        <p>
-        
+      <p>Trends in water supply and water used from the Colorado River. When water use exceeds the water supplied, water reserves are reduced. Over the past 30 years, average water supply and average water use have been about the same- under these conditions, reservoirs are much slower to be replenished. Water supply and use data above are estimated by the Bureau of Reclamation using water accounting information, USGS streamgage data, and other sources. </p>
+      <p>
         1. Here, <strong> <em>water use</em> </strong> represents the sum of water withdrawn from the Colorado River and used for various purposes, as estimated by the Bureau of Reclamation. Although some water is withdrawn from the river and returned downstream, the red line above represents only water permanently removed from the Basin. Other methods of estimating use that account for withdrawals of surface and groundwater, and incorporate water that is used and returned to the stream, are made by the US Geological Survey.
-        </p>
+      </p>
     </div>
   </div>
 </div>
 <script>
-  var button = $('#section9Button');
+var button = $('#section9Button');
 
-  button.click(function() {
-    $('#section9Info').toggle();
-  });
+button.click(function() {
+  $('#section9Info').toggle();
+});
 
-</script>
-<script>
-  (function() {
-    var triggered = false,
+(function() {
+  var triggered = false,
     parentContainer = "#container9";
-    
-    var animation = function() {
-      animationSVG = document.getElementById('animated-object').getSVGDocument();
 
-      // Only call if SVG is loaded and has this function
-      if (animationSVG && animationSVG.visibleAxes) {
-        animationSVG.visibleAxes();
-      };
-    }
+  var animation = function() {
+    animationSVG = document.getElementById('animated-object').getSVGDocument();
 
-    window.owdiDrought.addScene({
-      parentContainer: parentContainer,
-      duration: 100,
-      enter: animation,
-      pin : parentContainer
-    });
-  })();
+    // Only call if SVG is loaded and has this function
+    if (animationSVG && animationSVG.visibleAxes) {
+      animationSVG.visibleAxes();
+    };
+  }
 
+  window.owdiDrought.addScene({
+    parentContainer: parentContainer,
+    duration: 100,
+    enter: animation,
+    pin: parentContainer
+  });
+})();
 </script>
 </div>
