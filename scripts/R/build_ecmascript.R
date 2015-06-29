@@ -17,6 +17,7 @@ ecmascript_mead_map <- function(){
                'svgDocument.removePictogram = this.removePictogram;',
                'svgDocument.moveStates = this.moveStates;',
                'svgDocument.highlightUser = this.highlightUser;',
+               'svgDocument.setMeadCondition = this.setMeadCondition;',
                'svgDocument.resetStates = this.resetStates;}',
                
                '}',
@@ -77,7 +78,83 @@ ecmascript_mead_map <- function(){
                'document.getElementById("user-"+user_id+"-draw").beginElement();}',
                
                'function setMeadCondition(storage_id){',
-               'document.getElementById("Mead-"+storage_id).beginElement();}'
+               'document.getElementById("Mead-"+storage_id).beginElement();}',
+               'function showRiverDOM(){
+	animateIE(document.getElementById("show-river"));
+}
+function drawRiverDOM(){
+animateIE(document.getElementById("colorado-river-draw"));
+}
+function resetRiverDOM(){
+animateIE(document.getElementById("colorado-river-reset"));
+animateIE(document.getElementById("reset-river"));
+}
+function drawBasinDOM(){
+animateIE(document.getElementById("colorado-basin-draw"));
+}
+function resetBasinDOM(){
+animateIE(document.getElementById("remove-basin"));
+}
+function drawPictogramDOM(){
+animateIE(document.getElementById("pictogram-topfive-draw"));
+}
+function resetPictogramDOM(){
+animateIE(document.getElementById("pictogram-topfive-reset"));
+}
+function removeGreyStatesDOM(){
+animateIE(document.getElementById("remove-grey-states"));
+}
+function resetGreyStatesDOM(){
+animateIE(document.getElementById("reset-grey-states"));
+}
+function removeRiverDOM(){
+animateIE(document.getElementById("remove-river"));
+animateIE(document.getElementById("remove-basin"));
+}
+function removePictogramDOM(){
+animateIE(document.getElementById("remove-pictogram"));
+}
+function highlightUserDOM(user_id){
+animateIE(document.getElementById("pictogram-"+user_id+"-draw"));
+animateIE(document.getElementById("user-"+user_id+"-draw"));
+}
+function moveStatesDOM(){
+animateIE(document.getElementById("California-move"));
+animateIE(document.getElementById("Nevada-move"));
+animateIE(document.getElementById("Arizona-move"));
+animateIE(document.getElementById("Nevada-move"));
+animateIE(document.getElementById("mexico-move"));
+animateIE(document.getElementById("Mexico-stroke"));
+animateIE(document.getElementById("Mexico-scale"));
+}
+function resetStatesDOM(){
+animateIE(document.getElementById("California-reset"));
+animateIE(document.getElementById("Nevada-reset"));
+animateIE(document.getElementById("Arizona-reset"));
+animateIE(document.getElementById("Nevada-reset"));
+animateIE(document.getElementById("mexico-reset"));
+animateIE(document.getElementById("Mexico-stroke-reset"));
+animateIE(document.getElementById("Mexico-scale-reset"));
+}
+function setMeadConditionDOM(storage_id){
+animateIE(document.getElementById("Mead-"+storage_id));
+}
+
+function animateIE(element) {
+if(element instanceof Element) {
+if(element.nodeName === "animate" || element.nodeName === "animateTransform") {
+var parent = element.parentNode;
+if(element.getAttribute("attributeName") === "transform") {
+var type = element.getAttribute("type");
+parent.setAttribute("transform", type.concat("(", element.getAttribute("to"), ")"));
+} else if(element.hasAttribute("to")) {
+parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute("to"));
+} else if(element.hasAttribute("values")){
+parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute("values").split(";")[1]);
+}
+}
+}
+}'
                )
   
   
@@ -97,6 +174,8 @@ ecmascript_supply_usage <- function(){
   }
   
   legend = svgDocument.getElementById("legend");
+  window.parent.addEventListener("form-factor-desktop", setDesktop, false);
+  window.parent.addEventListener("form-factor-mobile", setMobile, false);  
   }
   function legendViz(evt,elementname)
   {
@@ -142,7 +221,6 @@ ecmascript_supply_usage <- function(){
     var ele = document.getElementById("visibleAxes");
     ele.beginElement();
   }'
-  
 }
 
 ecmascript_mead_proj <- function(){
@@ -153,6 +231,8 @@ ecmascript_mead_proj <- function(){
                'svgDocument.setMobile = this.setMobile;',
                'svgDocument.setDesktop = this.setDesktop;}',
                '}',
+               'window.parent.addEventListener("form-factor-desktop", setDesktop, false);',
+               'window.parent.addEventListener("form-factor-mobile", setMobile, false);',
                "function ChangeText(evt, elementname, legendtext)
                {
                textelement = svgDocument.getElementById(elementname);                      
@@ -164,7 +244,7 @@ ecmascript_mead_proj <- function(){
                }',
                'function setMobile(){
                  svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
-                 svgDocument.getElementById("y-label").setAttribute("y","-10");       
+                 svgDocument.getElementById("y-label").setAttribute("y","-12");       
                }
                function setDesktop(){
                  svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     

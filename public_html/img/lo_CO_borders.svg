@@ -2,165 +2,152 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet" onload="init(evt)" viewBox="0 0 540 547" version="1.1">
   <g id="delete_group"/>
   <rect width="540" height="547" fill="grey" opacity="0.2" stroke="black" stroke-width="2"/>
+  <style type="text/css"><![CDATA[text {
+            font-size: 1em !important;
+          }]]></style>
   <script type="text/ecmascript"><![CDATA[function init(evt){
 if ( window.svgDocument == null ) {
-	svgDocument = evt.target.ownerDocument;
-	svgDocument.drawRiver = this.drawRiver;
-	svgDocument.showRiver = this.showRiver;
-	svgDocument.drawBasin = this.drawBasin;
-	svgDocument.drawMead = this.drawMead;
-	svgDocument.drawPictogram = this.drawPictogram;
-	svgDocument.removeGreyStates = this.removeGreyStates;
-	svgDocument.resetGreyStates = this.resetGreyStates;
-	svgDocument.removeRiver = this.removeRiver;
-	svgDocument.removeMead = this.removeMead;
-	svgDocument.resetRiver = this.resetRiver;
-	svgDocument.resetBasin = this.resetBasin;
-	svgDocument.removePictogram = this.removePictogram;
-	svgDocument.moveStates = this.moveStates;
-	svgDocument.highlightUser = this.highlightUser;
-	svgDocument.resetStates = this.resetStates;}
+svgDocument = evt.target.ownerDocument;
+svgDocument.drawRiver = this.drawRiver;
+svgDocument.showRiver = this.showRiver;
+svgDocument.drawBasin = this.drawBasin;
+svgDocument.drawMead = this.drawMead;
+svgDocument.drawPictogram = this.drawPictogram;
+svgDocument.removeGreyStates = this.removeGreyStates;
+svgDocument.resetGreyStates = this.resetGreyStates;
+svgDocument.removeRiver = this.removeRiver;
+svgDocument.removeMead = this.removeMead;
+svgDocument.resetRiver = this.resetRiver;
+svgDocument.resetBasin = this.resetBasin;
+svgDocument.removePictogram = this.removePictogram;
+svgDocument.moveStates = this.moveStates;
+svgDocument.highlightUser = this.highlightUser;
+svgDocument.setMeadCondition = this.setMeadCondition;
+svgDocument.resetStates = this.resetStates;}
 }
 function showRiver(){
-	document.getElementById("show-river").beginElement();
-}
+document.getElementById("show-river").beginElement();}
 function drawMead(){
-	document.getElementById("mead-draw").beginElement();
-}
+document.getElementById("mead-draw").beginElement();}
 function removeMead(){
-	document.getElementById("mead-remove").beginElement();
-}
+document.getElementById("mead-remove").beginElement();}
 function drawRiver(){
-	document.getElementById("colorado-river-draw").beginElement();
-}
+document.getElementById("colorado-river-draw").beginElement();}
 function resetRiver(){
-	document.getElementById("colorado-river-reset").beginElement();
-}
+document.getElementById("colorado-river-reset").beginElement();}
 function drawBasin(){
-	document.getElementById("colorado-basin-draw").beginElement();
-}
+document.getElementById("colorado-basin-draw").beginElement();}
 function resetBasin(){
-	document.getElementById("remove-basin").beginElement();
-}
+document.getElementById("remove-basin").beginElement();}
 function drawPictogram(){
-	document.getElementById("pictogram-topfive-draw").beginElement();
-}
+document.getElementById("pictogram-topfive-draw").beginElement();}
 function resetPictogram(){
-	document.getElementById("pictogram-topfive-reset").beginElement();
-}
+document.getElementById("pictogram-topfive-reset").beginElement();}
 function removeGreyStates(){
-	document.getElementById("remove-grey-states").beginElement();
-}
+document.getElementById("remove-grey-states").beginElement();}
 function resetGreyStates(){
-	document.getElementById("reset-grey-states").beginElement();
-}
+document.getElementById("reset-grey-states").beginElement();}
 function removeRiver(){
-	document.getElementById("remove-river").beginElement();
-	document.getElementById("remove-basin").beginElement();
-}
+document.getElementById("remove-river").beginElement();
+document.getElementById("remove-basin").beginElement();}
 function removePictogram(){
-	document.getElementById("remove-pictogram").beginElement();
-}
+document.getElementById("remove-pictogram").beginElement();}
 function moveStates(){
-	document.getElementById("California-move").beginElement();
-	document.getElementById("Nevada-move").beginElement();
-	document.getElementById("Arizona-move").beginElement();
-	document.getElementById("Nevada-move").beginElement();
-	document.getElementById("mexico-move").beginElement();
-	document.getElementById("Mexico-stroke").beginElement();
-	document.getElementById("Mexico-scale").beginElement();
-}
+document.getElementById("California-move").beginElement();
+document.getElementById("Nevada-move").beginElement();
+document.getElementById("Arizona-move").beginElement();
+document.getElementById("Nevada-move").beginElement();
+document.getElementById("mexico-move").beginElement();
+document.getElementById("Mexico-stroke").beginElement();
+document.getElementById("Mexico-scale").beginElement();}
 function resetStates(){
-	document.getElementById("California-reset").beginElement();
-	document.getElementById("Nevada-reset").beginElement();
-	document.getElementById("Arizona-reset").beginElement();
-	document.getElementById("Nevada-reset").beginElement();
-	document.getElementById("mexico-reset").beginElement();
-	document.getElementById("Mexico-stroke-reset").beginElement();
-	document.getElementById("Mexico-scale-reset").beginElement();
-}
+document.getElementById("California-reset").beginElement();
+document.getElementById("Nevada-reset").beginElement();
+document.getElementById("Arizona-reset").beginElement();
+document.getElementById("Nevada-reset").beginElement();
+document.getElementById("mexico-reset").beginElement();
+document.getElementById("Mexico-stroke-reset").beginElement();
+document.getElementById("Mexico-scale-reset").beginElement();}
 function highlightUser(user_id){
-	document.getElementById("pictogram-"+user_id+"-draw").beginElement();
-	document.getElementById("user-"+user_id+"-draw").beginElement();
-}
+document.getElementById("pictogram-"+user_id+"-draw").beginElement();
+document.getElementById("user-"+user_id+"-draw").beginElement();}
 function setMeadCondition(storage_id){
-	document.getElementById("Mead-"+storage_id).beginElement();
-}
+document.getElementById("Mead-"+storage_id).beginElement();}
 function showRiverDOM(){
 	animateIE(document.getElementById("show-river"));
 }
 function drawRiverDOM(){
-	animateIE(document.getElementById("colorado-river-draw"));
+animateIE(document.getElementById("colorado-river-draw"));
 }
 function resetRiverDOM(){
-	animateIE(document.getElementById("colorado-river-reset"));
-	animateIE(document.getElementById("reset-river"));
+animateIE(document.getElementById("colorado-river-reset"));
+animateIE(document.getElementById("reset-river"));
 }
 function drawBasinDOM(){
-	animateIE(document.getElementById("colorado-basin-draw"));
+animateIE(document.getElementById("colorado-basin-draw"));
 }
 function resetBasinDOM(){
-	animateIE(document.getElementById("remove-basin"));
+animateIE(document.getElementById("remove-basin"));
 }
 function drawPictogramDOM(){
-	animateIE(document.getElementById("pictogram-topfive-draw"));
+animateIE(document.getElementById("pictogram-topfive-draw"));
 }
 function resetPictogramDOM(){
-	animateIE(document.getElementById("pictogram-topfive-reset"));
+animateIE(document.getElementById("pictogram-topfive-reset"));
 }
 function removeGreyStatesDOM(){
-	animateIE(document.getElementById("remove-grey-states"));
+animateIE(document.getElementById("remove-grey-states"));
 }
 function resetGreyStatesDOM(){
-	animateIE(document.getElementById("reset-grey-states"));
+animateIE(document.getElementById("reset-grey-states"));
 }
 function removeRiverDOM(){
-	animateIE(document.getElementById("remove-river"));
-	animateIE(document.getElementById("remove-basin"));
+animateIE(document.getElementById("remove-river"));
+animateIE(document.getElementById("remove-basin"));
 }
 function removePictogramDOM(){
-	animateIE(document.getElementById("remove-pictogram"));
+animateIE(document.getElementById("remove-pictogram"));
 }
 function highlightUserDOM(user_id){
-	animateIE(document.getElementById("pictogram-"+user_id+"-draw"));
-	animateIE(document.getElementById("user-"+user_id+"-draw"));
+animateIE(document.getElementById("pictogram-"+user_id+"-draw"));
+animateIE(document.getElementById("user-"+user_id+"-draw"));
 }
 function moveStatesDOM(){
-	animateIE(document.getElementById("California-move"));
-	animateIE(document.getElementById("Nevada-move"));
-	animateIE(document.getElementById("Arizona-move"));
-	animateIE(document.getElementById("Nevada-move"));
-	animateIE(document.getElementById("mexico-move"));
-	animateIE(document.getElementById("Mexico-stroke"));
-	animateIE(document.getElementById("Mexico-scale"));
+animateIE(document.getElementById("California-move"));
+animateIE(document.getElementById("Nevada-move"));
+animateIE(document.getElementById("Arizona-move"));
+animateIE(document.getElementById("Nevada-move"));
+animateIE(document.getElementById("mexico-move"));
+animateIE(document.getElementById("Mexico-stroke"));
+animateIE(document.getElementById("Mexico-scale"));
 }
 function resetStatesDOM(){
-	animateIE(document.getElementById("California-reset"));
-	animateIE(document.getElementById("Nevada-reset"));
-	animateIE(document.getElementById("Arizona-reset"));
-	animateIE(document.getElementById("Nevada-reset"));
-	animateIE(document.getElementById("mexico-reset"));
-	animateIE(document.getElementById("Mexico-stroke-reset"));
-	animateIE(document.getElementById("Mexico-scale-reset"));
+animateIE(document.getElementById("California-reset"));
+animateIE(document.getElementById("Nevada-reset"));
+animateIE(document.getElementById("Arizona-reset"));
+animateIE(document.getElementById("Nevada-reset"));
+animateIE(document.getElementById("mexico-reset"));
+animateIE(document.getElementById("Mexico-stroke-reset"));
+animateIE(document.getElementById("Mexico-scale-reset"));
 }
-function setMeadCondition(storage_id){
-	animateIE(document.getElementById("Mead-"+storage_id));
+function setMeadConditionDOM(storage_id){
+animateIE(document.getElementById("Mead-"+storage_id));
 }
 
 function animateIE(element) {
-	if(element instanceof Element) {
-		if(element.nodeName === "animate" || element.nodeName === "animateTransform") {
-			var parent = element.parentNode;
-			if(element.getAttribute("attributeName") === "transform") {
-				var type = element.getAttribute("type");
-				parent.setAttribute("transform", type.concat("(", element.getAttribute("to"), ")"));
-			} else if(element.hasAttribute("to")) {
-				parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute("to"));
-			} else if(element.hasAttribute("values")){
-				parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute("values").split(";")[1]);
-			}
-		}
-	}
+if(element instanceof Element) {
+if(element.nodeName === "animate" || element.nodeName === "animateTransform") {
+var parent = element.parentNode;
+if(element.getAttribute("attributeName") === "transform") {
+var type = element.getAttribute("type");
+parent.setAttribute("transform", type.concat("(", element.getAttribute("to"), ")"));
+} else if(element.hasAttribute("to")) {
+parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute("to"));
+} else if(element.hasAttribute("values")){
+parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute("values").split(";")[1]);
+}
+}
+}
 }]]></script>
   <g id="non-lo-co-states" fill="none" stroke-width="1.5" stroke="#C0C0C0" mask="url(#non-lo-co-mask)">
     <path id="Texas" d="M 349.734375 258.054688 L 345.792969 256.492188 L 342.464844 251.296875 L 338.238281 249.746094 L 337.445312 246.375 L 337.894531 245.917969 L 401.585938 241.707031 L 397.269531 184.050781 L 393.847656 147.410156 L 445.074219 141.769531 L 450.246094 182.40625 L 451.320312 181.917969 L 456.144531 185.640625 L 457.628906 185.652344 L 458.335938 184.566406 L 460.972656 185.222656 L 461.558594 183.414062 L 464.648438 185.554688 L 465.480469 188.003906 L 468.644531 187.667969 L 472.671875 188.808594 L 475.277344 187.894531 L 478.691406 189.675781 L 480.160156 187.59375 L 483.355469 187.730469 L 484.273438 186.882812 L 485.195312 189.847656 L 487.03125 189.679688 L 487.691406 190.238281 L 487.40625 191.550781 L 487.867188 192.101562 L 489.746094 192.410156 L 492.554688 189.179688 L 493.859375 189.40625 L 494.492188 190.757812 L 496.484375 190.476562 L 496.863281 191.851562 L 497.660156 192.070312 L 498.457031 191.734375 L 499.125 190.234375 L 500.125 190.890625 L 500.910156 189.761719 L 501.871094 190.542969 L 501.226562 191.574219 L 502.496094 193.355469 L 503.582031 193.132812 L 503.398438 191.519531 L 504.011719 191.085938 L 503.359375 190.582031 L 504.707031 190.394531 L 504.730469 188.367188 L 505.703125 187.839844 L 507.230469 189.777344 L 508.324219 189.433594 L 509.308594 190.113281 L 510.234375 189.625 L 510.503906 188.160156 L 512.003906 188.308594 L 511.878906 189.480469 L 513.570312 189.8125 L 514.101562 190.546875 L 515.269531 190.144531 L 517.382812 191.695312 L 517.820312 190.074219 L 519.769531 189.855469 L 520.085938 188.699219 L 519.429688 189.0625 L 519.5625 188.59375 L 522.257812 187.839844 L 523.359375 186.667969 L 525.230469 187.433594 L 526.578125 186.992188 L 526.78125 185.828125 L 527.644531 185.871094 L 529.128906 184.546875 L 530.789062 185.101562 L 530.429688 185.617188 L 534.269531 185.304688 L 534.070312 184.769531 L 535.550781 184.347656 L 535.636719 183.027344 L 538.488281 183.5625 L 538.570312 184.203125 L 538.824219 183.523438 L 539.46875 184.53125 L 540.6875 184.332031 L 543.074219 186.480469 L 544.726562 186.121094 L 544.457031 186.585938 L 545.039062 186.417969 L 545.0625 187.050781 L 546.878906 187.074219 L 546.726562 187.675781 L 548.636719 187.21875 L 548.203125 187.652344 L 548.945312 187.390625 L 548.746094 187.996094 L 549.503906 187.699219 L 549.457031 188.191406 L 550.988281 187.585938 L 550.828125 188.316406 L 551.742188 188.832031 L 552.320312 188.371094 L 551.992188 189.078125 L 552.476562 189.269531 L 554.6875 187.902344 L 554.835938 188.554688 L 556.066406 187.628906 L 556.242188 188.183594 L 557.402344 187.605469 L 558.410156 188.042969 L 564.238281 221.3125 L 567.074219 223.023438 L 568.597656 224.792969 L 569.699219 226.59375 L 569.40625 229.308594 L 570.574219 230.351562 L 571.980469 230.398438 L 571.277344 231.289062 L 573.820312 233.3125 L 573.1875 234.765625 L 574.625 235.457031 L 575.28125 237.320312 L 576.457031 236.996094 L 576.691406 238.273438 L 576.199219 238.917969 L 577.398438 240.070312 L 576.375 240.816406 L 576.425781 241.617188 L 577.433594 242.332031 L 576.824219 243.527344 L 577.363281 244.710938 L 576.414062 246.6875 L 576.640625 247.949219 L 575.417969 249.183594 L 575.964844 250.019531 L 575.144531 250.386719 L 574.972656 251.335938 L 576.058594 253.417969 L 575.207031 255.503906 L 576.523438 256.535156 L 576.507812 258.230469 L 577.351562 259.675781 L 577.117188 261.644531 L 576.421875 262.960938 L 574.664062 263.582031 L 573.5 267.554688 L 576.179688 270.28125 L 571.875 270.984375 L 561.136719 277.941406 L 559.789062 279.65625 L 559.378906 279.296875 L 561.011719 277.039062 L 562.863281 275.488281 L 564.25 275.613281 L 564.710938 274.683594 L 563.980469 275.050781 L 562.867188 274.480469 L 558.820312 275.984375 L 559.953125 273.191406 L 559.753906 271.121094 L 558.96875 270.402344 L 557.328125 271.375 L 556.550781 273.492188 L 552.367188 271.164062 L 554.609375 273.539062 L 554.53125 276.179688 L 556.644531 277.148438 L 555.433594 278.203125 L 556.148438 278.003906 L 556.117188 278.890625 L 556.859375 278.871094 L 556.703125 278.289062 L 557.34375 279.25 L 558.851562 279.644531 L 557.355469 279.371094 L 557.492188 281.207031 L 556.457031 280.988281 L 554.710938 284.085938 L 552.933594 284.257812 L 553.113281 286.03125 L 552.539062 286.382812 L 551.976562 289.230469 L 544.574219 295.761719 L 544.714844 295.183594 L 539.898438 297.203125 L 539.742188 298.695312 L 544.238281 295.980469 L 535.417969 302.199219 L 539.152344 299.347656 L 539.136719 298.117188 L 534.597656 300.511719 L 534.496094 299.964844 L 535.988281 299.457031 L 534.363281 299.164062 L 535.671875 296.214844 L 534.746094 297.988281 L 533.429688 298.707031 L 533.585938 297.660156 L 532.085938 299.835938 L 531.242188 297.605469 L 530.636719 297.988281 L 530.089844 297.128906 L 530.582031 298.316406 L 531.058594 297.769531 L 531 299.53125 L 531.894531 300.03125 L 529.867188 301.449219 L 530.773438 300.464844 L 530.28125 299.25 L 529.902344 300.554688 L 529.222656 299.53125 L 528.160156 299.957031 L 527.640625 296.304688 L 527.890625 298.816406 L 527.535156 298.285156 L 526.511719 298.488281 L 526.355469 299.269531 L 527.511719 300.316406 L 527.625 301.703125 L 528.402344 301.273438 L 530.097656 302.519531 L 528.757812 303.488281 L 529.625 303.566406 L 530.308594 302.640625 L 532.105469 303.820312 L 527.363281 307.207031 L 524.527344 303.867188 L 523.910156 304.550781 L 524.589844 304.535156 L 524.980469 305.667969 L 523.476562 305.570312 L 524.847656 306.53125 L 525.375 309.128906 L 522.425781 311.988281 L 522.761719 308.867188 L 521.707031 309.996094 L 522.417969 310.425781 L 521.96875 312.03125 L 520.804688 311.695312 L 520.828125 310.34375 L 518.96875 312.074219 L 518.820312 311.414062 L 518.210938 311.542969 L 518.53125 312.433594 L 516.71875 313.769531 L 517.121094 314.070312 L 516.632812 314.621094 L 519.335938 313.671875 L 521.019531 312.308594 L 521.300781 314.164062 L 518.605469 318.992188 L 517.601562 318.894531 L 518.21875 318.628906 L 516.789062 317.941406 L 515.402344 318.78125 L 515.609375 318.039062 L 512.304688 318.644531 L 513.207031 319.472656 L 514.90625 319.027344 L 514.910156 320.332031 L 516.550781 321.398438 L 515.941406 321.40625 L 516.5625 321.863281 L 516.058594 323 L 515.210938 323.265625 L 516.195312 323.183594 L 516.722656 321.472656 L 517.898438 321.742188 L 516.675781 324.617188 L 515.757812 329.933594 L 514.085938 330.160156 L 513.648438 327.636719 L 513.492188 329.703125 L 512.242188 330.800781 L 509.097656 328.589844 L 510.738281 331.097656 L 508.765625 331.46875 L 513.402344 332.171875 L 515.613281 331.15625 L 514.621094 335.230469 L 515.300781 336.984375 L 513.640625 337.582031 L 514.164062 340.359375 L 515.484375 341.335938 L 517.496094 347.042969 L 516.664062 348.03125 L 517.914062 349.867188 L 518.984375 350.304688 L 519.710938 354.03125 L 521.914062 356.238281 L 521.628906 357.699219 L 522.832031 357.414062 L 523.75 358.484375 L 521.128906 358.558594 L 521.246094 359.113281 L 519.824219 359.742188 L 519.90625 361.277344 L 518.96875 361.386719 L 515.757812 359.851562 L 516 359.371094 L 515.25 359.289062 L 514.429688 358.054688 L 510.128906 357.742188 L 506.8125 358.121094 L 506.175781 358.722656 L 505.972656 358.074219 L 503.738281 358.539062 L 501.890625 357.816406 L 501.808594 357.082031 L 501.171875 357.605469 L 500.695312 356.644531 L 499.988281 356.777344 L 498.519531 355.539062 L 497.890625 356.019531 L 495.628906 354.996094 L 494.175781 355.539062 L 491.171875 353 L 489.5 353.488281 L 488.84375 352.804688 L 485.597656 352.617188 L 485.546875 351.148438 L 484.144531 350.0625 L 481.253906 343.6875 L 479.070312 342 L 478.921875 340.96875 L 477.667969 340.386719 L 477.644531 336.742188 L 476.960938 335.296875 L 475.375 334.414062 L 476.011719 330.671875 L 475.296875 330.457031 L 474.640625 328.207031 L 471.421875 327.484375 L 469.265625 325.167969 L 468.121094 324.910156 L 466.460938 321.035156 L 465.460938 320.78125 L 463.203125 317.785156 L 460.910156 316.992188 L 460.652344 316.175781 L 459.179688 315.492188 L 457.300781 311.445312 L 457.832031 310.921875 L 456.367188 310.140625 L 456.578125 309.148438 L 454.667969 307.816406 L 452.484375 303.0625 L 451.359375 302.570312 L 450.640625 299.28125 L 448.613281 297.632812 L 447.933594 296.082031 L 443.753906 293.699219 L 442.476562 291.6875 L 438.792969 290.90625 L 438.71875 288.742188 L 437.8125 289.839844 L 437.730469 288.328125 L 436.570312 288.335938 L 435.746094 286.015625 L 434.898438 286.292969 L 434.4375 285.738281 L 433.242188 286.390625 L 433.046875 285.410156 L 432.445312 286.417969 L 431.390625 286.6875 L 428.304688 286.476562 L 427.988281 285.777344 L 426.105469 286.488281 L 425.148438 285.929688 L 423.546875 286.792969 L 418.601562 285.191406 L 417.867188 285.988281 L 417.6875 287.644531 L 415.488281 287.453125 L 414.652344 288.285156 L 414.152344 287.71875 L 413.109375 288.773438 L 412.378906 288.582031 L 410.382812 293.269531 L 410.253906 295.78125 L 409.234375 297.097656 L 408.902344 298.902344 L 409.746094 299.6875 L 407.558594 300.664062 L 404.84375 305.355469 L 402.710938 304.90625 L 402.488281 305.367188 L 401.371094 304.097656 L 400.660156 304.535156 L 398.78125 303.824219 L 397.707031 302.328125 L 394.0625 301.660156 L 393.644531 300.851562 L 392.867188 300.917969 L 393.054688 299.820312 L 387.875 299.1875 L 385.589844 297.8125 L 384.730469 296.113281 L 381.46875 294.925781 L 378.402344 292.410156 L 377.457031 289.765625 L 375.550781 287.75 L 374.597656 280.882812 L 372.421875 278.660156 L 372.523438 278.109375 L 371.65625 277.828125 L 370.738281 274.136719 L 368.902344 272.761719 L 368.652344 271.871094 L 367.507812 271.867188 L 364.5625 269.433594 L 363.789062 269.78125 L 363.214844 269.09375 L 362.757812 269.449219 L 361.332031 268.761719 L 360.929688 267.746094 L 358.191406 265.890625 L 357.203125 264.097656 L 354.101562 262.5 Z M 557.378906 282.34375 L 559.84375 280.117188 L 560.273438 280.554688 L 554.289062 286.308594 Z M 532.21875 305.714844 L 524.75 312.734375 L 525.042969 310.40625 L 526.238281 310.007812 L 529.765625 306.636719 L 531.046875 306.304688 L 531.625 304.804688 Z M 522.816406 313.417969 L 523.859375 311.4375 L 524.601562 311.984375 L 524.433594 313.140625 L 521.289062 318.039062 L 521.570312 316.417969 L 522.800781 314.746094 L 522.3125 314.457031 Z M 519.679688 345.003906 L 518.328125 342.882812 L 517.082031 338.382812 L 516.691406 332.335938 L 518.089844 340.839844 L 521.457031 348.742188 L 523.328125 356 Z M 516.859375 330.609375 L 516.660156 332.210938 L 516.910156 327.210938 L 518.195312 324.027344 L 517.824219 322.550781 L 518.972656 323.265625 L 519.355469 321.160156 L 520.878906 318.730469 L 520.144531 318.648438 L 521.242188 318.273438 L 518.6875 324.125 Z M 516.859375 330.609375 "/>
@@ -211,7 +198,7 @@ function animateIE(element) {
     <g>
       <path id="Colorado-river" d="M 340.726562 68.242188 L 341.011719 74.253906 L 339.855469 75.253906 L 333.917969 76.898438 L 327.066406 80.664062 L 324.269531 81.324219 L 321.960938 86.300781 L 319.09375 88.292969 L 316.566406 88.171875 L 309.839844 89.578125 L 306.292969 91.320312 L 304.058594 93.585938 L 302.359375 98.078125 L 298.257812 99.65625 L 292.382812 97.105469 L 289.652344 98.945312 L 285.453125 107.082031 L 279.277344 113.742188 L 279.320312 115.65625 L 278.0625 118.019531 L 274.074219 122.605469 L 272.246094 123.554688 L 271.679688 125.066406 L 269.035156 124.859375 L 267.90625 128.460938 L 265.039062 131.667969 L 262.582031 136.863281 L 261.515625 136.792969 L 259.695312 140.976562 L 252.511719 143.699219 L 249.046875 146.542969 L 244.832031 153.886719 L 244.566406 155.800781 L 245.511719 160.710938 L 244.773438 163.210938 L 243.421875 163.875 L 240.652344 162.625 L 238.816406 162.625 L 235.589844 159.53125 L 234.640625 160.527344 L 233.429688 159.4375 L 234.65625 157.277344 L 233.515625 156.523438 L 231.296875 156.339844 L 229.53125 157.910156 L 223.027344 160.671875 L 221.453125 162.398438 L 219.828125 162.542969 L 219.398438 168.867188 L 217.691406 169.671875 L 213.191406 167.015625 L 211.429688 163.402344 L 209.757812 162.449219 L 208.117188 160.167969 L 206.679688 161.050781 L 205.742188 163.695312 L 203.703125 163.898438 L 202.085938 160.941406 L 198.4375 160.929688 L 195.566406 162.097656 L 196.785156 166.726562 L 196.132812 168.289062 L 196.699219 172.222656 L 196.371094 174.296875 L 198.109375 180.59375 L 198.128906 182.429688 L 197.03125 182.566406 L 196.898438 187.394531 L 199.542969 191.382812 L 201.0625 196.832031 L 202.566406 197.371094 L 205 199.839844 L 205.128906 200.90625 L 201.46875 202.777344 L 201.15625 203.660156 L 200.039062 203.75 L 199.738281 205.75 L 198.070312 207.203125 L 198.425781 211.035156 L 197.589844 215.917969 L 195.773438 218.25 L 194.652344 218.261719 L 195.09375 222.652344 L 194.394531 225.054688 L 195.039062 225.847656 L 198.082031 226.460938 L 198.503906 228.933594 L 198.039062 230.539062 L 196.601562 230.789062 L 196.222656 233.351562 ">
         <animate attributeName="stroke-dashoffset" id="colorado-river-draw" begin="indefinite" fill="freeze" dur="5s" values="331;0;"/>
-        <animate attributeName="stroke-dashoffset" id="colorado-river-reset" begin="indefinite" fill="freeze" dur="1s" values="0;331"/>
+        <animate attributeName="stroke-dashoffset" id="colorado-river-reset" begin="indefinite" fill="freeze" dur="1s" values="0;331;"/>
       </path>
     </g>
     <animate attributeName="opacity" id="remove-river" begin="indefinite" fill="freeze" dur="1s" to="0"/>
@@ -354,11 +341,18 @@ function animateIE(element) {
   </g>
   <g id="Mead-2D" opacity="0">
     <rect id="Mead-water-level" x="280" y="20" width="255" height="430" fill="#0066CC" stroke="none" clip-path="url(#Mead-clip)">
-      <animate attributeName="y" id="Mead-surplus" begin="indefinite" fill="freeze" dur="1s" to="90.1086956521739"/>
-      <animate attributeName="y" id="Mead-normal" begin="indefinite" fill="freeze" dur="1s" to="197.608695652174"/>
-      <animate attributeName="y" id="Mead-shortage-1" begin="indefinite" fill="freeze" dur="1s" to="300.434782608696"/>
-      <animate attributeName="y" id="Mead-shortage-2" begin="indefinite" fill="freeze" dur="1s" to="330.036231884058"/>
-      <animate attributeName="y" id="Mead-shortage-3" begin="indefinite" fill="freeze" dur="1s" to="356.521739130435"/>
+      <animate attributeName="y" id="Mead-flood-fall" begin="indefinite" fill="freeze" dur="1s" from="41.8115942028986" to="41.8115942028986"/>
+      <animate attributeName="y" id="Mead-flood-rise" begin="indefinite" fill="freeze" dur="1s" from="90.1086956521739" to="41.8115942028986"/>
+      <animate attributeName="y" id="Mead-surplus-fall" begin="indefinite" fill="freeze" dur="1s" from="41.8115942028986" to="90.1086956521739"/>
+      <animate attributeName="y" id="Mead-surplus-rise" begin="indefinite" fill="freeze" dur="1s" from="197.608695652174" to="90.1086956521739"/>
+      <animate attributeName="y" id="Mead-normal-fall" begin="indefinite" fill="freeze" dur="1s" from="90.1086956521739" to="197.608695652174"/>
+      <animate attributeName="y" id="Mead-normal-rise" begin="indefinite" fill="freeze" dur="1s" from="300.434782608696" to="197.608695652174"/>
+      <animate attributeName="y" id="Mead-shortage-1-fall" begin="indefinite" fill="freeze" dur="1s" from="197.608695652174" to="300.434782608696"/>
+      <animate attributeName="y" id="Mead-shortage-1-rise" begin="indefinite" fill="freeze" dur="1s" from="330.036231884058" to="300.434782608696"/>
+      <animate attributeName="y" id="Mead-shortage-2-fall" begin="indefinite" fill="freeze" dur="1s" from="300.434782608696" to="330.036231884058"/>
+      <animate attributeName="y" id="Mead-shortage-2-rise" begin="indefinite" fill="freeze" dur="1s" from="356.521739130435" to="330.036231884058"/>
+      <animate attributeName="y" id="Mead-shortage-3-fall" begin="indefinite" fill="freeze" dur="1s" from="330.036231884058" to="356.521739130435"/>
+      <animate attributeName="y" id="Mead-shortage-3-rise" begin="indefinite" fill="freeze" dur="1s" from="356.521739130435" to="356.521739130435"/>
     </rect>
     <path id="Mead-2D-border" d="M 535 20 L 535 450 L 400 450 L 280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round"/>
     <animate attributeName="opacity" id="mead-draw" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>

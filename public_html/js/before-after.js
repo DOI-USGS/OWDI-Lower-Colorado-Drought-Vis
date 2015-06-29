@@ -1,5 +1,7 @@
 /* global owdiDrought */
 /* global $ */
+
+// Pulled from http://codyhouse.co/gem/css-jquery-image-comparison-slider/
 (function() {
     "use strict";
     owdiDrought.slider = {};
@@ -18,12 +20,14 @@
         //make the .cd-handle element draggable and modify .cd-resize-img width according to its position
         $cdImageContainer.each(function() {
             var actual = $(this);
+                
             owdiDrought.slider.drags(
                 actual.find(".cd-handle"),
                 actual.find(cdResizeImgClassName),
                 actual,
                 actual.find(cdImageLabelClassname + "[data-type='original']"),
                 actual.find(cdImageLabelClassname + "[data-type='modified']"));
+
         });
 
         //upadate images label visibility
@@ -45,15 +49,13 @@
         });
     };
 
-    //draggable funtionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
+    //draggable functionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
     owdiDrought.slider.drags = function(dragElement, resizeElement, container, labelContainer, labelResizeElement) {
         var vmouseAndMouseUp = "mouseup vmouseup",
                 draggable = "draggable",
                 resizable = "resizable";
                 
         dragElement.on("mousedown vmousedown", function(e) {
-            
-
             dragElement.addClass(draggable);
             resizeElement.addClass(resizable);
 
