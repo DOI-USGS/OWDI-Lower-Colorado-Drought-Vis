@@ -20,24 +20,21 @@
   </div>
 </div>
 <script>
-var button = $('#section9Button');
-
-button.click(function() {
-  $('#section9Info').toggle();
-});
-
 (function() {
   var triggered = false,
-    parentContainer = "#container9";
+    parentContainer = "#container9",
+    animation = function() {
+      animationSVG = document.getElementById('animated-object').getSVGDocument();
 
-  var animation = function() {
-    animationSVG = document.getElementById('animated-object').getSVGDocument();
+      // Only call if SVG is loaded and has this function
+      if (animationSVG && animationSVG.visibleAxes) {
+        animationSVG.visibleAxes();
+      };
+    }
 
-    // Only call if SVG is loaded and has this function
-    if (animationSVG && animationSVG.visibleAxes) {
-      animationSVG.visibleAxes();
-    };
-  }
+  $('#section9Button').click(function() {
+    $('#section9Info').toggle();
+  });
 
   window.owdiDrought.addScene({
     parentContainer: parentContainer,
