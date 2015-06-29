@@ -16,22 +16,11 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
   y_offset <- -(bin_full+bin_empty)*10-4
   x_offset <- -2
 
-  
-  def_id <- newXMLNode('defs', parent=root_nd)
-  pat_1 <- newXMLNode('pattern', parent=def_id,
-                      attrs = c(id="empty-picto-pattern", width=bin_full+bin_buffer, height=bin_full+bin_buffer, patternUnits="userSpaceOnUse"))
-  newXMLNode('rect', parent=pat_1,
-             attrs = c(x=bin_buffer/2,y=bin_buffer/2,'rx'="2", 'ry'="2", width=bin_full, height=bin_full, 'stroke'='#0066CC','stroke-width'='2','fill'='none'))
-  pat_1 <- newXMLNode('pattern', parent=def_id,
-                      attrs = c(id="full-picto-pattern", width=bin_full+bin_buffer, height=bin_full+bin_buffer, patternUnits="userSpaceOnUse"))
-  newXMLNode('rect', parent=pat_1,
-             attrs = c(x=bin_buffer/2,y=bin_buffer/2,'rx'="2", 'ry'="2", width=bin_full, height=bin_full, 'stroke'='#0066CC','stroke-width'='2','fill'='#0066CC'))
-  
   g_id <- newXMLNode('g', parent=root_nd,
              attrs = c('id'=group_name, group_styles ))
   ax_g <- newXMLNode('g', parent=g_id, attrs = c('transform'=sprintf("translate(%1.1f,%1.1f)",x_axis_location,y_axis_location)))
   axes <- newXMLNode('path', parent=ax_g,
-             attrs=c('d'=sprintf("M%f %f l0 %f l%f 0",x_offset, 2*y_offset, -y_offset, x_axis_length), 'id'="picto-axes"))
+             attrs=c('d'=sprintf("M%1.1f %1.1f l0 %1.1f l%1.1f 0",x_offset, 2*y_offset,-y_offset,x_axis_length), 'id'="picto-axes"))
   newXMLNode("text", parent = ax_g, newXMLTextNode('Water user contracts'),
              attrs = c(id="x-pictogram-label",x=x_axis_length/2,y=y_offset+12, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;"))
   newXMLNode("text", parent = ax_g, newXMLTextNode('Total water use'),
@@ -41,24 +30,32 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
   
   for (i in 1:length(values)){
     
+    g_pict_par <- newXMLNode('g', parent=g_id, attrs = c(id = paste0('picto-usage-parent-',i), 'transform'=sprintf("translate(%1.1f,%1.1f)",x_axis_location,486))) # need to calc this...
+    g_picto <- newXMLNode('g', parent=g_pict_par, attrs = c(id = paste0('picto-usage-',i)))
+    
     num_full <- ceiling(values[i]/scale)
-    frac_full <- num_full-values[i]/scale
-    x = (bin_full+bin_buffer)*(i-1)
-    height_full <- (bin_full+bin_buffer)*num_full
-    height_empty <- (bin_buffer)/2+(bin_empty+2)*frac_full #stroke-width included here
-    
-    g_picto <- newXMLNode('g', parent=g_id, attrs = c(id = paste0('picto-usage-',i)))
-    
+    frac_full <- 1-(num_full-values[i]/scale)
+    x = (bin_full+bin_buffer)*(i-1)+bin_buffer/2
+  
+    # -- create empties -- 
+    for (j in seq_len(num_full-1)){
+      newXMLNode('rect',parent=g_picto,
+                 attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=bin_full, 
+                         rx='2',ry='2','stroke'='#0066CC','stroke-width'='2','fill'='#0066CC'))
+    }
+    j = num_full
+    # -- partial fill --
     newXMLNode('rect',parent=g_picto,
-               attrs=c(x=x, y=y_offset-height_full-bin_buffer/2, width=bin_full+bin_buffer, height=height_full, 
-                       style="stroke:none;fill:url(#empty-picto-pattern);", 
-                       'transform'=sprintf("translate(%1.1f,%1.1f)",x_axis_location,y_axis_location)))
-    
+               attrs=c(x=x,y=-(bin_full+bin_buffer)*j+bin_full*(1-frac_full), width=bin_full, height=bin_full*frac_full, 
+                       rx='0',ry='0','stroke'='none','fill'='#0066CC'))
+    # -- full bucket outline --
     newXMLNode('rect',parent=g_picto,
-               attrs=c(x=x, y=y_offset-height_full-bin_buffer/2+height_empty, width=bin_full+bin_buffer, height=height_full-height_empty, 
-                       style="stroke:none;fill:url(#full-picto-pattern);", 
-                       'transform'=sprintf("translate(%1.1f,%1.1f)",x_axis_location,y_axis_location)))
-    
+               attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=bin_full, 
+                       rx='2',ry='2','stroke'='#0066CC','stroke-width'='2','fill'='none'))
+    # -- add clear mouseover rect on top --
+    newXMLNode('rect',parent=g_pict_par,
+               attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=(bin_full+bin_buffer)*j+bin_full-(bin_full+bin_buffer), 
+                       rx='0',ry='0','stroke'='#0066CC','stroke-width'='0','fill'='yellow', opacity='0.0', onmouseover="evt.target.setAttribute('opacity', '0.5');", onmouseout="evt.target.setAttribute('opacity','0');"))
   }
   
   invisible(svg)

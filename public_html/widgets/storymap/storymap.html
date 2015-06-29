@@ -56,32 +56,6 @@ CONTACT:
         <script type="text/javascript" src="./js/storymap/storymap.js"></script>
         <link rel="stylesheet" href="./css/storymap.css" />
         
-        <!--
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        CSS to layout this demo
-        * POSITION AND SIZE THE #storymap_container IN PAGE AS NEEDED
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        -->
-        <style type="text/css">
-            html, body {
-                height: 2000px;
-            }
-            #storymap_container {
-                position: absolute;
-                top: 160px;
-                left: 30px;
-                width: 1200px;
-                height: 700px;
-            }
-            #anothermap {
-                position: absolute;
-                top: 900px;
-                left: 30px;
-                width: 500px;
-                height: 500px;
-            }
-        </style>
-        
     </head>
     
     <!--
@@ -90,21 +64,6 @@ CONTACT:
     =============================
     -->
     <body>
-        <!-- description -->
-        <h3>Stand-Alone Blue Dragon Story Map for Inclusion in Main App</h3>
-        <ul>
-            <li>Story Map is in it's own "storymap_container" div</li>
-            <li>Rest of page can contain anything else</li>
-            <li>Story Map contents still under construction</li>
-            <li>2nd Leaflet map below Story Map is to test conflicts</li>
-            <li>Contact: Joe Vrabel, USGS TX-WSC (jvrabel@usgs.gov) - out of office June 8-26 2015</li>
-        </ul>
-        
-        <!--
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        story map section - needs to be contained in div with id "storymap_container"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        -->
         <div id="storymap_container">
             
             <!-- slides -->
@@ -227,32 +186,5 @@ CONTACT:
                 </div>
             </div>
         </div>
-        <!--
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        END story map section
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        -->
-        
-        <!-- another leaflet map to test conflict with Story Map -->
-        <!-- create map -->
-        <div id="anothermap"></div>
-        <script type="text/javascript">
-            // create map
-            var map = new L.Map( "anothermap", {
-                "center"  : new L.LatLng(38,-99),
-                "zoom"    : 5,
-                "layers"  : L.tileLayer( "http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}" ),
-                "attributionControl" : false
-            });
-            
-            // add scale bar
-            L.control.scale().addTo(map);
-            
-            // add a marker in the given location, attach some popup content to it and open the popup
-            L.marker([38,-99]).addTo(map)
-                .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
-                .openPopup();
-        </script>
-        
     </body>
 </html>

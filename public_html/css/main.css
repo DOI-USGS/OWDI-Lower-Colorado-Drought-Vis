@@ -437,6 +437,10 @@ text{
 	#meadSVGContainer object{
 		margin-left:0%;
 	}
+	#natural-flow-graph {
+		width: 80%;
+		height: 600px;
+	}
 	
 }
 
