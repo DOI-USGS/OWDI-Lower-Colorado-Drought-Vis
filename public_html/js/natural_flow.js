@@ -18,7 +18,7 @@ owdiDrought.createDygraph = function (divId) {
       "y": [] 
       },
       "showRangeSelector": true,
-      "dateWindow": [ "1812-06-12T00:00:00Z", "2012-06-12T00:00:00Z" ],
+      "dateWindow": [ Date.parse("1812-06-12T00:00:00Z"), Date.parse("2012-06-12T00:00:00Z") ],
       "rangeSelectorHeight":                40,
       "rangeSelectorPlotFillColor": " #A7B1C4",
       "rangeSelectorPlotStrokeColor": "#808FAB",
