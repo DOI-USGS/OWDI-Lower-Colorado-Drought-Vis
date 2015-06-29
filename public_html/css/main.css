@@ -242,7 +242,7 @@ text{
 	}
 	
 .spacer{
-	margin-bottom:100px;
+	margin-bottom:20px;
 	}
 	
 .supportinginfo:hover,
@@ -391,6 +391,10 @@ text{
 		width:90%;
 		margin:0 auto;
 		}
+		
+	.spacer{
+		margin-bottom:100px;
+	}
 		
 /*Section 5 CSS*/
 		
