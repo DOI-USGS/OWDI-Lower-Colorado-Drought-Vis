@@ -3,7 +3,9 @@
 
 *{padding:0; margin:0;}
 
-a{text-decoration:none;}
+a{
+	text-decoration:none;
+	}
 
 ul{list-style:none;}
 
@@ -20,6 +22,7 @@ html,
 body{
 	height:100%;
 	font-family:Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:#000;
 	}
 	
 #usgscolorband{
@@ -29,6 +32,11 @@ body{
 #usgsfooter{
 	display:none;
 	}
+
+#usgsfootertext > p {
+	margin: 5px 0 5px 0;
+	padding-left: 5px;
+}
 	
 @media screen and (min-width:686px){
 	

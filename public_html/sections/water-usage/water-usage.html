@@ -1,0 +1,48 @@
+<div class="widget">
+  <div class="sectionContent">
+    <p>Since the early 1900’s, water use in the Colorado River basin has increased while water supply is, on average, decreasing. The storage capacity available on the Colorado River system has allowed us to meet water demands during this sustained, 15 year
+      drought. However, water use during the drought has exceeded supplies into the system, drawing down the stored reserves. </p>
+    <button class="supportinginfo spacer" id="section9Button">Supporting Info</button>
+    <div class="supportingInfoContent" id="section9Info">
+      <p>
+        When water use is greater than supply, water storage is decreased as can be seen in reduced levels in reservoirs in the Upper (link to UC Basin Teacup Diagram) and Lower Colorado River basin (link to LC Basin Teacup Diagram).
+      </p>
+    </div>
+  </div>
+  <div id="JrGraph">
+    <h2 id="jrsGraph">Water supply and consumptive use in the Colorado River Basin</h2>
+    <object id="animated-object" data="img/flow_animation.svg" type="image/svg+xml"></object>
+  </div>
+</div>
+<script>
+  var button = $('#section9Button');
+
+  button.click(function() {
+    $('#section9Info').toggle();
+  });
+
+</script>
+<script>
+  (function() {
+    var triggered = false,
+    parentContainer = "#container9";
+    
+    var animation = function() {
+      animationSVG = document.getElementById('animated-object').getSVGDocument();
+
+      // Only call if SVG is loaded and has this function
+      if (animationSVG && animationSVG.visibleAxes) {
+        animationSVG.visibleAxes();
+      };
+    }
+
+    window.owdiDrought.addScene({
+      parentContainer: parentContainer,
+      duration: 100,
+      enter: animation,
+      pin : parentContainer
+    });
+  })();
+
+</script>
+</div>

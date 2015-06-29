@@ -9,12 +9,34 @@ nav{
 	
 nav h3{color:#fff;}
 
+/*=====SVG CSS=====*/
+
+text{
+	font-size: 1.5em;
+   	cursor: default;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    }
+.legend{
+	font-size: 16px;
+   	cursor: default;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    }
+.dater{
+    font-size: 21px;
+    }
+.tooltip{
+    font-size: 12px;
+    }
+.caption{
+    font-size: 12px;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    }
+
 /*=====Container CSS=====*/
 .container {
 	margin:0 0 100px 0;
 	padding: 15px;
 	text-align:center;
-	position:relative;
 	}
 	
 
@@ -32,7 +54,7 @@ nav h3{color:#fff;}
 	padding:0;
 	}
 	
-#container3{
+#container2{
 	background-image:url('../img/keynotes/keynote2-mobile.jpg');
 	background-position: center center;
 	background-size:cover;
@@ -43,7 +65,7 @@ nav h3{color:#fff;}
 	height:100%;
 	}
 	
-#container5{
+#container4{
 	background-image:url('../img/keynotes/keynote3-mobile.jpg');
 	background-position: center center;
 	background-size:cover;
@@ -54,7 +76,7 @@ nav h3{color:#fff;}
 	height:100%;
 	}
 	
-#container7{
+#container6{
 	background-image:url('../img/keynotes/keynote4-mobile.jpg');
 	background-position: center center;
 	background-size:cover;
@@ -65,8 +87,64 @@ nav h3{color:#fff;}
 	height:100%;
 	}
 	
-#container9{
-	background-image:url('../img/meadbg.jpg');
+#container7{
+	margin-bottom:0px;
+	}
+	
+#container8{
+	background-image:url('../img/keynotes/keynote5-mobile.jpg');
+	background-position: center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat:no-repeat;
+	height:100%;
+	}
+	
+#container10{
+	background-image:url('../img/keynotes/keynote6-mobile.jpg');
+	background-position: center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat:no-repeat;
+	height:100%;
+	margin-bottom:50px;
+	}
+	
+#container11{
+	margin-bottom:20px;
+	}
+	
+#container12{
+	background-image:url('../img/keynotes/keynote7-mobile.jpg');
+	background-position: center center;
+	background-position: center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat:no-repeat;
+	height:100%;
+	}
+	
+#container14{
+	background-image:url('../img/keynotes/keynote8-mobile.jpg');
+	background-position: center center;
+	background-position: center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-repeat:no-repeat;
+	height:100%;
+	}
+	
+#container16{
+	background-image:url('../img/keynotes/keynote8-mobile.jpg');
+	background-position: center center;
 	background-position: center center;
 	background-size:cover;
 	-webkit-background-size: cover;
@@ -83,15 +161,7 @@ nav h3{color:#fff;}
 	min-height:100px;
 	margin:auto;
 	position:absolute;
-	top:30%;bottom:0;left:0;right:0;
-	}
-	
-#keynote3{
-	top:2%;
-	}
-	
-#keynote4{
-	top:15%;
+	top:25%;bottom:0;left:0;right:0;
 	}
 	
 .keynote h1,
@@ -103,7 +173,7 @@ nav h3{color:#fff;}
 	}
 	
 .keynote h1{
-	font-size:7vw;
+	font-size:6vw;
 	}
 	
 .keynote h2{
@@ -112,9 +182,15 @@ nav h3{color:#fff;}
 	
 /*=====Container Content CSS=====*/
 
+.section{
+	position:relative;
+	height:100%;
+	}
+	
 .sectionContent{
 	min-height:100px;
 	text-align:center;
+	margin-bottom:100px;
 	}
 	
 .sectionContent h3,
@@ -133,6 +209,8 @@ nav h3{color:#fff;}
 	
 .sectionContent p{
 	margin-bottom:10px;
+	line-height:1.8em;
+	margin-bottom:20px;
 	}
 	
 .sectionContent p,
@@ -149,6 +227,8 @@ nav h3{color:#fff;}
 	margin-bottom:5px;
 	}
 	
+/*Supporting Info Buttons CSS*/
+	
 .supportinginfo,
 .interact{
 	background:none;
@@ -158,11 +238,11 @@ nav h3{color:#fff;}
 	border:1px solid #003366;
 	border-radius:5px;
 	margin-top:20px;
+	outline:none;
 	}
 	
-.white{
-	border:1px solid #fff;
-	color:#fff;
+.spacer{
+	margin-bottom:100px;
 	}
 	
 .supportinginfo:hover,
@@ -173,16 +253,27 @@ nav h3{color:#fff;}
 	color:#fff;
 	}
 	
-.white:hover,
-.white:focus{
-	background:#fff;
-	color:#003366;
+/*Supporting Info Content CSS*/
+.supportingInfoContent{
+	background:rgba(0,51,102,.2);
+	display:none;
+	padding:15px;
+	color:#000;
+	margin:-50px 0 40px 0;
+	border-radius:5px;
 	}
+	
+.supportingInfoContent p{
+	margin-bottom:10px;
+	line-height:1.5em;
+	}
+	
+/*Section 5 CSS*/
 	
 #blueDragon img{
 		width:100%;
 		height:auto;
-		margin-bottom:5pxpx;
+		margin-bottom:5px;
 		}
 		
 #blueDragon img:first-child{
@@ -196,17 +287,23 @@ nav h3{color:#fff;}
 	margin-bottom:10px;
 	}
 	
+/*Section 9 CSS*/
 #JrGraph h2{
 	font-size:1em;
 	}
-	
+
+/*Section 16 CSS*/	
 #meadSVGContainer h2{
 	color:#fff;
 	margin-bottom:30px;;
 	}
 	
-#meadSVGContainer object{
-	margin-left:10%;
+.cd-image-container{
+	margin-top:25px;
+	}
+	
+.SVGInfo{
+	display:none;
 	}
 	
 @media screen and (min-width:687px){
@@ -223,9 +320,14 @@ nav h3{color:#fff;}
 		}
 		
 	#container1,
-	#container3,
-	#container5,
-	#container7{
+	#container2,
+	#container4,
+	#container6,
+	#container8,
+	#container10,
+	#container12,
+	#container14{
+		-webkit-background-size: cover;
 		background-attachment: fixed;
 		}
 		
@@ -233,27 +335,38 @@ nav h3{color:#fff;}
 		background-image:url('../img/keynotes/welcome.jpg');
 		}
 		
-	#container3{
+	#container2{
 		background-image:url('../img/keynotes/keynote2.jpg');
 		}
 		
-	#container5{
+	#container4{
 		background-image:url('../img/keynotes/keynote3.jpg');
 		}
 		
-	#container7{
+	#container6{
 		background-image:url('../img/keynotes/keynote4.jpg');
 		}
-/*======keynote CSS======*/
-	.keynote,
-	#keynote3,
-	#keynote4{
-		top:25%;
-	}
-	
-	#keynote1{
-		top:35%;
+		
+	#container8{
+		background-image:url('../img/keynotes/keynote5.jpg');
 		}
+		
+	#container10{
+		background-image:url('../img/keynotes/keynote6.jpg');
+		}
+		
+	#container12{
+		background-image:url('../img/keynotes/keynote7.jpg');
+		}
+		
+	#container14{
+		background-image:url('../img/keynotes/keynote8.jpg');
+		}
+
+/*======keynote CSS======*/
+	.keynote{
+		top:35%;
+	}
 	
 	.keynote h1,
 	.keynote h2{
@@ -279,6 +392,8 @@ nav h3{color:#fff;}
 		margin:0 auto;
 		}
 		
+/*Section 5 CSS*/
+		
 	#blueDragon img{
 		margin-bottom:10px;
 		}
@@ -287,29 +402,55 @@ nav h3{color:#fff;}
 		display:none;
 	}
 	
+/*Section 9 CSS*/
+	
 	#JrGraph h2{
-	font-size:1.5em;
+		font-size:1.5em;
+	}
+	
+	text{
+		font-size: 1em !important;
+    }
+	
+/*Section 16 CSS*/
+	
+	.SVGInfo{
+		background:rgba(0,51,102,.3);
+		width:480px;
+		min-height:100px;
+		padding:10px;
+		margin:0 auto;
+		color:#fff;
+		text-align:left;
+		position:absolute;
+		bottom:10px;
+		right:10px;
+		border-radius:5px;
+		line-height:1.7em;
+		display:none;
 	}
 	
 	#meadSVGContainer object{
-		margin-left:10%;
+		margin-left:0%;
 	}
 	
 }
 
 @media screen and (min-width:1025px){
+	
+/*Keynote CSS*/
 	.keynote{
 		width:980px;
 		}
 	
 	.keynote h1{
-		font-size:3vw;
+		font-size:2em;
 	}
 	
 	.keynote h2{
-		font-size:2vw;
+		font-size:2em;
 	}
-	
+/*Section Content CSS*/
 	.sectionContent{
 		width:900px;
 		}
@@ -317,14 +458,18 @@ nav h3{color:#fff;}
 	.sectionContent h3{
 		font-size:1.6em;
 		}
-		
+/*Section 5 CSS*/	
 	#blueDragon img{
-		width:960px;
+		width:900px;
 		}
-	
-	#JrGraph,
-	#meadSVGContainer{
+/*Section 9 CSS*/	
+	#JrGraph{
 		width:1024px;
+		margin:0 auto;
+		}
+/*Section 16 CSS*/	
+	#meadSVGContainer{
+		width:760px;
 		margin:0 auto;
 		}
 	

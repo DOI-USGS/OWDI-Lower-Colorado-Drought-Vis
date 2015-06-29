@@ -1,0 +1,325 @@
+<div class="widget">
+  <div id="meadSVGContainer">
+    <h2>Mead SVG Dealio</h2>
+    <object id="mead-object" data="img/lo_CO_borders.svg" type="image/svg+xml" onload="window.owdiDrought.lakeMeadScene.createCOScene()">
+    </object>
+  </div>
+  <div class="SVGInfo" id="draw-river">
+    <p>Suspendisse fermentum convallis porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin condimentum dictum justo a dapibus. Praesent nec libero nec ipsum ultricies posuere. Duis in pretium est. Etiam gravida pulvinar tellus vitae finibus</p>
+  </div>
+  <div class="SVGInfo" id="draw-basin">
+    <p>Nunc cursus et diam quis eleifend. Cras venenatis velit quis mattis pulvinar. Cras hendrerit id erat at consequat. Aenean quis interdum leo. Nullam eget massa ultrices magna condimentum interdum.</p>
+  </div>
+  <div class="SVGInfo" id="draw-pictogram">
+    <p>Fixie Austin YOLO, health goth American Apparel raw denim Thundercats occupy Williamsburg Pitchfork listicle. Sunt narwhal Wes Anderson, pickled Bushwick put a bird on it cred. Ad shabby chic eu, labore enim plaid kitsch craft beer aliquip mixtape nesciunt pop-up proident cornhole. </p>
+  </div>
+  <div class="SVGInfo" id="highlight-user-1">
+    <p>Bacon ipsum dolor amet rump short loin ribeye chuck picanha shank meatball, shankle alcatra ground round. Kielbasa landjaeger turkey, pork loin tri-tip pork belly picanha turducken hamburger frankfurter beef ribs ribeye flank.</p>
+  </div>
+  <div class="SVGInfo" id="highlight-user-2">
+    <p>Pellentesque tincidunt sagittis massa vitae egestas. Quisque fermentum porta purus, scelerisque pharetra diam molestie accumsan. In sed leo nisi. Proin eget eros hendrerit, accumsan lacus fermentum, ornare ante. Aenean pellentesque iaculis sodales.</p>
+  </div>
+  <div class="SVGInfo" id="highlight-user-3">
+    <p>Aliquam consequat velit sollicitudin condimentum posuere. Morbi dignissim leo eget felis mollis accumsan. Aliquam efficitur, dolor sit amet iaculis auctor, urna mi ultrices turpis, non dictum magna massa sit amet ipsum. Maecenas in orci quis velit condimentum scelerisque.</p>
+  </div>
+  <div class="SVGInfo" id="highlight-user-4">
+    <p>Mockingbirds don't do one thing but make music for us to enjoy. They don't eat up people's gardens, don't nest in corncribs, they don't do one thing but sing their hearts out for us. That's why it's a sin to kill a mockingbird. </p>
+  </div>
+  <div class="SVGInfo" id="highlight-user-5">
+    <p>There is neither happiness nor unhappiness in this world; there is only the comparison of one state with another. Only a man who has felt ultimate despair is capable of feeling ultimate bliss</p>
+  </div>
+  <div class="SVGInfo" id="remove-items">
+    <p>If you live to be a hundred, I want to live to be a hundred minus one day so I never have to live without you.</p>
+  </div>
+  <div class="SVGInfo" id="move-states">
+    <p>When you are hurting in your heart, it's no use even if the entire world asks you how you are feeling. All you need is to be held by someone who doesn't need to ask.</p>
+  </div>
+  <div class="SVGInfo" id="surplus-condition">
+    <p>Surplus conditions</p>
+  </div>
+  <div class="SVGInfo" id="normal-condition">
+    <p>Normal conditions</p>
+  </div>
+  <div class="SVGInfo" id="shortage-condition-1">
+    <p>Shortage conditions: tier 1</p>
+  </div>
+  <div class="SVGInfo" id="shortage-condition-2">
+    <p>Shortage conditions: tier 2</p>
+  </div>
+  <div class="SVGInfo" id="shortage-condition-3">
+    <p>Shortage conditions: tier 3</p>
+  </div>
+</div>
+<script type="text/javascript">
+/* global owdiDrought */
+/* global ScrollMagic */
+/* global $ */
+/* global console */
+(function() {
+  "use strict";
+  owdiDrought.lakeMeadScene = {};
+  owdiDrought.lakeMeadScene.createCOScene = function() {
+    if (!owdiDrought.lakeMeadScene.meadObjectSVG) {
+      owdiDrought.lakeMeadScene.meadObjectSVG = svgDomElement.getSVGDocument();
+    }
+  };
+
+  var svgDomElement = document.getElementById("mead-object"),
+    svgContainer = "#meadSVGContainer",
+    parentContainer = "#container16",
+    defaultTransitionSpeed = 'slow',
+    defaultEndFunction = function(e) {
+      var $section = $("#" + e.target.name);
+
+      if (e.scrollDirection.toUpperCase() === "FORWARD") {
+        $section.fadeOut(defaultTransitionSpeed);
+      } else {
+        $section.fadeIn(defaultTransitionSpeed);
+      }
+    },
+    setScene = function() {
+      var defaultDuration = 300,
+        fadeSpeed = defaultTransitionSpeed,
+        forward = "FORWARD",
+        // Define the actions. Each action may have a start and an end as well as a duraiton
+        actions = {
+          // Each action's name needs to match the ID of the div it's acting on. The name is used as
+          // a selector within each function
+          "draw-river": {
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawRiver);
+              } else {
+                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetRiver);
+              }
+            }
+          },
+          "draw-basin": {
+            "offset": 300,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawBasin);
+              } else {
+                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetBasin);
+              }
+            }
+          },
+          "draw-pictogram": {
+            "offset": 600,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawPictogram);
+              } else {
+                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removePictogram);
+              }
+            }
+          },
+          "highlight-user-1": {
+            "offset": 900,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(1);
+                });
+              } else {
+                $section.fadeOut(fadeSpeed);
+              }
+            }
+
+          },
+          "highlight-user-2": {
+            "offset": 1200,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(2);
+                });
+              } else {
+                $section.fadeOut(fadeSpeed);
+              }
+            }
+          },
+          "highlight-user-3": {
+            "offset": 1500,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(3);
+                });
+              } else {
+                $section.fadeOut(fadeSpeed);
+              }
+            }
+          },
+          "highlight-user-4": {
+            "offset": 1800,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(4);
+                });
+              } else {
+                $section.fadeOut(fadeSpeed);
+              }
+            }
+          },
+          "highlight-user-5": {
+            "offset": 2100,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(5);
+                });
+              } else {
+                $section.fadeOut(fadeSpeed);
+              }
+            }
+          },
+          "remove-items": {
+            "offset": 2400,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removeGreyStates);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeRiver();
+                owdiDrought.lakeMeadScene.meadObjectSVG.removePictogram();
+              } else {
+                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetGreyStates);
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawPictogram();
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawBasin();
+                owdiDrought.lakeMeadScene.meadObjectSVG.showRiver();
+              }
+            }
+          },
+          "move-states": {
+            "offset": 2700,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.moveStates);
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawMead();
+                owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('flood-rise');
+              } else {
+                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetStates);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeMead();
+                owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('flood-rise');
+              }
+            }
+          },
+          "surplus-condition": {
+            "offset": 3000,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('surplus-fall');
+                });
+              } else {
+                $section.fadeOut(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('flood-rise');
+                });
+              }
+            }
+          },
+          "normal-condition": {
+            "offset": 3300,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('normal-fall');
+                });
+              } else {
+                $section.fadeOut(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('surplus-rise');
+                });
+              }
+            }
+          },
+          "shortage-condition-1": {
+            "offset": 3600,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-1-fall');
+                });
+              } else {
+                $section.fadeOut(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('normal-rise');
+                });
+              }
+            }
+          },
+          "shortage-condition-2": {
+            "offset": 3900,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-2-fall');
+                });
+              } else {
+                $section.fadeOut(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-1-rise');
+                });
+              }
+            }
+
+          },
+          "shortage-condition-3": {
+            "offset": 4200,
+            "start": function(e) {
+              var $section = $("#" + e.target.name);
+              if (e.scrollDirection === forward) {
+                $section.fadeIn(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-3-fall');
+                });
+              } else {
+                $section.fadeOut(fadeSpeed, function() {
+                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-2-rise');
+                });
+              }
+            }
+
+          }
+        };
+
+      // For every action I have, set the ScrollMagic event triggering for it
+      for (var action in actions) {
+        if (actions.hasOwnProperty(action)) {
+          var scene = actions[action];
+          scene.parentContainer = parentContainer;
+          scene.duration = defaultDuration;
+          scene.name = action;
+          scene.pin = parentContainer;
+
+          if (!scene.triggerHook) {
+            scene.triggerHook = "onLeave";
+          }
+
+          // All of the scenes seem to have the same end function so I just want
+          // to declare that once. If you want to diverge from the generic end function,
+          // just add an 'end' function to the scene in the actions object
+          if (!scene.end) {
+            scene.end = defaultEndFunction;
+          }
+
+          window.owdiDrought.addScene(scene, action);
+        }
+      }
+    }
+
+  setScene();
+})();
+</script>
+
+

@@ -20,7 +20,7 @@ clean_svg_doc <- function(svg, keep.attrs = c('viewBox','version')){
   svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
   attrs <- xmlAttrs(svg_nd[[1]])
   removeAttributes(svg_nd[[1]])
-  addAttributes(svg_nd[[1]], .attrs = c(preserveAspectRatio= "xMinYMin meet", attrs[keep.attrs]))
+  addAttributes(svg_nd[[1]], .attrs = c(preserveAspectRatio= "xMinYMin meet", onload='init(evt)', attrs[keep.attrs]))
   
   junk_nd <- xpathApply(svg, "//*[local-name()='rect']")
   g_nd <- xpathApply(svg, "//*[local-name()='g']")[[1]]
@@ -62,6 +62,15 @@ attr_svg_groups <- function(svg, attrs){
 
   for (i in 1:length(attrs)){
     g_id <- xpathApply(svg, sprintf("//*[local-name()='g'][@id='%s']",names(attrs)[i]))[[1]]
+    addAttributes(g_id, .attrs = attrs[[i]])
+  }
+  invisible(svg)
+}
+
+attr_svg_paths <- function(svg, attrs){
+  
+  for (i in 1:length(attrs)){
+    g_id <- xpathApply(svg, sprintf("//*[local-name()='path'][@id='%s']",names(attrs)[i]))[[1]]
     addAttributes(g_id, .attrs = attrs[[i]])
   }
   invisible(svg)
@@ -111,6 +120,34 @@ add_animateTransform <- function(svg, attr = "transform", parent_id, element = '
   parent_nd <- xpathApply(svg, sprintf("//*[local-name()='%s'][@id='%s']",element, parent_id))
   newXMLNode('animateTransform', parent = parent_nd, 
              attrs = c('attributeName'=attr, attributeType="XML", attrs))
+  invisible(svg)
+  
+}
+
+add_rect <- function(svg, ...){
+  attrs <- expand.grid(..., stringsAsFactors = FALSE)
+  svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
+  newXMLNode('rect', parent = svg_nd, attrs=attrs)
+  
+  invisible(svg)
+}
+
+add_ecmascript <- function(svg, text){
+  svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
+  
+  newXMLNode('script', parent = svg_nd, attrs=c(type='text/ecmascript'), 
+             newXMLTextNode(paste0(text,collapse='\n'), cdata = TRUE))
+
+  invisible(svg)
+  
+}
+
+add_css <- function(svg, text){
+  svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
+  
+  newXMLNode('style', parent = svg_nd, attrs=c(type="text/css"), 
+             newXMLTextNode(paste0(text,collapse='\n'), cdata = TRUE))
+  
   invisible(svg)
   
 }

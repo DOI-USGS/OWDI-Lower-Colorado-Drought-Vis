@@ -7,13 +7,19 @@ if(!require(dinosvg)){
 
 
 library(XML)
+source('scripts/R/build_ecmascript.R')
+source('scripts/R/build_css.R')
+source('scripts/R/manipulate_lowCO_borders_svg.R')
 
+svg_file <- 'public_html/img/flow_animation.svg'
+declaration <- '<?xml-stylesheet type="text/css" href="../css/main.css" ?>'
 
 data <- read.csv('src_data/NaturalFlow.csv', stringsAsFactors = F)
 flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
 years <- data$Year
 data <- read.table('src_data/Basin_Depletion_yearly_PROVISIONAL.tsv', stringsAsFactors = F, sep = '\t', header = T)
-usage <- c(data$depletion/1000,NA,NA) #into millions acre-feet units
+# will add stuff here to either fill usage w/NAs, or trim to have same supply and use be the same length
+usage <- c(rep(NA,8),data$depletion/1000,NA,NA) #into millions acre-feet units
 
 
 # --- pixel dims ---
@@ -29,9 +35,9 @@ axes <- list('tick_len' = 5,
 
 fig <- list('w' = 900,
             'h' = 600,
-            'margins' = c(100,80,10, 60)) #bot, left, top, right
+            'margins' = c(100,80,10, 10)) #bot, left, top, right
 
-fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[2]-fig$margins[4]),
+fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[4]),
                    "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
 
 usage_col <- '#B22C2C'
@@ -42,12 +48,19 @@ ani_time <- 15 # duration of line animation
 l_bmp = 20 # px from axes
 t_bmp = 20 # px from axes
 
-g_id <- svg_init(fig, def_opacity = 0.5)
+svg_nd <- newXMLNode('svg', 
+                     namespace = c("http://www.w3.org/2000/svg", xlink="http://www.w3.org/1999/xlink"), 
+                     attrs = c(version = '1.1', onload="init(evt)", preserveAspectRatio="xMinYMin meet", viewBox=sprintf("0 0 %1.0f %1.0f",fig$w, fig$h)))
+
+add_css(svg_nd, text = css_usage_supply())
+add_ecmascript(svg_nd, text = ecmascript_supply_usage())
+g_id <- newXMLNode('g', parent = svg_nd, attrs = c(id="surface0"))
+
 a_id <- newXMLNode('g', parent = g_id, attrs = c('id' = "axes", opacity = '0'))
 dinosvg:::animate_attribute(a_id, attr_name = "opacity", 
                             begin = "indefinite", id = "visibleAxes", 
                             fill = 'freeze', dur = '1s', from = "0", to = "1")
-add_axes(a_id, axes, fig)
+dinosvg::add_axes(a_id, axes, fig)
 
 #-- legend --
 leg_id <- newXMLNode("g", 'parent' = g_id,
@@ -55,11 +68,11 @@ leg_id <- newXMLNode("g", 'parent' = g_id,
                                class="label", 'alignment-baseline' = "central"))
 
 newXMLNode("text", parent = leg_id, newXMLTextNode('year'),
-           attrs = c(id="year_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp))
+           attrs = c(id="year_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp,class='legend'))
 newXMLNode("text", parent = leg_id, newXMLTextNode('use_text'),
-           attrs = c(id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = usage_col))
+           attrs = c(id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = usage_col,class='legend'))
 newXMLNode("text", parent = leg_id, newXMLTextNode('supply_text'),
-           attrs = c(id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = supply_col))
+           attrs = c(id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = supply_col,class='legend'))
 #------
 
 
@@ -89,7 +102,6 @@ line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none',
 dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
                             begin = "indefinite;visibleAxes.begin+1s", id = "timeAdvance", 
                             fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
-
 
 
 usage_id <- newXMLNode("g", 'parent' = g_id,
@@ -153,4 +165,6 @@ for (i in 1:length(x)){
 
 root_nd <- xmlRoot(g_id)
 
-saveXML(root_nd, file = 'public_html/img/flow_animation.svg')
+saveXML(root_nd, file = svg_file)
+cat('\n',declaration, file = svg_file, append = TRUE)
+
