@@ -221,10 +221,18 @@
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, function() {
                   owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('surplus-fall');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.drawStatePicto('mexico');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.drawStatePicto('nevada');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.drawStatePicto('california');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.drawStatePicto('arizona');
                 });
               } else {
                 $section.fadeOut(fadeSpeed, function() {
                   owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('flood-rise');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.removeStatePicto('mexico');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.removeStatePicto('nevada');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.removeStatePicto('california');
+                  owdiDrought.lakeMeadScene.meadObjectSVG.removeStatePicto('arizona');
                 });
               }
             }

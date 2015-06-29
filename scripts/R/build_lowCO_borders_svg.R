@@ -11,7 +11,7 @@ source('scripts/R/build_css.R')
 source('scripts/R/build_mead_levels.R')
 width=7.5
 height=7.6
-plot_dir = 'public_html/img'
+plot_dir = 'public_html/img/lake-mead-animated'
 svg_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
 simp_tol <- 7000
 picto_scale = 100000 # acre-feet per bin
@@ -198,6 +198,14 @@ svg <- clean_svg_doc(svg) %>%
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale', begin="indefinite", type = 'scale', fill="freeze", from = '1', to="0.55", dur="1s") %>%
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale-reset', begin="indefinite", type = 'scale', fill="freeze", from="0.55", to="1", dur="1s") %>%
   build_state_pictos() %>%
+  add_animation(attr = 'opacity', parent_id="Mexico-pictos", id = 'draw-mexico-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.5;1") %>%
+  add_animation(attr = 'opacity', parent_id="California-pictos", id = 'draw-california-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.5;1") %>%
+  add_animation(attr = 'opacity', parent_id="Arizona-pictos", id = 'draw-arizona-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.5;1") %>%
+  add_animation(attr = 'opacity', parent_id="Nevada-pictos", id = 'draw-nevada-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.5;1") %>%
+  add_animation(attr = 'opacity', parent_id="Mexico-pictos", id = 'remove-mexico-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id="California-pictos", id = 'remove-california-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id="Arizona-pictos", id = 'remove-arizona-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id="Nevada-pictos", id = 'remove-nevada-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   toString.XMLNode()
 
 cat(c(svg, declaration), file = svg_file, append = FALSE)

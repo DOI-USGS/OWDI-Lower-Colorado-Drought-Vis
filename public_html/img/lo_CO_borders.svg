@@ -24,6 +24,8 @@ svgDocument.removePictogram = this.removePictogram;
 svgDocument.moveStates = this.moveStates;
 svgDocument.highlightUser = this.highlightUser;
 svgDocument.setMeadCondition = this.setMeadCondition;
+svgDocument.drawStatePicto = this.drawStatePicto;
+svgDocument.removeStatePicto = this.drawStatePicto;
 svgDocument.resetStates = this.resetStates;}
 }
 function showRiver(){
@@ -72,6 +74,10 @@ document.getElementById("Mexico-scale-reset").beginElement();}
 function highlightUser(user_id){
 document.getElementById("pictogram-"+user_id+"-draw").beginElement();
 document.getElementById("user-"+user_id+"-draw").beginElement();}
+function drawStatePicto(user_id){
+document.getElementById("draw-"+user_id+"-pictogram").beginElement();}
+function removeStatePicto(user_id){
+document.getElementById("remove-"+user_id+"-pictogram").beginElement();}
 function setMeadCondition(storage_id){
 document.getElementById("Mead-"+storage_id).beginElement();}
 function showRiverDOM(){
@@ -422,103 +428,114 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <animate attributeName="opacity" id="mead-draw" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
     <animate attributeName="opacity" id="mead-remove" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
-  <g id="California-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
-    <rect x="114" y="201" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="201" width="10" height="10" rx="2" ry="2"/>
-    <rect x="142" y="201" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="187" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="187" width="10" height="10" rx="2" ry="2"/>
-    <rect x="142" y="187" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="173" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="173" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="173" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="173" width="10" height="10" rx="2" ry="2"/>
-    <rect x="142" y="173" width="10" height="10" rx="2" ry="2"/>
-    <rect x="58" y="159" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="159" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="159" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="159" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="159" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="159" width="10" height="10" rx="2" ry="2"/>
-    <rect x="142" y="159" width="10" height="10" rx="2" ry="2"/>
-    <rect x="58" y="145" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="145" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="145" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="145" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="145" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="145" width="10" height="10" rx="2" ry="2"/>
-    <rect x="44" y="131" width="10" height="10" rx="2" ry="2"/>
-    <rect x="58" y="131" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="131" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="131" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="131" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="131" width="10" height="10" rx="2" ry="2"/>
-    <rect x="44" y="117" width="10" height="10" rx="2" ry="2"/>
-    <rect x="58" y="117" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="117" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="117" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="117" width="10" height="10" rx="2" ry="2"/>
-    <rect x="30" y="103" width="10" height="10" rx="2" ry="2"/>
-    <rect x="44" y="103" width="10" height="10" rx="2" ry="2"/>
-    <rect x="58" y="103" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="103" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="103" width="10" height="10" rx="2" ry="2"/>
-    <rect x="30" y="89" width="10" height="10" rx="2" ry="2"/>
-    <rect x="44" y="89" width="10" height="10" rx="2" ry="2"/>
-    <rect x="58" y="89" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="89" width="10" height="10" rx="2" ry="2"/>
+  <g id="California-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
+    <rect x="114" y="211" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="211" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="211" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="197" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="197" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="197" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="183" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="183" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="183" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="183" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="183" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="169" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="169" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="169" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="169" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="169" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="169" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="169" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="155" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="155" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="155" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="155" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="155" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="155" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="141" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="141" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="141" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="141" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="141" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="141" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="127" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="127" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="127" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="127" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="127" width="10" height="10" rx="2" ry="2"/>
+    <rect x="30" y="113" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="113" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="113" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="113" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="113" width="10" height="10" rx="2" ry="2"/>
+    <rect x="30" y="99" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="99" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="99" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="99" width="10" height="10" rx="2" ry="2"/>
+    <animate attributeName="opacity" id="draw-california-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
+    <animate attributeName="opacity" id="remove-california-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
-  <g id="Nevada-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
-    <rect x="159" y="120" width="10" height="10" rx="2" ry="2"/>
-    <rect x="145" y="106" width="10" height="10" rx="2" ry="2"/>
-    <rect x="159" y="106" width="10" height="10" rx="2" ry="2"/>
+  <g id="Nevada-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
+    <rect x="159" y="130" width="10" height="10" rx="2" ry="2"/>
+    <rect x="145" y="116" width="10" height="10" rx="2" ry="2"/>
+    <g id="Nevada-pictos-normal">
+      <rect x="159" y="116" width="10" height="10" rx="2" ry="2" fill="none"/>
+      <rect x="159" y="121" width="10" height="5" rx="0" ry="0" stroke="none"/>
+    </g>
+    <animate attributeName="opacity" id="draw-nevada-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
+    <animate attributeName="opacity" id="remove-nevada-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
-  <g id="Arizona-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
-    <rect x="201" y="216" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="216" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="216" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="216" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="160" width="10" height="10" rx="2" ry="2"/>
+  <g id="Arizona-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
+    <rect x="201" y="226" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="226" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="226" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="226" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="212" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="212" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="212" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="212" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="212" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="212" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="198" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="198" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="198" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="198" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="198" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="198" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="184" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="184" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="184" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="184" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="184" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="184" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="170" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="170" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="170" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="170" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="170" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="170" width="10" height="10" rx="2" ry="2"/>
+    <animate attributeName="opacity" id="draw-arizona-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
+    <animate attributeName="opacity" id="remove-arizona-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
-  <g id="Mexico-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
-    <rect x="100" y="272" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="272" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="272" width="10" height="10" rx="2" ry="2"/>
-    <rect x="142" y="272" width="10" height="10" rx="2" ry="2"/>
-    <rect x="156" y="272" width="10" height="10" rx="2" ry="2"/>
-    <rect x="170" y="272" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="258" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="258" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="258" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="258" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="258" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="244" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="244" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="244" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="244" width="10" height="10" rx="2" ry="2"/>
+  <g id="Mexico-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
+    <rect x="100" y="282" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="282" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="282" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="282" width="10" height="10" rx="2" ry="2"/>
+    <rect x="156" y="282" width="10" height="10" rx="2" ry="2"/>
+    <rect x="170" y="282" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="268" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="268" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="268" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="268" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="268" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="254" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="254" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="254" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="254" width="10" height="10" rx="2" ry="2"/>
+    <animate attributeName="opacity" id="draw-mexico-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
+    <animate attributeName="opacity" id="remove-mexico-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
 </svg>
   <?xml-stylesheet type="text/css" href="../css/main.css" ?>
