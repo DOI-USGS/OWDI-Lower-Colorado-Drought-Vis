@@ -35,7 +35,7 @@ $( document ).ready( function () {
         }
 
         if ( sceneItem.triggerHook ) {
-            scene.triggerHook = sceneItem.triggerHook;
+            scene.triggerHook(sceneItem.triggerHook);
         }
 
         if ( sceneItem.offset ) {
