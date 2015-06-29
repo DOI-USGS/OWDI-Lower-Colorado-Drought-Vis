@@ -18,6 +18,8 @@ ecmascript_mead_map <- function(){
                'svgDocument.moveStates = this.moveStates;',
                'svgDocument.highlightUser = this.highlightUser;',
                'svgDocument.setMeadCondition = this.setMeadCondition;',
+               'svgDocument.drawStatePicto = this.drawStatePicto;',
+               'svgDocument.removeStatePicto = this.drawStatePicto;',
                'svgDocument.resetStates = this.resetStates;}',
                
                '}',
@@ -76,6 +78,11 @@ ecmascript_mead_map <- function(){
                'function highlightUser(user_id){',
                'document.getElementById("pictogram-"+user_id+"-draw").beginElement();',
                'document.getElementById("user-"+user_id+"-draw").beginElement();}',
+               
+               'function drawStatePicto(user_id){',
+               'document.getElementById("draw-"+user_id+"-pictogram").beginElement();}',
+               'function removeStatePicto(user_id){',
+               'document.getElementById("remove-"+user_id+"-pictogram").beginElement();}',
                
                'function setMeadCondition(storage_id){',
                'document.getElementById("Mead-"+storage_id).beginElement();}',
