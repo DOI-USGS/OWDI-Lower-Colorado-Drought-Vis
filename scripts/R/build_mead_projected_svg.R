@@ -12,7 +12,7 @@ source('scripts/R/build_ecmascript.R')
 source('scripts/R/build_css.R')
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 
-svg_file <- 'public_html/img/mead_elev_projected.svg'
+svg_file <- 'public_html/img/lake-mead-static/mead_elev_projected.svg'
 declaration <- '<?xml-stylesheet type="text/css" href="../css/main.css" ?>'
 usage_col <- '#B22C2C'
 supply_col <- '#0066CC'
