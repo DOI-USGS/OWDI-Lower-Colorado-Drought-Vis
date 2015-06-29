@@ -87,6 +87,10 @@ text{
 	height:100%;
 	}
 	
+#container7{
+	margin-bottom:0px;
+	}
+	
 #container8{
 	background-image:url('../img/keynotes/keynote5-mobile.jpg');
 	background-position: center center;
@@ -107,6 +111,7 @@ text{
     -o-background-size: cover;
 	background-repeat:no-repeat;
 	height:100%;
+	margin-bottom:50px;
 	}
 	
 #container11{
@@ -147,6 +152,7 @@ text{
     -o-background-size: cover;
 	background-repeat:no-repeat;
 	height:100%;
+	margin-bottom:4200px;
 	}
 	
 /*=====keynote css=====*/	
@@ -185,7 +191,7 @@ text{
 .sectionContent{
 	min-height:100px;
 	text-align:center;
-	margin-bottom:30px;
+	margin-bottom:100px;
 	}
 	
 .sectionContent h3,
@@ -204,6 +210,8 @@ text{
 	
 .sectionContent p{
 	margin-bottom:10px;
+	line-height:1.8em;
+	margin-bottom:20px;
 	}
 	
 .sectionContent p,
@@ -235,7 +243,7 @@ text{
 	}
 	
 .spacer{
-	margin-bottom:100px;
+	margin-bottom:20px;
 	}
 	
 .supportinginfo:hover,
@@ -254,6 +262,11 @@ text{
 	color:#000;
 	margin:-50px 0 40px 0;
 	border-radius:5px;
+	}
+	
+.supportingInfoContent p{
+	margin-bottom:10px;
+	line-height:1.5em;
 	}
 	
 /*Section 5 CSS*/
@@ -379,6 +392,10 @@ text{
 		width:90%;
 		margin:0 auto;
 		}
+		
+	.spacer{
+		margin-bottom:100px;
+	}
 		
 /*Section 5 CSS*/
 		

@@ -45,6 +45,21 @@ wae_data <- wat_acc_examp[,1:2]
 wat_acc_sp <- SpatialPointsDataFrame(wae_coord,data=wae_data,
                                      proj4string = CRS(p4s))
 
+#clean up water use contract polygons, subset only data we want by dropping some columns
+wat_use_con<-readOGR("src_data//LCContractSvcAreas","LC_Contacts_update2014")
+wat_subs<-wat_use_con[,-c(2:9,11:26)]
+writeOGR(wat_subs,"src_data//LCContractSvcAreas","LC_Contracts_subset", driver = "ESRI Shapefile", overwrite_layer = T)
+
+#dissolve polys so that we have one polygon per contract user
+library(maptools)
+wat_use_con<-readOGR("src_data//LCContractSvcAreas","LC_Contracts_subset")
+cont.union<-unionSpatialPolygons(wat_use_con,IDs = paste(wat_use_con$Contractor))
+df <- as(wat_use_con, "data.frame")[!duplicated(wat_use_con$Contractor),(1:2)]
+row.names(df)<- row.names(cont.union)
+cont.diss <- SpatialPolygonsDataFrame(cont.union, data = df)
+writeOGR(cont.diss,"src_data//LCContractSvcAreas","LC_Contracts_diss", driver = "ESRI Shapefile", overwrite_layer = T)
+
+
 ################################################################################
 #rstudio/leaflet implementation
 ################################################################################

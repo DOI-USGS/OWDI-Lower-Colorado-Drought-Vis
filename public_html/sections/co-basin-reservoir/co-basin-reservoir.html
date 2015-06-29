@@ -1,11 +1,24 @@
 <div class="widget">
 	<div class="sectionContent">
-		<p>The Colorado River basin reservoirs contain enough storage to hold about four times the average annual inflow into the system, assuming an annual inflow of 15 million acre-feet. This abundant storage has given the system some level of resiliency in the face of long-term drought.
-		</p>
-        <p>Citation/link for annual inflow of 15 maf (Dan B.)</p>
-        <button class="supportinginfo">Supporting Info</button>
-        
+		<p>Colorado River basin system storage totals about 60 maf, 4 times the system’s average annual inflow.  The Basin’s two largest reservoirs, Lake Powell and Lake Mead, combine for about 50 maf of storage, or 83 percent of the total system storage capacity </p>
+		<p>This large storage capacity creates a buffer to year-to-year hydrologic variability by allowing the storage of additional water during wet years and the use of water from storage to make deliveries during dry years. </p>
+		<p>The system is working as designed; to date, a Lower Basin Shortage has never been determined. </p>
+		
+		<button class="supportinginfo spacer" id="section7Button">Supporting Info</button>
+		
+		<div class="supportingInfoContent" id="section7Info">
+			<p> Citation/link for annual inflow of 15 maf (Dan B.) <a href="http://www.usbr.gov/lc/region/programs/crbstudy/finalreport/Study%20Report/CRBS_Study_Report_FINAL.pdf" target="_blank">Bureau of Reclamation. Colorado River Basin Supply and Demand Study, 2012.</a> </p>
+		</div>
+		
 	</div>
-    
-	
 </div>
+
+<script>
+  var button = $('#section7Button');
+
+  button.click(function() {
+    $('#section7Info').toggle();
+  });
+
+</script>
+
