@@ -2,13 +2,12 @@
 build_state_pictos <- function(svg, scale=100000){
   
   picto_lw <<- '1.5'
-  scale <<- scale
   root_nd <- xmlRoot(svg)
   
-  add_california(root_nd)
-  add_nevada(root_nd)
-  add_arizona(root_nd)
-  add_mexico(root_nd)
+  add_california(root_nd,scale)
+  add_nevada(root_nd,scale)
+  add_arizona(root_nd,scale)
+  add_mexico(root_nd,scale)
 
   invisible(svg)
 }
@@ -32,7 +31,7 @@ block_picto <- function(parent, x, y, rx='2',ry='2',number,width = 10, height=10
   invisible(y-(bin_full+bin_buffer))
 }
 
-add_nevada <- function(root_nd){
+add_nevada <- function(root_nd,scale){
   # nevada - 3
   NV_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='Nevada-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',opacity='0'))
@@ -60,7 +59,7 @@ add_nevada <- function(root_nd){
   
 }
 
-add_california <- function(root_nd){
+add_california <- function(root_nd,scale){
   CA_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='California-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',opacity='0'))
   y_start = 183
@@ -77,7 +76,7 @@ add_california <- function(root_nd){
   
 }
 
-add_arizona <- function(root_nd){
+add_arizona <- function(root_nd,scale){
   # arizona - 28
   AR_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='Arizona-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',opacity='0'))
@@ -112,7 +111,7 @@ add_arizona <- function(root_nd){
   
 }
 
-add_mexico <- function(root_nd){
+add_mexico <- function(root_nd,scale){
   # mexico- 15
   MX_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='Mexico-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',opacity='0'))
