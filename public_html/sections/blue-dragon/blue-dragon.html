@@ -1,24 +1,12 @@
 <div class="widget">
 	<h2>The Blue Dragon Rawr</h2>
-	<div id="blueDragon"> <img src="img/bluedragon-texas/dragon0verview.png" alt="Blue Dragon Review" />
-		<div class="picDescription">
-			<p>Add text Here</p>
-		</div>
-		<img src="img/bluedragon-texas/davisdam.png" alt="Davis Dam" />
-		<div class="picDescription">
-			<p>Add text Here</p>
-		</div>
-		<img src="img/bluedragon-texas/hooverdam.png" alt="Hoover Dam" />
-		<div class="picDescription">
-			<p>Add text Here</p>
-		</div>
-	</div>
-	<button class="interact spacer">Interact Here</button>
+	
 	<div class="sectionContent">
 		<p> Since 2000, the upper Colorado River basin has experienced the 15 driest years in the > 100 year historical record (Bureau of Reclamation), and one of the most severe droughts in the last 1200 years (Meko et al. 2007). </p>
 		<p> 90% of total basin water supply comes from upper Colorado River </p>
-		<button class="supportinginfo spacer" id="section5Button">Supporting Info</button>
-		<div class="supportingInfoContent" id="section5Info">
+		<p><a href="http://txpub.usgs.gov/DSS/StoryMaps/BlueDragon/" target="_blank">Click here</a> to explore the lower Colorado control structures and major diversions</p>
+		<button class="supportinginfo spacer" id="section6Button">Supporting Info</button>
+		<div class="supportingInfoContent" id="section6Info">
 			<p> [Need BoR citations for ‘15 driest years in the >100 year historical record’ and ‘90% of total basin water supply comes from upper Colorado River basin’] </p>
 			<p> Meko, D.M., et al. 2007.Upper Colorado River Flow Reconstruction. IGBP PAGES/World Data Center for Paleoclimatology. Data Contribution Series # 2007-052. NOAA/NCDC Paleoclimatology Program, Boulder CO, USA. </p>
 			<p> Meko, D.M., C.A. Woodhouse, C.H. Baisan, T. Knight, J.J. Lukas, M.K. Hughes, and M.W. Salzer. 2007. Medieval drought in the upper Colorado River Basin. Geophysical Research Letters, Vol. 34, L10705, 24 May 2007. </p>
@@ -33,8 +21,8 @@
 <script type="application/javascript">
 (function() {
 	"use strict";
-	$('#section5Button').click(function() {
-		$('#section5Info').toggle();
+	$('#section6Button').click(function() {
+		$('#section6Info').toggle();
 	});
 	owdiDrought.createDygraph("natural-flow-graph")
 })();
