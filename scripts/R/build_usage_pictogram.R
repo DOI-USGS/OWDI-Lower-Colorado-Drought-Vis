@@ -23,6 +23,9 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
   ax_g <- newXMLNode('g', parent=g_id, attrs = c('transform'=sprintf("translate(%1.1f,%1.1f)",x_axis_location,y_axis_location)))
   axes <- newXMLNode('path', parent=ax_g,
              attrs=c('d'=sprintf("M%1.1f %1.1f l0 %1.1f l%1.1f 0",x_offset, 2*y_offset,-y_offset,x_axis_length), 'id'="picto-axes"))
+  newXMLNode("text", parent = ax_g, newXMLTextNode('  '),
+             attrs = c(class="label", id="picto-info",x="0",y="-290", 'fill'='#FFFFFF', 'stroke'='none', style="text-anchor: left;"))
+    
   newXMLNode("text", parent = ax_g, newXMLTextNode('Water user contracts'),
              attrs = c(id="x-pictogram-label",x=x_axis_length/2,y=y_offset+12, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;"))
   newXMLNode("text", parent = ax_g, newXMLTextNode('Total water use'),
@@ -33,31 +36,40 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
   for (i in 1:length(values)){
     
     g_pict_par <- newXMLNode('g', parent=g_id, attrs = c(id = paste0('picto-usage-parent-',i), 'transform'=sprintf("translate(%1.1f,%1.1f)",x_axis_location,486))) # need to calc this...
-    g_picto <- newXMLNode('g', parent=g_pict_par, attrs = c(id = paste0('picto-usage-',i)))
     
     num_full <- ceiling(values[i]/scale)
     frac_full <- 1-(num_full-values[i]/scale)
     x = (bin_full+bin_buffer)*(i-1)+bin_buffer/2
   
+    # -- add highlighter div on bottom --
+    newXMLNode('rect',parent=g_pict_par,
+               attrs=c(x=x-bin_buffer/2,y=-(bin_full+bin_buffer)*num_full-bin_buffer/2, 
+                       width=bin_full+bin_buffer, height=(bin_full+bin_buffer)*num_full, 
+                       rx='3',ry='3','stroke'='#0066CC','stroke-width'='0','fill'='yellow', opacity='0.0',id = paste0('picto-highlight-',i)))
+    
+    g_picto <- newXMLNode('g', parent=g_pict_par, attrs = c(id = paste0('picto-usage-',i),'stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC'))
     # -- create empties -- 
     for (j in seq_len(num_full-1)){
       newXMLNode('rect',parent=g_picto,
                  attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=bin_full, 
-                         rx='2',ry='2','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC'))
+                         rx='2',ry='2'))
     }
     j = num_full
     # -- partial fill --
     newXMLNode('rect',parent=g_picto,
                attrs=c(x=x,y=-(bin_full+bin_buffer)*j+bin_full*(1-frac_full), width=bin_full, height=bin_full*frac_full, 
-                       rx='0',ry='0','stroke'='none','fill'='#0066CC'))
+                       rx='0',ry='0','stroke'='none'))
     # -- full bucket outline --
     newXMLNode('rect',parent=g_picto,
                attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=bin_full, 
-                       rx='2',ry='2','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='none'))
+                       rx='2',ry='2','fill'='none'))
     # -- add clear mouseover rect on top --
+    on_mouseovr <- sprintf("displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-%s').setAttribute('opacity','0.8');",i)
+    on_mouseout <- sprintf("hidePictoName(evt);document.getElementById('picto-highlight-%s').setAttribute('opacity','0.0');",i)
     newXMLNode('rect',parent=g_pict_par,
-               attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=(bin_full+bin_buffer)*j+bin_full-(bin_full+bin_buffer), 
-                       rx='0',ry='0','stroke'='#0066CC','stroke-width'='0','fill'='yellow', opacity='0.0', onmouseover="evt.target.setAttribute('opacity', '0.5');", onmouseout="evt.target.setAttribute('opacity','0');"))
+               attrs=c(x=x-bin_buffer/2,y=-(bin_full+bin_buffer)*num_full-bin_buffer/2, 
+                       width=bin_full+bin_buffer, height=(bin_full+bin_buffer)*num_full, 
+                       rx='3',ry='3','stroke'='#0066CC','stroke-width'='0','fill'='yellow', opacity='0.0', onmouseover=on_mouseovr, onmouseout=on_mouseout))
   }
   
   invisible(svg)

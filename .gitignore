@@ -3,4 +3,5 @@
 .RData
 *.DS_Store
 **.Rproj
+/nbproject/private/
 /nbproject
