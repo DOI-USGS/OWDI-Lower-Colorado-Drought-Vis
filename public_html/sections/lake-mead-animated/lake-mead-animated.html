@@ -112,6 +112,11 @@
               var $section = $("#" + e.target.name);
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawPictogram);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(1);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(2);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(3);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(4);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(5);
               } else {
                 $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removePictogram);
               }
