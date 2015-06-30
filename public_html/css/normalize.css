@@ -5,6 +5,12 @@
 
 a{
 	text-decoration:none;
+	color:#003366;
+	font-weight:500;
+	}
+	
+a:hover{
+	text-decoration:underline;
 	}
 
 ul{list-style:none;}

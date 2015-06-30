@@ -32,7 +32,7 @@ nav h3 {
 	padding: 0;
 }
 
-#container2 {
+#container3 {
 	background-image: url('../img/keynotes/keynote2-mobile.jpg');
 	background-position: center center;
 	background-size: cover;
@@ -43,7 +43,7 @@ nav h3 {
 	height: 100%;
 }
 
-#container4 {
+#container5 {
 	background-image: url('../img/keynotes/keynote3-mobile.jpg');
 	background-position: center center;
 	background-size: cover;
@@ -54,7 +54,7 @@ nav h3 {
 	height: 100%;
 }
 
-#container6 {
+#container7 {
 	background-image: url('../img/keynotes/keynote4-mobile.jpg');
 	background-position: center center;
 	background-size: cover;
@@ -65,11 +65,11 @@ nav h3 {
 	height: 100%;
 }
 
-#container7 {
+#container8 {
 	margin-bottom: 0px;
 }
 
-#container8 {
+#container9 {
 	background-image: url('../img/keynotes/keynote5-mobile.jpg');
 	background-position: center center;
 	background-size: cover;
@@ -80,7 +80,7 @@ nav h3 {
 	height: 100%;
 }
 
-#container10 {
+#container11 {
 	background-image: url('../img/keynotes/keynote6-mobile.jpg');
 	background-position: center center;
 	background-size: cover;
@@ -92,11 +92,11 @@ nav h3 {
 	margin-bottom: 50px;
 }
 
-#container11 {
+#container12 {
 	margin-bottom: 20px;
 }
 
-#container12 {
+#container13 {
 	background-image: url('../img/keynotes/keynote7-mobile.jpg');
 	background-position: center center;
 	background-position: center center;
@@ -108,7 +108,7 @@ nav h3 {
 	height: 100%;
 }
 
-#container14 {
+#container15 {
 	background-image: url('../img/keynotes/keynote8-mobile.jpg');
 	background-position: center center;
 	background-position: center center;
@@ -120,7 +120,7 @@ nav h3 {
 	height: 100%;
 }
 
-#container16 {
+#container17 {
 	background-image: url('../img/keynotes/keynote8-mobile.jpg');
 	background-position: center center;
 	background-position: center center;
@@ -161,6 +161,15 @@ nav h3 {
 .keynote h2 {
 	font-size: 6vw;
 }
+
+#keynote1 h1,
+#keynote1 h2{
+	font-weight:300;
+	}
+	
+#keynote1 h2#emphasized{
+	font-weight:400;
+	}
 /*=====Container Content CSS=====*/
 
 .section {
@@ -188,10 +197,10 @@ nav h3 {
 	margin-bottom: 10px;
 }
 
-.sectionContent p {
+.sectionContent p,
+.graphCaption p {
 	margin-bottom: 10px;
 	line-height: 1.8em;
-	margin-bottom: 20px;
 }
 
 .sectionContent p,
@@ -249,17 +258,6 @@ nav h3 {
 }
 /*Section 5 CSS*/
 
-#blueDragon img {
-	width: 100%;
-	height: auto;
-	margin-bottom: 5px;
-}
-
-#blueDragon img:first-child {
-	margin-top: 10px;
-}
-
-.picDescription,
 .graphCaption{
 	background:rgba(0,51,102,.2);
 	width:100%;
@@ -269,11 +267,7 @@ nav h3 {
 	border-radius:5px;
 	text-align:left;
 	}
-	
-.graphCaption p{
-	margin-bottom:10px;
-	}
-	
+
 /*Section 9 CSS*/
 
 #JrGraph h2 {
@@ -319,38 +313,38 @@ nav h3 {
 		padding: 50px;
 	}
 	#container1,
-	#container2,
-	#container4,
-	#container6,
-	#container8,
-	#container10,
-	#container12,
-	#container14 {
+	#container3,
+	#container5,
+	#container7,
+	#container9,
+	#container11,
+	#container13,
+	#container15 {
 		-webkit-background-size: cover;
 		background-attachment: fixed;
 	}
 	#container1 {
 		background-image: url('../img/keynotes/welcome.jpg');
 	}
-	#container2 {
+	#container3 {
 		background-image: url('../img/keynotes/keynote2.jpg');
 	}
-	#container4 {
+	#container5 {
 		background-image: url('../img/keynotes/keynote3.jpg');
 	}
-	#container6 {
+	#container7 {
 		background-image: url('../img/keynotes/keynote4.jpg');
 	}
-	#container8 {
+	#container9 {
 		background-image: url('../img/keynotes/keynote5.jpg');
 	}
-	#container10 {
+	#container11 {
 		background-image: url('../img/keynotes/keynote6.jpg');
 	}
-	#container12 {
+	#container13 {
 		background-image: url('../img/keynotes/keynote7.jpg');
 	}
-	#container14 {
+	#container15 {
 		background-image: url('../img/keynotes/keynote8.jpg');
 	}
 	/*======keynote CSS======*/
