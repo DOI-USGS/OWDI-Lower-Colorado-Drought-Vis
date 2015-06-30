@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox=" 	0 -3 1000 1000" preserveAspectRatio="xMinYMin meet">
-	 
+	 viewBox=" 	0 0 1000 1000" preserveAspectRatio="xMinYMin meet">
 <g>
 	<g id="all-objects">
 		<g id="water" fill="#1E628C">
@@ -2968,32 +2967,107 @@
 	</g>
 	
 </g>
+
 <g>
-	
 	<clipPath id="zoom-view-clip">
-	         <use xlink:href = "#zoom-view-box">
-	 		 	<animateMotion dur="4s" fill="freeze">
-	 		    	<mpath xlink:href="#Mead-path"/>
-	 		    </animateMotion>
-			 </use>
-	       </clipPath>
-	   </g>
-<image xlink:href="bluedragon-static.png" x="-1500" y="100" height="2400px" width="2400px" clip-path="url(#zoom-view-clip)"> <!-- clip-path="url(#zoom-view-box)" -->
-	 <animateMotion dur="4s" fill="freeze">
-	            <mpath xlink:href="#Mead-opposite"/>
-	         </animateMotion>
-		 </image>
-<rect x='40' y='40' width='350' height='350' id='zoom-view-box' stroke-width='2' fill='none' stroke = 'black'/>
-<path fill='none' stroke='grey' d="m 0 0 L0 50 L-50 150 l45 300" id="Mead-path"/>
-<path fill='none' stroke='grey' d="m 0 0 L0 -50 L50 -150 l-45 -300" id="Mead-opposite"/>
-
- <g>
-	 <rect id='river-view-box' x="-40" y="-40" width="80" height="80" stroke-width='2' fill='none' stroke = 'black'>
-		 <animateMotion dur="4s" fill="freeze">
-		            <mpath xlink:href="#river-path"/>
-		         </animateMotion>
-			 </rect>
-     <path fill='none' d="m 478.77653,28.210986 c 0,0 -34.95631,29.962547 -39.32584,42.446941 -4.36954,12.484395 -3.1211,28.089883 -1.87266,32.459423 1.24844,4.36954 1.24844,8.11486 6.86641,10.61174 5.61798,2.49688 11.23596,3.74532 11.23596,3.74532 0,0 3.1211,3.74531 1.87266,7.49063 -1.24844,3.74532 4.36954,13.10862 4.36954,13.10862 0,0 4.36954,4.99376 9.36329,8.11485 4.99376,3.1211 11.23596,13.73284 10.61174,16.22972 -0.62422,2.49688 -6.2422,14.98127 -6.2422,14.98127" id="river-path"/>
+		<use xlink:href = "#zoom-view-box">
+			<animateMotion id="anizoom1" dur="4s" fill="freeze">
+					<mpath xlink:href="#mead-davis-inset-path"/>
+			</animateMotion>
+			<animateMotion id="anizoom2" begin="anizoom1.end+2s" dur="4s" fill="freeze">
+					<mpath xlink:href="#davis-parker-inset-path"/>
+			</animateMotion>
+			<animateMotion id="anizoom3" begin="anizoom2.end+2s" dur="4s" fill="freeze">
+					<mpath xlink:href="#parker-imperial-inset-path"/>
+			</animateMotion>
+			<animateMotion id="anizoom4" begin="anizoom3.end+2s" dur="4s" fill="freeze">
+					<mpath xlink:href="#imperial-morelos-inset-path"/>
+			</animateMotion>
+		</use>
+	</clipPath>
 </g>
+<image xlink:href="bluedragon-static.png" x="-2700" y="0" height="4000px" width="4000px" clip-path="url(#zoom-view-clip)">
+	<animateMotion id="aniclip1" dur="4s" fill="freeze">
+			<mpath xlink:href="#mead-davis-inset-path-opposite"/>
+	</animateMotion>
+	<animateMotion id="aniclip2" begin="aniclip1.end+2s" dur="4s" fill="freeze">
+			<mpath xlink:href="#davis-parker-inset-path-opposite"/>
+	</animateMotion>
+	<animateMotion id="aniclip3" begin="aniclip2.end+2s" dur="4s" fill="freeze">
+			<mpath xlink:href="#parker-imperial-inset-path-opposite"/>
+	</animateMotion>
+	<animateMotion id="aniclip4" begin="aniclip3.end+2s" dur="4s" fill="freeze">
+			<mpath xlink:href="#imperial-morelos-inset-path-opposite"/>
+	</animateMotion>
+</image>
+<rect x='40' y='40' width='350' height='350' id='zoom-view-box' stroke-width='2' fill='none' stroke = 'black'/>
 
+<g>
+	<rect id='river-view-box' x="-40" y="-40" width="80" height="80" stroke-width='2' fill='none' stroke = 'black'>
+		<animateMotion id="animead" dur="4s" fill="freeze">
+			<mpath xlink:href="#mead-davis-path"/>
+		</animateMotion>
+		<animateMotion id="anidavis" begin="animead.end+2s" dur="4s" fill="freeze">
+			<mpath xlink:href="#davis-parker-path"/>
+		</animateMotion>
+		<animateMotion id="aniparker" begin="anidavis.end+2s" dur="4s" fill="freeze">
+			<mpath xlink:href="#parker-imperial-path"/>
+		</animateMotion>
+		<animateMotion id="aniimperial" begin="aniparker.end+2s" dur="4s" fill="freeze">
+			<mpath xlink:href="#imperial-morelos-path"/>
+		</animateMotion>
+	</rect>
+	<path
+		fill="none"
+		d="m 479.87288,27.01271 c -106.84853,73.29903 19.73967,98.95592 0,148.30509"
+		id="mead-davis-path"/>
+	<path
+		fill="none"
+		d="m 478.81356,175.84746 c -2.1126,38.71033 48.96258,29.33353 36.01695,76.80084"
+		id="davis-parker-path"/>
+	<path
+		fill="none"
+		d="m 514.83051,253.70763 c 0.16306,11.70701 1.19808,31.6409 -6.88559,39.72457 -16.6258,16.6258 -72.58778,7.46368 -83.15678,28.6017 -16.69033,33.38064 14.51952,45.45854 24.89406,66.20762 6.60547,13.21095 -19.04739,60.89062 -27.54237,69.3856 -6.16081,6.16081 -0.97227,26.30895 -4.76695,33.8983"
+		id="parker-imperial-path"/>
+	<path
+		fill="none"
+		d="m 417.90254,492.58474 c 3.16723,16.69956 -8.72076,25.10297 -13.24152,38.66526 -6.12006,18.36017 -56.81955,20.41875 -64.61865,36.01695 -8.73887,17.47774 0.12628,48.64463 -17.47881,60.38135 -28.80886,19.20591 -77.1509,-26.54291 -107.52119,-16.41949 -6.2282,2.07607 -12.1822,9.67933 -12.1822,16.41949 0,35.85747 -49.7036,60.21228 -61.97034,84.74577 -7.06625,14.1325 4.88642,47.70333 8.47458,56.67373"
+		id="imperial-morelos-path"/>
+</g>
+<g>
+<path
+	fill="none"
+	d="m 0 0 c-427.39412,293.19612 78.95868,395.82368 0.00000,593.22036"
+	id="mead-davis-inset-path"/>
+<path
+	fill="none"
+	d="m 0 800 c-8.4504,154.8413 195.8503,117.3341 144.0678,307.2034"
+	id="davis-parker-inset-path"/>
+<path
+	fill="none"
+	d="m 0 900 c 0.65224,46.82804 4.79232,126.56360 -27.54236,158.89828 -66.50320,66.50320 -290.35112,29.85472 -332.62712,114.40680 -66.76132,133.52256 58.07808,181.83416 99.57624,264.83048 26.42188,52.84380 -76.18956,243.56248 -110.16948,277.54240 -24.64324,24.64324 -3.88908,105.23580 -19.06780,135.59320"
+	id="parker-imperial-inset-path"/>
+<path
+	fill="none"
+	d="m 0 1000 c 12.66892,66.79824 -34.88304,100.41188 -52.96608,154.66104 -24.48024,73.44068 -227.27820,81.67500 -258.47460,144.06780 -34.95548,69.91096 0.50512,194.57852 -69.91524,241.52540 -115.23544,76.82364 -308.60360,-106.17164 -430.08476,-65.67796 -24.91280,8.30428 -48.72880,38.71732 -48.72880,65.67796 0.00000,143.42988 -198.81440,240.84912 -247.88136,338.98308 -28.26500,56.53000 19.54568,190.81332 33.89832,226.69492"
+	id="imperial-morelos-inset-path"/>
+</g>
+<g>
+<path
+	fill="none"
+	d="m 0 0 c427.39412,-293.19612 -78.95868,-395.82368 0.00000,-593.22036"
+	id="mead-davis-inset-path-opposite"/>
+<path
+	fill="none"
+	d="m 0 -800 c 8.4504,-154.8413 -195.8503,-117.3341 -144.0678,-307.2034"
+	id="davis-parker-inset-path-opposite"/>
+<path
+	fill="none"
+	d="m 0 -900 c -0.65224,-46.82804 -4.79232,-126.56360 27.54236,-158.89828 66.50320,-66.50320 290.35112,-29.85472 332.62712,-114.40680 66.76132,-133.52256 -58.07808,-181.83416 -99.57624,-264.83048 -26.42188,-52.84380 76.18956,-243.56248 110.16948,-277.54240 24.64324,-24.64324 3.88908,-105.23580 19.06780,-135.59320"
+	id="parker-imperial-inset-path-opposite"/>
+<path
+	fill="none"
+	d="m 0 -1000 c -12.66892,-66.79824 34.88304,-100.41188 52.96608,-154.66104 24.48024,-73.44068 227.27820,-81.67500 258.47460,-144.06780 34.95548,-69.91096 -0.50512,-194.57852 69.91524,-241.52540 115.23544,-76.82364 308.60360,106.17164 430.08476,65.67796 24.91280,-8.30428 48.72880,-38.71732 48.72880,-65.67796 0.00000,-143.42988 198.81440,-240.84912 247.88136,-338.98308 28.26500,-56.53000 -19.54568,-190.81332 -33.89832,-226.69492"
+	id="imperial-morelos-inset-path-opposite"/>
+</g>
 </svg>
