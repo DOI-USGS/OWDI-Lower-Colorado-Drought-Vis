@@ -123,10 +123,11 @@
               var $section = $("#" + e.target.name);
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(1);
+                  owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(1);
                 });
               } else {
                 $section.fadeOut(fadeSpeed);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(1);
               }
             }
 
@@ -137,10 +138,13 @@
               var $section = $("#" + e.target.name);
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(2);
+                  owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(1);  
+                  owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(2);
                 });
               } else {
                 $section.fadeOut(fadeSpeed);
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(1);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(2);
               }
             }
           },
@@ -150,10 +154,13 @@
               var $section = $("#" + e.target.name);
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(3);
+                  owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(2);
+                  owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(3);
                 });
               } else {
                 $section.fadeOut(fadeSpeed);
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(2);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(3);
               }
             }
           },
@@ -163,10 +170,13 @@
               var $section = $("#" + e.target.name);
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(4);
+                  owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(3);
+                  owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(4);
                 });
               } else {
                 $section.fadeOut(fadeSpeed);
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(3);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(4);
               }
             }
           },
@@ -176,10 +186,13 @@
               var $section = $("#" + e.target.name);
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.highlightUser(5);
+                  owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(4);
+                  owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(5);
                 });
               } else {
                 $section.fadeOut(fadeSpeed);
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(4);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(5);
               }
             }
           },
@@ -189,10 +202,12 @@
               var $section = $("#" + e.target.name);
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removeGreyStates);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(5);
                 owdiDrought.lakeMeadScene.meadObjectSVG.removeRiver();
                 owdiDrought.lakeMeadScene.meadObjectSVG.removePictogram();
               } else {
                 $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetGreyStates);
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(5);
                 owdiDrought.lakeMeadScene.meadObjectSVG.drawPictogram();
                 owdiDrought.lakeMeadScene.meadObjectSVG.drawBasin();
                 owdiDrought.lakeMeadScene.meadObjectSVG.showRiver();
