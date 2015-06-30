@@ -81,12 +81,12 @@ ecmascript_mead_map <- function(){
                'document.getElementById("Mexico-scale-reset").beginElement();}',
                
                'function drawUserPicto(user_id){',
-               '\tdocument.getElementById("pictogram-"+user_id+"-draw").beginElement();',
-               '\tdocument.getElementById("user-"+user_id+"-draw").beginElement();',
+               '\tdocument.getElementById("usage-"+user_id).setAttribute("opacity","0.8");',
                '\tdocument.getElementById("picto-highlight-"+user_id).setAttribute("opacity","0.8");',
                '}',
                
                'function removeUserPicto(user_id){',
+               '\tdocument.getElementById("usage-"+user_id).setAttribute("opacity","0.0");',
                '\tdocument.getElementById("picto-highlight-"+user_id).setAttribute("opacity","0.0");',
                '}',
                

@@ -44,22 +44,22 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
                        width=bin_full+bin_buffer, height=(bin_full+bin_buffer)*num_full, 
                        rx='3',ry='3','stroke'='#0066CC','stroke-width'='0','fill'='yellow', opacity='0.0',id = paste0('picto-highlight-',i)))
     
-    g_picto <- newXMLNode('g', parent=g_pict_par, attrs = c(id = paste0('picto-usage-',i)))
+    g_picto <- newXMLNode('g', parent=g_pict_par, attrs = c(id = paste0('picto-usage-',i),'stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC'))
     # -- create empties -- 
     for (j in seq_len(num_full-1)){
       newXMLNode('rect',parent=g_picto,
                  attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=bin_full, 
-                         rx='2',ry='2','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC'))
+                         rx='2',ry='2'))
     }
     j = num_full
     # -- partial fill --
     newXMLNode('rect',parent=g_picto,
                attrs=c(x=x,y=-(bin_full+bin_buffer)*j+bin_full*(1-frac_full), width=bin_full, height=bin_full*frac_full, 
-                       rx='0',ry='0','stroke'='none','fill'='#0066CC'))
+                       rx='0',ry='0','stroke'='none'))
     # -- full bucket outline --
     newXMLNode('rect',parent=g_picto,
                attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=bin_full, 
-                       rx='2',ry='2','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='none'))
+                       rx='2',ry='2','fill'='none'))
     # -- add clear mouseover rect on top --
     newXMLNode('rect',parent=g_pict_par,
                attrs=c(x=x-bin_buffer/2,y=-(bin_full+bin_buffer)*num_full-bin_buffer/2, 
