@@ -287,11 +287,14 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
   </defs>
   <g id="pictogram-topfive" fill="none" stroke-width="2.5" stroke="#FFFFFF" opacity="0">
     <g transform="translate(25.0,680.0)">
+    	<text class="label" id="picto-info" x="10" y="-230" fill="#FFFFFF" stroke="none" style="text-anchor: left;"> asdfasdf</text>
       <path d="M-2.0 -388.0 l0 194.0 l300.0 0" id="picto-axes"/>
       <text id="x-pictogram-label" x="150" y="-182" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;">Water user contracts</text>
       <text id="y-pictogram-label" x="-15" y="-97" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;" transform="rotate(-90,-15,-97.5),translate(200,0)">Total water use</text>
     </g>
     <g id="picto-usage-parent-1" transform="translate(25.0,486.0)">
+
+
       <rect x="0" y="-198" width="14" height="196" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-1"/>
       <g id="picto-usage-1" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
         <rect x="2" y="-14" width="10" height="10" rx="2" ry="2"/>
