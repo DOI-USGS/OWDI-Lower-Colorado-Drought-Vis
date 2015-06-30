@@ -26,7 +26,7 @@ svgDocument.setAllocationsShortage1 = this.setAllocationsShortage1;
 svgDocument.setAllocationsShortage2 = this.setAllocationsShortage2;
 svgDocument.setAllocationsShortage3 = this.setAllocationsShortage3;
 svgDocument.drawStatePicto = this.drawStatePicto;
-svgDocument.removeStatePicto = this.drawStatePicto;
+svgDocument.removeStatePicto = this.removeStatePicto;
 svgDocument.resetStates = this.resetStates;}
 }
 function showRiver(){

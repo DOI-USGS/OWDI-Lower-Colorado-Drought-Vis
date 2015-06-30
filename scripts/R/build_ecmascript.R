@@ -23,7 +23,7 @@ ecmascript_mead_map <- function(){
                'svgDocument.setAllocationsShortage2 = this.setAllocationsShortage2;',
                'svgDocument.setAllocationsShortage3 = this.setAllocationsShortage3;',
                'svgDocument.drawStatePicto = this.drawStatePicto;',
-               'svgDocument.removeStatePicto = this.drawStatePicto;',
+               'svgDocument.removeStatePicto = this.removeStatePicto;',
                'svgDocument.resetStates = this.resetStates;}',
                
                '}',
