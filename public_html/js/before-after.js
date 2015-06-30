@@ -118,19 +118,6 @@
 
     owdiDrought.slider.beforeButtonClicked = function(evt) {
       var $topLevel = $(evt.target).closest('figure'),
-        $handle = $topLevel.find('.cd-handle'),
-        $overlay = $topLevel.find('.cd-resize-img');
-
-        $handle.animate({
-          left : 100
-        });
-        $overlay.animate({
-          width: 100
-        })
-    };
-
-    owdiDrought.slider.afterButtonClicked = function(evt) {
-      var $topLevel = $(evt.target).closest('figure'),
         $afterImg = $topLevel.find('> img'),
         fullWidth = $afterImg.width(),
         $handle = $topLevel.find('.cd-handle'),
@@ -141,6 +128,20 @@
         });
         $overlay.animate({
           width: fullWidth - 100
-        })
+        });
+
+    };
+
+    owdiDrought.slider.afterButtonClicked = function(evt) {
+      var $topLevel = $(evt.target).closest('figure'),
+        $handle = $topLevel.find('.cd-handle'),
+        $overlay = $topLevel.find('.cd-resize-img');
+
+        $handle.animate({
+          left : 100
+        });
+        $overlay.animate({
+          width: 100
+        });
     };
 })();
