@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet" onload="init(evt)" viewBox="0 0 540 547" version="1.1">
   <g id="delete_group"/>
   <rect width="540" height="547" fill="grey" opacity="0.2" stroke="black" stroke-width="2"/>
-  <style type="text/css"><![CDATA[
-	text {
-            	font-size: 1em !important;
-          }]]></style>
   <script type="text/ecmascript"><![CDATA[function init(evt){
 if ( window.svgDocument == null ) {
 svgDocument = evt.target.ownerDocument;
@@ -22,10 +19,15 @@ svgDocument.resetRiver = this.resetRiver;
 svgDocument.resetBasin = this.resetBasin;
 svgDocument.removePictogram = this.removePictogram;
 svgDocument.moveStates = this.moveStates;
-svgDocument.highlightUser = this.highlightUser;
+svgDocument.drawUserPicto = this.drawUserPicto;
+svgDocument.removeUserPicto = this.removeUserPicto;
 svgDocument.setMeadCondition = this.setMeadCondition;
+svgDocument.setAllocationsNormal = this.setAllocationsNormal;
+svgDocument.setAllocationsShortage1 = this.setAllocationsShortage1;
+svgDocument.setAllocationsShortage2 = this.setAllocationsShortage2;
+svgDocument.setAllocationsShortage3 = this.setAllocationsShortage3;
 svgDocument.drawStatePicto = this.drawStatePicto;
-svgDocument.removeStatePicto = this.drawStatePicto;
+svgDocument.removeStatePicto = this.removeStatePicto;
 svgDocument.resetStates = this.resetStates;}
 }
 function showRiver(){
@@ -71,13 +73,62 @@ document.getElementById("Nevada-reset").beginElement();
 document.getElementById("mexico-reset").beginElement();
 document.getElementById("Mexico-stroke-reset").beginElement();
 document.getElementById("Mexico-scale-reset").beginElement();}
-function highlightUser(user_id){
-document.getElementById("pictogram-"+user_id+"-draw").beginElement();
-document.getElementById("user-"+user_id+"-draw").beginElement();}
+function drawUserPicto(user_id){
+	document.getElementById("usage-"+user_id).setAttribute("opacity","0.8");
+	document.getElementById("picto-highlight-"+user_id).setAttribute("opacity","0.8");
+}
+function displayPictoName(evt, name) {
+	document.getElementById("picto-info").firstChild.data = name;
+	document.getElementById("picto-info").setAttribute("x",evt.clientX-14);
+}
+function hidePictoName(evt) {
+	document.getElementById("picto-info").firstChild.data = " ";
+}
+function removeUserPicto(user_id){
+	document.getElementById("usage-"+user_id).setAttribute("opacity","0.0");
+	document.getElementById("picto-highlight-"+user_id).setAttribute("opacity","0.0");
+}
 function drawStatePicto(user_id){
-document.getElementById("draw-"+user_id+"-pictogram").beginElement();}
+	document.getElementById("draw-"+user_id+"-pictogram").beginElement();
+}
 function removeStatePicto(user_id){
-document.getElementById("remove-"+user_id+"-pictogram").beginElement();}
+	document.getElementById("remove-"+user_id+"-pictogram").beginElement();
+}
+function setAllocationsNormal(){
+	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","visible");
+	document.getElementById("Arizona-pictos-normal").setAttribute("visibility","visible");
+	document.getElementById("Mexico-pictos-normal").setAttribute("visibility","visible");
+}
+function setAllocationsShortage1(){
+	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");
+	document.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","visible");
+	document.getElementById("Arizona-pictos-normal").setAttribute("visibility","hidden");
+	document.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","visible");
+	document.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");
+	document.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","visible");
+}
+function setAllocationsShortage2(){
+	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");
+	document.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","hidden");
+	document.getElementById("Nevada-pictos-shortage2").setAttribute("visibility","visible");
+	document.getElementById("Arizona-pictos-normal").setAttribute("visibility","hidden");
+	document.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","hidden");
+	document.getElementById("Arizona-pictos-shortage2").setAttribute("visibility","visible");
+	document.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");
+	document.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","hidden");
+	document.getElementById("Mexico-pictos-shortage2").setAttribute("visibility","visible");
+}
+function setAllocationsShortage3(){
+	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");
+	document.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","hidden");
+	document.getElementById("Nevada-pictos-shortage2").setAttribute("visibility","hidden");
+	document.getElementById("Arizona-pictos-normal").setAttribute("visibility","hidden");
+	document.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","hidden");
+	document.getElementById("Arizona-pictos-shortage2").setAttribute("visibility","hidden");
+	document.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");
+	document.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","hidden");
+	document.getElementById("Mexico-pictos-shortage2").setAttribute("visibility","hidden");
+}
 function setMeadCondition(storage_id){
 document.getElementById("Mead-"+storage_id).beginElement();}
 function showRiverDOM(){
@@ -219,21 +270,11 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <animate attributeName="opacity" id="remove-basin" begin="indefinite" fill="freeze" dur="1s" to="0"/>
   </g>
   <g id="top-users" fill="#E6E600" fill-opacity="0.75" stroke-width="2.5" stroke="#E6E600" stroke-linejoin="round">
-    <path id="usage-1" d="M 239.960938 205.539062 L 246.929688 206.460938 L 251.808594 206.417969 L 251.699219 208.09375 L 252.511719 208.121094 L 253.09375 210.113281 L 252.847656 211.660156 L 255.71875 214.71875 L 256.9375 213.148438 L 263.589844 227.585938 L 266.132812 224.253906 L 269.386719 223.117188 L 269.757812 253.691406 L 257.035156 253.929688 L 257.074219 258.195312 L 253.441406 258.230469 L 253.453125 260.21875 L 218.378906 247.28125 L 218.929688 206.304688 L 229.199219 206.402344 L 237.335938 208.910156 L 239.285156 205.449219 Z M 239.960938 205.539062 " opacity="0">
-      <animate attributeName="opacity" id="user-1-draw" begin="indefinite" fill="freeze" dur="2s" values="0;1;0"/>
-    </path>
-    <path id="usage-2" d="M 206.765625 233.554688 L 204.171875 234.734375 L 202.886719 234.632812 L 201.390625 233.761719 L 200.40625 231.921875 L 198.957031 232.175781 L 200.683594 231.390625 L 203.0625 233.722656 L 205.960938 231.945312 L 212.363281 230.554688 L 211.292969 231.1875 L 211.503906 231.875 L 210.449219 231.632812 L 209.453125 232.378906 L 209.441406 233.136719 Z M 206.765625 233.554688 " opacity="0">
-      <animate attributeName="opacity" id="user-2-draw" begin="indefinite" fill="freeze" dur="2s" values="0;1;0"/>
-    </path>
-    <path id="usage-3" d="M 196.054688 165.398438 L 196.886719 166.691406 L 196.121094 167.101562 L 195.988281 168.039062 L 196.871094 172.164062 L 196.375 174.496094 L 198.070312 181.117188 L 197.886719 182.253906 L 196.691406 182.785156 L 197.429688 183.503906 L 196.863281 184.882812 L 176.800781 164.066406 L 176.976562 159.734375 L 176.132812 159.667969 L 176.691406 145.652344 L 207.738281 146.625 L 207.546875 160.214844 L 206.203125 161.910156 L 205.894531 163.417969 L 204.066406 163.863281 L 201.929688 161.121094 L 197.574219 161.039062 L 195.433594 162.148438 Z M 196.054688 165.398438 " opacity="0">
-      <animate attributeName="opacity" id="user-3-draw" begin="indefinite" fill="freeze" dur="2s" values="0;1;0"/>
-    </path>
-    <path id="usage-4" d="M 195.796875 233.351562 L 195.796875 233.371094 L 195.816406 233.371094 L 195.816406 233.390625 L 195.796875 233.390625 L 195.796875 233.410156 L 195.777344 233.410156 L 195.78125 233.351562 Z M 200.457031 233.140625 L 200.441406 233.75 L 200.136719 233.742188 L 200.132812 233.894531 L 200.4375 233.902344 L 200.433594 234.050781 L 200.429688 234.195312 L 200.425781 234.355469 L 200.421875 234.5 L 200.421875 234.65625 L 200.117188 234.652344 L 199.507812 234.636719 L 199.207031 234.632812 L 198.902344 234.625 L 198.613281 234.617188 L 198.308594 234.617188 L 198.3125 234.308594 L 198.316406 234.003906 L 198.316406 233.90625 L 197.734375 234.601562 L 197.398438 234.59375 L 197.167969 234.589844 L 197.167969 234.621094 L 197.164062 234.742188 L 197.089844 234.742188 L 197.085938 234.816406 L 196.933594 234.816406 L 196.933594 234.894531 L 196.78125 234.890625 L 196.78125 235.042969 L 196.929688 235.046875 L 196.929688 235.199219 L 196.859375 235.199219 L 196.855469 235.363281 L 196.699219 235.359375 L 196.695312 235.503906 L 196.773438 235.503906 L 196.773438 235.511719 L 196.769531 235.65625 L 196.585938 235.652344 L 196.585938 235.6875 L 196.464844 235.683594 L 196.460938 235.957031 L 196.152344 235.953125 L 196.15625 235.875 L 195.847656 235.867188 L 195.847656 236.097656 L 195.691406 236.09375 L 195.691406 236.246094 L 195.644531 236.246094 L 195.539062 236.242188 L 195.539062 236.089844 L 195.230469 236.082031 L 195.230469 236.382812 L 195.308594 236.386719 L 195.304688 236.53125 L 195.304688 236.550781 L 195.300781 236.691406 L 195.53125 236.703125 L 195.53125 236.847656 L 194.273438 236.363281 L 194.308594 236.363281 L 194.613281 236.371094 L 194.621094 236.066406 L 194.925781 236.070312 L 195.078125 236.078125 L 195.082031 235.925781 L 195.234375 235.929688 L 195.3125 235.929688 L 195.367188 235.933594 L 195.386719 235.933594 L 195.386719 235.855469 L 195.542969 235.859375 L 195.542969 235.785156 L 195.628906 235.785156 L 195.695312 235.71875 L 195.695312 235.710938 L 195.699219 235.480469 L 195.703125 235.433594 L 195.597656 235.25 L 195.601562 234.945312 L 195.636719 234.910156 L 195.636719 234.867188 L 195.5625 234.867188 L 195.5625 234.714844 L 195.511719 234.714844 L 195.511719 234.679688 L 195.566406 234.679688 L 195.566406 234.5625 L 195.511719 234.5625 L 195.515625 234.484375 L 195.492188 234.484375 L 195.503906 233.800781 L 195.429688 233.800781 L 195.429688 233.722656 L 195.46875 233.722656 L 195.472656 233.648438 L 195.585938 233.652344 L 195.660156 233.652344 L 195.734375 233.65625 L 195.738281 233.578125 L 195.773438 233.582031 L 195.8125 233.582031 L 195.8125 233.65625 L 196.039062 233.664062 L 196.039062 233.660156 L 195.980469 233.660156 L 195.980469 233.648438 L 195.886719 233.648438 L 195.890625 233.507812 L 196.003906 233.507812 L 196.003906 233.546875 L 196.042969 233.546875 L 196.042969 233.5 L 195.890625 233.496094 L 195.894531 233.355469 L 195.898438 233.203125 L 196.015625 233.203125 L 196.027344 233.214844 L 196.039062 233.222656 L 196.054688 233.230469 L 196.082031 233.238281 L 196.144531 233.257812 L 196.199219 233.277344 L 196.222656 233.28125 L 196.242188 233.292969 L 196.257812 233.304688 L 196.347656 233.339844 L 196.347656 233.359375 L 196.46875 233.363281 L 196.640625 233.414062 L 196.667969 233.417969 L 196.925781 233.503906 L 197.128906 233.570312 L 197.175781 233.585938 L 197.210938 233.59375 L 197.257812 233.605469 L 197.40625 233.609375 L 197.410156 233.445312 L 197.441406 233.417969 L 197.457031 233.378906 L 197.566406 233.382812 L 197.566406 233.304688 L 197.871094 233.3125 L 197.871094 233.261719 L 197.898438 233.253906 L 197.929688 233.238281 L 198.144531 233.242188 L 198.175781 233.285156 L 198.171875 233.394531 L 198.332031 233.394531 L 198.34375 233.410156 L 198.367188 233.402344 L 198.375 233.394531 L 198.464844 233.398438 L 198.484375 233.414062 L 198.480469 233.441406 L 198.542969 233.421875 L 198.59375 233.398438 L 198.628906 233.402344 L 198.632812 233.269531 L 198.671875 233.25 L 198.933594 233.253906 L 198.9375 233.097656 L 199.089844 233.101562 L 199.183594 233.113281 L 199.238281 233.117188 L 199.316406 233.117188 L 199.3125 233.191406 L 199.238281 233.191406 L 199.230469 233.414062 L 200.144531 233.4375 L 200.152344 233.132812 Z M 198.550781 233.550781 L 198.550781 233.625 L 198.625 233.628906 L 198.628906 233.554688 Z M 196.042969 233.433594 L 196.046875 233.355469 L 195.96875 233.355469 L 195.964844 233.433594 Z M 197.707031 233.839844 L 197.632812 233.839844 L 197.632812 233.917969 L 197.554688 233.914062 L 197.554688 233.992188 L 197.707031 233.992188 L 197.707031 233.839844 L 197.785156 233.839844 L 197.785156 233.691406 L 197.710938 233.6875 Z M 197.707031 233.839844 " opacity="0">
-      <animate attributeName="opacity" id="user-4-draw" begin="indefinite" fill="freeze" dur="2s" values="0;1;0"/>
-    </path>
-    <path id="usage-5" d="M 197.273438 232.769531 L 199.035156 232.195312 L 199.316406 233.042969 L 197.109375 233.425781 L 195.902344 232.953125 Z M 197.273438 232.769531 " opacity="0">
-      <animate attributeName="opacity" id="user-5-draw" begin="indefinite" fill="freeze" dur="2s" values="0;1;0"/>
-    </path>
+    <path id="usage-1" d="M 239.960938 205.539062 L 246.929688 206.460938 L 251.808594 206.417969 L 251.699219 208.09375 L 252.511719 208.121094 L 253.09375 210.113281 L 252.847656 211.660156 L 255.71875 214.71875 L 256.9375 213.148438 L 263.589844 227.585938 L 266.132812 224.253906 L 269.386719 223.117188 L 269.757812 253.691406 L 257.035156 253.929688 L 257.074219 258.195312 L 253.441406 258.230469 L 253.453125 260.21875 L 218.378906 247.28125 L 218.929688 206.304688 L 229.199219 206.402344 L 237.335938 208.910156 L 239.285156 205.449219 Z M 239.960938 205.539062 " opacity="0"/>
+    <path id="usage-2" d="M 206.765625 233.554688 L 204.171875 234.734375 L 202.886719 234.632812 L 201.390625 233.761719 L 200.40625 231.921875 L 198.957031 232.175781 L 200.683594 231.390625 L 203.0625 233.722656 L 205.960938 231.945312 L 212.363281 230.554688 L 211.292969 231.1875 L 211.503906 231.875 L 210.449219 231.632812 L 209.453125 232.378906 L 209.441406 233.136719 Z M 206.765625 233.554688 " opacity="0"/>
+    <path id="usage-3" d="M 196.054688 165.398438 L 196.886719 166.691406 L 196.121094 167.101562 L 195.988281 168.039062 L 196.871094 172.164062 L 196.375 174.496094 L 198.070312 181.117188 L 197.886719 182.253906 L 196.691406 182.785156 L 197.429688 183.503906 L 196.863281 184.882812 L 176.800781 164.066406 L 176.976562 159.734375 L 176.132812 159.667969 L 176.691406 145.652344 L 207.738281 146.625 L 207.546875 160.214844 L 206.203125 161.910156 L 205.894531 163.417969 L 204.066406 163.863281 L 201.929688 161.121094 L 197.574219 161.039062 L 195.433594 162.148438 Z M 196.054688 165.398438 " opacity="0"/>
+    <path id="usage-4" d="M 195.796875 233.351562 L 195.796875 233.371094 L 195.816406 233.371094 L 195.816406 233.390625 L 195.796875 233.390625 L 195.796875 233.410156 L 195.777344 233.410156 L 195.78125 233.351562 Z M 200.457031 233.140625 L 200.441406 233.75 L 200.136719 233.742188 L 200.132812 233.894531 L 200.4375 233.902344 L 200.433594 234.050781 L 200.429688 234.195312 L 200.425781 234.355469 L 200.421875 234.5 L 200.421875 234.65625 L 200.117188 234.652344 L 199.507812 234.636719 L 199.207031 234.632812 L 198.902344 234.625 L 198.613281 234.617188 L 198.308594 234.617188 L 198.3125 234.308594 L 198.316406 234.003906 L 198.316406 233.90625 L 197.734375 234.601562 L 197.398438 234.59375 L 197.167969 234.589844 L 197.167969 234.621094 L 197.164062 234.742188 L 197.089844 234.742188 L 197.085938 234.816406 L 196.933594 234.816406 L 196.933594 234.894531 L 196.78125 234.890625 L 196.78125 235.042969 L 196.929688 235.046875 L 196.929688 235.199219 L 196.859375 235.199219 L 196.855469 235.363281 L 196.699219 235.359375 L 196.695312 235.503906 L 196.773438 235.503906 L 196.773438 235.511719 L 196.769531 235.65625 L 196.585938 235.652344 L 196.585938 235.6875 L 196.464844 235.683594 L 196.460938 235.957031 L 196.152344 235.953125 L 196.15625 235.875 L 195.847656 235.867188 L 195.847656 236.097656 L 195.691406 236.09375 L 195.691406 236.246094 L 195.644531 236.246094 L 195.539062 236.242188 L 195.539062 236.089844 L 195.230469 236.082031 L 195.230469 236.382812 L 195.308594 236.386719 L 195.304688 236.53125 L 195.304688 236.550781 L 195.300781 236.691406 L 195.53125 236.703125 L 195.53125 236.847656 L 194.273438 236.363281 L 194.308594 236.363281 L 194.613281 236.371094 L 194.621094 236.066406 L 194.925781 236.070312 L 195.078125 236.078125 L 195.082031 235.925781 L 195.234375 235.929688 L 195.3125 235.929688 L 195.367188 235.933594 L 195.386719 235.933594 L 195.386719 235.855469 L 195.542969 235.859375 L 195.542969 235.785156 L 195.628906 235.785156 L 195.695312 235.71875 L 195.695312 235.710938 L 195.699219 235.480469 L 195.703125 235.433594 L 195.597656 235.25 L 195.601562 234.945312 L 195.636719 234.910156 L 195.636719 234.867188 L 195.5625 234.867188 L 195.5625 234.714844 L 195.511719 234.714844 L 195.511719 234.679688 L 195.566406 234.679688 L 195.566406 234.5625 L 195.511719 234.5625 L 195.515625 234.484375 L 195.492188 234.484375 L 195.503906 233.800781 L 195.429688 233.800781 L 195.429688 233.722656 L 195.46875 233.722656 L 195.472656 233.648438 L 195.585938 233.652344 L 195.660156 233.652344 L 195.734375 233.65625 L 195.738281 233.578125 L 195.773438 233.582031 L 195.8125 233.582031 L 195.8125 233.65625 L 196.039062 233.664062 L 196.039062 233.660156 L 195.980469 233.660156 L 195.980469 233.648438 L 195.886719 233.648438 L 195.890625 233.507812 L 196.003906 233.507812 L 196.003906 233.546875 L 196.042969 233.546875 L 196.042969 233.5 L 195.890625 233.496094 L 195.894531 233.355469 L 195.898438 233.203125 L 196.015625 233.203125 L 196.027344 233.214844 L 196.039062 233.222656 L 196.054688 233.230469 L 196.082031 233.238281 L 196.144531 233.257812 L 196.199219 233.277344 L 196.222656 233.28125 L 196.242188 233.292969 L 196.257812 233.304688 L 196.347656 233.339844 L 196.347656 233.359375 L 196.46875 233.363281 L 196.640625 233.414062 L 196.667969 233.417969 L 196.925781 233.503906 L 197.128906 233.570312 L 197.175781 233.585938 L 197.210938 233.59375 L 197.257812 233.605469 L 197.40625 233.609375 L 197.410156 233.445312 L 197.441406 233.417969 L 197.457031 233.378906 L 197.566406 233.382812 L 197.566406 233.304688 L 197.871094 233.3125 L 197.871094 233.261719 L 197.898438 233.253906 L 197.929688 233.238281 L 198.144531 233.242188 L 198.175781 233.285156 L 198.171875 233.394531 L 198.332031 233.394531 L 198.34375 233.410156 L 198.367188 233.402344 L 198.375 233.394531 L 198.464844 233.398438 L 198.484375 233.414062 L 198.480469 233.441406 L 198.542969 233.421875 L 198.59375 233.398438 L 198.628906 233.402344 L 198.632812 233.269531 L 198.671875 233.25 L 198.933594 233.253906 L 198.9375 233.097656 L 199.089844 233.101562 L 199.183594 233.113281 L 199.238281 233.117188 L 199.316406 233.117188 L 199.3125 233.191406 L 199.238281 233.191406 L 199.230469 233.414062 L 200.144531 233.4375 L 200.152344 233.132812 Z M 198.550781 233.550781 L 198.550781 233.625 L 198.625 233.628906 L 198.628906 233.554688 Z M 196.042969 233.433594 L 196.046875 233.355469 L 195.96875 233.355469 L 195.964844 233.433594 Z M 197.707031 233.839844 L 197.632812 233.839844 L 197.632812 233.917969 L 197.554688 233.914062 L 197.554688 233.992188 L 197.707031 233.992188 L 197.707031 233.839844 L 197.785156 233.839844 L 197.785156 233.691406 L 197.710938 233.6875 Z M 197.707031 233.839844 " opacity="0"/>
+    <path id="usage-5" d="M 197.273438 232.769531 L 199.035156 232.195312 L 199.316406 233.042969 L 197.109375 233.425781 L 195.902344 232.953125 Z M 197.273438 232.769531 " opacity="0"/>
   </g>
   <defs>
     <radialGradient id="Gradient">
@@ -254,156 +295,170 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
   <g id="pictogram-topfive" fill="none" stroke-width="2.5" stroke="#FFFFFF" opacity="0">
     <g transform="translate(25.0,680.0)">
       <path d="M-2.0 -388.0 l0 194.0 l300.0 0" id="picto-axes"/>
+      <text class="label" id="picto-info" x="0" y="-290" fill="#FFFFFF" stroke="none" style="text-anchor: left;">  </text>
       <text id="x-pictogram-label" x="150" y="-182" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;">Water user contracts</text>
       <text id="y-pictogram-label" x="-15" y="-97" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;" transform="rotate(-90,-15,-97.5),translate(200,0)">Total water use</text>
     </g>
     <g id="picto-usage-parent-1" transform="translate(25.0,486.0)">
-      <g id="picto-usage-1">
-        <rect x="2" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-42" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-56" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-70" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-84" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-98" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-112" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-126" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-140" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-154" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-168" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-182" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="2" y="-186.081" width="10" height="0.0810000000000066" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="2" y="-196" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
-        <animate attributeName="opacity" id="pictogram-1-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+      <rect x="0" y="-198" width="14" height="196" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-1"/>
+      <g id="picto-usage-1" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="2" y="-14" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-28" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-42" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-56" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-70" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-84" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-98" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-112" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-126" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-140" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-154" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-168" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-182" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-186.081" width="10" height="0.0810000000000066" rx="0" ry="0" stroke="none"/>
+        <rect x="2" y="-196" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="2" y="-196" width="10" height="192" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="0" y="-198" width="14" height="196" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-1').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-1').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-2" transform="translate(25.0,486.0)">
-      <g id="picto-usage-2">
-        <rect x="16" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="16" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="16" y="-39.8" width="10" height="7.8" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="16" y="-42" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
-        <animate attributeName="opacity" id="pictogram-2-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+      <rect x="14" y="-44" width="14" height="42" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-2"/>
+      <g id="picto-usage-2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="16" y="-14" width="10" height="10" rx="2" ry="2"/>
+        <rect x="16" y="-28" width="10" height="10" rx="2" ry="2"/>
+        <rect x="16" y="-39.8" width="10" height="7.8" rx="0" ry="0" stroke="none"/>
+        <rect x="16" y="-42" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="16" y="-42" width="10" height="38" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="14" y="-44" width="14" height="42" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-2').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-2').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-3" transform="translate(25.0,486.0)">
-      <g id="picto-usage-3">
-        <rect x="30" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="30" y="-25.207" width="10" height="7.207" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="30" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
-        <animate attributeName="opacity" id="pictogram-3-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+      <rect x="28" y="-30" width="14" height="28" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-3"/>
+      <g id="picto-usage-3" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="30" y="-14" width="10" height="10" rx="2" ry="2"/>
+        <rect x="30" y="-25.207" width="10" height="7.207" rx="0" ry="0" stroke="none"/>
+        <rect x="30" y="-28" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="30" y="-28" width="10" height="24" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="28" y="-30" width="14" height="28" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-3').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-3').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-4" transform="translate(25.0,486.0)">
-      <g id="picto-usage-4">
-        <rect x="44" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC"/>
-        <rect x="44" y="-22.1519" width="10" height="4.1519" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="44" y="-28" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
-        <animate attributeName="opacity" id="pictogram-4-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+      <rect x="42" y="-30" width="14" height="28" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-4"/>
+      <g id="picto-usage-4" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="44" y="-14" width="10" height="10" rx="2" ry="2"/>
+        <rect x="44" y="-22.1519" width="10" height="4.1519" rx="0" ry="0" stroke="none"/>
+        <rect x="44" y="-28" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="44" y="-28" width="10" height="24" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="42" y="-30" width="14" height="28" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-4').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-4').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-5" transform="translate(25.0,486.0)">
-      <g id="picto-usage-5">
-        <rect x="58" y="-10.7278" width="10" height="6.7278" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="58" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
-        <animate attributeName="opacity" id="pictogram-5-draw" begin="indefinite" fill="freeze" dur="2s" values="1;0;1;0;1"/>
+      <rect x="56" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-5"/>
+      <g id="picto-usage-5" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="58" y="-10.7278" width="10" height="6.7278" rx="0" ry="0" stroke="none"/>
+        <rect x="58" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="58" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="56" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-5').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-5').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-6" transform="translate(25.0,486.0)">
-      <g id="picto-usage-6">
-        <rect x="72" y="-8.8522" width="10" height="4.8522" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="72" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="70" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-6"/>
+      <g id="picto-usage-6" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="72" y="-8.8522" width="10" height="4.8522" rx="0" ry="0" stroke="none"/>
+        <rect x="72" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="72" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="70" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-6').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-6').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-7" transform="translate(25.0,486.0)">
-      <g id="picto-usage-7">
-        <rect x="86" y="-8.1203" width="10" height="4.1203" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="86" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="84" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-7"/>
+      <g id="picto-usage-7" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="86" y="-8.1203" width="10" height="4.1203" rx="0" ry="0" stroke="none"/>
+        <rect x="86" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="86" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="84" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-7').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-7').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-8" transform="translate(25.0,486.0)">
-      <g id="picto-usage-8">
-        <rect x="100" y="-7.7399" width="10" height="3.7399" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="100" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="98" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-8"/>
+      <g id="picto-usage-8" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="100" y="-7.7399" width="10" height="3.7399" rx="0" ry="0" stroke="none"/>
+        <rect x="100" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="100" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="98" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-8').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-8').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-9" transform="translate(25.0,486.0)">
-      <g id="picto-usage-9">
-        <rect x="114" y="-6.3" width="10" height="2.3" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="114" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="112" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-9"/>
+      <g id="picto-usage-9" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="114" y="-6.3" width="10" height="2.3" rx="0" ry="0" stroke="none"/>
+        <rect x="114" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="114" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="112" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-9').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-9').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-10" transform="translate(25.0,486.0)">
-      <g id="picto-usage-10">
-        <rect x="128" y="-5.6793" width="10" height="1.6793" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="128" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="126" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-10"/>
+      <g id="picto-usage-10" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="128" y="-5.6793" width="10" height="1.6793" rx="0" ry="0" stroke="none"/>
+        <rect x="128" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="128" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="126" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-10').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-10').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-11" transform="translate(25.0,486.0)">
-      <g id="picto-usage-11">
-        <rect x="142" y="-4.4251" width="10" height="0.4251" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="142" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-11"/>
+      <g id="picto-usage-11" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="142" y="-4.4251" width="10" height="0.4251" rx="0" ry="0" stroke="none"/>
+        <rect x="142" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="142" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-11').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-11').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-12" transform="translate(25.0,486.0)">
-      <g id="picto-usage-12">
-        <rect x="156" y="-4.401" width="10" height="0.401" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="156" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-12"/>
+      <g id="picto-usage-12" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="156" y="-4.401" width="10" height="0.401" rx="0" ry="0" stroke="none"/>
+        <rect x="156" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="156" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-12').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-12').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-13" transform="translate(25.0,486.0)">
-      <g id="picto-usage-13">
-        <rect x="170" y="-4.1478" width="10" height="0.1478" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="170" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="168" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-13"/>
+      <g id="picto-usage-13" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="170" y="-4.1478" width="10" height="0.1478" rx="0" ry="0" stroke="none"/>
+        <rect x="170" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="170" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="168" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-13').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-13').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-14" transform="translate(25.0,486.0)">
-      <g id="picto-usage-14">
-        <rect x="184" y="-4.095" width="10" height="0.0949999999999995" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="184" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="182" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-14"/>
+      <g id="picto-usage-14" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="184" y="-4.095" width="10" height="0.0949999999999995" rx="0" ry="0" stroke="none"/>
+        <rect x="184" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="184" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="182" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-14').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-14').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-15" transform="translate(25.0,486.0)">
-      <g id="picto-usage-15">
-        <rect x="198" y="-4.095" width="10" height="0.0949999999999995" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="198" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="196" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-15"/>
+      <g id="picto-usage-15" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="198" y="-4.095" width="10" height="0.0949999999999995" rx="0" ry="0" stroke="none"/>
+        <rect x="198" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="198" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="196" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-15').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-15').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-16" transform="translate(25.0,486.0)">
-      <g id="picto-usage-16">
-        <rect x="212" y="-4.04" width="10" height="0.04" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="212" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="210" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-16"/>
+      <g id="picto-usage-16" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="212" y="-4.04" width="10" height="0.04" rx="0" ry="0" stroke="none"/>
+        <rect x="212" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="212" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="210" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-16').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-16').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-17" transform="translate(25.0,486.0)">
-      <g id="picto-usage-17">
-        <rect x="226" y="-4.03" width="10" height="0.03" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="226" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="224" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-17"/>
+      <g id="picto-usage-17" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="226" y="-4.03" width="10" height="0.03" rx="0" ry="0" stroke="none"/>
+        <rect x="226" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="226" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="224" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-17').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-17').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-18" transform="translate(25.0,486.0)">
-      <g id="picto-usage-18">
-        <rect x="240" y="-4.0025" width="10" height="0.00249999999999972" rx="0" ry="0" stroke="none" fill="#0066CC"/>
-        <rect x="240" y="-14" width="10" height="10" rx="2" ry="2" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+      <rect x="238" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" id="picto-highlight-18"/>
+      <g id="picto-usage-18" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
+        <rect x="240" y="-4.0025" width="10" height="0.00249999999999972" rx="0" ry="0" stroke="none"/>
+        <rect x="240" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect x="240" y="-14" width="10" height="10" rx="0" ry="0" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="evt.target.setAttribute('opacity', '0.5');" onmouseout="evt.target.setAttribute('opacity','0');"/>
+      <rect x="238" y="-16" width="14" height="14" rx="3" ry="3" stroke="#0066CC" stroke-width="0" fill="yellow" opacity="0.0" onmouseover="displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-18').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);document.getElementById('picto-highlight-18').setAttribute('opacity','0.0');"/>
     </g>
     <animate attributeName="opacity" id="pictogram-topfive-draw" begin="indefinite" fill="freeze" dur="1s" values="0;1"/>
     <animate attributeName="opacity" id="pictogram-topfive-reset" begin="indefinite" fill="freeze" dur="1s" to="0"/>
@@ -429,113 +484,155 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <animate attributeName="opacity" id="mead-remove" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
   <g id="California-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
-    <rect x="114" y="211" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="211" width="10" height="10" rx="2" ry="2"/>
-    <rect x="142" y="211" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="197" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="197" width="10" height="10" rx="2" ry="2"/>
-    <rect x="142" y="197" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="183" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="183" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="183" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="183" width="10" height="10" rx="2" ry="2"/>
-    <rect x="142" y="183" width="10" height="10" rx="2" ry="2"/>
-    <rect x="58" y="169" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="169" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="169" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="169" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="169" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="169" width="10" height="10" rx="2" ry="2"/>
-    <rect x="142" y="169" width="10" height="10" rx="2" ry="2"/>
-    <rect x="58" y="155" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="155" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="155" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="155" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="155" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="155" width="10" height="10" rx="2" ry="2"/>
-    <rect x="44" y="141" width="10" height="10" rx="2" ry="2"/>
-    <rect x="58" y="141" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="141" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="141" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="141" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="141" width="10" height="10" rx="2" ry="2"/>
-    <rect x="44" y="127" width="10" height="10" rx="2" ry="2"/>
-    <rect x="58" y="127" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="127" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="127" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="127" width="10" height="10" rx="2" ry="2"/>
-    <rect x="30" y="113" width="10" height="10" rx="2" ry="2"/>
-    <rect x="44" y="113" width="10" height="10" rx="2" ry="2"/>
-    <rect x="58" y="113" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="113" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="113" width="10" height="10" rx="2" ry="2"/>
-    <rect x="30" y="99" width="10" height="10" rx="2" ry="2"/>
-    <rect x="44" y="99" width="10" height="10" rx="2" ry="2"/>
-    <rect x="58" y="99" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="99" width="10" height="10" rx="2" ry="2"/>
-    <animate attributeName="opacity" id="draw-california-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
+    <rect x="114" y="201" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="201" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="201" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="187" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="187" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="187" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="173" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="173" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="173" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="173" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="173" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="159" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="145" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="145" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="145" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="145" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="145" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="145" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="131" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="131" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="131" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="131" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="131" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="131" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="117" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="117" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="117" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="117" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="117" width="10" height="10" rx="2" ry="2"/>
+    <rect x="30" y="103" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="103" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="103" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="103" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="103" width="10" height="10" rx="2" ry="2"/>
+    <rect x="30" y="89" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="89" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="89" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="89" width="10" height="10" rx="2" ry="2"/>
+    <animate attributeName="opacity" id="draw-california-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-california-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
   <g id="Nevada-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
-    <rect x="159" y="130" width="10" height="10" rx="2" ry="2"/>
-    <rect x="145" y="116" width="10" height="10" rx="2" ry="2"/>
+    <rect x="159" y="120" width="10" height="10" rx="2" ry="2"/>
+    <rect x="145" y="106" width="10" height="10" rx="2" ry="2"/>
+    <rect x="159" y="106" width="10" height="10" rx="2" ry="2" fill="none"/>
     <g id="Nevada-pictos-normal">
-      <rect x="159" y="116" width="10" height="10" rx="2" ry="2" fill="none"/>
-      <rect x="159" y="121" width="10" height="5" rx="0" ry="0" stroke="none"/>
+      <rect x="159" y="106" width="10" height="10" rx="0" ry="0" stroke="none"/>
     </g>
-    <animate attributeName="opacity" id="draw-nevada-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
+    <g id="Nevada-pictos-shortage1">
+      <rect x="159" y="107.3" width="10" height="8.7" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="Nevada-pictos-shortage2">
+      <rect x="159" y="107.7" width="10" height="8.3" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="Nevada-pictos-shortage3">
+      <rect x="159" y="108" width="10" height="8" rx="0" ry="0" stroke="none"/>
+    </g>
+    <animate attributeName="opacity" id="draw-nevada-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-nevada-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
   <g id="Arizona-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
-    <rect x="201" y="226" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="226" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="226" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="226" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="212" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="212" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="212" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="212" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="212" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="212" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="198" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="198" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="198" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="198" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="198" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="198" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="184" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="184" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="184" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="184" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="184" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="184" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="170" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="170" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="170" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="170" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="170" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="170" width="10" height="10" rx="2" ry="2"/>
-    <animate attributeName="opacity" id="draw-arizona-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
+    <rect x="201" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="215" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="229" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="243" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="271" y="202" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="201" y="202" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="202" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="202" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="202" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="202" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="188" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="188" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="188" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="188" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="188" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="188" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="174" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="174" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="174" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="174" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="174" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="174" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="160" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="160" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="160" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="160" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="160" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="160" width="10" height="10" rx="2" ry="2"/>
+    <g id="Arizona-pictos-normal">
+      <rect x="201" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="215" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="229" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="243" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="271" y="202" width="10" height="10" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="Arizona-pictos-shortage1">
+      <rect x="201" y="218" width="10" height="8" rx="0" ry="0" stroke="none"/>
+      <rect x="271" y="202" width="10" height="10" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="Arizona-pictos-shortage2">
+      <rect x="201" y="226" width="10" height="0" rx="0" ry="0" stroke="none"/>
+      <rect x="271" y="202" width="10" height="10" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="Arizona-pictos-shortage3">
+      <rect x="271" y="210" width="10" height="2" rx="0" ry="0" stroke="none"/>
+    </g>
+    <animate attributeName="opacity" id="draw-arizona-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-arizona-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
   <g id="Mexico-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
-    <rect x="100" y="282" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="282" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="282" width="10" height="10" rx="2" ry="2"/>
-    <rect x="142" y="282" width="10" height="10" rx="2" ry="2"/>
-    <rect x="156" y="282" width="10" height="10" rx="2" ry="2"/>
-    <rect x="170" y="282" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="268" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="268" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="268" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="268" width="10" height="10" rx="2" ry="2"/>
-    <rect x="128" y="268" width="10" height="10" rx="2" ry="2"/>
-    <rect x="72" y="254" width="10" height="10" rx="2" ry="2"/>
-    <rect x="86" y="254" width="10" height="10" rx="2" ry="2"/>
-    <rect x="100" y="254" width="10" height="10" rx="2" ry="2"/>
-    <rect x="114" y="254" width="10" height="10" rx="2" ry="2"/>
-    <animate attributeName="opacity" id="draw-mexico-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
+    <rect x="156" y="272" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="170" y="272" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="100" y="272" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="272" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="272" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="272" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="258" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="258" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="258" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="258" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="258" width="10" height="10" rx="2" ry="2"/>
+    <rect x="72" y="244" width="10" height="10" rx="2" ry="2"/>
+    <rect x="86" y="244" width="10" height="10" rx="2" ry="2"/>
+    <rect x="100" y="244" width="10" height="10" rx="2" ry="2"/>
+    <rect x="114" y="244" width="10" height="10" rx="2" ry="2"/>
+    <g id="Mexico-pictos-normal">
+      <rect x="156" y="272" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="170" y="272" width="10" height="10" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="Mexico-pictos-shortage1">
+      <rect x="156" y="272" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="170" y="277" width="10" height="5" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="Mexico-pictos-shortage2">
+      <rect x="156" y="272" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="170" y="279" width="10" height="3" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="Mexico-pictos-shortage3">
+      <rect x="156" y="274.5" width="10" height="7.5" rx="0" ry="0" stroke="none"/>
+    </g>
+    <animate attributeName="opacity" id="draw-mexico-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-mexico-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
 </svg>
-  <?xml-stylesheet type="text/css" href="../../css/svg.css" ?>
+ 

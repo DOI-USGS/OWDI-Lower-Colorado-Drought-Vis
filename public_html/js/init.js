@@ -101,9 +101,6 @@ $( document ).ready( function () {
             // the section's HTML id attribute
             initializeSections = function () {
                 switch ( this.sectionId ) {
-                case "blue-dragon":
-                    owdiDrought.createDygraph( "natural-flow-graph" );
-                    break;
                 case "before-after":
                     owdiDrought.slider.sliderInit();
                     break;

@@ -128,7 +128,6 @@ svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- clean_svg_doc(svg) %>%
   add_rect(width="540", height="547", fill='grey', opacity='0.2', stroke='black', 'stroke-width'='2') %>%
-  add_css(css_mead_map()) %>% 
   add_ecmascript(ecmascript_mead_map()) %>%
   name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Colorado-river','Colorado-river-basin',top_users)) %>%
   group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = 'Colorado-river-basin', 'top-users' = top_users)) %>%
@@ -169,16 +168,6 @@ svg <- clean_svg_doc(svg) %>%
                 begin="indefinite", fill="freeze", dur=ani_dur[['stage-move']], from=mead_yvals[6], to=mead_yvals[6]) %>% # does nothing, but function exists for completeness
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-reset', begin="indefinite", fill="freeze", dur="1s", to= "0") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-1", element = 'g', id = 'pictogram-1-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id=top_users[1], element = 'path', id = 'user-1-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-2", element = 'g', id = 'pictogram-2-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id=top_users[2], element = 'path', id = 'user-2-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-3", element = 'g', id = 'pictogram-3-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id=top_users[3], element = 'path', id = 'user-3-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-4", element = 'g', id = 'pictogram-4-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id=top_users[4], element = 'path', id = 'user-4-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-5", element = 'g', id = 'pictogram-5-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id=top_users[5], element = 'path', id = 'user-5-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
   add_animation(attr = 'opacity', parent_id='non-lo-co-states', id = 'remove-grey-states', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   add_animation(attr = 'opacity', parent_id='non-lo-co-states', id = 'reset-grey-states', element='g', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', id = 'remove-pictogram', element = 'g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
@@ -198,14 +187,15 @@ svg <- clean_svg_doc(svg) %>%
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale', begin="indefinite", type = 'scale', fill="freeze", from = '1', to="0.55", dur="1s") %>%
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale-reset', begin="indefinite", type = 'scale', fill="freeze", from="0.55", to="1", dur="1s") %>%
   build_state_pictos() %>%
-  add_animation(attr = 'opacity', parent_id="Mexico-pictos", id = 'draw-mexico-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.5;1") %>%
-  add_animation(attr = 'opacity', parent_id="California-pictos", id = 'draw-california-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.5;1") %>%
-  add_animation(attr = 'opacity', parent_id="Arizona-pictos", id = 'draw-arizona-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.5;1") %>%
-  add_animation(attr = 'opacity', parent_id="Nevada-pictos", id = 'draw-nevada-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.5;1") %>%
+  add_animation(attr = 'opacity', parent_id="Mexico-pictos", id = 'draw-mexico-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.75;1") %>%
+  add_animation(attr = 'opacity', parent_id="California-pictos", id = 'draw-california-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.75;1") %>%
+  add_animation(attr = 'opacity', parent_id="Arizona-pictos", id = 'draw-arizona-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.75;1") %>%
+  add_animation(attr = 'opacity', parent_id="Nevada-pictos", id = 'draw-nevada-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.75;1") %>%
   add_animation(attr = 'opacity', parent_id="Mexico-pictos", id = 'remove-mexico-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   add_animation(attr = 'opacity', parent_id="California-pictos", id = 'remove-california-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   add_animation(attr = 'opacity', parent_id="Arizona-pictos", id = 'remove-arizona-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   add_animation(attr = 'opacity', parent_id="Nevada-pictos", id = 'remove-nevada-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   toString.XMLNode()
 
-cat(c(svg, declaration), file = svg_file, append = FALSE)
+lines <- strsplit(svg,'[\n]')[[1]]
+cat(paste(c(lines[1], declaration, lines[-1]),collapse = '\n'), file = svg_file, append = FALSE)

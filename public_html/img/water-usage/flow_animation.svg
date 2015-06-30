@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio="xMinYMin meet" viewBox="0 0 900 600" id="water-usage-svg">
-
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="../css/main.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio="xMinYMin meet" viewBox="0 0 900 600">
+  <style type="text/css"><![CDATA[text {
+            font-size: 1em !important;
+          }]]></style>
   <script type="text/ecmascript"><![CDATA[function init(evt)
   {
   if ( window.svgDocument == null )
@@ -12,46 +14,46 @@
     svgDocument.setMobile = this.setMobile;
     svgDocument.setDesktop = this.setDesktop;
   }
-
+  
   legend = svgDocument.getElementById("legend");
   window.parent.addEventListener("form-factor-desktop", setDesktop, false);
-  window.parent.addEventListener("form-factor-mobile", setMobile, false);
+  window.parent.addEventListener("form-factor-mobile", setMobile, false);  
   }
   function legendViz(evt,elementname)
   {
   var r = document.getElementById(elementname).r.animVal.value
-
+  
   if (r === 0){
     legend.setAttributeNS(null,"visibility","hidden");
   } else {
     legend.setAttributeNS(null,"visibility","visible");
   }
-
+  
   }
   function highlightViz(evt,elementname,opacity)
   {
   var r = document.getElementById(elementname).r.animVal.value
-
+  
   if (r === 0){
     evt.target.setAttribute("fill-opacity", "0.0");
   } else {
     evt.target.setAttribute("fill-opacity", opacity);
   }
-
+  
   }
-
+  
   function ChangeText(evt, elementname, legendtext)
   {
-  textelement = svgDocument.getElementById(elementname);
+  textelement = svgDocument.getElementById(elementname);                      
   textelement.firstChild.data = legendtext;
   }
   function setMobile(){
   	svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
-    svgDocument.getElementById("y-label").setAttribute("y","-10");
+    svgDocument.getElementById("y-label").setAttribute("y","-10");       
   }
   function setDesktop(){
-    svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");
-    svgDocument.getElementById("y-label").setAttribute("y","0");
+    svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
+    svgDocument.getElementById("y-label").setAttribute("y","0");                          
   }
   function timeAdvance(){
     var ele = document.getElementById("timeAdvance");
@@ -544,3 +546,4 @@
     <rect id="year_2012" x="871.59" y="10" width="7.36" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2012');ChangeText(evt, 'year_text','2012');ChangeText(evt, 'use_text','usage: ');ChangeText(evt, 'supply_text','supply: 8.4');" onmouseover="highlightViz(evt,'supply-2012','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2012','0.0');"/>
   </g>
 </svg>
+ 
