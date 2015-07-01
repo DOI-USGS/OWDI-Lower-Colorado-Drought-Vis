@@ -132,6 +132,17 @@ nav h3 {
 	height: 100%;
 	margin-bottom: 4200px;
 }
+#endEraContainer {
+	background-image: url('../img/keynotes/keynote9-mobile.jpg');
+	background-position: center center;
+	background-position: center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
 /*=====keynote css=====*/
 
 .keynote {
@@ -319,7 +330,8 @@ nav h3 {
 	#mainMessage4Container,
 	#mainMessage5Container,
 	#mainMessage6Container,
-	#mainMessage7Container {
+	#mainMessage7Container,
+	#endEraContainer {
 		-webkit-background-size: cover;
 		background-attachment: fixed;
 	}
@@ -346,6 +358,9 @@ nav h3 {
 	}
 	#mainMessage7Container {
 		background-image: url('../img/keynotes/keynote8.jpg');
+	}
+	#endEraContainer {
+		background-image: url('../img/keynotes/keynote9.jpg');
 	}
 	/*======keynote CSS======*/
 	
