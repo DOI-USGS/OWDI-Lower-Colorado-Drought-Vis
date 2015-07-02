@@ -51,7 +51,6 @@ header h1 {
 .cd-image-container {
   position: relative;
   width: 100%;
-  max-width: 768px;
   margin: 15px auto;
 }
 

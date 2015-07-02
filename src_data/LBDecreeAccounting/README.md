@@ -23,3 +23,16 @@ Finally, [reformatDecreeData](../../scripts/R/reformatDecreeData.R) was used to 
 * IID includes water exchanged w/SDCWA for Salt Sea Mitigation
   * this may necessitate a note if IID water use is shown on any figures.
   
+## Mapping Users Between Decree and LC Contracts Shapefile
+
+Notes for mapping the src_data/LCContractSvcAreas contracts to the users from the decree data spreadsheet and decree data csv:
+
+* The "Boulder Canyon Project - Diversion at Hoover Dam" shows up as "Boulder Canyon Project" in the decree data and "Bureau of Reclamation" in the Shapefile.
+* The "LOWER COLORADO RIVER DAMS PROJECT" user in the Decree data is the LCR Dams Project Diversion at Davis Dam. There does not appear to be any area in the shapefile to map to this user.
+* The "PARKER DAM AND GOVERNMENT CAMP" user in the Decree data is the Reclamation and Government Camp diversion at Parker Dam. There deos not appear to be any area in the shapefile to map to this user.
+* Cannot find any contractor in the shapefile that corresponds with "ALEC CAMILLE JR". If we are only using last 5-years of data, it's probably ok since that user is only non-zero in 2000-2005.
+* Cannot find area in shapefile that corresponds with "MOHAVE GENERATING STATION (SO. CAL. EDISON)".  If we are only using the last 5-years of data, this is only a minor use (370 AF in 2010, 97 AF in 2011, and 0 AF in 2012-2014).
+* "Union Pacific Railroad"" from the shapefile is mapped to "SOUTHERN PACIFIC COMPANY" from the decree as Union Pacific now owns Southern Pacific Company and the more recent decree reports list it as Union Pacific. 
+* "YUMA PROJECT, RES. DIV. BARD UNIT" does not show up in shapefile. Could potentially combine with Fort Yuma Indian Reservation (CA) which is mapped to "YUMA PROJECT, RES. DIV. INDIAN UNIT"
+* "BIG BEND CONSERVATION AREA" does not show up in the shapefile. This is a minor user (4 AF in 2011 and 3 AF in 2012).
+* "YUMA AREA OFFICE, USBR" does not show up in shapefile. Uses are < 500 AF in the last 5 years.
