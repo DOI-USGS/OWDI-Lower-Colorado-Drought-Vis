@@ -212,6 +212,7 @@ nav h3 {
 .graphCaption p {
 	margin-bottom: 10px;
 	line-height: 1.8em;
+	font-weight:300;
 }
 
 .sectionContent p,
@@ -299,6 +300,7 @@ nav h3 {
 
 .cd-image-container {
 	margin-top: 25px;
+	width:100% !important;
 }
 
 .SVGInfo {
@@ -397,12 +399,6 @@ nav h3 {
 	}
 	/*Section 5 CSS*/
 	
-	#blueDragon img {
-		margin-bottom: 10px;
-	}
-	.picDescription {
-		display: none;
-	}
 	/*Section 9 CSS*/
 	
 	#JrGraph h2 {
@@ -446,17 +442,28 @@ nav h3 {
 		font-size: 1.6em;
 	}
 	
+	.graphCaption{
+		width:900px;
+		margin:0 auto;
+		}
+	
 	/*Blue Dragon Section CSS*/
 	
 	#blueDragon{
 		width:900px;
 		margin:20px auto;
 		}
+		
+	#natural-flow-graph{
+		width:900px;
+		margin:0 auto 20px 0;
+		margin-left:-10px;
+		}
 	
 	/*Water Usage CSS*/
 	
 	#JrGraph {
-		width: 1024px;
+		width: 900px;
 		margin: 0 auto;
 	}
 	/*Lake Mead Animated CSS*/
