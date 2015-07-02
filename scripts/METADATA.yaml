@@ -54,5 +54,4 @@ combStorage:
   title: Powell and Mead Combined Storage
   description: The end-of-december total storage of Powell and Mead in acre-ft.
   methods: "[PowellMeadFullHistorical.csv](../src_data/PowellMeadFullHistorical.csv) was provided by Reclamation. This file contains monthly historical data for Powell and Mead elevations and storage, since each reservoir began filling. [reformat_historical_storage_data](scripts/R/reformat_historical_storage_data.R) adds Powell and Mead storage together, filters to only end-of-December values, and creates [MeadPowellCombinedStorage.tsv](../src_data/MeadPowellCombinedStorage.tsv). The tsv file is used by XXX."
-  link: http://www.usbr.gov/uc/crsp/GetDateInfo?d0=1719&d1=1792&d2=1851&d3=1862&d4=1872&d5=1928&idCount=6&l=LAKE+POWELL
-  http://www.usbr.gov/lc/region/g4000/hourly/mead-elv.html
+  link: ["http://www.usbr.gov/uc/crsp/GetDateInfo?d0=1719&d1=1792&d2=1851&d3=1862&d4=1872&d5=1928&idCount=6&l=LAKE+POWELL","http://www.usbr.gov/lc/region/g4000/hourly/mead-elv.html"]
