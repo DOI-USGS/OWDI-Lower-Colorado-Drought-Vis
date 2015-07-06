@@ -3,6 +3,9 @@
 ################################################################################
 library(dplyr)
 library(leafletR)
+library(rgdal)
+library(rgeos)
+library(maptools)
 dat<-read.csv("src_data//LBDecreeAccounting//DecreeData.csv",
               stringsAsFactors=FALSE)
 
@@ -52,6 +55,9 @@ topFiveYrs <- dataSub %>%
 
 #Get the mean for each wateruser for last five years
 contMean <- summarise(group_by(topFiveYrs, WaterUser,ContractorID), m = mean(Value))
+
+#Rip out NA ContractorID
+contMean <- filter(contMean, ContractorID != "NA")
 
 #Join the decree data with the shapefile for contractors based on ContractorID, then make a shapefile and geojson
 cont <- readOGR("src_data//LCContractSvcAreas","LC_Contracts_diss")
