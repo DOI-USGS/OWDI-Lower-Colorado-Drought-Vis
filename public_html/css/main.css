@@ -307,6 +307,11 @@ nav h3 {
 	height:100%;
 	}
 	
+.cd-image-container {
+	margin-top: 25px;
+	width:100% !important;
+}
+	
 /*Lake Mead Animated Section CSS*/
 
 #meadSVGContainer h2 {
@@ -315,10 +320,10 @@ nav h3 {
 	;
 }
 
-.cd-image-container {
-	margin-top: 25px;
-	width:100% !important;
-}
+.orangeLinks{
+	color:#FB7F00;
+	font-weight:500;
+	}
 
 .SVGInfo {
 		background: rgba(0, 51, 102, .3);
