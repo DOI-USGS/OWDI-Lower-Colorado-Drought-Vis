@@ -6,6 +6,7 @@ library(leafletR)
 library(rgdal)
 library(rgeos)
 library(maptools)
+
 dat<-read.csv("src_data//LBDecreeAccounting//DecreeData.csv",
               stringsAsFactors=FALSE)
 
@@ -55,16 +56,33 @@ topFiveYrs <- dataSub %>%
 
 #Get the mean for each wateruser for last five years
 contMean <- summarise(group_by(topFiveYrs, WaterUser,ContractorID), m = mean(Value))
+contMean <- dplyr::rename(contMean, Contractor=WaterUser, OBJECTID_1=ContractorID, mean=m)
 
 #Rip out NA ContractorID
-contMean <- filter(contMean, ContractorID != "NA")
+contMean <- filter(contMean, OBJECTID_1 != "NA")
+#probably want to do it this way because Jordan says the way I'm doing it is fragile
+#contMean <- filter(contMean, !is.na(OBJECTID_1))
+sortedContMean <- arrange(contMean, OBJECTID_1,Contractor,mean)
 
-#Join the decree data with the shapefile for contractors based on ContractorID, then make a shapefile and geojson
+#get a list of ids we have data for
+myIDs <-contMean$OBJECTID_1
+
+#read in the shapefile of service area polygons
 cont <- readOGR("src_data//LCContractSvcAreas","LC_Contracts_diss")
-cont.data <- merge(contMean, cont, by.x = "ContractorID", by.y = "OBJECTID_1", all = TRUE)
-notNull <- filter(cont.data, WaterUser!="")
-cont.watacc <- SpatialPolygonsDataFrame(cont, data = notNull)
 
+#get only the polygons that are in our NA list
+sub.cont <- subset(cont, OBJECTID_1 %in% myIDs)
+
+#add a blank field for mean in the polygon file
+sub.cont$mean <- c(NA)
+
+#give the data the same names as the polygon file
+row.names(sortedContMean)<- row.names(sub.cont)
+
+#Create the new spatialpdf
+cont.watacc <- SpatialPolygonsDataFrame(sub.cont, data = as.data.frame(contData))
+
+#write out the shapefile and the geojson
 writeOGR(cont.watacc,"src_data//LCContractSvcAreas","wat_acc_cont", driver = "ESRI Shapefile", overwrite_layer = T)
 wat_acc_cont <- toGeoJSON(cont.watacc, dest = "src_data//LCContractSvcAreas")
 
