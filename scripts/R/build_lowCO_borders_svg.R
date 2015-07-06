@@ -4,6 +4,8 @@ library(rgeos)
 library(magrittr)
 library(XML)
 source('scripts/R/manipulate_lowCO_borders_svg.R')
+source('scripts/R/water_account.R')
+source('scripts/R/decree_data_process.R')
 source('scripts/R/build_usage_pictogram.R')
 source('scripts/R/build_state_pictogram.R')
 source('scripts/R/build_ecmascript.R')
@@ -50,9 +52,9 @@ mexico = readOGR(dsn = "src_data/mexico",layer="MEX_adm0") %>%
 states = readOGR(dsn = "src_data/states_21basic",layer="states") 
 rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="CRB_Rivers")
 usage = readOGR("public_html/data/wat_acc_sp.geojson", "OGRGeoJSON")
-contracts = readOGR("src_data/LCContractSvcAreas", layer = 'LC_Contacts_update2014')
+contracts = readOGR("src_data/LCContractSvcAreas", layer = 'wat_acc_cont')
  
-sorted_contracts <- sort(contracts$CU,decreasing = T, index.return = T)
+sorted_contracts <- sort(contracts$mean,decreasing = T, index.return = T)
 co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
 co_basin = readOGR("public_html/data/lc_huc_simp.geojson", "OGRGeoJSON")
@@ -71,7 +73,7 @@ for(i in 1:length(mainPolys)){
 }
 
 
-svg(filename = svg_file,width=width, height=height)
+#svg(filename = svg_file,width=width, height=height)
 par(omi=c(0,0,0,0),mai=c(0,0,0,0))
 
 
@@ -114,9 +116,9 @@ spTransform(co_basin, CRS(epsg_code)) %>%
 
 for (i in 1:5){
   cont <- spTransform(contracts[sorted_contracts$ix[i],], CRS(epsg_code))
-  if (i != 4){
-    cont <- gSimplify(cont, simp_tol)
-  }
+   if (i != 4){
+     cont <- gSimplify(cont, simp_tol)
+   }
   plot(cont, add=TRUE)
 }
 

@@ -80,7 +80,7 @@ sub.cont$mean <- c(NA)
 row.names(sortedContMean)<- row.names(sub.cont)
 
 #Create the new spatialpdf
-cont.watacc <- SpatialPolygonsDataFrame(sub.cont, data = as.data.frame(contData))
+cont.watacc <- SpatialPolygonsDataFrame(sub.cont, data = as.data.frame(sortedContMean))
 
 #write out the shapefile and the geojson
 writeOGR(cont.watacc,"src_data//LCContractSvcAreas","wat_acc_cont", driver = "ESRI Shapefile", overwrite_layer = T)
