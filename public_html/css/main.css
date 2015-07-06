@@ -247,9 +247,7 @@ nav h3 {
 }
 
 .supportinginfo:hover,
-.supportinginfo:focus,
-.interact:hover,
-.interact:focus {
+.interact:hover{
 	background: #003366;
 	color: #fff;
 }
