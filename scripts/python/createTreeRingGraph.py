@@ -11,7 +11,7 @@ def main():
     svg.set('xmlns:xlink', 'http://www.w3.org/1999/xlink')
     main = SubElement(svg, 'g')
     graph = SubElement(main, 'g')
-    graph.set('transform', 'translate(65 35)')
+    graph.set('transform', 'translate(65 10)')
     renderGraph(graph, getScriptLoc() + '/../../src_data/treeringFlow15yrProcessed.csv')
     renderLabels(main)
     outsvg = open(getScriptLoc() + '/../../public_html/img/treering.svg','w+')
@@ -24,14 +24,16 @@ def prettify(elem):
     reparsed = minidom.parseString(rough_string)
     return reparsed.toprettyxml(indent="  ")
     
-def drawLine(ele, x1, y1, x2, y2, width, color):
+def drawLine(ele, x1, y1, x2, y2, width = None, color = None):
     line = SubElement(ele, 'line')
     line.set('x1', str(x1))
     line.set('y1', str(y1))
     line.set('x2', str(x2))
     line.set('y2', str(y2))
-    line.set('stroke', color)
-    line.set('stroke-width', str(width))
+    if color != None:
+        line.set('stroke', color)
+    if width != None:
+        line.set('stroke-width', str(width))
     return line
     
 def drawText(ele, x, y, tex):
@@ -50,7 +52,7 @@ def drawGraphLine(ele, year1, perc1, year2, perc2, yrange, prange, ymin, pmin, i
     perc2 = (pc - perc2) + pc
     perc1 = (perc1 - pmin) * (250/prange)
     perc2 = (perc2 - pmin) * (250/prange)
-    gline = drawLine(ele, year1, perc1, year2, perc2, 2, 'blue')
+    gline = drawLine(ele, year1, perc1, year2, perc2)
     animation = SubElement(gline, 'animate')
     animation.set('attributeName', 'visibility')
     animation.set('from', 'hidden')
@@ -103,21 +105,22 @@ def renderGraph(ele, floc):
             drawText(ele, -30, 250 - (i * sidestep) + 5, str(int((i * 5) + minside)))
             if int((i * 5) + minside) == 100:
                 drawLine(ele, 15, 250 - (i * sidestep), 485, 250 - (i * sidestep), 1, 'black')
+        linecontainer = SubElement(ele, 'g')
+        linecontainer.set('stroke', 'blue')
+        linecontainer.set('stroke-width', '2')
         for i in range(0, len(year)-1):
-            drawGraphLine(ele, float(year[i]), float(perc[i]), float(year[i+1]), float(perc[i+1]), maxbot - minbot, maxside - minside, minbot, minside, i)
+            drawGraphLine(linecontainer, float(year[i]), float(perc[i]), float(year[i+1]), float(perc[i+1]), maxbot - minbot, maxside - minside, minbot, minside, i)
         drawLine(ele, 0, 250, 500, 250, 2, 'black')
         drawLine(ele, 0, 250, 0, 0, 2, 'black')
         drawLine(ele, 0, 0, 500, 0, 2, 'black')
         drawLine(ele, 500, 0, 500, 250, 2, 'black')
 
 def renderLabels(ele):
-    topl = 'Tree Ring Data'
     botl =  'Year'
     sidel = 'Percent of Mean'
-    drawText(ele, (65+250) - (len(topl)*10)/2, 20, topl).set('style', 'font-weight: bold;')
-    tex = drawText(ele, 25, (35+250) - (len(sidel)*10)/2, sidel)
-    tex.set('transform', 'rotate(-90 25,' + str((35+250) - (len(sidel)*10)/2) + ')')
-    drawText(ele, (65+250) - (len(botl)*10)/2, 320, botl)
+    tex = drawText(ele, 25, (10+250) - (len(sidel)*10)/2, sidel)
+    tex.set('transform', 'rotate(-90 25,' + str((10+250) - (len(sidel)*10)/2) + ')')
+    drawText(ele, (65+250) - (len(botl)*10)/2, 300, botl)
 
 def highlightRange(ele, x1, x2, ymin, yrange):
     rect = SubElement(ele, 'rect')
