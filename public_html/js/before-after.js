@@ -29,15 +29,6 @@
                 actual.find(cdImageLabelClassname + "[data-type='modified']"));
 
         });
-
-        //upadate images label visibility
-        $(window).on("resize", function() {
-            $cdImageContainer.each(function() {
-                var actual = $(this);
-                owdiDrought.slider.updateLabel(actual.find(cdImageLabelClassname + "[data-type='modified']"), actual.find(cdResizeImgClassName), "left");
-                owdiDrought.slider.updateLabel(actual.find(cdImageLabelClassname + "[data-type='original']"), actual.find(cdResizeImgClassName), "right");
-            });
-        });
     };
 
     owdiDrought.slider.checkPosition = function(container) {
@@ -45,6 +36,7 @@
             var actualContainer = $(this);
             if ($(window).scrollTop() + $(window).height() * 0.5 > actualContainer.offset().top) {
                 actualContainer.addClass("is-visible");
+                actualContainer.find(".cd-image-label").removeClass("is-hidden");
             }
         });
     };
