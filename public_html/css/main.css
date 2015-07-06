@@ -290,6 +290,23 @@ nav h3 {
 #JrGraph h2 {
 	font-size: 1em;
 }
+
+/*Before after CSS*/
+
+#before-after-reservoir{
+	margin-bottom:5px;
+	}
+
+#extraPics{
+	min-height:100px;
+	margin-bottom:10px;
+	}
+	
+#extraPics img{
+	width:32.5%;
+	height:100%;
+	}
+	
 /*Lake Mead Animated Section CSS*/
 
 #meadSVGContainer h2 {
@@ -465,6 +482,10 @@ nav h3 {
 	#JrGraph {
 		width: 900px;
 		margin: 0 auto;
+	}
+	/*before after css*/
+	#extraPics img{
+	width:33%;
 	}
 	/*Lake Mead Animated CSS*/
 	
