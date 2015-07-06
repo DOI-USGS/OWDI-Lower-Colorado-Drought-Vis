@@ -67,10 +67,12 @@ def renderGraph(ele, floc):
         x = 0
         year = []
         perc = []
+        per = []
         for row in doc:
             if(i != 0 and row[1] != 'NA'):
                 year.append(row[0])
                 perc.append(row[1])
+                per.append(row[3])
                 x+= 1
             i+= 1
         minbot = math.floor(float(year[0])/100) * 100
@@ -87,6 +89,11 @@ def renderGraph(ele, floc):
         maxside = math.ceil(float(max)/5) * 5
         botstep = 500 / ((maxbot - minbot)/100)
         sidestep = 250 / ((maxside - minside)/5)
+        for i in range(0, len(per)-1):
+            if float(per[i]) > 10 and float(per[i+1]) == 0:
+                highlightRange(ele, int(year[i]) - int(per[i]) + 1, int(year[i]), minbot, maxbot - minbot)
+            if float(per[i]) > 10 and i + 1 == len(per)-1:
+                highlightRange(ele, int(year[i]) - int(per[i]) + 1, int(year[i+1]), minbot, maxbot - minbot)
         for i in range(0, int((maxbot - minbot)/100) + 1):
             if i % 2 == 0:
                 drawLine(ele, i * botstep, 250, i * botstep, 245, 2, 'black')
@@ -94,15 +101,32 @@ def renderGraph(ele, floc):
         for i in range(0, int((maxside - minside)/5) + 1):
             drawLine(ele, 0, i * sidestep, 5, i * sidestep, 2, 'black')
             drawText(ele, -30, 250 - (i * sidestep) + 5, str(int((i * 5) + minside)))
+            if int((i * 5) + minside) == 100:
+                drawLine(ele, 15, 250 - (i * sidestep), 485, 250 - (i * sidestep), 1, 'black')
         for i in range(0, len(year)-1):
             drawGraphLine(ele, float(year[i]), float(perc[i]), float(year[i+1]), float(perc[i+1]), maxbot - minbot, maxside - minside, minbot, minside, i)
         drawLine(ele, 0, 250, 500, 250, 2, 'black')
         drawLine(ele, 0, 250, 0, 0, 2, 'black')
+        drawLine(ele, 0, 0, 500, 0, 2, 'black')
+        drawLine(ele, 500, 0, 500, 250, 2, 'black')
 
 def renderLabels(ele):
-    drawText(ele, 250, 20, 'Tree Ring Data')
-    tex = drawText(ele, 25, 215, 'Percent of Mean')
-    tex.set('transform', 'rotate(-90 25,215)')
-    drawText(ele, 280, 325, 'Year')
+    topl = 'Tree Ring Data'
+    botl =  'Year'
+    sidel = 'Percent of Mean'
+    drawText(ele, (65+250) - (len(topl)*10)/2, 20, topl).set('style', 'font-weight: bold;')
+    tex = drawText(ele, 25, (35+250) - (len(sidel)*10)/2, sidel)
+    tex.set('transform', 'rotate(-90 25,' + str((35+250) - (len(sidel)*10)/2) + ')')
+    drawText(ele, (65+250) - (len(botl)*10)/2, 320, botl)
 
+def highlightRange(ele, x1, x2, ymin, yrange):
+    rect = SubElement(ele, 'rect')
+    x1 = (x1 - ymin) * (500/yrange)
+    x2 = (x2 - ymin) * (500/yrange)
+    rect.set('y', str(0))
+    rect.set('height', str(250))
+    rect.set('width', str(x2 - x1))
+    rect.set('x', str(x1))
+    rect.set('fill', '#CCCCB2')
+    
 main()

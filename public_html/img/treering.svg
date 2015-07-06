@@ -2,6 +2,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
     <g transform="translate(65 35)">
+      <rect fill="#CCCCB2" height="250" width="13.2142857143" x="41.7857142857" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="8.57142857143" x="58.9285714286" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="4.64285714286" x="73.9285714286" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="4.28571428571" x="91.0714285714" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="3.57142857143" x="99.6428571429" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="3.57142857143" x="110.714285714" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="5.71428571429" x="121.071428571" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="5.0" x="131.071428571" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="5.0" x="142.142857143" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="17.5" x="153.928571429" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="5.35714285714" x="197.5" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="7.14285714286" x="207.142857143" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="5.71428571429" x="248.928571429" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="3.92857142857" x="256.785714286" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="8.57142857143" x="266.071428571" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="7.14285714286" x="285.714285714" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="8.92857142857" x="313.928571429" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="5.35714285714" x="332.5" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="5.0" x="344.285714286" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="4.64285714286" x="377.5" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="5.71428571429" x="383.928571429" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="5.0" x="395.0" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="10.7142857143" x="421.785714286" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="10.0" x="447.857142857" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="3.92857142857" x="464.642857143" y="0"/>
       <line stroke="black" stroke-width="2" x1="0.0" x2="0.0" y1="250" y2="245"/>
       <text fill="black" x="-10.0" y="265">700</text>
       <line stroke="black" stroke-width="2" x1="71.4285714286" x2="71.4285714286" y1="250" y2="245"/>
@@ -28,6 +53,7 @@
       <text fill="black" x="-30" y="171.666666667">95</text>
       <line stroke="black" stroke-width="2" x1="0" x2="5" y1="111.111111111" y2="111.111111111"/>
       <text fill="black" x="-30" y="143.888888889">100</text>
+      <line stroke="black" stroke-width="1" x1="15" x2="485" y1="138.888888889" y2="138.888888889"/>
       <line stroke="black" stroke-width="2" x1="0" x2="5" y1="138.888888889" y2="138.888888889"/>
       <text fill="black" x="-30" y="116.111111111">105</text>
       <line stroke="black" stroke-width="2" x1="0" x2="5" y1="166.666666667" y2="166.666666667"/>
@@ -3748,9 +3774,11 @@
       </line>
       <line stroke="black" stroke-width="2" x1="0" x2="500" y1="250" y2="250"/>
       <line stroke="black" stroke-width="2" x1="0" x2="0" y1="250" y2="0"/>
+      <line stroke="black" stroke-width="2" x1="0" x2="500" y1="0" y2="0"/>
+      <line stroke="black" stroke-width="2" x1="500" x2="500" y1="0" y2="250"/>
     </g>
-    <text fill="black" x="250" y="20">Tree Ring Data</text>
-    <text fill="black" transform="rotate(-90 25,215)" x="25" y="215">Percent of Mean</text>
-    <text fill="black" x="280" y="325">Year</text>
+    <text fill="black" style="font-weight: bold;" x="245" y="20">Tree Ring Data</text>
+    <text fill="black" transform="rotate(-90 25,210)" x="25" y="210">Percent of Mean</text>
+    <text fill="black" x="295" y="320">Year</text>
   </g>
 </svg>
