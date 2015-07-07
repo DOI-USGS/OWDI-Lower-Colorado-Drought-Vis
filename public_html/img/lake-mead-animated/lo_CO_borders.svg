@@ -78,6 +78,13 @@ function drawUserPicto(user_id){
 	document.getElementById("picto-highlight-"+user_id).setAttribute("opacity","0.8");
 	eval(document.getElementById("picto-"+user_id).getAttribute("onmouseover").replace("evt","null").replace("evt","null"));
 }
+function displayAllocationName(evt, name) {
+	document.getElementById("allocation-value").firstChild.data = name;
+}
+
+function hideAllocationName(evt) {
+	document.getElementById("allocation-value").firstChild.data = " ";
+}
 function displayPictoName(evt, name) {
 	document.getElementById("picto-info").firstChild.data = name;
 }
@@ -818,6 +825,8 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <path id="Mead-2D-border" d="M 535 20 L 535 450 L 400 450 L 280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round"/>
     <animate attributeName="opacity" id="mead-draw" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
     <animate attributeName="opacity" id="mead-remove" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
+    <text class="label" id="allocation-info" x="55" y="500" fill="#FFFFFF" stroke="none" style="text-anchor: left;">  </text>
+    <text class="label" id="allocation-value" x="55" y="500" fill="#FFFFFF" stroke="none" style="text-anchor: left;">  </text>
   </g>
   <g id="California-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
     <rect x="114" y="201" width="10" height="10" rx="2" ry="2"/>
@@ -866,6 +875,10 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <rect x="72" y="89" width="10" height="10" rx="2" ry="2"/>
     <animate attributeName="opacity" id="draw-california-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-california-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
+	<rect x="28" y="87" width="70" height='56' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');" onmouseout="hideAllocationName(evt);"/>
+	<rect x="98" y="115" width="28" height='28' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');" onmouseout="hideAllocationName(evt);"/>
+	<rect x="56" y="143" width="98" height='42' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');" onmouseout="hideAllocationName(evt);"/>
+	<rect x="112" y="185" width="42" height='28' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');" onmouseout="hideAllocationName(evt);"/>
   </g>
   <g id="allocation-picto-highlight-3" opacity="0.0" stroke="none" fill="yellow">
     <rect x="154" y="270" width="28" height="14" rx="3" ry="3"/>
@@ -901,8 +914,10 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </g>
     <animate attributeName="opacity" id="draw-nevada-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-nevada-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
+	<rect x="143" y="104" width="28" height='28' stroke='black' opacity='0' onmouseover="displayAllocationName(evt,'Nevada');" onmouseout="hideAllocationName(evt);"/>
   </g>
   <g id="Arizona-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
+	  
     <rect x="201" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
     <rect x="215" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
     <rect x="229" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
@@ -951,6 +966,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </g>
     <animate attributeName="opacity" id="draw-arizona-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-arizona-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
+	<rect x="199" y="158" width="84" height='70' stroke='black' opacity='0' onmouseover="displayAllocationName(evt,'Arizona');" onmouseout="hideAllocationName(evt);"/>
   </g>
   <g id="Mexico-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
     <rect x="156" y="272" width="10" height="10" rx="2" ry="2" fill="none"/>
@@ -985,6 +1001,8 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </g>
     <animate attributeName="opacity" id="draw-mexico-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-mexico-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
+	<rect x="70" y="242" width="70" height='28' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'Mexico');" onmouseout="hideAllocationName(evt);"/>
+	<rect x="98" y="270" width="84" height='14' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'Mexico');" onmouseout="hideAllocationName(evt);"/>
   </g>
 </svg>
  
