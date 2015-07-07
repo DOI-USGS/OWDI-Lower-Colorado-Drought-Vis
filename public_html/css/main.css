@@ -291,18 +291,19 @@ nav h3 {
 
 /*Before after CSS*/
 
-#before-after-reservoir{
+#before-after-reservoir,
+#hooverdam{
 	margin-bottom:5px;
 	}
 
-#extraPics{
+.extraPics{
 	min-height:100px;
 	margin-bottom:10px;
+	text-align:left;
 	}
 	
-#extraPics img{
+.extraPics img{
 	width:32.5%;
-	height:100%;
 	}
 	
 .cd-image-container {
@@ -487,8 +488,8 @@ nav h3 {
 		margin: 0 auto;
 	}
 	/*before after css*/
-	#extraPics img{
-	width:33%;
+	.extraPics img{
+		width:33%;
 	}
 	/*Lake Mead Animated CSS*/
 	
