@@ -119,6 +119,9 @@ ecmascript_mead_map <- function(){
                '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("visibility","visible");',
                '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("visibility","visible");',
                '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("visibility","visible");',
+               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0");',
+               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0");',
+               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0");',
                '}',
                
                'function setAllocationsShortage1(){',
@@ -128,6 +131,9 @@ ecmascript_mead_map <- function(){
                '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","visible");',
                '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");',
                '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","visible");',
+               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0.8");',
+               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0");',
+               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0");',
                '}',
                
                'function setAllocationsShortage2(){',
@@ -140,6 +146,9 @@ ecmascript_mead_map <- function(){
                '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");',
                '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","hidden");',
                '\tdocument.getElementById("Mexico-pictos-shortage2").setAttribute("visibility","visible");',
+               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0");',
+               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0.8");',
+               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0");',
                '}',
                
                'function setAllocationsShortage3(){',
@@ -152,6 +161,9 @@ ecmascript_mead_map <- function(){
                '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");',
                '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","hidden");',
                '\tdocument.getElementById("Mexico-pictos-shortage2").setAttribute("visibility","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0");',
+               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0");',
+               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0.8");',
                '}',
                
                'function setMeadCondition(storage_id){',

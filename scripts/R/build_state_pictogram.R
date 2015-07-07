@@ -5,6 +5,35 @@ build_state_pictos <- function(svg, scale=100000){
   root_nd <- xmlRoot(svg)
   
   add_california(root_nd,scale)
+  g_id <- newXMLNode('g',parent=root_nd,
+             attrs=c(id="allocation-picto-highlight-3", opacity="0.0", stroke="none", fill="yellow"))
+  newXMLNode('rect',parent=g_id,
+             attrs=c(x="154", y="270", width="28", height="14", rx="3", ry="3"))
+  newXMLNode('rect',parent=g_id,
+             attrs=c(x="199", y="214", width="56", height="14", rx="3", ry="3"))
+  newXMLNode('rect',parent=g_id,
+             attrs=c(x="269", y="200", width="14", height="14", rx="3", ry="3"))
+  newXMLNode('rect',parent=g_id,
+             attrs=c(x="157", y="104", width="14", height="14", rx="3", ry="3"))
+  
+  g_id <- newXMLNode('g',parent=root_nd,
+                     attrs=c(id="allocation-picto-highlight-2", opacity="0.0", stroke="none", fill="yellow"))
+  newXMLNode('rect',parent=g_id,
+             attrs=c(x="168", y="270", width="14", height="14", rx="3", ry="3"))
+  newXMLNode('rect',parent=g_id,
+             attrs=c(x="199", y="214", width="56", height="14", rx="3", ry="3"))
+  newXMLNode('rect',parent=g_id,
+             attrs=c(x="157", y="104", width="14", height="14", rx="3", ry="3"))
+  
+  g_id <- newXMLNode('g',parent=root_nd,
+                     attrs=c(id="allocation-picto-highlight-1", opacity="0.0", stroke="none", fill="yellow"))
+  newXMLNode('rect',parent=g_id,
+             attrs=c(x="168", y="270", width="14", height="14", rx="3", ry="3"))
+  newXMLNode('rect',parent=g_id,
+             attrs=c(x="199", y="214", width="56", height="14", rx="3", ry="3"))
+  newXMLNode('rect',parent=g_id,
+             attrs=c(x="157", y="104", width="14", height="14", rx="3", ry="3"))
+  
   add_nevada(root_nd,scale)
   add_arizona(root_nd,scale)
   add_mexico(root_nd,scale)
@@ -15,8 +44,8 @@ build_state_pictos <- function(svg, scale=100000){
 block_picto <- function(parent, x, y, rx='2',ry='2',number,width = 10, height=10, perc_full=100,...){
   
   
-  bin_full <- 10
-  bin_buffer <- 4
+  bin_full <<- 10
+  bin_buffer <<- 4
   args <- expand.grid(...,stringsAsFactors = F)
   
   fill_height = height*perc_full/100
@@ -127,8 +156,13 @@ add_mexico <- function(root_nd,scale){
   # -- full bucket, then partials
   block_picto(MX,x=x_start+14*6,y=y_start,number=2,rx="0",ry="0",perc_full = 100,'stroke'='none')
   
+  # -- add highlighter div on bottom --
+  
+  
   MX <- newXMLNode('g', parent=MX_id,
                    attrs = c('id'='Mexico-pictos-shortage1'))
+  
+  
   block_picto(MX,x=x_start+14*6,y=y_start,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
   block_picto(MX,x=x_start+14*7,y=y_start,number=1,rx="0",ry="0", perc_full = (1-50000/scale)*100,'stroke'='none')
   

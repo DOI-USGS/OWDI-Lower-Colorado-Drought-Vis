@@ -867,21 +867,21 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <animate attributeName="opacity" id="draw-california-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-california-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
   </g>
-  <g id= "allocation-picto-highlight-3" opacity="0.0" stroke="#0066CC" stroke-width="0" fill="yellow">
-	  <rect x="154" y="270" width="28" height="14" rx="3" ry="3"/>
-	  <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
-	  <rect x="269" y="200" width="14" height="14" rx="3" ry="3"/>
-	  <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
+  <g id="allocation-picto-highlight-3" opacity="0.0" stroke="none" fill="yellow">
+    <rect x="154" y="270" width="28" height="14" rx="3" ry="3"/>
+    <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
+    <rect x="269" y="200" width="14" height="14" rx="3" ry="3"/>
+    <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
   </g>
-  <g id= "allocation-picto-highlight-2" opacity="0.0" stroke="#0066CC" stroke-width="0" fill="yellow">
-	  <rect x="168" y="270" width="14" height="14" rx="3" ry="3"/>
-	  <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
-	  <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
+  <g id="allocation-picto-highlight-2" opacity="0.0" stroke="none" fill="yellow">
+    <rect x="168" y="270" width="14" height="14" rx="3" ry="3"/>
+    <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
+    <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
   </g>
-  <g id= "allocation-picto-highlight-1" opacity="0.0" stroke="#0066CC" stroke-width="0" fill="yellow">
-	  <rect x="168" y="270" width="14" height="14" rx="3" ry="3"/>
-	  <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
-	  <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
+  <g id="allocation-picto-highlight-1" opacity="0.0" stroke="none" fill="yellow">
+    <rect x="168" y="270" width="14" height="14" rx="3" ry="3"/>
+    <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
+    <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
   </g>
   <g id="Nevada-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
     <rect x="159" y="120" width="10" height="10" rx="2" ry="2"/>
