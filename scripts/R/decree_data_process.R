@@ -44,10 +44,8 @@ five_yr <- dat %>%
 #five_yr_2<-merge(five_yr, loc, by = "WaterUser")
 #write.csv(five_yr_2,"src_data/wat_acc_examp.csv",row.names=FALSE)
 
-#extract water user data we want
-data <- read.csv('src_data//LBDecreeAccounting//DecreeData.csv')
-dataSub <- filter(data, Variable == "ConsumptiveUse")
 
+<<<<<<< HEAD
 #Get the values of last five years by WaterUser
 topFiveYrs <- dataSub %>%
   group_by(WaterUser) %>%
@@ -90,4 +88,5 @@ cont.watacc <- SpatialPolygonsDataFrame(sub.cont, data = as.data.frame(sortedCon
 #write out the shapefile and the geojson
 writeOGR(cont.watacc,"src_data//LCContractSvcAreas","wat_acc_cont", driver = "ESRI Shapefile", overwrite_layer = T)
 wat_acc_cont <- toGeoJSON(cont.watacc, dest = "src_data//LCContractSvcAreas")
+
 
