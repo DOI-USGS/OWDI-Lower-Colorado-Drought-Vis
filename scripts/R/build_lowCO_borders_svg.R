@@ -4,6 +4,7 @@ library(rgeos)
 library(magrittr)
 library(XML)
 source('scripts/R/manipulate_lowCO_borders_svg.R')
+source('scripts/R/create_contract_areas.R')
 source('scripts/R/build_usage_pictogram.R')
 source('scripts/R/build_state_pictogram.R')
 source('scripts/R/build_ecmascript.R')
@@ -49,10 +50,10 @@ mexico = readOGR(dsn = "src_data/mexico",layer="MEX_adm0") %>%
 
 states = readOGR(dsn = "src_data/states_21basic",layer="states") 
 rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="CRB_Rivers")
-usage = readOGR("public_html/data/wat_acc_sp.geojson", "OGRGeoJSON")
-contracts = readOGR("src_data/LCContractSvcAreas", layer = 'LC_Contacts_update2014')
+contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
+
  
-sorted_contracts <- sort(contracts$CU,decreasing = T, index.return = T)
+sorted_contracts <- sort(as.numeric(contracts$mean),decreasing = T, index.return = T)
 co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
 co_basin = readOGR("public_html/data/lc_huc_simp.geojson", "OGRGeoJSON")
@@ -114,13 +115,10 @@ spTransform(co_basin, CRS(epsg_code)) %>%
 
 for (i in 1:5){
   cont <- spTransform(contracts[sorted_contracts$ix[i],], CRS(epsg_code))
-  if (i != 4){
-    cont <- gSimplify(cont, simp_tol)
-  }
   plot(cont, add=TRUE)
 }
 
-non_zero_cont <- contracts$CU[sorted_contracts$ix]
+non_zero_cont <- as.numeric(contracts$mean[sorted_contracts$ix])
 non_zero_cont <- non_zero_cont[non_zero_cont!=0]
 dev.off()
 
@@ -138,7 +136,8 @@ svg <- clean_svg_doc(svg) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="331;0;") %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-reset', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values="0;331;") %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', element = 'g', id = 'colorado-basin-draw', begin="indefinite", fill="freeze", dur=ani_dur[['basin-draw']], values= "0;1") %>%
-  usage_bar_pictogram( values = non_zero_cont, scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
+  usage_bar_pictogram(values = non_zero_cont, value_mouse = contracts[sorted_contracts$ix,]$Contractor, value_contract = contracts[sorted_contracts$ix,]$mean, 
+                       scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
   add_animation(attr = 'opacity', parent_id=mead_names[['group_id']], element = 'g', id = 'mead-draw', begin="indefinite", fill="freeze", dur=ani_dur[['mead-draw']], values= "0;0;1", keyTimes="0;0.5;1") %>%
   add_animation(attr = 'opacity', parent_id=mead_names[['group_id']], element = 'g', id = 'mead-remove', begin="indefinite", fill="freeze", dur=ani_dur[['mead-remove']], values= "1;0") %>%

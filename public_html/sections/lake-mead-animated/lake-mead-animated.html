@@ -150,8 +150,8 @@
                 });
               } else {
                 $section.fadeOut(fadeSpeed);
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(1);
                 owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(2);
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(1);
               }
             }
           },
@@ -166,8 +166,8 @@
                 });
               } else {
                 $section.fadeOut(fadeSpeed);
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(2);
                 owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(3);
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(2);
               }
             }
           },
@@ -182,8 +182,8 @@
                 });
               } else {
                 $section.fadeOut(fadeSpeed);
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(3);
                 owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(4);
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(3);
               }
             }
           },
@@ -198,8 +198,8 @@
                 });
               } else {
                 $section.fadeOut(fadeSpeed);
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(4);
                 owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(5);
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(4);
               }
             }
           },
@@ -209,13 +209,13 @@
               var $section = $("#" + e.target.name);
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removeGreyStates);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(5);
                 owdiDrought.lakeMeadScene.meadObjectSVG.removeRiver();
                 owdiDrought.lakeMeadScene.meadObjectSVG.removePictogram();
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(5);
               } else {
                 $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetGreyStates);
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(5);
                 owdiDrought.lakeMeadScene.meadObjectSVG.drawPictogram();
+                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(5);
                 owdiDrought.lakeMeadScene.meadObjectSVG.drawBasin();
                 owdiDrought.lakeMeadScene.meadObjectSVG.showRiver();
               }
@@ -227,6 +227,7 @@
               var $section = $("#" + e.target.name);
               if (e.scrollDirection === forward) {
                 $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.moveStates);
+                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(5);
                 owdiDrought.lakeMeadScene.meadObjectSVG.drawMead();
                 owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('flood-rise');
                 owdiDrought.lakeMeadScene.meadObjectSVG.drawStatePicto('mexico');
