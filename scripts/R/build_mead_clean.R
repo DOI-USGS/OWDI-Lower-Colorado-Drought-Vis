@@ -2,7 +2,7 @@
 ## Script for cleaning up mead shapefile 
 ## Pumps out a new shapefile without islands
 ## Authors: Megan Hines, Jordan Read
-## Date: July , 2015
+## Date: July 7, 2015
 ################################################################################
 library(rgdal)
 library(rgeos)
