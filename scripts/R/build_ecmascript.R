@@ -83,6 +83,7 @@ ecmascript_mead_map <- function(){
                'function drawUserPicto(user_id){',
                '\tdocument.getElementById("usage-"+user_id).setAttribute("opacity","0.8");',
                '\tdocument.getElementById("picto-highlight-"+user_id).setAttribute("opacity","0.8");',
+               '\teval(document.getElementById("picto-"+user_id).getAttribute("onmouseover").replace("evt","null").replace("evt","null"));',
                '}',
                
                'function displayPictoName(evt, name) {',
@@ -104,6 +105,7 @@ ecmascript_mead_map <- function(){
                'function removeUserPicto(user_id){',
                '\tdocument.getElementById("usage-"+user_id).setAttribute("opacity","0.0");',
                '\tdocument.getElementById("picto-highlight-"+user_id).setAttribute("opacity","0.0");',
+               '\teval(document.getElementById("picto-"+user_id).getAttribute("onmouseout").replace("evt","null").replace("evt","null"));',
                '}',
                
                'function drawStatePicto(user_id){',
