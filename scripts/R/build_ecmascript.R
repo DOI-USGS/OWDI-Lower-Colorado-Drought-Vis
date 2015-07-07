@@ -87,11 +87,18 @@ ecmascript_mead_map <- function(){
                
                'function displayPictoName(evt, name) {',
                '\tdocument.getElementById("picto-info").firstChild.data = name;',
-               '\tdocument.getElementById("picto-info").setAttribute("x",evt.clientX-14);',
+               '}',
+               
+               'function displayPictoValue(evt, name) {',
+               '\tdocument.getElementById("picto-value").firstChild.data = name;',
                '}',
                
                'function hidePictoName(evt) {',
                '\tdocument.getElementById("picto-info").firstChild.data = " ";',
+               '}',
+               
+               'function hidePictoValue(evt) {',
+               '\tdocument.getElementById("picto-value").firstChild.data = " ";',
                '}',
                
                'function removeUserPicto(user_id){',

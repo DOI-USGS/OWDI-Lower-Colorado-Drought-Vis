@@ -2,7 +2,7 @@
 #' @param values numeric vector of values to picto-scale
 #' @param scale scale of values to single picto-icon
 #' @import XML
-usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_styles){
+usage_bar_pictogram <- function(svg, values, value_mouse, value_contract, scale=100000, group_name, group_styles){
   
   picto_lw <- '1.5'
   
@@ -24,7 +24,9 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
   axes <- newXMLNode('path', parent=ax_g,
              attrs=c('d'=sprintf("M%1.1f %1.1f l0 %1.1f l%1.1f 0",x_offset, 2*y_offset,-y_offset,x_axis_length), 'id'="picto-axes"))
   newXMLNode("text", parent = ax_g, newXMLTextNode('  '),
-             attrs = c(class="label", id="picto-info",x="0",y="-290", 'fill'='#FFFFFF', 'stroke'='none', style="text-anchor: left;"))
+             attrs = c(class="label", id="picto-info",x="55",y="-290", 'fill'='#FFFFFF', 'stroke'='none', style="text-anchor: left;"))
+  newXMLNode("text", parent = ax_g, newXMLTextNode('  '),
+             attrs = c(class="label", id="picto-value",x="55",y="-315", 'fill'='#FFFFFF', 'stroke'='none', style="text-anchor: left;"))
     
   newXMLNode("text", parent = ax_g, newXMLTextNode('Water user contracts'),
              attrs = c(id="x-pictogram-label",x=x_axis_length/2,y=y_offset+12, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;"))
@@ -64,8 +66,8 @@ usage_bar_pictogram <- function(svg, values, scale=100000, group_name, group_sty
                attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=bin_full, 
                        rx='2',ry='2','fill'='none'))
     # -- add clear mouseover rect on top --
-    on_mouseovr <- sprintf("displayPictoName(evt, '_user of contract_');document.getElementById('picto-highlight-%s').setAttribute('opacity','0.8');",i)
-    on_mouseout <- sprintf("hidePictoName(evt);document.getElementById('picto-highlight-%s').setAttribute('opacity','0.0');",i)
+    on_mouseovr <- sprintf("displayPictoName(evt, '%s');displayPictoValue(evt, '%s acre-feet');document.getElementById('picto-highlight-%s').setAttribute('opacity','0.8');",value_mouse[i], value_contract[i], i)
+    on_mouseout <- sprintf("hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-%s').setAttribute('opacity','0.0');",i)
     newXMLNode('rect',parent=g_pict_par,
                attrs=c(x=x-bin_buffer/2,y=-(bin_full+bin_buffer)*num_full-bin_buffer/2, 
                        width=bin_full+bin_buffer, height=(bin_full+bin_buffer)*num_full, 
