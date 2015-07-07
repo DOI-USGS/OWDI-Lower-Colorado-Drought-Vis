@@ -2,7 +2,7 @@
 ## Script for cleaning up contract user shapefile and joining with decree data
 ## Pumps out a new shapefile and a geojson file
 ## Authors: Megan Hines, Jordan Read
-## Date: July , 2015
+## Date: July 7, 2015
 ################################################################################
 library(rgdal)
 library(rgeos)
@@ -65,8 +65,8 @@ row.names(sub.cont)<- row.names(sortedContData)
 
 #Create the new spatialpdf
 cont.watacc <- SpatialPolygonsDataFrame(sub.cont, data = as.data.frame(sortedContData))
-
-
+#get rid of those damn quotes
+cont.watacc$Contractor <- gsub('"',"",cont.watacc$Contractor)
 #write out the shapefile and the geojson
 writeOGR(cont.watacc,"src_data//LCContractSvcAreas","wat_acc_cont", driver = "ESRI Shapefile", overwrite_layer = T)
-wat_acc_cont <- toGeoJSON(cont.watacc, dest = "src_data//LCContractSvcAreas")
+#wat_acc_cont <- toGeoJSON(cont.watacc, dest = "src_data//LCContractSvcAreas")
