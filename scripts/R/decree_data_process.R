@@ -71,7 +71,7 @@ myIDs <-contMean$OBJECTID_1
 cont <- readOGR("src_data//LCContractSvcAreas","LC_Contracts_diss")
 
 #get only the polygons that are in our NA list
-sub.cont <- subset(cont, OBJECTID_1 %in% myIDs)
+sub.cont <- cont[cont$OBJECTID_1 %in% myIDs,]
 
 #add a blank field for mean in the polygon file
 sub.cont$mean <- c(NA)
