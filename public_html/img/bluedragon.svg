@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox=" 	0 0 780 780" preserveAspectRatio="xMinYMin meet">
+	
+	<script type="text/ecmascript"><![CDATA[
+		function init(evt){
+			if ( window.svgDocument == null ) {
+				svgDocument = evt.target.ownerDocument;
+				svgDocument.meadDavisAnimate = this.meadDavisAnimate;
+				svgDocument.davisParkerAnimate = this.davisParkerAnimate;
+				svgDocument.parkerImperialAnimate = this.parkerImperialAnimate;
+				svgDocument.imperialMorelosAnimate = this.imperialMorelosAnimate;
+			}
+		}
+		
+		function meadDavisAnimate() {
+			document.getElementById("river-view-box").setAttribute("opacity", "1.0");
+			document.getElementById("animead").beginElement();
+			document.getElementById("aniclip1").beginElement();
+			document.getElementById("anizoom1").beginElement();
+		}
+		
+		function davisParkerAnimate() {
+			document.getElementById("river-view-box").setAttribute("opacity", "1.0");
+			document.getElementById("anidavis").beginElement();
+			document.getElementById("aniclip2").beginElement();
+			document.getElementById("anizoom2").beginElement();
+		}
+		
+		function parkerImperialAnimate() {
+			document.getElementById("river-view-box").setAttribute("opacity", "1.0");
+			document.getElementById("aniparker").beginElement();
+			document.getElementById("aniclip3").beginElement();
+			document.getElementById("anizoom3").beginElement();
+		}
+		function imperialMorelosAnimate() {
+			document.getElementById("river-view-box").setAttribute("opacity", "1.0");
+			document.getElementById("aniimperial").beginElement();
+			document.getElementById("aniclip4").beginElement();
+			document.getElementById("anizoom4").beginElement();
+		}
+		
+		// TODO get the move to coords for IE version
+	]]></script>
 <g>
 	<g id="all-objects">
 		<g id="water" fill="#1E628C">
@@ -2971,49 +3012,49 @@
 <g>
 	<clipPath id="zoom-view-clip">
 		<use xlink:href = "#zoom-view-box">
-			<animateMotion id="anizoom1" dur="4s" fill="freeze">
+			<animateMotion id="anizoom1" dur="4s" begin="indefinite" fill="freeze">
 					<mpath xlink:href="#mead-davis-inset-path"/>
 			</animateMotion>
-			<animateMotion id="anizoom2" begin="anizoom1.end+2s" dur="4s" fill="freeze">
+			<animateMotion id="anizoom2" dur="4s" begin="indefinite" fill="freeze">
 					<mpath xlink:href="#davis-parker-inset-path"/>
 			</animateMotion>
-			<animateMotion id="anizoom3" begin="anizoom2.end+2s" dur="4s" fill="freeze">
+			<animateMotion id="anizoom3" dur="4s" begin="indefinite" fill="freeze">
 					<mpath xlink:href="#parker-imperial-inset-path"/>
 			</animateMotion>
-			<animateMotion id="anizoom4" begin="anizoom3.end+2s" dur="8s" fill="freeze">
+			<animateMotion id="anizoom4" dur="8s" begin="indefinite" fill="freeze">
 					<mpath xlink:href="#imperial-morelos-inset-path"/>
 			</animateMotion>
 		</use>
 	</clipPath>
 </g>
 <image xlink:href="bluedragon-static.png" x="-2015" y="175" height="3120px" width="3120px" clip-path="url(#zoom-view-clip)">
-	<animateMotion id="aniclip1" dur="4s" fill="freeze">
+	<animateMotion id="aniclip1" dur="4s" begin="indefinite" fill="freeze">
 			<mpath xlink:href="#mead-davis-inset-path-opposite"/>
 	</animateMotion>
-	<animateMotion id="aniclip2" begin="aniclip1.end+2s" dur="4s" fill="freeze">
+	<animateMotion id="aniclip2" dur="4s" begin="indefinite" fill="freeze">
 			<mpath xlink:href="#davis-parker-inset-path-opposite"/>
 	</animateMotion>
-	<animateMotion id="aniclip3" begin="aniclip2.end+2s" dur="4s" fill="freeze">
+	<animateMotion id="aniclip3" dur="4s" begin="indefinite" fill="freeze">
 			<mpath xlink:href="#parker-imperial-inset-path-opposite"/>
 	</animateMotion>
-	<animateMotion id="aniclip4" begin="aniclip3.end+2s" dur="8s" fill="freeze">
+	<animateMotion id="aniclip4" dur="8s" begin="indefinite" fill="freeze">
 			<mpath xlink:href="#imperial-morelos-inset-path-opposite"/>
 	</animateMotion>
 </image>
 <rect x='40' y='40' width='350' height='350' id='zoom-view-box' stroke-width='2' fill='none' stroke = 'black'/>
 
 <g>
-	<rect id='river-view-box' x="-40" y="-40" width="80" height="80" stroke-width='2' fill='none' stroke = 'black'>
-		<animateMotion id="animead" dur="4s" fill="freeze">
+	<rect id='river-view-box' x="-40" y="-40" width="80" height="80" stroke-width='2' fill='none' stroke = 'black' opacity='0.0'>
+		<animateMotion id="animead" dur="4s" begin="indefinite" fill="freeze">
 			<mpath xlink:href="#mead-davis-path"/>
 		</animateMotion>
-		<animateMotion id="anidavis" begin="animead.end+2s" dur="4s" fill="freeze">
+		<animateMotion id="anidavis" dur="4s" begin="indefinite" fill="freeze">
 			<mpath xlink:href="#davis-parker-path"/>
 		</animateMotion>
-		<animateMotion id="aniparker" begin="anidavis.end+2s" dur="4s" fill="freeze">
+		<animateMotion id="aniparker" dur="4s" begin="indefinite" fill="freeze">
 			<mpath xlink:href="#parker-imperial-path"/>
 		</animateMotion>
-		<animateMotion id="aniimperial" begin="aniparker.end+2s" dur="8s" fill="freeze">
+		<animateMotion id="aniimperial" dur="8s" begin="indefinite" fill="freeze">
 			<mpath xlink:href="#imperial-morelos-path"/>
 		</animateMotion>
 	</rect>
