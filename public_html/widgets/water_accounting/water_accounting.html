@@ -8,8 +8,8 @@
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<link rel="dat1" type="application/json" href="wat_acc_sp.geojson" />
-	<link rel="dat2" type="application/json" href="lc_huc_simp.geojson" />
+	<link rel="dat1" type="application/json" href="lc_huc_simp.geojson" />
+	<link rel="dat2" type="application/json" href="wat_acc_cont.geojson" />
 	<style type="text/css">
 		body {
 			padding: 0;
@@ -108,17 +108,17 @@
 		var baseMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {"attribution":"&copy; <a href=\"http://openstreetmap.org/copyright\", target=\"_blank\">OpenStreetMap contributors</a>"});
 		baseMap.addTo(map);
 		baseMaps["OpenStreetMap"] = baseMap;
-		var baseMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {"attribution":"Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, \n    USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, \n    Esri China (Hong Kong), and the GIS User Community"});
+		var baseMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {"attribution":"Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC,\nUSGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI,\nEsri China (Hong Kong), and the GIS User Community"});
 		baseMap.addTo(map);
 		baseMaps["ESRI World Topo"] = baseMap;
 
 		// popup
 		function onEachFeature(feature, layer) {
-			if (feature.properties &&  feature.properties["WaterUser"] && feature.properties["LastFiveMean"]) {
+			if (feature.properties &&  feature.properties["Contractor"] && feature.properties["mean"]) {
 				layer.bindPopup(
 					"<table>" +
-					"<tr class='oddrowcol'><td>WaterUser: </td><td>"+feature.properties["WaterUser"]+"</td></tr>" +
-					"<tr class='evenrowcol'><td>LastFiveMean: </td><td>"+feature.properties["LastFiveMean"]+"</td></tr>" +
+					"<tr class='oddrowcol'><td>Contractor: </td><td>"+feature.properties["Contractor"]+"</td></tr>" +
+					"<tr class='evenrowcol'><td>mean: </td><td>"+feature.properties["mean"]+"</td></tr>" +
 					"</table>"
 				);
 			}
@@ -157,7 +157,7 @@
 
 
 
-		var style2 = {color: "#708090", weight: 5, opacity: 0.8};
+		var style2 = {color: "#FFA500", weight: 5, opacity: 0.8};
 
 
 
@@ -189,9 +189,9 @@
 		};
 		
 		if(typeof style1 == "undefined") style1 = undefined;
-		$.getJSON($("link[rel='dat1']").attr("href"), function(x) {addDataToMap(x, style1, "wat acc sp")});
+		$.getJSON($("link[rel='dat1']").attr("href"), function(x) {addDataToMap(x, style1, "lc huc simp")});
 		if(typeof style2 == "undefined") style2 = undefined;
-    $.getJSON($("link[rel='dat2']").attr("href"), function(x) {addDataToMap(x, style2, "lc huc simp", "add")});
+    $.getJSON($("link[rel='dat2']").attr("href"), function(x) {addDataToMap(x, style2, "wat acc cont", "add")});
 
 		// legend
 

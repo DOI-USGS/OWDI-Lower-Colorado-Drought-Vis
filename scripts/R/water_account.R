@@ -45,27 +45,6 @@ wae_data <- wat_acc_examp[,1:2]
 wat_acc_sp <- SpatialPointsDataFrame(wae_coord,data=wae_data,
                                      proj4string = CRS(p4s))
 
-#clean up water use contract polygons, subset only data we want by dropping some columns
-wat_use_con<-readOGR("src_data//LCContractSvcAreas","LC_Contacts_update2014")
-wat_subs<-wat_use_con[,-c(2:9,11:26)]
-writeOGR(wat_subs,"src_data//LCContractSvcAreas","LC_Contracts_subset", driver = "ESRI Shapefile", overwrite_layer = T)
-
-#dissolve polys so that we have one polygon per contract user
-library(maptools)
-wat_use_con<-readOGR("src_data//LCContractSvcAreas","LC_Contracts_subset")
-cont.union<-unionSpatialPolygons(wat_use_con,IDs = paste(wat_use_con$Contractor))
-df <- as(wat_use_con, "data.frame")[!duplicated(wat_use_con$Contractor),]
-sorted_df <- arrange(df, Contractor)
-row.names(sorted_df)<- row.names(cont.union)
-cont.diss <- SpatialPolygonsDataFrame(cont.union, data = sorted_df)
-writeOGR(cont.diss,"src_data//LCContractSvcAreas","LC_Contracts_diss", driver = "ESRI Shapefile", overwrite_layer = T)
-
-#remove nonwater parts of lake mead shapefile
-mead = readOGR(dsn = "src_data//lake_mead", layer="lakebnds")
-meadclean <- mead[substr(mead$BNDTYPE,1,5) == "water", ]
-writeOGR(meadclean,"src_data//lake_mead","meadwater", driver = "ESRI Shapefile", overwrite_layer = T)
-
-
 ################################################################################
 #rstudio/leaflet implementation
 ################################################################################
@@ -90,16 +69,20 @@ writeOGR(meadclean,"src_data//lake_mead","meadwater", driver = "ESRI Shapefile",
 ################################################################################
 #Data
 lc_huc_gjson <- toGeoJSON(lc_huc_simp, dest = "public_html/data")
-wae_gjson <- toGeoJSON(wat_acc_sp, dest = "public_html/data")
-dat<-list(wae_gjson,lc_huc_gjson)
+#wae_gjson <- toGeoJSON(wat_acc_sp, dest = "public_html/data")
+
+#read in contract service areas shapefile joined with mean 5 year values
+wat_acc_cont <- readOGR("src_data//LCContractSvcAreas","wat_acc_cont")
+wat_acc_poly <- toGeoJSON(wat_acc_cont, dest = "public_html//data")
+#wat_acc_poly <- gsub('([a-zA-Z_0-9\\.]*\\()|(\\);?$)', "", wat_acc_poly$Contractor)
+
+
+dat<-list(lc_huc_gjson,wat_acc_poly)
 
 #Styles
-lc_huc_sty <- styleSingle(col="slategray", lwd=5, alpha=0.8)
-wae_brk <- as.numeric(quantile(wat_acc_examp$LastFiveMean, c(0,0.25,0.75,1)))
-wae_sty <- styleGrad(prop="LastFiveMean",breaks = wae_brk,
-                     style.par = "rad",
-                     style.val=c(7,20,33))
-sty<-list(wae_sty,lc_huc_sty)
+lc_huc_sty <- styleSingle(col="blue", lwd=5, alpha=0.2)
+wat_acc_sty <- styleSingle(col="orange", lwd=5, alpha=0.8)
+sty<-list(wae_sty,wat_acc_sty)
 
 #New Basemaps
 addBaseMap(
@@ -118,7 +101,7 @@ water_account <- leafletR::leaflet(data=dat,
                                    base.map=list("osm","Esri.WorldTopoMap"),
                                    title="water_accounting",
                                    style=sty, 
-                                   popup = list(c("WaterUser","LastFiveMean"),c("")),
+                                   popup = list(c("Contractor","mean"),c("")),
                                    dest="public_html/widgets/",
                                    incl.data = F,
                                    controls=c("all"))
