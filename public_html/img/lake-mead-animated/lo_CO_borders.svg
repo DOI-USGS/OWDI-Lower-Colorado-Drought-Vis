@@ -81,6 +81,13 @@ function drawUserPicto(user_id){
 function displayAllocationName(evt, name) {
 	document.getElementById("allocation-value").firstChild.data = name;
 }
+function highlightState(evt, name) {
+	document.getElementById(name).setAttribute("stroke","#808080");
+}
+
+function lowlightState(evt, name) {
+	document.getElementById(name).setAttribute("stroke","#FFFFFF");
+}
 
 function hideAllocationName(evt) {
 	document.getElementById("allocation-value").firstChild.data = " ";
@@ -103,10 +110,12 @@ function removeUserPicto(user_id){
 	eval(document.getElementById("picto-"+user_id).getAttribute("onmouseout").replace("evt","null").replace("evt","null"));
 }
 function drawStatePicto(user_id){
+	document.getElementById(user_id+"-mouseovers").setAttribute("visibility","visbile");
 	document.getElementById("draw-"+user_id+"-pictogram").beginElement();
 }
 function removeStatePicto(user_id){
 	document.getElementById("remove-"+user_id+"-pictogram").beginElement();
+	document.getElementById(user_id+"-mouseovers").setAttribute("visibility","hidden");
 }
 function setAllocationsNormal(){
 	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","visible");
@@ -875,10 +884,12 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <rect x="72" y="89" width="10" height="10" rx="2" ry="2"/>
     <animate attributeName="opacity" id="draw-california-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-california-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
-	<rect x="28" y="87" width="70" height='56' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');" onmouseout="hideAllocationName(evt);"/>
-	<rect x="98" y="115" width="28" height='28' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');" onmouseout="hideAllocationName(evt);"/>
-	<rect x="56" y="143" width="98" height='42' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');" onmouseout="hideAllocationName(evt);"/>
-	<rect x="112" y="185" width="42" height='28' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');" onmouseout="hideAllocationName(evt);"/>
+    <g id='california-mouseovers' visibility='hidden'>
+		<rect x="28" y="87" width="70" height='56' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+		<rect x="98" y="115" width="28" height='28' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+		<rect x="56" y="143" width="98" height='42' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+		<rect x="112" y="185" width="42" height='28' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+	</g>
   </g>
   <g id="allocation-picto-highlight-3" opacity="0.0" stroke="none" fill="yellow">
     <rect x="154" y="270" width="28" height="14" rx="3" ry="3"/>
@@ -914,7 +925,9 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </g>
     <animate attributeName="opacity" id="draw-nevada-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-nevada-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
-	<rect x="143" y="104" width="28" height='28' stroke='black' opacity='0' onmouseover="displayAllocationName(evt,'Nevada');" onmouseout="hideAllocationName(evt);"/>
+    <g id='nevada-mouseovers' visibility='hidden'>
+		<rect x="143" y="104" width="28" height='28' stroke='black' opacity='0' onmouseover="displayAllocationName(evt,'Nevada');highlightState(evt,'Nevada')" onmouseout="hideAllocationName(evt);lowlightState(evt,'Nevada')"/>
+	</g>
   </g>
   <g id="Arizona-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
 	  
@@ -966,7 +979,9 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </g>
     <animate attributeName="opacity" id="draw-arizona-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-arizona-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
-	<rect x="199" y="158" width="84" height='70' stroke='black' opacity='0' onmouseover="displayAllocationName(evt,'Arizona');" onmouseout="hideAllocationName(evt);"/>
+    <g id='arizona-mouseovers' visibility='hidden'>
+		<rect x="199" y="158" width="84" height='70' stroke='black' opacity='0' onmouseover="displayAllocationName(evt,'Arizona');highlightState(evt,'Arizona')" onmouseout="hideAllocationName(evt);lowlightState(evt,'Arizona')"/>
+	</g>
   </g>
   <g id="Mexico-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
     <rect x="156" y="272" width="10" height="10" rx="2" ry="2" fill="none"/>
@@ -1001,8 +1016,10 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </g>
     <animate attributeName="opacity" id="draw-mexico-pictogram" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.75;1"/>
     <animate attributeName="opacity" id="remove-mexico-pictogram" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
-	<rect x="70" y="242" width="70" height='28' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'Mexico');" onmouseout="hideAllocationName(evt);"/>
-	<rect x="98" y="270" width="84" height='14' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'Mexico');" onmouseout="hideAllocationName(evt);"/>
+    <g id='mexico-mouseovers' visibility='hidden'>
+		<rect x="70" y="242" width="70" height='28' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')" onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"/>
+		<rect x="98" y="270" width="84" height='14' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')" onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"/>
+	</g>
   </g>
 </svg>
  
