@@ -27,7 +27,8 @@ $( document ).ready( function () {
         var scene = new ScrollMagic.Scene( {
                 triggerElement: sceneItem.parentContainer,
                 duration: sceneItem.duration
-            } );
+            } )
+            .addIndicators();
 
         if ( sceneItem.pin ) {
             scene.setPin( sceneItem.pin );
