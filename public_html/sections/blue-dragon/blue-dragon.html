@@ -18,38 +18,17 @@
 	</div>
 
 	<div class="sectionContent">
-		<p><a href="http://txpub.usgs.gov/DSS/StoryMaps/BlueDragon/" target="_blank">Click here</a> to explore the lower Colorado control structures and major diversions.</p>
-		<img id="usDroughtGif" src="{{baseUrl}}/img/usdrought.gif" alt="U.S. Drought"/>
-		<p> Since 2000, the upper Colorado River basin has experienced the 15 driest years in over 100 years of historical recorded flows (Bureau of Reclamation), and one of the most severe droughts in the last 1200 years (Meko et al. 2012). </p>
-        <p>90% of the total basin water supply for both the upper and lower Colorado River basins comes from the upper basin (Bureau of Reclamation), so a drought in the upper basin has a significant impact on the lower basin. Of water supply from the upper basin, about 50% of streamflow comes from groundwater (Rumsey et al. 2015) </p>
-		
-		<button class="supportinginfo spacer" id="section6Button">Supporting Info</button>
-		<div class="supportingInfoContent" id="section6Info">
-			<p> [Need BoR citations for ‘15 driest years in the >100 year historical record’ and ‘90% of total basin water supply comes from upper Colorado River basin’] </p>
-			<p> Meko, D.M., et al. 2007.Upper Colorado River Flow Reconstruction. IGBP PAGES/World Data Center for Paleoclimatology. Data Contribution Series # 2007-052. NOAA/NCDC Paleoclimatology Program, Boulder CO, USA. </p>
-			<p> Meko, D.M., C.A. Woodhouse, C.H. Baisan, T. Knight, J.J. Lukas, M.K. Hughes, and M.W. Salzer. 2007. Medieval drought in the upper Colorado River Basin. Geophysical Research Letters, Vol. 34, L10705, 24 May 2007. </p>
-            <p>Rumsey, Christine A., et al. "Regional scale estimates of baseflow and factors influencing baseflow in the Upper Colorado River Basin." Journal of Hydrology: Regional Studies 4 (2015): 91-107. </p>
-		</div>
-		<div id="natural-flow-graph"></div>
-		<div class="graphCaption">
-			<p>Historical natural flow illustrates how streamflow responds to drought in the Colorado River basin. The plot above shows estimated <i>natural flow</i> at Lee’s Ferry, Arizona. <i>Natural flow</i> is the flow that would have occurred without human impacts such as reservoirs and diversions. Lee’s Ferry is one of the uppermost stream gage locations in the Lower Colorado River Basin and is used as a proxy for water entering the Lower Basin via the Colorado River.  Historical observations are extended by a tree-ring reconstruction of streamflow going back approximately 1200 years, estimated by Meko et al. (2012). Because trees grow less during drought, tree ring cores can be used to estimate historical streamflow conditions going back many centuries. Tree ring samples were collected from locations throughout the upper basin to estimate historical, natural flow; and were validated using observed streamflow data.
-			</p>
-		</div>
+		<a href="http://txpub.usgs.gov/DSS/StoryMaps/BlueDragon/" target="_blank"><div id="texas-thumbnail">
+			<img src="{{baseUrl}}/img/texas-app.png" alt="texas water science center app"/>
+		</div></a>
+		<p id="texas-app"><a href="http://txpub.usgs.gov/DSS/StoryMaps/BlueDragon/" target="_blank">Click here</a> to explore the lower Colorado control structures and major diversions.</p>
 	</div>
-</div>
+        
 <script type="text/javascript">
 /* global owdiDrought */
 /* global ScrollMagic */
 /* global $ */
 /* global console */
-(function() {
-	"use strict";
-	$('#section6Button').click(function() {
-		$('#section6Info').toggle();
-	});
-	owdiDrought.createDygraph("natural-flow-graph")
-})();
-
 (function() {
 	"use strict";
 	owdiDrought.blueDragonScene = {};
