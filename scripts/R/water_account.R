@@ -69,16 +69,20 @@ wat_acc_sp <- SpatialPointsDataFrame(wae_coord,data=wae_data,
 ################################################################################
 #Data
 lc_huc_gjson <- toGeoJSON(lc_huc_simp, dest = "public_html/data")
-wae_gjson <- toGeoJSON(wat_acc_sp, dest = "public_html/data")
-dat<-list(wae_gjson,lc_huc_gjson)
+#wae_gjson <- toGeoJSON(wat_acc_sp, dest = "public_html/data")
+
+#read in contract service areas shapefile joined with mean 5 year values
+wat_acc_cont <- readOGR("src_data//LCContractSvcAreas","wat_acc_cont")
+wat_acc_poly <- toGeoJSON(wat_acc_cont, dest = "public_html//data")
+#wat_acc_poly <- gsub('([a-zA-Z_0-9\\.]*\\()|(\\);?$)', "", wat_acc_poly$Contractor)
+
+
+dat<-list(lc_huc_gjson,wat_acc_poly)
 
 #Styles
-lc_huc_sty <- styleSingle(col="slategray", lwd=5, alpha=0.8)
-wae_brk <- as.numeric(quantile(wat_acc_examp$LastFiveMean, c(0,0.25,0.75,1)))
-wae_sty <- styleGrad(prop="LastFiveMean",breaks = wae_brk,
-                     style.par = "rad",
-                     style.val=c(7,20,33))
-sty<-list(wae_sty,lc_huc_sty)
+lc_huc_sty <- styleSingle(col="blue", lwd=5, alpha=0.2)
+wat_acc_sty <- styleSingle(col="orange", lwd=5, alpha=0.8)
+sty<-list(wae_sty,wat_acc_sty)
 
 #New Basemaps
 addBaseMap(
@@ -97,7 +101,7 @@ water_account <- leafletR::leaflet(data=dat,
                                    base.map=list("osm","Esri.WorldTopoMap"),
                                    title="water_accounting",
                                    style=sty, 
-                                   popup = list(c("WaterUser","LastFiveMean"),c("")),
+                                   popup = list(c("Contractor","mean"),c("")),
                                    dest="public_html/widgets/",
                                    incl.data = F,
                                    controls=c("all"))

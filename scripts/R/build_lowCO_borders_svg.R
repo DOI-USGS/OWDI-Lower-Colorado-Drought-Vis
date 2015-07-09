@@ -4,20 +4,22 @@ library(rgeos)
 library(magrittr)
 library(XML)
 source('scripts/R/manipulate_lowCO_borders_svg.R')
+source('scripts/R/create_contract_areas.R')
 source('scripts/R/build_usage_pictogram.R')
+source('scripts/R/build_state_pictogram.R')
 source('scripts/R/build_ecmascript.R')
 source('scripts/R/build_css.R')
 source('scripts/R/build_mead_levels.R')
 width=7.5
 height=7.6
-plot_dir = 'public_html/img'
+plot_dir = 'public_html/img/lake-mead-animated'
 svg_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
 simp_tol <- 7000
 picto_scale = 100000 # acre-feet per bin
 grey_simp_tol <- 1.3*simp_tol # less res for non-highlighted states
 min_area <- 1e+10
 epsg_code <- '+init=epsg:3479' #5070 for USGS CONUS albers?
-declaration <- '<?xml-stylesheet type="text/css" href="../css/main.css" ?>'
+declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
 mead_poly <- c(x1=535,y1=20,x2=535,y2=450,x3=400,y3=450,x4=280,y4= 20)
 mead_yvals <- get_mead_yval(mead_poly, storage = c(26.2, 23.1, 16.2, 9.6, 7.7, 6.0)) # flood, surplus, normal, shortage 1,2,3
 
@@ -48,10 +50,10 @@ mexico = readOGR(dsn = "src_data/mexico",layer="MEX_adm0") %>%
 
 states = readOGR(dsn = "src_data/states_21basic",layer="states") 
 rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="CRB_Rivers")
-usage = readOGR("public_html/data/wat_acc_sp.geojson", "OGRGeoJSON")
-contracts = readOGR("src_data/LCContractSvcAreas", layer = 'LC_Contacts_update2014')
+contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
+
  
-sorted_contracts <- sort(contracts$CU,decreasing = T, index.return = T)
+sorted_contracts <- sort(as.numeric(contracts$mean),decreasing = T, index.return = T)
 co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
 co_basin = readOGR("public_html/data/lc_huc_simp.geojson", "OGRGeoJSON")
@@ -113,13 +115,10 @@ spTransform(co_basin, CRS(epsg_code)) %>%
 
 for (i in 1:5){
   cont <- spTransform(contracts[sorted_contracts$ix[i],], CRS(epsg_code))
-  if (i != 4){
-    cont <- gSimplify(cont, simp_tol)
-  }
   plot(cont, add=TRUE)
 }
 
-non_zero_cont <- contracts$CU[sorted_contracts$ix]
+non_zero_cont <- as.numeric(contracts$mean[sorted_contracts$ix])
 non_zero_cont <- non_zero_cont[non_zero_cont!=0]
 dev.off()
 
@@ -127,7 +126,6 @@ svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- clean_svg_doc(svg) %>%
   add_rect(width="540", height="547", fill='grey', opacity='0.2', stroke='black', 'stroke-width'='2') %>%
-  add_css(css_mead_map()) %>% 
   add_ecmascript(ecmascript_mead_map()) %>%
   name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Colorado-river','Colorado-river-basin',top_users)) %>%
   group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-river-polyline' = 'Colorado-river','co-basin-polygon' = 'Colorado-river-basin', 'top-users' = top_users)) %>%
@@ -138,7 +136,8 @@ svg <- clean_svg_doc(svg) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="331;0;") %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-reset', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values="0;331;") %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', element = 'g', id = 'colorado-basin-draw', begin="indefinite", fill="freeze", dur=ani_dur[['basin-draw']], values= "0;1") %>%
-  usage_bar_pictogram(values = non_zero_cont, scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
+  usage_bar_pictogram(values = non_zero_cont, value_mouse = contracts[sorted_contracts$ix,]$Contractor, value_contract = contracts[sorted_contracts$ix,]$mean, 
+                       scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
   add_animation(attr = 'opacity', parent_id=mead_names[['group_id']], element = 'g', id = 'mead-draw', begin="indefinite", fill="freeze", dur=ani_dur[['mead-draw']], values= "0;0;1", keyTimes="0;0.5;1") %>%
   add_animation(attr = 'opacity', parent_id=mead_names[['group_id']], element = 'g', id = 'mead-remove', begin="indefinite", fill="freeze", dur=ani_dur[['mead-remove']], values= "1;0") %>%
@@ -168,16 +167,6 @@ svg <- clean_svg_doc(svg) %>%
                 begin="indefinite", fill="freeze", dur=ani_dur[['stage-move']], from=mead_yvals[6], to=mead_yvals[6]) %>% # does nothing, but function exists for completeness
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-draw', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', element = 'g', id = 'pictogram-topfive-reset', begin="indefinite", fill="freeze", dur="1s", to= "0") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-1", element = 'g', id = 'pictogram-1-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id=top_users[1], element = 'path', id = 'user-1-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-2", element = 'g', id = 'pictogram-2-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id=top_users[2], element = 'path', id = 'user-2-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-3", element = 'g', id = 'pictogram-3-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id=top_users[3], element = 'path', id = 'user-3-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-4", element = 'g', id = 'pictogram-4-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id=top_users[4], element = 'path', id = 'user-4-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
-  add_animation(attr = 'opacity', parent_id="picto-usage-5", element = 'g', id = 'pictogram-5-draw', begin="indefinite", fill="freeze", dur="2s", values= "1;0;1;0;1") %>%
-  add_animation(attr = 'opacity', parent_id=top_users[5], element = 'path', id = 'user-5-draw', begin="indefinite", fill="freeze", dur="2s", values= "0;1;0") %>%
   add_animation(attr = 'opacity', parent_id='non-lo-co-states', id = 'remove-grey-states', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   add_animation(attr = 'opacity', parent_id='non-lo-co-states', id = 'reset-grey-states', element='g', begin="indefinite", fill="freeze", dur="1s", values= "0;1") %>%
   add_animation(attr = 'opacity', parent_id='pictogram-topfive', id = 'remove-pictogram', element = 'g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
@@ -196,6 +185,16 @@ svg <- clean_svg_doc(svg) %>%
   add_animation(attr = 'stroke-width', parent_id="Mexico", id = 'Mexico-stroke-reset', begin="indefinite", fill="freeze", dur="1s", values= "4.55;2.5") %>% # to original stroke 
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale', begin="indefinite", type = 'scale', fill="freeze", from = '1', to="0.55", dur="1s") %>%
   add_animateTransform(parent_id = 'Mexico', id = 'Mexico-scale-reset', begin="indefinite", type = 'scale', fill="freeze", from="0.55", to="1", dur="1s") %>%
+  build_state_pictos() %>%
+  add_animation(attr = 'opacity', parent_id="Mexico-pictos", id = 'draw-mexico-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.75;1") %>%
+  add_animation(attr = 'opacity', parent_id="California-pictos", id = 'draw-california-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.75;1") %>%
+  add_animation(attr = 'opacity', parent_id="Arizona-pictos", id = 'draw-arizona-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.75;1") %>%
+  add_animation(attr = 'opacity', parent_id="Nevada-pictos", id = 'draw-nevada-pictogram', element='g', begin="indefinite", fill="freeze", dur="2s", values= "0;0;1", keyTimes="0;0.75;1") %>%
+  add_animation(attr = 'opacity', parent_id="Mexico-pictos", id = 'remove-mexico-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id="California-pictos", id = 'remove-california-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id="Arizona-pictos", id = 'remove-arizona-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
+  add_animation(attr = 'opacity', parent_id="Nevada-pictos", id = 'remove-nevada-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   toString.XMLNode()
 
-cat(c(svg, declaration), file = svg_file, append = FALSE)
+lines <- strsplit(svg,'[\n]')[[1]]
+cat(paste(c(lines[1], declaration, lines[-1]),collapse = '\n'), file = svg_file, append = FALSE)

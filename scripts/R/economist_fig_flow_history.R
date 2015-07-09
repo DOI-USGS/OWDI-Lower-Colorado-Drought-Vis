@@ -18,7 +18,7 @@ flow_df = mutate(flow_data, TreeRings=RecBCM, TreeRingsLwr=TreeRings-RMSE_BCM, T
 	# mutate(TreeRings15YrRunMean = running_mean(TreeRings), TreeRingsAllYrMean = mean(TreeRings)) %>%
 	select(Year, TreeRings, TreeRingsLwr, TreeRingsUpr) #TreeRings15YrRunMean, TreeRingsAllYrMean)
 
-# add more recent flow data (still only up to 2012)
+# add more recent flow data (up to 2014)
 flow_file_recent <- 'src_data/NaturalFlow.csv'
 flow_df <- flow_df %>% full_join(
 	read.csv(flow_file_recent) %>% 
@@ -27,12 +27,20 @@ flow_df <- flow_df %>% full_join(
 		select(Year, FlowGage), by="Year")
 
 # compute running means on the average of TreeRings and FlowGage (or just one, when only one is available)
+# flow_df <- flow_df %>%
+# 	mutate(MeanTreeGage = rowMeans(cbind(TreeRings, FlowGage), na.rm=TRUE),
+# 				 TreeGage15YrRunMean = running_mean(MeanTreeGage),
+# 				 TreeGageAllYrMean = mean(MeanTreeGage),
+# 				 Min15YrMean = min(TreeGage15YrRunMean, na.rm=TRUE)) %>%
+# 	select(-MeanTreeGage)
+
+
+# compute running means on just the FlowGage data 
 flow_df <- flow_df %>%
-	mutate(MeanTreeGage = rowMeans(cbind(TreeRings, FlowGage), na.rm=TRUE),
-				 TreeGage15YrRunMean = running_mean(MeanTreeGage),
-				 TreeGageAllYrMean = mean(MeanTreeGage),
-				 Min15YrMean = min(TreeGage15YrRunMean, na.rm=TRUE)) %>%
-	select(-MeanTreeGage)
+	mutate(TreeGage15YrRunMean = running_mean(FlowGage),
+				 TreeGageAllYrMean = mean(FlowGage, na.rm=TRUE),
+				 Min15YrMean = min(TreeGage15YrRunMean, na.rm=TRUE)) 
+
 
 
 flow_df$below_mean = flow_df$TreeGage15YrRunMean < flow_df$TreeGageAllYrMean
@@ -40,14 +48,16 @@ flow_df$drought_length = (flow_df$below_mean) * unlist(lapply(rle(flow_df$below_
 flow_df$TreeGage15yrPct = 100*flow_df$TreeGage15YrRunMean/flow_df$TreeGageAllYrMean
 
 to_write = select(flow_df, Year, TreeGage15yrPct, below_mean, drought_length)
+to_write = na.omit(to_write)
 
 write.csv(to_write, 'src_data/treeringFlow15yrProcessed.csv', row.names=FALSE)
 
 
 ## make examplefigure
 png('~/economist_flow_fig.png', width=2100, height=1500, res=300)
-plot(c(1800, 2020),c(NA,NA), ylim=c(80, 120), xlab='Year', ylab='Percent of Mean')
+plot(c(1900, 2010),c(NA,NA), ylim=c(80, 120), xlab='Year', ylab='Percent of Mean')
 
+flow_df = subset(flow_df, Year >= 1900)
 
 col = rgb(0.5,0.5,0.5,0.5)
 cutoff = 10  #10 year drought duration cutoff
@@ -63,4 +73,10 @@ for(i in 1:nrow(flow_df)){
 lines(flow_df$Year, 100*flow_df$TreeGage15YrRunMean/flow_df$TreeGageAllYrMean, type='l')
 #plot(TreeRings~Year, flow_df, type='l')
 abline(h=100)
+
+pre_drought = subset(flow_df, Year <= 2000)
+min20th_century = min(100*pre_drought$TreeGage15YrRunMean/pre_drought$TreeGageAllYrMean)
+
+abline(h=min20th_century, col='red')
+
 dev.off()

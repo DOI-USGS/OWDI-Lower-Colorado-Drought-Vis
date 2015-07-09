@@ -10,7 +10,7 @@
             cdImageLabelClassname = ".cd-image-label",
             cdResizeImgClassName = ".cd-resize-img";
 
-        //check if the .cd-image-container is in the viewport 
+        //check if the .cd-image-container is in the viewport
         //if yes, animate it
         owdiDrought.slider.checkPosition($cdImageContainer);
         $(window).on("scroll", function() {
@@ -20,7 +20,7 @@
         //make the .cd-handle element draggable and modify .cd-resize-img width according to its position
         $cdImageContainer.each(function() {
             var actual = $(this);
-                
+
             owdiDrought.slider.drags(
                 actual.find(".cd-handle"),
                 actual.find(cdResizeImgClassName),
@@ -29,15 +29,6 @@
                 actual.find(cdImageLabelClassname + "[data-type='modified']"));
 
         });
-
-        //upadate images label visibility
-        $(window).on("resize", function() {
-            $cdImageContainer.each(function() {
-                var actual = $(this);
-                owdiDrought.slider.updateLabel(actual.find(cdImageLabelClassname + "[data-type='modified']"), actual.find(cdResizeImgClassName), "left");
-                owdiDrought.slider.updateLabel(actual.find(cdImageLabelClassname + "[data-type='original']"), actual.find(cdResizeImgClassName), "right");
-            });
-        });
     };
 
     owdiDrought.slider.checkPosition = function(container) {
@@ -45,6 +36,7 @@
             var actualContainer = $(this);
             if ($(window).scrollTop() + $(window).height() * 0.5 > actualContainer.offset().top) {
                 actualContainer.addClass("is-visible");
+                actualContainer.find(".cd-image-label").removeClass("is-hidden");
             }
         });
     };
@@ -54,7 +46,7 @@
         var vmouseAndMouseUp = "mouseup vmouseup",
                 draggable = "draggable",
                 resizable = "resizable";
-                
+
         dragElement.on("mousedown vmousedown", function(e) {
             dragElement.addClass(draggable);
             resizeElement.addClass(resizable);
@@ -114,5 +106,34 @@
                 label.addClass(isHiddenLabel);
             }
         }
+    };
+
+    owdiDrought.slider.beforeButtonClicked = function(evt) {
+      var $topLevel = $(evt.target).closest("figure"),
+        $afterImg = $topLevel.find("> img"),
+        fullWidth = $afterImg.width(),
+        $handle = $topLevel.find(".cd-handle"),
+        $overlay = $topLevel.find(".cd-resize-img");
+
+        $handle.animate({
+          left : fullWidth - 100
+        });
+        $overlay.animate({
+          width: fullWidth - 100
+        });
+
+    };
+
+    owdiDrought.slider.afterButtonClicked = function(evt) {
+      var $topLevel = $(evt.target).closest("figure"),
+        $handle = $topLevel.find(".cd-handle"),
+        $overlay = $topLevel.find(".cd-resize-img");
+
+        $handle.animate({
+          left : 100
+        });
+        $overlay.animate({
+          width: 100
+        });
     };
 })();

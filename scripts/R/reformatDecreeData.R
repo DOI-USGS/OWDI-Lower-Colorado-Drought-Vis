@@ -1,10 +1,11 @@
 # arrange and aggregate LC Decree Acct. Data
 library(xlsx)
 library(reshape2)
+library(dplyr)
 
 trim <- function (x) gsub("^\\s+|\\s+$", "", x)
 
-reformatLBDec <- function(yrs = 2000:2013, rowsToRead = rbind(c(4,274),c(3,108),c(3,92)))
+reformatLBDec <- function(yrs = 2000:2014, rowsToRead = rbind(c(4,274),c(3,108),c(3,92)))
 {
   allWUData <- c()
   # ignore the values that are computed in excel
@@ -19,7 +20,7 @@ reformatLBDec <- function(yrs = 2000:2013, rowsToRead = rbind(c(4,274),c(3,108),
   for(stateI in 1:length(states)){
     print(paste('Starting:',states[stateI]))
     flush.console()
-    zz <- read.xlsx('../src_data/LBDecreeAccounting//DecreeAccting_2000_2013.xlsx', 
+    zz <- read.xlsx('src_data/LBDecreeAccounting//DecreeAccting_2000_2014.xlsx', 
                     sheetName = sheetNames[stateI], 
                     rowIndex = rowsToRead[stateI,1]:rowsToRead[stateI,2],
                     colIndex = 1:(length(yrs) + 2),
@@ -110,6 +111,32 @@ reformatLBDec <- function(yrs = 2000:2013, rowsToRead = rbind(c(4,274),c(3,108),
       allWUData <- rbind(allWUData, wuData)
     }
   }
+  
+  
+  # remove users that have 0 diversion and 0 consumptive use for all years
+  remUsers <- allWUData %>%
+    dplyr::group_by(Variable, WaterUser, State) %>%
+    dplyr::summarise(Tot = sum(Value)) %>%
+    dplyr::filter((Tot == 0 & Variable == 'ConsumptiveUse') | (Tot == 0 & Variable == 'Diversion'))
+  r1 <- remUsers %>%
+    dplyr::filter(Variable == 'ConsumptiveUse') %>%
+    dplyr::select(WaterUser)
+  r2 <- remUsers %>%
+    dplyr::filter(Variable == 'Diversion') %>%
+    dplyr::select(WaterUser)
+  remUsers <- r1 %>% dplyr::select(WaterUser) %>%
+    dplyr::filter(WaterUser %in% r2$WaterUser)
+  allWUData <- allWUData %>%
+    dplyr::filter(!(WaterUser %in% remUsers$WaterUser))
+  
+  # add in the ContractorID field (unique ID to map use data with contractor service area polygons)
+  cmap <- read.csv('src_data/LBDecreeAccounting/ContractorMap.csv')
+  cmap <- dplyr::select(cmap, OBJECTID_1, Contractor.Decree) %>%
+    dplyr::filter(Contractor.Decree != '') 
+  allWUData <- dplyr::full_join(allWUData, cmap, by = c("WaterUser" = "Contractor.Decree"))
+  allWUData <- dplyr::rename(allWUData, ContractorID = OBJECTID_1)
+  
   allWUData$WaterUser <- as.factor(allWUData$WaterUser)
-  write.csv(allWUData,'../src_data/LBDecreeAccounting/DecreeData.csv', row.names = F)
+  
+  write.csv(allWUData,'src_data/LBDecreeAccounting/DecreeData.csv', row.names = F)
 }

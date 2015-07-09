@@ -1,8 +1,9 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
 -------------------------------- */
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -13,17 +14,20 @@ img {
   max-width: 100%;
 }
 
-/* -------------------------------- 
 
-Main components 
+/* --------------------------------
+
+Main components
 
 -------------------------------- */
+
 header {
   position: relative;
   height: 160px;
   line-height: 160px;
   text-align: center;
 }
+
 header h1 {
   font-size: 22px;
   font-size: 1.375rem;
@@ -32,6 +36,7 @@ header h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 @media only screen and (min-width: 768px) {
   header {
     height: 240px;
@@ -46,9 +51,9 @@ header h1 {
 .cd-image-container {
   position: relative;
   width: 100%;
-  max-width: 768px;
   margin: 15px auto;
 }
+
 .cd-image-container img {
   display: block;
 }
@@ -59,7 +64,7 @@ header h1 {
   right: 0;
   color: #ffffff;
   padding: 1em;
-  background:rgba(0,0,0,.4);
+  background: rgba(0, 0, 0, .4);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   opacity: 0;
@@ -72,9 +77,15 @@ header h1 {
   -moz-transition: -moz-transform 0.3s 0.7s, opacity 0.3s 0.7s;
   transition: transform 0.3s 0.7s, opacity 0.3s 0.7s;
 }
+
+.cd-image-label:hover {
+  cursor: pointer;
+}
+
 .cd-image-label.is-hidden {
   visibility: hidden;
 }
+
 .is-visible .cd-image-label {
   opacity: 1;
   -webkit-transform: translateY(0);
@@ -100,6 +111,7 @@ header h1 {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+
 .cd-resize-img img {
   position: absolute;
   left: 0;
@@ -109,10 +121,12 @@ header h1 {
   width: auto;
   max-width: none;
 }
+
 .cd-resize-img .cd-image-label {
   right: auto;
   left: 0;
 }
+
 .is-visible .cd-resize-img {
   width: 50%;
   /* bounce in animation of the modified image */
@@ -132,6 +146,7 @@ header h1 {
     width: 50%;
   }
 }
+
 @-moz-keyframes cd-bounce-in {
   0% {
     width: 0;
@@ -143,6 +158,7 @@ header h1 {
     width: 50%;
   }
 }
+
 @keyframes cd-bounce-in {
   0% {
     width: 0;
@@ -154,6 +170,7 @@ header h1 {
     width: 50%;
   }
 }
+
 .cd-handle {
   position: absolute;
   height: 44px;
@@ -164,7 +181,7 @@ header h1 {
   margin-left: -22px;
   margin-top: -22px;
   border-radius: 50%;
-  background: #dc717d url("../img/cd-arrows.svg") no-repeat center center;
+  background: #003366 url("../img/cd-arrows.svg") no-repeat center center;
   cursor: move;
   box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   opacity: 0;
@@ -174,10 +191,12 @@ header h1 {
   -o-transform: translate3d(0, 0, 0) scale(0);
   transform: translate3d(0, 0, 0) scale(0);
 }
+
 .cd-handle.draggable {
   /* change background color when element is active */
   background-color: #445b7c;
 }
+
 .is-visible .cd-handle {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0) scale(1);

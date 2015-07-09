@@ -27,8 +27,7 @@ $( document ).ready( function () {
         var scene = new ScrollMagic.Scene( {
                 triggerElement: sceneItem.parentContainer,
                 duration: sceneItem.duration
-            } )
-            .addIndicators();
+            } );
 
         if ( sceneItem.pin ) {
             scene.setPin( sceneItem.pin );
@@ -101,9 +100,6 @@ $( document ).ready( function () {
             // the section's HTML id attribute
             initializeSections = function () {
                 switch ( this.sectionId ) {
-                case "blue-dragon":
-                    owdiDrought.createDygraph( "natural-flow-graph" );
-                    break;
                 case "before-after":
                     owdiDrought.slider.sliderInit();
                     break;
