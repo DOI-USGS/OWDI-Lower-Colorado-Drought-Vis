@@ -55,3 +55,8 @@ combStorage:
   description: The end-of-december total storage of Powell and Mead in acre-ft.
   methods: "[PowellMeadFullHistorical.csv](../src_data/PowellMeadFullHistorical.csv) was provided by Reclamation. This file contains monthly historical data for Powell and Mead elevations and storage, since each reservoir began filling. [reformat_historical_storage_data](scripts/R/reformat_historical_storage_data.R) adds Powell and Mead storage together, filters to only end-of-December values, and creates [MeadPowellCombinedStorage.tsv](../src_data/MeadPowellCombinedStorage.tsv). The tsv file is used by XXX."
   link: ["http://www.usbr.gov/uc/crsp/GetDateInfo?d0=1719&d1=1792&d2=1851&d3=1862&d4=1872&d5=1928&idCount=6&l=LAKE+POWELL","http://www.usbr.gov/lc/region/g4000/hourly/mead-elv.html"]
+naturalFlow:
+  title: Natural Flow 
+  description: The Bureau of Reclamation's calendar year total Natural Flow record at Lees Ferry and Imperial. The 1906-2012 values are from the latest Reclamation update dated January 8, 2015. The 2013 value for Lees Ferry is provided as a provisional value, and the 2014 value is preliminary provisional based on 99% of the 1981-2010 average calendar year inflow.
+  methods: Used in the supply vs. use figure (Imperial natural flow) and to describe the current drought (Lees Ferry natural flow).
+  link: "http://www.usbr.gov/lc/region/g4000/NaturalFlow/current.html"
