@@ -105,7 +105,7 @@ def renderGraph(ele, floc):
                 highlightRange(ele, int(year[i]) - int(per[i]) + 1, int(year[i]), minbot, maxbot - minbot)
             if float(per[i]) > 10 and i + 1 == len(per)-1:
                 highlightRange(ele, int(year[i]) - int(per[i]) + 1, int(year[i+1]), minbot, maxbot - minbot)
-        drawGreenBox(ele, 1902, 1920, minbot, maxbot - minbot)
+        drawGreenBox(ele, 1906, 1922, minbot, maxbot - minbot)
         for i in range(0, len(year)-1):
             createLineBox(ele, int(year[i]), int(year[i])+1, minbot, maxbot - minbot, float(perc[i]), int(year[i]), i)
         for i in range(0, int((maxbot - minbot)/10) + 1):

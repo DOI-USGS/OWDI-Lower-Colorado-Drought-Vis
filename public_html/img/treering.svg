@@ -194,7 +194,7 @@
       <rect fill="#CCCCB2" height="250" width="58.3333333333" x="154.166666667" y="0"/>
       <rect fill="#CCCCB2" height="250" width="125.0" x="220.833333333" y="0"/>
       <rect fill="#CCCCB2" height="250" width="58.3333333333" x="416.666666667" y="0"/>
-      <rect fill="#A3FF75" height="250" width="75.0" x="8.33333333333" y="0"/>
+      <rect fill="#A3FF75" height="250" width="66.6666666667" x="25.0" y="0"/>
       <rect class="linebox" fill="blue" height="250" id="box0" opacity="0" width="4.16666666667" x="83.3333333333" y="0"/>
       <text class="num0" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 119.58</text>
       <text class="num0" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1920</text>
