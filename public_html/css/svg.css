@@ -28,3 +28,15 @@ text {
 #water-usage-svg {
     font-size: 60%;
 }
+
+.label {
+	font-size: 1em;
+}
+
+#x-pictogram-label {
+	font-size: 1em;
+}
+
+#y-pictogram-label {
+	font-size: 1em;
+}
