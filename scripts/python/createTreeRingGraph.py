@@ -18,7 +18,7 @@ def main():
     graph.set('transform', 'translate(65 10)')
     renderGraph(graph, getScriptLoc() + '/../../src_data/treeringFlow15yrProcessed.csv')
     renderLabels(main)
-    outsvg = open(getScriptLoc() + '/../../public_html/img/treering.svg','w+')
+    outsvg = open(getScriptLoc() + '/../../public_html/img/droughtMovingAverage.svg','w+')
     outsvg.truncate()
     outsvg.write(prettify(svg))
     outsvg.close()
