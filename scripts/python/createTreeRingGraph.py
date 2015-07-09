@@ -9,6 +9,10 @@ def main():
     svg = Element('svg')
     svg.set('xmlns', 'http://www.w3.org/2000/svg')
     svg.set('xmlns:xlink', 'http://www.w3.org/1999/xlink')
+    global css
+    css = SubElement(svg, 'style')
+    css.set('type', 'text/css')
+    css.text = ''
     main = SubElement(svg, 'g')
     graph = SubElement(main, 'g')
     graph.set('transform', 'translate(65 10)')
@@ -57,7 +61,7 @@ def drawGraphLine(ele, year1, perc1, year2, perc2, yrange, prange, ymin, pmin, i
     animation.set('attributeName', 'visibility')
     animation.set('from', 'hidden')
     animation.set('to', 'visible')
-    animation.set('dur', str(itn*.01))
+    animation.set('dur', str(itn*.05))
     
 def getScriptLoc():
     return os.getcwd().replace('\\','/')
@@ -77,8 +81,11 @@ def renderGraph(ele, floc):
                 per.append(row[3])
                 x+= 1
             i+= 1
-        minbot = math.floor(float(year[0])/100) * 100
-        maxbot = math.ceil(float(year[len(year)-1])/100) * 100
+        year = year[-100:]
+        perc = perc[-100:]
+        per = per[-100:]
+        minbot = math.floor(float(year[0])/10) * 10
+        maxbot = math.ceil(float(year[len(year)-1])/10) * 10
         min = float(perc[0])
         max = float(perc[0])
         for num in perc:
@@ -89,27 +96,30 @@ def renderGraph(ele, floc):
                 max = float(num)
         minside = math.floor(float(min)/5) * 5
         maxside = math.ceil(float(max)/5) * 5
-        botstep = 500 / ((maxbot - minbot)/100)
+        botstep = 500 / ((maxbot - minbot)/10)
         sidestep = 250 / ((maxside - minside)/5)
         for i in range(0, len(per)-1):
             if float(per[i]) > 10 and float(per[i+1]) == 0:
                 highlightRange(ele, int(year[i]) - int(per[i]) + 1, int(year[i]), minbot, maxbot - minbot)
             if float(per[i]) > 10 and i + 1 == len(per)-1:
                 highlightRange(ele, int(year[i]) - int(per[i]) + 1, int(year[i+1]), minbot, maxbot - minbot)
-        for i in range(0, int((maxbot - minbot)/100) + 1):
+        for i in range(0, len(year)-1):
+            createLineBox(ele, int(year[i]), int(year[i])+1, minbot, maxbot - minbot, float(perc[i]), int(year[i]), i)
+        for i in range(0, int((maxbot - minbot)/10) + 1):
             if i % 2 == 0:
                 drawLine(ele, i * botstep, 250, i * botstep, 245, 2, 'black')
-                drawText(ele, (i * botstep) - (len(str(int((i*100)+minbot)))/2)*10, 265, str(int((i*100)+minbot)))
-        for i in range(0, int((maxside - minside)/5) + 1):
-            drawLine(ele, 0, i * sidestep, 5, i * sidestep, 2, 'black')
-            drawText(ele, -30, 250 - (i * sidestep) + 5, str(int((i * 5) + minside)))
-            if int((i * 5) + minside) == 100:
-                drawLine(ele, 15, 250 - (i * sidestep), 485, 250 - (i * sidestep), 1, 'black')
+                drawText(ele, (i * botstep) - (len(str(int((i*10)+minbot)))/2)*10, 270, str(int((i*10)+minbot)))
+        drawMinLine(ele, perc, minside, maxside - minside)
         linecontainer = SubElement(ele, 'g')
         linecontainer.set('stroke', 'blue')
         linecontainer.set('stroke-width', '2')
         for i in range(0, len(year)-1):
             drawGraphLine(linecontainer, float(year[i]), float(perc[i]), float(year[i+1]), float(perc[i+1]), maxbot - minbot, maxside - minside, minbot, minside, i)
+        for i in range(0, int((maxside - minside)/5) + 1):
+            drawLine(ele, 0, i * sidestep, 5, i * sidestep, 2, 'black')
+            drawText(ele, -30, 250 - (i * sidestep) + 5, str(int((i * 5) + minside)))
+            if int((i * 5) + minside) == 100:
+                drawLine(ele, 15, 250 - (i * sidestep), 485, 250 - (i * sidestep), 1, 'black')
         drawLine(ele, 0, 250, 500, 250, 2, 'black')
         drawLine(ele, 0, 250, 0, 0, 2, 'black')
         drawLine(ele, 0, 0, 500, 0, 2, 'black')
@@ -131,5 +141,35 @@ def highlightRange(ele, x1, x2, ymin, yrange):
     rect.set('width', str(x2 - x1))
     rect.set('x', str(x1))
     rect.set('fill', '#CCCCB2')
+    return rect
+    
+def createLineBox(ele, x1, x2, ymin, yrange, avg, year, rot):
+    box = highlightRange(ele, x1, x2, ymin, yrange)
+    box.set('class', 'linebox')
+    box.set('fill', 'blue')
+    box.set('opacity', '0')
+    box.set('id', 'box' + str(rot))
+    css.text += '\n#box' + str(rot) + ':hover ~' + ' .num' + str(rot) + ' { opacity : 1 }'
+    css.text += '\n#box' + str(rot) + ':hover' + ' { opacity : .25 }'
+    text1 = drawText(ele, 15, 245, 'PoM: ' + str(round(avg, 2)))
+    text1.set('fill', 'green')
+    text1.set('opacity', '0')
+    text1.set('font-weight', 'bold')
+    text1.set('font-size', '12')
+    text1.set('class', 'num' + str(rot))
+    text2 = drawText(ele, 15, 15, 'Year: ' + str(year))
+    text2.set('fill', 'blue')
+    text2.set('opacity', '0')
+    text2.set('font-weight', 'bold')
+    text2.set('font-size', '12')
+    text2.set('class', 'num' + str(rot))
+    
+def drawMinLine(ele, percdata, pmin, prange):
+    min = float(percdata[0])
+    for val in percdata:
+        if float(val) < min:
+            min = float(val)
+    drawLine(ele, 15, 250 - ((min - pmin)*(250/prange)), 485, 250 - ((min - pmin)*(250/prange)), 1, 'red')
+    drawText(ele, 15, 250 - ((min - pmin)*(250/prange)) - 5, 'Minimum').set('fill', 'red')
     
 main()
