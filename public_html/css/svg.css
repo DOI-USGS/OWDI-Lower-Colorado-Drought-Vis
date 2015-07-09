@@ -12,12 +12,24 @@ text {
     font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.label {
+    font-size: 16px;
+    cursor: default;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
 .dater {
     font-size: 21px;
 }
 
 .tooltip {
     font-size: 12px;
+}
+
+.small-text {
+    font-size: 12px;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .caption {
