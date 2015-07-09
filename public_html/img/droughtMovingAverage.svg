@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 320">
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
 #box0:hover ~ .num0 { opacity : 1 }
 #box0:hover { opacity : .25 }

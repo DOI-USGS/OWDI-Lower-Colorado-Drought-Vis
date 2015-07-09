@@ -9,6 +9,7 @@ def main():
     svg = Element('svg')
     svg.set('xmlns', 'http://www.w3.org/2000/svg')
     svg.set('xmlns:xlink', 'http://www.w3.org/1999/xlink')
+    svg.set('viewBox', '0 0 600 320')
     global css
     css = SubElement(svg, 'style')
     css.set('type', 'text/css')
