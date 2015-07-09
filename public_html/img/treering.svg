@@ -191,586 +191,589 @@
 #box93:hover { opacity : .25 }</style>
   <g>
     <g transform="translate(65 10)">
-      <rect fill="#CCCCB2" height="250" width="70.0" x="85.0" y="0"/>
-      <rect fill="#CCCCB2" height="250" width="150.0" x="165.0" y="0"/>
-      <rect fill="#CCCCB2" height="250" width="70.0" x="400.0" y="0"/>
-      <rect class="linebox" fill="blue" height="250" id="box0" opacity="0" width="5.0" x="0.0" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="58.3333333333" x="154.166666667" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="125.0" x="220.833333333" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="58.3333333333" x="416.666666667" y="0"/>
+      <rect fill="#A3FF75" height="250" width="75.0" x="8.33333333333" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box0" opacity="0" width="4.16666666667" x="83.3333333333" y="0"/>
       <text class="num0" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 119.58</text>
       <text class="num0" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1920</text>
-      <rect class="linebox" fill="blue" height="250" id="box1" opacity="0" width="5.0" x="5.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box1" opacity="0" width="4.16666666667" x="87.5" y="0"/>
       <text class="num1" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 121.29</text>
       <text class="num1" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1921</text>
-      <rect class="linebox" fill="blue" height="250" id="box2" opacity="0" width="5.0" x="10.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box2" opacity="0" width="4.16666666667" x="91.6666666667" y="0"/>
       <text class="num2" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 120.19</text>
       <text class="num2" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1922</text>
-      <rect class="linebox" fill="blue" height="250" id="box3" opacity="0" width="5.0" x="15.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box3" opacity="0" width="4.16666666667" x="95.8333333333" y="0"/>
       <text class="num3" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 123.48</text>
       <text class="num3" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1923</text>
-      <rect class="linebox" fill="blue" height="250" id="box4" opacity="0" width="5.0" x="20.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box4" opacity="0" width="4.16666666667" x="100.0" y="0"/>
       <text class="num4" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 119.74</text>
       <text class="num4" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1924</text>
-      <rect class="linebox" fill="blue" height="250" id="box5" opacity="0" width="5.0" x="25.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box5" opacity="0" width="4.16666666667" x="104.166666667" y="0"/>
       <text class="num5" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 119.67</text>
       <text class="num5" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1925</text>
-      <rect class="linebox" fill="blue" height="250" id="box6" opacity="0" width="5.0" x="30.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box6" opacity="0" width="4.16666666667" x="108.333333333" y="0"/>
       <text class="num6" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 119.47</text>
       <text class="num6" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1926</text>
-      <rect class="linebox" fill="blue" height="250" id="box7" opacity="0" width="5.0" x="35.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box7" opacity="0" width="4.16666666667" x="112.5" y="0"/>
       <text class="num7" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 119.88</text>
       <text class="num7" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1927</text>
-      <rect class="linebox" fill="blue" height="250" id="box8" opacity="0" width="5.0" x="40.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box8" opacity="0" width="4.16666666667" x="116.666666667" y="0"/>
       <text class="num8" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 120.97</text>
       <text class="num8" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1928</text>
-      <rect class="linebox" fill="blue" height="250" id="box9" opacity="0" width="5.0" x="45.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box9" opacity="0" width="4.16666666667" x="120.833333333" y="0"/>
       <text class="num9" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 121.18</text>
       <text class="num9" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1929</text>
-      <rect class="linebox" fill="blue" height="250" id="box10" opacity="0" width="5.0" x="50.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box10" opacity="0" width="4.16666666667" x="125.0" y="0"/>
       <text class="num10" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 121.63</text>
       <text class="num10" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1930</text>
-      <rect class="linebox" fill="blue" height="250" id="box11" opacity="0" width="5.0" x="55.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box11" opacity="0" width="4.16666666667" x="129.166666667" y="0"/>
       <text class="num11" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 116.38</text>
       <text class="num11" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1931</text>
-      <rect class="linebox" fill="blue" height="250" id="box12" opacity="0" width="5.0" x="60.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box12" opacity="0" width="4.16666666667" x="133.333333333" y="0"/>
       <text class="num12" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 113.9</text>
       <text class="num12" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1932</text>
-      <rect class="linebox" fill="blue" height="250" id="box13" opacity="0" width="5.0" x="65.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box13" opacity="0" width="4.16666666667" x="137.5" y="0"/>
       <text class="num13" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 112.24</text>
       <text class="num13" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1933</text>
-      <rect class="linebox" fill="blue" height="250" id="box14" opacity="0" width="5.0" x="70.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box14" opacity="0" width="4.16666666667" x="141.666666667" y="0"/>
       <text class="num14" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 109.33</text>
       <text class="num14" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1934</text>
-      <rect class="linebox" fill="blue" height="250" id="box15" opacity="0" width="5.0" x="75.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box15" opacity="0" width="4.16666666667" x="145.833333333" y="0"/>
       <text class="num15" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 104.99</text>
       <text class="num15" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1935</text>
-      <rect class="linebox" fill="blue" height="250" id="box16" opacity="0" width="5.0" x="80.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box16" opacity="0" width="4.16666666667" x="150.0" y="0"/>
       <text class="num16" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 101.44</text>
       <text class="num16" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1936</text>
-      <rect class="linebox" fill="blue" height="250" id="box17" opacity="0" width="5.0" x="85.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box17" opacity="0" width="4.16666666667" x="154.166666667" y="0"/>
       <text class="num17" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 99.58</text>
       <text class="num17" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1937</text>
-      <rect class="linebox" fill="blue" height="250" id="box18" opacity="0" width="5.0" x="90.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box18" opacity="0" width="4.16666666667" x="158.333333333" y="0"/>
       <text class="num18" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 99.18</text>
       <text class="num18" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1938</text>
-      <rect class="linebox" fill="blue" height="250" id="box19" opacity="0" width="5.0" x="95.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box19" opacity="0" width="4.16666666667" x="162.5" y="0"/>
       <text class="num19" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 97.96</text>
       <text class="num19" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1939</text>
-      <rect class="linebox" fill="blue" height="250" id="box20" opacity="0" width="5.0" x="100.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box20" opacity="0" width="4.16666666667" x="166.666666667" y="0"/>
       <text class="num20" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 95.94</text>
       <text class="num20" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1940</text>
-      <rect class="linebox" fill="blue" height="250" id="box21" opacity="0" width="5.0" x="105.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box21" opacity="0" width="4.16666666667" x="170.833333333" y="0"/>
       <text class="num21" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 98.15</text>
       <text class="num21" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1941</text>
-      <rect class="linebox" fill="blue" height="250" id="box22" opacity="0" width="5.0" x="110.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box22" opacity="0" width="4.16666666667" x="175.0" y="0"/>
       <text class="num22" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 97.1</text>
       <text class="num22" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1942</text>
-      <rect class="linebox" fill="blue" height="250" id="box23" opacity="0" width="5.0" x="115.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box23" opacity="0" width="4.16666666667" x="179.166666667" y="0"/>
       <text class="num23" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 95.65</text>
       <text class="num23" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1943</text>
-      <rect class="linebox" fill="blue" height="250" id="box24" opacity="0" width="5.0" x="120.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box24" opacity="0" width="4.16666666667" x="183.333333333" y="0"/>
       <text class="num24" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.75</text>
       <text class="num24" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1944</text>
-      <rect class="linebox" fill="blue" height="250" id="box25" opacity="0" width="5.0" x="125.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box25" opacity="0" width="4.16666666667" x="187.5" y="0"/>
       <text class="num25" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.53</text>
       <text class="num25" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1945</text>
-      <rect class="linebox" fill="blue" height="250" id="box26" opacity="0" width="5.0" x="130.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box26" opacity="0" width="4.16666666667" x="191.666666667" y="0"/>
       <text class="num26" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.71</text>
       <text class="num26" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1946</text>
-      <rect class="linebox" fill="blue" height="250" id="box27" opacity="0" width="5.0" x="135.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box27" opacity="0" width="4.16666666667" x="195.833333333" y="0"/>
       <text class="num27" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.27</text>
       <text class="num27" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1947</text>
-      <rect class="linebox" fill="blue" height="250" id="box28" opacity="0" width="5.0" x="140.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box28" opacity="0" width="4.16666666667" x="200.0" y="0"/>
       <text class="num28" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 94.6</text>
       <text class="num28" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1948</text>
-      <rect class="linebox" fill="blue" height="250" id="box29" opacity="0" width="5.0" x="145.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box29" opacity="0" width="4.16666666667" x="204.166666667" y="0"/>
       <text class="num29" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 99.44</text>
       <text class="num29" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1949</text>
-      <rect class="linebox" fill="blue" height="250" id="box30" opacity="0" width="5.0" x="150.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box30" opacity="0" width="4.16666666667" x="208.333333333" y="0"/>
       <text class="num30" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 99.67</text>
       <text class="num30" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1950</text>
-      <rect class="linebox" fill="blue" height="250" id="box31" opacity="0" width="5.0" x="155.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box31" opacity="0" width="4.16666666667" x="212.5" y="0"/>
       <text class="num31" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 98.7</text>
       <text class="num31" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1951</text>
-      <rect class="linebox" fill="blue" height="250" id="box32" opacity="0" width="5.0" x="160.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box32" opacity="0" width="4.16666666667" x="216.666666667" y="0"/>
       <text class="num32" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 101.63</text>
       <text class="num32" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1952</text>
-      <rect class="linebox" fill="blue" height="250" id="box33" opacity="0" width="5.0" x="165.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box33" opacity="0" width="4.16666666667" x="220.833333333" y="0"/>
       <text class="num33" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 98.49</text>
       <text class="num33" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1953</text>
-      <rect class="linebox" fill="blue" height="250" id="box34" opacity="0" width="5.0" x="170.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box34" opacity="0" width="4.16666666667" x="225.0" y="0"/>
       <text class="num34" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 97.28</text>
       <text class="num34" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1954</text>
-      <rect class="linebox" fill="blue" height="250" id="box35" opacity="0" width="5.0" x="175.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box35" opacity="0" width="4.16666666667" x="229.166666667" y="0"/>
       <text class="num35" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 97.05</text>
       <text class="num35" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1955</text>
-      <rect class="linebox" fill="blue" height="250" id="box36" opacity="0" width="5.0" x="180.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box36" opacity="0" width="4.16666666667" x="233.333333333" y="0"/>
       <text class="num36" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.14</text>
       <text class="num36" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1956</text>
-      <rect class="linebox" fill="blue" height="250" id="box37" opacity="0" width="5.0" x="185.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box37" opacity="0" width="4.16666666667" x="237.5" y="0"/>
       <text class="num37" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 95.07</text>
       <text class="num37" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1957</text>
-      <rect class="linebox" fill="blue" height="250" id="box38" opacity="0" width="5.0" x="190.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box38" opacity="0" width="4.16666666667" x="241.666666667" y="0"/>
       <text class="num38" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 96.02</text>
       <text class="num38" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1958</text>
-      <rect class="linebox" fill="blue" height="250" id="box39" opacity="0" width="5.0" x="195.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box39" opacity="0" width="4.16666666667" x="245.833333333" y="0"/>
       <text class="num39" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.43</text>
       <text class="num39" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1959</text>
-      <rect class="linebox" fill="blue" height="250" id="box40" opacity="0" width="5.0" x="200.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box40" opacity="0" width="4.16666666667" x="250.0" y="0"/>
       <text class="num40" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.25</text>
       <text class="num40" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1960</text>
-      <rect class="linebox" fill="blue" height="250" id="box41" opacity="0" width="5.0" x="205.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box41" opacity="0" width="4.16666666667" x="254.166666667" y="0"/>
       <text class="num41" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 91.76</text>
       <text class="num41" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1961</text>
-      <rect class="linebox" fill="blue" height="250" id="box42" opacity="0" width="5.0" x="210.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box42" opacity="0" width="4.16666666667" x="258.333333333" y="0"/>
       <text class="num42" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.18</text>
       <text class="num42" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1962</text>
-      <rect class="linebox" fill="blue" height="250" id="box43" opacity="0" width="5.0" x="215.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box43" opacity="0" width="4.16666666667" x="262.5" y="0"/>
       <text class="num43" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 89.27</text>
       <text class="num43" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1963</text>
-      <rect class="linebox" fill="blue" height="250" id="box44" opacity="0" width="5.0" x="220.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box44" opacity="0" width="4.16666666667" x="266.666666667" y="0"/>
       <text class="num44" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 86.32</text>
       <text class="num44" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1964</text>
-      <rect class="linebox" fill="blue" height="250" id="box45" opacity="0" width="5.0" x="225.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box45" opacity="0" width="4.16666666667" x="270.833333333" y="0"/>
       <text class="num45" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 89.2</text>
       <text class="num45" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1965</text>
-      <rect class="linebox" fill="blue" height="250" id="box46" opacity="0" width="5.0" x="230.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box46" opacity="0" width="4.16666666667" x="275.0" y="0"/>
       <text class="num46" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 88.17</text>
       <text class="num46" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1966</text>
-      <rect class="linebox" fill="blue" height="250" id="box47" opacity="0" width="5.0" x="235.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box47" opacity="0" width="4.16666666667" x="279.166666667" y="0"/>
       <text class="num47" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 84.01</text>
       <text class="num47" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1967</text>
-      <rect class="linebox" fill="blue" height="250" id="box48" opacity="0" width="5.0" x="240.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box48" opacity="0" width="4.16666666667" x="283.333333333" y="0"/>
       <text class="num48" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 85.12</text>
       <text class="num48" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1968</text>
-      <rect class="linebox" fill="blue" height="250" id="box49" opacity="0" width="5.0" x="245.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box49" opacity="0" width="4.16666666667" x="287.5" y="0"/>
       <text class="num49" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 88.05</text>
       <text class="num49" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1969</text>
-      <rect class="linebox" fill="blue" height="250" id="box50" opacity="0" width="5.0" x="250.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box50" opacity="0" width="4.16666666667" x="291.666666667" y="0"/>
       <text class="num50" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 90.54</text>
       <text class="num50" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1970</text>
-      <rect class="linebox" fill="blue" height="250" id="box51" opacity="0" width="5.0" x="255.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box51" opacity="0" width="4.16666666667" x="295.833333333" y="0"/>
       <text class="num51" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.14</text>
       <text class="num51" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1971</text>
-      <rect class="linebox" fill="blue" height="250" id="box52" opacity="0" width="5.0" x="260.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box52" opacity="0" width="4.16666666667" x="300.0" y="0"/>
       <text class="num52" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 88.37</text>
       <text class="num52" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1972</text>
-      <rect class="linebox" fill="blue" height="250" id="box53" opacity="0" width="5.0" x="265.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box53" opacity="0" width="4.16666666667" x="304.166666667" y="0"/>
       <text class="num53" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 89.4</text>
       <text class="num53" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1973</text>
-      <rect class="linebox" fill="blue" height="250" id="box54" opacity="0" width="5.0" x="270.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box54" opacity="0" width="4.16666666667" x="308.333333333" y="0"/>
       <text class="num54" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 90.9</text>
       <text class="num54" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1974</text>
-      <rect class="linebox" fill="blue" height="250" id="box55" opacity="0" width="5.0" x="275.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box55" opacity="0" width="4.16666666667" x="312.5" y="0"/>
       <text class="num55" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.15</text>
       <text class="num55" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1975</text>
-      <rect class="linebox" fill="blue" height="250" id="box56" opacity="0" width="5.0" x="280.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box56" opacity="0" width="4.16666666667" x="316.666666667" y="0"/>
       <text class="num56" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.62</text>
       <text class="num56" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1976</text>
-      <rect class="linebox" fill="blue" height="250" id="box57" opacity="0" width="5.0" x="285.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box57" opacity="0" width="4.16666666667" x="320.833333333" y="0"/>
       <text class="num57" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 88.21</text>
       <text class="num57" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1977</text>
-      <rect class="linebox" fill="blue" height="250" id="box58" opacity="0" width="5.0" x="290.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box58" opacity="0" width="4.16666666667" x="325.0" y="0"/>
       <text class="num58" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 91.12</text>
       <text class="num58" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1978</text>
-      <rect class="linebox" fill="blue" height="250" id="box59" opacity="0" width="5.0" x="295.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box59" opacity="0" width="4.16666666667" x="329.166666667" y="0"/>
       <text class="num59" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 94.29</text>
       <text class="num59" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1979</text>
-      <rect class="linebox" fill="blue" height="250" id="box60" opacity="0" width="5.0" x="300.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box60" opacity="0" width="4.16666666667" x="333.333333333" y="0"/>
       <text class="num60" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.36</text>
       <text class="num60" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1980</text>
-      <rect class="linebox" fill="blue" height="250" id="box61" opacity="0" width="5.0" x="305.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box61" opacity="0" width="4.16666666667" x="337.5" y="0"/>
       <text class="num61" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.76</text>
       <text class="num61" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1981</text>
-      <rect class="linebox" fill="blue" height="250" id="box62" opacity="0" width="5.0" x="310.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box62" opacity="0" width="4.16666666667" x="341.666666667" y="0"/>
       <text class="num62" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 95.34</text>
       <text class="num62" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1982</text>
-      <rect class="linebox" fill="blue" height="250" id="box63" opacity="0" width="5.0" x="315.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box63" opacity="0" width="4.16666666667" x="345.833333333" y="0"/>
       <text class="num63" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 99.82</text>
       <text class="num63" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1983</text>
-      <rect class="linebox" fill="blue" height="250" id="box64" opacity="0" width="5.0" x="320.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box64" opacity="0" width="4.16666666667" x="350.0" y="0"/>
       <text class="num64" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 104.02</text>
       <text class="num64" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1984</text>
-      <rect class="linebox" fill="blue" height="250" id="box65" opacity="0" width="5.0" x="325.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box65" opacity="0" width="4.16666666667" x="354.166666667" y="0"/>
       <text class="num65" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 106.74</text>
       <text class="num65" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1985</text>
-      <rect class="linebox" fill="blue" height="250" id="box66" opacity="0" width="5.0" x="330.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box66" opacity="0" width="4.16666666667" x="358.333333333" y="0"/>
       <text class="num66" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 110.32</text>
       <text class="num66" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1986</text>
-      <rect class="linebox" fill="blue" height="250" id="box67" opacity="0" width="5.0" x="335.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box67" opacity="0" width="4.16666666667" x="362.5" y="0"/>
       <text class="num67" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 111.29</text>
       <text class="num67" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1987</text>
-      <rect class="linebox" fill="blue" height="250" id="box68" opacity="0" width="5.0" x="340.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box68" opacity="0" width="4.16666666667" x="366.666666667" y="0"/>
       <text class="num68" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 108.14</text>
       <text class="num68" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1988</text>
-      <rect class="linebox" fill="blue" height="250" id="box69" opacity="0" width="5.0" x="345.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box69" opacity="0" width="4.16666666667" x="370.833333333" y="0"/>
       <text class="num69" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 106.57</text>
       <text class="num69" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1989</text>
-      <rect class="linebox" fill="blue" height="250" id="box70" opacity="0" width="5.0" x="350.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box70" opacity="0" width="4.16666666667" x="375.0" y="0"/>
       <text class="num70" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 103.32</text>
       <text class="num70" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1990</text>
-      <rect class="linebox" fill="blue" height="250" id="box71" opacity="0" width="5.0" x="355.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box71" opacity="0" width="4.16666666667" x="379.166666667" y="0"/>
       <text class="num71" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 103.89</text>
       <text class="num71" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1991</text>
-      <rect class="linebox" fill="blue" height="250" id="box72" opacity="0" width="5.0" x="360.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box72" opacity="0" width="4.16666666667" x="383.333333333" y="0"/>
       <text class="num72" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 106.39</text>
       <text class="num72" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1992</text>
-      <rect class="linebox" fill="blue" height="250" id="box73" opacity="0" width="5.0" x="365.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box73" opacity="0" width="4.16666666667" x="387.5" y="0"/>
       <text class="num73" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 108.07</text>
       <text class="num73" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1993</text>
-      <rect class="linebox" fill="blue" height="250" id="box74" opacity="0" width="5.0" x="370.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box74" opacity="0" width="4.16666666667" x="391.666666667" y="0"/>
       <text class="num74" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 104.97</text>
       <text class="num74" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1994</text>
-      <rect class="linebox" fill="blue" height="250" id="box75" opacity="0" width="5.0" x="375.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box75" opacity="0" width="4.16666666667" x="395.833333333" y="0"/>
       <text class="num75" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 106.11</text>
       <text class="num75" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1995</text>
-      <rect class="linebox" fill="blue" height="250" id="box76" opacity="0" width="5.0" x="380.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box76" opacity="0" width="4.16666666667" x="400.0" y="0"/>
       <text class="num76" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 108.49</text>
       <text class="num76" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1996</text>
-      <rect class="linebox" fill="blue" height="250" id="box77" opacity="0" width="5.0" x="385.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box77" opacity="0" width="4.16666666667" x="404.166666667" y="0"/>
       <text class="num77" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 110.45</text>
       <text class="num77" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1997</text>
-      <rect class="linebox" fill="blue" height="250" id="box78" opacity="0" width="5.0" x="390.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box78" opacity="0" width="4.16666666667" x="408.333333333" y="0"/>
       <text class="num78" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 107.35</text>
       <text class="num78" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1998</text>
-      <rect class="linebox" fill="blue" height="250" id="box79" opacity="0" width="5.0" x="395.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box79" opacity="0" width="4.16666666667" x="412.5" y="0"/>
       <text class="num79" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 103.52</text>
       <text class="num79" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1999</text>
-      <rect class="linebox" fill="blue" height="250" id="box80" opacity="0" width="5.0" x="400.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box80" opacity="0" width="4.16666666667" x="416.666666667" y="0"/>
       <text class="num80" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 98.8</text>
       <text class="num80" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2000</text>
-      <rect class="linebox" fill="blue" height="250" id="box81" opacity="0" width="5.0" x="405.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box81" opacity="0" width="4.16666666667" x="420.833333333" y="0"/>
       <text class="num81" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.3</text>
       <text class="num81" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2001</text>
-      <rect class="linebox" fill="blue" height="250" id="box82" opacity="0" width="5.0" x="410.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box82" opacity="0" width="4.16666666667" x="425.0" y="0"/>
       <text class="num82" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 89.14</text>
       <text class="num82" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2002</text>
-      <rect class="linebox" fill="blue" height="250" id="box83" opacity="0" width="5.0" x="415.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box83" opacity="0" width="4.16666666667" x="429.166666667" y="0"/>
       <text class="num83" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 88.85</text>
       <text class="num83" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2003</text>
-      <rect class="linebox" fill="blue" height="250" id="box84" opacity="0" width="5.0" x="420.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box84" opacity="0" width="4.16666666667" x="433.333333333" y="0"/>
       <text class="num84" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 89.06</text>
       <text class="num84" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2004</text>
-      <rect class="linebox" fill="blue" height="250" id="box85" opacity="0" width="5.0" x="425.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box85" opacity="0" width="4.16666666667" x="437.5" y="0"/>
       <text class="num85" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.56</text>
       <text class="num85" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2005</text>
-      <rect class="linebox" fill="blue" height="250" id="box86" opacity="0" width="5.0" x="430.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box86" opacity="0" width="4.16666666667" x="441.666666667" y="0"/>
       <text class="num86" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.11</text>
       <text class="num86" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2006</text>
-      <rect class="linebox" fill="blue" height="250" id="box87" opacity="0" width="5.0" x="435.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box87" opacity="0" width="4.16666666667" x="445.833333333" y="0"/>
       <text class="num87" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.32</text>
       <text class="num87" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2007</text>
-      <rect class="linebox" fill="blue" height="250" id="box88" opacity="0" width="5.0" x="440.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box88" opacity="0" width="4.16666666667" x="450.0" y="0"/>
       <text class="num88" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.06</text>
       <text class="num88" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2008</text>
-      <rect class="linebox" fill="blue" height="250" id="box89" opacity="0" width="5.0" x="445.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box89" opacity="0" width="4.16666666667" x="454.166666667" y="0"/>
       <text class="num89" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.66</text>
       <text class="num89" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2009</text>
-      <rect class="linebox" fill="blue" height="250" id="box90" opacity="0" width="5.0" x="450.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box90" opacity="0" width="4.16666666667" x="458.333333333" y="0"/>
       <text class="num90" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 90.4</text>
       <text class="num90" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2010</text>
-      <rect class="linebox" fill="blue" height="250" id="box91" opacity="0" width="5.0" x="455.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box91" opacity="0" width="4.16666666667" x="462.5" y="0"/>
       <text class="num91" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.07</text>
       <text class="num91" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2011</text>
-      <rect class="linebox" fill="blue" height="250" id="box92" opacity="0" width="5.0" x="460.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box92" opacity="0" width="4.16666666667" x="466.666666667" y="0"/>
       <text class="num92" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 86.72</text>
       <text class="num92" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2012</text>
-      <rect class="linebox" fill="blue" height="250" id="box93" opacity="0" width="5.0" x="465.0" y="0"/>
+      <rect class="linebox" fill="blue" height="250" id="box93" opacity="0" width="4.16666666667" x="470.833333333" y="0"/>
       <text class="num93" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 83.64</text>
       <text class="num93" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2013</text>
       <line stroke="black" stroke-width="2" x1="0.0" x2="0.0" y1="250" y2="245"/>
-      <text fill="black" x="-20.0" y="270">1920</text>
-      <line stroke="black" stroke-width="2" x1="100.0" x2="100.0" y1="250" y2="245"/>
-      <text fill="black" x="80.0" y="270">1940</text>
-      <line stroke="black" stroke-width="2" x1="200.0" x2="200.0" y1="250" y2="245"/>
-      <text fill="black" x="180.0" y="270">1960</text>
-      <line stroke="black" stroke-width="2" x1="300.0" x2="300.0" y1="250" y2="245"/>
-      <text fill="black" x="280.0" y="270">1980</text>
-      <line stroke="black" stroke-width="2" x1="400.0" x2="400.0" y1="250" y2="245"/>
-      <text fill="black" x="380.0" y="270">2000</text>
+      <text fill="black" x="-20.0" y="270">1900</text>
+      <line stroke="black" stroke-width="2" x1="83.3333333333" x2="83.3333333333" y1="250" y2="245"/>
+      <text fill="black" x="63.3333333333" y="270">1920</text>
+      <line stroke="black" stroke-width="2" x1="166.666666667" x2="166.666666667" y1="250" y2="245"/>
+      <text fill="black" x="146.666666667" y="270">1940</text>
+      <line stroke="black" stroke-width="2" x1="250.0" x2="250.0" y1="250" y2="245"/>
+      <text fill="black" x="230.0" y="270">1960</text>
+      <line stroke="black" stroke-width="2" x1="333.333333333" x2="333.333333333" y1="250" y2="245"/>
+      <text fill="black" x="313.333333333" y="270">1980</text>
+      <line stroke="black" stroke-width="2" x1="416.666666667" x2="416.666666667" y1="250" y2="245"/>
+      <text fill="black" x="396.666666667" y="270">2000</text>
       <line stroke="black" stroke-width="2" x1="500.0" x2="500.0" y1="250" y2="245"/>
       <text fill="black" x="480.0" y="270">2020</text>
       <line stroke="red" stroke-width="1" x1="15" x2="485" y1="233.317223247" y2="233.317223247"/>
       <text fill="red" x="15" y="228.317223247">Minimum</text>
       <g stroke="blue" stroke-width="2">
-        <line x1="0.0" x2="5.0" y1="30.0890014435" y2="20.5835359872">
+        <line x1="83.3333333333" x2="87.5" y1="30.0890014435" y2="20.5835359872">
           <animate attributeName="visibility" dur="0.0" from="hidden" to="visible"/>
         </line>
-        <line x1="5.0" x2="10.0" y1="20.5835359872" y2="26.695673276">
+        <line x1="87.5" x2="91.6666666667" y1="20.5835359872" y2="26.695673276">
           <animate attributeName="visibility" dur="0.05" from="hidden" to="visible"/>
         </line>
-        <line x1="10.0" x2="15.0" y1="26.695673276" y2="8.41713367253">
+        <line x1="91.6666666667" x2="95.8333333333" y1="26.695673276" y2="8.41713367253">
           <animate attributeName="visibility" dur="0.1" from="hidden" to="visible"/>
         </line>
-        <line x1="15.0" x2="20.0" y1="8.41713367253" y2="29.2133941546">
+        <line x1="95.8333333333" x2="100.0" y1="8.41713367253" y2="29.2133941546">
           <animate attributeName="visibility" dur="0.15" from="hidden" to="visible"/>
         </line>
-        <line x1="20.0" x2="25.0" y1="29.2133941546" y2="29.6281578698">
+        <line x1="100.0" x2="104.166666667" y1="29.2133941546" y2="29.6281578698">
           <animate attributeName="visibility" dur="0.2" from="hidden" to="visible"/>
         </line>
-        <line x1="25.0" x2="30.0" y1="29.6281578698" y2="30.7186478655">
+        <line x1="104.166666667" x2="108.333333333" y1="29.6281578698" y2="30.7186478655">
           <animate attributeName="visibility" dur="0.25" from="hidden" to="visible"/>
         </line>
-        <line x1="30.0" x2="35.0" y1="30.7186478655" y2="28.4296341511">
+        <line x1="108.333333333" x2="112.5" y1="30.7186478655" y2="28.4296341511">
           <animate attributeName="visibility" dur="0.3" from="hidden" to="visible"/>
         </line>
-        <line x1="35.0" x2="40.0" y1="28.4296341511" y2="22.3860767687">
+        <line x1="112.5" x2="116.666666667" y1="28.4296341511" y2="22.3860767687">
           <animate attributeName="visibility" dur="0.35" from="hidden" to="visible"/>
         </line>
-        <line x1="40.0" x2="45.0" y1="22.3860767687" y2="21.1994104403">
+        <line x1="116.666666667" x2="120.833333333" y1="22.3860767687" y2="21.1994104403">
           <animate attributeName="visibility" dur="0.4" from="hidden" to="visible"/>
         </line>
-        <line x1="45.0" x2="50.0" y1="21.1994104403" y2="18.7055393127">
+        <line x1="120.833333333" x2="125.0" y1="21.1994104403" y2="18.7055393127">
           <animate attributeName="visibility" dur="0.45" from="hidden" to="visible"/>
         </line>
-        <line x1="50.0" x2="55.0" y1="18.7055393127" y2="47.8710003298">
+        <line x1="125.0" x2="129.166666667" y1="18.7055393127" y2="47.8710003298">
           <animate attributeName="visibility" dur="0.5" from="hidden" to="visible"/>
         </line>
-        <line x1="55.0" x2="60.0" y1="47.8710003298" y2="61.6695084368">
+        <line x1="129.166666667" x2="133.333333333" y1="47.8710003298" y2="61.6695084368">
           <animate attributeName="visibility" dur="0.55" from="hidden" to="visible"/>
         </line>
-        <line x1="60.0" x2="65.0" y1="61.6695084368" y2="70.8735702285">
+        <line x1="133.333333333" x2="137.5" y1="61.6695084368" y2="70.8735702285">
           <animate attributeName="visibility" dur="0.6" from="hidden" to="visible"/>
         </line>
-        <line x1="65.0" x2="70.0" y1="70.8735702285" y2="87.0529518325">
+        <line x1="137.5" x2="141.666666667" y1="70.8735702285" y2="87.0529518325">
           <animate attributeName="visibility" dur="0.65" from="hidden" to="visible"/>
         </line>
-        <line x1="70.0" x2="75.0" y1="87.0529518325" y2="111.19084436">
+        <line x1="141.666666667" x2="145.833333333" y1="87.0529518325" y2="111.19084436">
           <animate attributeName="visibility" dur="0.7" from="hidden" to="visible"/>
         </line>
-        <line x1="75.0" x2="80.0" y1="111.19084436" y2="130.881290719">
+        <line x1="145.833333333" x2="150.0" y1="111.19084436" y2="130.881290719">
           <animate attributeName="visibility" dur="0.75" from="hidden" to="visible"/>
         </line>
-        <line x1="80.0" x2="85.0" y1="130.881290719" y2="141.231862677">
+        <line x1="150.0" x2="154.166666667" y1="130.881290719" y2="141.231862677">
           <animate attributeName="visibility" dur="0.8" from="hidden" to="visible"/>
         </line>
-        <line x1="85.0" x2="90.0" y1="141.231862677" y2="143.420700939">
+        <line x1="154.166666667" x2="158.333333333" y1="141.231862677" y2="143.420700939">
           <animate attributeName="visibility" dur="0.85" from="hidden" to="visible"/>
         </line>
-        <line x1="90.0" x2="95.0" y1="143.420700939" y2="150.203545613">
+        <line x1="158.333333333" x2="162.5" y1="143.420700939" y2="150.203545613">
           <animate attributeName="visibility" dur="0.9" from="hidden" to="visible"/>
         </line>
-        <line x1="95.0" x2="100.0" y1="150.203545613" y2="161.448688186">
+        <line x1="162.5" x2="166.666666667" y1="150.203545613" y2="161.448688186">
           <animate attributeName="visibility" dur="0.95" from="hidden" to="visible"/>
         </line>
-        <line x1="100.0" x2="105.0" y1="161.448688186" y2="149.194017798">
+        <line x1="166.666666667" x2="170.833333333" y1="161.448688186" y2="149.194017798">
           <animate attributeName="visibility" dur="1.0" from="hidden" to="visible"/>
         </line>
-        <line x1="105.0" x2="110.0" y1="149.194017798" y2="154.977934824">
+        <line x1="170.833333333" x2="175.0" y1="149.194017798" y2="154.977934824">
           <animate attributeName="visibility" dur="1.05" from="hidden" to="visible"/>
         </line>
-        <line x1="110.0" x2="115.0" y1="154.977934824" y2="163.033496888">
+        <line x1="175.0" x2="179.166666667" y1="154.977934824" y2="163.033496888">
           <animate attributeName="visibility" dur="1.1" from="hidden" to="visible"/>
         </line>
-        <line x1="115.0" x2="120.0" y1="163.033496888" y2="179.180348151">
+        <line x1="179.166666667" x2="183.333333333" y1="163.033496888" y2="179.180348151">
           <animate attributeName="visibility" dur="1.15" from="hidden" to="visible"/>
         </line>
-        <line x1="120.0" x2="125.0" y1="179.180348151" y2="180.381363821">
+        <line x1="183.333333333" x2="187.5" y1="179.180348151" y2="180.381363821">
           <animate attributeName="visibility" dur="1.2" from="hidden" to="visible"/>
         </line>
-        <line x1="125.0" x2="130.0" y1="180.381363821" y2="173.829500811">
+        <line x1="187.5" x2="191.666666667" y1="180.381363821" y2="173.829500811">
           <animate attributeName="visibility" dur="1.25" from="hidden" to="visible"/>
         </line>
-        <line x1="130.0" x2="135.0" y1="173.829500811" y2="176.285712727">
+        <line x1="191.666666667" x2="195.833333333" y1="173.829500811" y2="176.285712727">
           <animate attributeName="visibility" dur="1.3" from="hidden" to="visible"/>
         </line>
-        <line x1="135.0" x2="140.0" y1="176.285712727" y2="168.897861208">
+        <line x1="195.833333333" x2="200.0" y1="176.285712727" y2="168.897861208">
           <animate attributeName="visibility" dur="1.35" from="hidden" to="visible"/>
         </line>
-        <line x1="140.0" x2="145.0" y1="168.897861208" y2="142.015300251">
+        <line x1="200.0" x2="204.166666667" y1="168.897861208" y2="142.015300251">
           <animate attributeName="visibility" dur="1.4" from="hidden" to="visible"/>
         </line>
-        <line x1="145.0" x2="150.0" y1="142.015300251" y2="140.740413339">
+        <line x1="204.166666667" x2="208.333333333" y1="142.015300251" y2="140.740413339">
           <animate attributeName="visibility" dur="1.45" from="hidden" to="visible"/>
         </line>
-        <line x1="150.0" x2="155.0" y1="140.740413339" y2="146.096676987">
+        <line x1="208.333333333" x2="212.5" y1="140.740413339" y2="146.096676987">
           <animate attributeName="visibility" dur="1.5" from="hidden" to="visible"/>
         </line>
-        <line x1="155.0" x2="160.0" y1="146.096676987" y2="129.85183729">
+        <line x1="212.5" x2="216.666666667" y1="146.096676987" y2="129.85183729">
           <animate attributeName="visibility" dur="1.55" from="hidden" to="visible"/>
         </line>
-        <line x1="160.0" x2="165.0" y1="129.85183729" y2="147.305245995">
+        <line x1="216.666666667" x2="220.833333333" y1="129.85183729" y2="147.305245995">
           <animate attributeName="visibility" dur="1.6" from="hidden" to="visible"/>
         </line>
-        <line x1="165.0" x2="170.0" y1="147.305245995" y2="153.97367835">
+        <line x1="220.833333333" x2="225.0" y1="147.305245995" y2="153.97367835">
           <animate attributeName="visibility" dur="1.65" from="hidden" to="visible"/>
         </line>
-        <line x1="170.0" x2="175.0" y1="153.97367835" y2="155.267763536">
+        <line x1="225.0" x2="229.166666667" y1="153.97367835" y2="155.267763536">
           <animate attributeName="visibility" dur="1.7" from="hidden" to="visible"/>
         </line>
-        <line x1="175.0" x2="180.0" y1="155.267763536" y2="176.987490774">
+        <line x1="229.166666667" x2="233.333333333" y1="155.267763536" y2="176.987490774">
           <animate attributeName="visibility" dur="1.75" from="hidden" to="visible"/>
         </line>
-        <line x1="180.0" x2="185.0" y1="176.987490774" y2="166.300275407">
+        <line x1="233.333333333" x2="237.5" y1="176.987490774" y2="166.300275407">
           <animate attributeName="visibility" dur="1.8" from="hidden" to="visible"/>
         </line>
-        <line x1="185.0" x2="190.0" y1="166.300275407" y2="160.973672731">
+        <line x1="237.5" x2="241.666666667" y1="166.300275407" y2="160.973672731">
           <animate attributeName="visibility" dur="1.85" from="hidden" to="visible"/>
         </line>
-        <line x1="190.0" x2="195.0" y1="160.973672731" y2="175.398630464">
+        <line x1="241.666666667" x2="245.833333333" y1="160.973672731" y2="175.398630464">
           <animate attributeName="visibility" dur="1.9" from="hidden" to="visible"/>
         </line>
-        <line x1="195.0" x2="200.0" y1="175.398630464" y2="181.938111199">
+        <line x1="245.833333333" x2="250.0" y1="175.398630464" y2="181.938111199">
           <animate attributeName="visibility" dur="1.95" from="hidden" to="visible"/>
         </line>
-        <line x1="200.0" x2="205.0" y1="181.938111199" y2="184.650504233">
+        <line x1="250.0" x2="254.166666667" y1="181.938111199" y2="184.650504233">
           <animate attributeName="visibility" dur="2.0" from="hidden" to="visible"/>
         </line>
-        <line x1="205.0" x2="210.0" y1="184.650504233" y2="182.305710295">
+        <line x1="254.166666667" x2="258.333333333" y1="184.650504233" y2="182.305710295">
           <animate attributeName="visibility" dur="2.05" from="hidden" to="visible"/>
         </line>
-        <line x1="210.0" x2="215.0" y1="182.305710295" y2="198.47768103">
+        <line x1="258.333333333" x2="262.5" y1="182.305710295" y2="198.47768103">
           <animate attributeName="visibility" dur="2.1" from="hidden" to="visible"/>
         </line>
-        <line x1="215.0" x2="220.0" y1="198.47768103" y2="214.865351792">
+        <line x1="262.5" x2="266.666666667" y1="198.47768103" y2="214.865351792">
           <animate attributeName="visibility" dur="2.15" from="hidden" to="visible"/>
         </line>
-        <line x1="220.0" x2="225.0" y1="214.865351792" y2="198.913165185">
+        <line x1="266.666666667" x2="270.833333333" y1="214.865351792" y2="198.913165185">
           <animate attributeName="visibility" dur="2.2" from="hidden" to="visible"/>
         </line>
-        <line x1="225.0" x2="230.0" y1="198.913165185" y2="204.613268158">
+        <line x1="270.833333333" x2="275.0" y1="198.913165185" y2="204.613268158">
           <animate attributeName="visibility" dur="2.25" from="hidden" to="visible"/>
         </line>
-        <line x1="230.0" x2="235.0" y1="204.613268158" y2="227.696185373">
+        <line x1="275.0" x2="279.166666667" y1="204.613268158" y2="227.696185373">
           <animate attributeName="visibility" dur="2.3" from="hidden" to="visible"/>
         </line>
-        <line x1="235.0" x2="240.0" y1="227.696185373" y2="221.539560375">
+        <line x1="279.166666667" x2="283.333333333" y1="227.696185373" y2="221.539560375">
           <animate attributeName="visibility" dur="2.35" from="hidden" to="visible"/>
         </line>
-        <line x1="240.0" x2="245.0" y1="221.539560375" y2="205.269568714">
+        <line x1="283.333333333" x2="287.5" y1="221.539560375" y2="205.269568714">
           <animate attributeName="visibility" dur="2.4" from="hidden" to="visible"/>
         </line>
-        <line x1="245.0" x2="250.0" y1="205.269568714" y2="191.436138293">
+        <line x1="287.5" x2="291.666666667" y1="205.269568714" y2="191.436138293">
           <animate attributeName="visibility" dur="2.45" from="hidden" to="visible"/>
         </line>
-        <line x1="250.0" x2="255.0" y1="191.436138293" y2="182.542188249">
+        <line x1="291.666666667" x2="295.833333333" y1="191.436138293" y2="182.542188249">
           <animate attributeName="visibility" dur="2.5" from="hidden" to="visible"/>
         </line>
-        <line x1="255.0" x2="260.0" y1="182.542188249" y2="203.499013392">
+        <line x1="295.833333333" x2="300.0" y1="182.542188249" y2="203.499013392">
           <animate attributeName="visibility" dur="2.55" from="hidden" to="visible"/>
         </line>
-        <line x1="260.0" x2="265.0" y1="203.499013392" y2="197.76233097">
+        <line x1="300.0" x2="304.166666667" y1="203.499013392" y2="197.76233097">
           <animate attributeName="visibility" dur="2.6" from="hidden" to="visible"/>
         </line>
-        <line x1="265.0" x2="270.0" y1="197.76233097" y2="189.457436282">
+        <line x1="304.166666667" x2="308.333333333" y1="197.76233097" y2="189.457436282">
           <animate attributeName="visibility" dur="2.65" from="hidden" to="visible"/>
         </line>
-        <line x1="270.0" x2="275.0" y1="189.457436282" y2="176.933790093">
+        <line x1="308.333333333" x2="312.5" y1="189.457436282" y2="176.933790093">
           <animate attributeName="visibility" dur="2.7" from="hidden" to="visible"/>
         </line>
-        <line x1="275.0" x2="280.0" y1="176.933790093" y2="174.353895398">
+        <line x1="312.5" x2="316.666666667" y1="176.933790093" y2="174.353895398">
           <animate attributeName="visibility" dur="2.75" from="hidden" to="visible"/>
         </line>
-        <line x1="280.0" x2="285.0" y1="174.353895398" y2="204.389562393">
+        <line x1="316.666666667" x2="320.833333333" y1="174.353895398" y2="204.389562393">
           <animate attributeName="visibility" dur="2.8" from="hidden" to="visible"/>
         </line>
-        <line x1="285.0" x2="290.0" y1="204.389562393" y2="188.222882993">
+        <line x1="320.833333333" x2="325.0" y1="204.389562393" y2="188.222882993">
           <animate attributeName="visibility" dur="2.85" from="hidden" to="visible"/>
         </line>
-        <line x1="290.0" x2="295.0" y1="188.222882993" y2="170.584519994">
+        <line x1="325.0" x2="329.166666667" y1="188.222882993" y2="170.584519994">
           <animate attributeName="visibility" dur="2.9" from="hidden" to="visible"/>
         </line>
-        <line x1="295.0" x2="300.0" y1="170.584519994" y2="175.792156353">
+        <line x1="329.166666667" x2="333.333333333" y1="170.584519994" y2="175.792156353">
           <animate attributeName="visibility" dur="2.95" from="hidden" to="visible"/>
         </line>
-        <line x1="300.0" x2="305.0" y1="175.792156353" y2="179.111145882">
+        <line x1="333.333333333" x2="337.5" y1="175.792156353" y2="179.111145882">
           <animate attributeName="visibility" dur="3.0" from="hidden" to="visible"/>
         </line>
-        <line x1="305.0" x2="310.0" y1="179.111145882" y2="164.769717265">
+        <line x1="337.5" x2="341.666666667" y1="179.111145882" y2="164.769717265">
           <animate attributeName="visibility" dur="3.05" from="hidden" to="visible"/>
         </line>
-        <line x1="310.0" x2="315.0" y1="164.769717265" y2="139.88293706">
+        <line x1="341.666666667" x2="345.833333333" y1="164.769717265" y2="139.88293706">
           <animate attributeName="visibility" dur="3.1" from="hidden" to="visible"/>
         </line>
-        <line x1="315.0" x2="320.0" y1="139.88293706" y2="116.541791678">
+        <line x1="345.833333333" x2="350.0" y1="139.88293706" y2="116.541791678">
           <animate attributeName="visibility" dur="3.15" from="hidden" to="visible"/>
         </line>
-        <line x1="320.0" x2="325.0" y1="116.541791678" y2="101.431659744">
+        <line x1="350.0" x2="354.166666667" y1="116.541791678" y2="101.431659744">
           <animate attributeName="visibility" dur="3.2" from="hidden" to="visible"/>
         </line>
-        <line x1="325.0" x2="330.0" y1="101.431659744" y2="81.5346238531">
+        <line x1="354.166666667" x2="358.333333333" y1="101.431659744" y2="81.5346238531">
           <animate attributeName="visibility" dur="3.25" from="hidden" to="visible"/>
         </line>
-        <line x1="330.0" x2="335.0" y1="81.5346238531" y2="76.1400586349">
+        <line x1="358.333333333" x2="362.5" y1="81.5346238531" y2="76.1400586349">
           <animate attributeName="visibility" dur="3.3" from="hidden" to="visible"/>
         </line>
-        <line x1="335.0" x2="340.0" y1="76.1400586349" y2="93.6732897722">
+        <line x1="362.5" x2="366.666666667" y1="76.1400586349" y2="93.6732897722">
           <animate attributeName="visibility" dur="3.35" from="hidden" to="visible"/>
         </line>
-        <line x1="340.0" x2="345.0" y1="93.6732897722" y2="102.388694112">
+        <line x1="366.666666667" x2="370.833333333" y1="93.6732897722" y2="102.388694112">
           <animate attributeName="visibility" dur="3.4" from="hidden" to="visible"/>
         </line>
-        <line x1="345.0" x2="350.0" y1="102.388694112" y2="120.421117883">
+        <line x1="370.833333333" x2="375.0" y1="102.388694112" y2="120.421117883">
           <animate attributeName="visibility" dur="3.45" from="hidden" to="visible"/>
         </line>
-        <line x1="350.0" x2="355.0" y1="120.421117883" y2="117.285812927">
+        <line x1="375.0" x2="379.166666667" y1="120.421117883" y2="117.285812927">
           <animate attributeName="visibility" dur="3.5" from="hidden" to="visible"/>
         </line>
-        <line x1="355.0" x2="360.0" y1="117.285812927" y2="103.399319185">
+        <line x1="379.166666667" x2="383.333333333" y1="117.285812927" y2="103.399319185">
           <animate attributeName="visibility" dur="3.55" from="hidden" to="visible"/>
         </line>
-        <line x1="360.0" x2="365.0" y1="103.399319185" y2="94.039734122">
+        <line x1="383.333333333" x2="387.5" y1="103.399319185" y2="94.039734122">
           <animate attributeName="visibility" dur="3.6" from="hidden" to="visible"/>
         </line>
-        <line x1="365.0" x2="370.0" y1="94.039734122" y2="111.273068763">
+        <line x1="387.5" x2="391.666666667" y1="94.039734122" y2="111.273068763">
           <animate attributeName="visibility" dur="3.65" from="hidden" to="visible"/>
         </line>
-        <line x1="370.0" x2="375.0" y1="111.273068763" y2="104.945071483">
+        <line x1="391.666666667" x2="395.833333333" y1="111.273068763" y2="104.945071483">
           <animate attributeName="visibility" dur="3.7" from="hidden" to="visible"/>
         </line>
-        <line x1="375.0" x2="380.0" y1="104.945071483" y2="91.7036032776">
+        <line x1="395.833333333" x2="400.0" y1="104.945071483" y2="91.7036032776">
           <animate attributeName="visibility" dur="3.75" from="hidden" to="visible"/>
         </line>
-        <line x1="380.0" x2="385.0" y1="91.7036032776" y2="80.8239352675">
+        <line x1="400.0" x2="404.166666667" y1="91.7036032776" y2="80.8239352675">
           <animate attributeName="visibility" dur="3.8" from="hidden" to="visible"/>
         </line>
-        <line x1="385.0" x2="390.0" y1="80.8239352675" y2="98.0472321178">
+        <line x1="404.166666667" x2="408.333333333" y1="80.8239352675" y2="98.0472321178">
           <animate attributeName="visibility" dur="3.85" from="hidden" to="visible"/>
         </line>
-        <line x1="390.0" x2="395.0" y1="98.0472321178" y2="119.328183425">
+        <line x1="408.333333333" x2="412.5" y1="98.0472321178" y2="119.328183425">
           <animate attributeName="visibility" dur="3.9" from="hidden" to="visible"/>
         </line>
-        <line x1="395.0" x2="400.0" y1="119.328183425" y2="145.534688174">
+        <line x1="412.5" x2="416.666666667" y1="119.328183425" y2="145.534688174">
           <animate attributeName="visibility" dur="3.95" from="hidden" to="visible"/>
         </line>
-        <line x1="400.0" x2="405.0" y1="145.534688174" y2="176.102178121">
+        <line x1="416.666666667" x2="420.833333333" y1="145.534688174" y2="176.102178121">
           <animate attributeName="visibility" dur="4.0" from="hidden" to="visible"/>
         </line>
-        <line x1="405.0" x2="410.0" y1="176.102178121" y2="199.211876942">
+        <line x1="420.833333333" x2="425.0" y1="176.102178121" y2="199.211876942">
           <animate attributeName="visibility" dur="4.05" from="hidden" to="visible"/>
         </line>
-        <line x1="410.0" x2="415.0" y1="199.211876942" y2="200.808263096">
+        <line x1="425.0" x2="429.166666667" y1="199.211876942" y2="200.808263096">
           <animate attributeName="visibility" dur="4.1" from="hidden" to="visible"/>
         </line>
-        <line x1="415.0" x2="420.0" y1="200.808263096" y2="199.639867746">
+        <line x1="429.166666667" x2="433.333333333" y1="200.808263096" y2="199.639867746">
           <animate attributeName="visibility" dur="4.15" from="hidden" to="visible"/>
         </line>
-        <line x1="420.0" x2="425.0" y1="199.639867746" y2="180.245223784">
+        <line x1="433.333333333" x2="437.5" y1="199.639867746" y2="180.245223784">
           <animate attributeName="visibility" dur="4.2" from="hidden" to="visible"/>
         </line>
-        <line x1="425.0" x2="430.0" y1="180.245223784" y2="177.189186383">
+        <line x1="437.5" x2="441.666666667" y1="180.245223784" y2="177.189186383">
           <animate attributeName="visibility" dur="4.25" from="hidden" to="visible"/>
         </line>
-        <line x1="430.0" x2="435.0" y1="177.189186383" y2="176.022380684">
+        <line x1="441.666666667" x2="445.833333333" y1="177.189186383" y2="176.022380684">
           <animate attributeName="visibility" dur="4.3" from="hidden" to="visible"/>
         </line>
-        <line x1="435.0" x2="440.0" y1="176.022380684" y2="183.011707413">
+        <line x1="445.833333333" x2="450.0" y1="176.022380684" y2="183.011707413">
           <animate attributeName="visibility" dur="4.35" from="hidden" to="visible"/>
         </line>
-        <line x1="440.0" x2="445.0" y1="183.011707413" y2="174.116950047">
+        <line x1="450.0" x2="454.166666667" y1="183.011707413" y2="174.116950047">
           <animate attributeName="visibility" dur="4.4" from="hidden" to="visible"/>
         </line>
-        <line x1="445.0" x2="450.0" y1="174.116950047" y2="192.246774881">
+        <line x1="454.166666667" x2="458.333333333" y1="174.116950047" y2="192.246774881">
           <animate attributeName="visibility" dur="4.45" from="hidden" to="visible"/>
         </line>
-        <line x1="450.0" x2="455.0" y1="192.246774881" y2="177.393261468">
+        <line x1="458.333333333" x2="462.5" y1="192.246774881" y2="177.393261468">
           <animate attributeName="visibility" dur="4.5" from="hidden" to="visible"/>
         </line>
-        <line x1="455.0" x2="460.0" y1="177.393261468" y2="212.670594833">
+        <line x1="462.5" x2="466.666666667" y1="177.393261468" y2="212.670594833">
           <animate attributeName="visibility" dur="4.55" from="hidden" to="visible"/>
         </line>
-        <line x1="460.0" x2="465.0" y1="212.670594833" y2="229.776027624">
+        <line x1="466.666666667" x2="470.833333333" y1="212.670594833" y2="229.776027624">
           <animate attributeName="visibility" dur="4.6" from="hidden" to="visible"/>
         </line>
-        <line x1="465.0" x2="470.0" y1="229.776027624" y2="233.317223247">
+        <line x1="470.833333333" x2="475.0" y1="229.776027624" y2="233.317223247">
           <animate attributeName="visibility" dur="4.65" from="hidden" to="visible"/>
         </line>
       </g>
