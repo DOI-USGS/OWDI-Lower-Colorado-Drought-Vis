@@ -523,7 +523,7 @@ nav h3 {
 		}
 		
 	#natural-flow-graph{
-		width:900px;
+		width:100% !important;
 		margin:0 auto 20px 0;
 		margin-left:-10px;
 		}
