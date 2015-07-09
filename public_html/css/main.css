@@ -65,6 +65,17 @@ nav h3 {
 	height: 100%;
 }
 
+#mainmMessageDroughtContainer {
+	background-image: url('../img/keynotes/drydirt-mobile.jpg');
+	background-position: center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
 #basinReservoirContainer {
 	margin-bottom: 0px;
 }
@@ -363,7 +374,8 @@ nav h3 {
 	#mainMessage5Container,
 	#mainMessage6Container,
 	#mainMessage7Container,
-	#endEraContainer {
+	#endEraContainer,
+	#mainmMessageDroughtContainer{
 		-webkit-background-size: cover;
 		background-attachment: fixed;
 	}
@@ -378,6 +390,9 @@ nav h3 {
 	}
 	#mainMessage3Container {
 		background-image: url('../img/keynotes/keynote4.jpg');
+	}
+	#mainmMessageDroughtContainer {
+		background-image: url('../img/keynotes/drydirt.jpg');
 	}
 	#mainMessage4Container {
 		background-image: url('../img/keynotes/keynote5.jpg');
