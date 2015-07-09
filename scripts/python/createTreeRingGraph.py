@@ -85,6 +85,8 @@ def renderGraph(ele, floc):
         perc = perc[-100:]
         per = per[-100:]
         minbot = math.floor(float(year[0])/10) * 10
+        if(minbot > 1900):
+            minbot = 1900
         maxbot = math.ceil(float(year[len(year)-1])/10) * 10
         min = float(perc[0])
         max = float(perc[0])
@@ -103,6 +105,7 @@ def renderGraph(ele, floc):
                 highlightRange(ele, int(year[i]) - int(per[i]) + 1, int(year[i]), minbot, maxbot - minbot)
             if float(per[i]) > 10 and i + 1 == len(per)-1:
                 highlightRange(ele, int(year[i]) - int(per[i]) + 1, int(year[i+1]), minbot, maxbot - minbot)
+        drawGreenBox(ele, 1906, 1922, minbot, maxbot - minbot)
         for i in range(0, len(year)-1):
             createLineBox(ele, int(year[i]), int(year[i])+1, minbot, maxbot - minbot, float(perc[i]), int(year[i]), i)
         for i in range(0, int((maxbot - minbot)/10) + 1):
@@ -171,5 +174,15 @@ def drawMinLine(ele, percdata, pmin, prange):
             min = float(val)
     drawLine(ele, 15, 250 - ((min - pmin)*(250/prange)), 485, 250 - ((min - pmin)*(250/prange)), 1, 'red')
     drawText(ele, 15, 250 - ((min - pmin)*(250/prange)) - 5, 'Minimum').set('fill', 'red')
+    
+def drawGreenBox(ele, x1, x2, ymin, yrange):
+    rect = SubElement(ele, 'rect')
+    x1 = (x1 - ymin) * (500/yrange)
+    x2 = (x2 - ymin) * (500/yrange)
+    rect.set('y', str(0))
+    rect.set('height', str(250))
+    rect.set('width', str(x2 - x1))
+    rect.set('x', str(x1))
+    rect.set('fill', '#A3FF75')
     
 main()
