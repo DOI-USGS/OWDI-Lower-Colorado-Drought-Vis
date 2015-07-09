@@ -39,11 +39,11 @@ library(dplyr)
 #wbdhu4_lco<-readOGR("src_data//CO_WBD","WBDHU4_14-15-clean")
 p4s<-"+proj=longlat +datum=NAD83 +no_defs +ellps=GRS80 +towgs84=0,0,0"
 lc_huc_simp <-readOGR("src_data//CO_WBD","lc_huc_simp-clean")
-wat_acc_examp <- read.csv("src_data//wat_acc_examp.csv")
-wae_coord <- coordinates(wat_acc_examp[,3:4])
-wae_data <- wat_acc_examp[,1:2]
-wat_acc_sp <- SpatialPointsDataFrame(wae_coord,data=wae_data,
-                                     proj4string = CRS(p4s))
+#wat_acc_examp <- read.csv("src_data//wat_acc_examp.csv")
+#wae_coord <- coordinates(wat_acc_examp[,3:4])
+#wae_data <- wat_acc_examp[,1:2]
+#wat_acc_sp <- SpatialPointsDataFrame(wae_coord,data=wae_data,
+                                     #proj4string = CRS(p4s))
 
 ################################################################################
 #rstudio/leaflet implementation
@@ -74,8 +74,6 @@ lc_huc_gjson <- toGeoJSON(lc_huc_simp, dest = "public_html/data")
 #read in contract service areas shapefile joined with mean 5 year values
 wat_acc_cont <- readOGR("src_data//LCContractSvcAreas","wat_acc_cont")
 wat_acc_poly <- toGeoJSON(wat_acc_cont, dest = "public_html//data")
-#wat_acc_poly <- gsub('([a-zA-Z_0-9\\.]*\\()|(\\);?$)', "", wat_acc_poly$Contractor)
-
 
 dat<-list(lc_huc_gjson,wat_acc_poly)
 
@@ -102,7 +100,7 @@ water_account <- leafletR::leaflet(data=dat,
                                    title="water_accounting",
                                    style=sty, 
                                    popup = list(c("Contractor","mean"),c("")),
-                                   dest="public_html/widgets/",
+                                   dest="public_html/explore",
                                    incl.data = F,
                                    controls=c("all"))
 #water_account
