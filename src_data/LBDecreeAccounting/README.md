@@ -5,8 +5,10 @@ The Bureau of Reclamation Lower Colorado River Water Accounting group produces a
 Finally, [reformatDecreeData](../../scripts/R/reformatDecreeData.R) was used to create the [DecreeData.csv](DecreeData.csv) file from [DecreeAccting_2000_2013.xlsx](DecreeAccting_2000_2013.xlsx).
 
 ## Manual Changes to DecreeAccting_2000_2013.xlsx
-* For WATER EXCHANGED WITH SDCWA, changed 'CA CONSUMPTIVE USE' to 'CONSUMPTIVE USE'
-* Filled in IID Consumptive Use for 2011-2013
+* For WATER EXCHANGED WITH SDCWA:
+  * changed 'CA CONSUMPTIVE USE' to 'CONSUMPTIVE USE'
+  * Moved the "Water Exchanged with SDCWA" up one row so code read's it as an individual user
+* Filled in IID Consumptive Use for 2011-2014
   * Computed As Total Consumptive Use minus Consumptive Use as delivery from Brock.
 * For Chemehuevi Indian Reservation, set the 2000-2002 Consumptive Use equal to the Diversion.
 * For CITY OF WINTERHAVEN, set the 2000-2002 Consumptive Useequal to the Diversion.
