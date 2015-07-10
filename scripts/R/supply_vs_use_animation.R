@@ -44,7 +44,6 @@ usage_col <- '#B22C2C'
 supply_col <- '#0066CC'
 line_width <- '3'
 ani_time <- 15 # duration of line animation
-reset_time <- 2
 
 l_bmp = 20 # px from axes
 t_bmp = 20 # px from axes
@@ -94,7 +93,6 @@ tot_time <- tail(years,1) - head(years,1)
 
 # calc_lengths 
 values <- paste(tot_len- cumsum(line_len),collapse=';')
-rev_values <- paste(rev(tot_len- cumsum(line_len)),collapse=';')
 line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none', 
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0f;stroke-linejoin:round;stroke-dashoffset:%0.0f",
                                              supply_col,line_width,tot_len+1,tot_len+1))
@@ -117,20 +115,10 @@ for (i in 1:length(x)){
                          'begin' = sprintf("timeAdvance.begin+%0.3fs",max(difTimes[i]-0.2,0)),
                          'fill' = "freeze", 'from'='0','to'='1.5',dur="0.01s"))
     
-    newXMLNode('animate', 'parent' = nd,
-               attrs = c('attributeName' = "r",
-                         'begin' = "timeReset.begin",
-                         'fill' = "freeze", 'to'='0',dur="0.1s"))
-    
-    
   }
   
   
 }
-newXMLNode('animate', 'parent' = usage_id,
-           attrs = c('attributeName' = "r", id='timeReset',
-                     'begin' = 'indefinite',
-                     'fill' = "freeze", 'from'='1.5','to'='0',dur="1s"))
 
 # --- for usage ----
 y <- sapply(usage, FUN = function(y) dinosvg:::tran_y(y, axes, fig))
@@ -147,7 +135,6 @@ width <- x2[1]-x1[1] # assumes continuous years!!
 
 # -----usage line
 values <- paste(tot_len- cumsum(line_len),collapse=';')
-rev_values <- paste(rev(tot_len- cumsum(line_len)),collapse=';')
 
 line_nd <- dinosvg:::linepath(g_id, x[!is.na(y)],y[!is.na(y)], fill = 'none',
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0fpx;stroke-linejoin:round;stroke-dashoffset:%0.0f",
@@ -155,10 +142,6 @@ line_nd <- dinosvg:::linepath(g_id, x[!is.na(y)],y[!is.na(y)], fill = 'none',
 dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
                             begin = "timeAdvance.begin", id = "usage", 
                             fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
-
-dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
-                            begin = "timeReset.begin",
-                            fill = 'freeze', dur = sprintf('%fs',reset_time), values = rev_values)
 # -----
 for (i in 1:length(x)){
   #refine this so it is actually halfway points
