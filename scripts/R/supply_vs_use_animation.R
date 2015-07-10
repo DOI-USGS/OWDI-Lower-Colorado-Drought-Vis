@@ -55,7 +55,7 @@ svg_nd <- newXMLNode('svg',
 add_ecmascript(svg_nd, text = ecmascript_supply_usage())
 g_id <- newXMLNode('g', parent = svg_nd, attrs = c(id="surface0"))
 
-a_id <- newXMLNode('g', parent = g_id, attrs = c('id' = "axes", opacity = '0'))
+a_id <- newXMLNode('g', parent = g_id, attrs = c('id' = "axes", opacity = '0', class='label'))
 dinosvg:::animate_attribute(a_id, attr_name = "opacity", 
                             begin = "indefinite", id = "visibleAxes", 
                             fill = 'freeze', dur = '1s', from = "0", to = "1")

@@ -69,7 +69,7 @@ svg_nd <- newXMLNode('svg',
 add_ecmascript(svg_nd, text = ecmascript_mead_proj())
 
 
-g_id <- newXMLNode('g', parent = svg_nd)
+g_id <- newXMLNode('g', parent = svg_nd, attrs = c('id' = "axes", class='label'))
 add_axes(g_id, axes, fig)
 
 #-- legend --

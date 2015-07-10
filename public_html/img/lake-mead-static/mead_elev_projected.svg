@@ -26,7 +26,7 @@ function setMobile(){
                  svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
                  svgDocument.getElementById("y-label").setAttribute("y","0");                          
                }]]></script>
-  <g>
+  <g id="axes" class="label">
     <rect id="axis.box" x="80.0" y="10.0" width="740.0" height="480.0" style="fill:#FFFFFF;stroke:black"/>
     <text transform="translate(30.0,250.0)rotate(270)" text-anchor="middle" id="y-label">Elevation of Lake Mead (feet)</text>
     <line x1="117.9" y1="490.0" x2="117.9" y2="485.0" style="stroke:black;stroke-width:1.5"/>
