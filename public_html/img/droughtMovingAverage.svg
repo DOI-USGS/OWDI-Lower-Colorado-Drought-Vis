@@ -1,194 +1,101 @@
 <?xml version="1.0" ?>
+<?xml-stylesheet type="text/css" href="../css/svg.css"?>
 <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <style type="text/css">
+  <style type="text/css">.linebox:hover { opacity : .25 }
 #box0:hover ~ .num0 { opacity : 1 }
-#box0:hover { opacity : .25 }
 #box1:hover ~ .num1 { opacity : 1 }
-#box1:hover { opacity : .25 }
 #box2:hover ~ .num2 { opacity : 1 }
-#box2:hover { opacity : .25 }
 #box3:hover ~ .num3 { opacity : 1 }
-#box3:hover { opacity : .25 }
 #box4:hover ~ .num4 { opacity : 1 }
-#box4:hover { opacity : .25 }
 #box5:hover ~ .num5 { opacity : 1 }
-#box5:hover { opacity : .25 }
 #box6:hover ~ .num6 { opacity : 1 }
-#box6:hover { opacity : .25 }
 #box7:hover ~ .num7 { opacity : 1 }
-#box7:hover { opacity : .25 }
 #box8:hover ~ .num8 { opacity : 1 }
-#box8:hover { opacity : .25 }
 #box9:hover ~ .num9 { opacity : 1 }
-#box9:hover { opacity : .25 }
 #box10:hover ~ .num10 { opacity : 1 }
-#box10:hover { opacity : .25 }
 #box11:hover ~ .num11 { opacity : 1 }
-#box11:hover { opacity : .25 }
 #box12:hover ~ .num12 { opacity : 1 }
-#box12:hover { opacity : .25 }
 #box13:hover ~ .num13 { opacity : 1 }
-#box13:hover { opacity : .25 }
 #box14:hover ~ .num14 { opacity : 1 }
-#box14:hover { opacity : .25 }
 #box15:hover ~ .num15 { opacity : 1 }
-#box15:hover { opacity : .25 }
 #box16:hover ~ .num16 { opacity : 1 }
-#box16:hover { opacity : .25 }
 #box17:hover ~ .num17 { opacity : 1 }
-#box17:hover { opacity : .25 }
 #box18:hover ~ .num18 { opacity : 1 }
-#box18:hover { opacity : .25 }
 #box19:hover ~ .num19 { opacity : 1 }
-#box19:hover { opacity : .25 }
 #box20:hover ~ .num20 { opacity : 1 }
-#box20:hover { opacity : .25 }
 #box21:hover ~ .num21 { opacity : 1 }
-#box21:hover { opacity : .25 }
 #box22:hover ~ .num22 { opacity : 1 }
-#box22:hover { opacity : .25 }
 #box23:hover ~ .num23 { opacity : 1 }
-#box23:hover { opacity : .25 }
 #box24:hover ~ .num24 { opacity : 1 }
-#box24:hover { opacity : .25 }
 #box25:hover ~ .num25 { opacity : 1 }
-#box25:hover { opacity : .25 }
 #box26:hover ~ .num26 { opacity : 1 }
-#box26:hover { opacity : .25 }
 #box27:hover ~ .num27 { opacity : 1 }
-#box27:hover { opacity : .25 }
 #box28:hover ~ .num28 { opacity : 1 }
-#box28:hover { opacity : .25 }
 #box29:hover ~ .num29 { opacity : 1 }
-#box29:hover { opacity : .25 }
 #box30:hover ~ .num30 { opacity : 1 }
-#box30:hover { opacity : .25 }
 #box31:hover ~ .num31 { opacity : 1 }
-#box31:hover { opacity : .25 }
 #box32:hover ~ .num32 { opacity : 1 }
-#box32:hover { opacity : .25 }
 #box33:hover ~ .num33 { opacity : 1 }
-#box33:hover { opacity : .25 }
 #box34:hover ~ .num34 { opacity : 1 }
-#box34:hover { opacity : .25 }
 #box35:hover ~ .num35 { opacity : 1 }
-#box35:hover { opacity : .25 }
 #box36:hover ~ .num36 { opacity : 1 }
-#box36:hover { opacity : .25 }
 #box37:hover ~ .num37 { opacity : 1 }
-#box37:hover { opacity : .25 }
 #box38:hover ~ .num38 { opacity : 1 }
-#box38:hover { opacity : .25 }
 #box39:hover ~ .num39 { opacity : 1 }
-#box39:hover { opacity : .25 }
 #box40:hover ~ .num40 { opacity : 1 }
-#box40:hover { opacity : .25 }
 #box41:hover ~ .num41 { opacity : 1 }
-#box41:hover { opacity : .25 }
 #box42:hover ~ .num42 { opacity : 1 }
-#box42:hover { opacity : .25 }
 #box43:hover ~ .num43 { opacity : 1 }
-#box43:hover { opacity : .25 }
 #box44:hover ~ .num44 { opacity : 1 }
-#box44:hover { opacity : .25 }
 #box45:hover ~ .num45 { opacity : 1 }
-#box45:hover { opacity : .25 }
 #box46:hover ~ .num46 { opacity : 1 }
-#box46:hover { opacity : .25 }
 #box47:hover ~ .num47 { opacity : 1 }
-#box47:hover { opacity : .25 }
 #box48:hover ~ .num48 { opacity : 1 }
-#box48:hover { opacity : .25 }
 #box49:hover ~ .num49 { opacity : 1 }
-#box49:hover { opacity : .25 }
 #box50:hover ~ .num50 { opacity : 1 }
-#box50:hover { opacity : .25 }
 #box51:hover ~ .num51 { opacity : 1 }
-#box51:hover { opacity : .25 }
 #box52:hover ~ .num52 { opacity : 1 }
-#box52:hover { opacity : .25 }
 #box53:hover ~ .num53 { opacity : 1 }
-#box53:hover { opacity : .25 }
 #box54:hover ~ .num54 { opacity : 1 }
-#box54:hover { opacity : .25 }
 #box55:hover ~ .num55 { opacity : 1 }
-#box55:hover { opacity : .25 }
 #box56:hover ~ .num56 { opacity : 1 }
-#box56:hover { opacity : .25 }
 #box57:hover ~ .num57 { opacity : 1 }
-#box57:hover { opacity : .25 }
 #box58:hover ~ .num58 { opacity : 1 }
-#box58:hover { opacity : .25 }
 #box59:hover ~ .num59 { opacity : 1 }
-#box59:hover { opacity : .25 }
 #box60:hover ~ .num60 { opacity : 1 }
-#box60:hover { opacity : .25 }
 #box61:hover ~ .num61 { opacity : 1 }
-#box61:hover { opacity : .25 }
 #box62:hover ~ .num62 { opacity : 1 }
-#box62:hover { opacity : .25 }
 #box63:hover ~ .num63 { opacity : 1 }
-#box63:hover { opacity : .25 }
 #box64:hover ~ .num64 { opacity : 1 }
-#box64:hover { opacity : .25 }
 #box65:hover ~ .num65 { opacity : 1 }
-#box65:hover { opacity : .25 }
 #box66:hover ~ .num66 { opacity : 1 }
-#box66:hover { opacity : .25 }
 #box67:hover ~ .num67 { opacity : 1 }
-#box67:hover { opacity : .25 }
 #box68:hover ~ .num68 { opacity : 1 }
-#box68:hover { opacity : .25 }
 #box69:hover ~ .num69 { opacity : 1 }
-#box69:hover { opacity : .25 }
 #box70:hover ~ .num70 { opacity : 1 }
-#box70:hover { opacity : .25 }
 #box71:hover ~ .num71 { opacity : 1 }
-#box71:hover { opacity : .25 }
 #box72:hover ~ .num72 { opacity : 1 }
-#box72:hover { opacity : .25 }
 #box73:hover ~ .num73 { opacity : 1 }
-#box73:hover { opacity : .25 }
 #box74:hover ~ .num74 { opacity : 1 }
-#box74:hover { opacity : .25 }
 #box75:hover ~ .num75 { opacity : 1 }
-#box75:hover { opacity : .25 }
 #box76:hover ~ .num76 { opacity : 1 }
-#box76:hover { opacity : .25 }
 #box77:hover ~ .num77 { opacity : 1 }
-#box77:hover { opacity : .25 }
 #box78:hover ~ .num78 { opacity : 1 }
-#box78:hover { opacity : .25 }
 #box79:hover ~ .num79 { opacity : 1 }
-#box79:hover { opacity : .25 }
 #box80:hover ~ .num80 { opacity : 1 }
-#box80:hover { opacity : .25 }
 #box81:hover ~ .num81 { opacity : 1 }
-#box81:hover { opacity : .25 }
 #box82:hover ~ .num82 { opacity : 1 }
-#box82:hover { opacity : .25 }
 #box83:hover ~ .num83 { opacity : 1 }
-#box83:hover { opacity : .25 }
 #box84:hover ~ .num84 { opacity : 1 }
-#box84:hover { opacity : .25 }
 #box85:hover ~ .num85 { opacity : 1 }
-#box85:hover { opacity : .25 }
 #box86:hover ~ .num86 { opacity : 1 }
-#box86:hover { opacity : .25 }
 #box87:hover ~ .num87 { opacity : 1 }
-#box87:hover { opacity : .25 }
 #box88:hover ~ .num88 { opacity : 1 }
-#box88:hover { opacity : .25 }
 #box89:hover ~ .num89 { opacity : 1 }
-#box89:hover { opacity : .25 }
 #box90:hover ~ .num90 { opacity : 1 }
-#box90:hover { opacity : .25 }
 #box91:hover ~ .num91 { opacity : 1 }
-#box91:hover { opacity : .25 }
 #box92:hover ~ .num92 { opacity : 1 }
-#box92:hover { opacity : .25 }
-#box93:hover ~ .num93 { opacity : 1 }
-#box93:hover { opacity : .25 }</style>
+#box93:hover ~ .num93 { opacity : 1 }</style>
   <g>
     <g transform="translate(65 10)">
       <rect fill="#CCCCB2" height="250" width="58.3333333333" x="154.166666667" y="0"/>

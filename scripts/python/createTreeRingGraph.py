@@ -15,6 +15,7 @@ def main():
     css = SubElement(svg, 'style')
     css.set('type', 'text/css')
     css.text = ''
+    css.text += '.linebox' + ':hover' + ' { opacity : .25 }'
     main = SubElement(svg, 'g')
     graph = SubElement(main, 'g')
     graph.set('transform', 'translate(65 10)')
@@ -28,6 +29,8 @@ def main():
 def prettify(elem):
     rough_string = ElementTree.tostring(elem, 'utf-8')
     reparsed = minidom.parseString(rough_string)
+    xmlcss = reparsed.createProcessingInstruction('xml-stylesheet', 'type="text/css" href="../css/svg.css"')
+    reparsed.insertBefore(xmlcss, reparsed.firstChild)
     return reparsed.toprettyxml(indent="  ")
     
 def drawLine(ele, x1, y1, x2, y2, width = None, color = None):
@@ -154,8 +157,9 @@ def createLineBox(ele, x1, x2, ymin, yrange, avg, year, rot):
     box.set('fill', 'blue')
     box.set('opacity', '0')
     box.set('id', 'box' + str(rot))
+    box.set('class', 'linebox')
     css.text += '\n#box' + str(rot) + ':hover ~' + ' .num' + str(rot) + ' { opacity : 1 }'
-    css.text += '\n#box' + str(rot) + ':hover' + ' { opacity : .25 }'
+    #css.text += '\n#box' + str(rot) + ':hover' + ' { opacity : .25 }'
     text1 = drawText(ele, 15, 245, 'PoM: ' + str(round(avg, 2)))
     text1.set('fill', 'green')
     text1.set('opacity', '0')
