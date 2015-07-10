@@ -1,9 +1,6 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/css" href="../css/main.css" ?>
+<?xml-stylesheet type="text/css" href="../css/svg.css" ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio="xMinYMin meet" viewBox="0 0 900 600">
-  <style type="text/css"><![CDATA[text {
-            font-size: 1em !important;
-          }]]></style>
   <script type="text/ecmascript"><![CDATA[function init(evt){
 if ( window.svgDocument == null ) {
 svgDocument = evt.target.ownerDocument;

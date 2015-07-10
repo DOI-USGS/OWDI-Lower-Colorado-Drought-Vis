@@ -9,11 +9,10 @@ if(!require(dinosvg)){
 library(XML)
 library(dplyr)
 source('scripts/R/build_ecmascript.R')
-source('scripts/R/build_css.R')
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 
 svg_file <- 'public_html/img/lake-mead-static/mead_elev_projected.svg'
-declaration <- '<?xml-stylesheet type="text/css" href="../css/main.css" ?>'
+declaration <- '<?xml-stylesheet type="text/css" href="../css/svg.css" ?>'
 usage_col <- '#B22C2C'
 supply_col <- '#0066CC'
 line_width <- '3'
@@ -67,7 +66,6 @@ svg_nd <- newXMLNode('svg',
                      namespace = c("http://www.w3.org/2000/svg", xlink="http://www.w3.org/1999/xlink"), 
                      attrs = c(version = '1.1', onload="init(evt)", preserveAspectRatio="xMinYMin meet", viewBox=sprintf("0 0 %1.0f %1.0f",fig$w, fig$h)))
 
-add_css(svg_nd, text = css_mead_model())
 add_ecmascript(svg_nd, text = ecmascript_mead_proj())
 
 

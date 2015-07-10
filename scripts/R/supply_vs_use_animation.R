@@ -8,11 +8,10 @@ if(!require(dinosvg)){
 
 library(XML)
 source('scripts/R/build_ecmascript.R')
-source('scripts/R/build_css.R')
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 
 svg_file <- 'public_html/img/water-usage/flow_animation.svg'
-declaration <- '<?xml-stylesheet type="text/css" href="../css/main.css" ?>'
+declaration <- '<?xml-stylesheet type="text/css" href="../css/svg.css" ?>'
 
 data <- read.csv('src_data/NaturalFlow.csv', stringsAsFactors = F)
 flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
@@ -52,7 +51,6 @@ svg_nd <- newXMLNode('svg',
                      namespace = c("http://www.w3.org/2000/svg", xlink="http://www.w3.org/1999/xlink"), 
                      attrs = c(version = '1.1', onload="init(evt)", preserveAspectRatio="xMinYMin meet", viewBox=sprintf("0 0 %1.0f %1.0f",fig$w, fig$h)))
 
-add_css(svg_nd, text = css_usage_supply())
 add_ecmascript(svg_nd, text = ecmascript_supply_usage())
 g_id <- newXMLNode('g', parent = svg_nd, attrs = c(id="surface0"))
 
