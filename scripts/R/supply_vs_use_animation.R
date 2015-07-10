@@ -8,15 +8,15 @@ if(!require(dinosvg)){
 
 library(XML)
 source('scripts/R/build_ecmascript.R')
-source('scripts/R/build_css.R')
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 
 svg_file <- 'public_html/img/water-usage/flow_animation.svg'
-declaration <- '<?xml-stylesheet type="text/css" href="../css/main.css" ?>'
+declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
 
 data <- read.csv('src_data/NaturalFlow.csv', stringsAsFactors = F)
-flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
-years <- data$Year
+use_i <- !is.na(data$Natural.Flow.above.Imperial)
+flows <- data$Natural.Flow.above.Imperial[use_i]/1000000 #into millions acre-feet units
+years <- data$Year[use_i]
 data <- read.table('src_data/Basin_Depletion_yearly_PROVISIONAL.tsv', stringsAsFactors = F, sep = '\t', header = T)
 # will add stuff here to either fill usage w/NAs, or trim to have same supply and use be the same length
 usage <- c(rep(NA,8),data$depletion/1000,NA,NA) #into millions acre-feet units
@@ -35,7 +35,7 @@ axes <- list('tick_len' = 5,
 
 fig <- list('w' = 900,
             'h' = 600,
-            'margins' = c(100,80,10, 10)) #bot, left, top, right
+            'margins' = c(100,80,10, 80)) #bot, left, top, right
 
 fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[4]),
                    "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
@@ -52,11 +52,10 @@ svg_nd <- newXMLNode('svg',
                      namespace = c("http://www.w3.org/2000/svg", xlink="http://www.w3.org/1999/xlink"), 
                      attrs = c(version = '1.1', onload="init(evt)", preserveAspectRatio="xMinYMin meet", viewBox=sprintf("0 0 %1.0f %1.0f",fig$w, fig$h)))
 
-add_css(svg_nd, text = css_usage_supply())
 add_ecmascript(svg_nd, text = ecmascript_supply_usage())
 g_id <- newXMLNode('g', parent = svg_nd, attrs = c(id="surface0"))
 
-a_id <- newXMLNode('g', parent = g_id, attrs = c('id' = "axes", opacity = '0'))
+a_id <- newXMLNode('g', parent = g_id, attrs = c('id' = "axes", opacity = '0', class='label'))
 dinosvg:::animate_attribute(a_id, attr_name = "opacity", 
                             begin = "indefinite", id = "visibleAxes", 
                             fill = 'freeze', dur = '1s', from = "0", to = "1")
@@ -94,15 +93,12 @@ tot_time <- tail(years,1) - head(years,1)
 
 # calc_lengths 
 values <- paste(tot_len- cumsum(line_len),collapse=';')
-difTimes <- cumsum(diff(years)/tot_time)
-difTimes <- c(0,difTimes)*ani_time # now same length as elements
 line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none', 
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0f;stroke-linejoin:round;stroke-dashoffset:%0.0f",
                                              supply_col,line_width,tot_len+1,tot_len+1))
 dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
                             begin = "indefinite;visibleAxes.begin+1s", id = "timeAdvance", 
                             fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
-
 
 usage_id <- newXMLNode("g", 'parent' = g_id,
                      attrs = c('id' = "supply", style=paste0("fill:",supply_col), r = '0', visibility = 'hidden'))
@@ -118,6 +114,7 @@ for (i in 1:length(x)){
                attrs = c('attributeName' = "r",
                          'begin' = sprintf("timeAdvance.begin+%0.3fs",max(difTimes[i]-0.2,0)),
                          'fill' = "freeze", 'from'='0','to'='1.5',dur="0.01s"))
+    
   }
   
   
