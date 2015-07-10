@@ -11,7 +11,7 @@ source('scripts/R/build_ecmascript.R')
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 
 svg_file <- 'public_html/img/water-usage/flow_animation.svg'
-declaration <- '<?xml-stylesheet type="text/css" href="../css/svg.css" ?>'
+declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
 
 data <- read.csv('src_data/NaturalFlow.csv', stringsAsFactors = F)
 flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
@@ -34,7 +34,7 @@ axes <- list('tick_len' = 5,
 
 fig <- list('w' = 900,
             'h' = 600,
-            'margins' = c(100,80,10, 10)) #bot, left, top, right
+            'margins' = c(100,80,10, 80)) #bot, left, top, right
 
 fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[4]),
                    "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
