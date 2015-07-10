@@ -156,7 +156,8 @@ $( document ).ready( function () {
     var magicWidth = 686; // Pixel width to use to base mobile/desktop on
     $( window ).on( "resize", function ( e ) {
         var formFactor = "desktop",
-            eventName = "";
+            eventName = "",
+            evt;
 
         // Check that we may have moved on to a mobile form factor
         if ( $( e.currentTarget ).width() <= magicWidth ) {
@@ -166,9 +167,16 @@ $( document ).ready( function () {
         if ( window.owdiDrought.formFactor !== formFactor ) {
             window.owdiDrought.formFactor = formFactor;
             eventName = "form-factor-" + window.owdiDrought.formFactor;
-            
-            var event = new Event(eventName);
-            window.dispatchEvent(event);
+
+            if (document.createEvent) {
+              evt = document.createEvent("Event");
+              evt.initEvent(eventName, true, true);
+            } else {
+              evt = new Event(eventName);
+            }
+            window.dispatchEvent(evt);
+
+
         }
 
     } );
