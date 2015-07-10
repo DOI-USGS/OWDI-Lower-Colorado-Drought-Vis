@@ -1,18 +1,12 @@
 /*=====SVG CSS=====*/
 
 text {
-    font-size: 1.5em;
+    font-size: 1.2em;
     cursor: default;
     font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .legend {
-    font-size: 16px;
-    cursor: default;
-    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.label {
     font-size: 16px;
     cursor: default;
     font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -39,4 +33,18 @@ text {
 
 #water-usage-svg {
     font-size: 60%;
+}
+
+.label {
+	font-size: 1em;
+        cursor: default;
+        font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#x-pictogram-label {
+	font-size: 1em;
+}
+
+#y-pictogram-label {
+	font-size: 1em;
 }

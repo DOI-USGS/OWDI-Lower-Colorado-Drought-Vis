@@ -84,11 +84,40 @@ document.getElementById("Mexico-stroke-reset").beginElement();
 document.getElementById("Mexico-scale-reset").beginElement();}
 function drawUserPicto(user_id){
 	document.getElementById("usage-"+user_id).setAttribute("opacity","0.8");
-	document.getElementById("picto-highlight-"+user_id).setAttribute("opacity","0.8");
+	document.getElementById("picto-highlight-"+user_id).setAttribute("opacity","0.4");
 	eval(document.getElementById("picto-"+user_id).getAttribute("onmouseover").replace("evt","null").replace("evt","null"));
 }
 function displayAllocationName(evt, name) {
-	document.getElementById("allocation-value").firstChild.data = name;
+var data = {"California":{
+	"flood":"4,400,000",
+	"surplus":"4,400,000",
+	"normal":"4,400,000",
+	"shortage-1":"4,400,000",
+	"shortage-2":"4,400,000",
+	"shortage-3":"4,400,000"},
+	"Arizona":{
+	"flood":"2,800,000",
+	"surplus":"2,800,000",
+	"normal":"2,800,000",
+	"shortage-1":"2,480,000",
+	"shortage-2":"2,400,000",
+	"shortage-3":"2,320,000"},
+	"Nevada":{
+	"flood":"300,000",
+	"surplus":"300,000",
+	"normal":"300,000",
+	"shortage-1":"287,000",
+	"shortage-2":"283,000",
+	"shortage-3":"280,000"},
+	"Mexico":{
+	"flood":"1,500,000",
+	"surplus":"1,500,000",
+	"normal":"1,500,000",
+	"shortage-1":"1,450,000",
+	"shortage-2":"1,430,000",
+	"shortage-3":"1,375,000"}};
+	var state = document.getElementById("allocation-state").firstChild.data
+	document.getElementById("allocation-value").firstChild.data = name + ": " + data[name][state] +" acre-feet/year";
 }
 function highlightState(evt, name) {
 	document.getElementById(name).setAttribute("stroke","#808080");
@@ -141,7 +170,7 @@ function setAllocationsShortage1(){
 	document.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","visible");
 	document.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");
 	document.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","visible");
-	document.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0.8");
+	document.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0.4");
 	document.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0");
 	document.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0");
 }
@@ -156,7 +185,7 @@ function setAllocationsShortage2(){
 	document.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","hidden");
 	document.getElementById("Mexico-pictos-shortage2").setAttribute("visibility","visible");
 	document.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0");
-	document.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0.8");
+	document.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0.4");
 	document.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0");
 }
 function setAllocationsShortage3(){
@@ -171,11 +200,28 @@ function setAllocationsShortage3(){
 	document.getElementById("Mexico-pictos-shortage2").setAttribute("visibility","hidden");
 	document.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0");
 	document.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0");
-	document.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0.8");
+	document.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0.4");
 }
 function setMeadCondition(storage_id){
+var simple_id = storage_id.replace(/-[^-]*$/i, "");
+
+document.getElementById("allocation-state").firstChild.data = simple_id
+var elevations = {"flood":"1,219.6",
+	"surplus":"1,200",
+	"normal":"1,145",
+	"shortage-1":"1,075",
+	"shortage-2":"1,050",
+	"shortage-3":"1,025"}
+var storages = {"flood":"26.1",
+	"surplus":"23.1",
+	"normal":"16.2",
+	"shortage-1":"9.6",
+	"shortage-2":"7.7",
+	"shortage-3":"6.0"}
 document.getElementById("Mead-"+storage_id).beginElement();
 document.getElementById("Mead-"+storage_id+"-text").beginElement();
+document.getElementById("mead-storage-text").firstChild.data = "Storage: " + storages[simple_id] + " maf"
+document.getElementById("mead-elevation-text").firstChild.data = "Elevation: " + elevations[simple_id] + " feet"
 }
 function showRiverDOM(){
 	animateIE(document.getElementById("show-river"));
@@ -586,11 +632,30 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
       <animate attributeName="y" id="Mead-shortage-3-fall" begin="indefinite" fill="freeze" dur="1s" from="330.036231884058" to="356.521739130435"/>
       <animate attributeName="y" id="Mead-shortage-3-rise" begin="indefinite" fill="freeze" dur="1s" from="356.521739130435" to="356.521739130435"/>
     </rect>
+    <g>
+  	<text id='mead-elevation-text' class='small-text' x="450" y="41.8115942028986" fill="#FFFFFF" dy="1em" stroke="none" style="text-anchor: middle;">Elevation: 1,219.6 feet
+  		<animate attributeName="y" id="Mead-flood-fall-text" begin="indefinite" fill="freeze" dur="1s" from="41.8115942028986" to="41.8115942028986"/>
+  	    <animate attributeName="y" id="Mead-flood-rise-text" begin="indefinite" fill="freeze" dur="1s" from="90.1086956521739" to="41.8115942028986"/>
+  	    <animate attributeName="y" id="Mead-surplus-fall-text" begin="indefinite" fill="freeze" dur="1s" from="41.8115942028986" to="90.1086956521739"/>
+  	    <animate attributeName="y" id="Mead-surplus-rise-text" begin="indefinite" fill="freeze" dur="1s" from="197.608695652174" to="90.1086956521739"/>
+  	    <animate attributeName="y" id="Mead-normal-fall-text" begin="indefinite" fill="freeze" dur="1s" from="90.1086956521739" to="197.608695652174"/>
+  	    <animate attributeName="y" id="Mead-normal-rise-text" begin="indefinite" fill="freeze" dur="1s" from="300.434782608696" to="197.608695652174"/>
+  	    <animate attributeName="y" id="Mead-shortage-1-fall-text" begin="indefinite" fill="freeze" dur="1s" from="197.608695652174" to="300.434782608696"/>
+  	    <animate attributeName="y" id="Mead-shortage-1-rise-text" begin="indefinite" fill="freeze" dur="1s" from="330.036231884058" to="300.434782608696"/> 
+  	    <animate attributeName="y" id="Mead-shortage-2-fall-text" begin="indefinite" fill="freeze" dur="1s" from="300.434782608696" to="330.036231884058"/>
+  	    <animate attributeName="y" id="Mead-shortage-2-rise-text" begin="indefinite" fill="freeze" dur="1s" from="356.521739130435" to="330.036231884058"/>
+  	    <animate attributeName="y" id="Mead-shortage-3-fall-text" begin="indefinite" fill="freeze" dur="1s" from="330.036231884058" to="356.521739130435"/>
+  	    <animate attributeName="y" id="Mead-shortage-3-rise-text" begin="indefinite" fill="freeze" dur="1s" from="356.521739130435" to="356.521739130435"/>
+  	</text>
+    	<text id='mead-storage-text' class='label' x="460" y="400" fill="#FFFFFF" stroke="none" style="text-anchor: middle;">Storage: 26.1 maf</text>
+    	<text class='small-text' x="460" y="400" fill="#FFFFFF" dy="1.2em" stroke="none" style="text-anchor: middle;">(million acre-feet)</text>
+    </g>
     <path id="Mead-2D-border" d="M 535 20 L 535 450 L 400 450 L 280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round"/>
     <animate attributeName="opacity" id="mead-draw" begin="indefinite" fill="freeze" dur="2s" values="0;0;1" keyTimes="0;0.5;1"/>
     <animate attributeName="opacity" id="mead-remove" begin="indefinite" fill="freeze" dur="1s" values="1;0"/>
-    <text class="label" id="allocation-info" x="55" y="400" fill="#FFFFFF" stroke="none" style="text-anchor: left;">  </text>
-    <text class="label" id="allocation-value" x="55" y="400" fill="#FFFFFF" stroke="none" style="text-anchor: left;">  </text>
+    <text class="label" id="allocation-info" x="55" y="450" fill="#FFFFFF" stroke="none" style="text-anchor: left;">  </text>
+    <text class="label" id="allocation-value" x="55" y="450" fill="#FFFFFF" stroke="none" style="text-anchor: left;">  </text>
+	<text class="label" id="allocation-state" x="55" y="400" fill="none" stroke="none">flood</text>
   </g>
   <g id="California-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
     <rect x="114" y="201" width="10" height="10" rx="2" ry="2"/>
@@ -776,49 +841,6 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
 		<rect x="98" y="270" width="84" height='14' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')" onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"/>
 	</g>
   </g>
-  <g id='flood-text' opacity="0">
-  	<text class='small-text' x="450" y="41.8115942028986" fill="#FFFFFF" dy="1em" stroke="none" style="text-anchor: middle;">Elevation: 1,219.6 feet</text>
-	<text class='label' x="460" y="400" fill="#FFFFFF" stroke="none" style="text-anchor: middle;">Storage: 26.1 maf</text>
-	<text class='small-text' x="460" y="400" fill="#FFFFFF" dy="1.2em" stroke="none" style="text-anchor: middle;">(million acre-feet)</text>
-    <animate attributeName="opacity" id="Mead-flood-fall-text" begin="indefinite" fill="freeze" dur="3s" values="0;1;1;0" keyTimes="0;0.5;0.9;1.0"/>
-    <animate attributeName="opacity" id="Mead-flood-rise-text" begin="indefinite" fill="freeze" dur="3s" values="0;1;1;0" keyTimes="0;0.5;0.9;1.0"/>
-  </g>
-  <g id='surplus-text' opacity="0">
-  	<text class='small-text' x="450" y="90.1086956521739" fill="#FFFFFF" dy="1em" stroke="none" style="text-anchor: middle;">Elevation: 1,200 feet</text>
-	<text class='label' x="460" y="400" fill="#FFFFFF" stroke="none" style="text-anchor: middle;">Storage: 23.1 maf</text>
-	<text class='small-text' x="460" y="400" fill="#FFFFFF" dy="1.2em" stroke="none" style="text-anchor: middle;">(million acre-feet)</text>
-    <animate attributeName="opacity" id="Mead-surplus-fall-text" begin="indefinite" fill="freeze" dur="3s" values="0;1;1;0" keyTimes="0;0.5;0.9;1.0"/>
-    <animate attributeName="opacity" id="Mead-surplus-rise-text" begin="indefinite" fill="freeze" dur="3s" values="0;1;1;0" keyTimes="0;0.5;0.9;1.0"/>
-  </g>
-  <g id='normal-text' opacity="0">
-  	<text class='small-text' x="450" y="197.608695652174" fill="#FFFFFF" dy="1em" stroke="none" style="text-anchor: middle;">Elevation: 1,145 feet</text>
-	<text class='label' x="460" y="400" fill="#FFFFFF" stroke="none" style="text-anchor: middle;">Storage: 16.2 maf</text>
-	<text class='small-text' x="460" y="400" fill="#FFFFFF" dy="1.2em" stroke="none" style="text-anchor: middle;">(million acre-feet)</text>
-    <animate attributeName="opacity" id="Mead-normal-fall-text" begin="indefinite" fill="freeze" dur="3s" values="0;1;1;0" keyTimes="0;0.5;0.9;1.0"/>
-    <animate attributeName="opacity" id="Mead-normal-rise-text" begin="indefinite" fill="freeze" dur="3s" values="0;1;1;0" keyTimes="0;0.5;0.9;1.0"/>
-  </g>
-  <g id='shortage-1-text' opacity="0">
-  	<text class='small-text' x="450" y="300.434782608696" fill="#FFFFFF" dy="1em" stroke="none" style="text-anchor: middle;">Elevation: 1,075 feet</text>
-	<text class='label' x="460" y="400" fill="#FFFFFF" stroke="none" style="text-anchor: middle;">Storage: 9.6 maf</text>
-	<text class='small-text' x="460" y="400" fill="#FFFFFF" dy="1.2em" stroke="none" style="text-anchor: middle;">(million acre-feet)</text>
-    <animate attributeName="opacity" id="Mead-shortage-1-fall-text" begin="indefinite" fill="freeze" dur="3s" values="0;1;1;0" keyTimes="0;0.5;0.9;1.0"/>
-    <animate attributeName="opacity" id="Mead-shortage-1-rise-text" begin="indefinite" fill="freeze" dur="3s" values="0;1;1;0" keyTimes="0;0.5;0.9;1.0"/>
-  </g>
-  <g id='shortage-2-text' opacity="0">
-  	<text class='small-text' x="450" y="330.036231884058" fill="#FFFFFF" dy="1em" stroke="none" style="text-anchor: middle;">Elevation: 1,050 feet</text>
-	<text class='label' x="460" y="400" fill="#FFFFFF" stroke="none" style="text-anchor: middle;">Storage: 7.7 maf</text>
-	<text class='small-text' x="460" y="400" fill="#FFFFFF" dy="1.2em" stroke="none" style="text-anchor: middle;">(million acre-feet)</text>
-    <animate attributeName="opacity" id="Mead-shortage-2-fall-text" begin="indefinite" fill="freeze" dur="3s" values="0;1;1;0" keyTimes="0;0.5;0.9;1.0"/>
-    <animate attributeName="opacity" id="Mead-shortage-2-rise-text" begin="indefinite" fill="freeze" dur="3s" values="0;1;1;0" keyTimes="0;0.5;0.9;1.0"/>
-  </g>
-  <g id='shortage-3-text' opacity="0">
-  	<text class='small-text' x="450" y="356.521739130435" fill="#FFFFFF" dy="1em" stroke="none" style="text-anchor: middle;">Elevation: 1,025 feet</text>
-	<text class='label' x="460" y="400" fill="#FFFFFF" stroke="none" style="text-anchor: middle;">Storage: 6.0 maf</text>
-	<text class='small-text' x="460" y="400" fill="#FFFFFF" dy="1.2em" stroke="none" style="text-anchor: middle;">(million acre-feet)</text>
-    <animate attributeName="opacity" id="Mead-shortage-3-fall-text" begin="indefinite" fill="freeze" dur="3s" values="0;1;1;0" keyTimes="0;0.5;0.9;1.0"/>
-    <animate attributeName="opacity" id="Mead-shortage-3-rise-text" begin="indefinite" fill="freeze" dur="3s" values="0;1;1;0" keyTimes="0;0.5;0.9;1.0"/>
-  </g>
-
   <g id='pictogram-legend' transform='translate(200,135)' visibility='hidden'>
   	<rect x="150" y="270" width="130" height="60" stroke="grey" fill="#FFFFFF" fill-opacity='0.3'/>
   	<text class='legend' x="215" y="278" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: middle;">Legend</text>
