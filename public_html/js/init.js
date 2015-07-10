@@ -163,12 +163,12 @@ $( document ).ready( function () {
             formFactor = "mobile";
         }
 
-        // Create and dispatch event. A bit complicated due to dealing with
-        // IE and non-IE browsers and the way they dispatch events
         if ( window.owdiDrought.formFactor !== formFactor ) {
             window.owdiDrought.formFactor = formFactor;
             eventName = "form-factor-" + window.owdiDrought.formFactor;
-            $( window ).trigger( eventName );
+            
+            var event = new Event(eventName);
+            window.dispatchEvent(event);
         }
 
     } );
@@ -177,4 +177,3 @@ $( document ).ready( function () {
     // Update the last modified timestamp in the footer
     $( "#last-mod-timestamp" ).html( document.lastModified );
 } );
-
