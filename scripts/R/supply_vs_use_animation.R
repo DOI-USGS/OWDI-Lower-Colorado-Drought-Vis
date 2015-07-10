@@ -14,8 +14,9 @@ svg_file <- 'public_html/img/water-usage/flow_animation.svg'
 declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
 
 data <- read.csv('src_data/NaturalFlow.csv', stringsAsFactors = F)
-flows <- data$Natural.Flow.above.Imperial/1000000 #into millions acre-feet units
-years <- data$Year
+use_i <- !is.na(data$Natural.Flow.above.Imperial)
+flows <- data$Natural.Flow.above.Imperial[use_i]/1000000 #into millions acre-feet units
+years <- data$Year[use_i]
 data <- read.table('src_data/Basin_Depletion_yearly_PROVISIONAL.tsv', stringsAsFactors = F, sep = '\t', header = T)
 # will add stuff here to either fill usage w/NAs, or trim to have same supply and use be the same length
 usage <- c(rep(NA,8),data$depletion/1000,NA,NA) #into millions acre-feet units

@@ -105,8 +105,8 @@
       <text id="use_text" x="100" y="45" fill="#B22C2C" class="legend">use_text</text>
       <text id="supply_text" x="100" y="60" fill="#0066CC" class="legend">supply_text</text>
     </g>
-    <path d="M93.5,162.7 L100.2,115.4 L106.9,267.8 L113.6,91.4 L120.4,216.8 L127.1,209.1 L133.8,164.8 L140.5,232.7 L147.3,116.3 L154.0,247.5 L160.7,121.3 L167.5,87.4 L174.2,205.9 L180.9,246.1 L187.6,92.4 L194.4,83.1 L201.1,153.9 L207.8,137.2 L214.5,225.7 L221.3,227.0 L228.0,221.6 L234.7,137.8 L241.5,202.6 L248.2,120.8 L254.9,232.2 L261.6,327.5 L268.4,166.1 L275.1,269.7 L281.8,369.7 L288.5,273.7 L295.3,241.2 L302.0,236.3 L308.7,177.7 L315.5,283.0 L322.2,306.8 L328.9,119.0 L335.6,187.6 L342.4,250.5 L349.1,220.1 L355.8,237.3 L362.5,290.3 L369.3,199.7 L376.0,227.0 L382.7,190.0 L389.5,257.6 L396.2,268.3 L402.9,118.5 L409.6,285.9 L416.4,331.2 L423.1,305.8 L429.8,284.4 L436.5,113.7 L443.3,198.9 L450.0,309.6 L456.7,277.3 L463.5,305.3 L470.2,188.4 L476.9,331.2 L483.6,304.6 L490.4,134.9 L497.1,294.3 L503.8,277.3 L510.5,244.4 L517.3,217.7 L524.0,224.1 L530.7,226.6 L537.5,257.1 L544.2,163.1 L550.9,263.7 L557.6,204.8 L564.4,292.0 L571.1,386.4 L577.8,212.7 L584.5,168.7 L591.3,164.7 L598.0,323.3 L604.7,181.6 L611.5,70.2 L618.2,60.0 L624.9,117.9 L631.6,94.9 L638.4,210.9 L645.1,280.7 L651.8,313.2 L658.5,316.8 L665.3,263.6 L672.0,277.9 L678.7,125.3 L685.5,298.0 L692.2,125.5 L698.9,238.5 L705.6,114.9 L712.4,191.8 L719.1,209.5 L725.8,301.6 L732.5,295.1 L739.3,377.9 L746.0,300.9 L752.7,305.9 L759.5,165.1 L766.2,252.2 L772.9,286.3 L779.6,205.0 L786.4,243.2 L793.1,259.1 L799.8,140.0 L806.5,350.8 L813.3,NA L820.0,NA " fill="none" style="stroke:#0066CC;stroke-width:3;stroke-dasharray:NA;stroke-linejoin:round;stroke-dashoffset:NA">
-      <animate attributeName="stroke-dashoffset" begin="indefinite;visibleAxes.begin+1s" id="timeAdvance" fill="freeze" dur="15.000000s" values="NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA"/>
+    <path d="M93.5,162.7 L100.2,115.4 L106.9,267.8 L113.6,91.4 L120.4,216.8 L127.1,209.1 L133.8,164.8 L140.5,232.7 L147.3,116.3 L154.0,247.5 L160.7,121.3 L167.5,87.4 L174.2,205.9 L180.9,246.1 L187.6,92.4 L194.4,83.1 L201.1,153.9 L207.8,137.2 L214.5,225.7 L221.3,227.0 L228.0,221.6 L234.7,137.8 L241.5,202.6 L248.2,120.8 L254.9,232.2 L261.6,327.5 L268.4,166.1 L275.1,269.7 L281.8,369.7 L288.5,273.7 L295.3,241.2 L302.0,236.3 L308.7,177.7 L315.5,283.0 L322.2,306.8 L328.9,119.0 L335.6,187.6 L342.4,250.5 L349.1,220.1 L355.8,237.3 L362.5,290.3 L369.3,199.7 L376.0,227.0 L382.7,190.0 L389.5,257.6 L396.2,268.3 L402.9,118.5 L409.6,285.9 L416.4,331.2 L423.1,305.8 L429.8,284.4 L436.5,113.7 L443.3,198.9 L450.0,309.6 L456.7,277.3 L463.5,305.3 L470.2,188.4 L476.9,331.2 L483.6,304.6 L490.4,134.9 L497.1,294.3 L503.8,277.3 L510.5,244.4 L517.3,217.7 L524.0,224.1 L530.7,226.6 L537.5,257.1 L544.2,163.1 L550.9,263.7 L557.6,204.8 L564.4,292.0 L571.1,386.4 L577.8,212.7 L584.5,168.7 L591.3,164.7 L598.0,323.3 L604.7,181.6 L611.5,70.2 L618.2,60.0 L624.9,117.9 L631.6,94.9 L638.4,210.9 L645.1,280.7 L651.8,313.2 L658.5,316.8 L665.3,263.6 L672.0,277.9 L678.7,125.3 L685.5,298.0 L692.2,125.5 L698.9,238.5 L705.6,114.9 L712.4,191.8 L719.1,209.5 L725.8,301.6 L732.5,295.1 L739.3,377.9 L746.0,300.9 L752.7,305.9 L759.5,165.1 L766.2,252.2 L772.9,286.3 L779.6,205.0 L786.4,243.2 L793.1,259.1 L799.8,140.0 L806.5,350.8 " fill="none" style="stroke:#0066CC;stroke-width:3;stroke-dasharray:8229;stroke-linejoin:round;stroke-dashoffset:8229">
+      <animate attributeName="stroke-dashoffset" begin="indefinite;visibleAxes.begin+1s" id="timeAdvance" fill="freeze" dur="15.000000s" values="8180.27643499054;8027.73426283712;7851.23057715199;7725.59768396741;7715.32023860305;7670.51411403263;7602.24989333673;7485.62498708568;7354.22401106679;7227.89467296057;7193.30823052911;7074.68247251415;7033.90974191987;6880.07298541928;6868.60362607579;6797.44990477115;6779.39406740198;6690.64627682354;6683.78601430858;6675.16015355059;6591.04655468514;6525.83451254063;6443.75451350055;6332.19814250445;6236.63716098381;6075.14193841602;5971.34287133104;5871.13890349618;5774.92101771306;5741.66087597306;5733.34277983217;5674.42971885547;5568.90516815474;5544.16881556029;5356.16511232207;5287.16887537581;5223.92992243401;5192.79551827194;5174.29570506456;5120.92731668372;5030.0961576645;5001.94909698138;4964.29424103299;4896.32560539926;4883.73538745054;4733.77300996466;4566.18376055087;4520.38538000323;4494.06828284031;4471.67700462203;4300.86346552564;4215.42800730295;4104.49294128975;4071.49204522876;4042.69568166634;3925.59304203655;3782.63480204673;3755.20538249912;3585.32592242783;3425.76591408896;3407.51605230775;3373.91053751123;3346.37263197439;3337.11487798731;3329.92581308834;3298.66320914587;3204.38223925785;3103.53350763122;3044.23006197656;2956.70959877925;2862.08351034373;2688.23754256681;2643.71529791962;2635.90983724999;2477.20718589226;2335.35244080939;2223.77125435828;2211.50785187565;2153.17344760951;2129.13990195821;2012.85648242082;1942.74830865723;1909.62643889724;1901.99736717373;1848.44541790553;1832.64468350498;1679.82231476087;1506.98707735835;1334.40813082252;1221.23583904317;1097.45954315028;1020.25087312008;1001.33648877456;909.002300806965;899.694146952087;816.643697148232;739.3521377032;730.961289920895;589.953298418803;502.589181498849;467.776288326138;386.152923968921;347.359589425854;330.137713620838;210.879733409803;0"/>
     </path>
     <g id="supply" style="fill:#0066CC" r="0" visibility="hidden">
       <circle cx="93.5" cy="162.7" id="supply-1906">
@@ -116,325 +116,323 @@
         <animate attributeName="r" begin="timeAdvance.begin+0.000s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="106.9" cy="267.8" id="supply-1908">
-        <animate attributeName="r" begin="timeAdvance.begin+0.078s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+0.083s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="113.6" cy="91.4" id="supply-1909">
-        <animate attributeName="r" begin="timeAdvance.begin+0.217s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+0.225s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="120.4" cy="216.8" id="supply-1910">
-        <animate attributeName="r" begin="timeAdvance.begin+0.356s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+0.366s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="127.1" cy="209.1" id="supply-1911">
-        <animate attributeName="r" begin="timeAdvance.begin+0.494s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+0.508s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="133.8" cy="164.8" id="supply-1912">
-        <animate attributeName="r" begin="timeAdvance.begin+0.633s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+0.649s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="140.5" cy="232.7" id="supply-1913">
-        <animate attributeName="r" begin="timeAdvance.begin+0.772s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+0.791s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="147.3" cy="116.3" id="supply-1914">
-        <animate attributeName="r" begin="timeAdvance.begin+0.911s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+0.932s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="154.0" cy="247.5" id="supply-1915">
-        <animate attributeName="r" begin="timeAdvance.begin+1.050s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+1.074s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="160.7" cy="121.3" id="supply-1916">
-        <animate attributeName="r" begin="timeAdvance.begin+1.189s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+1.215s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="167.5" cy="87.4" id="supply-1917">
-        <animate attributeName="r" begin="timeAdvance.begin+1.328s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+1.357s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="174.2" cy="205.9" id="supply-1918">
-        <animate attributeName="r" begin="timeAdvance.begin+1.467s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+1.498s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="180.9" cy="246.1" id="supply-1919">
-        <animate attributeName="r" begin="timeAdvance.begin+1.606s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+1.640s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="187.6" cy="92.4" id="supply-1920">
-        <animate attributeName="r" begin="timeAdvance.begin+1.744s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+1.781s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="194.4" cy="83.1" id="supply-1921">
-        <animate attributeName="r" begin="timeAdvance.begin+1.883s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+1.923s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="201.1" cy="153.9" id="supply-1922">
-        <animate attributeName="r" begin="timeAdvance.begin+2.022s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+2.064s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="207.8" cy="137.2" id="supply-1923">
-        <animate attributeName="r" begin="timeAdvance.begin+2.161s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+2.206s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="214.5" cy="225.7" id="supply-1924">
-        <animate attributeName="r" begin="timeAdvance.begin+2.300s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+2.347s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="221.3" cy="227.0" id="supply-1925">
-        <animate attributeName="r" begin="timeAdvance.begin+2.439s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+2.489s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="228.0" cy="221.6" id="supply-1926">
-        <animate attributeName="r" begin="timeAdvance.begin+2.578s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+2.630s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="234.7" cy="137.8" id="supply-1927">
-        <animate attributeName="r" begin="timeAdvance.begin+2.717s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+2.772s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="241.5" cy="202.6" id="supply-1928">
-        <animate attributeName="r" begin="timeAdvance.begin+2.856s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+2.913s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="248.2" cy="120.8" id="supply-1929">
-        <animate attributeName="r" begin="timeAdvance.begin+2.994s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+3.055s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="254.9" cy="232.2" id="supply-1930">
-        <animate attributeName="r" begin="timeAdvance.begin+3.133s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+3.196s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="261.6" cy="327.5" id="supply-1931">
-        <animate attributeName="r" begin="timeAdvance.begin+3.272s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+3.338s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="268.4" cy="166.1" id="supply-1932">
-        <animate attributeName="r" begin="timeAdvance.begin+3.411s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+3.479s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="275.1" cy="269.7" id="supply-1933">
-        <animate attributeName="r" begin="timeAdvance.begin+3.550s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+3.621s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="281.8" cy="369.7" id="supply-1934">
-        <animate attributeName="r" begin="timeAdvance.begin+3.689s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+3.762s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="288.5" cy="273.7" id="supply-1935">
-        <animate attributeName="r" begin="timeAdvance.begin+3.828s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+3.904s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="295.3" cy="241.2" id="supply-1936">
-        <animate attributeName="r" begin="timeAdvance.begin+3.967s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+4.045s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="302.0" cy="236.3" id="supply-1937">
-        <animate attributeName="r" begin="timeAdvance.begin+4.106s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+4.187s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="308.7" cy="177.7" id="supply-1938">
-        <animate attributeName="r" begin="timeAdvance.begin+4.244s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+4.328s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="315.5" cy="283.0" id="supply-1939">
-        <animate attributeName="r" begin="timeAdvance.begin+4.383s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+4.470s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="322.2" cy="306.8" id="supply-1940">
-        <animate attributeName="r" begin="timeAdvance.begin+4.522s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+4.611s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="328.9" cy="119.0" id="supply-1941">
-        <animate attributeName="r" begin="timeAdvance.begin+4.661s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+4.753s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="335.6" cy="187.6" id="supply-1942">
-        <animate attributeName="r" begin="timeAdvance.begin+4.800s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+4.894s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="342.4" cy="250.5" id="supply-1943">
-        <animate attributeName="r" begin="timeAdvance.begin+4.939s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+5.036s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="349.1" cy="220.1" id="supply-1944">
-        <animate attributeName="r" begin="timeAdvance.begin+5.078s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+5.177s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="355.8" cy="237.3" id="supply-1945">
-        <animate attributeName="r" begin="timeAdvance.begin+5.217s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+5.319s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="362.5" cy="290.3" id="supply-1946">
-        <animate attributeName="r" begin="timeAdvance.begin+5.356s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+5.460s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="369.3" cy="199.7" id="supply-1947">
-        <animate attributeName="r" begin="timeAdvance.begin+5.494s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+5.602s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="376.0" cy="227.0" id="supply-1948">
-        <animate attributeName="r" begin="timeAdvance.begin+5.633s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+5.743s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="382.7" cy="190.0" id="supply-1949">
-        <animate attributeName="r" begin="timeAdvance.begin+5.772s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+5.885s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="389.5" cy="257.6" id="supply-1950">
-        <animate attributeName="r" begin="timeAdvance.begin+5.911s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+6.026s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="396.2" cy="268.3" id="supply-1951">
-        <animate attributeName="r" begin="timeAdvance.begin+6.050s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+6.168s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="402.9" cy="118.5" id="supply-1952">
-        <animate attributeName="r" begin="timeAdvance.begin+6.189s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+6.309s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="409.6" cy="285.9" id="supply-1953">
-        <animate attributeName="r" begin="timeAdvance.begin+6.328s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+6.451s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="416.4" cy="331.2" id="supply-1954">
-        <animate attributeName="r" begin="timeAdvance.begin+6.467s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+6.592s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="423.1" cy="305.8" id="supply-1955">
-        <animate attributeName="r" begin="timeAdvance.begin+6.606s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+6.734s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="429.8" cy="284.4" id="supply-1956">
-        <animate attributeName="r" begin="timeAdvance.begin+6.744s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+6.875s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="436.5" cy="113.7" id="supply-1957">
-        <animate attributeName="r" begin="timeAdvance.begin+6.883s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+7.017s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="443.3" cy="198.9" id="supply-1958">
-        <animate attributeName="r" begin="timeAdvance.begin+7.022s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+7.158s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="450.0" cy="309.6" id="supply-1959">
-        <animate attributeName="r" begin="timeAdvance.begin+7.161s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
-      </circle>
-      <circle cx="456.7" cy="277.3" id="supply-1960">
         <animate attributeName="r" begin="timeAdvance.begin+7.300s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
+      <circle cx="456.7" cy="277.3" id="supply-1960">
+        <animate attributeName="r" begin="timeAdvance.begin+7.442s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
       <circle cx="463.5" cy="305.3" id="supply-1961">
-        <animate attributeName="r" begin="timeAdvance.begin+7.439s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+7.583s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="470.2" cy="188.4" id="supply-1962">
-        <animate attributeName="r" begin="timeAdvance.begin+7.578s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+7.725s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="476.9" cy="331.2" id="supply-1963">
-        <animate attributeName="r" begin="timeAdvance.begin+7.717s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+7.866s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="483.6" cy="304.6" id="supply-1964">
-        <animate attributeName="r" begin="timeAdvance.begin+7.856s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+8.008s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="490.4" cy="134.9" id="supply-1965">
-        <animate attributeName="r" begin="timeAdvance.begin+7.994s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+8.149s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="497.1" cy="294.3" id="supply-1966">
-        <animate attributeName="r" begin="timeAdvance.begin+8.133s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+8.291s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="503.8" cy="277.3" id="supply-1967">
-        <animate attributeName="r" begin="timeAdvance.begin+8.272s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+8.432s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="510.5" cy="244.4" id="supply-1968">
-        <animate attributeName="r" begin="timeAdvance.begin+8.411s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+8.574s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="517.3" cy="217.7" id="supply-1969">
-        <animate attributeName="r" begin="timeAdvance.begin+8.550s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+8.715s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="524.0" cy="224.1" id="supply-1970">
-        <animate attributeName="r" begin="timeAdvance.begin+8.689s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+8.857s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="530.7" cy="226.6" id="supply-1971">
-        <animate attributeName="r" begin="timeAdvance.begin+8.828s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+8.998s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="537.5" cy="257.1" id="supply-1972">
-        <animate attributeName="r" begin="timeAdvance.begin+8.967s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+9.140s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="544.2" cy="163.1" id="supply-1973">
-        <animate attributeName="r" begin="timeAdvance.begin+9.106s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+9.281s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="550.9" cy="263.7" id="supply-1974">
-        <animate attributeName="r" begin="timeAdvance.begin+9.244s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+9.423s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="557.6" cy="204.8" id="supply-1975">
-        <animate attributeName="r" begin="timeAdvance.begin+9.383s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+9.564s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="564.4" cy="292.0" id="supply-1976">
-        <animate attributeName="r" begin="timeAdvance.begin+9.522s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+9.706s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="571.1" cy="386.4" id="supply-1977">
-        <animate attributeName="r" begin="timeAdvance.begin+9.661s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+9.847s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="577.8" cy="212.7" id="supply-1978">
-        <animate attributeName="r" begin="timeAdvance.begin+9.800s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+9.989s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="584.5" cy="168.7" id="supply-1979">
-        <animate attributeName="r" begin="timeAdvance.begin+9.939s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+10.130s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="591.3" cy="164.7" id="supply-1980">
-        <animate attributeName="r" begin="timeAdvance.begin+10.078s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+10.272s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="598.0" cy="323.3" id="supply-1981">
-        <animate attributeName="r" begin="timeAdvance.begin+10.217s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+10.413s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="604.7" cy="181.6" id="supply-1982">
-        <animate attributeName="r" begin="timeAdvance.begin+10.356s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+10.555s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="611.5" cy="70.2" id="supply-1983">
-        <animate attributeName="r" begin="timeAdvance.begin+10.494s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+10.696s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="618.2" cy="60.0" id="supply-1984">
-        <animate attributeName="r" begin="timeAdvance.begin+10.633s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+10.838s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="624.9" cy="117.9" id="supply-1985">
-        <animate attributeName="r" begin="timeAdvance.begin+10.772s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+10.979s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="631.6" cy="94.9" id="supply-1986">
-        <animate attributeName="r" begin="timeAdvance.begin+10.911s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+11.121s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="638.4" cy="210.9" id="supply-1987">
-        <animate attributeName="r" begin="timeAdvance.begin+11.050s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+11.262s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="645.1" cy="280.7" id="supply-1988">
-        <animate attributeName="r" begin="timeAdvance.begin+11.189s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+11.404s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="651.8" cy="313.2" id="supply-1989">
-        <animate attributeName="r" begin="timeAdvance.begin+11.328s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+11.545s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="658.5" cy="316.8" id="supply-1990">
-        <animate attributeName="r" begin="timeAdvance.begin+11.467s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+11.687s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="665.3" cy="263.6" id="supply-1991">
-        <animate attributeName="r" begin="timeAdvance.begin+11.606s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+11.828s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="672.0" cy="277.9" id="supply-1992">
-        <animate attributeName="r" begin="timeAdvance.begin+11.744s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+11.970s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="678.7" cy="125.3" id="supply-1993">
-        <animate attributeName="r" begin="timeAdvance.begin+11.883s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+12.111s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="685.5" cy="298.0" id="supply-1994">
-        <animate attributeName="r" begin="timeAdvance.begin+12.022s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+12.253s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="692.2" cy="125.5" id="supply-1995">
-        <animate attributeName="r" begin="timeAdvance.begin+12.161s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+12.394s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="698.9" cy="238.5" id="supply-1996">
-        <animate attributeName="r" begin="timeAdvance.begin+12.300s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+12.536s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="705.6" cy="114.9" id="supply-1997">
-        <animate attributeName="r" begin="timeAdvance.begin+12.439s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+12.677s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="712.4" cy="191.8" id="supply-1998">
-        <animate attributeName="r" begin="timeAdvance.begin+12.578s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+12.819s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="719.1" cy="209.5" id="supply-1999">
-        <animate attributeName="r" begin="timeAdvance.begin+12.717s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+12.960s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="725.8" cy="301.6" id="supply-2000">
-        <animate attributeName="r" begin="timeAdvance.begin+12.856s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+13.102s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="732.5" cy="295.1" id="supply-2001">
-        <animate attributeName="r" begin="timeAdvance.begin+12.994s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+13.243s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="739.3" cy="377.9" id="supply-2002">
-        <animate attributeName="r" begin="timeAdvance.begin+13.133s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+13.385s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="746.0" cy="300.9" id="supply-2003">
-        <animate attributeName="r" begin="timeAdvance.begin+13.272s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+13.526s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="752.7" cy="305.9" id="supply-2004">
-        <animate attributeName="r" begin="timeAdvance.begin+13.411s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+13.668s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="759.5" cy="165.1" id="supply-2005">
-        <animate attributeName="r" begin="timeAdvance.begin+13.550s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+13.809s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="766.2" cy="252.2" id="supply-2006">
-        <animate attributeName="r" begin="timeAdvance.begin+13.689s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+13.951s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="772.9" cy="286.3" id="supply-2007">
-        <animate attributeName="r" begin="timeAdvance.begin+13.828s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+14.092s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="779.6" cy="205.0" id="supply-2008">
-        <animate attributeName="r" begin="timeAdvance.begin+13.967s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+14.234s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="786.4" cy="243.2" id="supply-2009">
-        <animate attributeName="r" begin="timeAdvance.begin+14.106s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+14.375s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="793.1" cy="259.1" id="supply-2010">
-        <animate attributeName="r" begin="timeAdvance.begin+14.244s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+14.517s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="799.8" cy="140.0" id="supply-2011">
-        <animate attributeName="r" begin="timeAdvance.begin+14.383s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+14.658s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
       <circle cx="806.5" cy="350.8" id="supply-2012">
-        <animate attributeName="r" begin="timeAdvance.begin+14.522s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+        <animate attributeName="r" begin="timeAdvance.begin+14.800s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
       </circle>
-      <circle cx="813.3" cy="NA" id="supply-2013"/>
-      <circle cx="820.0" cy="NA" id="supply-2014"/>
     </g>
     <path d="M147.3,409.5 L154.0,408.2 L160.7,401.5 L167.5,396.9 L174.2,390.1 L180.9,391.2 L187.6,387.5 L194.4,396.0 L201.1,384.5 L207.8,383.5 L214.5,380.1 L221.3,382.1 L228.0,382.0 L234.7,382.4 L241.5,377.4 L248.2,374.7 L254.9,371.8 L261.6,379.4 L268.4,381.0 L275.1,376.7 L281.8,392.6 L288.5,374.4 L295.3,361.0 L302.0,360.1 L308.7,357.0 L315.5,353.9 L322.2,353.6 L328.9,358.7 L335.6,355.2 L342.4,358.3 L349.1,354.3 L355.8,354.7 L362.5,349.5 L369.3,347.7 L376.0,344.6 L382.7,341.7 L389.5,333.6 L396.2,324.5 L402.9,317.0 L409.6,313.2 L416.4,312.9 L423.1,316.7 L429.8,310.0 L436.5,317.8 L443.3,307.0 L450.0,306.4 L456.7,298.6 L463.5,302.3 L470.2,293.6 L476.9,296.9 L483.6,288.5 L490.4,294.0 L497.1,282.3 L503.8,291.0 L510.5,286.0 L517.3,285.8 L524.0,279.1 L530.7,269.6 L537.5,267.8 L544.2,264.4 L550.9,256.0 L557.6,265.3 L564.4,273.1 L571.1,276.8 L577.8,272.3 L584.5,263.3 L591.3,261.7 L598.0,256.7 L604.7,270.8 L611.5,270.2 L618.2,264.6 L624.9,256.6 L631.6,255.2 L638.4,246.3 L645.1,233.6 L651.8,229.5 L658.5,234.3 L665.3,243.7 L672.0,247.8 L678.7,239.5 L685.5,228.8 L692.2,246.6 L698.9,223.5 L705.6,222.0 L712.4,227.4 L719.1,225.3 L725.8,213.5 L732.5,214.1 L739.3,222.0 L746.0,239.1 L752.7,247.0 L759.5,250.2 L766.2,242.1 L772.9,237.1 L779.6,233.7 L786.4,236.5 L793.1,239.6 " fill="none" style="stroke:#B22C2C;stroke-width:3;stroke-dasharray:911px;stroke-linejoin:round;stroke-dashoffset:911">
-      <animate attributeName="stroke-dashoffset" begin="timeAdvance.begin" id="usage" fill="freeze" dur="15.000000s" values="909.85224762893;909.85224762893;909.85224762893;909.85224762893;909.85224762893;909.85224762893;909.85224762893;909.85224762893;903.003903085556;893.518428737406;885.386600290868;875.775165502995;868.95421867137;861.271658168572;850.441585047878;837.187784655028;830.376914710835;822.844341230205;815.829601456988;809.101317764032;802.358074673319;793.9545717039;786.708894150603;779.397924449208;769.273310460546;762.36197270334;754.35956280184;737.028294577872;717.589901597436;702.637023868804;695.841656012525;688.450396639703;681.058628118353;674.320811027918;665.846421125174;658.248587171342;650.826785996007;643.00950386078;636.270621936772;627.754254818233;620.792484575191;613.372724871222;606.048780220648;595.489954762603;584.212153892381;574.096932256197;566.403933993245;559.668797506052;551.920011818725;542.364309377265;532.019519715322;519.286884122077;512.534799607462;502.180946147585;494.491323961306;483.496328012678;476.019951656298;465.307509795939;456.603470411952;443.047046034723;432.032578334676;423.651354034944;416.919902868511;407.462574447364;395.817582711685;388.861073816665;381.322648671884;370.552501632697;359.065251673835;348.763675897909;341.083690519312;332.956775054183;321.7055627304;314.790521197253;306.45043570452;290.834528503084;284.076717618618;275.322013494261;264.897698531484;258.023354652422;246.858514222001;232.505441210081;224.609885095859;216.307128917018;204.803849421923;196.931222754418;186.244110079886;173.657661517771;154.638610776272;130.567655671803;123.683110403971;115.05761228887;108.013581581913;94.4033809484728;87.6476651395084;77.3013384722138;58.9174323014628;48.55579211345;41.108592997677;30.5808534851184;22.1967156457066;14.6729760207349;7.37455074871139;0;0;0;0;0"/>
+      <animate attributeName="stroke-dashoffset" begin="timeAdvance.begin" id="usage" fill="freeze" dur="15.000000s" values="909.85224762893;909.85224762893;909.85224762893;909.85224762893;909.85224762893;909.85224762893;909.85224762893;909.85224762893;903.003903085556;893.518428737406;885.386600290868;875.775165502995;868.95421867137;861.271658168572;850.441585047878;837.187784655028;830.376914710835;822.844341230205;815.829601456988;809.101317764032;802.358074673319;793.9545717039;786.708894150603;779.397924449208;769.273310460546;762.36197270334;754.35956280184;737.028294577872;717.589901597436;702.637023868804;695.841656012525;688.450396639703;681.058628118353;674.320811027918;665.846421125174;658.248587171342;650.826785996007;643.00950386078;636.270621936772;627.754254818233;620.792484575191;613.372724871222;606.048780220648;595.489954762603;584.212153892381;574.096932256197;566.403933993245;559.668797506052;551.920011818725;542.364309377265;532.019519715322;519.286884122077;512.534799607462;502.180946147585;494.491323961306;483.496328012678;476.019951656298;465.307509795939;456.603470411952;443.047046034723;432.032578334676;423.651354034944;416.919902868511;407.462574447364;395.817582711685;388.861073816665;381.322648671884;370.552501632697;359.065251673835;348.763675897909;341.083690519312;332.956775054183;321.7055627304;314.790521197253;306.45043570452;290.834528503084;284.076717618618;275.322013494261;264.897698531484;258.023354652422;246.858514222001;232.505441210081;224.609885095859;216.307128917018;204.803849421923;196.931222754418;186.244110079886;173.657661517771;154.638610776272;130.567655671803;123.683110403971;115.05761228887;108.013581581913;94.4033809484728;87.6476651395084;77.3013384722138;58.9174323014628;48.55579211345;41.108592997677;30.5808534851184;22.1967156457066;14.6729760207349;7.37455074871139;0;0;0"/>
     </path>
     <rect id="year_1906" x="90.09" y="10" width="6.73" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1906');ChangeText(evt, 'year_text','1906');ChangeText(evt, 'use_text','usage: ');ChangeText(evt, 'supply_text','supply: 19.8');" onmouseover="highlightViz(evt,'supply-1906','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1906','0.0');"/>
     <rect id="year_1907" x="96.82" y="10" width="6.73" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1907');ChangeText(evt, 'year_text','1907');ChangeText(evt, 'use_text','usage: ');ChangeText(evt, 'supply_text','supply: 22.6');" onmouseover="highlightViz(evt,'supply-1907','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1907','0.0');"/>
@@ -543,8 +541,6 @@
     <rect id="year_2010" x="789.73" y="10" width="6.73" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2010');ChangeText(evt, 'year_text','2010');ChangeText(evt, 'use_text','usage: 15.1');ChangeText(evt, 'supply_text','supply: 14.0');" onmouseover="highlightViz(evt,'supply-2010','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2010','0.0');"/>
     <rect id="year_2011" x="796.45" y="10" width="6.73" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2011');ChangeText(evt, 'year_text','2011');ChangeText(evt, 'use_text','usage: ');ChangeText(evt, 'supply_text','supply: 21.1');" onmouseover="highlightViz(evt,'supply-2011','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2011','0.0');"/>
     <rect id="year_2012" x="803.18" y="10" width="6.73" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2012');ChangeText(evt, 'year_text','2012');ChangeText(evt, 'use_text','usage: ');ChangeText(evt, 'supply_text','supply: 8.4');" onmouseover="highlightViz(evt,'supply-2012','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2012','0.0');"/>
-    <rect id="year_2013" x="809.91" y="10" width="6.73" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2013');ChangeText(evt, 'year_text','2013');ChangeText(evt, 'use_text','usage: ');ChangeText(evt, 'supply_text','supply: ');" onmouseover="highlightViz(evt,'supply-2013','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2013','0.0');"/>
-    <rect id="year_2014" x="816.64" y="10" width="6.73" height="480" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2014');ChangeText(evt, 'year_text','2014');ChangeText(evt, 'use_text','usage: ');ChangeText(evt, 'supply_text','supply: ');" onmouseover="highlightViz(evt,'supply-2014','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2014','0.0');"/>
   </g>
 </svg>
  
