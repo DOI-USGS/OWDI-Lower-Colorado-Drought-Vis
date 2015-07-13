@@ -1,194 +1,100 @@
 <?xml version="1.0" ?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 320">
-  <style type="text/css">
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 725 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style type="text/css">.linebox:hover { opacity : .25 }
 #box0:hover ~ .num0 { opacity : 1 }
-#box0:hover { opacity : .25 }
 #box1:hover ~ .num1 { opacity : 1 }
-#box1:hover { opacity : .25 }
 #box2:hover ~ .num2 { opacity : 1 }
-#box2:hover { opacity : .25 }
 #box3:hover ~ .num3 { opacity : 1 }
-#box3:hover { opacity : .25 }
 #box4:hover ~ .num4 { opacity : 1 }
-#box4:hover { opacity : .25 }
 #box5:hover ~ .num5 { opacity : 1 }
-#box5:hover { opacity : .25 }
 #box6:hover ~ .num6 { opacity : 1 }
-#box6:hover { opacity : .25 }
 #box7:hover ~ .num7 { opacity : 1 }
-#box7:hover { opacity : .25 }
 #box8:hover ~ .num8 { opacity : 1 }
-#box8:hover { opacity : .25 }
 #box9:hover ~ .num9 { opacity : 1 }
-#box9:hover { opacity : .25 }
 #box10:hover ~ .num10 { opacity : 1 }
-#box10:hover { opacity : .25 }
 #box11:hover ~ .num11 { opacity : 1 }
-#box11:hover { opacity : .25 }
 #box12:hover ~ .num12 { opacity : 1 }
-#box12:hover { opacity : .25 }
 #box13:hover ~ .num13 { opacity : 1 }
-#box13:hover { opacity : .25 }
 #box14:hover ~ .num14 { opacity : 1 }
-#box14:hover { opacity : .25 }
 #box15:hover ~ .num15 { opacity : 1 }
-#box15:hover { opacity : .25 }
 #box16:hover ~ .num16 { opacity : 1 }
-#box16:hover { opacity : .25 }
 #box17:hover ~ .num17 { opacity : 1 }
-#box17:hover { opacity : .25 }
 #box18:hover ~ .num18 { opacity : 1 }
-#box18:hover { opacity : .25 }
 #box19:hover ~ .num19 { opacity : 1 }
-#box19:hover { opacity : .25 }
 #box20:hover ~ .num20 { opacity : 1 }
-#box20:hover { opacity : .25 }
 #box21:hover ~ .num21 { opacity : 1 }
-#box21:hover { opacity : .25 }
 #box22:hover ~ .num22 { opacity : 1 }
-#box22:hover { opacity : .25 }
 #box23:hover ~ .num23 { opacity : 1 }
-#box23:hover { opacity : .25 }
 #box24:hover ~ .num24 { opacity : 1 }
-#box24:hover { opacity : .25 }
 #box25:hover ~ .num25 { opacity : 1 }
-#box25:hover { opacity : .25 }
 #box26:hover ~ .num26 { opacity : 1 }
-#box26:hover { opacity : .25 }
 #box27:hover ~ .num27 { opacity : 1 }
-#box27:hover { opacity : .25 }
 #box28:hover ~ .num28 { opacity : 1 }
-#box28:hover { opacity : .25 }
 #box29:hover ~ .num29 { opacity : 1 }
-#box29:hover { opacity : .25 }
 #box30:hover ~ .num30 { opacity : 1 }
-#box30:hover { opacity : .25 }
 #box31:hover ~ .num31 { opacity : 1 }
-#box31:hover { opacity : .25 }
 #box32:hover ~ .num32 { opacity : 1 }
-#box32:hover { opacity : .25 }
 #box33:hover ~ .num33 { opacity : 1 }
-#box33:hover { opacity : .25 }
 #box34:hover ~ .num34 { opacity : 1 }
-#box34:hover { opacity : .25 }
 #box35:hover ~ .num35 { opacity : 1 }
-#box35:hover { opacity : .25 }
 #box36:hover ~ .num36 { opacity : 1 }
-#box36:hover { opacity : .25 }
 #box37:hover ~ .num37 { opacity : 1 }
-#box37:hover { opacity : .25 }
 #box38:hover ~ .num38 { opacity : 1 }
-#box38:hover { opacity : .25 }
 #box39:hover ~ .num39 { opacity : 1 }
-#box39:hover { opacity : .25 }
 #box40:hover ~ .num40 { opacity : 1 }
-#box40:hover { opacity : .25 }
 #box41:hover ~ .num41 { opacity : 1 }
-#box41:hover { opacity : .25 }
 #box42:hover ~ .num42 { opacity : 1 }
-#box42:hover { opacity : .25 }
 #box43:hover ~ .num43 { opacity : 1 }
-#box43:hover { opacity : .25 }
 #box44:hover ~ .num44 { opacity : 1 }
-#box44:hover { opacity : .25 }
 #box45:hover ~ .num45 { opacity : 1 }
-#box45:hover { opacity : .25 }
 #box46:hover ~ .num46 { opacity : 1 }
-#box46:hover { opacity : .25 }
 #box47:hover ~ .num47 { opacity : 1 }
-#box47:hover { opacity : .25 }
 #box48:hover ~ .num48 { opacity : 1 }
-#box48:hover { opacity : .25 }
 #box49:hover ~ .num49 { opacity : 1 }
-#box49:hover { opacity : .25 }
 #box50:hover ~ .num50 { opacity : 1 }
-#box50:hover { opacity : .25 }
 #box51:hover ~ .num51 { opacity : 1 }
-#box51:hover { opacity : .25 }
 #box52:hover ~ .num52 { opacity : 1 }
-#box52:hover { opacity : .25 }
 #box53:hover ~ .num53 { opacity : 1 }
-#box53:hover { opacity : .25 }
 #box54:hover ~ .num54 { opacity : 1 }
-#box54:hover { opacity : .25 }
 #box55:hover ~ .num55 { opacity : 1 }
-#box55:hover { opacity : .25 }
 #box56:hover ~ .num56 { opacity : 1 }
-#box56:hover { opacity : .25 }
 #box57:hover ~ .num57 { opacity : 1 }
-#box57:hover { opacity : .25 }
 #box58:hover ~ .num58 { opacity : 1 }
-#box58:hover { opacity : .25 }
 #box59:hover ~ .num59 { opacity : 1 }
-#box59:hover { opacity : .25 }
 #box60:hover ~ .num60 { opacity : 1 }
-#box60:hover { opacity : .25 }
 #box61:hover ~ .num61 { opacity : 1 }
-#box61:hover { opacity : .25 }
 #box62:hover ~ .num62 { opacity : 1 }
-#box62:hover { opacity : .25 }
 #box63:hover ~ .num63 { opacity : 1 }
-#box63:hover { opacity : .25 }
 #box64:hover ~ .num64 { opacity : 1 }
-#box64:hover { opacity : .25 }
 #box65:hover ~ .num65 { opacity : 1 }
-#box65:hover { opacity : .25 }
 #box66:hover ~ .num66 { opacity : 1 }
-#box66:hover { opacity : .25 }
 #box67:hover ~ .num67 { opacity : 1 }
-#box67:hover { opacity : .25 }
 #box68:hover ~ .num68 { opacity : 1 }
-#box68:hover { opacity : .25 }
 #box69:hover ~ .num69 { opacity : 1 }
-#box69:hover { opacity : .25 }
 #box70:hover ~ .num70 { opacity : 1 }
-#box70:hover { opacity : .25 }
 #box71:hover ~ .num71 { opacity : 1 }
-#box71:hover { opacity : .25 }
 #box72:hover ~ .num72 { opacity : 1 }
-#box72:hover { opacity : .25 }
 #box73:hover ~ .num73 { opacity : 1 }
-#box73:hover { opacity : .25 }
 #box74:hover ~ .num74 { opacity : 1 }
-#box74:hover { opacity : .25 }
 #box75:hover ~ .num75 { opacity : 1 }
-#box75:hover { opacity : .25 }
 #box76:hover ~ .num76 { opacity : 1 }
-#box76:hover { opacity : .25 }
 #box77:hover ~ .num77 { opacity : 1 }
-#box77:hover { opacity : .25 }
 #box78:hover ~ .num78 { opacity : 1 }
-#box78:hover { opacity : .25 }
 #box79:hover ~ .num79 { opacity : 1 }
-#box79:hover { opacity : .25 }
 #box80:hover ~ .num80 { opacity : 1 }
-#box80:hover { opacity : .25 }
 #box81:hover ~ .num81 { opacity : 1 }
-#box81:hover { opacity : .25 }
 #box82:hover ~ .num82 { opacity : 1 }
-#box82:hover { opacity : .25 }
 #box83:hover ~ .num83 { opacity : 1 }
-#box83:hover { opacity : .25 }
 #box84:hover ~ .num84 { opacity : 1 }
-#box84:hover { opacity : .25 }
 #box85:hover ~ .num85 { opacity : 1 }
-#box85:hover { opacity : .25 }
 #box86:hover ~ .num86 { opacity : 1 }
-#box86:hover { opacity : .25 }
 #box87:hover ~ .num87 { opacity : 1 }
-#box87:hover { opacity : .25 }
 #box88:hover ~ .num88 { opacity : 1 }
-#box88:hover { opacity : .25 }
 #box89:hover ~ .num89 { opacity : 1 }
-#box89:hover { opacity : .25 }
 #box90:hover ~ .num90 { opacity : 1 }
-#box90:hover { opacity : .25 }
 #box91:hover ~ .num91 { opacity : 1 }
-#box91:hover { opacity : .25 }
 #box92:hover ~ .num92 { opacity : 1 }
-#box92:hover { opacity : .25 }
-#box93:hover ~ .num93 { opacity : 1 }
-#box93:hover { opacity : .25 }</style>
+#box93:hover ~ .num93 { opacity : 1 }</style>
   <g>
     <g transform="translate(65 10)">
       <rect fill="#CCCCB2" height="250" width="58.3333333333" x="154.166666667" y="0"/>
@@ -198,285 +104,379 @@
       <rect class="linebox" fill="blue" height="250" id="box0" opacity="0" width="4.16666666667" x="83.3333333333" y="0"/>
       <text class="num0" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 119.58</text>
       <text class="num0" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1920</text>
+      <rect class="num0" fill="#9999FF" height="245.411013567" opacity="0" width="80" x="560" y="4.58898643256"/>
       <rect class="linebox" fill="blue" height="250" id="box1" opacity="0" width="4.16666666667" x="87.5" y="0"/>
       <text class="num1" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 121.29</text>
       <text class="num1" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1921</text>
+      <rect class="num1" fill="#9999FF" height="246.807661612" opacity="0" width="80" x="560" y="3.19233838787"/>
       <rect class="linebox" fill="blue" height="250" id="box2" opacity="0" width="4.16666666667" x="91.6666666667" y="0"/>
       <text class="num2" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 120.19</text>
       <text class="num2" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1922</text>
+      <rect class="num2" fill="#9999FF" height="246.209098164" opacity="0" width="80" x="560" y="3.79090183559"/>
       <rect class="linebox" fill="blue" height="250" id="box3" opacity="0" width="4.16666666667" x="95.8333333333" y="0"/>
       <text class="num3" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 123.48</text>
       <text class="num3" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1923</text>
+      <rect class="num3" fill="#9999FF" height="247.206703911" opacity="0" width="80" x="560" y="2.79329608939"/>
       <rect class="linebox" fill="blue" height="250" id="box4" opacity="0" width="4.16666666667" x="100.0" y="0"/>
       <text class="num4" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 119.74</text>
       <text class="num4" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1924</text>
+      <rect class="num4" fill="#9999FF" height="245.810055866" opacity="0" width="80" x="560" y="4.18994413408"/>
       <rect class="linebox" fill="blue" height="250" id="box5" opacity="0" width="4.16666666667" x="104.166666667" y="0"/>
       <text class="num5" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 119.67</text>
       <text class="num5" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1925</text>
+      <rect class="num5" fill="#9999FF" height="245.610534717" opacity="0" width="80" x="560" y="4.38946528332"/>
       <rect class="linebox" fill="blue" height="250" id="box6" opacity="0" width="4.16666666667" x="108.333333333" y="0"/>
       <text class="num6" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 119.47</text>
       <text class="num6" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1926</text>
+      <rect class="num6" fill="#9999FF" height="245.211492418" opacity="0" width="80" x="560" y="4.7885075818"/>
       <rect class="linebox" fill="blue" height="250" id="box7" opacity="0" width="4.16666666667" x="112.5" y="0"/>
       <text class="num7" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 119.88</text>
       <text class="num7" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1927</text>
+      <rect class="num7" fill="#9999FF" height="246.009577015" opacity="0" width="80" x="560" y="3.99042298484"/>
       <rect class="linebox" fill="blue" height="250" id="box8" opacity="0" width="4.16666666667" x="116.666666667" y="0"/>
       <text class="num8" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 120.97</text>
       <text class="num8" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1928</text>
+      <rect class="num8" fill="#9999FF" height="246.408619314" opacity="0" width="80" x="560" y="3.59138068635"/>
       <rect class="linebox" fill="blue" height="250" id="box9" opacity="0" width="4.16666666667" x="120.833333333" y="0"/>
       <text class="num9" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 121.18</text>
       <text class="num9" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1929</text>
+      <rect class="num9" fill="#9999FF" height="246.608140463" opacity="0" width="80" x="560" y="3.39185953711"/>
       <rect class="linebox" fill="blue" height="250" id="box10" opacity="0" width="4.16666666667" x="125.0" y="0"/>
       <text class="num10" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 121.63</text>
       <text class="num10" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1930</text>
+      <rect class="num10" fill="#9999FF" height="247.007182761" opacity="0" width="80" x="560" y="2.99281723863"/>
       <rect class="linebox" fill="blue" height="250" id="box11" opacity="0" width="4.16666666667" x="129.166666667" y="0"/>
       <text class="num11" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 116.38</text>
       <text class="num11" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1931</text>
+      <rect class="num11" fill="#9999FF" height="242.418196329" opacity="0" width="80" x="560" y="7.58180367119"/>
       <rect class="linebox" fill="blue" height="250" id="box12" opacity="0" width="4.16666666667" x="133.333333333" y="0"/>
       <text class="num12" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 113.9</text>
       <text class="num12" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1932</text>
+      <rect class="num12" fill="#9999FF" height="239.42537909" opacity="0" width="80" x="560" y="10.5746209098"/>
       <rect class="linebox" fill="blue" height="250" id="box13" opacity="0" width="4.16666666667" x="137.5" y="0"/>
       <text class="num13" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 112.24</text>
       <text class="num13" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1933</text>
+      <rect class="num13" fill="#9999FF" height="237.230646449" opacity="0" width="80" x="560" y="12.7693535515"/>
       <rect class="linebox" fill="blue" height="250" id="box14" opacity="0" width="4.16666666667" x="141.666666667" y="0"/>
       <text class="num14" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 109.33</text>
       <text class="num14" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1934</text>
+      <rect class="num14" fill="#9999FF" height="228.052673583" opacity="0" width="80" x="560" y="21.9473264166"/>
       <rect class="linebox" fill="blue" height="250" id="box15" opacity="0" width="4.16666666667" x="145.833333333" y="0"/>
       <text class="num15" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 104.99</text>
       <text class="num15" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1935</text>
+      <rect class="num15" fill="#9999FF" height="202.314445331" opacity="0" width="80" x="560" y="47.6855546688"/>
       <rect class="linebox" fill="blue" height="250" id="box16" opacity="0" width="4.16666666667" x="150.0" y="0"/>
       <text class="num16" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 101.44</text>
       <text class="num16" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1936</text>
+      <rect class="num16" fill="#9999FF" height="160.215482841" opacity="0" width="80" x="560" y="89.7845171588"/>
       <rect class="linebox" fill="blue" height="250" id="box17" opacity="0" width="4.16666666667" x="154.166666667" y="0"/>
       <text class="num17" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 99.58</text>
       <text class="num17" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1937</text>
+      <rect class="num17" fill="#9999FF" height="137.071029529" opacity="0" width="80" x="560" y="112.928970471"/>
       <rect class="linebox" fill="blue" height="250" id="box18" opacity="0" width="4.16666666667" x="158.333333333" y="0"/>
       <text class="num18" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 99.18</text>
       <text class="num18" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1938</text>
+      <rect class="num18" fill="#9999FF" height="132.681564246" opacity="0" width="80" x="560" y="117.318435754"/>
       <rect class="linebox" fill="blue" height="250" id="box19" opacity="0" width="4.16666666667" x="162.5" y="0"/>
       <text class="num19" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 97.96</text>
       <text class="num19" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1939</text>
+      <rect class="num19" fill="#9999FF" height="114.924181963" opacity="0" width="80" x="560" y="135.075818037"/>
       <rect class="linebox" fill="blue" height="250" id="box20" opacity="0" width="4.16666666667" x="166.666666667" y="0"/>
       <text class="num20" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 95.94</text>
       <text class="num20" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1940</text>
+      <rect class="num20" fill="#9999FF" height="91.7797286512" opacity="0" width="80" x="560" y="158.220271349"/>
       <rect class="linebox" fill="blue" height="250" id="box21" opacity="0" width="4.16666666667" x="170.833333333" y="0"/>
       <text class="num21" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 98.15</text>
       <text class="num21" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1941</text>
+      <rect class="num21" fill="#9999FF" height="117.118914605" opacity="0" width="80" x="560" y="132.881085395"/>
       <rect class="linebox" fill="blue" height="250" id="box22" opacity="0" width="4.16666666667" x="175.0" y="0"/>
       <text class="num22" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 97.1</text>
       <text class="num22" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1942</text>
+      <rect class="num22" fill="#9999FF" height="105.746209098" opacity="0" width="80" x="560" y="144.253790902"/>
       <rect class="linebox" fill="blue" height="250" id="box23" opacity="0" width="4.16666666667" x="179.166666667" y="0"/>
       <text class="num23" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 95.65</text>
       <text class="num23" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1943</text>
+      <rect class="num23" fill="#9999FF" height="88.3878691141" opacity="0" width="80" x="560" y="161.612130886"/>
       <rect class="linebox" fill="blue" height="250" id="box24" opacity="0" width="4.16666666667" x="183.333333333" y="0"/>
       <text class="num24" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.75</text>
       <text class="num24" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1944</text>
+      <rect class="num24" fill="#9999FF" height="50.4788507582" opacity="0" width="80" x="560" y="199.521149242"/>
       <rect class="linebox" fill="blue" height="250" id="box25" opacity="0" width="4.16666666667" x="187.5" y="0"/>
       <text class="num25" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.53</text>
       <text class="num25" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1945</text>
+      <rect class="num25" fill="#9999FF" height="48.0845969673" opacity="0" width="80" x="560" y="201.915403033"/>
       <rect class="linebox" fill="blue" height="250" id="box26" opacity="0" width="4.16666666667" x="191.666666667" y="0"/>
       <text class="num26" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.71</text>
       <text class="num26" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1946</text>
+      <rect class="num26" fill="#9999FF" height="62.8491620112" opacity="0" width="80" x="560" y="187.150837989"/>
       <rect class="linebox" fill="blue" height="250" id="box27" opacity="0" width="4.16666666667" x="195.833333333" y="0"/>
       <text class="num27" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.27</text>
       <text class="num27" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1947</text>
+      <rect class="num27" fill="#9999FF" height="56.2649640862" opacity="0" width="80" x="560" y="193.735035914"/>
       <rect class="linebox" fill="blue" height="250" id="box28" opacity="0" width="4.16666666667" x="200.0" y="0"/>
       <text class="num28" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 94.6</text>
       <text class="num28" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1948</text>
+      <rect class="num28" fill="#9999FF" height="74.0223463687" opacity="0" width="80" x="560" y="175.977653631"/>
       <rect class="linebox" fill="blue" height="250" id="box29" opacity="0" width="4.16666666667" x="204.166666667" y="0"/>
       <text class="num29" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 99.44</text>
       <text class="num29" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1949</text>
+      <rect class="num29" fill="#9999FF" height="134.876296887" opacity="0" width="80" x="560" y="115.123703113"/>
       <rect class="linebox" fill="blue" height="250" id="box30" opacity="0" width="4.16666666667" x="208.333333333" y="0"/>
       <text class="num30" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 99.67</text>
       <text class="num30" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1950</text>
+      <rect class="num30" fill="#9999FF" height="137.669592977" opacity="0" width="80" x="560" y="112.330407023"/>
       <rect class="linebox" fill="blue" height="250" id="box31" opacity="0" width="4.16666666667" x="212.5" y="0"/>
       <text class="num31" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 98.7</text>
       <text class="num31" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1951</text>
+      <rect class="num31" fill="#9999FF" height="125.498802873" opacity="0" width="80" x="560" y="124.501197127"/>
       <rect class="linebox" fill="blue" height="250" id="box32" opacity="0" width="4.16666666667" x="216.666666667" y="0"/>
       <text class="num32" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 101.63</text>
       <text class="num32" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1952</text>
+      <rect class="num32" fill="#9999FF" height="161.811652035" opacity="0" width="80" x="560" y="88.1883479649"/>
       <rect class="linebox" fill="blue" height="250" id="box33" opacity="0" width="4.16666666667" x="220.833333333" y="0"/>
       <text class="num33" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 98.49</text>
       <text class="num33" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1953</text>
+      <rect class="num33" fill="#9999FF" height="122.106943336" opacity="0" width="80" x="560" y="127.893056664"/>
       <rect class="linebox" fill="blue" height="250" id="box34" opacity="0" width="4.16666666667" x="225.0" y="0"/>
       <text class="num34" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 97.28</text>
       <text class="num34" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1954</text>
+      <rect class="num34" fill="#9999FF" height="107.541899441" opacity="0" width="80" x="560" y="142.458100559"/>
       <rect class="linebox" fill="blue" height="250" id="box35" opacity="0" width="4.16666666667" x="229.166666667" y="0"/>
       <text class="num35" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 97.05</text>
       <text class="num35" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1955</text>
+      <rect class="num35" fill="#9999FF" height="104.349561053" opacity="0" width="80" x="560" y="145.650438947"/>
       <rect class="linebox" fill="blue" height="250" id="box36" opacity="0" width="4.16666666667" x="233.333333333" y="0"/>
       <text class="num36" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.14</text>
       <text class="num36" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1956</text>
+      <rect class="num36" fill="#9999FF" height="54.469273743" opacity="0" width="80" x="560" y="195.530726257"/>
       <rect class="linebox" fill="blue" height="250" id="box37" opacity="0" width="4.16666666667" x="237.5" y="0"/>
       <text class="num37" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 95.07</text>
       <text class="num37" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1957</text>
+      <rect class="num37" fill="#9999FF" height="79.4094173982" opacity="0" width="80" x="560" y="170.590582602"/>
       <rect class="linebox" fill="blue" height="250" id="box38" opacity="0" width="4.16666666667" x="241.666666667" y="0"/>
       <text class="num38" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 96.02</text>
       <text class="num38" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1958</text>
+      <rect class="num38" fill="#9999FF" height="93.7749401437" opacity="0" width="80" x="560" y="156.225059856"/>
       <rect class="linebox" fill="blue" height="250" id="box39" opacity="0" width="4.16666666667" x="245.833333333" y="0"/>
       <text class="num39" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.43</text>
       <text class="num39" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1959</text>
+      <rect class="num39" fill="#9999FF" height="58.6592178771" opacity="0" width="80" x="560" y="191.340782123"/>
       <rect class="linebox" fill="blue" height="250" id="box40" opacity="0" width="4.16666666667" x="250.0" y="0"/>
       <text class="num40" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.25</text>
       <text class="num40" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1960</text>
+      <rect class="num40" fill="#9999FF" height="45.8898643256" opacity="0" width="80" x="560" y="204.110135674"/>
       <rect class="linebox" fill="blue" height="250" id="box41" opacity="0" width="4.16666666667" x="254.166666667" y="0"/>
       <text class="num41" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 91.76</text>
       <text class="num41" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1961</text>
+      <rect class="num41" fill="#9999FF" height="40.5027932961" opacity="0" width="80" x="560" y="209.497206704"/>
       <rect class="linebox" fill="blue" height="250" id="box42" opacity="0" width="4.16666666667" x="258.333333333" y="0"/>
       <text class="num42" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.18</text>
       <text class="num42" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1962</text>
+      <rect class="num42" fill="#9999FF" height="45.0917797287" opacity="0" width="80" x="560" y="204.908220271"/>
       <rect class="linebox" fill="blue" height="250" id="box43" opacity="0" width="4.16666666667" x="262.5" y="0"/>
       <text class="num43" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 89.27</text>
       <text class="num43" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1963</text>
+      <rect class="num43" fill="#9999FF" height="22.7454110136" opacity="0" width="80" x="560" y="227.254588986"/>
       <rect class="linebox" fill="blue" height="250" id="box44" opacity="0" width="4.16666666667" x="266.666666667" y="0"/>
       <text class="num44" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 86.32</text>
       <text class="num44" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1964</text>
+      <rect class="num44" fill="#9999FF" height="8.18036711891" opacity="0" width="80" x="560" y="241.819632881"/>
       <rect class="linebox" fill="blue" height="250" id="box45" opacity="0" width="4.16666666667" x="270.833333333" y="0"/>
       <text class="num45" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 89.2</text>
       <text class="num45" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1965</text>
+      <rect class="num45" fill="#9999FF" height="21.9473264166" opacity="0" width="80" x="560" y="228.052673583"/>
       <rect class="linebox" fill="blue" height="250" id="box46" opacity="0" width="4.16666666667" x="275.0" y="0"/>
       <text class="num46" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 88.17</text>
       <text class="num46" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1966</text>
+      <rect class="num46" fill="#9999FF" height="14.9640861931" opacity="0" width="80" x="560" y="235.035913807"/>
       <rect class="linebox" fill="blue" height="250" id="box47" opacity="0" width="4.16666666667" x="279.166666667" y="0"/>
       <text class="num47" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 84.01</text>
       <text class="num47" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1967</text>
+      <rect class="num47" fill="#9999FF" height="3.39185953711" opacity="0" width="80" x="560" y="246.608140463"/>
       <rect class="linebox" fill="blue" height="250" id="box48" opacity="0" width="4.16666666667" x="283.333333333" y="0"/>
       <text class="num48" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 85.12</text>
       <text class="num48" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1968</text>
+      <rect class="num48" fill="#9999FF" height="5.38707102953" opacity="0" width="80" x="560" y="244.61292897"/>
       <rect class="linebox" fill="blue" height="250" id="box49" opacity="0" width="4.16666666667" x="287.5" y="0"/>
       <text class="num49" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 88.05</text>
       <text class="num49" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1969</text>
+      <rect class="num49" fill="#9999FF" height="14.7645650439" opacity="0" width="80" x="560" y="235.235434956"/>
       <rect class="linebox" fill="blue" height="250" id="box50" opacity="0" width="4.16666666667" x="291.666666667" y="0"/>
       <text class="num50" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 90.54</text>
       <text class="num50" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1970</text>
+      <rect class="num50" fill="#9999FF" height="31.1252992817" opacity="0" width="80" x="560" y="218.874700718"/>
       <rect class="linebox" fill="blue" height="250" id="box51" opacity="0" width="4.16666666667" x="295.833333333" y="0"/>
       <text class="num51" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.14</text>
       <text class="num51" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1971</text>
+      <rect class="num51" fill="#9999FF" height="44.4932162809" opacity="0" width="80" x="560" y="205.506783719"/>
       <rect class="linebox" fill="blue" height="250" id="box52" opacity="0" width="4.16666666667" x="300.0" y="0"/>
       <text class="num52" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 88.37</text>
       <text class="num52" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1972</text>
+      <rect class="num52" fill="#9999FF" height="16.1612130886" opacity="0" width="80" x="560" y="233.838786911"/>
       <rect class="linebox" fill="blue" height="250" id="box53" opacity="0" width="4.16666666667" x="304.166666667" y="0"/>
       <text class="num53" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 89.4</text>
       <text class="num53" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1973</text>
+      <rect class="num53" fill="#9999FF" height="24.1420590583" opacity="0" width="80" x="560" y="225.857940942"/>
       <rect class="linebox" fill="blue" height="250" id="box54" opacity="0" width="4.16666666667" x="308.333333333" y="0"/>
       <text class="num54" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 90.9</text>
       <text class="num54" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1974</text>
+      <rect class="num54" fill="#9999FF" height="33.5195530726" opacity="0" width="80" x="560" y="216.480446927"/>
       <rect class="linebox" fill="blue" height="250" id="box55" opacity="0" width="4.16666666667" x="312.5" y="0"/>
       <text class="num55" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.15</text>
       <text class="num55" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1975</text>
+      <rect class="num55" fill="#9999FF" height="54.8683160415" opacity="0" width="80" x="560" y="195.131683958"/>
       <rect class="linebox" fill="blue" height="250" id="box56" opacity="0" width="4.16666666667" x="316.666666667" y="0"/>
       <text class="num56" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.62</text>
       <text class="num56" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1976</text>
+      <rect class="num56" fill="#9999FF" height="61.2529928172" opacity="0" width="80" x="560" y="188.747007183"/>
       <rect class="linebox" fill="blue" height="250" id="box57" opacity="0" width="4.16666666667" x="320.833333333" y="0"/>
       <text class="num57" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 88.21</text>
       <text class="num57" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1977</text>
+      <rect class="num57" fill="#9999FF" height="15.1636073424" opacity="0" width="80" x="560" y="234.836392658"/>
       <rect class="linebox" fill="blue" height="250" id="box58" opacity="0" width="4.16666666667" x="325.0" y="0"/>
       <text class="num58" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 91.12</text>
       <text class="num58" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1978</text>
+      <rect class="num58" fill="#9999FF" height="35.3152434158" opacity="0" width="80" x="560" y="214.684756584"/>
       <rect class="linebox" fill="blue" height="250" id="box59" opacity="0" width="4.16666666667" x="329.166666667" y="0"/>
       <text class="num59" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 94.29</text>
       <text class="num59" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1979</text>
+      <rect class="num59" fill="#9999FF" height="70.4309656824" opacity="0" width="80" x="560" y="179.569034318"/>
       <rect class="linebox" fill="blue" height="250" id="box60" opacity="0" width="4.16666666667" x="333.333333333" y="0"/>
       <text class="num60" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.36</text>
       <text class="num60" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1980</text>
+      <rect class="num60" fill="#9999FF" height="57.4620909816" opacity="0" width="80" x="560" y="192.537909018"/>
       <rect class="linebox" fill="blue" height="250" id="box61" opacity="0" width="4.16666666667" x="337.5" y="0"/>
       <text class="num61" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.76</text>
       <text class="num61" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1981</text>
+      <rect class="num61" fill="#9999FF" height="50.6783719074" opacity="0" width="80" x="560" y="199.321628093"/>
       <rect class="linebox" fill="blue" height="250" id="box62" opacity="0" width="4.16666666667" x="341.666666667" y="0"/>
       <text class="num62" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 95.34</text>
       <text class="num62" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1982</text>
+      <rect class="num62" fill="#9999FF" height="84.19792498" opacity="0" width="80" x="560" y="165.80207502"/>
       <rect class="linebox" fill="blue" height="250" id="box63" opacity="0" width="4.16666666667" x="345.833333333" y="0"/>
       <text class="num63" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 99.82</text>
       <text class="num63" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1983</text>
+      <rect class="num63" fill="#9999FF" height="140.861931365" opacity="0" width="80" x="560" y="109.138068635"/>
       <rect class="linebox" fill="blue" height="250" id="box64" opacity="0" width="4.16666666667" x="350.0" y="0"/>
       <text class="num64" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 104.02</text>
       <text class="num64" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1984</text>
+      <rect class="num64" fill="#9999FF" height="193.335993615" opacity="0" width="80" x="560" y="56.6640063847"/>
       <rect class="linebox" fill="blue" height="250" id="box65" opacity="0" width="4.16666666667" x="354.166666667" y="0"/>
       <text class="num65" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 106.74</text>
       <text class="num65" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1985</text>
+      <rect class="num65" fill="#9999FF" height="216.081404629" opacity="0" width="80" x="560" y="33.9185953711"/>
       <rect class="linebox" fill="blue" height="250" id="box66" opacity="0" width="4.16666666667" x="358.333333333" y="0"/>
       <text class="num66" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 110.32</text>
       <text class="num66" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1986</text>
+      <rect class="num66" fill="#9999FF" height="231.245011971" opacity="0" width="80" x="560" y="18.7549880287"/>
       <rect class="linebox" fill="blue" height="250" id="box67" opacity="0" width="4.16666666667" x="362.5" y="0"/>
       <text class="num67" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 111.29</text>
       <text class="num67" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1987</text>
+      <rect class="num67" fill="#9999FF" height="234.836392658" opacity="0" width="80" x="560" y="15.1636073424"/>
       <rect class="linebox" fill="blue" height="250" id="box68" opacity="0" width="4.16666666667" x="366.666666667" y="0"/>
       <text class="num68" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 108.14</text>
       <text class="num68" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1988</text>
+      <rect class="num68" fill="#9999FF" height="223.6632083" opacity="0" width="80" x="560" y="26.3367916999"/>
       <rect class="linebox" fill="blue" height="250" id="box69" opacity="0" width="4.16666666667" x="370.833333333" y="0"/>
       <text class="num69" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 106.57</text>
       <text class="num69" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1989</text>
+      <rect class="num69" fill="#9999FF" height="215.68236233" opacity="0" width="80" x="560" y="34.3176376696"/>
       <rect class="linebox" fill="blue" height="250" id="box70" opacity="0" width="4.16666666667" x="375.0" y="0"/>
       <text class="num70" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 103.32</text>
       <text class="num70" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1990</text>
+      <rect class="num70" fill="#9999FF" height="185.554668795" opacity="0" width="80" x="560" y="64.4453312051"/>
       <rect class="linebox" fill="blue" height="250" id="box71" opacity="0" width="4.16666666667" x="379.166666667" y="0"/>
       <text class="num71" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 103.89</text>
       <text class="num71" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1991</text>
+      <rect class="num71" fill="#9999FF" height="192.537909018" opacity="0" width="80" x="560" y="57.4620909816"/>
       <rect class="linebox" fill="blue" height="250" id="box72" opacity="0" width="4.16666666667" x="383.333333333" y="0"/>
       <text class="num72" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 106.39</text>
       <text class="num72" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1992</text>
+      <rect class="num72" fill="#9999FF" height="215.283320032" opacity="0" width="80" x="560" y="34.7166799681"/>
       <rect class="linebox" fill="blue" height="250" id="box73" opacity="0" width="4.16666666667" x="387.5" y="0"/>
       <text class="num73" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 108.07</text>
       <text class="num73" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1993</text>
+      <rect class="num73" fill="#9999FF" height="223.264166002" opacity="0" width="80" x="560" y="26.7358339984"/>
       <rect class="linebox" fill="blue" height="250" id="box74" opacity="0" width="4.16666666667" x="391.666666667" y="0"/>
       <text class="num74" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 104.97</text>
       <text class="num74" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1994</text>
+      <rect class="num74" fill="#9999FF" height="202.114924182" opacity="0" width="80" x="560" y="47.885075818"/>
       <rect class="linebox" fill="blue" height="250" id="box75" opacity="0" width="4.16666666667" x="395.833333333" y="0"/>
       <text class="num75" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 106.11</text>
       <text class="num75" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1995</text>
+      <rect class="num75" fill="#9999FF" height="212.889066241" opacity="0" width="80" x="560" y="37.110933759"/>
       <rect class="linebox" fill="blue" height="250" id="box76" opacity="0" width="4.16666666667" x="400.0" y="0"/>
       <text class="num76" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 108.49</text>
       <text class="num76" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1996</text>
+      <rect class="num76" fill="#9999FF" height="225.059856345" opacity="0" width="80" x="560" y="24.9401436552"/>
       <rect class="linebox" fill="blue" height="250" id="box77" opacity="0" width="4.16666666667" x="404.166666667" y="0"/>
       <text class="num77" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 110.45</text>
       <text class="num77" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1997</text>
+      <rect class="num77" fill="#9999FF" height="231.64405427" opacity="0" width="80" x="560" y="18.3559457302"/>
       <rect class="linebox" fill="blue" height="250" id="box78" opacity="0" width="4.16666666667" x="408.333333333" y="0"/>
       <text class="num78" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 107.35</text>
       <text class="num78" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1998</text>
+      <rect class="num78" fill="#9999FF" height="220.071827614" opacity="0" width="80" x="560" y="29.9281723863"/>
       <rect class="linebox" fill="blue" height="250" id="box79" opacity="0" width="4.16666666667" x="412.5" y="0"/>
       <text class="num79" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 103.52</text>
       <text class="num79" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1999</text>
+      <rect class="num79" fill="#9999FF" height="187.549880287" opacity="0" width="80" x="560" y="62.4501197127"/>
       <rect class="linebox" fill="blue" height="250" id="box80" opacity="0" width="4.16666666667" x="416.666666667" y="0"/>
       <text class="num80" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 98.8</text>
       <text class="num80" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2000</text>
+      <rect class="num80" fill="#9999FF" height="127.294493216" opacity="0" width="80" x="560" y="122.705506784"/>
       <rect class="linebox" fill="blue" height="250" id="box81" opacity="0" width="4.16666666667" x="420.833333333" y="0"/>
       <text class="num81" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.3</text>
       <text class="num81" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2001</text>
+      <rect class="num81" fill="#9999FF" height="56.6640063847" opacity="0" width="80" x="560" y="193.335993615"/>
       <rect class="linebox" fill="blue" height="250" id="box82" opacity="0" width="4.16666666667" x="425.0" y="0"/>
       <text class="num82" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 89.14</text>
       <text class="num82" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2002</text>
+      <rect class="num82" fill="#9999FF" height="21.1492418196" opacity="0" width="80" x="560" y="228.85075818"/>
       <rect class="linebox" fill="blue" height="250" id="box83" opacity="0" width="4.16666666667" x="429.166666667" y="0"/>
       <text class="num83" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 88.85</text>
       <text class="num83" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2003</text>
+      <rect class="num83" fill="#9999FF" height="18.7549880287" opacity="0" width="80" x="560" y="231.245011971"/>
       <rect class="linebox" fill="blue" height="250" id="box84" opacity="0" width="4.16666666667" x="433.333333333" y="0"/>
       <text class="num84" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 89.06</text>
       <text class="num84" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2004</text>
+      <rect class="num84" fill="#9999FF" height="20.5506783719" opacity="0" width="80" x="560" y="229.449321628"/>
       <rect class="linebox" fill="blue" height="250" id="box85" opacity="0" width="4.16666666667" x="437.5" y="0"/>
       <text class="num85" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.56</text>
       <text class="num85" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2005</text>
+      <rect class="num85" fill="#9999FF" height="48.4836392658" opacity="0" width="80" x="560" y="201.516360734"/>
       <rect class="linebox" fill="blue" height="250" id="box86" opacity="0" width="4.16666666667" x="441.666666667" y="0"/>
       <text class="num86" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.11</text>
       <text class="num86" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2006</text>
+      <rect class="num86" fill="#9999FF" height="54.0702314445" opacity="0" width="80" x="560" y="195.929768555"/>
       <rect class="linebox" fill="blue" height="250" id="box87" opacity="0" width="4.16666666667" x="445.833333333" y="0"/>
       <text class="num87" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.32</text>
       <text class="num87" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2007</text>
+      <rect class="num87" fill="#9999FF" height="57.0630486832" opacity="0" width="80" x="560" y="192.936951317"/>
       <rect class="linebox" fill="blue" height="250" id="box88" opacity="0" width="4.16666666667" x="450.0" y="0"/>
       <text class="num88" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 92.06</text>
       <text class="num88" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2008</text>
+      <rect class="num88" fill="#9999FF" height="44.2936951317" opacity="0" width="80" x="560" y="205.706304868"/>
       <rect class="linebox" fill="blue" height="250" id="box89" opacity="0" width="4.16666666667" x="454.166666667" y="0"/>
       <text class="num89" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.66</text>
       <text class="num89" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2009</text>
+      <rect class="num89" fill="#9999FF" height="61.6520351157" opacity="0" width="80" x="560" y="188.347964884"/>
       <rect class="linebox" fill="blue" height="250" id="box90" opacity="0" width="4.16666666667" x="458.333333333" y="0"/>
       <text class="num90" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 90.4</text>
       <text class="num90" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2010</text>
+      <rect class="num90" fill="#9999FF" height="30.7262569832" opacity="0" width="80" x="560" y="219.273743017"/>
       <rect class="linebox" fill="blue" height="250" id="box91" opacity="0" width="4.16666666667" x="462.5" y="0"/>
       <text class="num91" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 93.07</text>
       <text class="num91" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2011</text>
+      <rect class="num91" fill="#9999FF" height="53.4716679968" opacity="0" width="80" x="560" y="196.528332003"/>
       <rect class="linebox" fill="blue" height="250" id="box92" opacity="0" width="4.16666666667" x="466.666666667" y="0"/>
       <text class="num92" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 86.72</text>
       <text class="num92" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2012</text>
+      <rect class="num92" fill="#9999FF" height="8.97845171588" opacity="0" width="80" x="560" y="241.021548284"/>
       <rect class="linebox" fill="blue" height="250" id="box93" opacity="0" width="4.16666666667" x="470.833333333" y="0"/>
       <text class="num93" fill="green" font-size="12" font-weight="bold" opacity="0" x="15" y="245">PoM: 83.64</text>
       <text class="num93" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2013</text>
+      <rect class="num93" fill="#9999FF" height="2.79329608939" opacity="0" width="80" x="560" y="247.206703911"/>
       <line stroke="black" stroke-width="2" x1="0.0" x2="0.0" y1="250" y2="245"/>
       <text fill="black" x="-20.0" y="270">1900</text>
       <line stroke="black" stroke-width="2" x1="83.3333333333" x2="83.3333333333" y1="250" y2="245"/>
@@ -802,6 +802,13 @@
       <line stroke="black" stroke-width="2" x1="0" x2="0" y1="250" y2="0"/>
       <line stroke="black" stroke-width="2" x1="0" x2="500" y1="0" y2="0"/>
       <line stroke="black" stroke-width="2" x1="500" x2="500" y1="0" y2="250"/>
+      <line stroke="black" stroke-width="2" x1="550" x2="550" y1="0" y2="250"/>
+      <line stroke="black" stroke-width="2" x1="550" x2="650" y1="0" y2="0"/>
+      <line stroke="black" stroke-width="2" x1="550" x2="650" y1="250" y2="250"/>
+      <line stroke="black" stroke-width="2" x1="650" x2="650" y1="0" y2="250"/>
+      <text fill="black" x="510" y="5">100%</text>
+      <text fill="black" x="525" y="255">0%</text>
+      <text fill="black" transform="rotate(-90 535,188)" x="535" y="188">Historical Percentile</text>
     </g>
     <text fill="black" transform="rotate(-90 25,185)" x="25" y="185">Percent of Mean</text>
     <text fill="black" x="295" y="300">Year</text>

@@ -9,10 +9,13 @@ def main():
     svg = Element('svg')
     svg.set('xmlns', 'http://www.w3.org/2000/svg')
     svg.set('xmlns:xlink', 'http://www.w3.org/1999/xlink')
+    svg.set('viewBox', '0 0 725 320')
+    svg.set('preserveAspectRatio', 'xMinYMin meet')
     global css
     css = SubElement(svg, 'style')
     css.set('type', 'text/css')
     css.text = ''
+    css.text += '.linebox' + ':hover' + ' { opacity : .25 }'
     main = SubElement(svg, 'g')
     graph = SubElement(main, 'g')
     graph.set('transform', 'translate(65 10)')
@@ -26,6 +29,8 @@ def main():
 def prettify(elem):
     rough_string = ElementTree.tostring(elem, 'utf-8')
     reparsed = minidom.parseString(rough_string)
+    #xmlcss = reparsed.createProcessingInstruction('xml-stylesheet', 'type="text/css" href="../css/svg.css"')
+    #reparsed.insertBefore(xmlcss, reparsed.firstChild)
     return reparsed.toprettyxml(indent="  ")
     
 def drawLine(ele, x1, y1, x2, y2, width = None, color = None):
@@ -74,16 +79,19 @@ def renderGraph(ele, floc):
         year = []
         perc = []
         per = []
+        hp = []
         for row in doc:
             if(i != 0 and row[1] != 'NA'):
                 year.append(row[0])
                 perc.append(row[1])
-                per.append(row[3])
+                per.append(row[4])
+                hp.append(row[5])
                 x+= 1
             i+= 1
         year = year[-100:]
         perc = perc[-100:]
         per = per[-100:]
+        hp = hp[-100:]
         minbot = math.floor(float(year[0])/10) * 10
         if(minbot > 1900):
             minbot = 1900
@@ -107,7 +115,7 @@ def renderGraph(ele, floc):
                 highlightRange(ele, int(year[i]) - int(per[i]) + 1, int(year[i+1]), minbot, maxbot - minbot)
         drawGreenBox(ele, 1906, 1922, minbot, maxbot - minbot)
         for i in range(0, len(year)-1):
-            createLineBox(ele, int(year[i]), int(year[i])+1, minbot, maxbot - minbot, float(perc[i]), int(year[i]), i)
+            createLineBox(ele, int(year[i]), int(year[i])+1, minbot, maxbot - minbot, float(perc[i]), int(year[i]), float(hp[i]), i)
         for i in range(0, int((maxbot - minbot)/10) + 1):
             if i % 2 == 0:
                 drawLine(ele, i * botstep, 250, i * botstep, 245, 2, 'black')
@@ -127,7 +135,7 @@ def renderGraph(ele, floc):
         drawLine(ele, 0, 250, 0, 0, 2, 'black')
         drawLine(ele, 0, 0, 500, 0, 2, 'black')
         drawLine(ele, 500, 0, 500, 250, 2, 'black')
-
+        drawHPGraph(ele)
 def renderLabels(ele):
     botl =  'Year'
     sidel = 'Percent of Mean'
@@ -146,14 +154,14 @@ def highlightRange(ele, x1, x2, ymin, yrange):
     rect.set('fill', '#CCCCB2')
     return rect
     
-def createLineBox(ele, x1, x2, ymin, yrange, avg, year, rot):
+def createLineBox(ele, x1, x2, ymin, yrange, avg, year, hp, rot):
     box = highlightRange(ele, x1, x2, ymin, yrange)
     box.set('class', 'linebox')
     box.set('fill', 'blue')
     box.set('opacity', '0')
     box.set('id', 'box' + str(rot))
+    box.set('class', 'linebox')
     css.text += '\n#box' + str(rot) + ':hover ~' + ' .num' + str(rot) + ' { opacity : 1 }'
-    css.text += '\n#box' + str(rot) + ':hover' + ' { opacity : .25 }'
     text1 = drawText(ele, 15, 245, 'PoM: ' + str(round(avg, 2)))
     text1.set('fill', 'green')
     text1.set('opacity', '0')
@@ -166,6 +174,9 @@ def createLineBox(ele, x1, x2, ymin, yrange, avg, year, rot):
     text2.set('font-weight', 'bold')
     text2.set('font-size', '12')
     text2.set('class', 'num' + str(rot))
+    rect = drawHPBox(ele, hp)
+    rect.set('opacity', '0')
+    rect.set('class', 'num' + str(rot))
     
 def drawMinLine(ele, percdata, pmin, prange):
     min = float(percdata[0])
@@ -184,5 +195,30 @@ def drawGreenBox(ele, x1, x2, ymin, yrange):
     rect.set('width', str(x2 - x1))
     rect.set('x', str(x1))
     rect.set('fill', '#A3FF75')
+    
+def drawHPBox(ele, hp):
+    rect = SubElement(ele, 'rect')
+    hp *= .01
+    x = 560
+    y = 250 - (250 * hp)
+    height = 250 * hp
+    width = 80
+    rect.set('x', str(x))
+    rect.set('y', str(y))
+    rect.set('height', str(height))
+    rect.set('width', str(width))
+    rect.set('fill', '#9999FF')
+    return rect
+
+def drawHPGraph(ele):
+    drawLine(ele, 550, 0, 550, 250, 2, 'black')
+    drawLine(ele, 550, 0, 650, 0, 2, 'black')
+    drawLine(ele, 550, 250, 650, 250, 2, 'black')
+    drawLine(ele, 650, 0, 650, 250, 2, 'black')
+    drawText(ele, 510, 5, '100%')
+    drawText(ele, 525, 255, '0%')
+    sidel = 'Historical Percentile'
+    tex = drawText(ele, 535, 250 - (250 - (len(sidel)*6))/2, sidel)
+    tex.set('transform', 'rotate(-90 535,' + str(250 - (250 - (len(sidel)*6))/2) + ')')
     
 main()
