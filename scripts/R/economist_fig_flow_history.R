@@ -56,14 +56,15 @@ flow_df <- flow_df %>%
 
 flow_df$below_mean = flow_df$TreeGage15YrRunMean < flow_df$TreeGageAllYrMean
 flow_df$drought_length = (flow_df$below_mean) * unlist(lapply(rle(flow_df$below_mean)$lengths, seq_len))
+
 flow_df$TreeGage15yrPct = 100*flow_df$TreeGage15YrRunMean/flow_df$TreeGageAllYrMean
+
 flow_df$RawGagePct = 100*flow_df$FlowGage/flow_df$TreeGageAllYrMean
 
-to_write = select(flow_df, Year, TreeGage15yrPct, RawGagePct, below_mean, drought_length)
+to_write = select(flow_df, Year, TreeGage15YrRunMean, FlowGage, below_mean, drought_length)
 to_write = subset(to_write, Year >= 1906)
 
-head(merge(to_write, historical_pctile))
-
+to_write = merge(to_write, historical_pctile)
 
 write.csv(to_write, 'src_data/treeringFlow15yrProcessed.csv', row.names=FALSE)
 
