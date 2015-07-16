@@ -23,10 +23,10 @@ t_bmp = 20 # px from axes
 
 
 # -- from Alan Butler's code --
-hData <- read.csv('src_data/PowellMeadHistorical.csv', stringsAsFactors = F)
+hData <- read.csv('src_data/MeadHistorical.csv', stringsAsFactors = F)
 # add RunType column to historical data
 hData$RunType <- 99
-modData <- read.csv('src_data/PowellMead24MSResults_reformat.csv', stringsAsFactors = F)
+modData <- read.csv('src_data/Mead24MSResults.csv', stringsAsFactors = F)
 meadData <- rbind(hData, modData)
 
 # limit to only Mead, Pool Elevation
@@ -37,15 +37,26 @@ meadData <- dplyr::filter(meadData, Object.Name == 'Mead', Slot.Name == 'Pool El
 yMinR <- round(min(meadData$Value),-1)
 yMaxR <- round(max(meadData$Value),-1)
 
+xMinR <- as.numeric(strftime(as.POSIXct(
+  meadData$Timestep[which.min(as.numeric(as.POSIXct(meadData$Timestep)))]), 
+  format = "%Y"))
+xMaxR <- as.numeric(strftime(as.POSIXct(
+  meadData$Timestep[which.max(as.numeric(as.POSIXct(meadData$Timestep)))]), 
+  format = "%Y"))
+maxMonth <- as.numeric(strftime(as.POSIXct(
+  meadData$Timestep[which.max(as.numeric(as.POSIXct(meadData$Timestep)))]), 
+  format = "%m")) + 3 # go to 3 months past the last date in the series
+
+
 # --- pixel dims ---
 axes <- list('tick_len' = 5,
              'y_label' = "Elevation of Lake Mead (feet)",
              'y_ticks' = seq(yMinR,yMaxR,10),
              'y_tk_label' = seq(yMinR,yMaxR,10),
-             'x_ticks' = seq(2009,2018,1),
-             'x_tk_label' = seq(2009,2018,1),
+             'x_ticks' = seq(xMinR,xMaxR,1),
+             'x_tk_label' = seq(xMinR,xMaxR,1),
              'y_lim' = c(yMinR-7,yMaxR+7),
-             'x_lim' = c(2008.5,2018.25))
+             'x_lim' = c(xMinR-.25,xMaxR+maxMonth/12)) 
 
 
 fig <- list('w' = 900,
@@ -106,7 +117,7 @@ newXMLNode('rect',parent = g_id, attrs = c(id='ddddd',x = x[is.most][1], y = fig
                                            width=fig$px_lim$x[2]-x[is.model][1], height=fig$px_lim$y[1]-fig$px_lim$y[2], 
                                                       fill='grey', opacity='0.2', stroke='none'))
 
-y_offset <- fig$px_lim$y[1]-40
+y_offset <- fig$px_lim$y[1]-170
 x_offset <- c(x[is.most][1] -4, x[is.most][1] + 18)
 
 newXMLNode("text", parent = g_id, newXMLTextNode('Historical'),
