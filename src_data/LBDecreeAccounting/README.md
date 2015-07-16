@@ -24,6 +24,8 @@ Finally, [reformatDecreeData](../../scripts/R/reformatDecreeData.R) was used to 
 * Removed the small water users and injected storage from the NV sheet.
 * IID includes water exchanged w/SDCWA for Salt Sea Mitigation
   * this may necessitate a note if IID water use is shown on any figures.
+* For the Yuma Project, Reservation Division, consumptive use is normally reported as a total for the Reservation Division, while diversions are reported for the Indian Unit and Bard Unit seperately. For the purpose of this visualization, it was desirable to show the consumptive use for the Indian Unit and the Bard Unit seperately. It was assumed that the UNASSIGNED RETURNS FROM YUMA PROJECT, RESERVATION DIVISION Measured Returns could be proportional split to the Indian and Bard Units based on each units diversion to total Reservation Dvision diversion. 
+  * In the California Users, YUMA PROJECT, RES. DIV. INDIAN UNIT was renamed FORT YUMA INDIAN RESERVATION so that the Fort Yuma Indian Reservation uses would be their total use in Arizona and California.
   
 ## Mapping Users Between Decree and LC Contracts Shapefile
 
