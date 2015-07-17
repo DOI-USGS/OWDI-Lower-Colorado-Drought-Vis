@@ -12,7 +12,7 @@ source('scripts/R/build_css.R')
 source('scripts/R/build_mead_levels.R')
 width=7.5
 height=7.6
-plot_dir = 'public_html/img/lower-co-map'
+plot_dir = 'src_data/lower-co-map'
 svg_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
 simp_tol <- 7000
 picto_scale = 100000 # acre-feet per bin

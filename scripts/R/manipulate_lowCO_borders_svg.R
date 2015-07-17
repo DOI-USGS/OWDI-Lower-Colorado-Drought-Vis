@@ -16,6 +16,22 @@ name_svg_elements <- function(svg, ele_names, keep.attrs = c('d')){
   invisible(svg)
 }
 
+remove_svg_elements <- function(svg, elements){
+  root_nd <- xmlRoot(svg)
+  
+  for (i in 1:length(elements)){
+    xpath = sprintf("//*[local-name()='%s']", elements[i])
+    if (names(elements)[i] != ""){
+      xpath <- sprintf("%s[@id='%s']",xpath,names(elements)[i])
+    }
+    kids <- xpathApply(svg, xpath)
+    parent_id <- xpathApply(svg, paste0(xpath,"/parent::node()"))[[1]]
+    removeChildren(parent_id, kids = kids)
+    
+  }
+  invisible(svg)
+}
+
 clean_svg_doc <- function(svg, keep.attrs = c('viewBox','version')){
   svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
   attrs <- xmlAttrs(svg_nd[[1]])
