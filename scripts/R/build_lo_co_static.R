@@ -8,9 +8,9 @@ read_dir = 'src_data/lower-co-map'
 svg_file = file.path(read_dir,paste0('lo_CO_borders','.svg'))
 out_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
 
-non_lo_styles = c('fill'='#FFFFFF', 'fill-opacity'='0.2', 'stroke-width'='2.5', 'stroke'='#505050', 'stroke-linejoin'='round', mask="url(#non-lo-co-mask)")
-lo_co_styles = c('fill'='#FFFFFF', 'fill-opacity'='0.2', 'stroke-width'='2.5', 'stroke'='#505050', 'stroke-linejoin'='round', mask="url(#non-lo-co-mask)")
-mexico_styles = c('fill'='#FFFFFF', 'fill-opacity'='0.2', 'stroke-width'='2.5', 'stroke'='#505050', mask="url(#mexico-mask)", 'stroke-linejoin'='round')
+non_lo_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#505050', 'stroke-linejoin'='round', mask="url(#non-lo-co-mask)")
+lo_co_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#505050', 'stroke-linejoin'='round', mask="url(#non-lo-co-mask)")
+mexico_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#505050', mask="url(#mexico-mask)", 'stroke-linejoin'='round')
 co_river_styles = c('fill'='#0066CC')
 co_basin_styles = c('fill'='#B22C2C')
 
