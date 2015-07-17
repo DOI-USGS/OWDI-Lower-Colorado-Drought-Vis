@@ -22,9 +22,6 @@ epsg_code <- '+init=epsg:3479' #5070 for USGS CONUS albers?
 mead_poly <- c(x1=535,y1=20,x2=535,y2=450,x3=400,y3=450,x4=280,y4= 20)
 mead_yvals <- get_mead_yval(mead_poly, storage = c(26.2, 23.1, 16.2, 9.6, 7.7, 6.0)) # flood, surplus, normal, shortage 1,2,3
 
-ani_dur <- c('mead-draw'="2s", 'mead-remove'='1s','stage-move'='1s',
-             'river-draw'='5s','river-reset'='1s','basin-draw'='1s')
-
 ylim <- c(-1806051, 1654371) # in epsg_code
 xlim <- c(-3193054, 5512372)
 top_users <- paste0('usage-',c(1:5))

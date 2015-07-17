@@ -10,6 +10,12 @@ out_file = file.path(plot_dir,paste0('mead_scene_animated','.svg'))
 co_river_styles = c('style'="stroke-dasharray:331;stroke-dashoffset:331;stroke-linejoin:round;stroke-linecap:round;")
 co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", opacity = '0')
 
+
+
+ani_dur <- c('mead-draw'="2s", 'mead-remove'='1s','stage-move'='1s',
+             'river-draw'='5s','river-reset'='1s','basin-draw'='1s')
+
+
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- add_ecmascript(svg, ecmascript_mead_map()) %>%
