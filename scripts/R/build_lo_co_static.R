@@ -1,3 +1,8 @@
+library(magrittr)
+library(XML)
+
+declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
+
 plot_dir = 'public_html/img/lower-co-map'
 read_dir = 'src_data/lower-co-map'
 svg_file = file.path(read_dir,paste0('lo_CO_borders','.svg'))
@@ -10,4 +15,5 @@ svg <- xmlParse(svg_file, useInternalNode=TRUE) %>%
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles)) %>%
   toString.XMLNode()
 
-cat(svg, file = out_file, append = FALSE)
+lines <- strsplit(svg,'[\n]')[[1]]
+cat(paste(c(lines[1], declaration, lines[-1]),collapse = '\n'), file = out_file, append = FALSE)

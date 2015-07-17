@@ -1,7 +1,12 @@
+library(magrittr)
+library(XML)
+
+declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
+
 plot_dir = 'public_html/img/lake-mead-animated'
 read_dir = 'src_data/lower-co-map'
 svg_file = file.path(read_dir,paste0('lo_CO_borders','.svg'))
-scene_file = file.path(plot_dir,paste0('mead_scene_animated','.svg'))
+out_file = file.path(plot_dir,paste0('mead_scene_animated','.svg'))
 co_river_styles = c('style'="stroke-dasharray:331;stroke-dashoffset:331;stroke-linejoin:round;stroke-linecap:round;")
 co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", opacity = '0')
 
@@ -72,4 +77,5 @@ svg <- add_ecmascript(svg, ecmascript_mead_map()) %>%
   add_animation(attr = 'opacity', parent_id="Nevada-pictos", id = 'remove-nevada-pictogram', element='g', begin="indefinite", fill="freeze", dur="1s", values= "1;0") %>%
   toString.XMLNode()
 
-cat(svg, file = scene_file, append = FALSE)
+lines <- strsplit(svg,'[\n]')[[1]]
+cat(paste(c(lines[1], declaration, lines[-1]),collapse = '\n'), file = out_file, append = FALSE)

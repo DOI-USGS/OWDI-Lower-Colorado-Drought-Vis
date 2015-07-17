@@ -1,4 +1,3 @@
-
 require(rgdal)
 library(rgeos)
 library(magrittr)
@@ -19,7 +18,7 @@ picto_scale = 100000 # acre-feet per bin
 grey_simp_tol <- 1.3*simp_tol # less res for non-highlighted states
 min_area <- 1e+10
 epsg_code <- '+init=epsg:3479' #5070 for USGS CONUS albers?
-declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
+
 mead_poly <- c(x1=535,y1=20,x2=535,y2=450,x3=400,y3=450,x4=280,y4= 20)
 mead_yvals <- get_mead_yval(mead_poly, storage = c(26.2, 23.1, 16.2, 9.6, 7.7, 6.0)) # flood, surplus, normal, shortage 1,2,3
 
@@ -137,5 +136,4 @@ svg <- clean_svg_doc(svg) %>%
   add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
   toString.XMLNode()
 
-lines <- strsplit(svg,'[\n]')[[1]]
-cat(paste(c(lines[1], declaration, lines[-1]),collapse = '\n'), file = svg_file, append = FALSE)
+cat(svg, file = svg_file, append = FALSE)
