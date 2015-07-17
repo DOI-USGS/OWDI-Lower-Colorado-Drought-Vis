@@ -148,6 +148,14 @@ add_rect <- function(svg, ...){
   invisible(svg)
 }
 
+add_text<- function(svg, text, ...){
+  attrs <- expand.grid(..., stringsAsFactors = FALSE)
+  svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
+  newXMLNode('text', parent = svg_nd, newXMLTextNode(text), attrs=attrs)
+  
+  invisible(svg)
+}
+
 add_ecmascript <- function(svg, text){
   svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
   
