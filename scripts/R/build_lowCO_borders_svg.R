@@ -114,8 +114,11 @@ spTransform(co_basin, CRS(epsg_code)) %>%
   plot(add=TRUE)
 
 for (i in 1:5){
-  cont <- spTransform(contracts[sorted_contracts$ix[i],], CRS(epsg_code))
-  plot(cont, add=TRUE)
+  area <- suppressWarnings(gArea(contracts[sorted_contracts$ix[i],])) # suppressing proj warning
+  tol = ifelse(area < 0.1, 1000, simp_tol)
+  spTransform(contracts[sorted_contracts$ix[i],], CRS(epsg_code)) %>%
+    gSimplify(tol) %>%
+    plot(add=TRUE)
 }
 
 non_zero_cont <- as.numeric(contracts$mean[sorted_contracts$ix])
