@@ -1,11 +1,14 @@
 plot_dir = 'public_html/img/lake-mead-animated'
-read_dir = 'public_html/img/lower-co-map'
+read_dir = 'src_data/lower-co-map'
 svg_file = file.path(read_dir,paste0('lo_CO_borders','.svg'))
 scene_file = file.path(plot_dir,paste0('mead_scene_animated','.svg'))
+co_river_styles = c('style'="stroke-dasharray:331;stroke-dashoffset:331;stroke-linejoin:round;stroke-linecap:round;")
+co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", opacity = '0')
 
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- add_ecmascript(svg, ecmascript_mead_map()) %>%
+  attr_svg_groups(attrs = list('co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="331;0;") %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-reset', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values="0;331;") %>%
   add_animation(attr = 'opacity', parent_id='co-basin-polygon', element = 'g', id = 'colorado-basin-draw', begin="indefinite", fill="freeze", dur=ani_dur[['basin-draw']], values= "0;1") %>%
