@@ -1,5 +1,6 @@
 library(magrittr)
 library(XML)
+source('scripts/R/manipulate_lowCO_borders_svg.R')
 
 declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
 

@@ -4,23 +4,15 @@ library(magrittr)
 library(XML)
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 source('scripts/R/create_contract_areas.R')
-source('scripts/R/build_usage_pictogram.R')
-source('scripts/R/build_state_pictogram.R')
-source('scripts/R/build_ecmascript.R')
-source('scripts/R/build_css.R')
-source('scripts/R/build_mead_levels.R')
+
 width=7.5
 height=7.6
 plot_dir = 'src_data/lower-co-map'
 svg_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
 simp_tol <- 7000
-picto_scale = 100000 # acre-feet per bin
 grey_simp_tol <- 1.3*simp_tol # less res for non-highlighted states
 min_area <- 1e+10
 epsg_code <- '+init=epsg:3479' #5070 for USGS CONUS albers?
-
-mead_poly <- c(x1=535,y1=20,x2=535,y2=450,x3=400,y3=450,x4=280,y4= 20)
-mead_yvals <- get_mead_yval(mead_poly, storage = c(26.2, 23.1, 16.2, 9.6, 7.7, 6.0)) # flood, surplus, normal, shortage 1,2,3
 
 ylim <- c(-1806051, 1654371) # in epsg_code
 xlim <- c(-3193054, 5512372)
@@ -31,14 +23,12 @@ keep_non <- c("Texas","Utah","Colorado","New Mexico","Oregon","Wyoming","Oklahom
 non_lo_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', mask="url(#non-lo-co-mask)")
 lo_co_styles = c('fill'='#FFFFFF', 'fill-opacity'='0.2', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'stroke-linejoin'='round')
 mexico_styles = c('fill'='#FFFFFF', 'fill-opacity'='0.2', 'stroke-width'='2.5', 'stroke'='#FFFFFF', mask="url(#mexico-mask)", 'stroke-linejoin'='round')
-mead_water_styles = c(fill='#0066CC',stroke='none','clip-path'="url(#Mead-clip)")
-mead_border_styles = c(fill='none','stroke-width'="2.5",stroke='#FFFFFF','stroke-linejoin'='round','stroke-linecap'="round")
-mead_names <- c(group_id='Mead-2D', water_id='Mead-water-level', border_id='Mead-2D-border')
+
 co_river_styles = c('fill'='none', 'stroke-width'='4.5', 'stroke'='#0066CC', 'stroke-linejoin'="round", 
                     'style'="stroke-linejoin:round;stroke-linecap:round")
 co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", opacity = '1')
 top_user_styles = c('fill'='#E6E600', 'fill-opacity'='0.75', 'stroke-width'='2.5', 'stroke'='#E6E600', 'stroke-linejoin'="round")
-pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', opacity = '0')
+
 
 mexico = readOGR(dsn = "src_data/mexico",layer="MEX_adm0") %>%
   spTransform(CRS(epsg_code)) %>%
@@ -118,8 +108,7 @@ for (i in 1:5){
     plot(add=TRUE)
 }
 
-non_zero_cont <- as.numeric(contracts$mean[sorted_contracts$ix])
-non_zero_cont <- non_zero_cont[non_zero_cont!=0]
+
 dev.off()
 
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
