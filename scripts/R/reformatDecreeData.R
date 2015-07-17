@@ -5,6 +5,8 @@ library(dplyr)
 
 trim <- function (x) gsub("^\\s+|\\s+$", "", x)
 
+# rowsToRead default to the rows in the AZ, CA, and NV worksheets that contain the data
+# we need. 
 reformatLBDec <- function(yrs = 2000:2014, rowsToRead = rbind(c(4,274),c(3,108),c(3,92)))
 {
   allWUData <- c()
@@ -12,8 +14,6 @@ reformatLBDec <- function(yrs = 2000:2014, rowsToRead = rbind(c(4,274),c(3,108),
   ignoreUsers <- c('CALIFORNIA TOTALS COMPUTED', 'Nevada Totals COMPUTED',
                    'ARIZONA TOTALS COMPUTED')
   
-  # need to add loop arround this, and edit sheetName and rowIndex for 
-  # each state
   states <- c('AZ','CA','NV')
   sheetNames <- c('ART V(B) Arizona', 'ART V(B) California', 'ART V(B) Nevada')
   
@@ -56,11 +56,79 @@ reformatLBDec <- function(yrs = 2000:2014, rowsToRead = rbind(c(4,274),c(3,108),
     # remove the unnecessary water users
     waterUsers <- waterUsers[!(waterUsers %in% ignoreUsers)]
     wuInd <- which(zz$WATER.USER %in% waterUsers)
+    colInd <- 3:(2+length(yrs)) # column index for data
     
+    if(states[stateI] == 'CA'){
+      # break out the Yuma Project Reservation Division consumptive use (CU) into CU
+      # for the Bard Unit, and CU for the Indian Unit (Ft Yuma Reservation). Do this 
+      # by splitting the "Unassigned returns from Yuma Project, Reservation Unit" into
+      # a Bard Unit and a Indian Unit portion. The split is computed on a pro-rated basis
+      # based on the Indian (Bard) Units diversion as a percent of the total yuma project
+      # diversion
+      
+      # Indian Unit data
+      i <- which(waterUsers == 'YUMA PROJECT, RES. DIV. INDIAN UNIT')
+      iu <- zz[wuInd[i]:(wuInd[i+1]-1),] 
+      iu[,2] <- trim(as.character(iu[,2]))
+      iu[,3:ncol(iu)] <- apply(iu[,3:ncol(iu)],2,as.numeric)
+      # Bard Unit data
+      i <- which(waterUsers == 'YUMA PROJECT, RES. DIV. BARD UNIT')
+      bu <- zz[wuInd[i]:(wuInd[i+1]-1),] 
+      bu[,2] <- trim(as.character(bu[,2]))
+      bu[,3:ncol(iu)] <- apply(bu[,3:ncol(iu)],2,as.numeric)
+      # compute the total diversion for indian unit, and for the total reservation division
+      tv <- data.frame(matrix(apply(iu[which(iu[,2]=='DIVERSION'),colInd],2,sum, na.rm = T),nrow = 1))
+      tv <- cbind(data.frame(matrix(c('','Total Diversion'),nrow=1)),tv)
+      names(tv) <- names(iu)
+      iu <- rbind(iu,tv)
+      totDiv <- as.numeric(iu[which(iu[,2] == 'Total Diversion'),colInd]) + bu[which(bu[,2] == 'DIVERSION'),colInd]
+      # split the unassigned measured return flows into different units by computing unit div/
+      # total diversion times the unassigned returns
+      umr <- bu[which(bu[,1]=='UNASSIGNED RETURNS FROM YUMA PROJECT, RESERVATION DIVISION'),colInd]
+      umr.iu <- umr * iu[which(iu[,2] == 'Total Diversion'),colInd]/totDiv
+      umr.bu <- umr * bu[which(bu[,2] == 'DIVERSION'),colInd]/totDiv
+      # add the proportional unassigned measured returns into the measured returns for each unit
+      i <- which(iu[,2] == 'MEAS. RETURNS')
+      iu[i,colInd] <- iu[i,colInd] + umr.iu
+      i <- which(bu[,2] == 'MEAS. RETURNS')[1] # first entry is Bard Unit by itself.
+      bu[i,colInd] <- bu[i,colInd] + umr.bu
+      # compute the consumptive use for each unit
+      i1 <- which(iu[,2] == 'CONSUMPTIVE USE')
+      i2 <- which(iu[,2] == 'Total Diversion')
+      i3 <- which(iu[,2] == 'MEAS. RETURNS')
+      i4 <- which(iu[,2] == 'UNMEAS. RETURNS')
+      # make sure na is = 0
+      r0 <- iu[,colInd]
+      r0[is.na(r0)] <- 0
+      iu[,colInd] <- r0
+      iu[i1,colInd] <- iu[i2,colInd] - iu[i3,colInd] - iu[i4,colInd]
+      i1 <- which(bu[,2] == 'CONSUMPTIVE USE')[1] # the first entry is Bard by itself
+      i2 <- which(bu[,2] == 'DIVERSION')
+      i3 <- which(bu[,2] == 'MEAS. RETURNS')[1] # the first entry is Bard by itself
+      i4 <- which(bu[,2] == 'UNMEAS. RETURNS')
+      r0 <- bu[,colInd]
+      r0[is.na(r0)] <- 0
+      bu[,colInd] <- r0
+      bu[i1,colInd] <- bu[i2,colInd] - bu[i3,colInd] - bu[i4,colInd]
+      # remove the total diversion I added in
+      iu <- iu[-c(which(iu[,2] == 'Total Diversion')),]
+      # zero out the total meas. returns and total cu that shows up under the bard unit so that
+      # when it is aggregated below, it does not get double counted
+      bu[which(bu[,1] == 'UNASSIGNED RETURNS FROM YUMA PROJECT, RESERVATION DIVISION'),colInd] <- 0
+      bu[which(bu[,1] == 'SUM, YUMA PROJECTS, RES. DIV. USE'),colInd] <- 0
+      # Rename the indian Unit to FORT YUMA INDIAN RESERVATION so that it matches and will
+      # sum with the AZ portion.
+      iu[1,1] <- 'FORT YUMA INDIAN RESERVATION'
+      # replace the original data with the computed data from this section
+      i <- which(waterUsers == 'YUMA PROJECT, RES. DIV. INDIAN UNIT')
+      zz[wuInd[i]:(wuInd[i+1]-1),] <- iu
+      # Bard Unit data
+      i <- which(waterUsers == 'YUMA PROJECT, RES. DIV. BARD UNIT')
+      zz[wuInd[i]:(wuInd[i+1]-1),] <- bu
+    }
     # loop over each water user and aggregate diversion, meas and unmeas returns
     # and CU
     
-    colInd <- 3:(2+length(yrs)) # column index for data
     for(i in 1:length(wuInd)){
       print(paste('Water User:',waterUsers[i]))
       flush.console()
