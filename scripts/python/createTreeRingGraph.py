@@ -79,12 +79,17 @@ def renderGraph(ele, floc):
         year = []
         perc = []
         per = []
+        raw = []
+        year2 = []
         for row in doc:
             if(i != 0 and row[1] != 'NA'):
                 year.append(row[0])
                 perc.append(row[1])
                 per.append(row[4])
                 x+= 1
+            if(i != 0):    
+                raw.append(row[2])
+                year2.append(row[0])
             i+= 1
         year = year[-100:]
         perc = perc[-100:]
@@ -95,10 +100,10 @@ def renderGraph(ele, floc):
         maxbot = math.ceil(float(year[len(year)-1])/10) * 10
         min = float(perc[0])
         max = float(perc[0])
-        for num in perc:
+        for num in raw:
             if float(num) < min:
                 min = float(num)
-        for num in perc:
+        for num in raw:
             if float(num) > max:
                 max = float(num)
         minside = math.floor(float(min)/5) * 5
@@ -118,12 +123,17 @@ def renderGraph(ele, floc):
             if i % 2 == 0:
                 drawLine(ele, i * botstep, 250, i * botstep, 245, 2, 'black')
                 drawText(ele, (i * botstep) - (len(str(int((i*10)+minbot)))/2)*10, 270, str(int((i*10)+minbot)))
-        drawMinLine(ele, perc, minside, maxside - minside)
-        linecontainer = SubElement(ele, 'g')
-        linecontainer.set('stroke', 'blue')
-        linecontainer.set('stroke-width', '2')
+        linecontainer2 = SubElement(ele, 'g')
+        linecontainer2.set('stroke', '#9999FF')
+        linecontainer2.set('stroke-width', '2')
+        linecontainer1 = SubElement(ele, 'g')
+        linecontainer1.set('stroke', 'blue')
+        linecontainer1.set('stroke-width', '2')
         for i in range(0, len(year)-1):
-            drawGraphLine(linecontainer, float(year[i]), float(perc[i]), float(year[i+1]), float(perc[i+1]), maxbot - minbot, maxside - minside, minbot, minside, i)
+            drawGraphLine(linecontainer1, float(year[i]), float(perc[i]), float(year[i+1]), float(perc[i+1]), maxbot - minbot, maxside - minside, minbot, minside, i)
+        for i in range(0, len(year2)-1):
+            drawGraphLine(linecontainer2, float(year2[i]), float(raw[i]), float(year2[i+1]), float(raw[i+1]), maxbot - minbot, maxside - minside, minbot, minside, i)
+        drawMinLine(ele, perc, minside, maxside - minside)
         for i in range(0, int((maxside - minside)/5) + 1):
             drawLine(ele, 0, i * sidestep, 5, i * sidestep, 2, 'black')
             drawText(ele, -30, 250 - (i * sidestep) + 5, str(int((i * 5) + minside)))
@@ -136,9 +146,9 @@ def renderGraph(ele, floc):
 
 def renderLabels(ele):
     botl =  'Year'
-    sidel = 'Percent of Mean'
-    tex = drawText(ele, 25, (10+250) - (len(sidel)*10)/2, sidel)
-    tex.set('transform', 'rotate(-90 25,' + str((10+250) - (len(sidel)*10)/2) + ')')
+    sidel = 'Averaged Flow Data'
+    tex = drawText(ele, 25, 10 + 250 - (250 - (8* len(sidel))) / 2, sidel)
+    tex.set('transform', 'rotate(-90 25,' + str(10 + 250 - (250 - (8 * len(sidel))) / 2) + ')')
     drawText(ele, (65+250) - (len(botl)*10)/2, 300, botl)
 
 def highlightRange(ele, x1, x2, ymin, yrange):
@@ -160,7 +170,7 @@ def createLineBox(ele, x1, x2, ymin, yrange, avg, year, rot):
     box.set('id', 'box' + str(rot))
     box.set('class', 'linebox')
     css.text += '\n#box' + str(rot) + ':hover ~' + ' .num' + str(rot) + ' { opacity : 1 }'
-    text1 = drawText(ele, 15, 245, 'PoM: ' + str(round(avg, 2)))
+    text1 = drawText(ele, 15, 245, 'Flow: ' + str(round(avg, 2)))
     text1.set('fill', 'green')
     text1.set('opacity', '0')
     text1.set('font-weight', 'bold')
