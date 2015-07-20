@@ -32,6 +32,11 @@ nav h3 {
 	padding: 0;
 }
 
+#co-basin-map {
+	margin-top: 50px;
+	margin-bottom: -50px;
+}
+
 #mainMessage1Container {
 	background-image: url('../img/keynotes/keynote2-mobile.jpg');
 	background-position: center center;

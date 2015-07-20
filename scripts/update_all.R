@@ -8,7 +8,9 @@ if(basename(origin) != 'OWDI-Lower-Colorado-Drought-Vis'){
 ##Start running the update scripts for each figure. Run local=TRUE in an attempt 
 ##	to prevent scripts from stepping on each other's toes
 
-source('scripts/R/meadHistoricalAndProjection.R', local=TRUE)
+# replaced this script with the followin build sVG script
+# source('scripts/R/meadHistoricalAndProjection.R', local=TRUE)
+source('scripts/R/build_mead_projected_svg.R', local = TRUE)
 
 source('scripts/R/natural_flow_history.R', local=TRUE)
 
