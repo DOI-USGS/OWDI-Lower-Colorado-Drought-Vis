@@ -37,6 +37,8 @@ ani_dur <- c('mead-draw'="2s", 'mead-remove'='1s','stage-move'='1s',
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- add_ecmascript(svg, ecmascript_mead_map()) %>%
+  add_rect(x = '450', y='507', width="38", height="30", fill='red', opacity='0.8', stroke='black', 'stroke-width'='0.5', onclick='decrementScene()') %>%
+  add_rect(x = '492', y='507', width="38", height="30", fill='blue', opacity='0.8', stroke='black', 'stroke-width'='0.5', onclick='incrementScene()') %>%
   attr_svg_groups(attrs = list('co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-draw', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="331;0;") %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'colorado-river-reset', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values="0;331;") %>%
