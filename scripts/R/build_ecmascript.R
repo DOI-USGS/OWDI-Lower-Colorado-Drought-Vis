@@ -38,6 +38,7 @@ ecmascript_mead_map <- function(){
 'hide("California-pictos");',
 'hide("Arizona-pictos");',
 'hide("Mexico-pictos");',
+'hide("Mead-2D");',
                '}',
                
                'function scene3(){',
@@ -50,7 +51,7 @@ ecmascript_mead_map <- function(){
 'hide("co-basin-polygon");',
 'moveStates();',
 'hide("non-lo-co-states");',
-'//drawMead();',
+'show("Mead-2D");',
                '}',
                
                'function scene4(){',

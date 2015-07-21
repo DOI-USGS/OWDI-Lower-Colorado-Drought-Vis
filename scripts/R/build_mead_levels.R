@@ -7,7 +7,7 @@ add_mead_levels <- function(svg, mead_poly, mead_water_styles, mead_border_style
   newXMLNode('path', parent = clip_nd, attrs=c(d=full_mead_path, stroke='none'))
   
   svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
-  g_id <- newXMLNode('g', parent = svg_nd, attrs=c(id=group_id, opacity='0'))
+  g_id <- newXMLNode('g', parent = svg_nd, attrs=c(id=group_id, 'class'="hidden"))
   newXMLNode('rect', parent = g_id, attrs=c(id=water_id, x='280',y='20',width='255',height='430',mead_water_styles ))
   newXMLNode('path', parent = g_id, attrs=c(id=border_id, d=full_mead_path, mead_border_styles))
 

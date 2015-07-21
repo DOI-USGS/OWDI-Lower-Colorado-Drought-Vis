@@ -16,10 +16,10 @@ read_dir = 'src_data/lower-co-map'
 svg_file = file.path(read_dir,paste0('lo_CO_borders','.svg'))
 out_file = file.path(plot_dir,paste0('mead_scene_animated','.svg'))
 co_river_styles = c('style'="stroke-dasharray:331;stroke-dashoffset:331;stroke-linejoin:round;stroke-linecap:round;")
-co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", 'class'='hidden')
+co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round")
 pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'class'='hidden')
-mead_water_styles = c(fill='#0066CC',stroke='none','clip-path'="url(#Mead-clip)", 'class'='hidden')
-mead_border_styles = c(fill='none','stroke-width'="2.5",stroke='#FFFFFF','stroke-linejoin'='round','stroke-linecap'="round", 'class'='hidden')
+mead_water_styles = c(fill='#0066CC',stroke='none','clip-path'="url(#Mead-clip)")
+mead_border_styles = c(fill='none','stroke-width'="2.5",stroke='#FFFFFF','stroke-linejoin'='round','stroke-linecap'="round")
 
 contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
 sorted_contracts <- sort(as.numeric(contracts$mean),decreasing = T, index.return = T)
