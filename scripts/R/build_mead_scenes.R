@@ -45,6 +45,14 @@ svg <- add_ecmascript(svg, ecmascript_mead_map()) %>%
   usage_bar_pictogram(values = non_zero_cont, value_mouse = contracts[sorted_contracts$ix,]$Contractor, value_contract = contracts[sorted_contracts$ix,]$mean, 
                       scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
+  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-normal', 
+                begin="indefinite", fill="freeze", dur=ani_dur[['stage-move']], from=mead_yvals[3], to=mead_yvals[3]) %>%
+  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-shortage-1', 
+                begin="indefinite", fill="freeze", dur=ani_dur[['stage-move']], from=mead_yvals[4], to=mead_yvals[4]) %>%
+  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-shortage-2', 
+                begin="indefinite", fill="freeze", dur=ani_dur[['stage-move']], from=mead_yvals[5], to=mead_yvals[5]) %>%
+  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-shortage-3', 
+                begin="indefinite", fill="freeze", dur=ani_dur[['stage-move']], from=mead_yvals[6], to=mead_yvals[6]) %>%
   add_animateTransform(parent_id = 'California', id = 'California-move', begin="indefinite", type = 'translate', fill="freeze", from="0 0",to="-40 -20", dur="1s") %>%
   add_animateTransform(parent_id = 'California', id = 'California-reset', begin="indefinite", type = 'translate', fill="freeze", from="-40 -20",to="0 0", dur="1s") %>%
   add_animateTransform(parent_id = 'Nevada', id = 'Nevada-move', begin="indefinite", type = 'translate', fill="freeze", from="0 0",to="-23 -32", dur="1s") %>%

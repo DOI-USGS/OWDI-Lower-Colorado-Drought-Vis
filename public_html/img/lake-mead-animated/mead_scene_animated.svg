@@ -49,14 +49,28 @@ hide("non-lo-co-states");
 show("Mead-2D");
 }
 function scene4(){
-move("Mead-normal");
-//setAllocationsNormal();
+	move("Mead-normal");
+	setAllocationsNormal();
 }
 function scene5(){
-move("Mead-shortage-1");
-//setAllocationsShortage1();
+	move("Mead-shortage-1");
+	setAllocationsShortage1();
 }
-var scenes = [scene1, scene2, scene3, scene4, scene5];
+function scene6(){
+	move("Mead-shortage-2");
+	setAllocationsShortage2();
+}
+function scene7(){
+	move("Mead-shortage-3");
+	setAllocationsShortage3();
+}
+var scenes = [scene1, scene2, scene3, scene4, scene5, scene6, scene7];
+function move(name){
+	var ani = document.getElementById(name);
+	var fromValue = ani.getAttribute("attributeName");
+	ani.setAttribute("from",ani.parentNode.getAttribute(fromValue));
+	ani.beginElement();
+}
 function show(name){
 var ele = document.getElementById(name);
 ele.setAttribute("class","shown");
@@ -92,12 +106,6 @@ var ele = document.getElementById(name);
 if (ele.getAttribute("transform") === null | ele.getAttribute("transform") === match){
 document.getElementById(name+"-"+transformFun).beginElement();
 }
-}
-function move(name){
-	var ani = document.getElementById(name);
-	var fromValue = ani.getAttribute("attributeName");
-	ani.setAttribute('from',ani.parentNode.getAttribute(fromValue));
-	ani.beginElement();
 }
 function draw(name){
 document.getElementById("draw-"+name).beginElement();}
@@ -570,6 +578,9 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
   <g id="Mead-2D" class="hidden">
     <rect id="Mead-water-level" x="280" y="20" width="255" height="430" fill="#0066CC" stroke="none" clip-path="url(#Mead-clip)">
       <animate attributeName="y" id="Mead-normal" begin="indefinite" fill="freeze" dur="1s" from="197.608695652174" to="197.608695652174"/>
+      <animate attributeName="y" id="Mead-shortage-1" begin="indefinite" fill="freeze" dur="1s" from="300.434782608696" to="300.434782608696"/>
+      <animate attributeName="y" id="Mead-shortage-2" begin="indefinite" fill="freeze" dur="1s" from="330.036231884058" to="330.036231884058"/>
+      <animate attributeName="y" id="Mead-shortage-3" begin="indefinite" fill="freeze" dur="1s" from="356.521739130435" to="356.521739130435"/>
     </rect>
     <path id="Mead-2D-border" d="M 535 20 L 535 450 L 400 450 L 280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round"/>
   </g>
