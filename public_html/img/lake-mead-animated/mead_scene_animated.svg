@@ -135,8 +135,8 @@ function removeStatePicto(user_id){
 }
 function setAllocationsNormal(){
 	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","visible");
-	document.getElementById("Arizona-pictos-normal").setAttribute("visibility","visible");
-	document.getElementById("Mexico-pictos-normal").setAttribute("visibility","visible");
+	document.getElementById("Arizona-pictos-normal").setAttribute("class","shown");
+	document.getElementById("Mexico-pictos-normal").setAttribute("class","shown");
 	document.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0");
 	document.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0");
 	document.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0");
@@ -144,8 +144,8 @@ function setAllocationsNormal(){
 function setAllocationsShortage1(){
 	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");
 	document.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","visible");
-	document.getElementById("Arizona-pictos-normal").setAttribute("visibility","hidden");
-	document.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","visible");
+	document.getElementById("Arizona-pictos-normal").setAttribute("class","hidden");
+	document.getElementById("Arizona-pictos-shortage1").setAttribute("class","shown");
 	document.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");
 	document.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","visible");
 	document.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0.8");
@@ -156,9 +156,9 @@ function setAllocationsShortage2(){
 	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");
 	document.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","hidden");
 	document.getElementById("Nevada-pictos-shortage2").setAttribute("visibility","visible");
-	document.getElementById("Arizona-pictos-normal").setAttribute("visibility","hidden");
-	document.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","hidden");
-	document.getElementById("Arizona-pictos-shortage2").setAttribute("visibility","visible");
+	document.getElementById("Arizona-pictos-normal").setAttribute("class","hidden");
+	document.getElementById("Arizona-pictos-shortage1").setAttribute("class","hidden");
+	document.getElementById("Arizona-pictos-shortage2").setAttribute("class","shown");
 	document.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");
 	document.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","hidden");
 	document.getElementById("Mexico-pictos-shortage2").setAttribute("visibility","visible");
@@ -170,9 +170,10 @@ function setAllocationsShortage3(){
 	document.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");
 	document.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","hidden");
 	document.getElementById("Nevada-pictos-shortage2").setAttribute("visibility","hidden");
-	document.getElementById("Arizona-pictos-normal").setAttribute("visibility","hidden");
-	document.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","hidden");
-	document.getElementById("Arizona-pictos-shortage2").setAttribute("visibility","hidden");
+	document.getElementById("Arizona-pictos-normal").setAttribute("class","hidden");
+	document.getElementById("Arizona-pictos-shortage1").setAttribute("class","hidden");
+	document.getElementById("Arizona-pictos-shortage2").setAttribute("class","hidden");
+	document.getElementById("Arizona-pictos-shortage3").setAttribute("class","shown");
 	document.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");
 	document.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","hidden");
 	document.getElementById("Mexico-pictos-shortage2").setAttribute("visibility","hidden");
@@ -564,7 +565,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </rect>
     <path id="Mead-2D-border" d="M 535 20 L 535 450 L 400 450 L 280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round"/>
   </g>
-  <g id="California-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
+  <g id="California-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" class='hidden'>
     <rect x="114" y="201" width="10" height="10" rx="2" ry="2"/>
     <rect x="128" y="201" width="10" height="10" rx="2" ry="2"/>
     <rect x="142" y="201" width="10" height="10" rx="2" ry="2"/>
@@ -626,7 +627,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
     <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
   </g>
-  <g id="Nevada-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
+  <g id="Nevada-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" class='hidden'>
     <rect x="159" y="120" width="10" height="10" rx="2" ry="2"/>
     <rect x="145" y="106" width="10" height="10" rx="2" ry="2"/>
     <rect x="159" y="106" width="10" height="10" rx="2" ry="2" fill="none"/>
@@ -643,7 +644,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
       <rect x="159" y="108" width="10" height="8" rx="0" ry="0" stroke="none"/>
     </g>
   </g>
-  <g id="Arizona-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
+  <g id="Arizona-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" class='hidden'>
     <rect x="201" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
     <rect x="215" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
     <rect x="229" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
@@ -672,26 +673,26 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <rect x="243" y="160" width="10" height="10" rx="2" ry="2"/>
     <rect x="257" y="160" width="10" height="10" rx="2" ry="2"/>
     <rect x="271" y="160" width="10" height="10" rx="2" ry="2"/>
-    <g id="Arizona-pictos-normal">
+    <g id="Arizona-pictos-normal" class='shown'>
       <rect x="201" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
       <rect x="215" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
       <rect x="229" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
       <rect x="243" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
       <rect x="271" y="202" width="10" height="10" rx="0" ry="0" stroke="none"/>
     </g>
-    <g id="Arizona-pictos-shortage1">
+    <g id="Arizona-pictos-shortage1" class='hidden'>
       <rect x="201" y="218" width="10" height="8" rx="0" ry="0" stroke="none"/>
       <rect x="271" y="202" width="10" height="10" rx="0" ry="0" stroke="none"/>
     </g>
-    <g id="Arizona-pictos-shortage2">
+    <g id="Arizona-pictos-shortage2" class='hidden'>
       <rect x="201" y="226" width="10" height="0" rx="0" ry="0" stroke="none"/>
       <rect x="271" y="202" width="10" height="10" rx="0" ry="0" stroke="none"/>
     </g>
-    <g id="Arizona-pictos-shortage3">
+    <g id="Arizona-pictos-shortage3" class='hidden'>
       <rect x="271" y="210" width="10" height="2" rx="0" ry="0" stroke="none"/>
     </g>
   </g>
-  <g id="Mexico-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
+  <g id="Mexico-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" class='hidden'>
     <rect x="156" y="272" width="10" height="10" rx="2" ry="2" fill="none"/>
     <rect x="170" y="272" width="10" height="10" rx="2" ry="2" fill="none"/>
     <rect x="100" y="272" width="10" height="10" rx="2" ry="2"/>
