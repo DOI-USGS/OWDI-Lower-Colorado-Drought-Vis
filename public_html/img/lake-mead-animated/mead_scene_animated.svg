@@ -68,7 +68,7 @@ var scenes = [scene1, scene2, scene3, scene4, scene5, scene6, scene7];
 function move(name){
 	var ani = document.getElementById(name);
 	var fromValue = ani.getAttribute("attributeName");
-	ani.setAttribute("from",ani.parentNode.getAttribute(fromValue));
+	ani.setAttribute("from",ani.parentNode[fromValue].animVal.valueAsString);
 	ani.beginElement();
 }
 function show(name){

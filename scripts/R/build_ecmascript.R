@@ -78,7 +78,7 @@ ecmascript_mead_map <- function(){
 'function move(name){',
   '\tvar ani = document.getElementById(name);',
   '\tvar fromValue = ani.getAttribute("attributeName");',
-  '\tani.setAttribute("from",ani.parentNode.getAttribute(fromValue));',
+  '\tani.setAttribute("from",ani.parentNode[fromValue].animVal.valueAsString);',
   '\tani.beginElement();',
 '}',
 'function show(name){',
