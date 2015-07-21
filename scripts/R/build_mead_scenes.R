@@ -46,6 +46,10 @@ svg <- add_ecmascript(svg, ecmascript_mead_map()) %>%
   usage_bar_pictogram(values = non_zero_cont, value_mouse = contracts[sorted_contracts$ix,]$Contractor, value_contract = contracts[sorted_contracts$ix,]$mean, 
                       scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
+  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-flood', 
+                begin="indefinite", fill="freeze", dur=ani_dur[['stage-move']], from=mead_yvals[1], to=mead_yvals[1]) %>%
+  add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-surplus', 
+                begin="indefinite", fill="freeze", dur=ani_dur[['stage-move']], from=mead_yvals[2], to=mead_yvals[2]) %>%
   add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-normal', 
                 begin="indefinite", fill="freeze", dur=ani_dur[['stage-move']], from=mead_yvals[3], to=mead_yvals[3]) %>%
   add_animation(attr = 'y', parent_id=mead_names[['water_id']], element = 'rect', id = 'Mead-shortage-1', 

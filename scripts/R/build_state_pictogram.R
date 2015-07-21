@@ -6,7 +6,7 @@ build_state_pictos <- function(svg, scale=100000){
   
   add_california(root_nd,scale)
   g_id <- newXMLNode('g',parent=root_nd,
-             attrs=c(id="allocation-picto-highlight-3", opacity="0.0", stroke="none", fill="yellow"))
+             attrs=c(id="allocation-picto-highlight-3", class='hidden', stroke="none", fill="yellow"))
   newXMLNode('rect',parent=g_id,
              attrs=c(x="154", y="270", width="28", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
@@ -17,7 +17,7 @@ build_state_pictos <- function(svg, scale=100000){
              attrs=c(x="157", y="104", width="14", height="14", rx="3", ry="3"))
   
   g_id <- newXMLNode('g',parent=root_nd,
-                     attrs=c(id="allocation-picto-highlight-2", opacity="0.0", stroke="none", fill="yellow"))
+                     attrs=c(id="allocation-picto-highlight-2", class='hidden', stroke="none", fill="yellow"))
   newXMLNode('rect',parent=g_id,
              attrs=c(x="168", y="270", width="14", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
@@ -26,7 +26,7 @@ build_state_pictos <- function(svg, scale=100000){
              attrs=c(x="157", y="104", width="14", height="14", rx="3", ry="3"))
   
   g_id <- newXMLNode('g',parent=root_nd,
-                     attrs=c(id="allocation-picto-highlight-1", opacity="0.0", stroke="none", fill="yellow"))
+                     attrs=c(id="allocation-picto-highlight-1", class='hidden', stroke="none", fill="yellow"))
   newXMLNode('rect',parent=g_id,
              attrs=c(x="168", y="270", width="14", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
@@ -63,7 +63,7 @@ block_picto <- function(parent, x, y, rx='2',ry='2',number,width = 10, height=10
 add_nevada <- function(root_nd,scale){
   # nevada - 3
   NV_id <- newXMLNode('g', parent=root_nd,
-                      attrs = c('id'='Nevada-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',opacity='0'))
+                      attrs = c('id'='Nevada-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',class='hidden'))
   y_start = 102
   x_start = 157
   y = block_picto(NV_id,x=x_start,y=y_start,number=1)
@@ -71,26 +71,26 @@ add_nevada <- function(root_nd,scale){
   block_picto(NV_id,x=x_start,y=y,number=1,'fill'='none')
   
   NV_nrm <- newXMLNode('g', parent=NV_id,
-                       attrs = c('id'='Nevada-pictos-normal'))
+                       attrs = c('id'='Nevada-pictos-normal',class='shown'))
   # -- full bucket, then partials
   block_picto(NV_nrm,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
   
   NV_srt <- newXMLNode('g', parent=NV_id,
-                       attrs = c('id'='Nevada-pictos-shortage1'))
+                       attrs = c('id'='Nevada-pictos-shortage1',class='shown'))
   block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-13000/scale)*100,'stroke'='none')
   
   NV_srt <- newXMLNode('g', parent=NV_id,
-                       attrs = c('id'='Nevada-pictos-shortage2'))
+                       attrs = c('id'='Nevada-pictos-shortage2',class='shown'))
   block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-17000/scale)*100,'stroke'='none')
   NV_srt <- newXMLNode('g', parent=NV_id,
-                       attrs = c('id'='Nevada-pictos-shortage3'))
+                       attrs = c('id'='Nevada-pictos-shortage3',class='shown'))
   block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-20000/scale)*100,'stroke'='none')
   
 }
 
 add_california <- function(root_nd,scale){
   CA_id <- newXMLNode('g', parent=root_nd,
-                      attrs = c('id'='California-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',opacity='0'))
+                      attrs = c('id'='California-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',class='hidden'))
   y_start = 183
   x_start = 112
   y = block_picto(CA_id,x=x_start,y=y_start,number=3)
@@ -108,7 +108,7 @@ add_california <- function(root_nd,scale){
 add_arizona <- function(root_nd,scale){
   # arizona - 28
   AR_id <- newXMLNode('g', parent=root_nd,
-                      attrs = c('id'='Arizona-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',opacity='0'))
+                      attrs = c('id'='Arizona-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',class='hidden'))
   x_start = 199
   y_start = 198
   y = block_picto(AR_id,x=x_start,y=y_start,number=4, 'fill'='none')
@@ -119,23 +119,23 @@ add_arizona <- function(root_nd,scale){
   block_picto(AR_id,x=x_start,y=y,number=6)
   
   AR <- newXMLNode('g', parent=AR_id,
-                       attrs = c('id'='Arizona-pictos-normal'))
+                       attrs = c('id'='Arizona-pictos-normal',class='shown'))
   # -- full bucket, then partials
   block_picto(AR,x=x_start,y=y_start,number=4,rx="0",ry="0",perc_full = 100,'stroke'='none')
   block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
   
   AR <- newXMLNode('g', parent=AR_id,
-                      attrs = c('id'='Arizona-pictos-shortage1'))
+                      attrs = c('id'='Arizona-pictos-shortage1',class='shown'))
   block_picto(AR,x=x_start,y=y_start,number=1,rx="0",ry="0", perc_full = (1-20000/scale)*100,'stroke'='none')
   block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
   
   AR <- newXMLNode('g', parent=AR_id,
-                   attrs = c('id'='Arizona-pictos-shortage2'))
+                   attrs = c('id'='Arizona-pictos-shortage2',class='shown'))
   block_picto(AR,x=x_start,y=y_start,number=1,rx="0",ry="0", perc_full = 0,'stroke'='none')
   block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
 
   AR <- newXMLNode('g', parent=AR_id,
-                   attrs = c('id'='Arizona-pictos-shortage3'))
+                   attrs = c('id'='Arizona-pictos-shortage3',class='shown'))
   block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0", perc_full = (1-80000/scale)*100,'stroke'='none')
   
 }
@@ -143,7 +143,7 @@ add_arizona <- function(root_nd,scale){
 add_mexico <- function(root_nd,scale){
   # mexico- 15
   MX_id <- newXMLNode('g', parent=root_nd,
-                      attrs = c('id'='Mexico-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',opacity='0'))
+                      attrs = c('id'='Mexico-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',class='hidden'))
   x_start = 70
   y_start = 254
   block_picto(MX_id,x=x_start+14*6,y=y_start,number=2,'fill'='none')
@@ -152,7 +152,7 @@ add_mexico <- function(root_nd,scale){
   y = block_picto(MX_id,x=x_start,y=y,number=4)
   
   MX <- newXMLNode('g', parent=MX_id,
-                   attrs = c('id'='Mexico-pictos-normal'))
+                   attrs = c('id'='Mexico-pictos-normal',class='shown'))
   # -- full bucket, then partials
   block_picto(MX,x=x_start+14*6,y=y_start,number=2,rx="0",ry="0",perc_full = 100,'stroke'='none')
   
@@ -160,19 +160,19 @@ add_mexico <- function(root_nd,scale){
   
   
   MX <- newXMLNode('g', parent=MX_id,
-                   attrs = c('id'='Mexico-pictos-shortage1'))
+                   attrs = c('id'='Mexico-pictos-shortage1',class='shown'))
   
   
   block_picto(MX,x=x_start+14*6,y=y_start,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
   block_picto(MX,x=x_start+14*7,y=y_start,number=1,rx="0",ry="0", perc_full = (1-50000/scale)*100,'stroke'='none')
   
   MX <- newXMLNode('g', parent=MX_id,
-                   attrs = c('id'='Mexico-pictos-shortage2'))
+                   attrs = c('id'='Mexico-pictos-shortage2',class='shown'))
   block_picto(MX,x=x_start+14*6,y=y_start,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
   block_picto(MX,x=x_start+14*7,y=y_start,number=1,rx="0",ry="0", perc_full = (1-70000/scale)*100,'stroke'='none')
   
   MX <- newXMLNode('g', parent=MX_id,
-                   attrs = c('id'='Mexico-pictos-shortage3'))
+                   attrs = c('id'='Mexico-pictos-shortage3',class='shown'))
   block_picto(MX,x=x_start+14*6,y=y_start,number=1,rx="0",ry="0",perc_full = (1-25000/scale)*100,'stroke'='none')
   
 }

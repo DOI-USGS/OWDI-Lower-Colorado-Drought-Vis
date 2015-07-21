@@ -52,28 +52,38 @@ ecmascript_mead_map <- function(){
 'moveStates();',
 'hide("non-lo-co-states");',
 'show("Mead-2D");',
+'\tmove("Mead-flood");',
+'\tsetAllocationsNormal();',
                '}',
-               
-               'function scene4(){',
+'function scene4(){',
+'\tmove("Mead-surplus");',
+'\tsetAllocationsNormal();',
+'}',
+'function scene5(){',
+'\tmove("Mead-normal");',
+'\tsetAllocationsNormal();',
+'}',
+
+               'function scene6(){',
               '\tmove("Mead-normal");',
                '\tsetAllocationsNormal();',
                '}',
-               'function scene5(){',
+               'function scene7(){',
               '\tmove("Mead-shortage-1");',
                '\tsetAllocationsShortage1();',
                '}',
 
-'function scene6(){',
+'function scene8(){',
 '\tmove("Mead-shortage-2");',
 '\tsetAllocationsShortage2();',
 '}',
-'function scene7(){',
+'function scene9(){',
 '\tmove("Mead-shortage-3");',
 '\tsetAllocationsShortage3();',
 '}',
                
                
-               'var scenes = [scene1, scene2, scene3, scene4, scene5, scene6, scene7];',
+               'var scenes = [scene1, scene2, scene3, scene4, scene5, scene6, scene7,scene8,scene9];',
 
 'function move(name){',
   '\tvar ani = document.getElementById(name);',
@@ -157,120 +167,63 @@ ecmascript_mead_map <- function(){
                '}',
                
                'function setAllocationsNormal(){',
-               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0");',
-               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0");',
-               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0");',
+               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("class","shown");',
+               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("class","shown");',
+               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("class","shown");',
+               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","hidden");',
                '}',
                
                'function setAllocationsShortage1(){',
-               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0.8");',
-               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0");',
-               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0");',
+               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Nevada-pictos-shortage1").setAttribute("class","shown");',
+               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("class","shown");',
+               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("class","shown");',
+               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","shown");',
+               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","hidden");',
                '}',
                
                'function setAllocationsShortage2(){',
-               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Nevada-pictos-shortage2").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Arizona-pictos-shortage2").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Mexico-pictos-shortage2").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0");',
-               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0.8");',
-               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0");',
+               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Nevada-pictos-shortage1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Nevada-pictos-shortage2").setAttribute("class","shown");',
+               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Arizona-pictos-shortage2").setAttribute("class","shown");',
+               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Mexico-pictos-shortage2").setAttribute("class","shown");',
+               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","shown");',
+               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","hidden");',
                '}',
                
                'function setAllocationsShortage3(){',
-               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Nevada-pictos-shortage2").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Arizona-pictos-shortage2").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Mexico-pictos-shortage2").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0");',
-               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0");',
-               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0.8");',
+               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Nevada-pictos-shortage1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Nevada-pictos-shortage2").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Nevada-pictos-shortage3").setAttribute("class","shown");',
+               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Arizona-pictos-shortage2").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Arizona-pictos-shortage3").setAttribute("class","shown");',
+               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Mexico-pictos-shortage2").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Mexico-pictos-shortage3").setAttribute("class","shown");',
+               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","shown");',
                '}',
                
                'function setMeadCondition(storage_id){',
                'document.getElementById("Mead-"+storage_id).beginElement();}',
-               'function showRiverDOM(){
-	animateIE(document.getElementById("show-river"));
-}
-function drawRiverDOM(){
-animateIE(document.getElementById("colorado-river-draw"));
-}
-function resetRiverDOM(){
-animateIE(document.getElementById("colorado-river-reset"));
-animateIE(document.getElementById("reset-river"));
-}
-function drawBasinDOM(){
-animateIE(document.getElementById("colorado-basin-draw"));
-}
-function resetBasinDOM(){
-animateIE(document.getElementById("remove-basin"));
-}
-function drawPictogramDOM(){
-animateIE(document.getElementById("pictogram-topfive-draw"));
-}
-function resetPictogramDOM(){
-animateIE(document.getElementById("pictogram-topfive-reset"));
-}
-function removeGreyStatesDOM(){
-animateIE(document.getElementById("remove-grey-states"));
-}
-function resetGreyStatesDOM(){
-animateIE(document.getElementById("reset-grey-states"));
-}
-function removeRiverDOM(){
-animateIE(document.getElementById("remove-river"));
-animateIE(document.getElementById("remove-basin"));
-}
-function removePictogramDOM(){
-animateIE(document.getElementById("remove-pictogram"));
-}
-function highlightUserDOM(user_id){
-animateIE(document.getElementById("pictogram-"+user_id+"-draw"));
-animateIE(document.getElementById("user-"+user_id+"-draw"));
-}
-function moveStatesDOM(){
-animateIE(document.getElementById("California-move"));
-animateIE(document.getElementById("Nevada-move"));
-animateIE(document.getElementById("Arizona-move"));
-animateIE(document.getElementById("Nevada-move"));
-animateIE(document.getElementById("mexico-move"));
-animateIE(document.getElementById("Mexico-stroke"));
-animateIE(document.getElementById("Mexico-scale"));
-}
-function resetStatesDOM(){
-animateIE(document.getElementById("California-reset"));
-animateIE(document.getElementById("Nevada-reset"));
-animateIE(document.getElementById("Arizona-reset"));
-animateIE(document.getElementById("Nevada-reset"));
-animateIE(document.getElementById("mexico-reset"));
-animateIE(document.getElementById("Mexico-stroke-reset"));
-animateIE(document.getElementById("Mexico-scale-reset"));
-}
-function setMeadConditionDOM(storage_id){
-animateIE(document.getElementById("Mead-"+storage_id));
-}
 
-function animateIE(element) {
+'function animateIE(element) {
 if(element instanceof Element) {
 if(element.nodeName === "animate" || element.nodeName === "animateTransform") {
 var parent = element.parentNode;
