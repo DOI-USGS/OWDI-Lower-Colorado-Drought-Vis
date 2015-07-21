@@ -7,58 +7,55 @@ svgDocument = evt.target.ownerDocument;
 svgDocument.incrementScene = this.incrementScene;
 svgDocument.decrementScene = this.decrementScene;}
 }
-
 function displayAllocationName(evt, name) {
 var data = {"California":{
-	"flood":"4,400,000",
-	"surplus":"4,400,000",
-	"normal":"4,400,000",
-	"shortage-1":"4,400,000",
-	"shortage-2":"4,400,000",
-	"shortage-3":"4,400,000"},
-	"Arizona":{
-	"flood":"2,800,000",
-	"surplus":"2,800,000",
-	"normal":"2,800,000",
-	"shortage-1":"2,480,000",
-	"shortage-2":"2,400,000",
-	"shortage-3":"2,320,000"},
-	"Nevada":{
-	"flood":"300,000",
-	"surplus":"300,000",
-	"normal":"300,000",
-	"shortage-1":"287,000",
-	"shortage-2":"283,000",
-	"shortage-3":"280,000"},
-	"Mexico":{
-	"flood":"1,500,000",
-	"surplus":"1,500,000",
-	"normal":"1,500,000",
-	"shortage-1":"1,450,000",
-	"shortage-2":"1,430,000",
-	"shortage-3":"1,375,000"}};
-	var state = document.getElementById("allocation-state").firstChild.data
-	document.getElementById("allocation-value").firstChild.data = name + ": " + data[name][state] +" acre-feet/year";
+"flood":"4,400,000",
+"surplus":"4,400,000",
+"normal":"4,400,000",
+"shortage-1":"4,400,000",
+"shortage-2":"4,400,000",
+"shortage-3":"4,400,000"},
+"Arizona":{
+"flood":"2,800,000",
+"surplus":"2,800,000",
+"normal":"2,800,000",
+"shortage-1":"2,480,000",
+"shortage-2":"2,400,000",
+"shortage-3":"2,320,000"},
+"Nevada":{
+"flood":"300,000",
+"surplus":"300,000",
+"normal":"300,000",
+"shortage-1":"287,000",
+"shortage-2":"283,000",
+"shortage-3":"280,000"},
+"Mexico":{
+"flood":"1,500,000",
+"surplus":"1,500,000",
+"normal":"1,500,000",
+"shortage-1":"1,450,000",
+"shortage-2":"1,430,000",
+"shortage-3":"1,375,000"}};
+var state = document.getElementById("allocation-state").firstChild.data
+document.getElementById("allocation-value").firstChild.data = name + ": " + data[name][state] +" acre-feet/year";
 }
 function setMeadCondition(storage_id){
-
 document.getElementById("allocation-state").firstChild.data = storage_id
 var elevations = {"flood":"1,219.6",
-	"surplus":"1,200",
-	"normal":"1,145",
-	"shortage-1":"1,075",
-	"shortage-2":"1,050",
-	"shortage-3":"1,025"}
+"surplus":"1,200",
+"normal":"1,145",
+"shortage-1":"1,075",
+"shortage-2":"1,050",
+"shortage-3":"1,025"}
 var storages = {"flood":"26.1",
-	"surplus":"23.1",
-	"normal":"16.2",
-	"shortage-1":"9.6",
-	"shortage-2":"7.7",
-	"shortage-3":"6.0"}
+"surplus":"23.1",
+"normal":"16.2",
+"shortage-1":"9.6",
+"shortage-2":"7.7",
+"shortage-3":"6.0"}
 document.getElementById("mead-storage-text").firstChild.data = "Storage: " + storages[storage_id] + " maf"
 document.getElementById("mead-elevation-text").firstChild.data = "Elevation: " + elevations[storage_id] + " feet"
 }
-
 var sceneNum = 0;
 function incrementScene(){
 if (sceneNum < scenes.length-1){
@@ -99,17 +96,20 @@ hide("co-basin-polygon");
 moveStates();
 hide("non-lo-co-states");
 show("Mead-2D");
-	move("Mead-flood");
+	document.getElementById("Mead-water-level").setAttribute("class","mead-flood");
+	document.getElementById("mead-elevation-text-position").setAttribute("class","mead-flood");
 	setMeadCondition("flood");
 	setAllocationsNormal();
 }
 function scene4(){
-	move("Mead-surplus");
+	document.getElementById("Mead-water-level").setAttribute("class","mead-surplus");
+	document.getElementById("mead-elevation-text-position").setAttribute("class","mead-surplus");
 	setMeadCondition("surplus");
 	setAllocationsNormal();
 }
 function scene5(){
 	move("Mead-normal");
+	move("Mead-normal-text");
 	setMeadCondition("normal");
 	setAllocationsNormal();
 }
@@ -560,21 +560,17 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </g>
   </g>
   <g id="Mead-2D" class="hidden">
-    <rect id="Mead-water-level" x="280" y="20" width="255" height="430" fill="#0066CC" stroke="none" clip-path="url(#Mead-clip)">
-      <animate attributeName="y" id="Mead-flood" begin="indefinite" fill="freeze" dur="1s" from="41.8115942028986" to="41.8115942028986"/>
-      <animate attributeName="y" id="Mead-surplus" begin="indefinite" fill="freeze" dur="1s" from="90.1086956521739" to="90.1086956521739"/>
-      <animate attributeName="y" id="Mead-normal" begin="indefinite" fill="freeze" dur="1s" from="197.608695652174" to="197.608695652174"/>
-      <animate attributeName="y" id="Mead-shortage-1" begin="indefinite" fill="freeze" dur="1s" from="300.434782608696" to="300.434782608696"/>
-      <animate attributeName="y" id="Mead-shortage-2" begin="indefinite" fill="freeze" dur="1s" from="330.036231884058" to="330.036231884058"/>
-      <animate attributeName="y" id="Mead-shortage-3" begin="indefinite" fill="freeze" dur="1s" from="356.521739130435" to="356.521739130435"/>
-    </rect>
-	<text id='mead-elevation-text' class='small-text' x="450" y="41.8115942028986" fill="#FFFFFF" dy="1em" stroke="none" style="text-anchor: middle;">Elevation: 1,219.6 feet</text>
-	<text id='mead-storage-text' class='label' x="460" y="400" fill="#FFFFFF" stroke="none" style="text-anchor: middle;">Storage: 26.1 maf</text>
-	<text class='small-text' x="460" y="400" fill="#FFFFFF" dy="1.2em" stroke="none" style="text-anchor: middle;">(million acre-feet)</text>
+    <g clip-path="url(#Mead-clip)">
+      <rect id="Mead-water-level" x="280" y="20" width="255" height="430" fill="#0066CC" stroke="none"/>
+    </g>
     <path id="Mead-2D-border" d="M 535 20 L 535 450 L 400 450 L 280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round"/>
-    <text class="label" id="allocation-info" x="55" y="450" fill="#FFFFFF" stroke="none" style="text-anchor: left;">  </text>
-    <text class="label" id="allocation-value" x="55" y="450" fill="#FFFFFF" stroke="none" style="text-anchor: left;">  </text>
-	<text class="label" id="allocation-state" x="55" y="400" fill="none" stroke="none">flood</text>
+    <g id='mead-elevation-text-position'>
+		<text id='mead-elevation-text' class="small-text" x="450" fill="#FFFFFF" dy="2.8em" stroke="none" style="text-anchor:middle;">  </text>
+	</g>
+    <text id="mead-storage-text" class="label" x="460" y="400" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
+    <text id="mead-storage-text" class="small-text" x="460" y="400" fill="#FFFFFF" dy="1.2em" stroke="none" style="text-anchor:middle;">(million acre feet)</text>
+    <text id="allocation-info" class="label" x="55" y="450" fill="#FFFFFF" stroke="none" style="text-anchor:start;">  </text>
+    <text id="allocation-state" class="label" x="55" y="400" fill="none" stroke="none" style="text-anchor:start;">  </text>
   </g>
   <g id="California-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" class="hidden">
     <rect x="114" y="201" width="10" height="10" rx="2" ry="2"/>
