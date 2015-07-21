@@ -1,5 +1,5 @@
 /*=====SVG CSS=====*/
-.shown {
+.shown, .hidden {
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
@@ -7,11 +7,26 @@
 }
 
 .hidden {
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
     opacity:0;
+}
+.california, .nevada, .arizona, .mexico, .california-moved, .nevada-moved {
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition:  1s ease-in-out;
+}
+
+
+.california-moved {
+    -ms-transform: translate(-40px,-20px); /* IE 9 */
+    -webkit-transform: translate(-40px,-20px); /* Safari */
+    transform: translate(-40px,-20px);
+}
+
+.nevada-moved {
+    -ms-transform: translate(-23px,-32px); /* IE 9 */
+    -webkit-transform: translate(-23px,-32px); /* Safari */
+    transform: translate(-23px,-32px);
 }
 
 text {
