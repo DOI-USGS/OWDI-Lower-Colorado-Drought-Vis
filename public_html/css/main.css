@@ -327,7 +327,15 @@ nav h3 {
 /*Black and white images*/
 
 #black-white-images p{
-	margin-bottom:50px;
+	margin-bottom:20px;
+	}
+	
+#black-white-images{
+	margin-top:50px;
+	}
+	
+#black-white-images img{
+	margin-bottom:10px;
 	}
 	
 /*Water Usage Section CSS*/
@@ -470,6 +478,12 @@ nav h3 {
 	#texas-thumbnail{
 		width:70%;
 		}
+		
+	/*Black and white images*/
+
+	#black-white-images p{
+		margin-bottom:50px;
+	}
 	
 	/*Section 9 CSS*/
 	
