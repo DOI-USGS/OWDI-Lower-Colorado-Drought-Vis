@@ -297,6 +297,10 @@ nav h3 {
 	text-align:left;
 	}
 	
+.leaving{
+	margin-right:3px;
+	}
+	
 /*Blue Dragon Section CSS*/
 
 #blueDragon{
@@ -319,10 +323,10 @@ nav h3 {
 	width:100%;
 	}
 	
-#texas-app{
+.sectionContent .explore-more{
 	text-align:center;
 	}
-
+	
 /*Water Usage Section CSS*/
 
 #JrGraph h2 {
