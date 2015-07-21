@@ -56,6 +56,17 @@ var storages = {"flood":"26.1",
 document.getElementById("mead-storage-text").firstChild.data = "Storage: " + storages[storage_id] + " maf"
 document.getElementById("mead-elevation-text").firstChild.data = "Elevation: " + elevations[storage_id] + " feet"
 }
+function highlightState(evt, name) {
+	document.getElementById(name).setAttribute("stroke","#808080");
+}
+
+function lowlightState(evt, name) {
+	document.getElementById(name).setAttribute("stroke","#FFFFFF");
+}
+
+function hideAllocationName(evt) {
+	document.getElementById("allocation-value").firstChild.data = " ";
+}
 var sceneNum = 0;
 function incrementScene(){
 if (sceneNum < scenes.length-1){
@@ -84,6 +95,7 @@ hide("California-pictos");
 hide("Arizona-pictos");
 hide("Mexico-pictos");
 hide("Mead-2D");
+hideStateMouseovers();
 }
 function scene3(){
 show("Nevada-pictos");
@@ -96,6 +108,7 @@ hide("co-basin-polygon");
 moveStates();
 hide("non-lo-co-states");
 show("Mead-2D");
+showStateMouseovers();
 	document.getElementById("Mead-water-level").setAttribute("class","mead-flood");
 	document.getElementById("mead-elevation-text-position").setAttribute("class","mead-flood");
 	setMeadCondition("flood");
@@ -130,6 +143,18 @@ function scene8(){
 	document.getElementById("mead-elevation-text-position").setAttribute("class","mead-shortage-3");
 	setMeadCondition("shortage-3");
 	setAllocationsShortage3();
+}
+showStateMouseovers function(){
+document.getElementById("california-mouseovers").setAttribute("visibility","visbile");
+document.getElementById("nevada-mouseovers").setAttribute("visibility","visbile");
+document.getElementById("arizona-mouseovers").setAttribute("visibility","visbile");
+document.getElementById("mexico-mouseovers").setAttribute("visibility","visbile");
+}
+hideStateMouseovers function(){
+document.getElementById("california-mouseovers").setAttribute("visibility","hidden");
+document.getElementById("nevada-mouseovers").setAttribute("visibility","hidden");
+document.getElementById("arizona-mouseovers").setAttribute("visibility","hidden");
+document.getElementById("mexico-mouseovers").setAttribute("visibility","hidden");
 }
 var scenes = [scene1, scene2, scene3, scene4, scene5, scene6, scene7,scene8];
 function move(name){
@@ -194,12 +219,7 @@ function removeUserPicto(user_id){
 	document.getElementById("picto-highlight-"+user_id).setAttribute("opacity","0.0");
 	eval(document.getElementById("picto-"+user_id).getAttribute("onmouseout").replace("evt","null").replace("evt","null"));
 }
-function drawStatePicto(user_id){
-	document.getElementById("draw-"+user_id+"-pictogram").beginElement();
-}
-function removeStatePicto(user_id){
-	document.getElementById("remove-"+user_id+"-pictogram").beginElement();
-}
+
 function setAllocationsNormal(){
 	document.getElementById("Nevada-pictos-normal").setAttribute("class","shown");
 	document.getElementById("Arizona-pictos-normal").setAttribute("class","shown");
@@ -573,6 +593,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <text id="mead-storage-text" class="label" x="460" y="410" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
     <text id="mead-storage-text" class="small-text" x="460" y="410" fill="#FFFFFF" dy="1.2em" stroke="none" style="text-anchor:middle;">(million acre feet)</text>
     <text id="allocation-info" class="label" x="55" y="450" fill="#FFFFFF" stroke="none" style="text-anchor:start;">  </text>
+    <text id="allocation-value" class="label" x="55" y="450" fill="#FFFFFF" stroke="none" style="text-anchor:start;">  </text>
     <text id="allocation-state" class="label" x="55" y="400" fill="none" stroke="none" style="text-anchor:start;">  </text>
   </g>
   <g id="California-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" class="hidden">
@@ -620,6 +641,12 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <rect x="44" y="89" width="10" height="10" rx="2" ry="2"/>
     <rect x="58" y="89" width="10" height="10" rx="2" ry="2"/>
     <rect x="72" y="89" width="10" height="10" rx="2" ry="2"/>
+    <g id='california-mouseovers' visibility='hidden'>
+		<rect x="28" y="87" width="70" height='56' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+		<rect x="98" y="115" width="28" height='28' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+		<rect x="56" y="143" width="98" height='42' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+		<rect x="112" y="185" width="42" height='28' stroke='black' opacity='0.0' onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+	</g>
   </g>
   <g id="allocation-picto-highlight-3" class="hidden" stroke="none" fill="yellow">
     <rect x="154" y="270" width="28" height="14" rx="3" ry="3"/>
