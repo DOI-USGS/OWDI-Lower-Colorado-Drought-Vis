@@ -79,14 +79,12 @@ def renderGraph(ele, floc):
         x = 0
         year = []
         perc = []
-        per = []
         raw = []
         year2 = []
         for row in doc:
             if(i != 0 and row[1] != 'NA'):
                 year.append(row[0])
                 perc.append(row[1])
-                per.append(row[4])
                 x+= 1
             if(i != 0):    
                 raw.append(row[2])
@@ -94,7 +92,8 @@ def renderGraph(ele, floc):
             i+= 1
         year = year[-100:]
         perc = perc[-100:]
-        per = per[-100:]
+        raw = raw[-100:]
+        year2 = year2[-100:]
         minbot = math.floor(float(year[0])/10) * 10
         if(minbot > 1900):
             minbot = 1900
@@ -111,13 +110,8 @@ def renderGraph(ele, floc):
         maxside = math.ceil(float(max)/5) * 5
         botstep = 500 / ((maxbot - minbot)/10)
         sidestep = 250 / ((maxside - minside)/5)
-        for i in range(0, len(per)-1):
-            if float(per[i]) > 10 and float(per[i+1]) == 0:
-                highlightRange(ele, int(year[i]) - int(per[i]) + 1, int(year[i]), minbot, maxbot - minbot)
-            if float(per[i]) > 10 and i + 1 == len(per)-1:
-                highlightRange(ele, int(year[i]) - int(per[i]) + 1, int(year[i+1]), minbot, maxbot - minbot)
-        drawGreenBox(ele, 1906, 1922, minbot, maxbot - minbot)
-        drawGreenBox(ele, 2000, 2015, minbot, maxbot - minbot)
+        drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75')
+        drawHighlightBox(ele, 2000, 2015, minbot, maxbot - minbot, '#CCCCB2')
         for i in range(0, len(year)-1):
             createLineBox(ele, int(year[i]), int(year[i])+1, minbot, maxbot - minbot, float(perc[i]), int(year[i]), i)
         for i in range(0, int((maxbot - minbot)/10) + 1):
@@ -152,17 +146,6 @@ def renderLabels(ele):
     tex = drawText(ele, 25, 10 + 250 - (250 - (8* len(sidel))) / 2, sidel)
     tex.set('transform', 'rotate(-90 25,' + str(10 + 250 - (250 - (8 * len(sidel))) / 2) + ')')
     drawText(ele, (65+250) - (len(botl)*10)/2, 300, botl)
-
-def highlightRange(ele, x1, x2, ymin, yrange):
-    rect = SubElement(ele, 'rect')
-    x1 = (x1 - ymin) * (500/yrange)
-    x2 = (x2 - ymin) * (500/yrange)
-    rect.set('y', str(0))
-    rect.set('height', str(250))
-    rect.set('width', str(x2 - x1))
-    rect.set('x', str(x1))
-    rect.set('fill', '#CCCCB2')
-    return rect
     
 def createLineBox(ele, x1, x2, ymin, yrange, avg, year, rot):
     box = highlightRange(ele, x1, x2, ymin, yrange)
@@ -193,7 +176,7 @@ def drawMinLine(ele, percdata, pmin, prange):
     drawLine(ele, 15, 250 - ((min - pmin)*(250/prange)), 485, 250 - ((min - pmin)*(250/prange)), 1, 'red')
     drawText(ele, 15, 250 - ((min - pmin)*(250/prange)) - 5, 'Minimum').set('fill', 'red')
     
-def drawGreenBox(ele, x1, x2, ymin, yrange):
+def drawHighlightBox(ele, x1, x2, ymin, yrange, color):
     rect = SubElement(ele, 'rect')
     x1 = (x1 - ymin) * (500/yrange)
     x2 = (x2 - ymin) * (500/yrange)
@@ -201,7 +184,7 @@ def drawGreenBox(ele, x1, x2, ymin, yrange):
     rect.set('height', str(250))
     rect.set('width', str(x2 - x1))
     rect.set('x', str(x1))
-    rect.set('fill', '#A3FF75')
+    rect.set('fill', color)
 
 def drawKey(ele):
     rect = SubElement(ele, 'rect')
@@ -215,5 +198,16 @@ def drawKey(ele):
     drawLine(ele, 254.1, 15, 304.1, 15, 2, '#9999FF')
     drawText(ele, 195.8, 23, '15-Year Average').set('style', 'font-size: 6px; font-weight: bold;')
     drawText(ele, 254.1, 23, 'Natural Flow').set('style', 'font-size: 6px; font-weight: bold;')
+    
+def highlightRange(ele, x1, x2, ymin, yrange):
+    rect = SubElement(ele, 'rect')
+    x1 = (x1 - ymin) * (500/yrange)
+    x2 = (x2 - ymin) * (500/yrange)
+    rect.set('y', str(0))
+    rect.set('height', str(250))
+    rect.set('width', str(x2 - x1))
+    rect.set('x', str(x1))
+    rect.set('fill', '#CCCCB2')
+    return rect
     
 main()
