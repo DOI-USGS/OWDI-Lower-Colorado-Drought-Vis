@@ -15,6 +15,7 @@ def main():
     css = SubElement(svg, 'style')
     css.set('type', 'text/css')
     css.text = ''
+    css.text += 'text {font-family: Sans-Serif}'
     css.text += '.linebox' + ':hover' + ' { opacity : .25 }'
     main = SubElement(svg, 'g')
     graph = SubElement(main, 'g')

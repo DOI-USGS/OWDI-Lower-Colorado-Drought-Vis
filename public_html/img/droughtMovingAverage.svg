@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <style type="text/css">.linebox:hover { opacity : .25 }
+  <style type="text/css">text {font-family: Sans-Serif}.linebox:hover { opacity : .25 }
 #box0:hover ~ .num0 { opacity : 1 }
 #box1:hover ~ .num1 { opacity : 1 }
 #box2:hover ~ .num2 { opacity : 1 }
