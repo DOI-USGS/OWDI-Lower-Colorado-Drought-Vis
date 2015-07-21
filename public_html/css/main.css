@@ -17,6 +17,7 @@ nav h3 {
 	margin: 0 0 100px 0;
 	padding: 15px;
 	text-align: center;
+	clear:both;
 }
 
 #welcomeContainer {
@@ -254,17 +255,13 @@ nav h3 {
 	padding: 10px;
 	border: 1px solid #003366;
 	border-radius: 5px;
-	margin: 20px 0 20px 0;
+	margin: 20px 0 100px 0;
 	outline: none;
 }
 
 .interact{
 	margin:-10px 0 20px 0;
 	}
-
-.spacer {
-	margin-bottom: 20px;
-}
 
 .supportinginfo:hover,
 .interact:hover{
@@ -278,7 +275,7 @@ nav h3 {
 	display: none;
 	padding: 15px;
 	color: #000;
-	margin: 10px 0 40px 0;
+	margin: -50px 0 100px 0;
 	border-radius: 5px;
 }
 
@@ -297,6 +294,10 @@ nav h3 {
 	text-align:left;
 	}
 	
+.leaving{
+	margin-right:3px;
+	}
+
 /*Blue Dragon Section CSS*/
 
 #blueDragon{
@@ -308,7 +309,7 @@ nav h3 {
 	}
 	
 #texas-thumbnail{
-	margin:40px auto 10px auto;
+	margin:100px auto 10px auto;
 	background:rgba(0,51,102,.2);
 	padding:10px;
 	border-radius:5px;
@@ -319,10 +320,24 @@ nav h3 {
 	width:100%;
 	}
 	
-#texas-app{
+.sectionContent .explore-more{
 	text-align:center;
 	}
+	
+/*Black and white images*/
 
+#black-white-images p{
+	margin-bottom:20px;
+	}
+	
+#black-white-images{
+	margin-top:50px;
+	}
+	
+#black-white-images img{
+	margin-bottom:10px;
+	}
+	
 /*Water Usage Section CSS*/
 
 #JrGraph h2 {
@@ -459,13 +474,16 @@ nav h3 {
 		width: 90%;
 		margin: 0 auto;
 	}
-	.spacer {
-		margin-bottom: 100px;
-	}
 	/*Section 5 CSS*/
 	#texas-thumbnail{
 		width:70%;
 		}
+		
+	/*Black and white images*/
+
+	#black-white-images p{
+		margin-bottom:50px;
+	}
 	
 	/*Section 9 CSS*/
 	
@@ -531,7 +549,11 @@ nav h3 {
 		margin:0 auto 20px 0;
 		margin-left:-10px;
 		}
-	
+		
+	#co-basin-object{
+		margin-top:50px;
+	}
+		
 	/*Water Usage CSS*/
 	
 	#JrGraph {
