@@ -24,7 +24,7 @@ mead_border_styles = c(fill='none','stroke-width'="2.5",stroke='#FFFFFF','stroke
 contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
 sorted_contracts <- sort(as.numeric(contracts$mean),decreasing = T, index.return = T)
 non_zero_cont <- as.numeric(contracts$mean[sorted_contracts$ix])
-non_zero_cont <- non_zero_cont[non_zero_cont!=0]
+non_zero_cont <- non_zero_cont[1:20]
 
 picto_scale = 100000 # acre-feet per bin
 mead_poly <- c(x1=535,y1=20,x2=535,y2=450,x3=400,y3=450,x4=280,y4= 20)
