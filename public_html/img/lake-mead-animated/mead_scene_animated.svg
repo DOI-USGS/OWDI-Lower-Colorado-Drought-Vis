@@ -56,13 +56,13 @@ var storages = {"flood":"26.1",
 document.getElementById("mead-storage-text").firstChild.data = "Storage: " + storages[storage_id] + " maf"
 document.getElementById("mead-elevation-text").firstChild.data = "Elevation: " + elevations[storage_id] + " feet"
 }
-showStateMouseovers function(){
+function showStateMouseovers(){
 document.getElementById("california-mouseovers").setAttribute("visibility","visbile");
 document.getElementById("nevada-mouseovers").setAttribute("visibility","visbile");
 document.getElementById("arizona-mouseovers").setAttribute("visibility","visbile");
 document.getElementById("mexico-mouseovers").setAttribute("visibility","visbile");
 }
-hideStateMouseovers function(){
+function hideStateMouseovers(){
 document.getElementById("california-mouseovers").setAttribute("visibility","hidden");
 document.getElementById("nevada-mouseovers").setAttribute("visibility","hidden");
 document.getElementById("arizona-mouseovers").setAttribute("visibility","hidden");
@@ -626,6 +626,12 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <rect x="44" y="89" width="10" height="10" rx="2" ry="2"/>
     <rect x="58" y="89" width="10" height="10" rx="2" ry="2"/>
     <rect x="72" y="89" width="10" height="10" rx="2" ry="2"/>
+    <g id="california-mouseovers" opacity="0" visibility="hidden">
+      <rect x="28" y="87" width="70" height="56" onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+      <rect x="98" y="115" width="28" height="28" onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+      <rect x="56" y="143" width="98" height="42" onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+      <rect x="112" y="185" width="42" height="28" onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+    </g>
   </g>
   <g id="allocation-picto-highlight-3" class="hidden" stroke="none" fill="yellow">
     <rect x="154" y="270" width="28" height="14" rx="3" ry="3"/>
@@ -658,6 +664,9 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </g>
     <g id="Nevada-pictos-shortage3" class="shown">
       <rect x="159" y="108" width="10" height="8" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="nevada-mouseovers" opacity="0" visibility="hidden">
+      <rect x="143" y="104" width="28" height="28" onmouseover="displayAllocationName(evt,'Nevada');highlightState(evt,'Nevada')" onmouseout="hideAllocationName(evt);lowlightState(evt,'Nevada')"/>
     </g>
   </g>
   <g id="Arizona-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" class="hidden">
@@ -707,6 +716,9 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <g id="Arizona-pictos-shortage3" class="shown">
       <rect x="271" y="210" width="10" height="2" rx="0" ry="0" stroke="none"/>
     </g>
+    <g id="arizona-mouseovers" opacity="0" visibility="hidden">
+      <rect x="199" y="158" width="84" height="70" onmouseover="displayAllocationName(evt,'Arizona');highlightState(evt,'Arizona')" onmouseout="hideAllocationName(evt);lowlightState(evt,'Arizona')"/>
+    </g>
   </g>
   <g id="Mexico-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" class="hidden">
     <rect x="156" y="272" width="10" height="10" rx="2" ry="2" fill="none"/>
@@ -738,6 +750,10 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </g>
     <g id="Mexico-pictos-shortage3" class="shown">
       <rect x="156" y="274.5" width="10" height="7.5" rx="0" ry="0" stroke="none"/>
+    </g>
+    <g id="mexico-mouseovers" opacity="0" visibility="hidden">
+      <rect x="70" y="242" width="70" height="28" onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')" onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"/>
+      <rect x="98" y="270" width="84" height="14" onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')" onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"/>
     </g>
   </g>
 </svg>

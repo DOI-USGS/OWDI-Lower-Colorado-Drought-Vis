@@ -86,6 +86,11 @@ add_nevada <- function(root_nd,scale){
                        attrs = c('id'='Nevada-pictos-shortage3',class='shown'))
   block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-20000/scale)*100,'stroke'='none')
   
+  m_id = newXMLNode('g', parent=NV_id,
+                    attrs = c('id'='nevada-mouseovers', opacity='0', visibility='hidden'))
+  newXMLNode('rect',parent=m_id,
+             attrs=c(x="143", y="104", width="28", height='28', onmouseover="displayAllocationName(evt,'Nevada');highlightState(evt,'Nevada')",
+                     onmouseout="hideAllocationName(evt);lowlightState(evt,'Nevada')"))
 }
 
 add_california <- function(root_nd,scale){
@@ -103,6 +108,20 @@ add_california <- function(root_nd,scale){
   y = block_picto(CA_id,x=x_start-84,y=y,number=5)
   y = block_picto(CA_id,x=x_start-84,y=y,number=4)
   
+  m_id = newXMLNode('g', parent=CA_id,
+             attrs = c('id'='california-mouseovers', opacity='0', visibility='hidden'))
+  newXMLNode('rect',parent=m_id,
+             attrs=c(x="28", y="87", width="70", height='56', onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')",
+                     onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"))
+  newXMLNode('rect',parent=m_id,
+             attrs=c(x="98", y="115", width="28", height='28', onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')",
+                     onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"))
+  newXMLNode('rect',parent=m_id,
+             attrs=c(x="56", y="143", width="98", height='42', onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')",
+                     onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"))
+  newXMLNode('rect',parent=m_id,
+             attrs=c(x="112", y="185", width="42", height='28', onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')",
+                     onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"))
 }
 
 add_arizona <- function(root_nd,scale){
@@ -137,7 +156,11 @@ add_arizona <- function(root_nd,scale){
   AR <- newXMLNode('g', parent=AR_id,
                    attrs = c('id'='Arizona-pictos-shortage3',class='shown'))
   block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0", perc_full = (1-80000/scale)*100,'stroke'='none')
-  
+  m_id = newXMLNode('g', parent=AR_id,
+                    attrs = c('id'='arizona-mouseovers', opacity='0', visibility='hidden'))
+  newXMLNode('rect',parent=m_id,
+             attrs=c(x="199", y="158", width="84", height='70', onmouseover="displayAllocationName(evt,'Arizona');highlightState(evt,'Arizona')",
+                     onmouseout="hideAllocationName(evt);lowlightState(evt,'Arizona')"))
 }
 
 add_mexico <- function(root_nd,scale){
@@ -174,5 +197,14 @@ add_mexico <- function(root_nd,scale){
   MX <- newXMLNode('g', parent=MX_id,
                    attrs = c('id'='Mexico-pictos-shortage3',class='shown'))
   block_picto(MX,x=x_start+14*6,y=y_start,number=1,rx="0",ry="0",perc_full = (1-25000/scale)*100,'stroke'='none')
+  
+  m_id = newXMLNode('g', parent=MX_id,
+                    attrs = c('id'='mexico-mouseovers', opacity='0', visibility='hidden'))
+  newXMLNode('rect',parent=m_id,
+             attrs=c(x="70", y="242", width="70", height='28', onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')",
+                     onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"))
+  newXMLNode('rect',parent=m_id,
+             attrs=c(x="98", y="270", width="84", height='14', onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')",
+                     onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"))
   
 }
