@@ -204,12 +204,16 @@ def drawGreenBox(ele, x1, x2, ymin, yrange):
     rect.set('fill', '#A3FF75')
 
 def drawKey(ele):
-    drawLine(ele, 187.5, 0, 187.5, 30, 2, 'black')
-    drawLine(ele, 312.5, 0, 312.5, 30, 2, 'black')
-    drawLine(ele, 312.5, 30, 187.5, 30, 2, 'black')
-    drawLine(ele, 195.8, 10, 245.8, 10, 2, 'blue')
-    drawLine(ele, 254.1, 10, 304.1, 10, 2, '#9999FF')
-    drawText(ele, 195.8, 18, '15-Year Average').set('style', 'font-size: 6px; font-weight: bold;')
-    drawText(ele, 254.1, 18, 'Natural Flow').set('style', 'font-size: 6px; font-weight: bold;')
+    rect = SubElement(ele, 'rect')
+    rect.set('x', '187.5')
+    rect.set('y', '5')
+    rect.set('height', '30')
+    rect.set('width', '125')
+    rect.set('fill', '#ffffff')
+    rect.set('fill-opacity', '.3')
+    drawLine(ele, 195.8, 15, 245.8, 15, 2, 'blue')
+    drawLine(ele, 254.1, 15, 304.1, 15, 2, '#9999FF')
+    drawText(ele, 195.8, 23, '15-Year Average').set('style', 'font-size: 6px; font-weight: bold;')
+    drawText(ele, 254.1, 23, 'Natural Flow').set('style', 'font-size: 6px; font-weight: bold;')
     
 main()
