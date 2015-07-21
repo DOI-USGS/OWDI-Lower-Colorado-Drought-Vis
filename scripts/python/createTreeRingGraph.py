@@ -140,6 +140,7 @@ def renderGraph(ele, floc):
             drawText(ele, -30, 250 - (i * sidestep) + 5, str(int((i * 5) + minside)))
             if int((i * 5) + minside) == 100:
                 drawLine(ele, 15, 250 - (i * sidestep), 485, 250 - (i * sidestep), 1, 'black')
+        drawKey(ele)
         drawLine(ele, 0, 250, 500, 250, 2, 'black')
         drawLine(ele, 0, 250, 0, 0, 2, 'black')
         drawLine(ele, 0, 0, 500, 0, 2, 'black')
@@ -201,5 +202,14 @@ def drawGreenBox(ele, x1, x2, ymin, yrange):
     rect.set('width', str(x2 - x1))
     rect.set('x', str(x1))
     rect.set('fill', '#A3FF75')
+
+def drawKey(ele):
+    drawLine(ele, 187.5, 0, 187.5, 30, 2, 'black')
+    drawLine(ele, 312.5, 0, 312.5, 30, 2, 'black')
+    drawLine(ele, 312.5, 30, 187.5, 30, 2, 'black')
+    drawLine(ele, 195.8, 10, 245.8, 10, 2, 'blue')
+    drawLine(ele, 254.1, 10, 304.1, 10, 2, '#9999FF')
+    drawText(ele, 195.8, 18, '15-Year Average').set('style', 'font-size: 6px; font-weight: bold;')
+    drawText(ele, 254.1, 18, 'Natural Flow').set('style', 'font-size: 6px; font-weight: bold;')
     
 main()
