@@ -49,11 +49,12 @@ hide("non-lo-co-states");
 show("Mead-2D");
 }
 function scene4(){
-setMeadCondition("normal-fall");
-setAllocationsNormal();
+move("Mead-normal");
+//setAllocationsNormal();
 }
 function scene5(){
-setAllocationsShortage1();
+move("Mead-shortage-1");
+//setAllocationsShortage1();
 }
 var scenes = [scene1, scene2, scene3, scene4, scene5];
 function show(name){
@@ -91,6 +92,12 @@ var ele = document.getElementById(name);
 if (ele.getAttribute("transform") === null | ele.getAttribute("transform") === match){
 document.getElementById(name+"-"+transformFun).beginElement();
 }
+}
+function move(name){
+	var ani = document.getElementById(name);
+	var fromValue = ani.getAttribute("attributeName");
+	ani.setAttribute('from',ani.parentNode.getAttribute(fromValue));
+	ani.beginElement();
 }
 function draw(name){
 document.getElementById("draw-"+name).beginElement();}
@@ -561,7 +568,9 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </g>
   </g>
   <g id="Mead-2D" class="hidden">
-    <rect id="Mead-water-level" x="280" y="20" width="255" height="430" fill="#0066CC" stroke="none" clip-path="url(#Mead-clip)"/>
+    <rect id="Mead-water-level" x="280" y="20" width="255" height="430" fill="#0066CC" stroke="none" clip-path="url(#Mead-clip)">
+      <animate attributeName="y" id="Mead-normal" begin="indefinite" fill="freeze" dur="1s" from="197.608695652174" to="197.608695652174"/>
+    </rect>
     <path id="Mead-2D-border" d="M 535 20 L 535 450 L 400 450 L 280 20" fill="none" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round"/>
   </g>
   <g id="California-pictos" stroke="#0066CC" stroke-width="1.5" fill="#0066CC" opacity="0">
