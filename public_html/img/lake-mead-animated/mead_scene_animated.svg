@@ -20,9 +20,7 @@
 if ( window.svgDocument == null ) {
 svgDocument = evt.target.ownerDocument;
 svgDocument.incrementScene = this.incrementScene;
-svgDocument.decrementScene = this.decrementScene;
-svgDocument.show = this.show;
-svgDocument.hide = this.hide;}
+svgDocument.decrementScene = this.decrementScene;}
 }
 var sceneNum = 0;
 function incrementScene(){
@@ -47,16 +45,16 @@ function scene2(){
 	show("co-river-polyline");
 	show("co-basin-polygon");
 	resetStates();
-	//removeStatePicto("nevada");
-	//removeStatePicto("california");
-	//removeStatePicto("arizona");
-	//removeStatePicto("mexico");
+	hide("Nevada-pictos");
+	hide("California-pictos");
+	hide("Arizona-pictos");
+	hide("Mexico-pictos");
 }
 function scene3(){
-	//drawStatePicto("nevada");
-	//drawStatePicto("california");
-	//drawStatePicto("arizona");
-	//drawStatePicto("mexico");
+	show("Nevada-pictos");
+	show("California-pictos");
+	show("Arizona-pictos");
+	show("Mexico-pictos");
 	hide("pictogram-topfive");
 	hide("co-river-polyline");
 	hide("co-basin-polygon");
