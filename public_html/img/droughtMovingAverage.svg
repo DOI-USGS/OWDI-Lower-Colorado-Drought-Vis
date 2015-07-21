@@ -990,7 +990,7 @@
       <text fill="black" x="-30" y="67.5">20</text>
       <line stroke="black" stroke-width="2" x1="0" x2="5" y1="250.0" y2="250.0"/>
       <text fill="black" x="-30" y="5.0">25</text>
-      <rect fill="#ffffff" fill-opacity=".3" height="30" width="125" x="187.5" y="5"/>
+      <rect fill="#CFCFCF" height="30" width="125" x="187.5" y="5"/>
       <line stroke="blue" stroke-width="2" x1="195.8" x2="245.8" y1="15" y2="15"/>
       <line stroke="#9999FF" stroke-width="2" x1="254.1" x2="304.1" y1="15" y2="15"/>
       <text fill="black" style="font-size: 6px; font-weight: bold;" x="195.8" y="23">15-Year Average</text>
