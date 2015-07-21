@@ -9,7 +9,8 @@
 .hidden {
     opacity:0;
 }
-.california, .nevada, .arizona, .mexico, .california-moved, .nevada-moved, .arizona-moved, .mexico-moved {
+.california, .nevada, .arizona, .mexico, .california-moved, .nevada-moved, .arizona-moved, .mexico-moved, 
+.mead-flood, .mead-surplus, .mead-normal, .mead-shortage-1, .mead-shortage-2, .mead-shortage-3 {
     -webkit-transition: 1s ease-in-out;
     -moz-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
@@ -20,6 +21,36 @@
     mask: url(#mexico-mask);
 }
 
+.mead-flood {
+    -ms-transform: translate(0px,41.81159px); /* IE 9 */
+    -webkit-transform: translate(0px,41.81159px); /* Safari */
+    transform: translate(0px,41.81159px);
+}
+.mead-surplus {
+    -ms-transform: translate(0px,90.109px); /* IE 9 */
+    -webkit-transform: translate(0px,90.109px); /* Safari */
+    transform: translate(0px,90.109px);
+}
+.mead-normal {
+    -ms-transform: translate(0px,197.61px); /* IE 9 */
+    -webkit-transform: translate(0px,197.61px); /* Safari */
+    transform: translate(0px,197.61px);
+}
+.mead-shortage-1 {
+    -ms-transform: translate(0px,300.4px); /* IE 9 */
+    -webkit-transform: translate(0px,300.4px); /* Safari */
+    transform: translate(0px,300.4px);
+}
+.mead-shortage-2 {
+    -ms-transform: translate(0px,330.04px); /* IE 9 */
+    -webkit-transform: translate(0px,330.04px); /* Safari */
+    transform: translate(0px,330.04px);
+}
+.mead-shortage-3 {
+    -ms-transform: translate(0px,356.52px); /* IE 9 */
+    -webkit-transform: translate(0px,356.52px); /* Safari */
+    transform: translate(0px,356.52px);
+}
 .california-moved {
     -ms-transform: translate(-40px,-20px); /* IE 9 */
     -webkit-transform: translate(-40px,-20px); /* Safari */
