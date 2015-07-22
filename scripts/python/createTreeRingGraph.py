@@ -112,8 +112,10 @@ def renderGraph(ele, floc):
         sidestep = 250 / ((maxside - minside)/5)
         drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75')
         drawHighlightBox(ele, 2000, 2015, minbot, maxbot - minbot, '#CCCCB2')
+        for i in range(0, 6):
+            createLineBox(ele, int(year2[i]), int(year2[i])+1, minbot, maxbot - minbot, None, float(raw[i]), int(year2[i]), i)
         for i in range(0, len(year)-1):
-            createLineBox(ele, int(year[i]), int(year[i])+1, minbot, maxbot - minbot, float(perc[i]), int(year[i]), i)
+            createLineBox(ele, int(year2[i+6]), int(year2[i+6])+1, minbot, maxbot - minbot, float(perc[i]), float(raw[i+6]), int(year2[i+6]), i+6)
         for i in range(0, int((maxbot - minbot)/10) + 1):
             if i % 2 == 0:
                 drawLine(ele, i * botstep, 250, i * botstep, 245, 2, 'black')
@@ -134,7 +136,7 @@ def renderGraph(ele, floc):
             drawText(ele, -30, 250 - (i * sidestep) + 5, str(int((i * 5) + minside)))
             if int((i * 5) + minside) == 100:
                 drawLine(ele, 15, 250 - (i * sidestep), 485, 250 - (i * sidestep), 1, 'black')
-        drawKey(ele)
+        #drawKey(ele)
         drawLine(ele, 0, 250, 500, 250, 2, 'black')
         drawLine(ele, 0, 250, 0, 0, 2, 'black')
         drawLine(ele, 0, 0, 500, 0, 2, 'black')
@@ -147,7 +149,8 @@ def renderLabels(ele):
     tex.set('transform', 'rotate(-90 25,' + str(10 + 250 - (250 - (8 * len(sidel))) / 2) + ')')
     drawText(ele, (65+250) - (len(botl)*10)/2, 300, botl)
     
-def createLineBox(ele, x1, x2, ymin, yrange, avg, year, rot):
+def createLineBox(ele, x1, x2, ymin, yrange, avg, raw, year, rot):
+    print(year)
     box = highlightRange(ele, x1, x2, ymin, yrange)
     box.set('class', 'linebox')
     box.set('fill', 'blue')
@@ -155,18 +158,27 @@ def createLineBox(ele, x1, x2, ymin, yrange, avg, year, rot):
     box.set('id', 'box' + str(rot))
     box.set('class', 'linebox')
     css.text += '\n#box' + str(rot) + ':hover ~' + ' .num' + str(rot) + ' { opacity : 1 }'
-    text1 = drawText(ele, 15, 245, 'Flow: ' + str(round(avg, 2)))
-    text1.set('fill', 'green')
+    if avg == None:
+        text1 = drawText(ele, 15, 245, 'Flow: NA')
+    else:
+        text1 = drawText(ele, 15, 245, 'Flow: ' + str(round(avg, 2)))
+    text1.set('fill', 'blue')
     text1.set('opacity', '0')
     text1.set('font-weight', 'bold')
     text1.set('font-size', '12')
     text1.set('class', 'num' + str(rot))
     text2 = drawText(ele, 15, 15, 'Year: ' + str(year))
-    text2.set('fill', 'blue')
+    text2.set('fill', 'black')
     text2.set('opacity', '0')
     text2.set('font-weight', 'bold')
     text2.set('font-size', '12')
     text2.set('class', 'num' + str(rot))
+    text3 = drawText(ele, 15, 230, 'Raw: ' + str(round(raw, 2)))
+    text3.set('fill', '#9999FF')
+    text3.set('opacity', '0')
+    text3.set('font-weight', 'bold')
+    text3.set('font-size', '12')
+    text3.set('class', 'num' + str(rot))
     
 def drawMinLine(ele, percdata, pmin, prange):
     min = float(percdata[0])
