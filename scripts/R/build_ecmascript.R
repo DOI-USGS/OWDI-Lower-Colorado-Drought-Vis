@@ -2,83 +2,202 @@ ecmascript_mead_map <- function(){
   
   scripts <- c('function init(evt){',
                'if ( window.svgDocument == null ) {',
-               'svgDocument = evt.target.ownerDocument;',
-               'svgDocument.drawRiver = this.drawRiver;',
-               'svgDocument.showRiver = this.showRiver;',
-               'svgDocument.drawBasin = this.drawBasin;',
-               'svgDocument.drawMead = this.drawMead;',
-               'svgDocument.drawPictogram = this.drawPictogram;',
-               'svgDocument.removeGreyStates = this.removeGreyStates;',
-               'svgDocument.resetGreyStates = this.resetGreyStates;',
-               'svgDocument.removeRiver = this.removeRiver;',
-               'svgDocument.removeMead = this.removeMead;',
-               'svgDocument.resetRiver = this.resetRiver;',
-               'svgDocument.resetBasin = this.resetBasin;',
-               'svgDocument.removePictogram = this.removePictogram;',
-               'svgDocument.moveStates = this.moveStates;',
-               'svgDocument.drawUserPicto = this.drawUserPicto;',
-               'svgDocument.removeUserPicto = this.removeUserPicto;',
-               'svgDocument.setMeadCondition = this.setMeadCondition;',
-               'svgDocument.setAllocationsNormal = this.setAllocationsNormal;',
-               'svgDocument.setAllocationsShortage1 = this.setAllocationsShortage1;',
-               'svgDocument.setAllocationsShortage2 = this.setAllocationsShortage2;',
-               'svgDocument.setAllocationsShortage3 = this.setAllocationsShortage3;',
-               'svgDocument.drawStatePicto = this.drawStatePicto;',
-               'svgDocument.removeStatePicto = this.removeStatePicto;',
-               'svgDocument.resetStates = this.resetStates;}',
-               
+  'svgDocument = evt.target.ownerDocument;',
+               'svgDocument.incrementScene = this.incrementScene;',
+               'svgDocument.decrementScene = this.decrementScene;}',
                '}',
-               'function showRiver(){',
-               'document.getElementById("show-river").beginElement();}',
+  'function displayAllocationName(evt, name) {',
+    'var data = {"California":{',
+      '"flood":"4,400,000",',
+      '"surplus":"4,400,000",',
+      '"normal":"4,400,000",',
+      '"shortage-1":"4,400,000",',
+      '"shortage-2":"4,400,000",',
+      '"shortage-3":"4,400,000"},',
+      '"Arizona":{',
+        '"flood":"2,800,000",',
+        '"surplus":"2,800,000",',
+        '"normal":"2,800,000",',
+        '"shortage-1":"2,480,000",',
+        '"shortage-2":"2,400,000",',
+        '"shortage-3":"2,320,000"},',
+      '"Nevada":{',
+        '"flood":"300,000",',
+        '"surplus":"300,000",',
+        '"normal":"300,000",',
+        '"shortage-1":"287,000",',
+        '"shortage-2":"283,000",',
+        '"shortage-3":"280,000"},',
+      '"Mexico":{',
+        '"flood":"1,500,000",',
+        '"surplus":"1,500,000",',
+        '"normal":"1,500,000",',
+        '"shortage-1":"1,450,000",',
+        '"shortage-2":"1,430,000",',
+        '"shortage-3":"1,375,000"}};',
+    'var state = document.getElementById("allocation-state").firstChild.data',
+    'document.getElementById("allocation-value").firstChild.data = name + ": " + data[name][state] +" acre-feet/year";',
+'}',
+  'function setMeadCondition(storage_id){',
+    
+    'document.getElementById("allocation-state").firstChild.data = storage_id',
+    'var elevations = {"flood":"1,219.6",',
+      '"surplus":"1,200",',
+      '"normal":"1,145",',
+      '"shortage-1":"1,075",',
+      '"shortage-2":"1,050",',
+      '"shortage-3":"1,025"}',
+    'var storages = {"flood":"26.1",',
+      '"surplus":"23.1",',
+      '"normal":"16.2",',
+      '"shortage-1":"9.6",',
+      '"shortage-2":"7.7",',
+      '"shortage-3":"6.0"}',
+    'document.getElementById("mead-storage-text").firstChild.data = "Storage: " + storages[storage_id] + " maf"',
+    'document.getElementById("mead-elevation-text").firstChild.data = "Elevation: " + elevations[storage_id] + " feet"',
+  '}',
+'function showStateMouseovers(){',
+  'document.getElementById("california-mouseovers").setAttribute("visibility","visbile");',
+  'document.getElementById("nevada-mouseovers").setAttribute("visibility","visbile");',
+  'document.getElementById("arizona-mouseovers").setAttribute("visibility","visbile");',
+  'document.getElementById("mexico-mouseovers").setAttribute("visibility","visbile");',
+'}',
+'function hideStateMouseovers(){',
+  'document.getElementById("california-mouseovers").setAttribute("visibility","hidden");',
+  'document.getElementById("nevada-mouseovers").setAttribute("visibility","hidden");',
+  'document.getElementById("arizona-mouseovers").setAttribute("visibility","hidden");',
+  'document.getElementById("mexico-mouseovers").setAttribute("visibility","hidden");',
+'}',
+'function highlightState(evt, name) {',
+  'document.getElementById(name).setAttribute("stroke","#808080");',
+'}',
+
+'function lowlightState(evt, name) {',
+  'document.getElementById(name).setAttribute("stroke","#FFFFFF");',
+'}',
+
+'function hideAllocationName(evt) {',
+  'document.getElementById("allocation-value").firstChild.data = " ";',
+'}',
+               'var sceneNum = 0;',
                
-               'function drawMead(){',
-               'document.getElementById("mead-draw").beginElement();}',
-               'function removeMead(){',
-               'document.getElementById("mead-remove").beginElement();}',
+               'function incrementScene(){',
+               'if (sceneNum < scenes.length-1){',
+               'scenes[++sceneNum]();',
+               '}',
+               '}',
                
-               'function drawRiver(){',
-               'document.getElementById("colorado-river-draw").beginElement();}',
-               'function resetRiver(){',
-               'document.getElementById("colorado-river-reset").beginElement();}',
+               'function decrementScene(){',
+               'if (sceneNum > 0){',
+               'scenes[--sceneNum]();',
+               '}',
+               '}',
                
-               'function drawBasin(){',
-               'document.getElementById("colorado-basin-draw").beginElement();}',
-               'function resetBasin(){',
-               'document.getElementById("remove-basin").beginElement();}',
+               'function scene1(){',
+               'show("co-river-polyline");',
+                'draw("colorado-river");',
+              'show("co-basin-polygon");',
+              'hide("pictogram-topfive");',
+               '}',
                
-               'function drawPictogram(){',
-               'document.getElementById("pictogram-topfive-draw").beginElement();}',
-               'function resetPictogram(){',
-               'document.getElementById("pictogram-topfive-reset").beginElement();}',
+               'function scene2(){',
+'show("pictogram-topfive");',
+'show("non-lo-co-states");',
+'show("co-river-polyline");',
+'show("co-basin-polygon");',
+'resetStates();',
+'hide("Nevada-pictos");',
+'hide("California-pictos");',
+'hide("Arizona-pictos");',
+'hide("Mexico-pictos");',
+'hide("Mead-2D");',
+'hideStateMouseovers();',
+               '}',
                
-               'function removeGreyStates(){',
-               'document.getElementById("remove-grey-states").beginElement();}',
-               'function resetGreyStates(){',
-               'document.getElementById("reset-grey-states").beginElement();}',
+               'function scene3(){',
+'showStateMouseovers();',
+'show("Nevada-pictos");',
+'show("California-pictos");',
+'show("Arizona-pictos");',
+'show("Mexico-pictos");',
+'hide("pictogram-topfive");',
+'hide("co-river-polyline");',
+'hide("co-basin-polygon");',
+'moveStates();',
+'hide("non-lo-co-states");',
+'show("Mead-2D");',
+'\tdocument.getElementById("Mead-water-level").setAttribute("class","mead-flood");',
+'\tdocument.getElementById("mead-elevation-text-position").setAttribute("class","mead-flood");',
+'\tsetMeadCondition("flood");',
+'\tsetAllocationsNormal();',
+               '}',
+'function scene4(){',
+'\tdocument.getElementById("Mead-water-level").setAttribute("class","mead-surplus");',
+'\tdocument.getElementById("mead-elevation-text-position").setAttribute("class","mead-surplus");',
+'\tsetMeadCondition("surplus");',
+'\tsetAllocationsNormal();',
+'}',
+'function scene5(){',
+'\tdocument.getElementById("Mead-water-level").setAttribute("class","mead-normal");',
+'\tdocument.getElementById("mead-elevation-text-position").setAttribute("class","mead-normal");',
+'\tsetMeadCondition("normal");',
+'\tsetAllocationsNormal();',
+'}',
+               'function scene6(){',
+'\tdocument.getElementById("Mead-water-level").setAttribute("class","mead-shortage-1");',
+'\tdocument.getElementById("mead-elevation-text-position").setAttribute("class","mead-shortage-1");',
+'\tsetMeadCondition("shortage-1");',
+               '\tsetAllocationsShortage1();',
+               '}',
+
+'function scene7(){',
+'\tdocument.getElementById("Mead-water-level").setAttribute("class","mead-shortage-2");',
+'\tdocument.getElementById("mead-elevation-text-position").setAttribute("class","mead-shortage-2");',
+'\tsetMeadCondition("shortage-2");',
+'\tsetAllocationsShortage2();',
+'}',
+'function scene8(){',
+'\tdocument.getElementById("Mead-water-level").setAttribute("class","mead-shortage-3");',
+'\tdocument.getElementById("mead-elevation-text-position").setAttribute("class","mead-shortage-3");',
+'\tsetMeadCondition("shortage-3");',
+'\tsetAllocationsShortage3();',
+'}',
                
-               'function removeRiver(){',
-               'document.getElementById("remove-river").beginElement();',
-               'document.getElementById("remove-basin").beginElement();}',
                
-               'function removePictogram(){',
-               'document.getElementById("remove-pictogram").beginElement();}',
+               'var scenes = [scene1, scene2, scene3, scene4, scene5, scene6, scene7,scene8];',
+
+'function move(name){',
+  '\tvar ani = document.getElementById(name);',
+  '\tvar fromValue = ani.getAttribute("attributeName");',
+  '\tani.setAttribute("from",ani.parentNode[fromValue].animVal.valueAsString);',
+  '\tani.beginElement();',
+'}',
+'function show(name){',
+'var ele = document.getElementById(name);',
+'ele.setAttribute("class","shown");',
+'}',
+
+'function hide(name){',
+'var ele = document.getElementById(name);',
+'ele.setAttribute("class","hidden");',
+'}',
+'function resetStates(){ ',
+'document.getElementById("California").setAttribute("class","california");',
+'document.getElementById("Nevada").setAttribute("class","nevada");',
+'document.getElementById("Arizona").setAttribute("class","arizona");',
+'document.getElementById("Mexico").setAttribute("class","mexico");',
+'}',
+'function moveStates(){',
+'document.getElementById("California").setAttribute("class","california-moved");',
+'document.getElementById("Nevada").setAttribute("class","nevada-moved");',
+'document.getElementById("Arizona").setAttribute("class","arizona-moved");',
+'document.getElementById("Mexico").setAttribute("class","mexico-moved");',
+'}',
+
+
+'function draw(name){',
+'document.getElementById("draw-"+name).beginElement();}',
                
-               'function moveStates(){',
-               'document.getElementById("California-move").beginElement();',
-               'document.getElementById("Nevada-move").beginElement();',
-               'document.getElementById("Arizona-move").beginElement();',
-               'document.getElementById("Nevada-move").beginElement();',
-               'document.getElementById("mexico-move").beginElement();',
-               'document.getElementById("Mexico-stroke").beginElement();',
-               'document.getElementById("Mexico-scale").beginElement();}',
-               'function resetStates(){',
-               'document.getElementById("California-reset").beginElement();',
-               'document.getElementById("Nevada-reset").beginElement();',
-               'document.getElementById("Arizona-reset").beginElement();',
-               'document.getElementById("Nevada-reset").beginElement();',
-               'document.getElementById("mexico-reset").beginElement();',
-               'document.getElementById("Mexico-stroke-reset").beginElement();',
-               'document.getElementById("Mexico-scale-reset").beginElement();}',
                
                'function drawUserPicto(user_id){',
                '\tdocument.getElementById("usage-"+user_id).setAttribute("opacity","0.8");',
@@ -108,128 +227,60 @@ ecmascript_mead_map <- function(){
                '\teval(document.getElementById("picto-"+user_id).getAttribute("onmouseout").replace("evt","null").replace("evt","null"));',
                '}',
                
-               'function drawStatePicto(user_id){',
-               '\tdocument.getElementById("draw-"+user_id+"-pictogram").beginElement();',
-               '}',
-               'function removeStatePicto(user_id){',
-               '\tdocument.getElementById("remove-"+user_id+"-pictogram").beginElement();',
-               '}',
-               
                'function setAllocationsNormal(){',
-               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0");',
-               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0");',
-               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0");',
+               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("class","shown");',
+               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("class","shown");',
+               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("class","shown");',
+               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","hidden");',
                '}',
                
                'function setAllocationsShortage1(){',
-               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0.8");',
-               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0");',
-               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0");',
+               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Nevada-pictos-shortage1").setAttribute("class","shown");',
+               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("class","shown");',
+               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("class","shown");',
+               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","shown");',
+               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","hidden");',
                '}',
                
                'function setAllocationsShortage2(){',
-               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Nevada-pictos-shortage2").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Arizona-pictos-shortage2").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Mexico-pictos-shortage2").setAttribute("visibility","visible");',
-               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0");',
-               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0.8");',
-               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0");',
+               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Nevada-pictos-shortage1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Nevada-pictos-shortage2").setAttribute("class","shown");',
+               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Arizona-pictos-shortage2").setAttribute("class","shown");',
+               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Mexico-pictos-shortage2").setAttribute("class","shown");',
+               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","shown");',
+               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","hidden");',
                '}',
                
                'function setAllocationsShortage3(){',
-               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Nevada-pictos-shortage1").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Nevada-pictos-shortage2").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Arizona-pictos-shortage2").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("Mexico-pictos-shortage2").setAttribute("visibility","hidden");',
-               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("opacity","0");',
-               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("opacity","0");',
-               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("opacity","0.8");',
+               '\tdocument.getElementById("Nevada-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Nevada-pictos-shortage1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Nevada-pictos-shortage2").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Nevada-pictos-shortage3").setAttribute("class","shown");',
+               '\tdocument.getElementById("Arizona-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Arizona-pictos-shortage1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Arizona-pictos-shortage2").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Arizona-pictos-shortage3").setAttribute("class","shown");',
+               '\tdocument.getElementById("Mexico-pictos-normal").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Mexico-pictos-shortage1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Mexico-pictos-shortage2").setAttribute("class","hidden");',
+               '\tdocument.getElementById("Mexico-pictos-shortage3").setAttribute("class","shown");',
+               '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","hidden");',
+               '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","shown");',
                '}',
-               
-               'function setMeadCondition(storage_id){',
-               'document.getElementById("Mead-"+storage_id).beginElement();}',
-               'function showRiverDOM(){
-	animateIE(document.getElementById("show-river"));
-}
-function drawRiverDOM(){
-animateIE(document.getElementById("colorado-river-draw"));
-}
-function resetRiverDOM(){
-animateIE(document.getElementById("colorado-river-reset"));
-animateIE(document.getElementById("reset-river"));
-}
-function drawBasinDOM(){
-animateIE(document.getElementById("colorado-basin-draw"));
-}
-function resetBasinDOM(){
-animateIE(document.getElementById("remove-basin"));
-}
-function drawPictogramDOM(){
-animateIE(document.getElementById("pictogram-topfive-draw"));
-}
-function resetPictogramDOM(){
-animateIE(document.getElementById("pictogram-topfive-reset"));
-}
-function removeGreyStatesDOM(){
-animateIE(document.getElementById("remove-grey-states"));
-}
-function resetGreyStatesDOM(){
-animateIE(document.getElementById("reset-grey-states"));
-}
-function removeRiverDOM(){
-animateIE(document.getElementById("remove-river"));
-animateIE(document.getElementById("remove-basin"));
-}
-function removePictogramDOM(){
-animateIE(document.getElementById("remove-pictogram"));
-}
-function highlightUserDOM(user_id){
-animateIE(document.getElementById("pictogram-"+user_id+"-draw"));
-animateIE(document.getElementById("user-"+user_id+"-draw"));
-}
-function moveStatesDOM(){
-animateIE(document.getElementById("California-move"));
-animateIE(document.getElementById("Nevada-move"));
-animateIE(document.getElementById("Arizona-move"));
-animateIE(document.getElementById("Nevada-move"));
-animateIE(document.getElementById("mexico-move"));
-animateIE(document.getElementById("Mexico-stroke"));
-animateIE(document.getElementById("Mexico-scale"));
-}
-function resetStatesDOM(){
-animateIE(document.getElementById("California-reset"));
-animateIE(document.getElementById("Nevada-reset"));
-animateIE(document.getElementById("Arizona-reset"));
-animateIE(document.getElementById("Nevada-reset"));
-animateIE(document.getElementById("mexico-reset"));
-animateIE(document.getElementById("Mexico-stroke-reset"));
-animateIE(document.getElementById("Mexico-scale-reset"));
-}
-function setMeadConditionDOM(storage_id){
-animateIE(document.getElementById("Mead-"+storage_id));
-}
-
-function animateIE(element) {
+'function animateIE(element) {
 if(element instanceof Element) {
 if(element.nodeName === "animate" || element.nodeName === "animateTransform") {
 var parent = element.parentNode;

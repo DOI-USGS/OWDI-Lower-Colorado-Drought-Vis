@@ -297,6 +297,11 @@ nav h3 {
 .leaving{
 	margin-right:3px;
 	}
+	
+/*Photo Panel*/
+#photoPanel img{
+		width:32.5%;
+		}
 
 /*Blue Dragon Section CSS*/
 
@@ -327,7 +332,15 @@ nav h3 {
 /*Black and white images*/
 
 #black-white-images p{
-	margin-bottom:50px;
+	margin-bottom:20px;
+	}
+	
+#black-white-images{
+	margin-top:50px;
+	}
+	
+#black-white-images img{
+	margin-bottom:10px;
 	}
 	
 /*Water Usage Section CSS*/
@@ -471,6 +484,12 @@ nav h3 {
 		width:70%;
 		}
 	
+	/*Black and white images*/
+
+	#black-white-images p{
+		margin-bottom:50px;
+	}
+	
 	/*Section 9 CSS*/
 	
 	#JrGraph h2 {
@@ -517,6 +536,11 @@ nav h3 {
 	.graphCaption{
 		width:900px;
 		margin:0 auto;
+		}
+		
+	/*Photo Panel*/
+	#photoPanel img{
+		width:33%;
 		}
 	
 	/*Blue Dragon Section CSS*/

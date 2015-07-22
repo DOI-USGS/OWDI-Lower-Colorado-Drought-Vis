@@ -159,7 +159,7 @@ add_text<- function(svg, text, ...){
 add_ecmascript <- function(svg, text){
   svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
   
-  newXMLNode('script', parent = svg_nd, attrs=c(type='text/ecmascript'), 
+  newXMLNode('script', at=0, parent = svg_nd, attrs=c(type='text/ecmascript'), 
              newXMLTextNode(paste0(text,collapse='\n'), cdata = TRUE))
 
   invisible(svg)

@@ -7,10 +7,17 @@ add_mead_levels <- function(svg, mead_poly, mead_water_styles, mead_border_style
   newXMLNode('path', parent = clip_nd, attrs=c(d=full_mead_path, stroke='none'))
   
   svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
-  g_id <- newXMLNode('g', parent = svg_nd, attrs=c(id=group_id, opacity='0'))
-  newXMLNode('rect', parent = g_id, attrs=c(id=water_id, x='280',y='20',width='255',height='430',mead_water_styles ))
+  g_id <- newXMLNode('g', parent = svg_nd, attrs=c(id=group_id, 'class'="hidden"))
+  newXMLNode('rect', parent = newXMLNode('g', parent=g_id,attrs=c('clip-path'="url(#Mead-clip)")), attrs=c(id=water_id, x='280',y='20',width='255',height='430',mead_water_styles ))
+  
   newXMLNode('path', parent = g_id, attrs=c(id=border_id, d=full_mead_path, mead_border_styles))
-
+  t_id <- newXMLNode('g',parent=g_id, attrs = c(id = "mead-elevation-text-position"))
+  newXMLNode('text', parent = t_id, newXMLTextNode('  '), attrs = c(id = "mead-elevation-text", class='small-text', x='450', fill='#FFFFFF',dy="2.8em",stroke='none',style='text-anchor:middle;'))
+  newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "mead-storage-text", class='label', x='460',y='410',fill='#FFFFFF',stroke='none',style='text-anchor:middle;'))
+  newXMLNode('text', parent = g_id, newXMLTextNode('(million acre feet)'),attrs = c(id = "mead-storage-text", class='small-text', x='460',y='410',fill='#FFFFFF',dy="1.2em",stroke='none',style='text-anchor:middle;'))
+  newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "allocation-info", class='label', x='55',y='450',fill='#FFFFFF',stroke='none',style='text-anchor:start;'))
+  newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "allocation-value", class='label', x='55',y='450',fill='#FFFFFF',stroke='none',style='text-anchor:start;'))
+  newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "allocation-state", class='label', x='55',y='400',fill='none',stroke='none',style='text-anchor:start;'))
   invisible(svg)
 }
 
