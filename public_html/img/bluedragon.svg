@@ -947,6 +947,10 @@
 				<polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="171.1,654 171.1,657.2 171.9,657.8 
 					170.7,657.8 171.9,658.5 171.1,658.5 170.9,662.8 				"/>
 			</g>
+			<g id="bridge_20">
+				<polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="184.1,624 184.1,626.9 183.2,627.2 184.1,627.7 184.1,630.8 "/>
+				<polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="185.8,624 184.8,626.9 186.3,627.4 185.5,627.7 185.5,630.8 "/>
+			</g>
 		</g>
 		<g id="Dams">
 			<g id="Dams_1_">
