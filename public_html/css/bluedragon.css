@@ -1,4 +1,12 @@
 /*=====SVG CSS=====*/
+#bluedragon-svg:hover > g{
+	opacity: 0.2;
+	}
+	
+#bluedragon-svg:hover > g:hover{
+	opacity: 1.0;
+	}
+
 
 .water {
 	color: #1E628C;
@@ -8,7 +16,7 @@
 #hooverGroup:hover{
 	transform-origin: center center;
 	-ms-transform-origin: center center;
-	-webkit-transform-origin: center center;
+	-webkit-transform-origin: top center;
 	-moz-transform-origin: 480px 0px;
 	transform: scale(3);
 	-ms-transform: scale(3);
@@ -25,7 +33,7 @@
 	transform-origin: center center;
 	-ms-transform-origin: center center;
 	-webkit-transform-origin: center center;
-	-moz-transform-origin: 480px 0px;
+	-moz-transform-origin: 450px 145px;
 	transform: scale(3);
 	-ms-transform: scale(3);
 	-webkit-transform: scale(3);
@@ -41,7 +49,7 @@
 	transform-origin: center center;
 	-ms-transform-origin: center center;
 	-webkit-transform-origin: center center;
-	-moz-transform-origin: 480px 0px;
+	-moz-transform-origin: 450px 195px;
 	transform: scale(3);
 	-ms-transform: scale(3);
 	-webkit-transform: scale(3);
@@ -57,7 +65,7 @@
 	transform-origin: center center;
 	-ms-transform-origin: center center;
 	-webkit-transform-origin: center center;
-	-moz-transform-origin: 480px 0px;
+	-moz-transform-origin: 480px 195px;
 	transform: scale(3);
 	-ms-transform: scale(3);
 	-webkit-transform: scale(3);
@@ -73,7 +81,7 @@
 	transform-origin: center center;
 	-ms-transform-origin: center center;
 	-webkit-transform-origin: center center;
-	-moz-transform-origin: 480px 0px;
+	-moz-transform-origin: 450px 275px;
 	transform: scale(3);
 	-ms-transform: scale(3);
 	-webkit-transform: scale(3);
@@ -89,7 +97,7 @@
 	transform-origin: center center;
 	-ms-transform-origin: center center;
 	-webkit-transform-origin: center center;
-	-moz-transform-origin: 480px 0px;
+	-moz-transform-origin: 400px 330px;
 	transform: scale(3);
 	-ms-transform: scale(3);
 	-webkit-transform: scale(3);
@@ -105,7 +113,7 @@
 	transform-origin: center center;
 	-ms-transform-origin: center center;
 	-webkit-transform-origin: center center;
-	-moz-transform-origin: 480px 0px;
+	-moz-transform-origin: 400px 400px;
 	transform: scale(3);
 	-ms-transform: scale(3);
 	-webkit-transform: scale(3);
@@ -121,7 +129,7 @@
 	transform-origin: center center;
 	-ms-transform-origin: center center;
 	-webkit-transform-origin: center center;
-	-moz-transform-origin: 480px 0px;
+	-moz-transform-origin: 390px 440px;
 	transform: scale(3);
 	-ms-transform: scale(3);
 	-webkit-transform: scale(3);
@@ -136,47 +144,53 @@
 #morelosGroup:hover {
 	transform-origin: center center;
 	-ms-transform-origin: center center;
-	-webkit-transform-origin: center center;
-	-moz-transform-origin: 480px 0px;
-	transform: scale(3);
-	-ms-transform: scale(3);
-	-webkit-transform: scale(3);
-	-moz-transform: scale(3);
+	-webkit-transform-origin: 45% 110%;
+	-moz-transform-origin: 200px 700px;
+	transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	transition-delay:0s;
 }
 
 #morelosGroup {
 	pointer-events: all;
 	transform: scale(1);
+	transition-delay:.5s;
 }
 
 #easternGroup:hover {
 	transform-origin: center center;
 	-ms-transform-origin: center center;
 	-webkit-transform-origin: center center;
-	-moz-transform-origin: 480px 0px;
+	-moz-transform-origin: 480px 560px;
 	transform: scale(3);
 	-ms-transform: scale(3);
 	-webkit-transform: scale(3);
 	-moz-transform: scale(3);
+	transition-delay:0s;
 }
 
 #easternGroup {
 	pointer-events: all;
 	transform: scale(1);
+	transition-delay:.5s;
 }
 
 #saltonGroup:hover {
 	transform-origin: center center;
 	-ms-transform-origin: center center;
-	-webkit-transform-origin: center center;
-	-moz-transform-origin: 480px 0px;
-	transform: scale(3);
-	-ms-transform: scale(3);
-	-webkit-transform: scale(3);
-	-moz-transform: scale(3);
+	-webkit-transform-origin: 10% 90%;
+	-moz-transform-origin: 20px 580px;
+	transform: scale(2);
+	-ms-transform: scale(2);
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	transition-delay:0s;
 }
 
 #saltonGroup {
 	pointer-events: all;
 	transform: scale(1);
+	transition-delay:.5s;
 }
