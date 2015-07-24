@@ -389,7 +389,23 @@ ecmascript_mead_proj <- function(){
                function setDesktop(){
                  svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
                  svgDocument.getElementById("y-label").setAttribute("y","0");                          
-               }')
+               }',
+               "function moveInToMomsHouse(){
+                 document.getElementById('peak').setAttribute('class','level-move');
+                 document.getElementById('flood').setAttribute('class','level-move');
+                 document.getElementById('surplus').setAttribute('class','level-move');
+                 document.getElementById('normal').setAttribute('class','level-move');
+                 document.getElementById('shortage1').setAttribute('class','level-move');
+                 document.getElementById('shortage2').setAttribute('class','level-move');
+                 document.getElementById('shortage3').setAttribute('class','level-move');
+				 setTimeout(function(){
+				         {
+                  document.getElementById('Projected-marker').setAttribute('class','shown');
+                 document.getElementById('Historical-marker').setAttribute('class','shown');
+                 document.getElementById('dashed-projection').setAttribute('class','shown');
+document.getElementById('filled-projection').setAttribute('class','shown');}
+				     }, 1000);
+                 }")
   
   
 }

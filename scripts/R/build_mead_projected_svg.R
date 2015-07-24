@@ -174,7 +174,7 @@ dinosvg:::linepath(g_id, x[is.hist],y[is.hist],fill = 'none',
 
 dinosvg:::linepath(g_id, c(x[is.minP], rev(x[is.maxP])),
                    c(y[is.minP], rev(y[is.maxP])),fill = 'white', 
-                   style ="stroke:none;",opacity='0.4')
+                   style ="stroke:none;",opacity='0.4',class='hidden',id='filled-projection')
 
 dinosvg:::linepath(g_id, x[is.most],y[is.most],fill = 'none', id='dashed-projection',class='hidden',
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-dasharray:9;stroke-linecap:round",
