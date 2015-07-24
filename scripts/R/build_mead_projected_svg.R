@@ -13,9 +13,8 @@ source('scripts/R/manipulate_lowCO_borders_svg.R')
 
 svg_file <- 'public_html/img/lake-mead-static/mead_elev_projected.svg'
 declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
-usage_col <- '#B22C2C'
 supply_col <- '#0066CC'
-line_width <- '3'
+#line_width <- '10'
 ani_time <- 15 # duration of line animation
 
 l_bmp = 20 # px from axes
@@ -53,11 +52,11 @@ maxMonth <- as.numeric(strftime(as.POSIXct(
 800 #dead pool
 axes <- list('tick_len' = 5,
              'y_label' = "Elevation of Lake Mead (feet)",
-             'y_ticks' = seq(800,1260,50),
-             'y_tk_label' = seq(800,1260,50),
+             'y_ticks' = seq(1000,1200,50),
+             'y_tk_label' = seq(1000,1200,50),
              'x_ticks' = seq(xMinR,xMaxR,1),
              'x_tk_label' = seq(xMinR,xMaxR,1),
-             'y_lim' = c(780,1260),
+             'y_lim' = c(990,1229),
              'x_lim' = c(xMinR-.25,xMaxR+maxMonth/12)) 
 
 
@@ -68,12 +67,12 @@ fig <- list('w' = 900,
 fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[4]),
                    "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
 
-supply_col <- '#0066CC'
-line_width <- '3'
+supply_col <- '#FFFFFF'#0066CC'
+line_width <- '5'
 ani_time <- 15 # duration of line animation
 
-l_bmp = 20 # px from axes
-t_bmp = 20 # px from axes
+l_bmp = 30 # px from axes
+t_bmp = 50 # px from axes
 
 svg_nd <- newXMLNode('svg', 
                      namespace = c("http://www.w3.org/2000/svg", xlink="http://www.w3.org/1999/xlink"), 
@@ -82,8 +81,44 @@ svg_nd <- newXMLNode('svg',
 add_ecmascript(svg_nd, text = ecmascript_mead_proj())
 
 
+peak = floor(dinosvg:::tran_y(axes$y_lim[2], axes, fig))
+flood = floor(dinosvg:::tran_y(1219.6, axes, fig))
+surplus = floor(dinosvg:::tran_y(1200, axes, fig))
+normal = floor(dinosvg:::tran_y(1145, axes, fig))
+shortage1 = floor(dinosvg:::tran_y(1075, axes, fig))
+shortage2 = floor(dinosvg:::tran_y(1050, axes, fig))
+shortage3 = floor(dinosvg:::tran_y(1025, axes, fig))
+bottom = floor(dinosvg:::tran_y(axes$y_lim[1], axes, fig))
+
+newXMLNode('rect',parent = svg_nd, attrs = c(id='peak',x = fig$px_lim$x[1], y = peak,
+                                           width=fig$px_lim$x[2]-fig$px_lim$x[1], height=flood-peak+0.5,
+                                           fill='#0066CC',opacity=0.9, class='level-fill'))
+newXMLNode('rect',parent = svg_nd, attrs = c(id='flood',x = fig$px_lim$x[1], y = flood,
+                                           width=fig$px_lim$x[2]-fig$px_lim$x[1], height=surplus-flood+0.5,
+                                           fill='#0066CC', opacity=0.8, class='level-fill'))
+newXMLNode('rect',parent = svg_nd, attrs = c(id='surplus',x = fig$px_lim$x[1], y = surplus,
+                                           width=fig$px_lim$x[2]-fig$px_lim$x[1], height=normal-surplus+0.5,
+                                           fill='#0066CC',opacity=0.7, class='level-fill'))
+newXMLNode('rect',parent = svg_nd, attrs = c(id='normal',x = fig$px_lim$x[1], y = normal,
+                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=shortage1-normal+0.5,
+                                             fill='#0066CC',opacity=0.6, class='level-fill'))
+newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage1',x = fig$px_lim$x[1], y = shortage1,
+                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=shortage2-shortage1+0.5,
+                                             fill='#0066CC',opacity=0.5, class='level-fill'))
+newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage2',x = fig$px_lim$x[1], y = shortage2,
+                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=shortage3-shortage2+0.5,
+                                             fill='#0066CC',opacity=0.4, class='level-fill'))
+newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage3',x = fig$px_lim$x[1], y = shortage3,
+                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=bottom-shortage3+0.5,
+                                             fill='#0066CC',opacity=0.3, class='level-fill'))
+
+
 g_id <- newXMLNode('g', parent = svg_nd, attrs = c('id' = "axes", class='label'))
 add_axes(g_id, axes, fig)
+
+attr_svg(svg_nd, attr=list('y-label'=c(dy='-0.3em')), 'text')
+attr_svg(svg_nd, attr=list('axis.box'=c(style="fill:none;stroke:black")), 'rect')
+
 
 #-- legend --
 leg_id <- newXMLNode("g", 'parent' = g_id,
@@ -91,11 +126,14 @@ leg_id <- newXMLNode("g", 'parent' = g_id,
                                class="label", 'alignment-baseline' = "central"))
 
 newXMLNode("text", parent = leg_id, newXMLTextNode(' '),
-           attrs = c(id="date_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp,class='legend'))
+           attrs = c(id="date_text", x=fig$margins[2]+l_bmp, y=fig$h-fig$margins[1]-t_bmp,dy="-0.6em", dx="0.4em",class='legend'))
 newXMLNode("text", parent = leg_id, newXMLTextNode(' '),
-           attrs = c(id="elev_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = supply_col,class='legend'))
+           attrs = c(id="elev_text", x=fig$margins[2]+l_bmp, y=fig$h-fig$margins[1]-t_bmp, dy="0.4em", dx="0.4em",fill = '#000000', class='legend'))
 newXMLNode("text", parent = leg_id, newXMLTextNode(' '),
-           attrs = c(id="model_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = '#000000',class='legend'))
+           attrs = c(id="model_text", x=fig$margins[2]+l_bmp, y=fig$h-fig$margins[1]-t_bmp,dy="1.6em",  dx="0.4em",fill = '#000000',class='legend'))
+newXMLNode('line',parent=leg_id, attrs=c(id='legend-line', 'x1'=fig$margins[2]+15,'x2'=fig$margins[2]+l_bmp, y1=fig$h-fig$margins[1]-t_bmp, y2= fig$h-fig$margins[1]-t_bmp,fill = 'none', 
+                                         style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-linecap:round",
+                                                        supply_col,line_width),visibility='hidden'))
 #------
 
 x <- as.numeric(strftime(as.POSIXct(meadData$Timestep), format = "%j"))/365+
@@ -115,11 +153,11 @@ is.maxP <- meadData$RunType == 2 # maximum probable run
 
 prob_run_title <- meadData$Model[is.most][1] # - assuming these are all the same
 
-newXMLNode('rect',parent = g_id, attrs = c(id='ddddd',x = x[is.most][1], y = fig$px_lim$y[2], 
-                                           width=fig$px_lim$x[2]-x[is.model][1], height=fig$px_lim$y[1]-fig$px_lim$y[2], 
-                                                      fill='grey', opacity='0.2', stroke='none'))
+dinosvg:::linepath(g_id, c(x[is.most][1],x[is.most][1]),c(fig$px_lim$y[2],fig$px_lim$y[2]+fig$px_lim$y[1]-fig$px_lim$y[2]),fill = 'none', 
+                   style =sprintf("stroke:#FFFFFF;stroke-width:%s;stroke-dasharray:5,2",
+                                  1.5))
 
-y_offset <- fig$px_lim$y[1]-170
+y_offset <- fig$px_lim$y[1]-20
 x_offset <- c(x[is.most][1] -4, x[is.most][1] + 18)
 
 newXMLNode("text", parent = g_id, newXMLTextNode('Historical'),
@@ -133,13 +171,14 @@ dinosvg:::linepath(g_id, x[is.hist],y[is.hist],fill = 'none',
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-linecap:round",
                                              supply_col,line_width))
 
+
 dinosvg:::linepath(g_id, c(x[is.minP], rev(x[is.maxP])),
-                   c(y[is.minP], rev(y[is.maxP])),fill = '#99CCFF', 
-                   style ="stroke:none;",opacity='0.5')
+                   c(y[is.minP], rev(y[is.maxP])),fill = 'white', 
+                   style ="stroke:none;",opacity='0.4')
 
 dinosvg:::linepath(g_id, x[is.most],y[is.most],fill = 'none', 
-                              style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-dasharray:6;stroke-linecap:round",
-                                             '#555555',line_width))
+                              style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-dasharray:9;stroke-linecap:round",
+                                             '#a9a9a9',line_width))
 
 
 
@@ -162,7 +201,7 @@ for (i in 1:length(x)){
   newXMLNode('rect','parent' = g_id, 
              attrs = c(id = time_ids[i], x = sprintf('%1.2f',x[i]-width/2), y = fig$px_lim$y[2], width = sprintf('%1.2f',width), height = fig$px_lim$y[1]-fig$px_lim$y[2],
                        'fill-opacity'="0.0", 
-                       onmousemove=paste0(sprintf("ChangeText(evt, 'date_text','%s');",time_ids[i]),
+                       onmousemove=paste0(sprintf("document.getElementById('legend-line').setAttribute('visibility','visbile');ChangeText(evt, 'date_text','%s');",time_ids[i]),
                                           elev_text),
                        onmouseover="highlightEle(evt,'0.1')",
                        onmouseout="highlightEle(evt,'0.0')"))
