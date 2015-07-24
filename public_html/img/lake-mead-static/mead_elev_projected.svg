@@ -22,6 +22,18 @@ function setMobile(){
                  svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
                  svgDocument.getElementById("y-label").setAttribute("y","-12");       
                }
+			   function moveInToMomsHouse(){
+			   document.getElementById('peak').setAttribute('class','level-move');
+			   	document.getElementById('flood').setAttribute('class','level-move');
+ 			   document.getElementById('surplus').setAttribute('class','level-move');
+ 			   	document.getElementById('normal').setAttribute('class','level-move');
+				document.getElementById('shortage1').setAttribute('class','level-move');
+				document.getElementById('shortage2').setAttribute('class','level-move');
+				document.getElementById('shortage3').setAttribute('class','level-move');
+				document.getElementById('Projected-marker').setAttribute('class','shown');
+				document.getElementById('Historical-marker').setAttribute('class','shown');
+				document.getElementById('dashed-projection').setAttribute('class','shown');
+			   }
                function setDesktop(){
                  svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
                  svgDocument.getElementById("y-label").setAttribute("y","0");                          

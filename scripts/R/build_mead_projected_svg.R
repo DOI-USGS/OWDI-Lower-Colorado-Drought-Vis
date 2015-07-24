@@ -161,10 +161,10 @@ y_offset <- fig$px_lim$y[1]-20
 x_offset <- c(x[is.most][1] -4, x[is.most][1] + 18)
 
 newXMLNode("text", parent = g_id, newXMLTextNode('Historical'),
-           attrs = c(id="Historical-marker", 
+           attrs = c(id="Historical-marker", class='hidden',
                      'transform'=sprintf("rotate(-90,%1.1f,%1.1f),translate(%1.1f,%1.1f)",x_offset[1],y_offset,x_offset[1],y_offset)))
 newXMLNode("text", parent = g_id, newXMLTextNode('Projected'),
-           attrs = c(id="Projected-marker", 
+           attrs = c(id="Projected-marker", class='hidden',
                      'transform'=sprintf("rotate(-90,%1.1f,%1.1f),translate(%1.1f,%1.1f)",x_offset[2],y_offset,x_offset[2],y_offset)))
 
 dinosvg:::linepath(g_id, x[is.hist],y[is.hist],fill = 'none', 
@@ -176,7 +176,7 @@ dinosvg:::linepath(g_id, c(x[is.minP], rev(x[is.maxP])),
                    c(y[is.minP], rev(y[is.maxP])),fill = 'white', 
                    style ="stroke:none;",opacity='0.4')
 
-dinosvg:::linepath(g_id, x[is.most],y[is.most],fill = 'none', 
+dinosvg:::linepath(g_id, x[is.most],y[is.most],fill = 'none', id='dashed-projection',class='hidden',
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-dasharray:9;stroke-linecap:round",
                                              '#a9a9a9',line_width))
 
