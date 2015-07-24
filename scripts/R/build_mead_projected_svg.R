@@ -49,13 +49,15 @@ maxMonth <- as.numeric(strftime(as.POSIXct(
 
 
 # --- pixel dims ---
+1216 #full pool 
+800 #dead pool
 axes <- list('tick_len' = 5,
              'y_label' = "Elevation of Lake Mead (feet)",
-             'y_ticks' = seq(yMinR,yMaxR,10),
-             'y_tk_label' = seq(yMinR,yMaxR,10),
+             'y_ticks' = seq(800,1260,50),
+             'y_tk_label' = seq(800,1260,50),
              'x_ticks' = seq(xMinR,xMaxR,1),
              'x_tk_label' = seq(xMinR,xMaxR,1),
-             'y_lim' = c(yMinR-7,yMaxR+7),
+             'y_lim' = c(780,1260),
              'x_lim' = c(xMinR-.25,xMaxR+maxMonth/12)) 
 
 
@@ -128,7 +130,7 @@ newXMLNode("text", parent = g_id, newXMLTextNode('Projected'),
                      'transform'=sprintf("rotate(-90,%1.1f,%1.1f),translate(%1.1f,%1.1f)",x_offset[2],y_offset,x_offset[2],y_offset)))
 
 dinosvg:::linepath(g_id, x[is.hist],y[is.hist],fill = 'none', 
-                              style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round",
+                              style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-linecap:round",
                                              supply_col,line_width))
 
 dinosvg:::linepath(g_id, c(x[is.minP], rev(x[is.maxP])),
