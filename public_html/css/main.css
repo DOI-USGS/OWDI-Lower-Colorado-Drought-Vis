@@ -147,7 +147,6 @@ nav h3 {
 	-o-background-size: cover;
 	background-repeat: no-repeat;
 	height: 100%;
-	margin-bottom: 4200px;
 }
 #endEraContainer {
 	background-image: url('../img/keynotes/keynote9-mobile.jpg');
@@ -297,6 +296,11 @@ nav h3 {
 .leaving{
 	margin-right:3px;
 	}
+	
+/*Photo Panel*/
+#photoPanel img{
+		width:32.5%;
+		}
 
 /*Blue Dragon Section CSS*/
 
@@ -478,7 +482,7 @@ nav h3 {
 	#texas-thumbnail{
 		width:70%;
 		}
-		
+	
 	/*Black and white images*/
 
 	#black-white-images p{
@@ -531,6 +535,11 @@ nav h3 {
 	.graphCaption{
 		width:900px;
 		margin:0 auto;
+		}
+		
+	/*Photo Panel*/
+	#photoPanel img{
+		width:33%;
 		}
 	
 	/*Blue Dragon Section CSS*/

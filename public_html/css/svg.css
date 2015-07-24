@@ -127,6 +127,11 @@ text {
     font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.water {
+	color: #1E628C;
+	fill: #1E628C;
+}
+
 #water-usage-svg {
     font-size: 60%;
 }
