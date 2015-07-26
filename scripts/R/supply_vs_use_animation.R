@@ -7,6 +7,7 @@ if(!require(dinosvg)){
 
 
 library(XML)
+library(dplyr)
 source('scripts/R/build_ecmascript.R')
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 
@@ -83,6 +84,8 @@ line_length <- function(x1,y1,x2,y2){
   return(len)
 }
 
+difTimes <- cumsum(diff(years)/tot_time)
+difTimes <- c(0,difTimes)*ani_time
 x1 <- head(x,-1)
 x2 <- tail(x,-1)
 y1 <- head(y,-1)
