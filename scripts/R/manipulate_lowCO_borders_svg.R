@@ -92,6 +92,13 @@ attr_svg_paths <- function(svg, attrs){
   invisible(svg)
 }
 
+attr_svg <- function(svg, attrs, type){
+  for (i in 1:length(attrs)){
+    g_id <- xpathApply(svg, sprintf("//*[local-name()='%s'][@id='%s']",type, names(attrs)[i]))[[1]]
+    addAttributes(g_id, .attrs = attrs[[i]])
+  }
+  invisible(svg)
+}
 #' @param svg an open svg doc (see xml_doc <- xmlParse(svg_file, useInternalNode=TRUE))
 #' @param r character vector radius of circle
 #' @param id character vector mask id
