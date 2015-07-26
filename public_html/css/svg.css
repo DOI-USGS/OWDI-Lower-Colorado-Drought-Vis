@@ -10,7 +10,8 @@
     opacity:0;
 }
 .california, .nevada, .arizona, .mexico, .california-moved, .nevada-moved, .arizona-moved, .mexico-moved, 
-.mead-flood, .mead-surplus, .mead-normal, .mead-shortage-1, .mead-shortage-2, .mead-shortage-3 {
+.mead-flood, .mead-surplus, .mead-normal, .mead-shortage-1, .mead-shortage-2, .mead-shortage-3,
+.legend-box, .legend-moved{
     -webkit-transition: 1s ease-in-out;
     -moz-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
@@ -58,9 +59,9 @@
 }
 
 .nevada-moved {
-    -ms-transform: translate(-23px,-32px); /* IE 9 */
-    -webkit-transform: translate(-23px,-32px); /* Safari */
-    transform: translate(-23px,-32px);
+    -ms-transform: translate(-23px,-27px); /* IE 9 */
+    -webkit-transform: translate(-23px,-27px); /* Safari */
+    transform: translate(-23px,-27px);
 }
 
 .arizona-moved {
@@ -77,6 +78,23 @@
     mask: "none";
 }
 
+.legend-box, .legend-hidden {
+    -ms-transform: translate(200px, 135px); /* IE 9 */
+    -webkit-transform: translate(200px, 135px); /* Safari */
+    transform: translate(200px, 135px);
+    opacity: 1;
+}
+
+.legend-hidden {
+    opacity: 0;
+}
+
+.legend-moved {
+    -ms-transform: translate(-135px, 205px); /* IE 9 */
+    -webkit-transform: translate(-135px, 205px); /* Safari */
+    transform: translate(-135px, 205px);
+    opacity: 1;
+}
 
 text {
     font-size: 1.2em;

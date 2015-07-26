@@ -138,7 +138,6 @@ nav h3 {
 }
 
 #meadAnimatedContainer {
-	background-image: url('../img/keynotes/keynote8-mobile.jpg');
 	background-position: center center;
 	background-position: center center;
 	background-size: cover;
@@ -504,6 +503,7 @@ nav h3 {
 	}
 	#meadSVGContainer object {
 		margin-left: 0%;
+                width: 800px;
 	}
 	#natural-flow-graph {
 		width: 80%;
