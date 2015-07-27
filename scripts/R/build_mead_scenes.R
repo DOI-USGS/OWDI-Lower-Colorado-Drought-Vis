@@ -20,6 +20,8 @@ co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5'
 pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'class'='hidden')
 mead_water_styles = c(fill='#0066CC',stroke='none')
 mead_border_styles = c(fill='none','stroke-width'="2.5",stroke='#FFFFFF','stroke-linejoin'='round','stroke-linecap'="round")
+mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', 'fill-opacity'='0.2')
+
 
 contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
 sorted_contracts <- sort(as.numeric(contracts$mean),decreasing = T, index.return = T)
@@ -43,7 +45,7 @@ svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-backgr
   add_picto_legend() %>% 
   remove_svg_elements(elements = c('delete_group'='g')) %>% 
   add_ecmascript(ecmascript_mead_map()) %>%
-  attr_svg_groups(attrs = list('co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
+  attr_svg_groups(attrs = list('co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles, 'mexico' = mexico_styles)) %>%
   attr_svg_paths(attrs = list('California'=c("class"="california"), 'Nevada'=c("class"="nevada"), 'Arizona'=c("class"="arizona"),'Mexico'=c("class"="mexico"))) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'draw-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="331;0;") %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'reset-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values="0;331;") %>%
