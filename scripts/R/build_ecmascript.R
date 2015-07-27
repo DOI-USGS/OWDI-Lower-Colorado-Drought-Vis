@@ -4,7 +4,8 @@ ecmascript_mead_map <- function(){
                'if ( window.svgDocument == null ) {',
   'svgDocument = evt.target.ownerDocument;',
                'svgDocument.incrementScene = this.incrementScene;',
-               'svgDocument.decrementScene = this.decrementScene;}',
+               'svgDocument.decrementScene = this.decrementScene;',
+               'svgDocument.drawRiver = this.scene1;}',
                '}',
   'function displayAllocationName(evt, name) {',
     'var data = {"California":{',
@@ -53,8 +54,16 @@ ecmascript_mead_map <- function(){
       '"shortage-1":"9.6",',
       '"shortage-2":"7.7",',
       '"shortage-3":"6.0"}',
+    'var conditions = ',
+      '{"flood":"Flood Control Surplus",',
+      '"surplus":"Domestic Surplus",',
+      '"normal":"Normal Condition",',
+      '"shortage-1":"Shortage Condition Tier 1",',
+      '"shortage-2":"Shortage Condition Tier 2",',
+      '"shortage-3":"Shortage Condition Tier 3"}',
     'document.getElementById("mead-storage-text").firstChild.data = "Storage: " + storages[storage_id] + " maf"',
     'document.getElementById("mead-elevation-text").firstChild.data = "Elevation: " + elevations[storage_id] + " feet"',
+    'document.getElementById("mead-condition-text").firstChild.data = conditions[storage_id]',
   '}',
 'function showStateMouseovers(){',
   'document.getElementById("california-mouseovers").setAttribute("visibility","visbile");',
@@ -97,11 +106,14 @@ ecmascript_mead_map <- function(){
                'show("co-river-polyline");',
                 'draw("colorado-river");',
               'show("co-basin-polygon");',
+              'hide("top-users");',
               'hide("pictogram-topfive");',
+              'hide("mead-pictogram-legend");',
                '}',
                
                'function scene2(){',
 'show("pictogram-topfive");',
+'show("top-users");',
 'show("non-lo-co-states");',
 'show("co-river-polyline");',
 'show("co-basin-polygon");',
@@ -112,6 +124,9 @@ ecmascript_mead_map <- function(){
 'hide("Mexico-pictos");',
 'hide("Mead-2D");',
 'hideStateMouseovers();',
+'show("mead-pictogram-legend");',
+'hide("sankey-lines");',
+'document.getElementById("mead-pictogram-legend").setAttribute("class","legend-box");',
                '}',
                
                'function scene3(){',
@@ -121,10 +136,13 @@ ecmascript_mead_map <- function(){
 'show("Arizona-pictos");',
 'show("Mexico-pictos");',
 'hide("pictogram-topfive");',
+'show("sankey-lines");',
+'hide("top-users");',
 'hide("co-river-polyline");',
 'hide("co-basin-polygon");',
 'moveStates();',
 'hide("non-lo-co-states");',
+'document.getElementById("mead-pictogram-legend").setAttribute("class","legend-moved");',
 'show("Mead-2D");',
 '\tdocument.getElementById("Mead-water-level").setAttribute("class","mead-flood");',
 '\tdocument.getElementById("mead-elevation-text-position").setAttribute("class","mead-flood");',
@@ -234,6 +252,8 @@ ecmascript_mead_map <- function(){
                '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","hidden");',
                '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","hidden");',
                '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","hidden");',
+              '\tdocument.getElementById("arizona-sankey").setAttribute("stroke-width","14");',
+              '\tdocument.getElementById("mexico-sankey").setAttribute("stroke-width","7.5");',
                '}',
                
                'function setAllocationsShortage1(){',
@@ -246,6 +266,8 @@ ecmascript_mead_map <- function(){
                '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","shown");',
                '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","hidden");',
                '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","hidden");',
+'\tdocument.getElementById("arizona-sankey").setAttribute("stroke-width","12.4");',
+'\tdocument.getElementById("mexico-sankey").setAttribute("stroke-width","7.25");',
                '}',
                
                'function setAllocationsShortage2(){',
@@ -261,6 +283,8 @@ ecmascript_mead_map <- function(){
                '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","hidden");',
                '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","shown");',
                '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","hidden");',
+'\tdocument.getElementById("arizona-sankey").setAttribute("stroke-width","12");',
+'\tdocument.getElementById("mexico-sankey").setAttribute("stroke-width","7.15");',
                '}',
                
                'function setAllocationsShortage3(){',
@@ -279,6 +303,8 @@ ecmascript_mead_map <- function(){
                '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","hidden");',
                '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","hidden");',
                '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","shown");',
+'\tdocument.getElementById("arizona-sankey").setAttribute("stroke-width","11.6");',
+'\tdocument.getElementById("mexico-sankey").setAttribute("stroke-width","6.875");',
                '}',
 'function animateIE(element) {
 if(element instanceof Element) {
@@ -369,6 +395,7 @@ ecmascript_mead_proj <- function(){
                'if ( window.svgDocument == null ) {',
                'svgDocument = evt.target.ownerDocument;',
                'svgDocument.setMobile = this.setMobile;',
+               'svgDocument.drawTiers = this.moveInToMomsHouse;',
                'svgDocument.setDesktop = this.setDesktop;}',
                '}',
                'window.parent.addEventListener("form-factor-desktop", setDesktop, false);',
@@ -389,7 +416,23 @@ ecmascript_mead_proj <- function(){
                function setDesktop(){
                  svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
                  svgDocument.getElementById("y-label").setAttribute("y","0");                          
-               }')
+               }',
+               "function moveInToMomsHouse(){
+                 document.getElementById('peak').setAttribute('class','level-move');
+                 document.getElementById('flood').setAttribute('class','level-move');
+                 document.getElementById('surplus').setAttribute('class','level-move');
+                 document.getElementById('normal').setAttribute('class','level-move');
+                 document.getElementById('shortage1').setAttribute('class','level-move');
+                 document.getElementById('shortage2').setAttribute('class','level-move');
+                 document.getElementById('shortage3').setAttribute('class','level-move');
+				 setTimeout(function(){
+				         {
+                  document.getElementById('Projected-marker').setAttribute('class','shown');
+                 document.getElementById('Historical-marker').setAttribute('class','shown');
+                 document.getElementById('dashed-projection').setAttribute('class','shown');
+document.getElementById('filled-projection').setAttribute('class','shown');}
+				     }, 1000);
+                 }")
   
   
 }
