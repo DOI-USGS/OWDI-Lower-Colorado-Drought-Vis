@@ -291,6 +291,12 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <pattern id="background-image" patternUnits="userSpaceOnUse" x="-35" width="610" height="547">
       <image xlink:href="mead-background.jpg" width="610" height="547"/>
     </pattern>
+    <pattern id="usa-flag" patternUnits="userSpaceOnUse" x="0" y="-100" width="500" height="500">
+      <image xlink:href="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" width="500" height="500"/>
+    </pattern>
+    <pattern id="mexico-flag" patternUnits="userSpaceOnUse" x="150" y="140" width="610" height="547">
+      <image xlink:href="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" width="610" height="547"/>
+    </pattern>
     <clipPath id="Mead-clip">
       <path d="M 535 20 L 535 450 L 400 450 L 280 20" stroke="none"/>
     </clipPath>
