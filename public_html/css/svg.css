@@ -86,6 +86,8 @@
     -webkit-transform: translate(-70px, 95px) scale(0.55); /* Safari */
     transform: translate(-70px, 95px) scale(0.55);
     stroke-width: 4.55;
+    stroke: #458B00;
+    fill: #FFFFFF;
     mask: "none";
 }
 
