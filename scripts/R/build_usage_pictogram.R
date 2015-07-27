@@ -66,8 +66,8 @@ usage_bar_pictogram <- function(svg, values, value_mouse, value_contract, scale=
                attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=bin_full, 
                        rx='2',ry='2','fill'='none'))
     # -- add clear mouseover rect on top --
-    on_mouseovr <- sprintf("displayPictoName(evt, '%s');displayPictoValue(evt, '%s acre-feet');document.getElementById('picto-highlight-%s').setAttribute('opacity','0.8');",value_mouse[i], value_contract[i], i)
-    on_mouseout <- sprintf("hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-%s').setAttribute('opacity','0.0');",i)
+    on_mouseovr <- sprintf("displayPictoName(evt, '%s');displayPictoValue(evt, '%s acre-feet');document.getElementById('picto-highlight-%s').setAttribute('opacity','0.8');document.getElementById('usage-%s').setAttribute('opacity','0.8');",value_mouse[i], value_contract[i], i, i)
+    on_mouseout <- sprintf("hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-%s').setAttribute('opacity','0.0');document.getElementById('usage-%s').setAttribute('opacity','0.0');",i,i)
     newXMLNode('rect',parent=g_pict_par,
                attrs=c(id = paste0('picto-',i),x=x-bin_buffer/2,y=-(bin_full+bin_buffer)*num_full-bin_buffer/2, 
                        width=bin_full+bin_buffer, height=(bin_full+bin_buffer)*num_full, 

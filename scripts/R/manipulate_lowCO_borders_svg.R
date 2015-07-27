@@ -92,6 +92,44 @@ attr_svg_paths <- function(svg, attrs){
   invisible(svg)
 }
 
+edit_attr_svg <- function(svg, attrs){
+  svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
+  svg_attrs <- xmlAttrs(svg_nd[[1]])
+  keep.attrs <- !names(svg_attrs) %in% names(attrs)
+  removeAttributes(svg_nd[[1]])
+  addAttributes(svg_nd[[1]], .attrs = c(attrs, svg_attrs[keep.attrs]))
+
+  invisible(svg)
+}
+
+attr_svg <- function(svg, attrs, type){
+  for (i in 1:length(attrs)){
+    g_id <- xpathApply(svg, sprintf("//*[local-name()='%s'][@id='%s']",type, names(attrs)[i]))[[1]]
+    addAttributes(g_id, .attrs = attrs[[i]])
+  }
+  invisible(svg)
+}
+
+add_background_defs <- function(svg, id, image_url){
+  root_nd <- xmlRoot(svg)
+  def_nd <- newXMLNode("defs",parent = root_nd, at = 0)
+  pt_nd <- newXMLNode('pattern',parent=def_nd, attrs = c(id=id, patternUnits='userSpaceOnUse',x=-35,width=610, height=547))
+  #newXMLNode('image', parent=pt_nd, attrs = c('xlink:href'=image_url, width=610, height=547))
+  newXMLNode('rect', parent=pt_nd, attrs = c('fill'="black",opacity='0.9', width=610, height=547))
+  invisible(svg)
+  
+}
+
+add_flag_defs <- function(svg, id,x,y, width,height, image_url){
+  root_nd <- xmlRoot(svg)
+  def_nd <- newXMLNode("defs",parent = root_nd, at = 0)
+  pt_nd <- newXMLNode('pattern',parent=def_nd, attrs = c(id=id, patternUnits='userSpaceOnUse',x=x,y=y,width=width, height=height))
+  newXMLNode('image', parent=pt_nd, attrs = c('xlink:href'=image_url, width=width, height=height))
+  invisible(svg)
+  
+}
+
+
 #' @param svg an open svg doc (see xml_doc <- xmlParse(svg_file, useInternalNode=TRUE))
 #' @param r character vector radius of circle
 #' @param id character vector mask id
@@ -140,10 +178,10 @@ add_animateTransform <- function(svg, attr = "transform", parent_id, element = '
   
 }
 
-add_rect <- function(svg, ...){
+add_rect <- function(svg, at=NA, ...){
   attrs <- expand.grid(..., stringsAsFactors = FALSE)
   svg_nd <- xpathApply(svg, "//*[local-name()='svg']")
-  newXMLNode('rect', parent = svg_nd, attrs=attrs)
+  newXMLNode('rect', parent = svg_nd, attrs=attrs,at = at)
   
   invisible(svg)
 }
@@ -164,6 +202,31 @@ add_ecmascript <- function(svg, text){
 
   invisible(svg)
   
+}
+
+add_scene_buttons <- function(svg){
+  root_nd <- xmlRoot(svg)
+  g_in = newXMLNode('g',parent=root_nd,attrs = c(id='decrement-scene'))
+  newXMLNode('rect',parent=g_in, attrs = c(x='-35',width="35",height="547",fill="grey",opacity="0.5",onclick="decrementScene()"))
+  newXMLNode('path',parent=g_in, attrs = c(d="M-10 293.5 L-25 273.5 L-10 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round",onclick="decrementScene()"))
+  g_dc = newXMLNode('g',parent=root_nd,attrs = c(id='increment-scene'))
+  newXMLNode('rect',parent=g_in, attrs = c(x='540',width="35",height="547",fill="grey",opacity="0.5",onclick="incrementScene()"))
+  newXMLNode('path',parent=g_in, attrs = c(d="M550 293.5 L565 273.5 L550 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round",onclick="incrementScene()"))
+  invisible(svg)
+  
+}
+
+add_picto_legend <- function(svg){
+  root_nd <- xmlRoot(svg)
+  g_nd = newXMLNode('g',parent=root_nd,attrs = c(id='mead-pictogram-legend',transform='translate(200,135)',opacity="0",class="legend-hidden"))
+  newXMLNode('rect',parent=g_nd,attrs=c(x="150", y="270", width="130", height="60", stroke="grey", fill="#FFFFFF", 'fill-opacity'='0.3'))
+  newXMLNode('text', parent=g_nd, newXMLTextNode("Legend"), attrs=c(class='legend-text', x="215", y="278", fill="#FFFFFF", dy="0.7em", stroke="none", style="text-anchor: middle;"))
+  newXMLNode('rect',parent=g_nd,attrs=c(x="156", y="305", width="10", height="5", rx="0", ry="0", stroke="none", fill="#0066CC"))
+  newXMLNode('rect',parent=g_nd,attrs=c(x="156", y="300", width="10", height="10", rx="2", ry="2", fill="none", stroke="#0066CC", 'stroke-width'="1.5"))
+  newXMLNode('text', parent=g_nd, newXMLTextNode("50,000 acre-feet"), attrs=c(class='small-text', x="175", y="300", fill="#FFFFFF", dy="0.7em", stroke="none", style="text-anchor: left;"))
+  newXMLNode('rect',parent=g_nd,attrs=c(x="156", y="315", width="10", height="10", rx="2", ry="2", fill="#0066CC", stroke="#0066CC", 'stroke-width'="1.5"))
+  newXMLNode('text', parent=g_nd, newXMLTextNode("100,000 acre-feet"), attrs=c(class='small-text', x="175", y="315", fill="#FFFFFF", dy="0.7em", stroke="none", style="text-anchor: left;"))
+  invisible(svg)
 }
 
 add_css <- function(svg, text){
