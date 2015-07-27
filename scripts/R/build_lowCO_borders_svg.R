@@ -42,7 +42,7 @@ contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", strin
 sorted_contracts <- sort(as.numeric(contracts$mean),decreasing = T, index.return = T)
 co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
-co_basin = readOGR("public_html/data/lc_huc_simp.geojson", "OGRGeoJSON")
+co_basin = readOGR(dsn = "src_data/CO_WBD", layer="WBDHU2_14-15-clean")
 
 area <- lapply(mexico@polygons, function(x) sapply(x@Polygons, function(y) y@area))
 mainPolys <- lapply(area, function(x) which(x > min_area))
