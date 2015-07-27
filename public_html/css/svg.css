@@ -6,12 +6,13 @@
     transition: opacity 1s ease-in-out;
 }
 
+
 .hidden {
     opacity:0;
 }
 .california, .nevada, .arizona, .mexico, .california-moved, .nevada-moved, .arizona-moved, .mexico-moved, 
 .mead-flood, .mead-surplus, .mead-normal, .mead-shortage-1, .mead-shortage-2, .mead-shortage-3,
-.legend-box, .legend-moved, .level-fill, .level-move{
+.legend-box, .legend-moved, .level-fill, .level-move, .sankey-line{
     -webkit-transition: 1s ease-in-out;
     -moz-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
