@@ -1,196 +1,113 @@
 /*=====SVG CSS=====*/
-#bluedragon-svg:hover > g{
+#wholeRiver:hover > g{
 	opacity: 0.2;
-	}
-	
-#bluedragon-svg:hover > g:hover{
-	opacity: 1.0;
-	}
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
 
+#wholeRiver:hover > g:hover{
+	opacity: 1.0;
+	-webkit-transition: 1s ease-in-out;
+	-moz-transition: 1s ease-in-out;
+	-o-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
+}
 
 .water {
 	color: #1E628C;
 	fill: #1E628C;
 }
 
-#hooverGroup:hover{
-	transform-origin: center center;
-	-ms-transform-origin: center center;
-	-webkit-transform-origin: top center;
-	-moz-transform-origin: 480px 0px;
-	transform: scale(3);
-	-ms-transform: scale(3);
-	-webkit-transform: scale(3);
-	-moz-transform: scale(3);
+.riverGroup {
+	-webkit-transition: 1s ease-in-out;
+	-moz-transition: 1s ease-in-out;
+	-o-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
 }
 
-#hooverGroup {
-	pointer-events: all;
-	transform: scale(1);
+.riverGroup:hover {
+	-webkit-transition: 1s ease-in-out;
+	-moz-transition: 1s ease-in-out;
+	-o-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
+}
+
+#hooverGroup:hover{
+	transform: translate(-850px, 0px) scale(3);
+	-ms-transform: translate(-850px, 0px) scale(3);
+	-webkit-transform: translate(-850px, 0px) scale(3);
+	-moz-transform: translate(-850px, 0px) scale(3);
 }
 
 #davisGroup:hover {
-	transform-origin: center center;
-	-ms-transform-origin: center center;
-	-webkit-transform-origin: center center;
-	-moz-transform-origin: 450px 145px;
-	transform: scale(3);
-	-ms-transform: scale(3);
-	-webkit-transform: scale(3);
-	-moz-transform: scale(3);
-}
-
-#davisGroup {
-	pointer-events: all;
-	transform: scale(1);
+	transform: translate(-900px, -180px) scale(3);
+	-ms-transform: translate(-900px, -180px) scale(3);
+	-webkit-transform: translate(-900px, -180px) scale(3);
+	-moz-transform: translate(-900px, -180px) scale(3);
 }
 
 #davisParkerGroup:hover {
-	transform-origin: center center;
-	-ms-transform-origin: center center;
-	-webkit-transform-origin: center center;
-	-moz-transform-origin: 450px 195px;
-	transform: scale(3);
-	-ms-transform: scale(3);
-	-webkit-transform: scale(3);
-	-moz-transform: scale(3);
-}
-
-#davisParkerGroup {
-	pointer-events: all;
-	transform: scale(1);
+	transform: translate(-1540px, -570px) scale(4);
+	-ms-transform: translate(-1540px, -570px) scale(4);
+	-webkit-transform: translate(-1540px, -570px) scale(4);
+	-moz-transform: translate(-1540px, -570px) scale(4);
 }
 
 #parkerGroup:hover {
-	transform-origin: center center;
-	-ms-transform-origin: center center;
-	-webkit-transform-origin: center center;
-	-moz-transform-origin: 480px 195px;
-	transform: scale(3);
-	-ms-transform: scale(3);
-	-webkit-transform: scale(3);
-	-moz-transform: scale(3);
-}
-
-#parkerGroup {
-	pointer-events: all;
-	transform: scale(1);
+	transform: translate(-1190px, -400px) scale(3);
+	-ms-transform: translate(-1190px, -400px) scale(3);
+	-webkit-transform: translate(-1190px, -400px) scale(3);
+	-moz-transform: translate(-1190px, -400px) scale(3);
 }
 
 #headgateGroup:hover {
-	transform-origin: center center;
-	-ms-transform-origin: center center;
-	-webkit-transform-origin: center center;
-	-moz-transform-origin: 450px 275px;
-	transform: scale(3);
-	-ms-transform: scale(3);
-	-webkit-transform: scale(3);
-	-moz-transform: scale(3);
-}
-
-#headgateGroup {
-	pointer-events: all;
-	transform: scale(1);
+	transform: translate(-1000px, -580px) scale(3);
+	-ms-transform: translate(-1000px, -580px) scale(3);
+	-webkit-transform: translate(-1000px, -580px) scale(3);
+	-moz-transform: translate(-1000px, -580px) scale(3);
 }
 
 #paloVerdeGroup:hover {
-	transform-origin: center center;
-	-ms-transform-origin: center center;
-	-webkit-transform-origin: center center;
-	-moz-transform-origin: 400px 330px;
-	transform: scale(3);
-	-ms-transform: scale(3);
-	-webkit-transform: scale(3);
-	-moz-transform: scale(3);
-}
-
-#paloVerdeGroup {
-	pointer-events: all;
-	transform: scale(1);
+	transform: translate(-950px, -780px) scale(3);
+	-ms-transform: translate(-950px, -780px) scale(3);
+	-webkit-transform: translate(-950px, -780px) scale(3);
+	-moz-transform: translate(-950px, -780px) scale(3);
 }
 
 #outwashGroup:hover {
-	transform-origin: center center;
-	-ms-transform-origin: center center;
-	-webkit-transform-origin: center center;
-	-moz-transform-origin: 400px 400px;
-	transform: scale(3);
-	-ms-transform: scale(3);
-	-webkit-transform: scale(3);
-	-moz-transform: scale(3);
-}
-
-#outwashGroup {
-	pointer-events: all;
-	transform: scale(1);
+	transform: translate(-830px, -850px) scale(3);
+	-ms-transform: translate(-830px, -850px) scale(3);
+	-webkit-transform: translate(-830px, -850px) scale(3);
+	-moz-transform: translate(-830px, -850px) scale(3);
 }
 
 #imperialGroup:hover {
-	transform-origin: center center;
-	-ms-transform-origin: center center;
-	-webkit-transform-origin: center center;
-	-moz-transform-origin: 390px 440px;
-	transform: scale(3);
-	-ms-transform: scale(3);
-	-webkit-transform: scale(3);
-	-moz-transform: scale(3);
-}
-
-#imperialGroup {
-	pointer-events: all;
-	transform: scale(1);
+	transform: translate(-920px, -980px) scale(3);
+	-ms-transform: translate(-920px, -980px) scale(3);
+	-webkit-transform: translate(-920px, -980px) scale(3);
+	-moz-transform: translate(-920px, -980px) scale(3);
 }
 
 #morelosGroup:hover {
-	transform-origin: center center;
-	-ms-transform-origin: center center;
-	-webkit-transform-origin: 45% 110%;
-	-moz-transform-origin: 200px 700px;
-	transform: scale(1.5);
-	-ms-transform: scale(1.5);
-	-webkit-transform: scale(1.5);
-	-moz-transform: scale(1.5);
-	transition-delay:0s;
-}
-
-#morelosGroup {
-	pointer-events: all;
-	transform: scale(1);
-	transition-delay:.5s;
+	transform: translate(-120px, -640px) scale(1.75);
+	-ms-transform: translate(-120px, -640px) scale(1.75);
+	-webkit-transform: translate(-120px, -640px) scale(1.75);
+	-moz-transform: translate(-120px, -640px) scale(1.75);
 }
 
 #easternGroup:hover {
-	transform-origin: center center;
-	-ms-transform-origin: center center;
-	-webkit-transform-origin: center center;
-	-moz-transform-origin: 480px 560px;
-	transform: scale(3);
-	-ms-transform: scale(3);
-	-webkit-transform: scale(3);
-	-moz-transform: scale(3);
-	transition-delay:0s;
-}
-
-#easternGroup {
-	pointer-events: all;
-	transform: scale(1);
-	transition-delay:.5s;
+	transform: translate(-1220px, -1440px) scale(3);
+	-ms-transform: translate(-1220px, -1440px) scale(3);
+	-webkit-transform: translate(-1220px, -1440px) scale(3);
+	-moz-transform: translate(-1220px, -1440px) scale(3);
+	/*transition-delay:0s;*/
 }
 
 #saltonGroup:hover {
-	transform-origin: center center;
-	-ms-transform-origin: center center;
-	-webkit-transform-origin: 10% 90%;
-	-moz-transform-origin: 20px 580px;
-	transform: scale(2);
-	-ms-transform: scale(2);
-	-webkit-transform: scale(2);
-	-moz-transform: scale(2);
-	transition-delay:0s;
-}
-
-#saltonGroup {
-	pointer-events: all;
-	transform: scale(1);
-	transition-delay:.5s;
+	transform: translate(-20px, -1440px) scale(3);
+	-ms-transform: translate(-20px, -1440px) scale(3);
+	-webkit-transform: translate(-20px, -1440px) scale(3);
+	-moz-transform: translate(-20px, -1440px) scale(3);
 }
