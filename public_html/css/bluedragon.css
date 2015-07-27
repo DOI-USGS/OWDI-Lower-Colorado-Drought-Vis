@@ -20,6 +20,11 @@
 	fill: #1E628C;
 }
 
+.footprint {
+	color: #FFFFFF;
+	opacity: 0.0;
+}
+
 .riverGroup {
 	-webkit-transition: 1s ease-in-out;
 	-moz-transition: 1s ease-in-out;
