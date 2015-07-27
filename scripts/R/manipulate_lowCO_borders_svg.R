@@ -99,6 +99,16 @@ attr_svg <- function(svg, attrs, type){
   }
   invisible(svg)
 }
+
+add_background_defs <- function(svg, id, image_url){
+  root_nd <- xmlRoot(svg)
+  def_nd <- newXMLNode("defs",parent = root_nd, at = 0)
+  pt_nd <- newXMLNode('pattern',parent=def_nd, attrs = c(id=id, patternUnits='userSpaceOnUse',x=-35,width=610, height=547))
+  newXMLNode('image', parent=pt_nd, attrs = c('xlink:href'=image_url, width=610, height=547))
+  invisible(svg)
+  
+}
+
 #' @param svg an open svg doc (see xml_doc <- xmlParse(svg_file, useInternalNode=TRUE))
 #' @param r character vector radius of circle
 #' @param id character vector mask id
