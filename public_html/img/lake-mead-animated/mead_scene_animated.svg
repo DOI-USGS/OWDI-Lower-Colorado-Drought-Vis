@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../../css/svg.css" ?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-35 0 610 547" preserveAspectRatio="xMinYMin meet" onload="init(evt)" version="1.1">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-50 0 740 547" preserveAspectRatio="xMinYMin meet" onload="init(evt)" version="1.1">
   <script type="text/ecmascript"><![CDATA[function init(evt){
 if ( window.svgDocument == null ) {
 svgDocument = evt.target.ownerDocument;
@@ -296,7 +296,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
 }
 }
 }]]></script>
-  <rect x="-35" width="610" height="547" fill="url(#background-image)"/>
+  <rect x="-50" width="675" height="547" fill="url(#background-image)" rx="4" ry="4"/>
   <defs>
     <pattern id="mexico-flag" patternUnits="userSpaceOnUse" x="150" y="130" width="610" height="547">
       <image xlink:href="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" width="610" height="547"/>
@@ -317,8 +317,8 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </pattern>
   </defs>
   <defs>
-    <pattern id="background-image" patternUnits="userSpaceOnUse" x="-35" width="610" height="547">
-      <rect fill="black" opacity="0.9" width="610" height="547"/>
+    <pattern id="background-image" patternUnits="userSpaceOnUse" x="-50" width="640" height="547">
+      <rect fill="black" opacity="0.9" width="640" height="547"/>
     </pattern>
   </defs>
   <g id="non-lo-co-states" fill="none" stroke-width="1.5" stroke="#C0C0C0" mask="url(#non-lo-co-mask)">
@@ -400,10 +400,10 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     </mask>
   </defs>
   <g id="decrement-scene">
-    <rect x="-35" width="35" height="547" fill="grey" opacity="0.5" onclick="decrementScene()"/>
-    <path d="M-10 293.5 L-25 273.5 L-10 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round" onclick="decrementScene()"/>
-    <rect x="540" width="35" height="547" fill="grey" opacity="0.5" onclick="incrementScene()"/>
-    <path d="M550 293.5 L565 273.5 L550 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round" onclick="incrementScene()"/>
+    <rect x="-50" width="35" height="547" fill="grey" opacity="0.5" onclick="decrementScene()"/>
+    <path d="M-25 293.5 L-40 273.5 L-25 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round" onclick="decrementScene()"/>
+    <rect x="590" width="35" height="547" fill="grey" opacity="0.5" onclick="incrementScene()"/>
+    <path d="M600 293.5 L615 273.5 L600 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round" onclick="incrementScene()"/>
   </g>
   <g id="increment-scene"/>
   <g id="mead-pictogram-legend" transform="translate(200,135)" opacity="0" class="legend-hidden">
