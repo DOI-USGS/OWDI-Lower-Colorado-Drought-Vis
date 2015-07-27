@@ -369,6 +369,7 @@ ecmascript_mead_proj <- function(){
                'if ( window.svgDocument == null ) {',
                'svgDocument = evt.target.ownerDocument;',
                'svgDocument.setMobile = this.setMobile;',
+               'svgDocument.drawTiers = this.moveInToMomsHouse;',
                'svgDocument.setDesktop = this.setDesktop;}',
                '}',
                'window.parent.addEventListener("form-factor-desktop", setDesktop, false);',
