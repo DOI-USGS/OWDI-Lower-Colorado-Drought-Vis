@@ -16,7 +16,7 @@ read_dir = 'src_data/lower-co-map'
 svg_file = file.path(read_dir,paste0('lo_CO_borders','.svg'))
 out_file = file.path(plot_dir,paste0('mead_scene_animated','.svg'))
 co_river_styles = c('style'="stroke-dasharray:331;stroke-dashoffset:331;stroke-linejoin:round;stroke-linecap:round;")
-co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round")
+co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", class='hidden')
 pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'class'='hidden')
 mead_water_styles = c(fill='#0066CC',stroke='none')
 mead_border_styles = c(fill='none','stroke-width'="2.5",stroke='#FFFFFF','stroke-linejoin'='round','stroke-linecap'="round")
@@ -36,9 +36,13 @@ ani_dur <- c('mead-draw'="2s", 'mead-remove'='1s','stage-move'='1s',
 
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
-svg <- add_ecmascript(svg, ecmascript_mead_map()) %>%
-  add_rect(x = '450', y='507', width="38", height="30", fill='red', opacity='0.8', stroke='black', 'stroke-width'='0.5', onclick='decrementScene()') %>%
-  add_rect(x = '492', y='507', width="38", height="30", fill='blue', opacity='0.8', stroke='black', 'stroke-width'='0.5', onclick='incrementScene()') %>%
+svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
+  edit_attr_svg(c('viewBox'='-35 0 610 547')) %>% 
+  add_rect(x="-35", width="610", height="547", fill="url(#background-image)", at=0) %>%
+  add_scene_buttons() %>% 
+  add_picto_legend() %>% 
+  remove_svg_elements(elements = c('delete_group'='g')) %>% 
+  add_ecmascript(ecmascript_mead_map()) %>%
   attr_svg_groups(attrs = list('co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles)) %>%
   attr_svg_paths(attrs = list('California'=c("class"="california"), 'Nevada'=c("class"="nevada"), 'Arizona'=c("class"="arizona"),'Mexico'=c("class"="mexico"))) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'draw-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="331;0;") %>%
