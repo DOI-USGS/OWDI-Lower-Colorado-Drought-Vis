@@ -119,6 +119,16 @@ add_background_defs <- function(svg, id, image_url){
   
 }
 
+add_flag_defs <- function(svg, id,x,y, width,height, image_url){
+  root_nd <- xmlRoot(svg)
+  def_nd <- newXMLNode("defs",parent = root_nd, at = 0)
+  pt_nd <- newXMLNode('pattern',parent=def_nd, attrs = c(id=id, patternUnits='userSpaceOnUse',x=x,y=y,width=width, height=height))
+  newXMLNode('image', parent=pt_nd, attrs = c('xlink:href'=image_url, width=width, height=height))
+  invisible(svg)
+  
+}
+
+
 #' @param svg an open svg doc (see xml_doc <- xmlParse(svg_file, useInternalNode=TRUE))
 #' @param r character vector radius of circle
 #' @param id character vector mask id

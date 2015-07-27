@@ -39,6 +39,8 @@ ani_dur <- c('mead-draw'="2s", 'mead-remove'='1s','stage-move'='1s',
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
+  add_flag_defs(id = 'usa-flag', x=0,y=-100, width=500,height=500, image_url='https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg') %>% 
+  add_flag_defs(id = 'mexico-flag', x=150,y=170, width=610,height=547, image_url='https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg') %>% 
   edit_attr_svg(c('viewBox'='-35 0 610 547')) %>% 
   add_rect(x="-35", width="610", height="547", fill="url(#background-image)", at=0) %>%
   add_scene_buttons() %>% 
