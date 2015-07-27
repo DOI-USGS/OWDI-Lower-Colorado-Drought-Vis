@@ -114,7 +114,8 @@ add_background_defs <- function(svg, id, image_url){
   root_nd <- xmlRoot(svg)
   def_nd <- newXMLNode("defs",parent = root_nd, at = 0)
   pt_nd <- newXMLNode('pattern',parent=def_nd, attrs = c(id=id, patternUnits='userSpaceOnUse',x=-35,width=610, height=547))
-  newXMLNode('image', parent=pt_nd, attrs = c('xlink:href'=image_url, width=610, height=547))
+  #newXMLNode('image', parent=pt_nd, attrs = c('xlink:href'=image_url, width=610, height=547))
+  newXMLNode('rect', parent=pt_nd, attrs = c('fill'="black",opacity='0.9', width=610, height=547))
   invisible(svg)
   
 }

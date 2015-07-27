@@ -125,6 +125,7 @@ ecmascript_mead_map <- function(){
 'hide("Mead-2D");',
 'hideStateMouseovers();',
 'show("mead-pictogram-legend");',
+'hide("sankey-lines");',
 'document.getElementById("mead-pictogram-legend").setAttribute("class","legend-box");',
                '}',
                
@@ -135,6 +136,7 @@ ecmascript_mead_map <- function(){
 'show("Arizona-pictos");',
 'show("Mexico-pictos");',
 'hide("pictogram-topfive");',
+'show("sankey-lines");',
 'hide("top-users");',
 'hide("co-river-polyline");',
 'hide("co-basin-polygon");',
@@ -250,6 +252,8 @@ ecmascript_mead_map <- function(){
                '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","hidden");',
                '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","hidden");',
                '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","hidden");',
+              '\tdocument.getElementById("arizona-sankey").setAttribute("stroke-width","14");',
+              '\tdocument.getElementById("mexico-sankey").setAttribute("stroke-width","7.5");',
                '}',
                
                'function setAllocationsShortage1(){',
@@ -262,6 +266,8 @@ ecmascript_mead_map <- function(){
                '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","shown");',
                '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","hidden");',
                '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","hidden");',
+'\tdocument.getElementById("arizona-sankey").setAttribute("stroke-width","12.4");',
+'\tdocument.getElementById("mexico-sankey").setAttribute("stroke-width","7.25");',
                '}',
                
                'function setAllocationsShortage2(){',
@@ -277,6 +283,8 @@ ecmascript_mead_map <- function(){
                '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","hidden");',
                '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","shown");',
                '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","hidden");',
+'\tdocument.getElementById("arizona-sankey").setAttribute("stroke-width","12");',
+'\tdocument.getElementById("mexico-sankey").setAttribute("stroke-width","7.15");',
                '}',
                
                'function setAllocationsShortage3(){',
@@ -295,6 +303,8 @@ ecmascript_mead_map <- function(){
                '\tdocument.getElementById("allocation-picto-highlight-1").setAttribute("class","hidden");',
                '\tdocument.getElementById("allocation-picto-highlight-2").setAttribute("class","hidden");',
                '\tdocument.getElementById("allocation-picto-highlight-3").setAttribute("class","shown");',
+'\tdocument.getElementById("arizona-sankey").setAttribute("stroke-width","11.6");',
+'\tdocument.getElementById("mexico-sankey").setAttribute("stroke-width","6.875");',
                '}',
 'function animateIE(element) {
 if(element instanceof Element) {

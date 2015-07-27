@@ -55,6 +55,7 @@ svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-backgr
                       scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
   build_state_pictos() %>%
+  add_sankey_lines() %>% 
   toString.XMLNode()
 
 lines <- strsplit(svg,'[\n]')[[1]]
