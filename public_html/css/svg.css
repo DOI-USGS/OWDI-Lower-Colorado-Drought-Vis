@@ -95,7 +95,6 @@
     stroke: #458B00;
     fill: url(#mexico-flag);
     mask: "none";
-    opacity: 1;
 }
 
 .legend-box, .legend-hidden {
