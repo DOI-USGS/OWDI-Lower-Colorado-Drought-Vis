@@ -333,12 +333,9 @@ nav h3 {
 	width:100%;
 	}
 	
-.exploreMore{
-	background:#003366;
-	padding:10px;
-	border-radius:5px;
-	color:#fff;
-	border:none;
+.explore-more{
+	margin-top:20px;
+	font-size:1.2em;
 	}
 	
 .sectionContent .explore-more{
