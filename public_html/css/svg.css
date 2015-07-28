@@ -12,11 +12,18 @@
 }
 .california, .nevada, .arizona, .mexico, .california-moved, .nevada-moved, .arizona-moved, .mexico-moved, 
 .mead-flood, .mead-surplus, .mead-normal, .mead-shortage-1, .mead-shortage-2, .mead-shortage-3,
-.legend-box, .legend-moved, .level-fill, .level-move, .sankey-line{
+.legend-box, .legend-moved, .sankey-line{
     -webkit-transition: 1s ease-in-out;
     -moz-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
     transition:  1s ease-in-out;
+}
+
+.level-fill, .level-move {
+    -webkit-transition: 1.6s ease-in-out;
+    -moz-transition: 1.6s ease-in-out;
+    -o-transition: 1.6s ease-in-out;
+    transition:  1.6s ease-in-out;
 }
 
 .level-fill{
@@ -93,7 +100,7 @@
     -webkit-transform: translate(-70px, 95px) scale(0.55); /* Safari */
     transform: translate(-70px, 95px) scale(0.55);
     stroke-width: 4.55;
-    stroke: #FFFFFF;
+    stroke: #458B00;
     fill: url(#mexico-flag);
     mask: "none";
 }
