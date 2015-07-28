@@ -297,7 +297,6 @@ nav h3 {
 .graphCaption{
 	background:rgba(0,51,102,.2);
 	width:100%;
-	min-height:100px;
 	margin:20px 0 10px 0;
 	padding:10px;
 	border-radius:5px;
@@ -395,19 +394,13 @@ nav h3 {
 	}
 
 .SVGInfo {
-		background: rgba(0, 51, 102, .3);
-		width: auto;
-		min-height: 100px;
-		padding: 10px;
 		margin: 0 auto;
-		color: #fff;
 		text-align: left;
-		position: absolute;
-		bottom: 10px;
-		right: 10px;
-		border-radius: 5px;
 		line-height: 1.7em;
-		display: none;
+	}
+	
+#draw-river{
+	display:none;
 	}
 
 @media screen and (min-width: 687px) {
@@ -514,9 +507,11 @@ nav h3 {
 	}
 	
 	/*Section 16 CSS*/
-	.SVGInfo {
-		width: 480px;
-	}
+	.SVGInfo{
+		width:760px;
+		padding-right:10px;
+		}
+		
 	#meadSVGContainer object {
 		margin-left: 0%;
                 width: 800px;

@@ -1,4 +1,4 @@
-#' @param svg an open svg doc (see xml_doc <- xmlParse(svg_file, useInternalNode=TRUE))
+  #' @param svg an open svg doc (see xml_doc <- xmlParse(svg_file, useInternalNode=TRUE))
 #' @param values numeric vector of values to picto-scale
 #' @param scale scale of values to single picto-icon
 #' @import XML
