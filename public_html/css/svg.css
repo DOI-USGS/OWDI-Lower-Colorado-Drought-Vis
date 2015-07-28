@@ -27,9 +27,9 @@
 }
 
 .level-fill{
-    -ms-transform: translate(60px,8px) scale(0.25); /* IE 9 */
-    -webkit-transform:  translate(60px,8px) scale(0.25); /* Safari */
-    transform:  translate(60px,8px) scale(0.25);
+    -ms-transform: translate(94px,8px) scale(0.25); /* IE 9 */
+    -webkit-transform:  translate(94px,8px) scale(0.25); /* Safari */
+    transform:  translate(94px,8px) scale(0.25);
     opacity:0;
 }
 .mexico {

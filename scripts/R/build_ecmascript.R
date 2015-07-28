@@ -433,8 +433,8 @@ ecmascript_mead_proj <- function(){
                   document.getElementById('Projected-marker').setAttribute('class','shown');
                  document.getElementById('Historical-marker').setAttribute('class','shown');
                  document.getElementById('dashed-projection').setAttribute('class','shown');
-document.getElementById('filled-projection').setAttribute('class','shown');}
-				     }, 1000);
+document.getElementById('condition-markers').setAttribute('class','shown');}
+				     }, 1500);
                  }")
   
   
