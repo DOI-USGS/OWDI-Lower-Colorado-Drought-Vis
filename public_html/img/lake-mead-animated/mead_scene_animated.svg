@@ -6,7 +6,9 @@ if ( window.svgDocument == null ) {
 svgDocument = evt.target.ownerDocument;
 svgDocument.incrementScene = this.incrementScene;
 svgDocument.decrementScene = this.decrementScene;
-svgDocument.drawRiver = this.scene1;}
+svgDocument.drawRiver = this.scene1;
+svgDocument.step = 1;
+}
 }
 var elevations = {"flood":"1,219.6",
 "surplus":"1,200",
@@ -91,11 +93,13 @@ document.getElementById("allocation-context").firstChild.data = " ";
 var sceneNum = 0;
 function incrementScene(){
 if (sceneNum < scenes.length-1){
+this.step++;
 scenes[++sceneNum]();
 }
 }
 function decrementScene(){
 if (sceneNum > 0){
+this.step--;
 scenes[--sceneNum]();
 }
 }

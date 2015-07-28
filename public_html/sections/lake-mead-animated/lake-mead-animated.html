@@ -10,7 +10,68 @@
     parentContainer = "#meadSVGContainer",
     animation = function() {
       animationSVG = document.getElementById('mead-object').getSVGDocument();
-
+		$(animationSVG).find('#decrement-scene').on('click', function(){
+			var stepNumber = animationSVG.step;
+				
+				switch(stepNumber){
+			
+				case 1:
+				$('#draw-basin').fadeOut(function(){
+					$('#draw-river').fadeIn();
+				});	
+				break;
+				
+				case 2:
+				$('#highlight-user-2').fadeOut();
+				$('#draw-river').fadeOut(function(){
+					$('#draw-basin').fadeIn();
+					});
+				break;
+				
+				case 3:
+				$('#mead-info-1').fadeOut();
+				$('#draw-basin').fadeOut(function(){
+					$('#highlight-user-2').fadeIn();
+				});
+				break;
+				
+				case 4:
+				$('#mead-info-2').fadeOut();
+				$('#highlight-user-2').fadeOut(function(){
+					$('#mead-info-1').fadeIn();
+				});
+				break;
+				
+				case 5:
+				$('#mead-info-3').fadeOut();
+				$('#mead-info-1').fadeOut(function(){
+					$('#mead-info-2').fadeIn();
+				});
+				break;
+				
+				case 6:
+				$('#mead-info-4').fadeOut();
+				$('#mead-info-2').fadeOut(function(){
+					$('#mead-info-3').fadeIn();
+				});
+				break;
+				
+				case 7:
+				$('#mead-info-5').fadeOut();
+				$('#mead-info-3').fadeOut(function(){
+					$('#mead-info-4').fadeIn();
+				});
+				break;
+				
+				case 8:
+				$('#mead-info-4').fadeOut(function(){
+					$('#mead-info-5').fadeIn();
+				});
+				break;
+				
+				}
+			
+			})
       // Only call if SVG is loaded and has this function
       if (animationSVG && animationSVG.drawRiver && !triggered) {
         animationSVG.drawRiver();
@@ -25,339 +86,48 @@
   });
 })();
 </script>
-	<!-- These should be brought back when there is a target div and buttons are hooked up to display them -->
-<!--  <div class="SVGInfo" id="draw-river">
-    <p>The Colorado is the <a class="orangeLinks" href="http://www.usbr.gov/lc/region/g4000/wtracct.html" target="_blank">principal source of water</a> for irrigation and domestic use in Arizona, southern California, southern Nevada, and Mexico.</p>
-  </div>
-  <div class="SVGInfo" id="draw-basin">
-    <p>The Secretary of the Interior annually provides <a class="orangeLinks" href="http://www.usbr.gov/lc/region/g4000/wtracct.html" target="_blank">detailed and accurate</a> records of diversions, return flows, and consumptive use of water diverted from the mainstream of the Colorado River below Lee Ferry to water users within the basin.</p>
-
-    <p>The annual <a class="orangeLinks" href="http://www.usbr.gov/lc/region/g4000/wtraccttypes.html" target="_blank">Water Accounting Report</a> tabulates measured diversions, measured and unmeasured returns and consumptive use of each user taking water from the lower Colorado River.</p>
-    <p>This pictogram depicts the average use by water user for the last five years. Each blue block represents 100,000 acre feet.</p>
-
-    <p>Based on <a class="orangeLinks" href="http://www.usbr.gov/lc/region/programs/strategies.html" target="_blank">Colorado River Interim Guidelines</a> for Lower Basin Shortages and the Coordinated Operations for Lake Powell and Lake Mead signed in 2007, every year on January 1, the Secretary of Interior provides a report describing the projected plan of operation for the coming year.</p>
-	<p>Mouse over the bars to see the top water user contracts (calculated by highest mean from last five years), highlighted in yellow.</p>
-  </div>
-  <div class="SVGInfo" id="highlight-user-2">
-    <p>The Operation of Lake Mead determined by this plan can be Normal, Surplus or Shortage Level 1 2 or 3 based upon availability of 7.5 million acre feet of water to satisfy the consumptive use contracts. Ultimately, the water elevation of Lake Mead determines shortage conditions.</p>
-
-    <p>These <a class="orangeLinks" href="http://www.usbr.gov/lc/region/programs/strategies/documents.html" target="_blank">guidelines</a> allow the Secretary to better manage and operate the key Colorado River reservoirs and provide water users and managers a greater degree of certainty with respect to the amount of annual water deliveries in future years, particularly under drought and low reservoir conditions.</p>
-
-    <p>Lake Mead is <a class="orangeLinks" href="http://www.nps.gov/lake/learn/nature/lowwater.htm">designed to fluctuate</a> in order to provide the southwest a reliable source of water.</p>
-
-    <p>As water elevation in Lake Mead changes, the <a class="orangeLinks" href="http://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf" target="_blank">annual allocation</a> to water users also changes. When Lake Mead is full and Reclamation is making flood control releases, surplus supplies are unlimited. This is a "Surplus Condition" (at or above 1145 feet). A "Normal Condition" exists when Lake Mead is at an elevation sufficient (between 1075 and 1145 feet) to satisfy the 7.5 million acre feet consumptive use needs for the Lower Division states. A "Shortage Condition" exists when the Secretary determines that there is not enough mainstream water available to satisfy the water use needs. (below 1075 feet). Shortage tier 1 (when water levels are between 1075 and 1050 feet), delivery <strong>reductions</strong> are: Nevada 13,000 maf; Arizona 320,000 maf; and Mexico 50,000 maf. Shortage tier 2 conditions are when water levels in Lake Mead are between 1049 and 1025 feet, this translates into reductions to Nevada 17,000 maf; Arizona 400,000 maf; and Mexico 70,000 maf. Shortage tier 3 conditions are seen when water levels in Lake Mead fall at or below 1025 feet. Reductions at this level are: Nevada 20,000 maf; Arizona 480,000 maf; and Mexico 125,000 maf.</p>
- 
- <p> Mouse over the US states and Mexico to see how different elevations impact allocations. </p>
-
-  </div>-->
+	
+	<div class="SVGInfo" id="draw-river">
+    	<p>The Colorado is the <a href="http://www.usbr.gov/lc/region/g4000/wtracct.html" target="_blank">principal source of water</a> for irrigation and domestic use in Arizona, southern California, southern Nevada, and Mexico.</p>
+  	</div>
+  
+  	<div class="SVGInfo" id="draw-basin">
+		<p>The Secretary of the Interior annually provides <a href="http://www.usbr.gov/lc/region/g4000/wtracct.html" target="_blank">detailed and accurate</a> records of diversions, return flows, and consumptive use of water diverted from the mainstream of the Colorado River below Lee Ferry to water users within the basin.</p>
+	
+		<p>The annual <a href="http://www.usbr.gov/lc/region/g4000/wtraccttypes.html" target="_blank">Water Accounting Report</a> tabulates measured diversions, measured and unmeasured returns and consumptive use of each user taking water from the lower Colorado River.</p>
+		<p>This pictogram depicts the average use by water user for the last five years. Each blue block represents 100,000 acre feet.</p>
+	
+		<p>Based on <a href="http://www.usbr.gov/lc/region/programs/strategies.html" target="_blank">Colorado River Interim Guidelines</a> for Lower Basin Shortages and the Coordinated Operations for Lake Powell and Lake Mead signed in 2007, every year on January 1, the Secretary of Interior provides a report describing the projected plan of operation for the coming year.</p>
+		<p>Mouse over the bars to see the top water user contracts (calculated by highest mean from last five years), highlighted in yellow.</p>
+  	</div><!--draw-basin-->
+  
+  	<div class="SVGInfo" id="highlight-user-2">
+    	<p>The Operation of Lake Mead determined by this plan can be Normal, Surplus or Shortage Level 1, 2, or 3 based upon availability of 7.5 million acre feet of water to satisfy the consumptive use contracts. Ultimately, the water elevation of Lake Mead determines shortage conditions.</p>
+	</div><!--highlight-user-2-->
+	
+	<div class="SVGInfo" id="mead-info-1">
+    	<p>These <a href="http://www.usbr.gov/lc/region/programs/strategies/documents.html" target="_blank">guidelines</a> allow the Secretary to better manage and operate the key Colorado River reservoirs and provide water users and managers a greater degree of certainty with respect to the amount of annual water deliveries in future years, particularly under drought and low reservoir conditions.</p>
+	</div><!--mead-info-1-->
+	
+	<div class="SVGInfo" id="mead-info-2">
+		<p>Lake Mead is <a href="http://www.nps.gov/lake/learn/nature/lowwater.htm">designed to fluctuate</a> in order to provide the southwest a reliable source of water.</p>
+	
+		<p>As water elevation in Lake Mead changes, the <a href="http://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf" target="_blank">annual allocation</a> to water users also changes. When Lake Mead is full and Reclamation is making flood control releases, surplus supplies are unlimited. This is a "Surplus Condition" (at or above 1145 feet).</p>
+	</div><!--mead-info-2-->
+	 
+	 <div class="SVGInfo" id="mead-info-3">
+		<p>A "Normal Condition" exists when Lake Mead is at an elevation sufficient (between 1075 and 1145 feet) to satisfy the 7.5 million acre feet consumptive use needs for the Lower Division states.</p> 
+		<p>Shortage tier 1 (when water levels are between 1075 and 1050 feet), delivery <strong>reductions</strong> are: Nevada 13,000 maf; Arizona 320,000 maf; and Mexico 50,000 maf.</p>
+	</div><!--mead-info-3-->
+	
+	<div class="SVGInfo" id="mead-info-4">
+	<p>A "Shortage Condition" exists when the Secretary determines that there is not enough mainstream water available to satisfy the water use needs. (below 1075 feet).</p> 
+	<p>Shortage tier 2 conditions are when water levels in Lake Mead are between 1049 and 1025 feet, this translates into reductions to Nevada 17,000 maf; Arizona 400,000 maf; and Mexico 70,000 maf.</p>
+	</div><!--mead-info-4-->
+	
+	<div class="SVGInfo" id="mead-info-5">
+		<p>Shortage tier 3 conditions are seen when water levels in Lake Mead fall at or below 1025 feet. Reductions at this level are: Nevada 20,000 maf; Arizona 480,000 maf; and Mexico 125,000 maf.
+		</p>
+	</div><!--mead-info-5-->  
+	
 </div>
-<!--<script type="text/javascript">
-/* global owdiDrought */
-/* global ScrollMagic */
-/* global $ */
-/* global console */
-(function() {
-  "use strict";
-  owdiDrought.lakeMeadScene = {};
-  owdiDrought.lakeMeadScene.createCOScene = function() {
-    if (!owdiDrought.lakeMeadScene.meadObjectSVG) {
-      owdiDrought.lakeMeadScene.meadObjectSVG = svgDomElement.getSVGDocument();
-    }
-  };
-
-  var svgDomElement = document.getElementById("mead-object"),
-    svgContainer = "#meadSVGContainer",
-    parentContainer = "#meadAnimatedContainer",
-    defaultTransitionSpeed = 'slow',
-    defaultEndFunction = function(e) {
-      var $section = $("#" + e.target.name);
-
-      if (e.scrollDirection.toUpperCase() === "FORWARD") {
-        $section.fadeOut(defaultTransitionSpeed);
-      } else {
-        $section.fadeIn(defaultTransitionSpeed);
-      }
-    },
-    setScene = function() {
-      var defaultDuration = 300,
-        fadeSpeed = defaultTransitionSpeed,
-        forward = "FORWARD",
-        // Define the actions. Each action may have a start and an end as well as a duraiton
-        actions = {
-          // Each action's name needs to match the ID of the div it's acting on. The name is used as
-          // a selector within each function
-          "draw-river": {
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawRiver);
-              } else {
-                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetRiver);
-              }
-            }
-          },
-          "draw-basin": {
-            "offset": 300,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawBasin);
-              } else {
-                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetBasin);
-              }
-            }
-          },
-          "draw-pictogram": {
-            "offset": 600,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.drawPictogram);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(1);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(2);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(3);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(4);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(5);
-              } else {
-                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removePictogram);
-              }
-            }
-          },
-          "highlight-user-1": {
-            "offset": 900,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(1);
-                });
-              } else {
-                $section.fadeOut(fadeSpeed);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(1);
-              }
-            }
-
-          },
-          "highlight-user-2": {
-            "offset": 1200,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(1);  
-                  owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(2);
-                });
-              } else {
-                $section.fadeOut(fadeSpeed);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(2);
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(1);
-              }
-            }
-          },
-          "highlight-user-3": {
-            "offset": 1500,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(2);
-                  owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(3);
-                });
-              } else {
-                $section.fadeOut(fadeSpeed);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(3);
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(2);
-              }
-            }
-          },
-          "highlight-user-4": {
-            "offset": 1800,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(3);
-                  owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(4);
-                });
-              } else {
-                $section.fadeOut(fadeSpeed);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(4);
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(3);
-              }
-            }
-          },
-          "highlight-user-5": {
-            "offset": 2100,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(4);
-                  owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(5);
-                });
-              } else {
-                $section.fadeOut(fadeSpeed);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(5);
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(4);
-              }
-            }
-          },
-          "remove-items": {
-            "offset": 2400,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.removeGreyStates);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeRiver();
-                owdiDrought.lakeMeadScene.meadObjectSVG.removePictogram();
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(5);
-              } else {
-                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetGreyStates);
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawPictogram();
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawUserPicto(5);
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawBasin();
-                owdiDrought.lakeMeadScene.meadObjectSVG.showRiver();
-              }
-            }
-          },
-          "move-states": {
-            "offset": 2700,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.moveStates);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeUserPicto(5);
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawMead();
-                owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('flood-rise');
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawStatePicto('mexico');
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawStatePicto('nevada');
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawStatePicto('california');
-                owdiDrought.lakeMeadScene.meadObjectSVG.drawStatePicto('arizona');
-              } else {
-                $section.fadeOut(fadeSpeed, owdiDrought.lakeMeadScene.meadObjectSVG.resetStates);
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeMead();
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeStatePicto('mexico');
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeStatePicto('nevada');
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeStatePicto('california');
-                owdiDrought.lakeMeadScene.meadObjectSVG.removeStatePicto('arizona');
-              }
-            }
-          },
-          "surplus-condition": {
-            "offset": 3000,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('surplus-fall');
-                  
-                });
-              } else {
-                $section.fadeOut(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('flood-rise');
-                  
-                });
-              }
-            }
-          },
-          "normal-condition": {
-            "offset": 3300,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('normal-fall');
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsNormal();
-                });
-              } else {
-                $section.fadeOut(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('surplus-rise');
-                });
-              }
-            }
-          },
-          "shortage-condition-1": {
-            "offset": 3600,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-1-fall');
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsShortage1();
-                });
-              } else {
-                $section.fadeOut(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('normal-rise');
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsNormal();
-                });
-              }
-            }
-          },
-          "shortage-condition-2": {
-            "offset": 3900,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-2-fall');
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsShortage2();
-                });
-              } else {
-                $section.fadeOut(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-1-rise');
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsShortage1();
-                });
-              }
-            }
-
-          },
-          "shortage-condition-3": {
-            "offset": 4200,
-            "start": function(e) {
-              var $section = $("#" + e.target.name);
-              if (e.scrollDirection === forward) {
-                $section.fadeIn(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-3-fall');
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsShortage3();
-                });
-              } else {
-                $section.fadeOut(fadeSpeed, function() {
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setMeadCondition('shortage-2-rise');
-                  owdiDrought.lakeMeadScene.meadObjectSVG.setAllocationsShortage2();
-                });
-              }
-            }
-
-          }
-        };
-
-      // For every action I have, set the ScrollMagic event triggering for it
-      for (var action in actions) {
-        if (actions.hasOwnProperty(action)) {
-          var scene = actions[action];
-          scene.parentContainer = parentContainer;
-          scene.duration = defaultDuration;
-          scene.name = action;
-          scene.pin = parentContainer;
-
-          if (!scene.triggerHook) {
-            scene.triggerHook = "onLeave";
-          }
-
-          // All of the scenes seem to have the same end function so I just want
-          // to declare that once. If you want to diverge from the generic end function,
-          // just add an 'end' function to the scene in the actions object
-          if (!scene.end) {
-            scene.end = defaultEndFunction;
-          }
-
-          window.owdiDrought.addScene(scene, action);
-        }
-      }
-    }
-
-  setScene();
-})();
-</script>-->
-
-
