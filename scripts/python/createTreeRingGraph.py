@@ -112,7 +112,7 @@ def renderGraph(ele, floc):
         sidestep = 250 / ((maxside - minside)/5)
         drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75')
         drawHighlightBox(ele, 2000, 2015, minbot, maxbot - minbot, '#CCCCB2')
-        for i in range(0, 6):
+        for i in range(0, 15):
             createLineBox(ele, int(year2[i]), int(year2[i])+1, minbot, maxbot - minbot, None, float(raw[i]), int(year2[i]), i)
         for i in range(0, len(year)-1):
             createLineBox(ele, int(year2[i+15]), int(year2[i+15])+1, minbot, maxbot - minbot, float(perc[i]), float(raw[i+15]), int(year2[i+15]), i+15)
