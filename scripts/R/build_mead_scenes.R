@@ -20,7 +20,7 @@ co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5'
 pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'class'='hidden')
 mead_water_styles = c(fill='#0066CC',stroke='none')
 mead_border_styles = c(fill='none','stroke-width'="2.5",stroke='#FFFFFF','stroke-linejoin'='round','stroke-linecap'="round")
-mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', 'fill-opacity'='0.4')
+mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', 'fill-opacity'='0.5')
 
 
 contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
@@ -40,9 +40,9 @@ svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
   add_flag_defs(id = 'usa-flag', x=0,y=-100, width=500,height=500, image_url='https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg') %>% 
-  add_flag_defs(id = 'mexico-flag', x=150,y=130, width=610,height=547, image_url='https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg') %>% 
-  edit_attr_svg(c('viewBox'='-35 0 610 547')) %>% 
-  add_rect(x="-35", width="610", height="547", fill="url(#background-image)", at=0) %>%
+  add_flag_defs(id = 'mexico-flag', x=120,y=150, width=650,height=547, image_url='https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg') %>% 
+  edit_attr_svg(c('viewBox'='-50 0 640 547')) %>% 
+  add_rect(x="-50", width="640", height="547", fill="url(#background-image)", at=0, rx='6',ry='6', id='background-panel') %>%
   add_scene_buttons() %>% 
   add_picto_legend() %>% 
   remove_svg_elements(elements = c('delete_group'='g')) %>% 
