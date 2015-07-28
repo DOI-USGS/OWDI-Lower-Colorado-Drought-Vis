@@ -145,7 +145,6 @@ nav h3 {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-repeat: no-repeat;
-	height: 100%;
 }
 #endEraContainer {
 	background-image: url('../img/keynotes/keynote9-mobile.jpg');
@@ -399,10 +398,22 @@ nav h3 {
 		line-height: 1.7em;
 	}
 	
-#draw-river{
+#draw-basin,
+#highlight-user-2,
+#mead-info-1,
+#mead-info-2,
+#mead-info-3,
+#mead-info-4,
+#mead-info-5,
+#mead-info-6{
 	display:none;
 	}
-
+	
+#draw-basin p,
+#highlight-user-2 p{
+	margin-bottom:10px;
+	}
+	
 @media screen and (min-width: 687px) {
 	nav {
 		margin-top: 1px;
@@ -509,7 +520,6 @@ nav h3 {
 	/*Section 16 CSS*/
 	.SVGInfo{
 		width:760px;
-		padding-right:10px;
 		}
 		
 	#meadSVGContainer object {
