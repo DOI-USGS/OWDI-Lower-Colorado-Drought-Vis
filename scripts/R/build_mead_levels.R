@@ -17,7 +17,8 @@ add_mead_levels <- function(svg, mead_poly, mead_water_styles, mead_border_style
   newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "mead-storage-text", class='label', x='463',y='425',fill='#FFFFFF',stroke='none',style='text-anchor:middle;'))
   newXMLNode('text', parent = g_id, newXMLTextNode('(million acre feet)'),attrs = c(id = "mead-storage-text", class='small-text', x='463',y='425',fill='#FFFFFF',dy="1.2em",stroke='none',style='text-anchor:middle;'))
   newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "allocation-info", class='label', x='55',y='450',fill='#FFFFFF',stroke='none',style='text-anchor:start;'))
-  newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "allocation-value", class='label', x='375',y='520',fill='#FFFFFF',stroke='none',style='text-anchor:middle;'))
+  newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "allocation-value", class='label', x='375',y='510',fill='#FFFFFF',stroke='none',style='text-anchor:middle;'))
+  newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "allocation-context", class='label', x='375',y='510',dy="1.2em", fill='#FFFFFF',stroke='none',style='text-anchor:middle;'))
   newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "allocation-state", class='label', x='55',y='400',fill='none',stroke='none',style='text-anchor:start;'))
   invisible(svg)
 }
