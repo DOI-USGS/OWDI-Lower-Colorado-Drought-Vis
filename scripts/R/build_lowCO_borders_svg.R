@@ -22,11 +22,11 @@ lo_co_states <- c("California","Nevada","Arizona")
 keep_non <- c("Texas","Utah","Colorado","New Mexico","Oregon","Wyoming","Oklahoma","Nebraska","Kansas")
 
 non_lo_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', mask="url(#non-lo-co-mask)")
-lo_co_styles = c('fill'='#d3d3d3', 'fill-opacity'='0.5', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'stroke-linejoin'='round')
+lo_co_styles = c('fill'='#d3d3d3', 'fill-opacity'='0.35', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'stroke-linejoin'='round')
 mexico_styles = c('fill'='#FFFFFF', 'fill-opacity'='0.2', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'stroke-linejoin'='round')
 
 user_styles = c('opacity'='0')
-co_river_styles = c('fill'='none', 'stroke-width'='4.5', 'stroke'='#0066CC', 'stroke-linejoin'="round", 
+co_river_styles = c('fill'='none', 'stroke-width'='4.5', 'stroke'='#1975d1', 'stroke-linejoin'="round", 
                     'style'="stroke-linejoin:round;stroke-linecap:round")
 co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round")
 top_user_styles = c('fill'='#E6E600', 'fill-opacity'='0.75', 'stroke-width'='2.5', 'stroke'='#E6E600', 'stroke-linejoin'="round")
@@ -38,6 +38,7 @@ mexico = readOGR(dsn = "src_data/mexico",layer="MEX_adm0") %>%
 
 states = readOGR(dsn = "src_data/states_21basic",layer="states") 
 rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="CRB_Rivers")
+#mx.rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="Colorado_Mexico")
 contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
 
  
