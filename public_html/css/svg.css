@@ -120,9 +120,9 @@
 }
 
 .legend-moved {
-    -ms-transform: translate(-135px, 205px); /* IE 9 */
-    -webkit-transform: translate(-135px, 205px); /* Safari */
-    transform: translate(-135px, 205px);
+    -ms-transform: translate(-135px, 190px); /* IE 9 */
+    -webkit-transform: translate(-135px, 190px); /* Safari */
+    transform: translate(-135px, 190px);
     opacity: 1;
 }
 
