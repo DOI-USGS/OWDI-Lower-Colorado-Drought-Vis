@@ -4,6 +4,27 @@
     <object id="mead-object" data="img/lake-mead-animated/mead_scene_animated.svg" type="image/svg+xml">
     </object>
   </div>
+<script>
+(function() {
+  var triggered = false,
+    parentContainer = "#meadSVGContainer",
+    animation = function() {
+      animationSVG = document.getElementById('mead-object').getSVGDocument();
+
+      // Only call if SVG is loaded and has this function
+      if (animationSVG && animationSVG.drawRiver && !triggered) {
+        animationSVG.drawRiver();
+        triggered = true;
+      }
+    };
+
+  window.owdiDrought.addScene({
+    parentContainer: parentContainer,
+    duration: 100,
+    enter: animation
+  });
+})();
+</script>
 	<!-- These should be brought back when there is a target div and buttons are hooked up to display them -->
 <!--  <div class="SVGInfo" id="draw-river">
     <p>The Colorado is the <a class="orangeLinks" href="http://www.usbr.gov/lc/region/g4000/wtracct.html" target="_blank">principal source of water</a> for irrigation and domestic use in Arizona, southern California, southern Nevada, and Mexico.</p>

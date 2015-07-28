@@ -50,8 +50,9 @@
       animationSVG = document.getElementById('animated-object').getSVGDocument();
 
       // Only call if SVG is loaded and has this function
-      if (animationSVG && animationSVG.visibleAxes) {
+      if (animationSVG && animationSVG.visibleAxes && !triggered) {
         animationSVG.visibleAxes();
+        triggered = true;
       };
     }
 

@@ -1,54 +1,75 @@
 <div class="widget">
 	<div class="sectionContent">
-    	<p>Projected water elevation for Lakes Mead and Powell determine when water shortages are severe enough to reduce water delivery to some states. The elevations are naturally dynamic through time, but are decreasing as a result of the current drought and steady use.
-        </p>
-        <p>Monthly projections made by the Bureau of Reclamation take into account many of the factors that affect water levels, including forecasted streamflow, water use, evaporation, and operational information including planned hydropower uses.
-        </p>
-        <p>
-        A simplified version of the projected elevation model is shown below. Water elevation is calculated by adding sources and subtracting losses.
-        </p>
-        <p>
-        Water volume =  forecasted natural inflows + planned upstream releases - outflows - consumptive use - evaporation - upstream storage
-        </p>
+		<p>Projected water elevation for Lakes Mead and Powell determine when water shortages are severe enough to reduce water delivery to some states. The elevations are naturally dynamic through time, but are decreasing as a result of the current drought and steady use.
+		</p>
+		<p>Monthly projections made by the Bureau of Reclamation take into account many of the factors that affect water levels, including forecasted streamflow, water use, evaporation, and operational information including planned hydropower uses.
+		</p>
+		<p>
+			A simplified version of the projected elevation model is shown below. Water elevation is calculated by adding sources and subtracting losses.
+		</p>
+		<p>
+			Water volume =  forecasted natural inflows + planned upstream releases - outflows - consumptive use - evaporation - upstream storage
+		</p>
 
-      
-      
-        <button class="supportinginfo spacer" id="section15Button">Supporting Info</button>
-        
-        <div class="supportingInfoContent" id="section15Info">
 
-            <p> Data sources
-            </p>
-            <p>
+
+		<button class="supportinginfo spacer" id="section15Button">Supporting Info</button>
+
+		<div class="supportingInfoContent" id="section15Info">
+
+			<p> Data sources
+			</p>
+			<p>
             <a href="http://www.usbr.gov/lc/region/programs/climateresearch/Charter_ModelingWorkGroup.pdf">Colorado River Modeling Work Group Charter and Methods</a>
-            </p>
-            <p>
+			</p>
+			<p>
             <a href="http://www.usbr.gov/lc/region/g4000/24mo.pdf">Current Colorado River Basin 24-month report</a>
-            </p>
-            <p><a href="http://www.usbr.gov/uc/water/crsp/studies/index.html">Upper Colorado River Basin 24-month reports</a>
-            </p>
-            <p><a href="http://www.usbr.gov/lc/region/g4000/24mo/index.html">Lower Colorado River Basin 24-month reports</a>
-            </p>
-            <p><a href="http://www.cbrfc.noaa.gov/">NOAA Colorado River Basin River Forecast Center</a>
-            </p>
-            <p><a href="http://waterdata.usgs.gov/nwis">USGS Stream Gage information</a>
-            </p>
-        </div>
-        
-        <object id="mead-elev-object" data="{{baseUrl}}/img/lake-mead-static/mead_elev_projected.svg" type="image/svg+xml"></object>
-        <div class="graphCaption">
-            <p>Over time, the elevation of Lake Mead is dynamic, and tends to be higher in the winter than in the summer months. Projections of Lake Mead elevation are made by the Bureau of Reclamation 24-month study. The projections take into account temperature, snowpack, precipitation, consumptive use, and other factors. Projections for the next two years, shown in the grey box in the figure above, depict the projected elevation approaching a critical threshold of 1075 feet. Uncertainty around the projected elevation is shown by the blue envelope around the line.  </p>
-          
-        </div>
-    </div>
-    
-    
+			</p>
+			<p><a href="http://www.usbr.gov/uc/water/crsp/studies/index.html">Upper Colorado River Basin 24-month reports</a>
+			</p>
+			<p><a href="http://www.usbr.gov/lc/region/g4000/24mo/index.html">Lower Colorado River Basin 24-month reports</a>
+			</p>
+			<p><a href="http://www.cbrfc.noaa.gov/">NOAA Colorado River Basin River Forecast Center</a>
+			</p>
+			<p><a href="http://waterdata.usgs.gov/nwis">USGS Stream Gage information</a>
+			</p>
+		</div>
+		<div id="meadElevationContainer">
+			<object id="mead-elev-object" data="{{baseUrl}}/img/lake-mead-static/mead_elev_projected.svg" type="image/svg+xml"></object>
+			<div class="graphCaption">
+				<p>Over time, the elevation of Lake Mead is dynamic, and tends to be higher in the winter than in the summer months. Projections of Lake Mead elevation are made by the Bureau of Reclamation 24-month study. The projections take into account temperature, snowpack, precipitation, consumptive use, and other factors. Projections for the next two years, shown in the grey box in the figure above, depict the projected elevation approaching a critical threshold of 1075 feet. Uncertainty around the projected elevation is shown by the blue envelope around the line.  </p>
+
+			</div>
+		</div>
+	</div>
+
+
 </div>
 
 <script>
-	var button = $('#section15Button');
-	
-	button.click(function(){
-		$('#section15Info').toggle();
+	(function () {
+		var triggered = false,
+		parentContainer = "#meadElevationContainer",
+		animation = function () {
+			animationSVG = document.getElementById('mead-elev-object').getSVGDocument();
+
+			// Only call if SVG is loaded and has this function
+			if (animationSVG && animationSVG.drawTiers && !triggered) {
+				animationSVG.drawTiers();
+				triggered = true;
+			}
+		};
+
+		window.owdiDrought.addScene({
+			parentContainer: parentContainer,
+			duration: 100,
+			enter: animation
 		});
+	})();
+
+	var button = $('#section15Button');
+
+	button.click(function () {
+		$('#section15Info').toggle();
+	});
 </script>
