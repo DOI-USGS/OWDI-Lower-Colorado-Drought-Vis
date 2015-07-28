@@ -113,9 +113,9 @@ attr_svg <- function(svg, attrs, type){
 add_background_defs <- function(svg, id, image_url){
   root_nd <- xmlRoot(svg)
   def_nd <- newXMLNode("defs",parent = root_nd, at = 0)
-  pt_nd <- newXMLNode('pattern',parent=def_nd, attrs = c(id=id, patternUnits='userSpaceOnUse',x=-35,width=610, height=547))
+  pt_nd <- newXMLNode('pattern',parent=def_nd, attrs = c(id=id, patternUnits='userSpaceOnUse',x=-50,width=640, height=547))
   #newXMLNode('image', parent=pt_nd, attrs = c('xlink:href'=image_url, width=610, height=547))
-  newXMLNode('rect', parent=pt_nd, attrs = c('fill'="black",opacity='0.9', width=610, height=547))
+  newXMLNode('rect', parent=pt_nd, attrs = c('fill'="black",opacity='0.9', width=640, height=547))
   invisible(svg)
   
 }
@@ -207,11 +207,11 @@ add_ecmascript <- function(svg, text){
 add_scene_buttons <- function(svg){
   root_nd <- xmlRoot(svg)
   g_in = newXMLNode('g',parent=root_nd,attrs = c(id='decrement-scene'))
-  newXMLNode('rect',parent=g_in, attrs = c(x='-35',width="35",height="547",fill="grey",opacity="0.5",onclick="decrementScene()"))
-  newXMLNode('path',parent=g_in, attrs = c(d="M-10 293.5 L-25 273.5 L-10 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round",onclick="decrementScene()"))
+  newXMLNode('rect',parent=g_in, attrs = c(x='-50',width="35",height="547",fill="white",opacity="0.3",onclick="decrementScene()"))
+  newXMLNode('path',parent=g_in, attrs = c(d="M-25 293.5 L-40 273.5 L-25 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round",onclick="decrementScene()"))
   g_dc = newXMLNode('g',parent=root_nd,attrs = c(id='increment-scene'))
-  newXMLNode('rect',parent=g_in, attrs = c(x='540',width="35",height="547",fill="grey",opacity="0.5",onclick="incrementScene()"))
-  newXMLNode('path',parent=g_in, attrs = c(d="M550 293.5 L565 273.5 L550 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round",onclick="incrementScene()"))
+  newXMLNode('rect',parent=g_in, attrs = c(x='555',width="35",height="547",fill="white",opacity="0.3",onclick="incrementScene()"))
+  newXMLNode('path',parent=g_in, attrs = c(d="M565 293.5 L580 273.5 L565 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round",onclick="incrementScene()"))
   invisible(svg)
   
 }

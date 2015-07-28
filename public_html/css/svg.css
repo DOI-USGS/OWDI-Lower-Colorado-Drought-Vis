@@ -68,7 +68,7 @@
     -ms-transform: translate(-40px,-20px); /* IE 9 */
     -webkit-transform: translate(-40px,-20px); /* Safari */
     transform: translate(-40px,-20px);
-    stroke: #990000;
+    stroke: #FFFFFF;
     fill: url(#usa-flag);
 }
 
@@ -76,7 +76,7 @@
     -ms-transform: translate(-23px,-27px); /* IE 9 */
     -webkit-transform: translate(-23px,-27px); /* Safari */
     transform: translate(-23px,-27px);
-    stroke: #990000;
+    stroke: #FFFFFF;
     fill: url(#usa-flag);
 }
 
@@ -84,7 +84,7 @@
     -ms-transform: translate(-8px,-12px); /* IE 9 */
     -webkit-transform: translate(-8px,-12px); /* Safari */
     transform: translate(-8px,-12px);
-    stroke: #990000;
+    stroke: #FFFFFF;
     fill: url(#usa-flag);
 }
 
@@ -93,7 +93,7 @@
     -webkit-transform: translate(-70px, 95px) scale(0.55); /* Safari */
     transform: translate(-70px, 95px) scale(0.55);
     stroke-width: 4.55;
-    stroke: #458B00;
+    stroke: #FFFFFF;
     fill: url(#mexico-flag);
     mask: "none";
 }
