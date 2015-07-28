@@ -333,6 +333,14 @@ nav h3 {
 	width:100%;
 	}
 	
+.exploreMore{
+	background:#003366;
+	padding:10px;
+	border-radius:5px;
+	color:#fff;
+	border:none;
+	}
+	
 .sectionContent .explore-more{
 	text-align:center;
 	}
@@ -409,8 +417,7 @@ nav h3 {
 	display:none;
 	}
 	
-#draw-basin p,
-#highlight-user-2 p{
+.SVGInfo p{
 	margin-bottom:10px;
 	}
 	
