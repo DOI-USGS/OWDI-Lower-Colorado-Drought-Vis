@@ -7,7 +7,7 @@ svgDocument = evt.target.ownerDocument;
 svgDocument.incrementScene = this.incrementScene;
 svgDocument.decrementScene = this.decrementScene;
 svgDocument.drawRiver = this.scene1;
-svgDocument.step = 1}
+svgDocument.sceneNum = 1}
 }
 var elevations = {"flood":"1,219.6",
 "surplus":"1,200",
@@ -89,17 +89,17 @@ function hideAllocationName(evt) {
 document.getElementById("allocation-value").firstChild.data = " ";
 document.getElementById("allocation-context").firstChild.data = " ";
 }
-var sceneNum = 0;
+
 function incrementScene(){
-if (sceneNum < scenes.length-1){
-this.step++;
-scenes[++sceneNum]();
+if (this.sceneNum < scenes.length-1){
+this.sceneNum++;
+scenes[this.sceneNum]();
 }
 }
 function decrementScene(){
-if (sceneNum > 0){
-this.step--;
-scenes[--sceneNum]();
+if (this.sceneNum > 0){
+this.sceneNum--;
+scenes[this.sceneNum]();
 }
 }
 function scene1(){
