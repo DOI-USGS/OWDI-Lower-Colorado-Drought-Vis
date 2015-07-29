@@ -90,10 +90,10 @@ def renderGraph(ele, floc):
                 raw.append(row[2])
                 year2.append(row[0])
             i+= 1
-        year = year[-100:]
-        perc = perc[-100:]
-        raw = raw[-100:]
-        year2 = year2[-100:]
+        #year = year[-100:]
+        #perc = perc[-100:]
+        #raw = raw[-100:]
+        #year2 = year2[-100:]
         minbot = math.floor(float(year[0])/10) * 10
         if(minbot > 1900):
             minbot = 1900
@@ -112,10 +112,10 @@ def renderGraph(ele, floc):
         sidestep = 250 / ((maxside - minside)/5)
         drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75')
         drawHighlightBox(ele, 2000, 2015, minbot, maxbot - minbot, '#CCCCB2')
-        for i in range(0, 6):
+        for i in range(0, 15):
             createLineBox(ele, int(year2[i]), int(year2[i])+1, minbot, maxbot - minbot, None, float(raw[i]), int(year2[i]), i)
         for i in range(0, len(year)-1):
-            createLineBox(ele, int(year2[i+6]), int(year2[i+6])+1, minbot, maxbot - minbot, float(perc[i]), float(raw[i+6]), int(year2[i+6]), i+6)
+            createLineBox(ele, int(year2[i+15]), int(year2[i+15])+1, minbot, maxbot - minbot, float(perc[i]), float(raw[i+15]), int(year2[i+15]), i+15)
         for i in range(0, int((maxbot - minbot)/10) + 1):
             if i % 2 == 0:
                 drawLine(ele, i * botstep, 250, i * botstep, 245, 2, 'black')
@@ -136,7 +136,6 @@ def renderGraph(ele, floc):
             drawText(ele, -30, 250 - (i * sidestep) + 5, str(int((i * 5) + minside)))
             if int((i * 5) + minside) == 100:
                 drawLine(ele, 15, 250 - (i * sidestep), 485, 250 - (i * sidestep), 1, 'black')
-        #drawKey(ele)
         drawLine(ele, 0, 250, 500, 250, 2, 'black')
         drawLine(ele, 0, 250, 0, 0, 2, 'black')
         drawLine(ele, 0, 0, 500, 0, 2, 'black')
@@ -197,18 +196,6 @@ def drawHighlightBox(ele, x1, x2, ymin, yrange, color):
     rect.set('x', str(x1))
     rect.set('fill', color)
 
-def drawKey(ele):
-    rect = SubElement(ele, 'rect')
-    rect.set('x', '187.5')
-    rect.set('y', '5')
-    rect.set('height', '30')
-    rect.set('width', '125')
-    rect.set('fill', '#CFCFCF')
-    drawLine(ele, 195.8, 15, 245.8, 15, 2, 'blue')
-    drawLine(ele, 254.1, 15, 304.1, 15, 2, '#9999FF')
-    drawText(ele, 195.8, 23, '15-Year Average').set('style', 'font-size: 6px; font-weight: bold;')
-    drawText(ele, 254.1, 23, 'Natural Flow').set('style', 'font-size: 6px; font-weight: bold;')
-    
 def highlightRange(ele, x1, x2, ymin, yrange):
     rect = SubElement(ele, 'rect')
     x1 = (x1 - ymin) * (500/yrange)

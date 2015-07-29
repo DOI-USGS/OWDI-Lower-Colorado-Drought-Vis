@@ -317,21 +317,16 @@ nav h3 {
 		margin-bottom:20px;
 		}
 		
+#dragonText{
+	padding:10px;
+	margin:10px 0 20px 0;
+	}
+		
 #usDroughtGif{
 	margin-top:20px;
 	}
 	
-#texas-thumbnail{
-	margin:100px auto 10px auto;
-	background:rgba(0,51,102,.2);
-	padding:10px;
-	border-radius:5px;
-	width:100%;
-	}
-	
-#texas-thumbnail img{
-	width:100%;
-	}
+
 	
 .explore-more{
 	margin-top:20px;
@@ -570,12 +565,8 @@ nav h3 {
 	/*Blue Dragon Section CSS*/
 	
 	#blueDragon{
-		width:900px;
+		width:700px;
 		margin:20px auto;
-		}
-		
-	#texas-thumbnail{
-		width:50%;
 		}
 		
 	#natural-flow-graph{

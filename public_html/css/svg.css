@@ -12,17 +12,24 @@
 }
 .california, .nevada, .arizona, .mexico, .california-moved, .nevada-moved, .arizona-moved, .mexico-moved, 
 .mead-flood, .mead-surplus, .mead-normal, .mead-shortage-1, .mead-shortage-2, .mead-shortage-3,
-.legend-box, .legend-moved, .level-fill, .level-move, .sankey-line{
+.legend-box, .legend-moved, .sankey-line{
     -webkit-transition: 1s ease-in-out;
     -moz-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
     transition:  1s ease-in-out;
 }
 
+.level-fill, .level-move {
+    -webkit-transition: 1.6s ease-in-out;
+    -moz-transition: 1.6s ease-in-out;
+    -o-transition: 1.6s ease-in-out;
+    transition:  1.6s ease-in-out;
+}
+
 .level-fill{
-    -ms-transform: translate(60px,8px) scale(0.25); /* IE 9 */
-    -webkit-transform:  translate(60px,8px) scale(0.25); /* Safari */
-    transform:  translate(60px,8px) scale(0.25);
+    -ms-transform: translate(94px,8px) scale(0.25); /* IE 9 */
+    -webkit-transform:  translate(94px,8px) scale(0.25); /* Safari */
+    transform:  translate(94px,8px) scale(0.25);
     opacity:0;
 }
 .mexico {
@@ -69,6 +76,7 @@
     -webkit-transform: translate(-40px,-20px); /* Safari */
     transform: translate(-40px,-20px);
     stroke: #FFFFFF;
+    stroke-width: 1.5;
     fill: url(#usa-flag);
 }
 
@@ -77,6 +85,7 @@
     -webkit-transform: translate(-23px,-27px); /* Safari */
     transform: translate(-23px,-27px);
     stroke: #FFFFFF;
+    stroke-width: 1.5;
     fill: url(#usa-flag);
 }
 
@@ -85,6 +94,7 @@
     -webkit-transform: translate(-8px,-12px); /* Safari */
     transform: translate(-8px,-12px);
     stroke: #FFFFFF;
+    stroke-width: 1.5;
     fill: url(#usa-flag);
 }
 
@@ -92,8 +102,8 @@
     -ms-transform: translate(-70px, 95px) scale(0.55); /* IE 9 */
     -webkit-transform: translate(-70px, 95px) scale(0.55); /* Safari */
     transform: translate(-70px, 95px) scale(0.55);
-    stroke-width: 4.55;
-    stroke: #FFFFFF;
+    stroke-width: 2.73;
+    stroke: #458B00;
     fill: url(#mexico-flag);
     mask: "none";
 }
@@ -110,9 +120,9 @@
 }
 
 .legend-moved {
-    -ms-transform: translate(-135px, 205px); /* IE 9 */
-    -webkit-transform: translate(-135px, 205px); /* Safari */
-    transform: translate(-135px, 205px);
+    -ms-transform: translate(-135px, 190px); /* IE 9 */
+    -webkit-transform: translate(-135px, 190px); /* Safari */
+    transform: translate(-135px, 190px);
     opacity: 1;
 }
 
