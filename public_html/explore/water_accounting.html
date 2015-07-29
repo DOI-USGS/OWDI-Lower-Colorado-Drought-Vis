@@ -155,9 +155,9 @@
         owdiDrought.waterAccounting.styles = {
             style1: {
                 "fillOpacity": 0.5,
-                "color": "#0033ff",
+                "color": "#9d9d9d",
                 "weight": 2,
-                "fillColor": "#0033ff",
+                "fillColor": "#9d9d9d",
                 "opacity": 0.5
             },
             style2: {
@@ -243,10 +243,10 @@
 
         // styling
         owdiDrought.waterAccounting.getValue = function(x) {
-            return x > 2736636 ? 0 :
-                x >= 422186.2 ? 33 :
-                x >= 608 ? 20 :
-                x >= 116.6 ? 7 :
+            return x > 2500000 ? 0 :
+                x >= 400000 ? 33 :
+                x >= 600 ? 20 :
+                x >= 120 ? 7 :
                 0;
         }
 
@@ -278,8 +278,8 @@
         owdiDrought.waterAccounting.legend.onAdd = function(map) {
 
             var div = L.DomUtil.create('div', 'info legend'),
-                grades = [0, 10, 20, 50, 100, 200, 500, 1000],
-                labels = [],
+                grades = [0, 120, 600, 400000, 2500000],
+                labels = ["Million Acre Feet"],
                 from, to;
 
             for (var i = 0; i < grades.length; i++) {
@@ -290,6 +290,8 @@
                     '<i style="background:' +  owdiDrought.waterAccounting.getColor(from + 1) + '"></i> ' +
                     from + (to ? '&ndash;' + to : '+'));
             }
+				labels.push(
+					'<i style="background:' + '#9d9d9d'+'"></i>Lower Colorado River Watershed');
 
             div.innerHTML = labels.join('<br>');
             return div;
