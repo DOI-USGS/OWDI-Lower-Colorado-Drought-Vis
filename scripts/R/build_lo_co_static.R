@@ -12,7 +12,7 @@ out_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
 non_lo_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#505050', 'stroke-linejoin'='round', mask="url(#non-lo-co-mask)")
 lo_co_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#505050', 'stroke-linejoin'='round', mask="url(#non-lo-co-mask)")
 mexico_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#505050', mask="url(#mexico-mask)", 'stroke-linejoin'='round')
-co_river_styles = c('fill'='#0066CC')
+co_river_styles = c('fill'='#1975d1')
 co_basin_styles = c('fill'='#B22C2C')
 
 svg <- xmlParse(svg_file, useInternalNode=TRUE) %>%
@@ -21,7 +21,7 @@ svg <- xmlParse(svg_file, useInternalNode=TRUE) %>%
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles)) %>%
   add_text(text="Lower Colorado Basin", x="320", y="230", 'fill'='#B22C2C', 'text-anchor'="start") %>%
   add_text(text="Upper Colorado Basin", x="338", y="130", 'fill'='#B22C2C', 'text-anchor'="start") %>%
-  add_text(text="Colorado River", x="345", y="70", 'fill'='#0066CC', 'text-anchor'="start") %>%
+  add_text(text="Colorado River", x="345", y="70", 'fill'='#1975d1', 'text-anchor'="start") %>%
   toString.XMLNode()
 
 lines <- strsplit(svg,'[\n]')[[1]]
