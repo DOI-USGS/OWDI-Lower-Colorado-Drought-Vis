@@ -46,7 +46,7 @@ lo_co_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#BBBBBB', 'strok
 mexico_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#BBBBBB', 'stroke-linejoin'='round')
 co_river_styles = c('fill'='none', 'stroke-width'='3.5', 'stroke'='#0066CC', 'stroke-linejoin'="round", 
                     'style'="stroke-linejoin:round;stroke-linecap:round")
-bbox_styles = c('fill'='#CC6600', 'fill-opacity'='0.3', 'stroke-width'='5.5', 'stroke'='#CC6600', 'visibility'='hidden')
+bbox_styles = c('fill'='none', 'stroke'='none')
 
 mexico = readOGR(dsn = "src_data/mexico",layer="MEX_adm0") %>%
   spTransform(CRS(epsg_code)) %>%
@@ -66,7 +66,6 @@ for(i in 1:length(mainPolys)){
   if(length(mainPolys[[i]]) >= 1 && mainPolys[[i]][1] >= 1){
     mex_simp@polygons[[i]]@Polygons <- mex_simp@polygons[[i]]@Polygons[mainPolys[[i]]]
     mex_simp@polygons[[i]]@plotOrder <- 1:length(mex_simp@polygons[[i]]@Polygons)
-    
   }
 }
 
