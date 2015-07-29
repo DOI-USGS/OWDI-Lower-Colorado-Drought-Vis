@@ -1,11 +1,11 @@
-OBJECTID_1,Contractor-Shapefile,Contractor-Decree,Contractor-Decree (Pool),CU,Notes
-26,"Ak-Chin Indian Community, Ak-Chin Farms",,LOWER COLORADO RIVER DAMS PROJECT,All years,doesn't show up in shapefile
-43,Andrade,,PARKER DAM AND GOVERNMENT CAMP,All years,doesn't show up in shapefile
-44,"Andrade, Dorothy L.",,ALEC CAMILLE JR,only 2000-2005,doesn't show up in shapefile
-45,"Andrews, Michael and Linda",,MOHAVE GENERATING STATION (SO. CAL. EDISON),only 2003-2011,doesn't show up in shapefile
-163,Arizona Game and Fish Commission,ARIZONA GAME AND FISH COMMISSION,"YUMA PROJECT, RES. DIV. BARD UNIT",All years,doesn't show up in shapefile
-184,Arizona Public Service Company,,BIG BEND CONSERVATION AREA,4/3 in 11/12,doesn't show up in shapefile
-133,Arizona Recreational Facilities LLC,GSC FARM LLC (formerly ARIZONA RECREATIONAL FACILITIES),"YUMA AREA OFFICE, USBR",All years,doesn't show up in shapefile
+OBJECTID_1,Contractor-Shapefile,Contractor-Decree,Contractor-Decree-but-not-in-shapefile,CU,Notes
+26,"Ak-Chin Indian Community, Ak-Chin Farms",,PARKER DAM AND GOVERNMENT CAMP,All years,doesn't show up in shapefile
+43,Andrade,,MOHAVE GENERATING STATION (SO. CAL. EDISON),only 2003-2011,doesn't show up in shapefile
+44,"Andrade, Dorothy L.",,"YUMA AREA OFFICE, USBR",All years,doesn't show up in shapefile
+45,"Andrews, Michael and Linda",,,,
+163,Arizona Game and Fish Commission,ARIZONA GAME AND FISH COMMISSION,,,
+184,Arizona Public Service Company,,,,
+133,Arizona Recreational Facilities LLC,GSC FARM LLC (formerly ARIZONA RECREATIONAL FACILITIES),,,
 137,Arizona State Land Department,ARIZONA STATE LAND DEPARTMENT,,,
 134,Arizona State Parks Board,,,,
 46,"Assigned to Herdon, Daniel",,,,
@@ -69,7 +69,8 @@ OBJECTID_1,Contractor-Shapefile,Contractor-Decree,Contractor-Decree (Pool),CU,No
 32,Fort Mohave Indian Reservation (CA),,,,
 103,Fort Mohave Indian Reservation (NV),,,,
 4,Fort Yuma Indian Reservation,FORT YUMA INDIAN RESERVATION,,,
-30,Fort Yuma Indian Reservation (CA),"YUMA PROJECT, RES. DIV. INDIAN UNIT",,,
+,Fort Yuma Indian Reservation (CA),,,,
+,"Yuma Project, Reservation Division Indian Unit",,,,
 144,Frontier Communications West Coast,,,,
 77,Geiger,,,,
 16,Gila Monster Farms (formerly Sturges),,,,
@@ -171,8 +172,11 @@ OBJECTID_1,Contractor-Shapefile,Contractor-Decree,Contractor-Decree (Pool),CU,No
 5,Yuma County Water Users Association,YUMA COUNTY WATER USERS ASSOCIATION,,,
 222,Yuma Irrigation District,YUMA IRRIGATION DISTRICT,,,
 130,Yuma Mesa Fruit Growers,YUMA MESA FRUIT GROWERS ASSN.,,,
-128,Yuma Mesa Grapefruit Company,,,,
+128,Yuma Mesa Grapefruit Company,ALEC CAMILLE JR,,,
 223,Yuma Mesa Irrigation and Drainage District,YUMA MESA  I. D. D.,,,
 129,Yuma Union High School,YUMA UNION HIGH SCHOOL,,,
 127,"Yuma, City of (Cemetery)",,,,
 17,Zozaya,,,,
+,Lower Colorado River Dam Project,LOWER COLORADO RIVER DAMS PROJECT,,,
+,Big Bend Conservation Area (formerly Boy Souts),BIG BEND CONSERVATION AREA,,,
+,"Yuma Project, Reservation Division Bard Unit","YUMA PROJECT, RES. DIV. BARD UNIT",,,

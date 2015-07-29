@@ -11,7 +11,7 @@
     animation = function() {
       animationSVG = document.getElementById('mead-object').getSVGDocument();
 		$(animationSVG).find('#decrement-scene').on('click', function(){
-			var stepNumber = animationSVG.step;
+			var stepNumber = animationSVG.sceneNum;
 				
 				switch(stepNumber){
 			

@@ -63,7 +63,7 @@ block_picto <- function(parent, x, y, rx='2',ry='2',number,width = 10, height=10
 add_nevada <- function(root_nd,scale){
   # nevada - 3
   NV_id <- newXMLNode('g', parent=root_nd,
-                      attrs = c('id'='Nevada-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',class='hidden'))
+                      attrs = c('id'='Nevada-pictos','stroke'='#1975d1','stroke-width'=picto_lw,'fill'='#1975d1',class='hidden'))
   y_start = 102
   x_start = 157
   y = block_picto(NV_id,x=x_start,y=y_start,number=1)
@@ -95,7 +95,7 @@ add_nevada <- function(root_nd,scale){
 
 add_california <- function(root_nd,scale){
   CA_id <- newXMLNode('g', parent=root_nd,
-                      attrs = c('id'='California-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',class='hidden'))
+                      attrs = c('id'='California-pictos','stroke'='#1975d1','stroke-width'=picto_lw,'fill'='#1975d1',class='hidden'))
   y_start = 183
   x_start = 112
   y = block_picto(CA_id,x=x_start,y=y_start,number=3)
@@ -127,7 +127,7 @@ add_california <- function(root_nd,scale){
 add_arizona <- function(root_nd,scale){
   # arizona - 28
   AR_id <- newXMLNode('g', parent=root_nd,
-                      attrs = c('id'='Arizona-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',class='hidden'))
+                      attrs = c('id'='Arizona-pictos','stroke'='#1975d1','stroke-width'=picto_lw,'fill'='#1975d1',class='hidden'))
   x_start = 199
   y_start = 198
   y = block_picto(AR_id,x=x_start,y=y_start,number=4, 'fill'='none')
@@ -166,7 +166,7 @@ add_arizona <- function(root_nd,scale){
 add_mexico <- function(root_nd,scale){
   # mexico- 15
   MX_id <- newXMLNode('g', parent=root_nd,
-                      attrs = c('id'='Mexico-pictos','stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC',class='hidden'))
+                      attrs = c('id'='Mexico-pictos','stroke'='#1975d1','stroke-width'=picto_lw,'fill'='#1975d1',class='hidden'))
   x_start = 70
   y_start = 254
   block_picto(MX_id,x=x_start+14*6,y=y_start,number=2,'fill'='none')

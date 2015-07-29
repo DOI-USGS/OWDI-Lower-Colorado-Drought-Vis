@@ -60,9 +60,9 @@ axes <- list('tick_len' = 5,
              'x_lim' = c(xMinR-.25,xMaxR+maxMonth/12)) 
 
 
-fig <- list('w' = 900,
+fig <- list('w' = 960,
             'h' = 600,
-            'margins' = c(100,80,10, 80)) #bot, left, top, right
+            'margins' = c(100,125,10, 125)) #bot, left, top, right
 
 fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[4]),
                    "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
@@ -111,6 +111,20 @@ newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage2',x = fig$px_lim$x[1],
 newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage3',x = fig$px_lim$x[1], y = shortage3,
                                              width=fig$px_lim$x[2]-fig$px_lim$x[1], height=bottom-shortage3+0.5,
                                              fill='#0066CC',opacity=0.3, class='level-fill'))
+g_id = newXMLNode("g", parent = svg_nd, attrs=c(class='hidden', id='condition-markers'))
+newXMLNode("text", parent = g_id, newXMLTextNode('Flood Control Surplus'),
+           attrs = c(x = fig$px_lim$x[2], y = mean(c(surplus,flood)),dy="0.5em", dx="0.4em",class='small-text'))
+newXMLNode("text", parent = g_id, newXMLTextNode('Domestic Surplus'),
+           attrs = c(x = fig$px_lim$x[2], y = mean(c(normal,surplus)),dy="0.5em", dx="0.4em",class='small-text'))
+newXMLNode("text", parent = g_id, newXMLTextNode('Normal Conditions'),
+           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage1,normal)),dy="0.5em", dx="0.4em",class='small-text'))
+newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 1'),
+           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage2,shortage1)),dy="0.5em", dx="0.4em",class='small-text'))
+newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 2'),
+           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage3,shortage2)),dy="0.5em", dx="0.4em",class='small-text'))
+newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 3'),
+           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage3,bottom)),dy="0.5em", dx="0.4em",class='small-text'))
+
 
 
 g_id <- newXMLNode('g', parent = svg_nd, attrs = c('id' = "axes", class='label'))
@@ -171,10 +185,10 @@ dinosvg:::linepath(g_id, x[is.hist],y[is.hist],fill = 'none',
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-linecap:round",
                                              supply_col,line_width))
 
-
-dinosvg:::linepath(g_id, c(x[is.minP], rev(x[is.maxP])),
-                   c(y[is.minP], rev(y[is.maxP])),fill = 'white', 
-                   style ="stroke:none;",opacity='0.4',class='hidden',id='filled-projection')
+# 
+# dinosvg:::linepath(g_id, c(x[is.minP], rev(x[is.maxP])),
+#                    c(y[is.minP], rev(y[is.maxP])),fill = 'white', 
+#                    style ="stroke:none;",opacity='0.4',class='hidden',id='filled-projection')
 
 dinosvg:::linepath(g_id, x[is.most],y[is.most],fill = 'none', id='dashed-projection',class='hidden',
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-dasharray:9;stroke-linecap:round",
