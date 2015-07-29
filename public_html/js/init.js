@@ -10,7 +10,7 @@ $( document ).ready( function () {
     // JQuery Mobile wraps the entire application in a div with its own classes. There's no way to
     // tell it not to do this, so I remove the wrapper div here
     $( "#application" ).unwrap();
-    // JQuery Mobile also shoves its own loading indicator into the page. We don"t want this.
+    // JQuery Mobile also shoves its own loading indicator into the page. We don't want this.
     $( ".ui-loader" ).remove();
     // JQuery Mobile also adds questionable CSS to the html and body node
     $( "html" ).removeAttr( "class" );
@@ -22,6 +22,7 @@ $( document ).ready( function () {
     window.owdiDrought = window.owdiDrought || {};
     window.owdiDrought.SMController = new ScrollMagic.Controller( scrollMagicOptions );
     window.owdiDrought.formFactor = "";
+    window.isIE = navigator.userAgent.indexOf("MSIE ") > -1;
 
     window.owdiDrought.addScene = function ( sceneItem ) {
         var scene = new ScrollMagic.Scene( {
@@ -90,7 +91,8 @@ $( document ).ready( function () {
                 }
                 var template = Handlebars.compile( templateHTML ),
                     extendedTemplateData = $.extend( {}, templateData, {
-                        baseUrl: host + window.location.pathname
+                        baseUrl: host + window.location.pathname,
+                        isIE : window.isIE
                     } ),
                     html = template( extendedTemplateData );
 
