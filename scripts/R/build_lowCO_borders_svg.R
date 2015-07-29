@@ -107,12 +107,8 @@ for (i in 1:n.users){
   area <- suppressWarnings(gArea(contracts[sorted_contracts$ix[i],])) # suppressing proj warning
   if (area < 0.01)
     tol = 50
-  else if (area < 0.03)
+  else
     tol = 100
-  else if (area < 0.1)
-    tol = 1000
-  else 
-    tol = simp_tol
   spTransform(contracts[sorted_contracts$ix[i],], CRS(epsg_code)) %>%
     gSimplify(tol) %>%
     plot(add=TRUE)
