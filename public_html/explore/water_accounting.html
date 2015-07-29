@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>water_accounting</title>
+	<meta charset="utf-8">
+	<meta name="generator" content="leafletR">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<!--link rel="dat1" type="application/json" href="../data/lc_huc_simp.geojson" /-->
+	<link rel="dat2" type="application/json" href="../data/wat_acc_cont.geojson" />
+	<style type="text/css">
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		html, body, #map {
+			height: 100%;
+		}
+		table, td {
+			border-collapse: collapse;
+			border-style: solid;
+			border-width: 1px;
+			border-color: #e9e9e9;
+			padding: 5px;
+		}
+		.evenrowcol{
+			background-color: #f6f6f6;
+		}
+		.legend {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+			line-height: 18px;
+			color: #555;
+		}
+		.legend i {
+			width: 18px;
+			height: 18px;
+			float: left;
+			margin-right: 8px;
+		}
+		.legend table, .legend td {
+			border: none;
+		}
+		.value {
+			border: none;
+			padding: 0px 0px 0px 8px;
+			text-align: left;
+			vertical-align: middle;
+		}
+		.circle {
+			border: none;
+			padding: 0px;
+			text-align: center;
+			vertical-align: middle;
+		}
+		.shape {
+			padding: 0px;
+			text-align: center;
+			vertical-align: middle;
+		}
+		.ln {
+			stroke: #0033ff;
+			stroke-width: 5;
+			stroke-opacity: 0.5;
+			stroke-linecap: round;
+		}
+		.plgn {
+			fill: #0033ff;
+			fill-opacity: 0.5;
+			stroke: #0033ff;
+			stroke-width: 4;
+			stroke-opacity: 0.5;
+			stroke-linejoin: round;
+		}
+		.mrks {
+		    padding: 0px;
+			text-align: center;
+		    height:30px;
+		}
+		.mrkm {
+			padding: 0px;
+			text-align: center;
+		    height:40px;
+		}
+		.mrkl {
+			padding: 0px;
+			text-align: center;
+		    height:52px;
+		}
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		.info h4 {
+			margin: 0 0 5px;
+			color: #777;
+		}
+
+		.legend {
+			text-align: left;
+			line-height: 18px;
+			color: #555;
+		}
+		.legend i {
+			width: 18px;
+			height: 18px;
+			float: left;
+			margin-right: 8px;
+			opacity: 0.7;
+		}
+	</style>
+</head>
+<body>
+	<div id="map"></div>
+	<script type="text/javascript">
+		var map = L.map('map');
+		
+		// scale bar
+		L.control.scale().addTo(map);
+
+		// base layer
+		var baseMaps = {};
+		var baseMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {"attribution":"&copy; <a href=\"http://openstreetmap.org/copyright\", target=\"_blank\">OpenStreetMap contributors</a>"});
+		baseMap.addTo(map);
+		baseMaps["OpenStreetMap"] = baseMap;
+		var baseMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {"attribution":"Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, \n    USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, \n    Esri China (Hong Kong), and the GIS User Community"});
+		baseMap.addTo(map);
+		baseMaps["ESRI World Topo"] = baseMap;
+
+		// popup
+		function onEachFeature(feature, layer) {
+			if (feature.properties &&  feature.properties["Contractor"] && feature.properties["mean"]) {
+				layer.bindPopup(
+					"<table>" +
+					"<tr class='oddrowcol'><td>Contractor: </td><td>"+feature.properties["Contractor"]+"</td></tr>" +
+					"<tr class='evenrowcol'><td>mean: </td><td>"+feature.properties["mean"]+"</td></tr>" +
+					"</table>"
+				);
+			}
+			if (feature.properties &&  feature.properties[""]) {
+				layer.bindPopup(": " + feature.properties[""]);
+			}
+		}
+		// styling
+
+		function getValue(x) {
+			return x > 2736636 ? 0 :
+			       x >= 422186.2 ? 33 :
+			       x >= 608 ? 20 :
+			       x >= 116.6 ? 7 :
+			       0;
+		}			
+		function style1(feature) {
+			return {
+				"fillOpacity": 0.5, "color": "#0033ff", "weight": 2, "fillColor": "#0033ff", "opacity": 0.5
+			};
+		}
+
+		var style2 = {color: "#FFA500", weight: 5, opacity: 0.8};
+
+		// data layers
+        var layers = {};
+        var group = new L.featureGroup;
+		function addDataToMap(data, style, layer, lc) {
+			layers[layer] = L.geoJson(data, {
+				onEachFeature: (typeof onEachFeature == "undefined") ? undefined : onEachFeature,
+				pointToLayer: function (feature, latlng) {return L.circleMarker(latlng);},
+				style: style
+			});
+			layers[layer].addTo(map);	
+        	group.addLayer(layers[layer])
+			map.fitBounds(group.getBounds());
+		
+		// layer control
+    if (lc != undefined) {
+		  L.control.layers(baseMaps, layers).addTo(map);
+    };
+		};
+		
+		if(typeof style1 == "undefined") style1 = undefined;
+		$.getJSON($("link[rel='dat1']").attr("href"), function(x) {addDataToMap(x, style1, "lc huc simp")});
+		if(typeof style2 == "undefined") style2 = undefined;
+    $.getJSON($("link[rel='dat2']").attr("href"), function(x) {addDataToMap(x, style2, "wat acc cont", "add")});
+
+		// legend
+
+		// from leaflet.com
+		
+		// control that shows state info on hover
+		var info = L.control();
+
+		info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this.update();
+			return this._div;
+		};
+
+		info.update = function (props) {
+			this._div.innerHTML = '<h2>Lower Colorado River Water Use Contracts</h2><br /> <h4>Five Year Mean</h4>' +  (props ?
+				'<b>' + props.Contractor + '</b><br />' + props.mean + ' maf'
+				: 'Hover over a contractor polygon');
+		};
+
+		info.addTo(map);
+
+		// get color depending on five year mean value
+		function getColor(d) {
+			return 
+			       d > 15089  ? '#FD8D3C' :
+			       d > 1706   ? '#FEB24C' :
+			       d > 313   ? '#FED976' :
+			                  '#FFEDA0';
+		}
+
+		function style(feature) {
+			return {
+				weight: 2,
+				opacity: 1,
+				color: 'white',
+				dashArray: '3',
+				fillOpacity: 0.7,
+				fillColor: getColor(feature.properties.mean)
+			};
+		}
+
+		function highlightFeature(e) {
+			var layer = e.target;
+
+			layer.setStyle({
+				weight: 5,
+				color: '#666',
+				dashArray: '',
+				fillOpacity: 0.7
+			});
+
+			if (!L.Browser.ie && !L.Browser.opera) {
+				layer.bringToFront();
+			}
+
+			info.update(layer.feature.properties);
+		}
+
+		var geojson;
+
+		function resetHighlight(e) {
+			geojson.resetStyle(e.target);
+			info.update();
+		}
+
+		function zoomToFeature(e) {
+			map.fitBounds(e.target.getBounds());
+		}
+
+		function onEachFeature(feature, layer) {
+			layer.on({
+				mouseover: highlightFeature,
+				mouseout: resetHighlight,
+				click: zoomToFeature
+			});
+		}
+
+		geojson = L.geoJson(data, {
+			style: style,
+			onEachFeature: onEachFeature
+		}).addTo(map);
+
+
+		var legend = L.control({position: 'bottomright'});
+
+		legend.onAdd = function (map) {
+
+			var div = L.DomUtil.create('div', 'info legend'),
+				grades = [0, 10, 20, 50, 100, 200, 500, 1000],
+				labels = [],
+				from, to;
+
+			for (var i = 0; i < grades.length; i++) {
+				from = grades[i];
+				to = grades[i + 1];
+
+				labels.push(
+					'<i style="background:' + getColor(from + 1) + '"></i> ' +
+					from + (to ? '&ndash;' + to : '+'));
+			}
+
+			div.innerHTML = labels.join('<br>');
+			return div;
+		};
+
+		legend.addTo(map);
+		
+	</script>
+</body>
+</html>
