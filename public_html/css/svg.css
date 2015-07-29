@@ -27,9 +27,9 @@
 }
 
 .level-fill{
-    -ms-transform: translate(94px,8px) scale(0.25); /* IE 9 */
-    -webkit-transform:  translate(94px,8px) scale(0.25); /* Safari */
-    transform:  translate(94px,8px) scale(0.25);
+    -ms-transform: scale(1,0.25); /* IE 9 */
+    -webkit-transform:  scale(1,0.25); /* Safari */
+    transform:  scale(1,0.25);
     opacity:0;
 }
 .mexico {
@@ -37,9 +37,9 @@
 }
 
 .level-move {
-    -ms-transform: scale(1); /* IE 9 */
-    -webkit-transform:  scale(1); /* Safari */
-    transform:  scale(1);
+    -ms-transform: scale(1,1); /* IE 9 */
+    -webkit-transform:  scale(1,1); /* Safari */
+    transform:  scale(1,1);
 }
 .mead-flood {
     -ms-transform: translate(0px,41.81159px); /* IE 9 */

@@ -192,7 +192,7 @@ dinosvg:::linepath(g_id, x[is.hist],y[is.hist],fill = 'none',
 
 dinosvg:::linepath(g_id, x[is.most],y[is.most],fill = 'none', id='dashed-projection',class='hidden',
                               style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-dasharray:9;stroke-linecap:round",
-                                             '#a9a9a9',line_width))
+                                             '#FFFFFF',line_width))
 
 
 
