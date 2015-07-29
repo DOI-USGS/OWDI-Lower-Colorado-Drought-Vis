@@ -29,10 +29,20 @@
 	<script>
 		<![CDATA[
 			function showBbox(evt, name) {
-				document.getElementById(name).setAttribute("class", "bbox");
+				var elmt = document.getElementById(name + "Bbox");
+				if (elmt)
+					elmt.setAttribute("class", "bbox");
+				elmt = parent.document.getElementById(name + "Legend");
+				if (elmt)
+					elmt.setAttribute("class", "legendShown");
 			}
 			function hideBbox(evt, name) {
-				document.getElementById(name).setAttribute("class", "bboxHidden");
+				var elmt = document.getElementById(name + "Bbox");
+				if (elmt)
+					elmt.setAttribute("class", "bboxHidden");
+				elmt = parent.document.getElementById(name + "Legend");
+				if (elmt)
+					elmt.setAttribute("class", "legendHidden");
 			}
 		]]>
 	</script>
@@ -104,7 +114,7 @@
 	</svg>
 	<rect x="50" y="50" width="250" height="250" fill="none" stroke-width="1.5" stroke="#000000" />
 	<g id="wholeRiver">
-		<g id="hooverGroup" class="riverGroup" onmouseover="showBbox(evt, 'hooverBbox')" onmouseout="hideBbox(evt, 'hooverBbox')">
+		<g id="hooverGroup" class="riverGroup" onmouseover="showBbox(evt, 'hoover')" onmouseout="hideBbox(evt, 'hoover')">
 			<path id="hooverFootprint" class="footprint"
 				d="M 440.02434,128.60836 458.61083,78.035813 524.74416,76.739081 508.75113,1.096389 449.53371,1.528633 405.01258,67.661958 Z"/>
 			<path
@@ -691,7 +701,7 @@
 				font-family="'Arial-BoldMT'"
 				transform="matrix(1 0 0 1 473.1214 71.7489)">HOOVER DAM</text>
 		</g>
-		<g id="davisGroup" class="riverGroup" onmouseover="showBbox(evt, 'davisBbox')" onmouseout="hideBbox(evt, 'davisBbox')">
+		<g id="davisGroup" class="riverGroup" onmouseover="showBbox(evt, 'davis')" onmouseout="hideBbox(evt, 'davis')">
 			<path id="davisFootprint" class="footprint"
 				d="m 439.5921,131.20182 19.45098,-51.437031 75.6427,67.862301 -48.41133,46.68235 -15.12854,19.88322 z" />
 			<path
@@ -930,7 +940,7 @@
 				font-size="4.5451"
 				transform="translate(497.2932,153.1567)">DAVIS DAM</text>
 		</g>
-		<g id="davisParkerGroup" class="riverGroup" onmouseover="showBbox(evt, 'needlesBbox')" onmouseout="hideBbox(evt, 'needlesBbox')">
+		<g id="davisParkerGroup" class="riverGroup" onmouseover="showBbox(evt, 'needles')" onmouseout="hideBbox(evt, 'needles')">
 			<path id="davisParkerFootprint" class="footprint"
 				d="m 484.54548,226.29549 33.28278,-39.3342 -22.47668,-0.43224 -9.50937,9.07712 -15.56078,19.88322 z"/>
 			<path
@@ -972,7 +982,7 @@
 				points="477.6,208.5 480.5,204.6       481.4,204.6 480.3,202.9 482.3,204.6 481.6,203.2 483.4,201 483.8,201.3 482.8,199.6 484.7,201.3 484.1,199.8 486.8,196.2           "
 				id="polyline15683" />
 		</g>
-		<g id="parkerGroup" class="riverGroup" onmouseover="showBbox(evt, 'parkerBbox')" onmouseout="hideBbox(evt, 'parkerBbox')">
+		<g id="parkerGroup" class="riverGroup" onmouseover="showBbox(evt, 'parker')" onmouseout="hideBbox(evt, 'parker')">
 			<path id="parkerFootprint" class="footprint"
 				d="m 518.26051,186.96129 63.9721,27.66361 -1.29673,84.28758 -72.61699,8.21263 -31.98605,-42.35991 8.21264,-39.3342 z" />
 			<text
@@ -1144,7 +1154,7 @@
 				transform="matrix(1 0 0 1 523.2323 272.0789)"
 				font-family="'Arial-BoldMT'">DAM</text>
 		</g>
-		<g id="headgateGroup" class="riverGroup" onmouseover="showBbox(evt, 'headgateBbox')" onmouseout="hideBbox(evt, 'headgateBbox')">
+		<g id="headgateGroup" class="riverGroup" onmouseover="showBbox(evt, 'headgate')" onmouseout="hideBbox(evt, 'headgate')">
 			<path id="headgateFootprint" class="footprint"
 				d="m 395.93547,339.11116 47.97907,1.72898 5.18693,1.29673 37.17298,0.86449 29.39259,-25.07015 -6.9159,-10.8061 -19.45098,-24.20566 -41.92766,-3.45795 z" />
 			<polyline
@@ -1489,7 +1499,7 @@
 				id="text17930"
 				font-family="'Arial-BoldMT'">HEADGATE DAM</text>
 		</g>
-		<g id="paloVerdeGroup" class="riverGroup" onmouseover="showBbox(evt, 'paloVerdeBbox')" onmouseout="hideBbox(evt, 'paloVerdeBbox')">
+		<g id="paloVerdeGroup" class="riverGroup" onmouseover="showBbox(evt, 'paloVerde')" onmouseout="hideBbox(evt, 'paloVerde')">
 			<path id="paloVerdeFootprint" class="footprint"
 				d="m 394.63873,338.67892 -2.16122,70.45576 68.72679,1.29674 31.55381,-57.48845 -7.78039,-9.07712 z" />
 			<polyline
@@ -1992,7 +2002,7 @@
 				id="text17934"
 				font-family="'Arial-BoldMT'">DIVERSION DAM</text>
 		</g>
-		<g id="outwashGroup" class="riverGroup" onmouseover="showBbox(evt, 'outfallBbox')" onmouseout="hideBbox(evt, 'outfallBbox')">
+		<g id="outwashGroup" class="riverGroup" onmouseover="showBbox(evt, 'outfall')" onmouseout="hideBbox(evt, 'outfall')">
 			<path id="outfallFootprint" class="footprint"
 				d="m 392.90976,408.70244 -0.43225,15.12854 18.58649,1.29673 2.59347,9.07712 43.65664,9.94162 4.32244,-33.28279 z" />
 			<polyline
@@ -2044,7 +2054,7 @@
 				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Outfall Drain</text>
 		</g>
-		<g id="imperialGroup" class="riverGroup" onmouseover="showBbox(evt, 'imperialBbox')" onmouseout="hideBbox(evt, 'imperialBbox')">
+		<g id="imperialGroup" class="riverGroup" onmouseover="showBbox(evt, 'imperial')" onmouseout="hideBbox(evt, 'imperial')">
 			<path id="imperialFootprint" class="footprint"
 				d="m 455.58513,443.7142 -14.26405,95.95816 -102.44182,-19.88322 15.12854,-66.56557 3.45795,-32.85054 51.86928,5.18692 3.89019,9.94162 z" />
 			<path
@@ -2218,7 +2228,7 @@
 				transform="matrix(1 0 0 1 344.09 517.0547)"
 				font-family="'Arial-BoldMT'">LAGUNA DAM</text>
 		</g>
-		<g id="morelosGroup" class="riverGroup" onmouseover="showBbox(evt, 'morelosBbox')" onmouseout="hideBbox(evt, 'morelosBbox')">
+		<g id="morelosGroup" class="riverGroup" onmouseover="showBbox(evt, 'morelos')" onmouseout="hideBbox(evt, 'morelos')">
 			<path id="morelosFootprint" class="footprint"
 				d="m 439.15986,539.24012 61.81089,40.63093 2.16122,62.24313 -149.55641,45.81786 -122.75729,78.6684 -44.08888,13.8318 -70.02352,0 4.75468,-77.37166 47.11459,-37.60523 2.59347,-22.04444 13.8318,-9.50937 0,-18.15424 0.43225,-6.91591 153.01436,-89.4745 z" />
 			<polyline
@@ -8883,7 +8893,7 @@
 				d="M171.9,702.2c0,0-3,2.9-4.6,2.9"
 				id="path17866" />
 		</g>
-		<g id="easternGroup" class="riverGroup" onmouseover="showBbox(evt, 'easternBbox')" onmouseout="hideBbox(evt, 'easternBbox')">
+		<g id="easternGroup" class="riverGroup" onmouseover="showBbox(evt, 'eastern')" onmouseout="hideBbox(evt, 'eastern')">
 			<path id="easternFootprint" class="footprint"
 				d="m 501.83523,581.16778 1.72898,60.08191 79.10064,-66.13333 -24.6379,-30.25707 z" />
 			<polyline
@@ -9277,7 +9287,7 @@
 				fill="none" />
 		
 		</g>
-		<g id="saltonGroup" class="riverGroup" onmouseover="showBbox(evt, 'saltonBbox')" onmouseout="hideBbox(evt, 'saltonBbox')">
+		<g id="saltonGroup" class="riverGroup" onmouseover="showBbox(evt, 'salton')" onmouseout="hideBbox(evt, 'salton')">
 			<path id="saltonFootprint" class="footprint"
 				d="m 119.73158,701.3316 48.84356,-37.17298 1.72898,-23.34117 14.69629,-8.64488 -1.29673,-26.36688 -86.881034,-127.94422 -60.08191,2.16122 -1.296731,147.39519 z" />
 			<polyline

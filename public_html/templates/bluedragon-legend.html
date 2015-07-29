@@ -1,0 +1,22 @@
+<div class="legendHidden" id="{{class}}Legend">
+	<table class="table">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Designation</th>
+				<th>Type of Measurement</th>
+				<th>Reporting Agency</th>
+			</tr>
+		</thead>
+		<tbody>
+		{{#each legendItems}}
+			<tr>
+				<td>{{number}}</td>
+				<td>{{designation}}</td>
+				<td>{{typeOfMeasurement}}</td>
+				<td>{{reportingAgency}}</td>
+			</tr>
+		{{/each}}
+		</tbody>
+	</table>
+</div>

@@ -582,9 +582,11 @@ nav h3 {
 	#dragonText{
 		position:absolute;
 		top:100px;
-		right:0;
-		width:200px;
-		}
+		right:-100px;
+		max-width:400px;
+		max-height: 40em;
+		overflow-y: scroll;
+	}
 		
 	#natural-flow-graph{
 		width:100% !important;

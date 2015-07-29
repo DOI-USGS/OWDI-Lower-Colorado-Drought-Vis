@@ -1,5 +1,5 @@
 <div class="widget">
-
+<link href="css/bluedragon.css" rel="stylesheet" type="text/css">
 <div class="sectionContent" id="blueDragonSection">
 	<h2>The Colorado River basin is an interconnected system of rivers, reservoirs, and diversions.</h2>
 	
@@ -8,7 +8,9 @@
 		<object id="bluedragon-object" data="img/bluedragon-animate.svg" type="image/svg+xml" ></object>
 	</div>
 	
-	<div id="dragonText">Rawr, here I am!! Put text about me here</div>
+	<div id="dragonText">Lower Colorado River Operational Diagram
+		<div id="legendTarget"></div>
+	</div>
 	
 		<div class="graphCaption">
 			<p class="explore-more"><a href="http://txpub.usgs.gov/DSS/StoryMaps/BlueDragon/" target="_blank"><img class="leaving" src="{{baseUrl}}/img/leavingapp-icon.png" alt="leaving application icon"/>Click here</a> to explore the lower Colorado control structures and major diversions.</p>
@@ -17,3 +19,29 @@
 	</div>
 
 </div>
+
+<script>
+	( function () {
+	"use strict";
+	var templatePromise = $.ajax( {
+		url: "templates/bluedragon-legend.html"
+	});
+
+	var legendPromise = $.ajax( {
+		url: "data/bluedragon-legend.json"
+	});
+
+	$.when(templatePromise, legendPromise).done( function ( templateAjax, legendAjax ) {
+		var template = Handlebars.compile ( templateAjax[0] );
+		var legendInfo = legendAjax[0];
+		var target = $('#legendTarget');
+
+		$.each (legendInfo, function ( propertyName, value ) {
+			var context = { "class": propertyName, "legendItems":value };
+			var html = template ( context );
+			target.append(html);
+		} );
+	});
+})();
+	
+</script>

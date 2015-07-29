@@ -64,10 +64,6 @@
 	-moz-transform: translate(-850px, 0px) scale(3);
 }
 
-#hooverGroup:hover #hooverBbox {
-	visibility: visible !important;
-}
-
 #davisGroup:hover {
 	transform: translate(-900px, -180px) scale(3);
 	-ms-transform: translate(-900px, -180px) scale(3);
@@ -136,4 +132,12 @@
 	-ms-transform: translate(0px, -1240px) scale(3);
 	-webkit-transform: translate(0px, -1240px) scale(3);
 	-moz-transform: translate(0px, -1240px) scale(3);
+}
+
+.legendHidden {
+	display: none;
+}
+
+.legendShown {
+	display: block;
 }
