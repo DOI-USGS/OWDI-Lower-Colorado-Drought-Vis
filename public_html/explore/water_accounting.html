@@ -313,13 +313,14 @@
         owdiDrought.waterAccounting.basemaps.OpenStreetMap.addTo(owdiDrought.waterAccounting.map);
         owdiDrought.waterAccounting.basemaps["ESRI World Topo"].addTo(owdiDrought.waterAccounting.map);
 
-        $.getJSON("../data/lc_huc_simp.geojson", function(x) {
-            owdiDrought.waterAccounting.addDataToMap(x, owdiDrought.waterAccounting.styles.style1, "lc huc simp");
-        });
+        $.when(
+            $.getJSON("../data/lc_huc_simp.geojson"),
+            $.getJSON("../data/wat_acc_cont.geojson")
+        ).done(function (d1, d2) {
+            owdiDrought.waterAccounting.addDataToMap(d1, owdiDrought.waterAccounting.styles.style1, "lc huc simp");
 
-        $.getJSON("../data/wat_acc_cont.geojson", function(x) {
-            owdiDrought.waterAccounting.addDataToMap(x, owdiDrought.waterAccounting.style2, "wat acc cont", "add");
-            owdiDrought.waterAccounting.geojson = L.geoJson(x, {
+            owdiDrought.waterAccounting.addDataToMap(d2, owdiDrought.waterAccounting.style2, "wat acc cont", "add");
+            owdiDrought.waterAccounting.geojson = L.geoJson(d2, {
                 style: owdiDrought.waterAccounting.styles.style2,
                 onEachFeature: owdiDrought.waterAccounting.onEachFeature
             }).addTo(owdiDrought.waterAccounting.map);
