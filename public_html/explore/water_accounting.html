@@ -224,21 +224,6 @@
             };
         }
 
-        // Popup
-        owdiDrought.waterAccounting.onEachFeature = function(feature, layer) {
-            if (feature.properties && feature.properties["Contractor"] && feature.properties["mean"]) {
-                layer.bindPopup(
-                    "<table>" +
-                    "<tr class='oddrowcol'><td>Contractor: </td><td>" + feature.properties["Contractor"] + "</td></tr>" +
-                    "<tr class='evenrowcol'><td>mean: </td><td>" + feature.properties["mean"] + "</td></tr>" +
-                    "</table>"
-                );
-            }
-            if (feature.properties && feature.properties[""]) {
-                layer.bindPopup(": " + feature.properties[""]);
-            }
-        }
-
         owdiDrought.waterAccounting.highlightFeature = function(e) {
             var layer = e.target;
 
@@ -330,10 +315,6 @@
 
         $.getJSON("../data/lc_huc_simp.geojson", function(x) {
             owdiDrought.waterAccounting.addDataToMap(x, owdiDrought.waterAccounting.styles.style1, "lc huc simp");
-            owdiDrought.waterAccounting.geojson = L.geoJson(x, {
-                style: owdiDrought.waterAccounting.styles.style1,
-                onEachFeature: owdiDrought.waterAccounting.onEachFeature
-            }).addTo(owdiDrought.waterAccounting.map);
         });
 
         $.getJSON("../data/wat_acc_cont.geojson", function(x) {
