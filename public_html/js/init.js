@@ -175,8 +175,6 @@ $( document ).ready( function () {
               evt = new Event(eventName);
             }
             window.dispatchEvent(evt);
-
-
         }
 
     } );
