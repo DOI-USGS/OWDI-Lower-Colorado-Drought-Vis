@@ -30,6 +30,8 @@
 	-moz-transition: 1s ease-in-out;
 	-o-transition: 1s ease-in-out;
 	transition: 1s ease-in-out;
+
+
 }
 
 .riverGroup:hover {
@@ -39,11 +41,29 @@
 	transition: 1s ease-in-out;
 }
 
+#insetGroup {
+	transform: scale(0.5);
+}
+
+.bbox {
+	visibility: visible;
+	stroke-alignment: outer;
+	stroke-width: 20;
+}
+
+.bboxHidden {
+	visibility: hidden;
+}
+
 #hooverGroup:hover{
 	transform: translate(-850px, 0px) scale(3);
 	-ms-transform: translate(-850px, 0px) scale(3);
 	-webkit-transform: translate(-850px, 0px) scale(3);
 	-moz-transform: translate(-850px, 0px) scale(3);
+}
+
+#hooverGroup:hover #hooverBbox {
+	visibility: visible !important;
 }
 
 #davisGroup:hover {
@@ -103,16 +123,15 @@
 }
 
 #easternGroup:hover {
-	transform: translate(-1220px, -1440px) scale(3);
-	-ms-transform: translate(-1220px, -1440px) scale(3);
-	-webkit-transform: translate(-1220px, -1440px) scale(3);
-	-moz-transform: translate(-1220px, -1440px) scale(3);
-	/*transition-delay:0s;*/
+	transform: translate(-1020px, -1160px) scale(3);
+	-ms-transform: translate(-1020px, -1160px) scale(3);
+	-webkit-transform: translate(-1020px, -1160px) scale(3);
+	-moz-transform: translate(-1020px, -1160px) scale(3);
 }
 
 #saltonGroup:hover {
-	transform: translate(-20px, -1440px) scale(3);
-	-ms-transform: translate(-20px, -1440px) scale(3);
-	-webkit-transform: translate(-20px, -1440px) scale(3);
-	-moz-transform: translate(-20px, -1440px) scale(3);
+	transform: translate(0px, -1240px) scale(3);
+	-ms-transform: translate(0px, -1240px) scale(3);
+	-webkit-transform: translate(0px, -1240px) scale(3);
+	-moz-transform: translate(0px, -1240px) scale(3);
 }
