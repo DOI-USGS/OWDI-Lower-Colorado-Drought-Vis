@@ -101,13 +101,21 @@ $(document).ready(function() {
 		owdiDrought.waterAccounting.info.update(layer.feature.properties);
 	}
 
-	// styling
 	owdiDrought.waterAccounting.getValue = function(x) {
-		return x > 2500000 ? 0 :
-			x >= 400000 ? 33 :
-			x >= 600 ? 20 :
-			x >= 120 ? 7 :
-			0;
+		var value;
+
+		if (x > 2500000) {
+			value = 0;
+		} else if (x >= 400000) {
+			value = 33;
+		} else if (x >= 600) {
+			value = 20;
+		} else if (x >= 120) {
+			value = 7;
+		} else {
+			value = 0;
+		}
+		return value;
 	}
 
 	owdiDrought.waterAccounting.map = L.map('map');
