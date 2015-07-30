@@ -12,6 +12,10 @@ a{
 a:hover{
 	text-decoration:underline;
 	}
+	
+p.center{
+	text-align:center;
+	}
 
 ul{list-style:none;}
 
