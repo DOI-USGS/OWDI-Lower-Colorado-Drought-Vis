@@ -300,7 +300,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
 }
 }
 }]]></script>
-  <rect x="-50" width="640" height="547" fill="url(#background-image)" rx="6" ry="6" id="background-panel"/>
+  <rect x="-50" width="100%" height="100%" fill="url(#background-image)" rx="6" ry="6" id="background-panel"/>
   <defs>
     <pattern id="mexico-flag" patternUnits="userSpaceOnUse" x="120" y="150" width="650" height="547">
       <image xlink:href="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" width="650" height="547" opacity="1"/>
