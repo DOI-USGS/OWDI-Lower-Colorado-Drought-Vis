@@ -130,7 +130,7 @@ $(document).ready(function() {
 				from + (to ? '&ndash;' + to : '+'));
 		}
 		labels.push(
-			'<br/><i style="background:' + '#9d9d9d' + '"></i>Lower Colorado River Watershed');
+			'<br/><i style="background:' + '#9d9d9d' + '"></i>Colorado River Watershed');
 
 		div.innerHTML = labels.join('<br>');
 		return div;
@@ -174,10 +174,10 @@ $(document).ready(function() {
 	// Make calls to get the geojson data for hucs and water accounting.
 	// then use that geojson to create layers on the map
 	$.when(
-		$.getJSON("../data/lc_huc_simp.geojson"),
+		$.getJSON("../data/wbd1415.geojson"),
 		$.getJSON("../data/wat_acc_cont.geojson")
 	).done(function(d1, d2) {
-		owdiDrought.waterAccounting.addDataToMap(d1, owdiDrought.waterAccounting.styles.watershed, "Lower Colorado River Watershed");
+		owdiDrought.waterAccounting.addDataToMap(d1, owdiDrought.waterAccounting.styles.watershed, "Colorado River Watershed");
 		owdiDrought.waterAccounting.addDataToMap(d2, owdiDrought.waterAccounting.styles.hucStyle, "Water Contracts");
 
 		owdiDrought.waterAccounting.geojson = L.geoJson(d2, {
