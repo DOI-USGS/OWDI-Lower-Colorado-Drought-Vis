@@ -11,6 +11,22 @@ nav {
 nav h3 {
 	color: #fff;
 }
+
+/*=====Leaving App CSS=====*/
+.leaving{
+	margin-right:3px;
+	}
+	
+.explore-more{
+	margin-top:20px;
+	font-size:1.2em;
+	}
+	
+.sectionContent .explore-more{
+	text-align:center;
+	}
+
+
 /*=====Container CSS=====*/
 
 .container {
@@ -83,7 +99,7 @@ nav h3 {
 }
 
 #basinReservoirContainer {
-	margin-bottom: 0px;
+	margin-bottom: 20px;
 }
 
 #mainMessage4Container {
@@ -169,6 +185,7 @@ nav h3 {
 	background-repeat: no-repeat;
 	height: 100%;
 }
+
 /*=====keynote css=====*/
 
 .keynote {
@@ -207,7 +224,8 @@ nav h3 {
 #keynote1 h2#emphasized{
 	font-weight:400;
 	}
-/*=====Container Content CSS=====*/
+	
+/*=====Container Section CSS=====*/
 
 .section {
 	position: relative;
@@ -254,6 +272,7 @@ nav h3 {
 .sectionContent ul li {
 	margin-bottom: 5px;
 }
+
 /*Supporting Info Buttons CSS*/
 
 .supportinginfo,
@@ -277,6 +296,7 @@ nav h3 {
 	background: #003366;
 	color: #fff;
 }
+
 /*Supporting Info Content CSS*/
 
 .supportingInfoContent {
@@ -293,6 +313,8 @@ nav h3 {
 	line-height: 1.5em;
 }
 
+/*=====Graph Caption CSS=====*/
+
 .graphCaption{
 	background:rgba(0,51,102,.2);
 	width:100%;
@@ -301,17 +323,15 @@ nav h3 {
 	border-radius:5px;
 	text-align:left;
 	}
+
+
 	
-.leaving{
-	margin-right:3px;
-	}
-	
-/*Photo Panel*/
+/*=====Photo Panel Mobile CSS=====*/
 #photoPanel img{
 		width:32.5%;
 		}
 
-/*Blue Dragon Section CSS*/
+/*=====Blue Dragon CSS=====*/
 
 #blueDragon{
 		margin-bottom:20px;
@@ -323,43 +343,37 @@ nav h3 {
 	background:rgba(0,51,102,.2);
 	border-radius:5px;
 	}
+	
+/*=====dygraphsection CSS=====*/
 		
 #usDroughtGif{
-	margin-top:20px;
+	margin-top:100px;
 	}
 	
+#droughtMovingAvg-object{
+	margin-top:100px;
+	}
+	
+/*=====Water-Usage Section CSS=====*/
 
-	
-.explore-more{
-	margin-top:20px;
-	font-size:1.2em;
-	}
-	
-.sectionContent .explore-more{
-	text-align:center;
-	}
-	
-/*Black and white images*/
+#JrGraph h2 {
+	font-size: 1em;
+}
 
 #black-white-images p{
 	margin-bottom:20px;
 	}
 	
 #black-white-images{
-	margin-top:50px;
+	margin-top:20px;
 	}
 	
 #black-white-images img{
 	margin-bottom:10px;
 	}
 	
-/*Water Usage Section CSS*/
 
-#JrGraph h2 {
-	font-size: 1em;
-}
-
-/*Before after CSS*/
+/*=====Before after CSS=====*/
 
 #before-after-reservoir,
 #hooverdam{
@@ -380,7 +394,6 @@ nav h3 {
 	margin-top: 25px;
 	width:100% !important;
 }
-	
 /*Lake Mead Animated Section CSS*/
 #meadSVGContainer h2 {
 	color: #fff;
@@ -476,6 +489,7 @@ nav h3 {
 	#finalMessageContainer {
 		background-image: url('../img/keynotes/keynote10.jpg');
 	}
+	
 	/*======keynote CSS======*/
 	
 	.keynote {
@@ -505,18 +519,9 @@ nav h3 {
 	.sectionContent h2{
 		font-size:1.3em;
 		}
-	/*Section 5 CSS*/
-	#texas-thumbnail{
-		width:70%;
-		}
-	
-	/*Black and white images*/
+		
 
-	#black-white-images p{
-		margin-bottom:50px;
-	}
-	
-	/*Section 9 CSS*/
+	/*======Water Usage Section CSS======*/
 	
 	#JrGraph h2 {
 		font-size: 1.5em;
@@ -525,7 +530,14 @@ nav h3 {
 		font-size: 1em !important;
 	}
 	
-	/*Section 16 CSS*/
+	/*======Before After Section CSS======*/
+	
+	#before-after-section figure{
+		margin-top:50px;
+		}
+	
+	/*======Lake Mead Animated Section CSS======*/
+	
 	.SVGInfo{
 		width:760px;
 		}
@@ -540,10 +552,11 @@ nav h3 {
 }
 
 @media screen and (min-width: 1025px) {
-	/*Keynote CSS*/
+	
+	/*======keynote CSS======*/
 	
 	.keynote {
-		width: 980px;
+		width: 960px;
 	}
 	.keynote h1 {
 		font-size: 2em;
@@ -551,8 +564,8 @@ nav h3 {
 	.keynote h2 {
 		font-size: 1.9em;
 	}
-	/*Section Content CSS*/
-	
+
+	/*======Section Content CSS======*/
 	.sectionContent {
 		width: 900px;
 	}
@@ -565,12 +578,13 @@ nav h3 {
 		margin:0 auto;
 		}
 		
-	/*Photo Panel*/
+	/*======Photo Panel CSS======*/
+	
 	#photoPanel img{
 		width:33%;
 		}
 	
-	/*Blue Dragon Section CSS*/
+	/*======Blue Dragon Section CSS======*/
 	
 	#blueDragon{
 		width:800px;
@@ -588,23 +602,39 @@ nav h3 {
 		width:200px;
 		}
 		
+	
+	/*======dygraph Section CSS======*/	
+	
 	#natural-flow-graph{
 		width:100% !important;
 		margin:0 auto 20px 0;
 		margin-left:-10px;
 		}
+	
+	/*======app-explanation CSS======*/	
 		
 	#co-basin-object{
 		margin-top:50px;
 	}
-		
-	/*Water Usage CSS*/
+	
+	
+	/*======Water Usage Section CSS======*/	
+	
+	#basinReservoirContainer{
+		margin-bottom: 100px;
+	}
+	
+	#black-white-images{
+		margin-top:100px;
+		}
 	
 	#JrGraph {
 		width: 900px;
 		margin: 0 auto;
 	}
-	/*before after css*/
+	
+	/*======before after Section CSS======*/	
+	
 	.extraPics img{
 		width:33%;
 	}
