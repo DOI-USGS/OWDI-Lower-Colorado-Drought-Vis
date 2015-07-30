@@ -18,7 +18,7 @@ nav h3 {
 	}
 	
 .explore-more{
-	margin-top:20px;
+	margin:0 !important;
 	font-size:1.2em;
 	}
 	
@@ -275,24 +275,18 @@ nav h3 {
 
 /*Supporting Info Buttons CSS*/
 
-.supportinginfo,
-.interact {
+.supportinginfo{
 	background: none;
 	color: #003366;
 	font-weight: bold;
 	padding: 10px;
 	border: 1px solid #003366;
 	border-radius: 5px;
-	margin: 20px 0 100px 0;
+	margin: 20px 0 50px 0;
 	outline: none;
 }
 
-.interact{
-	margin:-10px 0 20px 0;
-	}
-
-.supportinginfo:hover,
-.interact:hover{
+.supportinginfo:hover{
 	background: #003366;
 	color: #fff;
 }
@@ -324,8 +318,6 @@ nav h3 {
 	text-align:left;
 	}
 
-
-	
 /*=====Photo Panel Mobile CSS=====*/
 #photoPanel img{
 		width:32.5%;
@@ -395,7 +387,6 @@ nav h3 {
 	width:100% !important;
 }
 
-
 /*=====Lake Mead Animated Section CSS=====*/
 	
 #meadSVGContainer h2 {
@@ -428,6 +419,11 @@ nav h3 {
 	
 .SVGInfo p{
 	margin-bottom:10px;
+	}
+	
+/*=====Last Section CSS=====*/
+#openWater{
+	margin-top:50px;
 	}
 	
 @media screen and (min-width: 687px) {
@@ -508,6 +504,13 @@ nav h3 {
 	#keynote2 h2 {
 		margin-top: 100px;
 	}
+	
+	/*======supporting info CSS======*/
+	
+	.supportinginfo{
+		margin-bottom:100px;
+		}
+		
 	/*======Content CSS======*/
 	
 	.sectionContent {
