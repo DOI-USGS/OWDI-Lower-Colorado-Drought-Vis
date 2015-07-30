@@ -179,3 +179,7 @@ text {
 #y-pictogram-label {
 	font-size: 1em;
 }
+
+#mead-elev-projected-svg {
+    margin-left: -0.25em;
+}
