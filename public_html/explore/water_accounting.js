@@ -3,19 +3,28 @@ $(document).ready(function() {
 	window.owdiDrought = window.owdiDrought || {};
 	window.owdiDrought.waterAccounting = {};
 
+	owdiDrought.waterAccounting.map = L.map('map');
+
+	owdiDrought.waterAccounting.group = new L.featureGroup;
+
 	// data layers
 	owdiDrought.waterAccounting.layers = {}
 
 	owdiDrought.waterAccounting.styles = {
-		style1: {
-			"fillOpacity": 0.5,
+		watershed: {
+			"fillOpacity": 0.2,
 			"color": "#9d9d9d",
 			"weight": 2,
 			"fillColor": "#9d9d9d"
 		},
-		style2: {
-			color: "#7F7FFF",
-			weight: 5
+		hucStyle: function(feature) {
+			return {
+				weight: 2,
+				color: 'white',
+				dashArray: '3',
+				fillOpacity: 0.4,
+				fillColor: owdiDrought.waterAccounting.getColor(feature.properties.mean)
+			};
 		}
 	}
 
@@ -36,23 +45,6 @@ $(document).ready(function() {
 		});
 	}
 
-	owdiDrought.waterAccounting.addDataToMap = function(data, style, layer, lc) {
-		owdiDrought.waterAccounting.layers[layer] = L.geoJson(data, {
-			onEachFeature: layer === "wat acc cont" ? owdiDrought.waterAccounting.onEachFeature : undefined,
-			style: owdiDrought.waterAccounting.style
-		});
-		owdiDrought.waterAccounting.layers[layer].addTo(owdiDrought.waterAccounting.map);
-		owdiDrought.waterAccounting.group.addLayer(owdiDrought.waterAccounting.layers[layer])
-		owdiDrought.waterAccounting.map.fitBounds(owdiDrought.waterAccounting.group.getBounds());
-
-		// layer control
-		if (lc != undefined) {
-			L.control
-				.layers(owdiDrought.waterAccounting.baseMaps, owdiDrought.waterAccounting.layers)
-				.addTo(owdiDrought.waterAccounting.map);
-		};
-	};
-
 	// get color depending on five year mean value
 	owdiDrought.waterAccounting.getColor = function(d) {
 		var color;
@@ -70,15 +62,6 @@ $(document).ready(function() {
 		}
 
 		return color;
-	}
-
-	owdiDrought.waterAccounting.style = function(feature) {
-		return {
-			weight: 2,
-			color: 'white',
-			dashArray: '3',
-			fillColor: owdiDrought.waterAccounting.getColor(feature.properties.mean)
-		};
 	}
 
 	owdiDrought.waterAccounting.highlightFeature = function(e) {
@@ -115,33 +98,24 @@ $(document).ready(function() {
 		return value;
 	}
 
-	owdiDrought.waterAccounting.map = L.map('map');
-
-	owdiDrought.waterAccounting.group = new L.featureGroup;
-
-	// control that shows state info on hover
+	// Info control
 	owdiDrought.waterAccounting.info = L.control();
-
 	owdiDrought.waterAccounting.info.onAdd = function(map) {
 		this._div = L.DomUtil.create('div', 'info');
 		this.update();
 		return this._div;
 	};
-
 	owdiDrought.waterAccounting.info.update = function(props) {
 		this._div.innerHTML = '<h2>Lower Colorado River Water Use Contracts</h2><br /> <h4>Five Year Mean</h4>' + (props ?
 			'<b>' + props.Contractor + '</b><br />' + props.mean + ' acre feet' : 'Hover over a contractor polygon');
 	};
-
 	owdiDrought.waterAccounting.info.addTo(owdiDrought.waterAccounting.map);
 
 	// Legend
 	owdiDrought.waterAccounting.legend = L.control({
 		position: 'bottomright'
 	});
-
 	owdiDrought.waterAccounting.legend.onAdd = function(map) {
-
 		var div = L.DomUtil.create('div', 'info legend'),
 			grades = [0, 120, 600, 400000, 2500000],
 			labels = ["<b>Acre Feet</b>"],
@@ -161,7 +135,6 @@ $(document).ready(function() {
 		div.innerHTML = labels.join('<br>');
 		return div;
 	};
-
 	owdiDrought.waterAccounting.legend.addTo(owdiDrought.waterAccounting.map);
 
 	// scale bar
@@ -176,19 +149,39 @@ $(document).ready(function() {
 			"attribution": "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, \n    USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, \n    Esri China (Hong Kong), and the GIS User Community"
 		})
 	};
-
 	owdiDrought.waterAccounting.basemaps.OpenStreetMap.addTo(owdiDrought.waterAccounting.map);
 	owdiDrought.waterAccounting.basemaps["ESRI World Topo"].addTo(owdiDrought.waterAccounting.map);
 
+	// Layer selection control
+	L.control.layers(owdiDrought.waterAccounting.basemaps).addTo(owdiDrought.waterAccounting.map);
+
+	owdiDrought.waterAccounting.addDataToMap = function(data, style, layer, lc) {
+		owdiDrought.waterAccounting.layers[layer] = L.geoJson(data, {
+			style: style
+		});
+		owdiDrought.waterAccounting.layers[layer].addTo(owdiDrought.waterAccounting.map);
+		owdiDrought.waterAccounting.group.addLayer(owdiDrought.waterAccounting.layers[layer])
+		owdiDrought.waterAccounting.map.fitBounds(owdiDrought.waterAccounting.group.getBounds());
+
+		// layer control
+		if (lc != undefined) {
+			L.control
+				.layers(owdiDrought.waterAccounting.baseMaps, owdiDrought.waterAccounting.layers)
+				.addTo(owdiDrought.waterAccounting.map);
+		};
+	};
+
+	// Make calls to get the geojson data for hucs and water accounting.
+	// then use that geojson to create layers on the map
 	$.when(
 		$.getJSON("../data/lc_huc_simp.geojson"),
 		$.getJSON("../data/wat_acc_cont.geojson")
 	).done(function(d1, d2) {
-		owdiDrought.waterAccounting.addDataToMap(d1, owdiDrought.waterAccounting.styles.style1, "Lower Colorado River Watershed");
+		owdiDrought.waterAccounting.addDataToMap(d1, owdiDrought.waterAccounting.styles.watershed, "Lower Colorado River Watershed");
+		owdiDrought.waterAccounting.addDataToMap(d2, owdiDrought.waterAccounting.styles.hucStyle, "Water Contracts");
 
-		owdiDrought.waterAccounting.addDataToMap(d2, owdiDrought.waterAccounting.styles.style2, "Water Contracts", "add");
 		owdiDrought.waterAccounting.geojson = L.geoJson(d2, {
-			style: owdiDrought.waterAccounting.style,
+			style: owdiDrought.waterAccounting.styles.hucStyle,
 			onEachFeature: owdiDrought.waterAccounting.onEachFeature
 		}).addTo(owdiDrought.waterAccounting.map);
 	});
