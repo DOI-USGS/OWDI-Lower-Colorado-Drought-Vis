@@ -157,13 +157,11 @@
                 "fillOpacity": 0.5,
                 "color": "#9d9d9d",
                 "weight": 2,
-                "fillColor": "#9d9d9d",
-                "opacity": 0.5
+                "fillColor": "#9d9d9d"
             },
             style2: {
-                color: "#FFA500",
-                weight: 5,
-                opacity: 0.8
+                color: "#7F7FFF",
+                weight: 5
             }
         }
 
@@ -188,9 +186,9 @@
         owdiDrought.waterAccounting.addDataToMap = function(data, style, layer, lc) {
             owdiDrought.waterAccounting.layers[layer] = L.geoJson(data, {
                 onEachFeature : layer==="wat acc cont"? owdiDrought.waterAccounting.onEachFeature:undefined,
-                pointToLayer: function(feature, latlng) {
-                    return L.circleMarker(latlng);
-                },
+                //pointToLayer: function(feature, latlng) {
+                //   return L.circleMarker(latlng);
+                //},
                 style: style
             });
             owdiDrought.waterAccounting.layers[layer].addTo(owdiDrought.waterAccounting.map);
@@ -207,19 +205,18 @@
 
         // get color depending on five year mean value
         owdiDrought.waterAccounting.getColor = function(d) {
-            return d > 15089 ? '#FD8D3C' :
-                d > 1706 ? '#FEB24C' :
-                d > 313 ? '#FED976' :
-                '#FFEDA0';
+            return d > 2500000 ? '#3c4dfd': 
+				d > 400000 ? '#6f7bfe' :
+                d > 600 ? '#a1a9fe' :
+                d > 120 ? '#d4d7ff' :
+                '#eeefff';
         }
 
         owdiDrought.waterAccounting.style = function(feature) {
             return {
                 weight: 2,
-                opacity: 1,
                 color: 'white',
                 dashArray: '3',
-                fillOpacity: 0.7,
                 fillColor: owdiDrought.waterAccounting.getColor(feature.properties.mean)
             };
         }
@@ -229,7 +226,7 @@
 
             layer.setStyle({
                 weight: 5,
-                color: '#666',
+                color: '#FFFF00',
                 dashArray: '',
                 fillOpacity: 0.7
             });
@@ -265,7 +262,7 @@
 
         owdiDrought.waterAccounting.info.update = function(props) {
             this._div.innerHTML = '<h2>Lower Colorado River Water Use Contracts</h2><br /> <h4>Five Year Mean</h4>' + (props ?
-                '<b>' + props.Contractor + '</b><br />' + props.mean + ' maf' : 'Hover over a contractor polygon');
+                '<b>' + props.Contractor + '</b><br />' + props.mean + ' acre feet' : 'Hover over a contractor polygon');
         };
 
          owdiDrought.waterAccounting.info.addTo( owdiDrought.waterAccounting.map);
@@ -279,7 +276,7 @@
 
             var div = L.DomUtil.create('div', 'info legend'),
                 grades = [0, 120, 600, 400000, 2500000],
-                labels = ["Million Acre Feet"],
+                labels = ["<b>Acre Feet</b>"],
                 from, to;
 
             for (var i = 0; i < grades.length; i++) {
@@ -291,7 +288,7 @@
                     from + (to ? '&ndash;' + to : '+'));
             }
 				labels.push(
-					'<i style="background:' + '#9d9d9d'+'"></i>Lower Colorado River Watershed');
+					'<br/><i style="background:' + '#9d9d9d'+'"></i>Lower Colorado River Watershed');
 
             div.innerHTML = labels.join('<br>');
             return div;
@@ -319,9 +316,9 @@
             $.getJSON("../data/lc_huc_simp.geojson"),
             $.getJSON("../data/wat_acc_cont.geojson")
         ).done(function (d1, d2) {
-            owdiDrought.waterAccounting.addDataToMap(d1, owdiDrought.waterAccounting.styles.style1, "lc huc simp");
+            owdiDrought.waterAccounting.addDataToMap(d1, owdiDrought.waterAccounting.styles.style1, "Lower Colorado River Watershed");
 
-            owdiDrought.waterAccounting.addDataToMap(d2, owdiDrought.waterAccounting.styles.style2, "wat acc cont", "add");
+            owdiDrought.waterAccounting.addDataToMap(d2, owdiDrought.waterAccounting.styles.style2, "Water Contracts", "add");
             owdiDrought.waterAccounting.geojson = L.geoJson(d2, {
                 style: owdiDrought.waterAccounting.styles.style2,
                 onEachFeature: owdiDrought.waterAccounting.onEachFeature
