@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>water_accounting</title>
+    <meta charset="utf-8">
+    <meta name="generator" content="leafletR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../js/leaflet/leaflet.css" />
+    <script src="../js/leaflet/leaflet.js"></script>
+    <script src="../js/leaflet/jquery-1.10.2.min.js"></script>
+    <style type="text/css">
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    html,
+    body,
+    #map {
+        height: 100%;
+    }
+    
+    table,
+    td {
+        border-collapse: collapse;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #e9e9e9;
+        padding: 5px;
+    }
+    
+    .evenrowcol {
+        background-color: #f6f6f6;
+    }
+    
+    .legend {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        background: white;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        line-height: 18px;
+        color: #555;
+    }
+    
+    .legend i {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin-right: 8px;
+    }
+    
+    .legend table,
+    .legend td {
+        border: none;
+    }
+    
+    .value {
+        border: none;
+        padding: 0px 0px 0px 8px;
+        text-align: left;
+        vertical-align: middle;
+    }
+    
+    .circle {
+        border: none;
+        padding: 0px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .shape {
+        padding: 0px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .ln {
+        stroke: #0033ff;
+        stroke-width: 5;
+        stroke-opacity: 0.5;
+        stroke-linecap: round;
+    }
+    
+    .plgn {
+        fill: #0033ff;
+        fill-opacity: 0.5;
+        stroke: #0033ff;
+        stroke-width: 4;
+        stroke-opacity: 0.5;
+        stroke-linejoin: round;
+    }
+    
+    .mrks {
+        padding: 0px;
+        text-align: center;
+        height: 30px;
+    }
+    
+    .mrkm {
+        padding: 0px;
+        text-align: center;
+        height: 40px;
+    }
+    
+    .mrkl {
+        padding: 0px;
+        text-align: center;
+        height: 52px;
+    }
+    
+    .info {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        background: white;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+    
+    .info h4 {
+        margin: 0 0 5px;
+        color: #777;
+    }
+    
+    .legend {
+        text-align: left;
+        line-height: 18px;
+        color: #555;
+    }
+    
+    .legend i {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin-right: 8px;
+        opacity: 0.7;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        "use strict";
+        window.owdiDrought = window.owdiDrought || {};
+        window.owdiDrought.waterAccounting = {};
+
+        // data layers
+        owdiDrought.waterAccounting.layers = {}
+
+        owdiDrought.waterAccounting.styles = {
+            style1: {
+                "fillOpacity": 0.5,
+                "color": "#9d9d9d",
+                "weight": 2,
+                "fillColor": "#9d9d9d",
+                "opacity": 0.5
+            },
+            style2: {
+                color: "#FFA500",
+                weight: 5,
+                opacity: 0.8
+            }
+        }
+
+
+        owdiDrought.waterAccounting.resetHighlight = function(e) {
+            owdiDrought.waterAccounting.geojson.resetStyle(e.target);
+            owdiDrought.waterAccounting.info.update();
+        }
+
+        owdiDrought.waterAccounting.zoomToFeature = function(e) {
+            owdiDrought.waterAccounting.map.fitBounds(e.target.getBounds());
+        }
+
+        owdiDrought.waterAccounting.onEachFeature = function(feature, layer) {
+            layer.on({
+                mouseover: owdiDrought.waterAccounting.highlightFeature,
+                mouseout: owdiDrought.waterAccounting.resetHighlight,
+                click: owdiDrought.waterAccounting.zoomToFeature
+            });
+        }
+
+        owdiDrought.waterAccounting.addDataToMap = function(data, style, layer, lc) {
+            owdiDrought.waterAccounting.layers[layer] = L.geoJson(data, {
+                onEachFeature : layer==="wat acc cont"? owdiDrought.waterAccounting.onEachFeature:undefined,
+                pointToLayer: function(feature, latlng) {
+                    return L.circleMarker(latlng);
+                },
+                style: style
+            });
+            owdiDrought.waterAccounting.layers[layer].addTo(owdiDrought.waterAccounting.map);
+            owdiDrought.waterAccounting.group.addLayer(owdiDrought.waterAccounting.layers[layer])
+            owdiDrought.waterAccounting.map.fitBounds(owdiDrought.waterAccounting.group.getBounds());
+
+            // layer control
+            if (lc != undefined) {
+                L.control
+                    .layers(owdiDrought.waterAccounting.baseMaps, owdiDrought.waterAccounting.layers)
+                    .addTo(owdiDrought.waterAccounting.map);
+            };
+        };
+
+        // get color depending on five year mean value
+        owdiDrought.waterAccounting.getColor = function(d) {
+            return d > 15089 ? '#FD8D3C' :
+                d > 1706 ? '#FEB24C' :
+                d > 313 ? '#FED976' :
+                '#FFEDA0';
+        }
+
+        owdiDrought.waterAccounting.style = function(feature) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7,
+                fillColor: owdiDrought.waterAccounting.getColor(feature.properties.mean)
+            };
+        }
+
+        owdiDrought.waterAccounting.highlightFeature = function(e) {
+            var layer = e.target;
+
+            layer.setStyle({
+                weight: 5,
+                color: '#666',
+                dashArray: '',
+                fillOpacity: 0.7
+            });
+
+            if (!L.Browser.ie && !L.Browser.opera) {
+                layer.bringToFront();
+            }
+
+            owdiDrought.waterAccounting.info.update(layer.feature.properties);
+        }
+
+        // styling
+        owdiDrought.waterAccounting.getValue = function(x) {
+            return x > 2500000 ? 0 :
+                x >= 400000 ? 33 :
+                x >= 600 ? 20 :
+                x >= 120 ? 7 :
+                0;
+        }
+
+        owdiDrought.waterAccounting.map = L.map('map');
+
+        owdiDrought.waterAccounting.group = new L.featureGroup;
+
+        // control that shows state info on hover
+        owdiDrought.waterAccounting.info = L.control();
+
+        owdiDrought.waterAccounting.info.onAdd = function(map) {
+            this._div = L.DomUtil.create('div', 'info');
+            this.update();
+            return this._div;
+        };
+
+        owdiDrought.waterAccounting.info.update = function(props) {
+            this._div.innerHTML = '<h2>Lower Colorado River Water Use Contracts</h2><br /> <h4>Five Year Mean</h4>' + (props ?
+                '<b>' + props.Contractor + '</b><br />' + props.mean + ' maf' : 'Hover over a contractor polygon');
+        };
+
+         owdiDrought.waterAccounting.info.addTo( owdiDrought.waterAccounting.map);
+
+        // Legend
+        owdiDrought.waterAccounting.legend = L.control({
+            position: 'bottomright'
+        });
+
+        owdiDrought.waterAccounting.legend.onAdd = function(map) {
+
+            var div = L.DomUtil.create('div', 'info legend'),
+                grades = [0, 120, 600, 400000, 2500000],
+                labels = ["<b>Million Acre Feet</b>"],
+                from, to;
+
+            for (var i = 0; i < grades.length; i++) {
+                from = grades[i];
+                to = grades[i + 1];
+
+                labels.push(
+                    '<i style="background:' +  owdiDrought.waterAccounting.getColor(from + 1) + '"></i> ' +
+                    from + (to ? '&ndash;' + to : '+'));
+            }
+				labels.push(
+					'<i style="background:' + '#9d9d9d'+'"></i>Lower Colorado River Watershed');
+
+            div.innerHTML = labels.join('<br>');
+            return div;
+        };
+
+        owdiDrought.waterAccounting.legend.addTo(owdiDrought.waterAccounting.map);
+
+        // scale bar
+        L.control.scale().addTo(owdiDrought.waterAccounting.map);
+
+        // base layers
+        owdiDrought.waterAccounting.basemaps = {
+            "OpenStreetMap": L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                "attribution": "&copy; <a href=\"http://openstreetmap.org/copyright\", target=\"_blank\">OpenStreetMap contributors</a>"
+            }),
+            "ESRI World Topo": L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+                "attribution": "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, \n    USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, \n    Esri China (Hong Kong), and the GIS User Community"
+            })
+        };
+
+        owdiDrought.waterAccounting.basemaps.OpenStreetMap.addTo(owdiDrought.waterAccounting.map);
+        owdiDrought.waterAccounting.basemaps["ESRI World Topo"].addTo(owdiDrought.waterAccounting.map);
+
+        $.when(
+            $.getJSON("../data/lc_huc_simp.geojson"),
+            $.getJSON("../data/wat_acc_cont.geojson")
+        ).done(function (d1, d2) {
+            owdiDrought.waterAccounting.addDataToMap(d1, owdiDrought.waterAccounting.styles.style1, "lc huc simp");
+
+            owdiDrought.waterAccounting.addDataToMap(d2, owdiDrought.waterAccounting.styles.style2, "wat acc cont", "add");
+            owdiDrought.waterAccounting.geojson = L.geoJson(d2, {
+                style: owdiDrought.waterAccounting.styles.style2,
+                onEachFeature: owdiDrought.waterAccounting.onEachFeature
+            }).addTo(owdiDrought.waterAccounting.map);
+        });
+
+    });
+    </script>
+</body>
+
+</html>

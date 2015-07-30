@@ -1,10 +1,10 @@
 /*=====SVG CSS=====*/
 #wholeRiver:hover > g{
 	opacity: 0.2;
-	-webkit-transition: opacity 1s ease-in-out;
-	-moz-transition: opacity 1s ease-in-out;
-	-o-transition: opacity 1s ease-in-out;
-	transition: opacity 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 
 #wholeRiver:hover > g:hover{
@@ -48,7 +48,10 @@
 .bbox {
 	visibility: visible;
 	stroke-alignment: outer;
-	stroke-width: 20;
+	stroke-width: 24;
+	fill: none;
+	stroke: #1975d1;
+	stroke-opacity: 0.6;
 }
 
 .bboxHidden {
@@ -60,10 +63,6 @@
 	-ms-transform: translate(-850px, 0px) scale(3);
 	-webkit-transform: translate(-850px, 0px) scale(3);
 	-moz-transform: translate(-850px, 0px) scale(3);
-}
-
-#hooverGroup:hover #hooverBbox {
-	visibility: visible !important;
 }
 
 #davisGroup:hover {

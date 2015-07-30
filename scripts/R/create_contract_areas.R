@@ -12,8 +12,8 @@ library(maptools)
 library(leafletR)
 
 #clean up water use contract polygons, subset only data we want by dropping some columns
-wat_use_con<-readOGR("src_data//LCContractSvcAreas","LC_Contacts_update2014")
-wat_subs<-wat_use_con[,-c(2:9,11:26)]
+wat_use_con<-readOGR("src_data//LCContractSvcAreas","BOR_Water_Contracts_2015_07")
+wat_subs<-wat_use_con[,-c(1:3,5:19)]
 writeOGR(wat_subs,"src_data//LCContractSvcAreas","LC_Contracts_subset", driver = "ESRI Shapefile", overwrite_layer = T)
 
 #dissolve polys so that we have one polygon per contract user
