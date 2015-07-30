@@ -39,10 +39,7 @@ $(document).ready(function() {
 	owdiDrought.waterAccounting.addDataToMap = function(data, style, layer, lc) {
 		owdiDrought.waterAccounting.layers[layer] = L.geoJson(data, {
 			onEachFeature: layer === "wat acc cont" ? owdiDrought.waterAccounting.onEachFeature : undefined,
-			//pointToLayer: function(feature, latlng) {
-			//   return L.circleMarker(latlng);
-			//},
-			style: style
+			style: owdiDrought.waterAccounting.style
 		});
 		owdiDrought.waterAccounting.layers[layer].addTo(owdiDrought.waterAccounting.map);
 		owdiDrought.waterAccounting.group.addLayer(owdiDrought.waterAccounting.layers[layer])
