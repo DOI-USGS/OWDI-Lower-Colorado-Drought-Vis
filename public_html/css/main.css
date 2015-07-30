@@ -153,6 +153,10 @@ nav h3 {
 	height: 100%;
 }
 
+#meadStaticContainer{
+	margin-bottom:20px;
+	}
+
 #meadAnimatedContainer {
 	background-position: center center;
 	background-position: center center;
@@ -161,6 +165,7 @@ nav h3 {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-repeat: no-repeat;
+	padding-top: 0px;
 }
 #endEraContainer {
 	background-image: url('../img/keynotes/keynote9-mobile.jpg');
