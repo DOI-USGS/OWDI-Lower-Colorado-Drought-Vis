@@ -609,7 +609,7 @@ nav h3 {
 	/*Lake Mead Animated CSS*/
 	
 	#meadSVGContainer {
-		width: 760px;
+		width: 100%;
 		margin: 0 auto;
 	}
 }
