@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media print{
+	
+	* {-webkit-print-color-adjust:exact;}
+	
+	.container{
+		margin-bottom:0;
+		}
+	
+	#welcomeContainer,
+	#mainMessage1Container,
+	#mainMessage2Container,
+	#mainMessage3Container,
+	#mainMessage4Container,
+	#mainMessage5Container,
+	#mainMessage6Container,
+	#mainMessage7Container,
+	#endEraContainer,
+	#finalMessageContainer,
+	#mainmMessageDroughtContainer{
+		background-size:100%;
+		}
+		
+	#welcomeContainer,
+	#mainmMessageDroughtContainer{
+		margin:-200px 0 !important;
+		}
+		
+	#mainMessage3Container{
+		margin:-300px 0 -210px 0 !important;
+		}
+		
+	#mainMessage4Container{
+		margin:-100px 0 -210px 0 !important;
+		}
+		
+	#mainMessage5Container{
+		margin:-70px 0 -210px 0 !important;
+		}
+		
+	#mainMessage2Container{
+		margin:-300px 0 -210px 0 !important;
+		}
+		
+	#mainMessage6Container{
+		margin:-300px 0 -210px 0 !important;
+		}
+		
+	#mainMessage7Container{
+		margin:-300px 0 -210px 0 !important;
+		}
+		
+	#endEraContainer{
+		margin:0 0 -200px 0 !important;
+		}
+		
+	#finalMessageContainer{
+		margin:-220px 0 -100px 0 !important;
+		}
+		
+	#app-explanationContainer{
+		margin-bottom:-300px;
+		}
+		
+	#mainmMessageDroughtContainer{
+		margin:0 0 -180px 0;
+		}
+	.keynote{
+		top:45%;
+		}
+		
+	.keynote h1,
+	.keynote h2{
+		font-size:1.3em;
+		}
+		
+	#usDroughtGif{
+		margin-top:10px;
+		}
+		
+	#co-basin-object{
+		width:50%;
+		margin-bottom:0px;
+		}
+		
+	#droughtMovingAvg-object{
+		margin-top:10px;
+		}
+		
+	#animated-object{
+		display:block;
+		}
+		
+	.supportinginfo{
+		display:none;
+		}
+
+	.supportingInfoContent{
+		display:block;
+		margin-top:25px;
+		}
+	
+	}
