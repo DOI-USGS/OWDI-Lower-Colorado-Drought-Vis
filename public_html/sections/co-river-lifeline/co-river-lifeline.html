@@ -11,13 +11,18 @@
             <li>Provides habitat for threatened, endangered, and <i>endemic</i> species. <i>Endemic</i> species exist only in limited geographic locations.</li>
         </ul>
         
-        <p>Data sources: <a href="http://www.usbr.gov/lc/region/programs/crbstudy/finalreport/Study%20Report/CRBS_Study_Report_FINAL.pdf" target="_blank">Bureau of Reclamation Colorado River Basin Study (2012)</a> and
-        
-        <a href="http://www.usbr.gov/lc/region/programs/crbstudy/MovingForward/Phase1Report/ExecSumm.pdf" target="_blank">Bureau of Reclamation Moving Forward Phase 1 Report (2015)</a>
-        </p>
-        
-        <button class="supportinginfo">Supporting Info</button>
 		
+        <button class="supportinginfo" id="sectionLLButton">Supporting Info</button>
+        
+        <div class="supportingInfoContent" id="sectionLLInfo">
+            <p> <a href="http://www.usbr.gov/lc/region/programs/crbstudy/finalreport/Study%20Report/CRBS_Study_Report_FINAL.pdf" target="_blank">Bureau of Reclamation Colorado River Basin Study (2012)</a>  </p>
+            
+            <p>  <a href="http://www.usbr.gov/lc/region/programs/crbstudy/MovingForward/Phase1Report/ExecSumm.pdf" target="_blank">Bureau of Reclamation Moving Forward Phase 1 Report (2015)</a>
+            </p>
+        </div>
+        
+        
+        
 		<div id="photoPanel">
 			<img src="{{baseUrl}}/img/photo-panel/farming.jpg" alt="farming in Colorado"/>
 			<img src="{{baseUrl}}/img/photo-panel/electricity.jpg" alt="electirciy in Colorado"/>
@@ -29,3 +34,12 @@
 		</div>
     </div>
 </div>
+
+<script>
+    var button = $('#sectionLLButton');
+    
+    button.click(function() {
+                 $('#sectionLLInfo').toggle();
+                 });
+                 
+    </script>
