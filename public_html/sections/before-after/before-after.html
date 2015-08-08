@@ -10,6 +10,8 @@
     </div>
     
     
+
+    
 	<!--landsat-->
   <figure class="cd-image-container">
     <img src="{{baseUrl}}/img/before-after/after05.jpg" alt="Original Image" />
@@ -107,3 +109,12 @@
     $('figure.cd-image-container .button-after').on('click', owdiDrought.slider.afterButtonClicked);
   })()
 </script>
+
+<script>
+    var button = $('#sectionBAButton');
+    
+    button.click(function() {
+                 $('#sectionBAInfo').toggle();
+                 });
+                 
+    </script>
