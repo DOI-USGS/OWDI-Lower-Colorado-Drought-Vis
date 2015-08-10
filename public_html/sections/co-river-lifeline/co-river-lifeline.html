@@ -4,20 +4,25 @@
         
         <ul>
         	<li>Supplies more than 1 in 10 Americans water for municipal use, including drinking water.</li>
-            <li>Serves at least 22 federally recognized tribes.</li>
+            <li>Serves at least 22 Federally recognized tribes.</li>
             <li>Supports 4,200 megawatts of electrical generating capacity, enough to power hundreds of contractors and millions of people in eight western states.</li>
-            <li>Provides irrigation for more than 5.5 million acres (~8,590 square miles) of land</li>
+            <li>Provides irrigation for more than 5.5 million acres (~8,590 square miles) of land.</li>
             <li>Serves 7 National Wildlife Refuges, 4 National Recreation Areas, and 11 National Parks, and supports more than $1 billion in visitor spending associated with national parks.</li>
             <li>Provides habitat for threatened, endangered, and <i>endemic</i> species. <i>Endemic</i> species exist only in limited geographic locations.</li>
         </ul>
         
-        <p>Data sources: <a href="http://www.usbr.gov/lc/region/programs/crbstudy/finalreport/Study%20Report/CRBS_Study_Report_FINAL.pdf" target="_blank">Bureau of Reclamation Colorado River Basin Study (2012)</a> and
-        
-        <a href="http://www.usbr.gov/lc/region/programs/crbstudy/MovingForward/Phase1Report/ExecSumm.pdf" target="_blank">Bureau of Reclamation Moving Forward Phase 1 Report (2015)</a>
-        </p>
-        
-        <button class="supportinginfo">Supporting Info</button>
 		
+        <button class="supportinginfo" id="sectionLLButton">Supporting Info</button>
+        
+        <div class="supportingInfoContent" id="sectionLLInfo">
+            <p> <a href="http://www.usbr.gov/lc/region/programs/crbstudy/finalreport/Study%20Report/CRBS_Study_Report_FINAL.pdf" target="_blank">U.S. Bureau of Reclamation. 2012. Colorado River Basin Study.</a>  </p>
+            
+            <p>  <a href="http://www.usbr.gov/lc/region/programs/crbstudy/MovingForward/Phase1Report/ExecSumm.pdf" target="_blank">U.S. Bureau of Reclamation. 2015. Moving Forward Phase 1 Report.</a>
+            </p>
+        </div>
+        
+        
+        
 		<div id="photoPanel">
 			<img src="{{baseUrl}}/img/photo-panel/farming.jpg" alt="farming in Colorado"/>
 			<img src="{{baseUrl}}/img/photo-panel/electricity.jpg" alt="electirciy in Colorado"/>
@@ -29,3 +34,12 @@
 		</div>
     </div>
 </div>
+
+<script>
+    var button = $('#sectionLLButton');
+    
+    button.click(function() {
+                 $('#sectionLLInfo').toggle();
+                 });
+                 
+    </script>
