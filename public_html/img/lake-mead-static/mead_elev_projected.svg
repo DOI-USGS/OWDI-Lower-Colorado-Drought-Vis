@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/css" href="../../css/svg.css" ?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio="xMinYMin meet" viewBox="0 0 960 600">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio="xMinYMin meet" viewBox="0 0 960 600" id="mead-elev-projected-svg">
   <script type="text/ecmascript"><![CDATA[function init(evt){
 if ( window.svgDocument == null ) {
 svgDocument = evt.target.ownerDocument;
@@ -60,7 +60,7 @@ document.getElementById('condition-markers').setAttribute('class','shown');}
   </g>
   <g id="axes" class="label">
     <rect id="axis.box" x="125.0" y="10.0" width="710.0" height="480.0" style="fill:none;stroke:black"/>
-    <text transform="translate(75.0,250.0)rotate(270)" text-anchor="middle" id="y-label" dy="-0.3em">Elevation of Lake Mead (feet)</text>
+    <text transform="translate(75.0,250.0)rotate(270)" text-anchor="middle" id="y-label" dy="-2em">Elevation of Lake Mead (feet)</text>
     <line x1="134.9" y1="490.0" x2="134.9" y2="485.0" style="stroke:black;stroke-width:1.5"/>
     <text transform="translate(139.9,495.0)rotate(270)" text-anchor="end">2000</text>
     <line x1="174.3" y1="490.0" x2="174.3" y2="485.0" style="stroke:black;stroke-width:1.5"/>
