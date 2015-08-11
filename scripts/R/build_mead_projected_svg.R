@@ -52,8 +52,8 @@ maxMonth <- as.numeric(strftime(as.POSIXct(
 800 #dead pool
 axes <- list('tick_len' = 5,
              'y_label' = "Elevation of Lake Mead (feet)",
-             'y_ticks' = seq(1000,1200,50),
-             'y_tk_label' = seq(1000,1200,50),
+             'y_ticks' = seq(1000,1225,25),
+             'y_tk_label' = seq(1000,1225,25),
              'x_ticks' = seq(xMinR,xMaxR,1),
              'x_tk_label' = seq(xMinR,xMaxR,1),
              'y_lim' = c(990,1229),
@@ -76,7 +76,8 @@ t_bmp = 50 # px from axes
 
 svg_nd <- newXMLNode('svg', 
                      namespace = c("http://www.w3.org/2000/svg", xlink="http://www.w3.org/1999/xlink"), 
-                     attrs = c(version = '1.1', onload="init(evt)", preserveAspectRatio="xMinYMin meet", viewBox=sprintf("0 0 %1.0f %1.0f",fig$w, fig$h)))
+                     attrs = c(version = '1.1', onload="init(evt)", preserveAspectRatio="xMinYMin meet", 
+                               viewBox=sprintf("0 0 %1.0f %1.0f",fig$w, fig$h), id="mead-elev-projected-svg"))
 
 add_ecmascript(svg_nd, text = ecmascript_mead_proj())
 
@@ -130,7 +131,7 @@ newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 3'),
 g_id <- newXMLNode('g', parent = svg_nd, attrs = c('id' = "axes", class='label'))
 add_axes(g_id, axes, fig)
 
-attr_svg(svg_nd, attr=list('y-label'=c(dy='-0.3em')), 'text')
+attr_svg(svg_nd, attr=list('y-label'=c(dy='-1em')), 'text')
 attr_svg(svg_nd, attr=list('axis.box'=c(style="fill:none;stroke:black")), 'rect')
 
 
