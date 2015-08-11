@@ -35,7 +35,8 @@ mead_names <- c(group_id='Mead-2D', water_id='Mead-water-level', border_id='Mead
 ani_dur <- c('mead-draw'="2s", 'mead-remove'='1s','stage-move'='1s',
              'river-draw'='5s','river-reset'='1s','basin-draw'='1s')
 
-
+contract_values <- prettyNum(round(as.numeric(contracts[sorted_contracts$ix,]$mean)),big.mark=",",scientific=FALSE)
+contract_titles <- gsub("\\b([a-z])([a-z]+)", "\\U\\1\\L\\2" ,tolower(contracts[sorted_contracts$ix,]$Contractor), perl=TRUE)
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
@@ -51,7 +52,7 @@ svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-backgr
   attr_svg_paths(attrs = list('California'=c("class"="california"), 'Nevada'=c("class"="nevada"), 'Arizona'=c("class"="arizona"),'Mexico'=c("class"="mexico"))) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'draw-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="331;0;") %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'reset-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values="0;331;") %>%
-  usage_bar_pictogram(values = non_zero_cont, value_mouse = contracts[sorted_contracts$ix,]$Contractor, value_contract = contracts[sorted_contracts$ix,]$mean, 
+  usage_bar_pictogram(values = non_zero_cont, value_mouse = contract_titles, value_contract = contract_values, 
                       scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
   build_state_pictos() %>%
