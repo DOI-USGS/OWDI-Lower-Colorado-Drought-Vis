@@ -115,6 +115,8 @@ document.getElementById('condition-markers').setAttribute('class','shown');}
     <text transform="translate(120.0,123.5)rotate(0)" text-anchor="end">1175</text>
     <line x1="125.0" y1="68.2" x2="130.0" y2="68.2" style="stroke:black;stroke-width:1.5"/>
     <text transform="translate(120.0,73.2)rotate(0)" text-anchor="end">1200</text>
+    <line x1="125.0" y1="18.0" x2="130.0" y2="18.0" style="stroke:black;stroke-width:1.5"/>
+    <text transform="translate(120.0,23.0)rotate(0)" text-anchor="end">1225</text>
     <g id="legend" class="label" alignment-baseline="central">
       <text id="date_text" x="155" y="450" dy="-0.6em" dx="0.4em" class="legend"> </text>
       <text id="elev_text" x="155" y="450" dy="0.4em" dx="0.4em" fill="#000000" class="legend"> </text>
