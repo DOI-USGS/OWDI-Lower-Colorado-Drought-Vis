@@ -131,7 +131,7 @@ newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 3'),
 g_id <- newXMLNode('g', parent = svg_nd, attrs = c('id' = "axes", class='label'))
 add_axes(g_id, axes, fig)
 
-attr_svg(svg_nd, attr=list('y-label'=c(dy='-2em')), 'text')
+attr_svg(svg_nd, attr=list('y-label'=c(dy='-1em')), 'text')
 attr_svg(svg_nd, attr=list('axis.box'=c(style="fill:none;stroke:black")), 'rect')
 
 
