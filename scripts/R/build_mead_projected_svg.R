@@ -52,8 +52,8 @@ maxMonth <- as.numeric(strftime(as.POSIXct(
 800 #dead pool
 axes <- list('tick_len' = 5,
              'y_label' = "Elevation of Lake Mead (feet)",
-             'y_ticks' = seq(1000,1200,50),
-             'y_tk_label' = seq(1000,1200,50),
+             'y_ticks' = seq(1000,1200,25),
+             'y_tk_label' = seq(1000,1200,25),
              'x_ticks' = seq(xMinR,xMaxR,1),
              'x_tk_label' = seq(xMinR,xMaxR,1),
              'y_lim' = c(990,1229),
