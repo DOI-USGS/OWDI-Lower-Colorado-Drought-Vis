@@ -480,6 +480,29 @@ nav h3 {
 	margin-top:50px;
 	}
 	
+#collaboratorsCredit{
+	min-height:100px;
+	margin:20px 0 0 0;
+	}
+	
+#collaboratorsCredit h2{
+	text-align:left;
+	color:#000;
+	font-weight:300;
+	margin-bottom:10px;
+	}
+	
+#first{
+	margin-left:0;
+	}
+	
+.collaborator{
+	background:#B2B2B2;
+	height:100px;
+	margin:0 0 10px 0;
+	text-align:center;
+	}
+	
 @media screen and (min-width: 687px) {
 	nav {
 		margin-top: 1px;
@@ -597,6 +620,11 @@ nav h3 {
 	#natural-flow-graph {
 		width: 80%;
 		height: 600px;
+	}
+	.collaborator{
+		width:32.6%;
+		float:left;
+		margin-left:1%;
 	}
 }
 
