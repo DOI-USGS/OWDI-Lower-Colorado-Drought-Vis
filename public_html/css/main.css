@@ -126,6 +126,17 @@ nav h3 {
 	height: 100%;
 }
 
+#waterSupplyVariableOverTimeContainer {
+	background-image: url('../img/keynotes/waterSupplyVariable-mobile.jpg');
+	background-position: center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
 #mainmMessageDroughtContainer {
 	background-image: url('../img/keynotes/drydirt-mobile.jpg');
 	background-position: center center;
@@ -153,7 +164,7 @@ nav h3 {
 }
 
 #mainMessage5Container {
-	background-image: url('../img/keynotes/keynote6-mobile.jpg');
+	background-image: url('../img/keynotes/oneRiverTwoParts-mobile.jpg');
 	background-position: center center;
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -524,7 +535,8 @@ nav h3 {
 	#mainMessage7Container,
 	#endEraContainer,
 	#finalMessageContainer,
-	#mainmMessageDroughtContainer{
+	#mainmMessageDroughtContainer,
+	#waterSupplyVariableOverTimeContainer{
 		-webkit-background-size: cover;
 		background-attachment: fixed;
 	}
@@ -540,6 +552,9 @@ nav h3 {
 	#mainMessage3Container {
 		background-image: url('../img/keynotes/keynote4.jpg');
 	}
+	#waterSupplyVariableOverTimeContainer {
+		background-image: url('../img/keynotes/waterSupplyVariable.jpg');
+	}
 	#mainmMessageDroughtContainer {
 		background-image: url('../img/keynotes/drydirt.jpg');
 	}
@@ -547,7 +562,7 @@ nav h3 {
 		background-image: url('../img/keynotes/keynote5.jpg');
 	}
 	#mainMessage5Container {
-		background-image: url('../img/keynotes/keynote6.jpg');
+		background-image: url('../img/keynotes/oneRiverTwoParts.jpg');
 	}
 	#mainMessage6Container {
 		background-image: url('../img/keynotes/keynote7.jpg');
