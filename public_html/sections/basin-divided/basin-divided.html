@@ -2,13 +2,23 @@
     <div class="sectionContent">
         
 		<p>The Colorado River Basin is divided into Upper and Lower Basins. The Upper Basin spans the states of Wyoming, Colorado, New Mexico, and Utah. The Lower Basin spans Nevada, Arizona, and California. The river also supplies water to the northern portion of the country of Mexico.</p>
-		<p>The Lower Basin is much drier than the Upper Basin and depends on deliveries from the Upper Basin for most of its Colorado River water. Of water supply from the Upper Basin, about 50% of streamflow comes from groundwater. Precipitation, primarily in the form of snow, falls on the Rocky Mountains, melts, and replenishes Colorado River Basin reservoirs.</p>
+		<p>The Lower Basin is much drier than the Upper Basin and depends on deliveries from the Upper Basin for most of its Colorado River water. Of water supply from the Upper Basin, about 50% of streamflow comes from groundwater (Rumsey et al., 2015 ). Precipitation, primarily in the form of snow, falls on the Rocky Mountains, melts, and replenishes Colorado River Basin reservoirs.</p>
 		
 		<p><strong>This informational tool recognizes the interdependency of the Upper and Lower Basins, providing basin-wide information in some cases. While recognizing the very significant impacts the Upper Basin has experienced, it focuses more specifically on data and conditions in the Lower Basin.</strong></p>
 
         
-        <button class="supportinginfo basins white">Supporting Info</button>
+        <button class="supportinginfo basins white" id="sectionBasinDivButton">Supporting Info</button>
+        
+    
+        
+        
+        <div class="supportingInfoContent" id="sectionBDInfo">
+            <p>Rumsey, C.A., et al. 2015. "Regional scale estimates of baseflow and factors influencing baseflow in the Upper Colorado River Basin." Journal of Hydrology: Regional Studies 4: 91-107. </p>
+        </div>
 		
+        
+        
+        
 		<div id="co-basin-map">
 			<object id="co-basin-object" data="img/lower-co-map/lo_CO_borders.svg" type="image/svg+xml"></object>
 		</div>
@@ -17,3 +27,12 @@
 
     </div>
 </div>
+
+<script>
+    var button = $('#sectionBasinDivButton');
+    
+    button.click(function() {
+                 $('#sectionBDInfo').toggle();
+                 });
+                 
+    </script>
