@@ -109,11 +109,12 @@
 #box105:hover ~ .num105 { opacity : 1 }
 #box106:hover ~ .num106 { opacity : 1 }
 #box107:hover ~ .num107 { opacity : 1 }
-#box108:hover ~ .num108 { opacity : 1 }</style>
+#box108:hover ~ .num108 { opacity : 1 }
+#box109:hover ~ .num109 { opacity : 1 }</style>
   <g>
     <g transform="translate(65 10)">
       <rect fill="#A3FF75" height="250" width="66.6666666667" x="25.0" y="0"/>
-      <rect fill="#CCCCB2" height="250" width="62.5" x="416.666666667" y="0"/>
+      <rect fill="#CCCCB2" height="250" width="66.6666666667" x="416.666666667" y="0"/>
       <rect class="linebox" fill="blue" height="250" id="box0" opacity="0" width="4.16666666667" x="25.0" y="0"/>
       <text class="num0" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: NA</text>
       <text class="num0" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1906</text>
@@ -175,127 +176,127 @@
       <text class="num14" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1920</text>
       <text class="num14" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 22.29</text>
       <rect class="linebox" fill="blue" height="250" id="box15" opacity="0" width="4.16666666667" x="87.5" y="0"/>
-      <text class="num15" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.72</text>
+      <text class="num15" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: NA</text>
       <text class="num15" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1921</text>
       <text class="num15" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 22.53</text>
       <rect class="linebox" fill="blue" height="250" id="box16" opacity="0" width="4.16666666667" x="91.6666666667" y="0"/>
-      <text class="num16" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.97</text>
+      <text class="num16" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 18.02</text>
       <text class="num16" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1922</text>
       <text class="num16" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 18.45</text>
       <rect class="linebox" fill="blue" height="250" id="box17" opacity="0" width="4.16666666667" x="95.8333333333" y="0"/>
-      <text class="num17" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.81</text>
+      <text class="num17" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 18.0</text>
       <text class="num17" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1923</text>
       <text class="num17" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 19.02</text>
       <rect class="linebox" fill="blue" height="250" id="box18" opacity="0" width="4.16666666667" x="100.0" y="0"/>
-      <text class="num18" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 18.3</text>
+      <text class="num18" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.89</text>
       <text class="num18" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1924</text>
       <text class="num18" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 13.88</text>
       <rect class="linebox" fill="blue" height="250" id="box19" opacity="0" width="4.16666666667" x="104.166666667" y="0"/>
-      <text class="num19" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.74</text>
+      <text class="num19" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 18.02</text>
       <text class="num19" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1925</text>
       <text class="num19" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 14.43</text>
       <rect class="linebox" fill="blue" height="250" id="box20" opacity="0" width="4.16666666667" x="108.333333333" y="0"/>
-      <text class="num20" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.73</text>
+      <text class="num20" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.54</text>
       <text class="num20" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1926</text>
       <text class="num20" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 15.21</text>
       <rect class="linebox" fill="blue" height="250" id="box21" opacity="0" width="4.16666666667" x="112.5" y="0"/>
-      <text class="num21" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.7</text>
+      <text class="num21" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.57</text>
       <text class="num21" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1927</text>
       <text class="num21" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 19.54</text>
       <rect class="linebox" fill="blue" height="250" id="box22" opacity="0" width="4.16666666667" x="116.666666667" y="0"/>
-      <text class="num22" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.76</text>
+      <text class="num22" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.82</text>
       <text class="num22" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1928</text>
       <text class="num22" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 16.95</text>
       <rect class="linebox" fill="blue" height="250" id="box23" opacity="0" width="4.16666666667" x="120.833333333" y="0"/>
-      <text class="num23" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.93</text>
+      <text class="num23" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.71</text>
       <text class="num23" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1929</text>
       <text class="num23" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 21.83</text>
       <rect class="linebox" fill="blue" height="250" id="box24" opacity="0" width="4.16666666667" x="125.0" y="0"/>
-      <text class="num24" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.96</text>
+      <text class="num24" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 18.17</text>
       <text class="num24" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1930</text>
       <text class="num24" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 14.62</text>
       <rect class="linebox" fill="blue" height="250" id="box25" opacity="0" width="4.16666666667" x="129.166666667" y="0"/>
-      <text class="num25" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 18.02</text>
+      <text class="num25" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.75</text>
       <text class="num25" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1931</text>
       <text class="num25" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 8.47</text>
       <rect class="linebox" fill="blue" height="250" id="box26" opacity="0" width="4.16666666667" x="133.333333333" y="0"/>
-      <text class="num26" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.25</text>
+      <text class="num26" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.43</text>
       <text class="num26" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1932</text>
       <text class="num26" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 17.42</text>
       <rect class="linebox" fill="blue" height="250" id="box27" opacity="0" width="4.16666666667" x="137.5" y="0"/>
-      <text class="num27" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.88</text>
+      <text class="num27" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 17.26</text>
       <text class="num27" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1933</text>
       <text class="num27" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 12.18</text>
       <rect class="linebox" fill="blue" height="250" id="box28" opacity="0" width="4.16666666667" x="141.666666667" y="0"/>
-      <text class="num28" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.63</text>
+      <text class="num28" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.58</text>
       <text class="num28" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1934</text>
       <text class="num28" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 6.18</text>
       <rect class="linebox" fill="blue" height="250" id="box29" opacity="0" width="4.16666666667" x="145.833333333" y="0"/>
-      <text class="num29" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.2</text>
+      <text class="num29" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.98</text>
       <text class="num29" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1935</text>
       <text class="num29" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 12.63</text>
       <rect class="linebox" fill="blue" height="250" id="box30" opacity="0" width="4.16666666667" x="150.0" y="0"/>
-      <text class="num30" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.56</text>
+      <text class="num30" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.98</text>
       <text class="num30" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1936</text>
       <text class="num30" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 14.65</text>
       <rect class="linebox" fill="blue" height="250" id="box31" opacity="0" width="4.16666666667" x="154.166666667" y="0"/>
-      <text class="num31" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.03</text>
+      <text class="num31" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.5</text>
       <text class="num31" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1937</text>
       <text class="num31" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 14.31</text>
       <rect class="linebox" fill="blue" height="250" id="box32" opacity="0" width="4.16666666667" x="158.333333333" y="0"/>
-      <text class="num32" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.76</text>
+      <text class="num32" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.99</text>
       <text class="num32" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1938</text>
       <text class="num32" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 18.15</text>
       <rect class="linebox" fill="blue" height="250" id="box33" opacity="0" width="4.16666666667" x="162.5" y="0"/>
-      <text class="num33" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.7</text>
+      <text class="num33" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.97</text>
       <text class="num33" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1939</text>
       <text class="num33" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 11.16</text>
       <rect class="linebox" fill="blue" height="250" id="box34" opacity="0" width="4.16666666667" x="166.666666667" y="0"/>
-      <text class="num34" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.52</text>
+      <text class="num34" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.48</text>
       <text class="num34" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1940</text>
       <text class="num34" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 9.93</text>
       <rect class="linebox" fill="blue" height="250" id="box35" opacity="0" width="4.16666666667" x="170.833333333" y="0"/>
-      <text class="num35" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.22</text>
+      <text class="num35" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.23</text>
       <text class="num35" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1941</text>
       <text class="num35" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 20.12</text>
       <rect class="linebox" fill="blue" height="250" id="box36" opacity="0" width="4.16666666667" x="175.0" y="0"/>
-      <text class="num36" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.54</text>
+      <text class="num36" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.59</text>
       <text class="num36" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1942</text>
       <text class="num36" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 17.23</text>
       <rect class="linebox" fill="blue" height="250" id="box37" opacity="0" width="4.16666666667" x="179.166666667" y="0"/>
-      <text class="num37" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.39</text>
+      <text class="num37" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.71</text>
       <text class="num37" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1943</text>
       <text class="num37" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 13.73</text>
       <rect class="linebox" fill="blue" height="250" id="box38" opacity="0" width="4.16666666667" x="183.333333333" y="0"/>
-      <text class="num38" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.17</text>
+      <text class="num38" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.35</text>
       <text class="num38" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1944</text>
       <text class="num38" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 15.37</text>
       <rect class="linebox" fill="blue" height="250" id="box39" opacity="0" width="4.16666666667" x="187.5" y="0"/>
-      <text class="num39" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.74</text>
+      <text class="num39" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.25</text>
       <text class="num39" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1945</text>
       <text class="num39" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 14.14</text>
       <rect class="linebox" fill="blue" height="250" id="box40" opacity="0" width="4.16666666667" x="191.666666667" y="0"/>
-      <text class="num40" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.71</text>
+      <text class="num40" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.77</text>
       <text class="num40" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1946</text>
       <text class="num40" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 11.1</text>
       <rect class="linebox" fill="blue" height="250" id="box41" opacity="0" width="4.16666666667" x="195.833333333" y="0"/>
-      <text class="num41" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.89</text>
+      <text class="num41" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.55</text>
       <text class="num41" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1947</text>
       <text class="num41" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 16.44</text>
       <rect class="linebox" fill="blue" height="250" id="box42" opacity="0" width="4.16666666667" x="200.0" y="0"/>
-      <text class="num42" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.82</text>
+      <text class="num42" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.05</text>
       <text class="num42" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1948</text>
       <text class="num42" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 15.14</text>
       <rect class="linebox" fill="blue" height="250" id="box43" opacity="0" width="4.16666666667" x="204.166666667" y="0"/>
-      <text class="num43" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.02</text>
+      <text class="num43" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.9</text>
       <text class="num43" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1949</text>
       <text class="num43" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 16.93</text>
       <rect class="linebox" fill="blue" height="250" id="box44" opacity="0" width="4.16666666667" x="208.333333333" y="0"/>
-      <text class="num44" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.73</text>
+      <text class="num44" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.2</text>
       <text class="num44" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1950</text>
       <text class="num44" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 13.14</text>
       <rect class="linebox" fill="blue" height="250" id="box45" opacity="0" width="4.16666666667" x="212.5" y="0"/>
-      <text class="num45" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.77</text>
+      <text class="num45" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.64</text>
       <text class="num45" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1951</text>
       <text class="num45" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 12.51</text>
       <rect class="linebox" fill="blue" height="250" id="box46" opacity="0" width="4.16666666667" x="216.666666667" y="0"/>
@@ -303,253 +304,257 @@
       <text class="num46" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1952</text>
       <text class="num46" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 20.81</text>
       <rect class="linebox" fill="blue" height="250" id="box47" opacity="0" width="4.16666666667" x="220.833333333" y="0"/>
-      <text class="num47" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.06</text>
+      <text class="num47" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.01</text>
       <text class="num47" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1953</text>
       <text class="num47" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 11.17</text>
       <rect class="linebox" fill="blue" height="250" id="box48" opacity="0" width="4.16666666667" x="225.0" y="0"/>
-      <text class="num48" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.59</text>
+      <text class="num48" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.82</text>
       <text class="num48" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1954</text>
       <text class="num48" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 8.5</text>
       <rect class="linebox" fill="blue" height="250" id="box49" opacity="0" width="4.16666666667" x="229.166666667" y="0"/>
-      <text class="num49" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.42</text>
+      <text class="num49" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.21</text>
       <text class="num49" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1955</text>
       <text class="num49" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 9.41</text>
       <rect class="linebox" fill="blue" height="250" id="box50" opacity="0" width="4.16666666667" x="233.333333333" y="0"/>
-      <text class="num50" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.38</text>
+      <text class="num50" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.1</text>
       <text class="num50" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1956</text>
       <text class="num50" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 11.43</text>
       <rect class="linebox" fill="blue" height="250" id="box51" opacity="0" width="4.16666666667" x="237.5" y="0"/>
-      <text class="num51" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.8</text>
+      <text class="num51" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.2</text>
       <text class="num51" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1957</text>
       <text class="num51" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 21.5</text>
       <rect class="linebox" fill="blue" height="250" id="box52" opacity="0" width="4.16666666667" x="241.666666667" y="0"/>
-      <text class="num52" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.09</text>
+      <text class="num52" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.28</text>
       <text class="num52" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1958</text>
       <text class="num52" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 15.86</text>
       <rect class="linebox" fill="blue" height="250" id="box53" opacity="0" width="4.16666666667" x="245.833333333" y="0"/>
-      <text class="num53" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.23</text>
+      <text class="num53" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.2</text>
       <text class="num53" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1959</text>
       <text class="num53" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 9.6</text>
       <rect class="linebox" fill="blue" height="250" id="box54" opacity="0" width="4.16666666667" x="250.0" y="0"/>
-      <text class="num54" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.84</text>
+      <text class="num54" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.94</text>
       <text class="num54" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1960</text>
       <text class="num54" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 11.52</text>
       <rect class="linebox" fill="blue" height="250" id="box55" opacity="0" width="4.16666666667" x="254.166666667" y="0"/>
-      <text class="num55" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.67</text>
+      <text class="num55" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.7</text>
       <text class="num55" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1961</text>
       <text class="num55" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 10.01</text>
       <rect class="linebox" fill="blue" height="250" id="box56" opacity="0" width="4.16666666667" x="258.333333333" y="0"/>
-      <text class="num56" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.6</text>
+      <text class="num56" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.44</text>
       <text class="num56" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1962</text>
       <text class="num56" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 17.38</text>
       <rect class="linebox" fill="blue" height="250" id="box57" opacity="0" width="4.16666666667" x="262.5" y="0"/>
-      <text class="num57" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.66</text>
+      <text class="num57" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.83</text>
       <text class="num57" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1963</text>
       <text class="num57" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 8.67</text>
       <rect class="linebox" fill="blue" height="250" id="box58" opacity="0" width="4.16666666667" x="266.666666667" y="0"/>
-      <text class="num58" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.23</text>
+      <text class="num58" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.35</text>
       <text class="num58" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1964</text>
       <text class="num58" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 10.38</text>
       <rect class="linebox" fill="blue" height="250" id="box59" opacity="0" width="4.16666666667" x="270.833333333" y="0"/>
-      <text class="num59" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 12.79</text>
+      <text class="num59" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.05</text>
       <text class="num59" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1965</text>
       <text class="num59" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 19.52</text>
       <rect class="linebox" fill="blue" height="250" id="box60" opacity="0" width="4.16666666667" x="275.0" y="0"/>
-      <text class="num60" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.22</text>
+      <text class="num60" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.21</text>
       <text class="num60" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1966</text>
       <text class="num60" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 10.23</text>
       <rect class="linebox" fill="blue" height="250" id="box61" opacity="0" width="4.16666666667" x="279.166666667" y="0"/>
-      <text class="num61" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.07</text>
+      <text class="num61" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.03</text>
       <text class="num61" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1967</text>
       <text class="num61" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 11.57</text>
       <rect class="linebox" fill="blue" height="250" id="box62" opacity="0" width="4.16666666667" x="283.333333333" y="0"/>
-      <text class="num62" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 12.45</text>
+      <text class="num62" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 12.97</text>
       <text class="num62" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1968</text>
       <text class="num62" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 13.63</text>
       <rect class="linebox" fill="blue" height="250" id="box63" opacity="0" width="4.16666666667" x="287.5" y="0"/>
-      <text class="num63" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 12.61</text>
+      <text class="num63" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 12.52</text>
       <text class="num63" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1969</text>
       <text class="num63" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 15.01</text>
       <rect class="linebox" fill="blue" height="250" id="box64" opacity="0" width="4.16666666667" x="291.666666667" y="0"/>
-      <text class="num64" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.05</text>
+      <text class="num64" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 12.76</text>
       <text class="num64" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1970</text>
       <text class="num64" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 14.95</text>
       <rect class="linebox" fill="blue" height="250" id="box65" opacity="0" width="4.16666666667" x="295.833333333" y="0"/>
-      <text class="num65" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.42</text>
+      <text class="num65" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.17</text>
       <text class="num65" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1971</text>
       <text class="num65" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 14.99</text>
       <rect class="linebox" fill="blue" height="250" id="box66" opacity="0" width="4.16666666667" x="300.0" y="0"/>
-      <text class="num66" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.65</text>
+      <text class="num66" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.51</text>
       <text class="num66" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1972</text>
       <text class="num66" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 13.12</text>
       <rect class="linebox" fill="blue" height="250" id="box67" opacity="0" width="4.16666666667" x="304.166666667" y="0"/>
-      <text class="num67" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.09</text>
+      <text class="num67" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.62</text>
       <text class="num67" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1973</text>
       <text class="num67" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 18.16</text>
       <rect class="linebox" fill="blue" height="250" id="box68" opacity="0" width="4.16666666667" x="308.333333333" y="0"/>
-      <text class="num68" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.25</text>
+      <text class="num68" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.41</text>
       <text class="num68" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1974</text>
       <text class="num68" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 12.92</text>
       <rect class="linebox" fill="blue" height="250" id="box69" opacity="0" width="4.16666666667" x="312.5" y="0"/>
-      <text class="num69" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.47</text>
+      <text class="num69" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.23</text>
       <text class="num69" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1975</text>
       <text class="num69" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 16.53</text>
       <rect class="linebox" fill="blue" height="250" id="box70" opacity="0" width="4.16666666667" x="316.666666667" y="0"/>
-      <text class="num70" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.8</text>
+      <text class="num70" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.66</text>
       <text class="num70" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1976</text>
       <text class="num70" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 11.04</text>
       <rect class="linebox" fill="blue" height="250" id="box71" opacity="0" width="4.16666666667" x="320.833333333" y="0"/>
-      <text class="num71" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.87</text>
+      <text class="num71" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.63</text>
       <text class="num71" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1977</text>
       <text class="num71" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 5.36</text>
       <rect class="linebox" fill="blue" height="250" id="box72" opacity="0" width="4.16666666667" x="325.0" y="0"/>
-      <text class="num72" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.07</text>
+      <text class="num72" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.34</text>
       <text class="num72" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1978</text>
       <text class="num72" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 15.14</text>
       <rect class="linebox" fill="blue" height="250" id="box73" opacity="0" width="4.16666666667" x="329.166666667" y="0"/>
-      <text class="num73" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.5</text>
+      <text class="num73" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.2</text>
       <text class="num73" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1979</text>
       <text class="num73" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 17.43</text>
       <rect class="linebox" fill="blue" height="250" id="box74" opacity="0" width="4.16666666667" x="333.333333333" y="0"/>
-      <text class="num74" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.97</text>
+      <text class="num74" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.75</text>
       <text class="num74" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1980</text>
       <text class="num74" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 17.44</text>
       <rect class="linebox" fill="blue" height="250" id="box75" opacity="0" width="4.16666666667" x="337.5" y="0"/>
-      <text class="num75" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.83</text>
+      <text class="num75" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.19</text>
       <text class="num75" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1981</text>
       <text class="num75" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 8.9</text>
       <rect class="linebox" fill="blue" height="250" id="box76" opacity="0" width="4.16666666667" x="341.666666667" y="0"/>
-      <text class="num76" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.75</text>
+      <text class="num76" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.53</text>
       <text class="num76" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1982</text>
       <text class="num76" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 17.31</text>
       <rect class="linebox" fill="blue" height="250" id="box77" opacity="0" width="4.16666666667" x="345.833333333" y="0"/>
-      <text class="num77" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.13</text>
+      <text class="num77" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.97</text>
       <text class="num77" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1983</text>
       <text class="num77" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 23.59</text>
       <rect class="linebox" fill="blue" height="250" id="box78" opacity="0" width="4.16666666667" x="350.0" y="0"/>
-      <text class="num78" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.79</text>
+      <text class="num78" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.72</text>
       <text class="num78" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1984</text>
       <text class="num78" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 24.34</text>
       <rect class="linebox" fill="blue" height="250" id="box79" opacity="0" width="4.16666666667" x="354.166666667" y="0"/>
-      <text class="num79" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.41</text>
+      <text class="num79" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.39</text>
       <text class="num79" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1985</text>
       <text class="num79" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 20.99</text>
       <rect class="linebox" fill="blue" height="250" id="box80" opacity="0" width="4.16666666667" x="358.333333333" y="0"/>
-      <text class="num80" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.82</text>
+      <text class="num80" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.76</text>
       <text class="num80" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1986</text>
       <text class="num80" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 22.95</text>
       <rect class="linebox" fill="blue" height="250" id="box81" opacity="0" width="4.16666666667" x="362.5" y="0"/>
-      <text class="num81" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.35</text>
+      <text class="num81" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.26</text>
       <text class="num81" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1987</text>
       <text class="num81" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 15.27</text>
       <rect class="linebox" fill="blue" height="250" id="box82" opacity="0" width="4.16666666667" x="366.666666667" y="0"/>
-      <text class="num82" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.49</text>
+      <text class="num82" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.28</text>
       <text class="num82" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1988</text>
       <text class="num82" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 11.14</text>
       <rect class="linebox" fill="blue" height="250" id="box83" opacity="0" width="4.16666666667" x="370.833333333" y="0"/>
-      <text class="num83" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.02</text>
+      <text class="num83" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.16</text>
       <text class="num83" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1989</text>
       <text class="num83" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 9.43</text>
       <rect class="linebox" fill="blue" height="250" id="box84" opacity="0" width="4.16666666667" x="375.0" y="0"/>
-      <text class="num84" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.79</text>
+      <text class="num84" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.61</text>
       <text class="num84" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1990</text>
       <text class="num84" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 9.32</text>
       <rect class="linebox" fill="blue" height="250" id="box85" opacity="0" width="4.16666666667" x="379.166666667" y="0"/>
-      <text class="num85" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.31</text>
+      <text class="num85" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.39</text>
       <text class="num85" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1991</text>
       <text class="num85" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 12.3</text>
       <rect class="linebox" fill="blue" height="250" id="box86" opacity="0" width="4.16666666667" x="383.333333333" y="0"/>
-      <text class="num86" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.39</text>
+      <text class="num86" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.12</text>
       <text class="num86" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1992</text>
       <text class="num86" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 10.92</text>
       <rect class="linebox" fill="blue" height="250" id="box87" opacity="0" width="4.16666666667" x="387.5" y="0"/>
-      <text class="num87" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.76</text>
+      <text class="num87" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.11</text>
       <text class="num87" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1993</text>
       <text class="num87" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 18.88</text>
       <rect class="linebox" fill="blue" height="250" id="box88" opacity="0" width="4.16666666667" x="391.666666667" y="0"/>
-      <text class="num88" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.01</text>
+      <text class="num88" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.96</text>
       <text class="num88" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1994</text>
       <text class="num88" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 10.54</text>
       <rect class="linebox" fill="blue" height="250" id="box89" opacity="0" width="4.16666666667" x="395.833333333" y="0"/>
-      <text class="num89" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.55</text>
+      <text class="num89" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.67</text>
       <text class="num89" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1995</text>
       <text class="num89" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 19.97</text>
       <rect class="linebox" fill="blue" height="250" id="box90" opacity="0" width="4.16666666667" x="400.0" y="0"/>
-      <text class="num90" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.72</text>
+      <text class="num90" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.83</text>
       <text class="num90" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1996</text>
       <text class="num90" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 14.2</text>
       <rect class="linebox" fill="blue" height="250" id="box91" opacity="0" width="4.16666666667" x="404.166666667" y="0"/>
-      <text class="num91" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.08</text>
+      <text class="num91" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.63</text>
       <text class="num91" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1997</text>
       <text class="num91" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 21.66</text>
       <rect class="linebox" fill="blue" height="250" id="box92" opacity="0" width="4.16666666667" x="408.333333333" y="0"/>
-      <text class="num92" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.37</text>
+      <text class="num92" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.43</text>
       <text class="num92" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1998</text>
       <text class="num92" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 16.69</text>
       <rect class="linebox" fill="blue" height="250" id="box93" opacity="0" width="4.16666666667" x="412.5" y="0"/>
-      <text class="num93" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.91</text>
+      <text class="num93" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 16.39</text>
       <text class="num93" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1999</text>
       <text class="num93" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 15.83</text>
       <rect class="linebox" fill="blue" height="250" id="box94" opacity="0" width="4.16666666667" x="416.666666667" y="0"/>
-      <text class="num94" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.34</text>
+      <text class="num94" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.9</text>
       <text class="num94" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2000</text>
       <text class="num94" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 10.51</text>
       <rect class="linebox" fill="blue" height="250" id="box95" opacity="0" width="4.16666666667" x="420.833333333" y="0"/>
-      <text class="num95" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.64</text>
+      <text class="num95" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 15.04</text>
       <text class="num95" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2001</text>
       <text class="num95" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 10.72</text>
       <rect class="linebox" fill="blue" height="250" id="box96" opacity="0" width="4.16666666667" x="425.0" y="0"/>
-      <text class="num96" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.83</text>
+      <text class="num96" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 14.4</text>
       <text class="num96" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2002</text>
       <text class="num96" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 6.03</text>
       <rect class="linebox" fill="blue" height="250" id="box97" opacity="0" width="4.16666666667" x="429.166666667" y="0"/>
-      <text class="num97" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.21</text>
+      <text class="num97" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.34</text>
       <text class="num97" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2003</text>
       <text class="num97" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 10.5</text>
       <rect class="linebox" fill="blue" height="250" id="box98" opacity="0" width="4.16666666667" x="433.333333333" y="0"/>
-      <text class="num98" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.17</text>
+      <text class="num98" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.04</text>
       <text class="num98" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2004</text>
       <text class="num98" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 9.9</text>
       <rect class="linebox" fill="blue" height="250" id="box99" opacity="0" width="4.16666666667" x="437.5" y="0"/>
-      <text class="num99" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.2</text>
+      <text class="num99" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 12.96</text>
       <text class="num99" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2005</text>
       <text class="num99" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 17.08</text>
       <rect class="linebox" fill="blue" height="250" id="box100" opacity="0" width="4.16666666667" x="441.666666667" y="0"/>
-      <text class="num100" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.71</text>
+      <text class="num100" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.44</text>
       <text class="num100" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2006</text>
       <text class="num100" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 13.52</text>
       <rect class="linebox" fill="blue" height="250" id="box101" opacity="0" width="4.16666666667" x="445.833333333" y="0"/>
-      <text class="num101" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.8</text>
+      <text class="num101" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.7</text>
       <text class="num101" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2007</text>
       <text class="num101" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 11.38</text>
       <rect class="linebox" fill="blue" height="250" id="box102" opacity="0" width="4.16666666667" x="450.0" y="0"/>
-      <text class="num102" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.83</text>
+      <text class="num102" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.65</text>
       <text class="num102" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2008</text>
       <text class="num102" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 16.09</text>
       <rect class="linebox" fill="blue" height="250" id="box103" opacity="0" width="4.16666666667" x="454.166666667" y="0"/>
-      <text class="num103" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.64</text>
+      <text class="num103" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.97</text>
       <text class="num103" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2009</text>
       <text class="num103" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 14.1</text>
       <rect class="linebox" fill="blue" height="250" id="box104" opacity="0" width="4.16666666667" x="458.333333333" y="0"/>
-      <text class="num104" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.88</text>
+      <text class="num104" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.67</text>
       <text class="num104" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2010</text>
       <text class="num104" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 12.72</text>
       <rect class="linebox" fill="blue" height="250" id="box105" opacity="0" width="4.16666666667" x="462.5" y="0"/>
-      <text class="num105" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.39</text>
+      <text class="num105" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.81</text>
       <text class="num105" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2011</text>
       <text class="num105" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 20.14</text>
       <rect class="linebox" fill="blue" height="250" id="box106" opacity="0" width="4.16666666667" x="466.666666667" y="0"/>
-      <text class="num106" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.79</text>
+      <text class="num106" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.82</text>
       <text class="num106" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2012</text>
       <text class="num106" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 7.55</text>
       <rect class="linebox" fill="blue" height="250" id="box107" opacity="0" width="4.16666666667" x="470.833333333" y="0"/>
-      <text class="num107" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 12.85</text>
+      <text class="num107" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 13.4</text>
       <text class="num107" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2013</text>
       <text class="num107" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 9.85</text>
       <rect class="linebox" fill="blue" height="250" id="box108" opacity="0" width="4.16666666667" x="475.0" y="0"/>
-      <text class="num108" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 12.39</text>
+      <text class="num108" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 12.66</text>
       <text class="num108" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2014</text>
       <text class="num108" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 14.41</text>
+      <rect class="linebox" fill="blue" height="250" id="box109" opacity="0" width="4.16666666667" x="479.166666667" y="0"/>
+      <text class="num109" fill="blue" font-size="12" font-weight="bold" opacity="0" x="15" y="245">Average: 12.52</text>
+      <text class="num109" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2015</text>
+      <text class="num109" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" x="15" y="230">Flow: 14.27</text>
       <line stroke="black" stroke-width="2" x1="0.0" x2="0.0" y1="250" y2="245"/>
       <text fill="black" x="-20.0" y="270">1900</text>
       <line stroke="black" stroke-width="2" x1="83.3333333333" x2="83.3333333333" y1="250" y2="245"/>
@@ -889,293 +894,296 @@
         <line x1="470.833333333" x2="475.0" y1="189.3625" y2="132.3375">
           <animate attributeName="visibility" dur="5.35" from="hidden" to="visible"/>
         </line>
+        <line x1="475.0" x2="479.166666667" y1="132.3375" y2="134.15">
+          <animate attributeName="visibility" dur="5.4" from="hidden" to="visible"/>
+        </line>
       </g>
       <g stroke="blue" stroke-width="2">
-        <line x1="83.3333333333" x2="87.5" y1="90.9994466667" y2="87.8302608333">
+        <line x1="87.5" x2="91.6666666667" y1="87.2441820312" y2="87.4602476563">
           <animate attributeName="visibility" dur="0.0" from="hidden" to="visible"/>
         </line>
-        <line x1="87.5" x2="91.6666666667" y1="87.8302608333" y2="89.8680883333">
+        <line x1="91.6666666667" x2="95.8333333333" y1="87.4602476563" y2="88.9200460937">
           <animate attributeName="visibility" dur="0.05" from="hidden" to="visible"/>
         </line>
-        <line x1="91.6666666667" x2="95.8333333333" y1="89.8680883333" y2="83.7739008333">
+        <line x1="95.8333333333" x2="100.0" y1="88.9200460937" y2="87.227253125">
           <animate attributeName="visibility" dur="0.1" from="hidden" to="visible"/>
         </line>
-        <line x1="95.8333333333" x2="100.0" y1="83.7739008333" y2="90.7075133333">
+        <line x1="100.0" x2="104.166666667" y1="87.227253125" y2="93.2955570313">
           <animate attributeName="visibility" dur="0.15" from="hidden" to="visible"/>
         </line>
-        <line x1="100.0" x2="104.166666667" y1="90.7075133333" y2="90.8457983333">
+        <line x1="104.166666667" x2="108.333333333" y1="93.2955570313" y2="92.813459375">
           <animate attributeName="visibility" dur="0.2" from="hidden" to="visible"/>
         </line>
-        <line x1="104.166666667" x2="108.333333333" y1="90.8457983333" y2="91.209375">
+        <line x1="108.333333333" x2="112.5" y1="92.813459375" y2="89.7750296875">
           <animate attributeName="visibility" dur="0.25" from="hidden" to="visible"/>
         </line>
-        <line x1="108.333333333" x2="112.5" y1="91.209375" y2="90.4462025">
+        <line x1="112.5" x2="116.666666667" y1="89.7750296875" y2="91.078990625">
           <animate attributeName="visibility" dur="0.3" from="hidden" to="visible"/>
         </line>
-        <line x1="112.5" x2="116.666666667" y1="90.4462025" y2="88.43124">
+        <line x1="116.666666667" x2="120.833333333" y1="91.078990625" y2="85.381175">
           <animate attributeName="visibility" dur="0.35" from="hidden" to="visible"/>
         </line>
-        <line x1="116.666666667" x2="120.833333333" y1="88.43124" y2="88.0355975">
+        <line x1="120.833333333" x2="125.0" y1="85.381175" y2="90.6419351563">
           <animate attributeName="visibility" dur="0.4" from="hidden" to="visible"/>
         </line>
-        <line x1="120.833333333" x2="125.0" y1="88.0355975" y2="87.2041241667">
+        <line x1="125.0" x2="129.166666667" y1="90.6419351563" y2="94.6647">
           <animate attributeName="visibility" dur="0.45" from="hidden" to="visible"/>
         </line>
-        <line x1="125.0" x2="129.166666667" y1="87.2041241667" y2="96.9280841667">
+        <line x1="129.166666667" x2="133.333333333" y1="94.6647" y2="96.7902460938">
           <animate attributeName="visibility" dur="0.5" from="hidden" to="visible"/>
         </line>
-        <line x1="129.166666667" x2="133.333333333" y1="96.9280841667" y2="101.528599167">
+        <line x1="133.333333333" x2="137.5" y1="96.7902460938" y2="105.195950781">
           <animate attributeName="visibility" dur="0.55" from="hidden" to="visible"/>
         </line>
-        <line x1="133.333333333" x2="137.5" y1="101.528599167" y2="104.597295">
+        <line x1="137.5" x2="141.666666667" y1="105.195950781" y2="112.764503125">
           <animate attributeName="visibility" dur="0.6" from="hidden" to="visible"/>
         </line>
-        <line x1="137.5" x2="141.666666667" y1="104.597295" y2="109.991609167">
+        <line x1="141.666666667" x2="145.833333333" y1="112.764503125" y2="112.780923437">
           <animate attributeName="visibility" dur="0.65" from="hidden" to="visible"/>
         </line>
-        <line x1="141.666666667" x2="145.833333333" y1="109.991609167" y2="118.039344167">
+        <line x1="145.833333333" x2="150.0" y1="112.780923437" y2="118.748704688">
           <animate attributeName="visibility" dur="0.7" from="hidden" to="visible"/>
         </line>
-        <line x1="145.833333333" x2="150.0" y1="118.039344167" y2="124.604270833">
+        <line x1="150.0" x2="154.166666667" y1="118.748704688" y2="125.171147656">
           <animate attributeName="visibility" dur="0.75" from="hidden" to="visible"/>
         </line>
-        <line x1="150.0" x2="154.166666667" y1="124.604270833" y2="128.055220833">
+        <line x1="154.166666667" x2="158.333333333" y1="125.171147656" y2="125.404645312">
           <animate attributeName="visibility" dur="0.8" from="hidden" to="visible"/>
         </line>
-        <line x1="154.166666667" x2="158.333333333" y1="128.055220833" y2="128.784994167">
+        <line x1="158.333333333" x2="162.5" y1="125.404645312" y2="131.545258594">
           <animate attributeName="visibility" dur="0.85" from="hidden" to="visible"/>
         </line>
-        <line x1="158.333333333" x2="162.5" y1="128.784994167" y2="131.04644">
+        <line x1="162.5" x2="166.666666667" y1="131.545258594" y2="134.62818125">
           <animate attributeName="visibility" dur="0.9" from="hidden" to="visible"/>
         </line>
-        <line x1="162.5" x2="166.666666667" y1="131.04644" y2="134.795645833">
+        <line x1="166.666666667" x2="170.833333333" y1="134.62818125" y2="130.186014063">
           <animate attributeName="visibility" dur="0.95" from="hidden" to="visible"/>
         </line>
-        <line x1="166.666666667" x2="170.833333333" y1="134.795645833" y2="130.709856667">
+        <line x1="170.833333333" x2="175.0" y1="130.186014063" y2="128.614603125">
           <animate attributeName="visibility" dur="1.0" from="hidden" to="visible"/>
         </line>
-        <line x1="170.833333333" x2="175.0" y1="130.709856667" y2="132.638253333">
+        <line x1="175.0" x2="179.166666667" y1="128.614603125" y2="133.151955469">
           <animate attributeName="visibility" dur="1.05" from="hidden" to="visible"/>
         </line>
-        <line x1="175.0" x2="179.166666667" y1="132.638253333" y2="135.324031667">
+        <line x1="179.166666667" x2="183.333333333" y1="133.151955469" y2="134.39016875">
           <animate attributeName="visibility" dur="1.1" from="hidden" to="visible"/>
         </line>
-        <line x1="179.166666667" x2="183.333333333" y1="135.324031667" y2="140.7075">
+        <line x1="183.333333333" x2="187.5" y1="134.39016875" y2="140.39724375">
           <animate attributeName="visibility" dur="1.15" from="hidden" to="visible"/>
         </line>
-        <line x1="183.333333333" x2="187.5" y1="140.7075" y2="141.107926667">
+        <line x1="187.5" x2="191.666666667" y1="140.39724375" y2="143.151607031">
           <animate attributeName="visibility" dur="1.2" from="hidden" to="visible"/>
         </line>
-        <line x1="187.5" x2="191.666666667" y1="141.107926667" y2="138.923491667">
+        <line x1="191.666666667" x2="195.833333333" y1="143.151607031" y2="136.928675781">
           <animate attributeName="visibility" dur="1.25" from="hidden" to="visible"/>
         </line>
-        <line x1="191.666666667" x2="195.833333333" y1="138.923491667" y2="139.742409167">
+        <line x1="195.833333333" x2="200.0" y1="136.928675781" y2="138.712185938">
           <animate attributeName="visibility" dur="1.3" from="hidden" to="visible"/>
         </line>
-        <line x1="195.833333333" x2="200.0" y1="139.742409167" y2="137.27925">
+        <line x1="200.0" x2="204.166666667" y1="138.712185938" y2="135.001186719">
           <animate attributeName="visibility" dur="1.35" from="hidden" to="visible"/>
         </line>
-        <line x1="200.0" x2="204.166666667" y1="137.27925" y2="128.316424167">
+        <line x1="204.166666667" x2="208.333333333" y1="135.001186719" y2="129.561947656">
           <animate attributeName="visibility" dur="1.4" from="hidden" to="visible"/>
         </line>
-        <line x1="204.166666667" x2="208.333333333" y1="128.316424167" y2="127.891368333">
+        <line x1="208.333333333" x2="212.5" y1="129.561947656" y2="129.659178125">
           <animate attributeName="visibility" dur="1.45" from="hidden" to="visible"/>
         </line>
-        <line x1="208.333333333" x2="212.5" y1="127.891368333" y2="129.6771825">
+        <line x1="212.5" x2="216.666666667" y1="129.659178125" y2="124.849372656">
           <animate attributeName="visibility" dur="1.5" from="hidden" to="visible"/>
         </line>
-        <line x1="212.5" x2="216.666666667" y1="129.6771825" y2="124.261044167">
+        <line x1="216.666666667" x2="220.833333333" y1="124.849372656" y2="127.302995313">
           <animate attributeName="visibility" dur="1.55" from="hidden" to="visible"/>
         </line>
-        <line x1="216.666666667" x2="220.833333333" y1="124.261044167" y2="130.0801275">
+        <line x1="220.833333333" x2="225.0" y1="127.302995313" y2="134.843789844">
           <animate attributeName="visibility" dur="1.6" from="hidden" to="visible"/>
         </line>
-        <line x1="220.833333333" x2="225.0" y1="130.0801275" y2="132.3034275">
+        <line x1="225.0" x2="229.166666667" y1="134.843789844" y2="136.211097656">
           <animate attributeName="visibility" dur="1.65" from="hidden" to="visible"/>
         </line>
-        <line x1="225.0" x2="229.166666667" y1="132.3034275" y2="132.734884167">
+        <line x1="229.166666667" x2="233.333333333" y1="136.211097656" y2="135.042958594">
           <animate attributeName="visibility" dur="1.7" from="hidden" to="visible"/>
         </line>
-        <line x1="229.166666667" x2="233.333333333" y1="132.734884167" y2="139.976386667">
+        <line x1="233.333333333" x2="237.5" y1="135.042958594" y2="133.961485156">
           <animate attributeName="visibility" dur="1.75" from="hidden" to="visible"/>
         </line>
-        <line x1="233.333333333" x2="237.5" y1="139.976386667" y2="136.4131975">
+        <line x1="237.5" x2="241.666666667" y1="133.961485156" y2="135.026035938">
           <animate attributeName="visibility" dur="1.8" from="hidden" to="visible"/>
         </line>
-        <line x1="237.5" x2="241.666666667" y1="136.4131975" y2="134.6372725">
+        <line x1="241.666666667" x2="245.833333333" y1="135.026035938" y2="138.255123437">
           <animate attributeName="visibility" dur="1.85" from="hidden" to="visible"/>
         </line>
-        <line x1="241.666666667" x2="245.833333333" y1="134.6372725" y2="139.44665">
+        <line x1="245.833333333" x2="250.0" y1="138.255123437" y2="141.259234375">
           <animate attributeName="visibility" dur="1.9" from="hidden" to="visible"/>
         </line>
-        <line x1="245.833333333" x2="250.0" y1="139.44665" y2="141.626956667">
+        <line x1="250.0" x2="254.166666667" y1="141.259234375" y2="144.486007031">
           <animate attributeName="visibility" dur="1.95" from="hidden" to="visible"/>
         </line>
-        <line x1="250.0" x2="254.166666667" y1="141.626956667" y2="142.531286667">
+        <line x1="254.166666667" x2="258.333333333" y1="144.486007031" y2="139.578074219">
           <animate attributeName="visibility" dur="2.0" from="hidden" to="visible"/>
         </line>
-        <line x1="254.166666667" x2="258.333333333" y1="142.531286667" y2="141.749516667">
+        <line x1="258.333333333" x2="262.5" y1="139.578074219" y2="145.648702344">
           <animate attributeName="visibility" dur="2.05" from="hidden" to="visible"/>
         </line>
-        <line x1="258.333333333" x2="262.5" y1="141.749516667" y2="147.14136">
+        <line x1="262.5" x2="266.666666667" y1="145.648702344" y2="149.369189062">
           <animate attributeName="visibility" dur="2.1" from="hidden" to="visible"/>
         </line>
-        <line x1="262.5" x2="266.666666667" y1="147.14136" y2="152.605119167">
+        <line x1="266.666666667" x2="270.833333333" y1="149.369189062" y2="147.34644375">
           <animate attributeName="visibility" dur="2.15" from="hidden" to="visible"/>
         </line>
-        <line x1="266.666666667" x2="270.833333333" y1="152.605119167" y2="147.286553333">
+        <line x1="270.833333333" x2="275.0" y1="147.34644375" y2="149.623838281">
           <animate attributeName="visibility" dur="2.2" from="hidden" to="visible"/>
         </line>
-        <line x1="270.833333333" x2="275.0" y1="147.286553333" y2="149.187005833">
+        <line x1="275.0" x2="279.166666667" y1="149.623838281" y2="150.35483125">
           <animate attributeName="visibility" dur="2.25" from="hidden" to="visible"/>
         </line>
-        <line x1="275.0" x2="279.166666667" y1="149.187005833" y2="156.883005">
+        <line x1="279.166666667" x2="283.333333333" y1="150.35483125" y2="155.961714844">
           <animate attributeName="visibility" dur="2.3" from="hidden" to="visible"/>
         </line>
-        <line x1="279.166666667" x2="283.333333333" y1="156.883005" y2="154.830345">
+        <line x1="283.333333333" x2="287.5" y1="155.961714844" y2="152.961627344">
           <animate attributeName="visibility" dur="2.35" from="hidden" to="visible"/>
         </line>
-        <line x1="283.333333333" x2="287.5" y1="154.830345" y2="149.405820833">
+        <line x1="287.5" x2="291.666666667" y1="152.961627344" y2="147.920692969">
           <animate attributeName="visibility" dur="2.4" from="hidden" to="visible"/>
         </line>
-        <line x1="287.5" x2="291.666666667" y1="149.405820833" y2="144.7936625">
+        <line x1="291.666666667" x2="295.833333333" y1="147.920692969" y2="143.568092187">
           <animate attributeName="visibility" dur="2.45" from="hidden" to="visible"/>
         </line>
-        <line x1="291.666666667" x2="295.833333333" y1="144.7936625" y2="141.82836">
+        <line x1="295.833333333" x2="300.0" y1="143.568092187" y2="142.248159375">
           <animate attributeName="visibility" dur="2.5" from="hidden" to="visible"/>
         </line>
-        <line x1="295.833333333" x2="300.0" y1="141.82836" y2="148.815505833">
+        <line x1="300.0" x2="304.166666667" y1="142.248159375" y2="144.860092188">
           <animate attributeName="visibility" dur="2.55" from="hidden" to="visible"/>
         </line>
-        <line x1="300.0" x2="304.166666667" y1="148.815505833" y2="146.9028575">
+        <line x1="304.166666667" x2="308.333333333" y1="144.860092188" y2="147.158258594">
           <animate attributeName="visibility" dur="2.6" from="hidden" to="visible"/>
         </line>
-        <line x1="304.166666667" x2="308.333333333" y1="146.9028575" y2="144.13395">
+        <line x1="308.333333333" x2="312.5" y1="147.158258594" y2="141.739077344">
           <animate attributeName="visibility" dur="2.65" from="hidden" to="visible"/>
         </line>
-        <line x1="308.333333333" x2="312.5" y1="144.13395" y2="139.9584825">
+        <line x1="312.5" x2="316.666666667" y1="141.739077344" y2="142.115417969">
           <animate attributeName="visibility" dur="2.7" from="hidden" to="visible"/>
         </line>
-        <line x1="312.5" x2="316.666666667" y1="139.9584825" y2="139.098328333">
+        <line x1="316.666666667" x2="320.833333333" y1="142.115417969" y2="145.7478875">
           <animate attributeName="visibility" dur="2.75" from="hidden" to="visible"/>
         </line>
-        <line x1="316.666666667" x2="320.833333333" y1="139.098328333" y2="149.112420833">
+        <line x1="320.833333333" x2="325.0" y1="145.7478875" y2="147.498225781">
           <animate attributeName="visibility" dur="2.8" from="hidden" to="visible"/>
         </line>
-        <line x1="320.833333333" x2="325.0" y1="149.112420833" y2="143.722341667">
+        <line x1="325.0" x2="329.166666667" y1="147.498225781" y2="140.650657812">
           <animate attributeName="visibility" dur="2.85" from="hidden" to="visible"/>
         </line>
-        <line x1="325.0" x2="329.166666667" y1="143.722341667" y2="137.841593333">
+        <line x1="329.166666667" x2="333.333333333" y1="140.650657812" y2="135.133382813">
           <animate attributeName="visibility" dur="2.9" from="hidden" to="visible"/>
         </line>
-        <line x1="329.166666667" x2="333.333333333" y1="137.841593333" y2="139.577854167">
+        <line x1="333.333333333" x2="337.5" y1="135.133382813" y2="143.434345312">
           <animate attributeName="visibility" dur="2.95" from="hidden" to="visible"/>
         </line>
-        <line x1="333.333333333" x2="337.5" y1="139.577854167" y2="140.6844275">
+        <line x1="337.5" x2="341.666666667" y1="143.434345312" y2="137.90098125">
           <animate attributeName="visibility" dur="3.0" from="hidden" to="visible"/>
         </line>
-        <line x1="337.5" x2="341.666666667" y1="140.6844275" y2="135.902899167">
+        <line x1="341.666666667" x2="345.833333333" y1="137.90098125" y2="128.514035156">
           <animate attributeName="visibility" dur="3.05" from="hidden" to="visible"/>
         </line>
-        <line x1="341.666666667" x2="345.833333333" y1="135.902899167" y2="127.60548">
+        <line x1="345.833333333" x2="350.0" y1="128.514035156" y2="120.142603125">
           <animate attributeName="visibility" dur="3.1" from="hidden" to="visible"/>
         </line>
-        <line x1="345.833333333" x2="350.0" y1="127.60548" y2="119.823385833">
+        <line x1="350.0" x2="354.166666667" y1="120.142603125" y2="115.464204688">
           <animate attributeName="visibility" dur="3.15" from="hidden" to="visible"/>
         </line>
-        <line x1="350.0" x2="354.166666667" y1="119.823385833" y2="114.785566667">
+        <line x1="354.166666667" x2="358.333333333" y1="115.464204688" y2="109.216310156">
           <animate attributeName="visibility" dur="3.2" from="hidden" to="visible"/>
         </line>
-        <line x1="354.166666667" x2="358.333333333" y1="114.785566667" y2="108.151761667">
+        <line x1="358.333333333" x2="362.5" y1="109.216310156" y2="108.990175781">
           <animate attributeName="visibility" dur="3.25" from="hidden" to="visible"/>
         </line>
-        <line x1="358.333333333" x2="362.5" y1="108.151761667" y2="106.3531775">
+        <line x1="362.5" x2="366.666666667" y1="108.990175781" y2="110.532">
           <animate attributeName="visibility" dur="3.3" from="hidden" to="visible"/>
         </line>
-        <line x1="362.5" x2="366.666666667" y1="106.3531775" y2="112.198874167">
+        <line x1="366.666666667" x2="370.833333333" y1="110.532" y2="117.3474375">
           <animate attributeName="visibility" dur="3.35" from="hidden" to="visible"/>
         </line>
-        <line x1="366.666666667" x2="370.833333333" y1="112.198874167" y2="115.104648333">
+        <line x1="370.833333333" x2="375.0" y1="117.3474375" y2="120.160479688">
           <animate attributeName="visibility" dur="3.4" from="hidden" to="visible"/>
         </line>
-        <line x1="370.833333333" x2="375.0" y1="115.104648333" y2="121.116779167">
+        <line x1="375.0" x2="379.166666667" y1="120.160479688" y2="123.471322656">
           <animate attributeName="visibility" dur="3.45" from="hidden" to="visible"/>
         </line>
-        <line x1="375.0" x2="379.166666667" y1="121.116779167" y2="120.0714475">
+        <line x1="379.166666667" x2="383.333333333" y1="123.471322656" y2="123.569702344">
           <animate attributeName="visibility" dur="3.5" from="hidden" to="visible"/>
         </line>
-        <line x1="379.166666667" x2="383.333333333" y1="120.0714475" y2="115.4415975">
+        <line x1="383.333333333" x2="387.5" y1="123.569702344" y2="113.006314844">
           <animate attributeName="visibility" dur="3.55" from="hidden" to="visible"/>
         </line>
-        <line x1="383.333333333" x2="387.5" y1="115.4415975" y2="112.321049167">
+        <line x1="387.5" x2="391.666666667" y1="113.006314844" y2="116.598548437">
           <animate attributeName="visibility" dur="3.6" from="hidden" to="visible"/>
         </line>
-        <line x1="387.5" x2="391.666666667" y1="112.321049167" y2="118.066758333">
+        <line x1="391.666666667" x2="395.833333333" y1="116.598548437" y2="114.616540625">
           <animate attributeName="visibility" dur="3.65" from="hidden" to="visible"/>
         </line>
-        <line x1="391.666666667" x2="395.833333333" y1="118.066758333" y2="115.956961667">
+        <line x1="395.833333333" x2="400.0" y1="114.616540625" y2="117.150889062">
           <animate attributeName="visibility" dur="3.7" from="hidden" to="visible"/>
         </line>
-        <line x1="395.833333333" x2="400.0" y1="115.956961667" y2="111.5421675">
+        <line x1="400.0" x2="404.166666667" y1="117.150889062" y2="107.179467969">
           <animate attributeName="visibility" dur="3.75" from="hidden" to="visible"/>
         </line>
-        <line x1="400.0" x2="404.166666667" y1="111.5421675" y2="107.914813333">
+        <line x1="404.166666667" x2="408.333333333" y1="107.179467969" y2="107.658669531">
           <animate attributeName="visibility" dur="3.8" from="hidden" to="visible"/>
         </line>
-        <line x1="404.166666667" x2="408.333333333" y1="107.914813333" y2="113.657175833">
+        <line x1="408.333333333" x2="412.5" y1="107.658669531" y2="113.717828906">
           <animate attributeName="visibility" dur="3.85" from="hidden" to="visible"/>
         </line>
-        <line x1="408.333333333" x2="412.5" y1="113.657175833" y2="120.7523875">
+        <line x1="412.5" x2="416.666666667" y1="113.717828906" y2="124.526478906">
           <animate attributeName="visibility" dur="3.9" from="hidden" to="visible"/>
         </line>
-        <line x1="412.5" x2="416.666666667" y1="120.7523875" y2="129.489811667">
+        <line x1="416.666666667" x2="420.833333333" y1="124.526478906" y2="132.555982813">
           <animate attributeName="visibility" dur="3.95" from="hidden" to="visible"/>
         </line>
-        <line x1="416.666666667" x2="420.833333333" y1="129.489811667" y2="139.6812175">
+        <line x1="420.833333333" x2="425.0" y1="132.555982813" y2="145.772410937">
           <animate attributeName="visibility" dur="4.0" from="hidden" to="visible"/>
         </line>
-        <line x1="420.833333333" x2="425.0" y1="139.6812175" y2="147.386145833">
+        <line x1="425.0" x2="429.166666667" y1="145.772410937" y2="149.499388281">
           <animate attributeName="visibility" dur="4.05" from="hidden" to="visible"/>
         </line>
-        <line x1="425.0" x2="429.166666667" y1="147.386145833" y2="147.918391667">
+        <line x1="429.166666667" x2="433.333333333" y1="149.499388281" y2="150.46928125">
           <animate attributeName="visibility" dur="4.1" from="hidden" to="visible"/>
         </line>
-        <line x1="429.166666667" x2="433.333333333" y1="147.918391667" y2="147.528840833">
+        <line x1="433.333333333" x2="437.5" y1="150.46928125" y2="144.496">
           <animate attributeName="visibility" dur="4.15" from="hidden" to="visible"/>
         </line>
-        <line x1="433.333333333" x2="437.5" y1="147.528840833" y2="141.062536667">
+        <line x1="437.5" x2="441.666666667" y1="144.496" y2="141.215248438">
           <animate attributeName="visibility" dur="4.2" from="hidden" to="visible"/>
         </line>
-        <line x1="437.5" x2="441.666666667" y1="141.062536667" y2="140.043633333">
+        <line x1="441.666666667" x2="445.833333333" y1="141.215248438" y2="141.928919531">
           <animate attributeName="visibility" dur="4.25" from="hidden" to="visible"/>
         </line>
-        <line x1="441.666666667" x2="445.833333333" y1="140.043633333" y2="139.6546125">
+        <line x1="445.833333333" x2="450.0" y1="141.928919531" y2="137.890661719">
           <animate attributeName="visibility" dur="4.3" from="hidden" to="visible"/>
         </line>
-        <line x1="445.833333333" x2="450.0" y1="139.6546125" y2="141.984900833">
+        <line x1="450.0" x2="454.166666667" y1="137.890661719" y2="141.628185938">
           <animate attributeName="visibility" dur="4.35" from="hidden" to="visible"/>
         </line>
-        <line x1="450.0" x2="454.166666667" y1="141.984900833" y2="139.019329167">
+        <line x1="454.166666667" x2="458.333333333" y1="141.628185938" y2="139.926392969">
           <animate attributeName="visibility" dur="4.4" from="hidden" to="visible"/>
         </line>
-        <line x1="454.166666667" x2="458.333333333" y1="139.019329167" y2="145.063934167">
+        <line x1="458.333333333" x2="462.5" y1="139.926392969" y2="139.79593125">
           <animate attributeName="visibility" dur="4.45" from="hidden" to="visible"/>
         </line>
-        <line x1="458.333333333" x2="462.5" y1="145.063934167" y2="140.111673333">
+        <line x1="462.5" x2="466.666666667" y1="139.79593125" y2="144.989972656">
           <animate attributeName="visibility" dur="4.5" from="hidden" to="visible"/>
         </line>
-        <line x1="462.5" x2="466.666666667" y1="140.111673333" y2="151.8733725">
+        <line x1="466.666666667" x2="470.833333333" y1="144.989972656" y2="154.216442969">
           <animate attributeName="visibility" dur="4.55" from="hidden" to="visible"/>
         </line>
-        <line x1="466.666666667" x2="470.833333333" y1="151.8733725" y2="157.576438333">
+        <line x1="470.833333333" x2="475.0" y1="154.216442969" y2="155.999004687">
           <animate attributeName="visibility" dur="4.6" from="hidden" to="visible"/>
         </line>
-        <line x1="470.833333333" x2="475.0" y1="157.576438333" y2="158.757096667">
+        <line x1="475.0" x2="479.166666667" y1="155.999004687" y2="157.219153125">
           <animate attributeName="visibility" dur="4.65" from="hidden" to="visible"/>
         </line>
       </g>
-      <line stroke="red" stroke-width="1" x1="15" x2="485" y1="158.757096667" y2="158.757096667"/>
-      <text fill="red" x="15" y="153.757096667">Minimum</text>
+      <line stroke="red" stroke-width="1" x1="15" x2="485" y1="157.219153125" y2="157.219153125"/>
+      <text fill="red" x="15" y="152.219153125">Minimum</text>
       <line stroke="black" stroke-width="2" x1="0" x2="5" y1="0.0" y2="0.0"/>
       <text fill="black" x="-30" y="255.0">5</text>
       <line stroke="black" stroke-width="2" x1="0" x2="5" y1="62.5" y2="62.5"/>
