@@ -26,13 +26,16 @@ nav h3 {
 	text-align:center;
 	}
 	
-.exploreMore,
-.downloadThis{
+.exploreMore{
 	border:1px solid #003366;
 	padding:10px 10px 0 10px;
 	border-radius:5px;
 	text-align:center !important;
-	margin-bottom:20px;
+	margin:20px 0 20px 0;
+	}
+	
+.exploreMore img{
+	width:100%;
 	}
 	
 #dygraphExtra{
@@ -518,6 +521,13 @@ nav h3 {
 	text-align:center;
 	}
 	
+@media screen and (min-width: 520px){
+	#blueDragonExplore{
+		width:60%;
+		margin:0 auto;
+	}
+}
+	
 @media screen and (min-width: 687px) {
 	nav {
 		margin-top: 1px;
@@ -698,16 +708,10 @@ nav h3 {
 		}
 		
 	#blueDragonExplore{
-		width:49%;
-		float:left;
+		width:50%;
+		margin:20px auto;
 		}
 		
-	.downloadThis{
-		width:49%;
-		float:right;
-		}
-		
-	
 	/*======dygraph Section CSS======*/	
 	
 	#natural-flow-graph{
