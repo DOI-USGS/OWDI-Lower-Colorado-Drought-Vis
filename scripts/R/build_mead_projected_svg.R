@@ -36,15 +36,13 @@ meadData <- dplyr::filter(meadData, Object.Name == 'Mead', Slot.Name == 'Pool El
 yMinR <- round(min(meadData$Value),-1)
 yMaxR <- round(max(meadData$Value),-1)
 
-xMinR <- as.numeric(strftime(as.POSIXct(
-  meadData$Timestep[which.min(as.numeric(as.POSIXct(meadData$Timestep)))]), 
+posDate = as.POSIXct(meadData$Timestep, format='%m/%d/%Y')
+xMinR <- as.numeric(strftime(posDate[which.min(posDate)], 
   format = "%Y"))
-xMaxR <- as.numeric(strftime(as.POSIXct(
-  meadData$Timestep[which.max(as.numeric(as.POSIXct(meadData$Timestep)))]), 
-  format = "%Y"))
-maxMonth <- as.numeric(strftime(as.POSIXct(
-  meadData$Timestep[which.max(as.numeric(as.POSIXct(meadData$Timestep)))]), 
-  format = "%m")) + 3 # go to 3 months past the last date in the series
+xMaxR <- as.numeric(strftime(posDate[which.max(posDate)], 
+                             format = "%Y"))
+maxMonth <- as.numeric(strftime(posDate[which.max(posDate)], 
+                                format = "%m")) + 3 # go to 3 months past the last date in the series
 
 
 # --- pixel dims ---
@@ -52,17 +50,18 @@ maxMonth <- as.numeric(strftime(as.POSIXct(
 800 #dead pool
 axes <- list('tick_len' = 5,
              'y_label' = "Elevation of Lake Mead (feet)",
+             'x_label' = "Year",
              'y_ticks' = seq(1000,1225,25),
              'y_tk_label' = seq(1000,1225,25),
-             'x_ticks' = seq(xMinR,xMaxR,1),
-             'x_tk_label' = seq(xMinR,xMaxR,1),
+             'x_ticks' = seq(xMinR,xMaxR,2),
+             'x_tk_label' = seq(xMinR,xMaxR,2),
              'y_lim' = c(990,1229),
              'x_lim' = c(xMinR-.25,xMaxR+maxMonth/12)) 
 
 
 fig <- list('w' = 960,
             'h' = 600,
-            'margins' = c(100,125,10, 125)) #bot, left, top, right
+            'margins' = c(50,100,10, 100)) #bot, left, top, right
 
 fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[4]),
                    "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
@@ -129,9 +128,9 @@ newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 3'),
 
 
 g_id <- newXMLNode('g', parent = svg_nd, attrs = c('id' = "axes", class='label'))
-add_axes(g_id, axes, fig)
+add_axes(g_id, axes, fig, x_tick_rotate=0)
 
-attr_svg(svg_nd, attr=list('y-label'=c(dy='-1em')), 'text')
+attr_svg(svg_nd, attr=list('y-label'=c(dy='-1em'), 'x-label'=c(dy='-0.5em')), 'text')
 attr_svg(svg_nd, attr=list('axis.box'=c(style="fill:none;stroke:black")), 'rect')
 
 
@@ -151,12 +150,12 @@ newXMLNode('line',parent=leg_id, attrs=c(id='legend-line', 'x1'=fig$margins[2]+1
                                                         supply_col,line_width),visibility='hidden'))
 #------
 
-x <- as.numeric(strftime(as.POSIXct(meadData$Timestep), format = "%j"))/365+
-  as.numeric(strftime(as.POSIXct(meadData$Timestep), format = "%Y"))
+x <- as.numeric(strftime(posDate, format = "%j"))/365+
+  as.numeric(strftime(posDate, format = "%Y"))
 
 y = meadData$Value
 
-time_ids <- strftime(as.POSIXct(meadData$Timestep), '%Y-%m-%d')
+time_ids <- strftime(posDate, '%Y-%m-%d')
 x <- sapply(x, FUN = function(x) dinosvg:::tran_x(x, axes, fig))
 y <- sapply(y, FUN = function(y) dinosvg:::tran_y(y, axes, fig))
 
