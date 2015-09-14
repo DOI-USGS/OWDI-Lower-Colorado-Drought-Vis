@@ -20,7 +20,7 @@ def main():
     main = SubElement(svg, 'g')
     graph = SubElement(main, 'g')
     graph.set('transform', 'translate(65 10)')
-    renderGraph(graph, getScriptLoc() + '/../../src_data/treeringFlow15yrProcessed.csv')
+    renderGraph(graph, getScriptLoc() + '/../../src_data/treeringFlow16yrProcessed.csv')
     renderLabels(main)
     outsvg = open(getScriptLoc() + '/../../public_html/img/droughtMovingAverage.svg','w+')
     outsvg.truncate()
@@ -111,11 +111,11 @@ def renderGraph(ele, floc):
         botstep = 500 / ((maxbot - minbot)/10)
         sidestep = 250 / ((maxside - minside)/5)
         drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75')
-        drawHighlightBox(ele, 2000, 2015, minbot, maxbot - minbot, '#CCCCB2')
-        for i in range(0, 15):
+        drawHighlightBox(ele, 2000, 2016, minbot, maxbot - minbot, '#CCCCB2')
+        for i in range(0, 16):
             createLineBox(ele, int(year2[i]), int(year2[i])+1, minbot, maxbot - minbot, None, float(raw[i]), int(year2[i]), i)
         for i in range(0, len(year)-1):
-            createLineBox(ele, int(year2[i+15]), int(year2[i+15])+1, minbot, maxbot - minbot, float(perc[i]), float(raw[i+15]), int(year2[i+15]), i+15)
+            createLineBox(ele, int(year2[i+16]), int(year2[i+16])+1, minbot, maxbot - minbot, float(perc[i]), float(raw[i+16]), int(year2[i+16]), i+16)
         for i in range(0, int((maxbot - minbot)/10) + 1):
             if i % 2 == 0:
                 drawLine(ele, i * botstep, 250, i * botstep, 245, 2, 'black')
