@@ -22,17 +22,20 @@ usage_bar_pictogram <- function(svg, values, value_mouse, value_contract, scale=
              attrs = c('id'=group_name, group_styles ))
   ax_g <- newXMLNode('g', parent=g_id, attrs = c('transform'=sprintf("translate(%1.1f,%1.1f)",x_axis_location,y_axis_location)))
   axes <- newXMLNode('path', parent=ax_g,
-             attrs=c('d'=sprintf("M%1.1f %1.1f l0 %1.1f l%1.1f 0",x_offset, 2*y_offset,-y_offset,x_axis_length), 'id'="picto-axes"))
+             attrs=c('d'=sprintf("M%1.1f %1.1f l0 %1.1f l%1.1f 0",x_offset, 3*y_offset,-2*y_offset,x_axis_length), 'id'="picto-axes"))
   newXMLNode("text", parent = ax_g, newXMLTextNode('  '),
              attrs = c(class="label", id="picto-info",x="55",y="-290", 'fill'='#FFFFFF', 'stroke'='none', style="text-anchor: left;"))
   newXMLNode("text", parent = ax_g, newXMLTextNode('  '),
              attrs = c(class="label", id="picto-value",x="55",y="-315", 'fill'='#FFFFFF', 'stroke'='none', style="text-anchor: left;"))
     
-  newXMLNode("text", parent = ax_g, newXMLTextNode('Water user contracts'),
+  newXMLNode("text", parent = ax_g, newXMLTextNode('Lower Colorado River Water Entitlement Holders'),
              attrs = c(id="x-pictogram-label",x=x_axis_length/2,y=y_offset+12, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;"))
-  newXMLNode("text", parent = ax_g, newXMLTextNode('Total water use'),
+  newXMLNode("text", parent = ax_g, newXMLTextNode('(with an Average Annual Consumptive Use above 15,000 acre-feet)'),
+             attrs = c(id="x-pictogram-sub-label",x=x_axis_length/2,y=y_offset+12, 'fill'='#FFFFFF', dy="1.5em",'stroke'='none', style="text-anchor: middle;"))
+  
+  newXMLNode("text", parent = ax_g, newXMLTextNode('Average Consumptive Use 2010 to 2014'),
              attrs = c(id="y-pictogram-label",x=-15,y=y_offset/2, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;",
-                       'transform'="rotate(-90,-15,-97.5),translate(200,0)"))
+                       'transform'="rotate(-90,-15,-97.5),translate(280,0)"))
 
   
   for (i in 1:length(values)){
