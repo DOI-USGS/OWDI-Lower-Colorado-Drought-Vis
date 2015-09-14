@@ -33,7 +33,7 @@ usage_bar_pictogram <- function(svg, values, value_mouse, value_contract, scale=
   newXMLNode("text", parent = ax_g, newXMLTextNode('(with an Average Annual Consumptive Use above 15,000 acre-feet)'),
              attrs = c(id="x-pictogram-sub-label",x=x_axis_length/2,y=y_offset+12, 'fill'='#FFFFFF', dy="1.5em",'stroke'='none', style="text-anchor: middle;"))
   
-  newXMLNode("text", parent = ax_g, newXMLTextNode('Total water use'),
+  newXMLNode("text", parent = ax_g, newXMLTextNode('Average Consumptive Use 2010 to 2014'),
              attrs = c(id="y-pictogram-label",x=-15,y=y_offset/2, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;",
                        'transform'="rotate(-90,-15,-97.5),translate(200,0)"))
 
