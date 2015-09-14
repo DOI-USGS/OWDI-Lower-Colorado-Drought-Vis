@@ -28,7 +28,7 @@ usage_bar_pictogram <- function(svg, values, value_mouse, value_contract, scale=
   newXMLNode("text", parent = ax_g, newXMLTextNode('  '),
              attrs = c(class="label", id="picto-value",x="55",y="-315", 'fill'='#FFFFFF', 'stroke'='none', style="text-anchor: left;"))
     
-  newXMLNode("text", parent = ax_g, newXMLTextNode('Water user contracts'),
+  newXMLNode("text", parent = ax_g, newXMLTextNode('Lower Colorado River Water Entitlement Holders'),
              attrs = c(id="x-pictogram-label",x=x_axis_length/2,y=y_offset+12, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;"))
   newXMLNode("text", parent = ax_g, newXMLTextNode('Total water use'),
              attrs = c(id="y-pictogram-label",x=-15,y=y_offset/2, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;",
