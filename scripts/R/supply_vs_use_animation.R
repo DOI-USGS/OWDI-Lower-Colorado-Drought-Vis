@@ -72,11 +72,11 @@ leg_id <- newXMLNode("g", 'parent' = g_id,
                                class="label", 'alignment-baseline' = "central"))
 
 newXMLNode("text", parent = leg_id, newXMLTextNode('year'),
-           attrs = c(id="year_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp,class='legend'))
+           attrs = c(id="year_text", x=fig$margins[2], y=fig$margins[3],class='legend', dy='1.5em', dx='1.0em'))
 newXMLNode("text", parent = leg_id, newXMLTextNode('use_text'),
-           attrs = c(id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = usage_col,class='legend'))
+           attrs = c(id="use_text", x=fig$margins[2], y=fig$margins[3], fill = usage_col,class='legend', dy='2.5em', dx='1.0em'))
 newXMLNode("text", parent = leg_id, newXMLTextNode('supply_text'),
-           attrs = c(id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = supply_col,class='legend'))
+           attrs = c(id="supply_text", x=fig$margins[2], y=fig$margins[3], fill = supply_col,class='legend', dy='3.5em', dx='1.0em'))
 #------
 
 
@@ -175,11 +175,21 @@ svg <- xmlParse(svg_file, useInternalNode=TRUE) %>%
 lines <- strsplit(svg,'[\n]')[[1]]
 cat(paste(c(lines[1], declaration, lines[-1]),collapse = '\n'), file = svg_file, append = FALSE)
 
-# -- mobile --
+########## -- mobile -- ########################
 
-fig <- list('w' = 600,
+axes <- list('tick_len' = 5,
+             'y_label' = "Basin-wide Volume (million acre-feet)",
+             'x_label' = "Year",
+             'y_ticks' = seq(0,25,5),
+             'y_tk_label' = seq(0,25,5),
+             'x_ticks' = seq(1920,2010,20),
+             'x_tk_label' = seq(1920,2010,20),
+             'y_lim' = c(0,29),
+             'x_lim' = c(1904,2014))
+
+fig <- list('w' = 500,
             'h' = 400,
-            'margins' = c(50,100,10, 100)) #bot, left, top, right
+            'margins' = c(40,60,10, 60)) #bot, left, top, right
 
 fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[4]),
                    "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
@@ -204,7 +214,7 @@ dinosvg:::animate_attribute(a_id, attr_name = "opacity",
                             begin = "indefinite", id = "visibleAxes", 
                             fill = 'freeze', dur = '1s', from = "0", to = "1")
 dinosvg::add_axes(a_id, axes, fig, x_tick_rotate = 0)
-attr_svg(svg_nd, attr=list('y-label'=c(dy='-1em'), 'x-label'=c(dy='-0.5em')), 'text')
+attr_svg(svg_nd, attr=list('y-label'=c(dy='-0.4em'), 'x-label'=c(dy='-0.8em')), 'text')
 
 #-- legend --
 leg_id <- newXMLNode("g", 'parent' = g_id,
@@ -212,11 +222,11 @@ leg_id <- newXMLNode("g", 'parent' = g_id,
                                class="label", 'alignment-baseline' = "central"))
 
 newXMLNode("text", parent = leg_id, newXMLTextNode('year'),
-           attrs = c(id="year_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp,class='legend'))
+           attrs = c(id="year_text", x=fig$margins[2], y=fig$margins[3],class='legend', dy='1.0em', dx='0.5em'))
 newXMLNode("text", parent = leg_id, newXMLTextNode('use_text'),
-           attrs = c(id="use_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+15, fill = usage_col,class='legend'))
+           attrs = c(id="use_text", x=fig$margins[2], y=fig$margins[3], fill = usage_col,class='legend', dy='2.0em', dx='0.5em'))
 newXMLNode("text", parent = leg_id, newXMLTextNode('supply_text'),
-           attrs = c(id="supply_text", x=fig$margins[2]+l_bmp, y=fig$margins[3]+t_bmp+30, fill = supply_col,class='legend'))
+           attrs = c(id="supply_text", x=fig$margins[2], y=fig$margins[3], fill = supply_col,class='legend', dy='3.0em', dx='0.5em'))
 #------
 
 
@@ -293,15 +303,15 @@ dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset",
 for (i in 1:length(x)){
   #refine this so it is actually halfway points
   
-  use = ifelse(is.na(usage[i]), '', sprintf('%1.1f (maf)',usage[i]))
-  flow = ifelse(is.na(flows[i]), '', sprintf('%1.1f (maf)',flows[i]))
+  use = ifelse(is.na(usage[i]), '', sprintf('%1.1f maf',usage[i]))
+  flow = ifelse(is.na(flows[i]), '', sprintf('%1.1f maf',flows[i]))
   newXMLNode('rect','parent' = g_id, 
              attrs = c(id = sprintf('year_%s',years[i]), x = sprintf('%1.2f',x[i]-width/2), y = fig$px_lim$y[2], width = sprintf('%1.2f',width), height = fig$px_lim$y[1]-fig$px_lim$y[2],
                        'fill-opacity'="0.0", 
                        onmousemove=paste0(sprintf("legendViz(evt,'supply-%s');",years[i]),
                                           sprintf("ChangeText(evt, 'year_text','Year: %s');",years[i]),
-                                          sprintf("ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: %s');", use),
-                                          sprintf("ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: %s');", flow)),
+                                          sprintf("ChangeText(evt, 'use_text','Consumptive Use: %s');", use),
+                                          sprintf("ChangeText(evt, 'supply_text','Water Supply: %s');", flow)),
                        onmouseover=paste0(sprintf("highlightViz(evt,'supply-%s','0.1');",years[i])),
                        onmouseout=paste0("document.getElementById('legend').setAttribute('visibility', 'hidden');",
                                          sprintf("highlightViz(evt,'supply-%s','0.0');",years[i]))))
@@ -310,7 +320,7 @@ for (i in 1:length(x)){
 root_nd <- xmlRoot(g_id)
 
 saveXML(root_nd, file = mobile_svg_file)
-svg <- xmlParse(svg_file, useInternalNode=TRUE) %>%
+svg <- xmlParse(mobile_svg_file, useInternalNode=TRUE) %>%
   toString.XMLNode()
 lines <- strsplit(svg,'[\n]')[[1]]
-cat(paste(c(lines[1], declaration, lines[-1]),collapse = '\n'), file = svg_file, append = FALSE)
+cat(paste(c(lines[1], declaration, lines[-1]),collapse = '\n'), file = mobile_svg_file, append = FALSE)
