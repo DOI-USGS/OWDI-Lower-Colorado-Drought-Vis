@@ -50,7 +50,7 @@ usage_bar_pictogram <- function(svg, values, value_mouse, value_contract, scale=
     newXMLNode('rect',parent=g_pict_par,
                attrs=c(x=x-bin_buffer/2,y=-(bin_full+bin_buffer)*num_full-bin_buffer/2, 
                        width=bin_full+bin_buffer, height=(bin_full+bin_buffer)*num_full, 
-                       rx='3',ry='3','stroke'='#0066CC','stroke-width'='0','fill'='yellow', opacity='0.0',id = paste0('picto-highlight-',i)))
+                       rx='3',ry='3','stroke-width'='0','fill'='#00CC99', opacity='0.0',id = paste0('picto-highlight-',i)))
     
     g_picto <- newXMLNode('g', parent=g_pict_par, attrs = c(id = paste0('picto-usage-',i),'stroke'='#0066CC','stroke-width'=picto_lw,'fill'='#0066CC'))
     # -- create empties -- 
@@ -74,7 +74,7 @@ usage_bar_pictogram <- function(svg, values, value_mouse, value_contract, scale=
     newXMLNode('rect',parent=g_pict_par,
                attrs=c(id = paste0('picto-',i),x=x-bin_buffer/2,y=-(bin_full+bin_buffer)*num_full-bin_buffer/2, 
                        width=bin_full+bin_buffer, height=(bin_full+bin_buffer)*num_full, 
-                       rx='3',ry='3','stroke'='#0066CC','stroke-width'='0','fill'='yellow', opacity='0.0', onmouseover=on_mouseovr, onmouseout=on_mouseout))
+                       rx='3',ry='3','stroke-width'='0','fill'='#00CC99', opacity='0.0', onmouseover=on_mouseovr, onmouseout=on_mouseout))
   }
   
   invisible(svg)
