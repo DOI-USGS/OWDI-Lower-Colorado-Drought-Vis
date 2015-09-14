@@ -21,11 +21,12 @@ years <- data$Year[use_i]
 data <- read.table('src_data/Basin_Depletion_yearly_PROVISIONAL.tsv', stringsAsFactors = F, sep = '\t', header = T)
 # will add stuff here to either fill usage w/NAs, or trim to have same supply and use be the same length
 usage <- c(rep(NA,8),data$depletion/1000,NA,NA) #into millions acre-feet units
-
+tot_time <- tail(years,1) - head(years,1)
 
 # --- pixel dims ---
 axes <- list('tick_len' = 5,
              'y_label' = "Volume (million acre-feet)",
+             #'x_label' = "Year",
              'y_ticks' = seq(0,25,5),
              'y_tk_label' = seq(0,25,5),
              'x_ticks' = seq(1910,2010,10),
@@ -131,7 +132,7 @@ y2 <- tail(y,-1)
 line_len <- line_length(x1,y1,x2,y2)
 line_len[is.na(line_len)] = 0
 tot_len <- sum(line_len, na.rm = T)
-tot_time <- tail(years,1) - head(years,1)
+
 width <- x2[1]-x1[1] # assumes continuous years!!
 
 
@@ -155,9 +156,9 @@ for (i in 1:length(x)){
              attrs = c(id = sprintf('year_%s',years[i]), x = sprintf('%1.2f',x[i]-width/2), y = fig$px_lim$y[2], width = sprintf('%1.2f',width), height = fig$px_lim$y[1]-fig$px_lim$y[2],
                        'fill-opacity'="0.0", 
                        onmousemove=paste0(sprintf("legendViz(evt,'supply-%s');",years[i]),
-                                          sprintf("ChangeText(evt, 'year_text','%s');",years[i]),
-                                          sprintf("ChangeText(evt, 'use_text','usage: %s');", use),
-                                          sprintf("ChangeText(evt, 'supply_text','supply: %s');", flow)),
+                                          sprintf("ChangeText(evt, 'year_text','Year: %s');",years[i]),
+                                          sprintf("ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: %s');", use),
+                                          sprintf("ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: %s');", flow)),
                        onmouseover=paste0(sprintf("highlightViz(evt,'supply-%s','0.1');",years[i])),
                        onmouseout=paste0("document.getElementById('legend').setAttribute('visibility', 'hidden');",
                                          sprintf("highlightViz(evt,'supply-%s','0.0');",years[i]))))
