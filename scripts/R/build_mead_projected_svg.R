@@ -36,15 +36,13 @@ meadData <- dplyr::filter(meadData, Object.Name == 'Mead', Slot.Name == 'Pool El
 yMinR <- round(min(meadData$Value),-1)
 yMaxR <- round(max(meadData$Value),-1)
 
-xMinR <- as.numeric(strftime(as.POSIXct(
-  meadData$Timestep[which.min(as.numeric(as.POSIXct(meadData$Timestep)))]), 
+posDate = as.POSIXct(meadData$Timestep, format='%m/%d/%Y')
+xMinR <- as.numeric(strftime(posDate[which.min(posDate)], 
   format = "%Y"))
-xMaxR <- as.numeric(strftime(as.POSIXct(
-  meadData$Timestep[which.max(as.numeric(as.POSIXct(meadData$Timestep)))]), 
-  format = "%Y"))
-maxMonth <- as.numeric(strftime(as.POSIXct(
-  meadData$Timestep[which.max(as.numeric(as.POSIXct(meadData$Timestep)))]), 
-  format = "%m")) + 3 # go to 3 months past the last date in the series
+xMaxR <- as.numeric(strftime(posDate[which.max(posDate)], 
+                             format = "%Y"))
+maxMonth <- as.numeric(strftime(posDate[which.max(posDate)], 
+                                format = "%m")) + 3 # go to 3 months past the last date in the series
 
 
 # --- pixel dims ---
@@ -151,12 +149,12 @@ newXMLNode('line',parent=leg_id, attrs=c(id='legend-line', 'x1'=fig$margins[2]+1
                                                         supply_col,line_width),visibility='hidden'))
 #------
 
-x <- as.numeric(strftime(as.POSIXct(meadData$Timestep), format = "%j"))/365+
-  as.numeric(strftime(as.POSIXct(meadData$Timestep), format = "%Y"))
+x <- as.numeric(strftime(posDate, format = "%j"))/365+
+  as.numeric(strftime(posDate, format = "%Y"))
 
 y = meadData$Value
 
-time_ids <- strftime(as.POSIXct(meadData$Timestep), '%Y-%m-%d')
+time_ids <- strftime(posDate, '%Y-%m-%d')
 x <- sapply(x, FUN = function(x) dinosvg:::tran_x(x, axes, fig))
 y <- sapply(y, FUN = function(y) dinosvg:::tran_y(y, axes, fig))
 
