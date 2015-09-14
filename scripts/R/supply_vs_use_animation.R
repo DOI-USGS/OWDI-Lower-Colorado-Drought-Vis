@@ -26,7 +26,7 @@ tot_time <- tail(years,1) - head(years,1)
 # --- pixel dims ---
 axes <- list('tick_len' = 5,
              'y_label' = "Volume (million acre-feet)",
-             #'x_label' = "Year",
+             'x_label' = "Year",
              'y_ticks' = seq(0,25,5),
              'y_tk_label' = seq(0,25,5),
              'x_ticks' = seq(1910,2010,10),
@@ -35,9 +35,10 @@ axes <- list('tick_len' = 5,
              'x_lim' = c(1904,2014))
 
 
-fig <- list('w' = 900,
+
+fig <- list('w' = 960,
             'h' = 600,
-            'margins' = c(100,80,10, 80)) #bot, left, top, right
+            'margins' = c(50,100,10, 100)) #bot, left, top, right
 
 fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[4]),
                    "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
@@ -61,7 +62,8 @@ a_id <- newXMLNode('g', parent = g_id, attrs = c('id' = "axes", opacity = '0', c
 dinosvg:::animate_attribute(a_id, attr_name = "opacity", 
                             begin = "indefinite", id = "visibleAxes", 
                             fill = 'freeze', dur = '1s', from = "0", to = "1")
-dinosvg::add_axes(a_id, axes, fig)
+dinosvg::add_axes(a_id, axes, fig, x_tick_rotate = 0)
+attr_svg(svg_nd, attr=list('y-label'=c(dy='-1em'), 'x-label'=c(dy='-0.5em')), 'text')
 
 #-- legend --
 leg_id <- newXMLNode("g", 'parent' = g_id,
@@ -150,8 +152,8 @@ dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset",
 for (i in 1:length(x)){
   #refine this so it is actually halfway points
   
-  use = ifelse(is.na(usage[i]), '', sprintf('%1.1f',usage[i]))
-  flow = ifelse(is.na(flows[i]), '', sprintf('%1.1f',flows[i]))
+  use = ifelse(is.na(usage[i]), '', sprintf('%1.1f (maf)',usage[i]))
+  flow = ifelse(is.na(flows[i]), '', sprintf('%1.1f (maf)',flows[i]))
   newXMLNode('rect','parent' = g_id, 
              attrs = c(id = sprintf('year_%s',years[i]), x = sprintf('%1.2f',x[i]-width/2), y = fig$px_lim$y[2], width = sprintf('%1.2f',width), height = fig$px_lim$y[1]-fig$px_lim$y[2],
                        'fill-opacity'="0.0", 

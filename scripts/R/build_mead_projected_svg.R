@@ -50,17 +50,18 @@ maxMonth <- as.numeric(strftime(posDate[which.max(posDate)],
 800 #dead pool
 axes <- list('tick_len' = 5,
              'y_label' = "Elevation of Lake Mead (feet)",
+             'x_label' = "Year",
              'y_ticks' = seq(1000,1225,25),
              'y_tk_label' = seq(1000,1225,25),
-             'x_ticks' = seq(xMinR,xMaxR,1),
-             'x_tk_label' = seq(xMinR,xMaxR,1),
+             'x_ticks' = seq(xMinR,xMaxR,2),
+             'x_tk_label' = seq(xMinR,xMaxR,2),
              'y_lim' = c(990,1229),
              'x_lim' = c(xMinR-.25,xMaxR+maxMonth/12)) 
 
 
 fig <- list('w' = 960,
             'h' = 600,
-            'margins' = c(100,125,10, 125)) #bot, left, top, right
+            'margins' = c(50,100,10, 100)) #bot, left, top, right
 
 fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[4]),
                    "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
@@ -127,9 +128,9 @@ newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 3'),
 
 
 g_id <- newXMLNode('g', parent = svg_nd, attrs = c('id' = "axes", class='label'))
-add_axes(g_id, axes, fig)
+add_axes(g_id, axes, fig, x_tick_rotate=0)
 
-attr_svg(svg_nd, attr=list('y-label'=c(dy='-1em')), 'text')
+attr_svg(svg_nd, attr=list('y-label'=c(dy='-1em'), 'x-label'=c(dy='-0.5em')), 'text')
 attr_svg(svg_nd, attr=list('axis.box'=c(style="fill:none;stroke:black")), 'rect')
 
 
