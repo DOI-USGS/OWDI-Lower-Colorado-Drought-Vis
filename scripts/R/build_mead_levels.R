@@ -12,6 +12,7 @@ add_mead_levels <- function(svg, mead_poly, mead_water_styles, mead_border_style
   
   newXMLNode('path', parent = g_id, attrs=c(id=border_id, d=full_mead_path, mead_border_styles))
   t_id <- newXMLNode('g',parent=g_id, attrs = c(id = "mead-elevation-text-position"))
+  newXMLNode('text', parent = t_id, newXMLTextNode('Lake Mead'), attrs = c(id = "mead-label", x='475', fill='#FFFFFF',dy="0.7em",stroke='none',style='text-anchor:middle;'))
   newXMLNode('text', parent = t_id, newXMLTextNode('  '), attrs = c(id = "mead-elevation-text", class='small-text', x='538', fill='#FFFFFF',dy="2.8em",stroke='none',style='text-anchor:end;'))
   newXMLNode('text', parent = t_id, newXMLTextNode('  '), attrs = c(id = "mead-condition-text", class='small-text', x="538", fill='#FFFFFF',dy="4.2em",stroke='none',style='text-anchor:end;'))
   newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "mead-storage-text", class='label', x='473',y='425',fill='#FFFFFF',stroke='none',style='text-anchor:middle;'))
