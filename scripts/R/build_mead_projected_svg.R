@@ -205,9 +205,9 @@ for (i in 1:length(x)){
   
   
   if (is.model[i]){
-    elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s (ft)');ChangeText(evt, 'model_text','*%s');", elev,prob_run_title))
+    elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s ft');ChangeText(evt, 'model_text','*%s');", elev,prob_run_title))
   } else {
-    elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s (ft)');", elev),
+    elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s ft');", elev),
                         "ChangeText(evt, 'model_text',' ');")
     
   }
