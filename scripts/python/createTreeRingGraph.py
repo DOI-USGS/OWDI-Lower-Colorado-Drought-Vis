@@ -128,7 +128,7 @@ def renderGraph(ele, floc):
                 drawText(ele, (i * botstep) - (len(str(int((i*10)+minbot)))/2)*10, 270, str(int((i*10)+minbot)))
         for i in range(0, int((maxside - minside)/5) + 1):
             drawLine(ele, 0, i * sidestep, 5, i * sidestep, 2, 'black')
-            drawText(ele, -30, 250 - (i * sidestep) + 5, str(int((i * 5) + minside)))
+            drawText(ele, -5, 250 - (i * sidestep) + 5, str(int((i * 5) + minside))).set('text-anchor', 'end')
             if int((i * 5) + minside) == 100:
                 drawLine(ele, 15, 250 - (i * sidestep), 485, 250 - (i * sidestep), 1, 'black')
         drawLine(ele, 0, 250, 500, 250, 2, 'black')
