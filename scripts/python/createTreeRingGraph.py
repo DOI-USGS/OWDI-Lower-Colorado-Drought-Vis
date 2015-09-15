@@ -146,16 +146,16 @@ def renderLabels(ele):
 def createLineBox(ele, x1, x2, ymin, yrange, avg, raw, year, rot):
     box = highlightRange(ele, x1, x2, ymin, yrange)
     box.set('class', 'linebox')
-    box.set('fill', 'blue')
+    box.set('fill', 'black')
     box.set('opacity', '0')
     box.set('id', 'box' + str(rot))
     box.set('class', 'linebox')
     css.text += '\n#box' + str(rot) + ':hover ~' + ' .num' + str(rot) + ' { opacity : 1 ;}'
     if avg == None:
-        value = 'NA'
+        value = ''
     else:
         value = str(round(avg, 2))
-    text1 = drawText(ele, 15, 245, '10-Year Average: ' + value)
+    text1 = drawText(ele, 15, 245, '10-Year Average Flow Volume: ' + value + ' maf')
     text1.set('fill', 'blue')
     text1.set('opacity', '0')
     text1.set('font-weight', 'bold')
@@ -169,7 +169,7 @@ def createLineBox(ele, x1, x2, ymin, yrange, avg, raw, year, rot):
     text2.set('font-weight', 'bold')
     text2.set('font-size', '12')
     text2.set('class', 'num' + str(rot))
-    text3 = drawText(ele, 15, 230, 'Annual Flow Volume: ' + str(round(raw, 2)))
+    text3 = drawText(ele, 15, 230, 'Annual Flow Volume: ' + str(round(raw, 2))+ ' maf')
     text3.set('fill', '#9999FF')
     text3.set('opacity', '0')
     text3.set('font-weight', 'bold')
