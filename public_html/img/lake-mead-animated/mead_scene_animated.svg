@@ -394,13 +394,10 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
   </g>
   <g id="increment-scene"/>
   <g id="mead-pictogram-legend" transform="translate(200,135)" opacity="0" class="legend-hidden">
-    <rect x="150" y="270" width="130" height="60" stroke="#FFFFFF" fill="none"/>
+    <rect x="150" y="270" width="130" height="45" stroke="#FFFFFF" fill="none"/>
     <text class="legend-text" x="215" y="278" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: middle;">Legend</text>
-    <rect x="156" y="305" width="10" height="5" rx="0" ry="0" stroke="none" fill="#1975d1"/>
-    <rect x="156" y="300" width="10" height="10" rx="2" ry="2" fill="none" stroke="#1975d1" stroke-width="1.5"/>
-    <text class="small-text" x="175" y="300" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: left;">50,000 acre-feet</text>
-    <rect x="156" y="315" width="10" height="10" rx="2" ry="2" fill="#1975d1" stroke="#1975d1" stroke-width="1.5"/>
-    <text class="small-text" x="175" y="315" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: left;">100,000 acre-feet</text>
+    <rect x="156" y="300" width="10" height="10" rx="2" ry="2" fill="#1975d1" stroke="#1975d1" stroke-width="1.5"/>
+    <text class="small-text" x="175" y="300" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: left;">100,000 acre-feet</text>
   </g>
   <g id="pictogram-topfive" fill="none" stroke-width="2.5" stroke="#FFFFFF" class="hidden">
     <g transform="translate(25.0,680.0)">
@@ -729,6 +726,8 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <rect x="114" y="272" width="10" height="10" rx="2" ry="2"/>
     <rect x="128" y="272" width="10" height="10" rx="2" ry="2"/>
     <rect x="142" y="272" width="10" height="10" rx="2" ry="2"/>
+    <rect x="156" y="272" width="10" height="10" rx="2" ry="2"/>
+    <rect x="170" y="272" width="10" height="10" rx="2" ry="2"/>
     <rect x="72" y="258" width="10" height="10" rx="2" ry="2"/>
     <rect x="86" y="258" width="10" height="10" rx="2" ry="2"/>
     <rect x="100" y="258" width="10" height="10" rx="2" ry="2"/>

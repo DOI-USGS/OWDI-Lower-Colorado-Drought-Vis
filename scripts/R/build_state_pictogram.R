@@ -164,14 +164,14 @@ add_mexico <- function(root_nd,scale){
   x_start = 70
   y_start = 254
   block_picto(MX_id,x=x_start+14*6,y=y_start,number=2,'fill'='none')
-  y = block_picto(MX_id,x=x_start+28,y=y_start,number=4)
+  y = block_picto(MX_id,x=x_start+28,y=y_start,number=6)
   y = block_picto(MX_id,x=x_start,y=y,number=5)
   y = block_picto(MX_id,x=x_start,y=y,number=4)
   
   MX <- newXMLNode('g', parent=MX_id,
                    attrs = c('id'='Mexico-pictos-normal',class='shown'))
-  # -- full bucket, then partials
-  block_picto(MX,x=x_start+14*6,y=y_start,number=2,rx="0",ry="0",perc_full = 100,'stroke'='none')
+#   # -- full bucket, then partials
+   block_picto(MX,x=x_start+14*6,y=y_start,number=2,rx="0",ry="0",perc_full = 100,'stroke'='none')
 
   
   m_id = newXMLNode('g', parent=MX_id,
