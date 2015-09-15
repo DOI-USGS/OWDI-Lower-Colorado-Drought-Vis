@@ -5,7 +5,7 @@ library(dplyr)
 flow_file <- 'src_data/upper-colorado-flow2007.txt'
 flow_data = read.table(flow_file, header=TRUE, skip=173)
 
-running_mean <- function(x,n=16,sides=1) {
+running_mean <- function(x,n=10,sides=1) {
 	stats::filter(x, rep(1/n,n), sides=1) %>% as.numeric()
 }
 
@@ -53,23 +53,23 @@ historical_pctile <- flow_df %>%
 
 # compute running means on just the FlowGage data 
 flow_df <- flow_df %>%
-	mutate(Gage16YrRunMean = running_mean(FlowGage),
+	mutate(Gage10YrRunMean = running_mean(FlowGage),
 				 GageAllYrMean = mean(FlowGage, na.rm=TRUE),
-				 Min16YrMean = min(Gage16YrRunMean, na.rm=TRUE)) 
+				 Min10YrMean = min(Gage10YrRunMean, na.rm=TRUE)) 
 
 
 
-flow_df$below_mean = flow_df$Gage16YrRunMean < flow_df$GageAllYrMean
+flow_df$below_mean = flow_df$Gage10YrRunMean < flow_df$GageAllYrMean
 flow_df$drought_length = (flow_df$below_mean) * unlist(lapply(rle(flow_df$below_mean)$lengths, seq_len))
 
-flow_df$Gage16yrPct = 100*flow_df$GageAllYrMean
+flow_df$Gage10yrPct = 100*flow_df$GageAllYrMean
 
 flow_df$RawGagePct = 100*flow_df$FlowGage/flow_df$GageAllYrMean
 
-to_write = select(flow_df, Year, Gage16YrRunMean, FlowGage, below_mean, drought_length)
+to_write = select(flow_df, Year, Gage10YrRunMean, FlowGage, below_mean, drought_length)
 to_write = subset(to_write, Year >= 1906)
 
 to_write = merge(to_write, historical_pctile)
 
-write.csv(to_write, 'src_data/treeringFlow16yrProcessed.csv', row.names=FALSE)
+write.csv(to_write, 'src_data/treeringFlow10yrProcessed.csv', row.names=FALSE)
 
