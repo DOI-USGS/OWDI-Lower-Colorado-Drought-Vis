@@ -17,6 +17,11 @@ def main():
     css.text = ''
     css.text += 'text {font-family: Sans-Serif; pointer-events: none ;}'
     css.text += '.linebox' + ':hover' + ' { opacity : .25 }'
+    script = SubElement(SubElement(svg,'body'), 'script')
+    scriptdat = ''
+    scriptdat += 'window.onload = function() {drawLines();};'
+    scriptdat += 'function drawLines() {line1 = document.getElementById("pline1");points1 = line1.getAttribute("points");line1.setAttribute("points", "");pointl1 = points1.split(" ");tpoints1 = [];allpoints1 = "";i21 = 0;for(i11 = 0; i11 < pointl1.length; i11++){allpoints1 += pointl1[i11] + " ";tpoints1[i11] = allpoints1;window.setTimeout(function() {line1.setAttribute("points", tpoints1[i21]); i21++;}, i11*25);} line1.setAttribute("points", tpoints1[i21] + "0,0"); line2 = document.getElementById("pline2");points2 = line2.getAttribute("points");line2.setAttribute("points", "");pointl2 = points2.split(" ");tpoints2 = [];allpoints2 = "";i22 = 0;for(i12 = 0; i12 < pointl2.length; i12++){allpoints2 += pointl2[i12] + " ";tpoints2[i12] = allpoints2;window.setTimeout(function() {line2.setAttribute("points", tpoints2[i22]); i22++;}, i12*25);}}'
+    script.append(Comment(' --><![CDATA[' + scriptdat.replace(']]>', ']]]]><![CDATA[>') + ']]><!-- '))
     main = SubElement(svg, 'g')
     graph = SubElement(main, 'g')
     graph.set('transform', 'translate(65 10)')
@@ -28,11 +33,11 @@ def main():
     outsvg.close()
     
 def prettify(elem):
-    rough_string = ElementTree.tostring(elem, 'utf-8')
+    rough_string = ElementTree.tostring(elem, 'Windows-1252')
     reparsed = minidom.parseString(rough_string)
     #xmlcss = reparsed.createProcessingInstruction('xml-stylesheet', 'type="text/css" href="../css/svg.css"')
     #reparsed.insertBefore(xmlcss, reparsed.firstChild)
-    return reparsed.toprettyxml(indent="  ")
+    return reparsed.toprettyxml(indent="  ", encoding="Windows-1252")
     
 def drawLine(ele, x1, y1, x2, y2, width = None, color = None):
     line = SubElement(ele, 'line')
@@ -54,20 +59,12 @@ def drawText(ele, x, y, tex):
     text.text=tex
     return text
     
-def drawGraphLine(ele, year1, perc1, year2, perc2, yrange, prange, ymin, pmin, itn):
+def drawGraphLine(ele, year1, perc1, yrange, prange, ymin, pmin):
     year1 = (year1 - ymin) * (500/yrange)
-    year2 = (year2 - ymin) * (500/yrange)
     pc = (prange/2) + pmin
     perc1 = (pc - perc1) + pc
-    perc2 = (pc - perc2) + pc
     perc1 = (perc1 - pmin) * (250/prange)
-    perc2 = (perc2 - pmin) * (250/prange)
-    gline = drawLine(ele, year1, perc1, year2, perc2)
-    animation = SubElement(gline, 'animate')
-    animation.set('attributeName', 'visibility')
-    animation.set('from', 'hidden')
-    animation.set('to', 'visible')
-    animation.set('dur', str(itn*.05))
+    return str(year1) + ',' + str(perc1) + ' '
     
 def getScriptLoc():
     return os.getcwd().replace('\\','/')
@@ -111,13 +108,23 @@ def renderGraph(ele, floc):
         linecontainer2 = SubElement(ele, 'g')
         linecontainer2.set('stroke', '#9999FF')
         linecontainer2.set('stroke-width', '2')
+        linecontainer2.set('fill', 'none')
         linecontainer1 = SubElement(ele, 'g')
         linecontainer1.set('stroke', 'blue')
         linecontainer1.set('stroke-width', '2')
-        for i in range(0, len(year)-1):
-            drawGraphLine(linecontainer1, float(year[i]), float(perc[i]), float(year[i+1]), float(perc[i+1]), maxbot - minbot, maxside - minside, minbot, minside, i)
-        for i in range(0, len(year2)-1):
-            drawGraphLine(linecontainer2, float(year2[i]), float(raw[i]), float(year2[i+1]), float(raw[i+1]), maxbot - minbot, maxside - minside, minbot, minside, i)
+        linecontainer1.set('fill', 'none')
+        gline1 = ''
+        gline2 = ''
+        for i in range(0, len(year)):
+            gline1 += drawGraphLine(linecontainer1, float(year[i]), float(perc[i]), maxbot - minbot, maxside - minside, minbot, minside)
+        pline = SubElement(linecontainer1, 'polyline')
+        pline.set('points', gline1)
+        pline.set('id', 'pline1')
+        for i in range(0, len(year2)):
+            gline2 += drawGraphLine(linecontainer2, float(year2[i]), float(raw[i]), maxbot - minbot, maxside - minside, minbot, minside)
+        pline = SubElement(linecontainer2, 'polyline')
+        pline.set('points', gline2)
+        pline.set('id', 'pline2')
         for i in range(0, 9):
             createLineBox(ele, int(year2[i]), int(year2[i])+1, minbot, maxbot - minbot, None, float(raw[i]), int(year2[i]), i)
         for i in range(0, len(year)):
