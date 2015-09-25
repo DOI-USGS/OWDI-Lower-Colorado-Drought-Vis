@@ -15,12 +15,17 @@ def main():
     css = SubElement(svg, 'style')
     css.set('type', 'text/css')
     css.text = ''
-    css.text += 'text {font-family: Sans-Serif}'
+    css.text += 'text {font-family: Sans-Serif; pointer-events: none ;}'
     css.text += '.linebox' + ':hover' + ' { opacity : .25 }'
+    script = SubElement(SubElement(svg,'body'), 'script')
+    scriptdat = ''
+    scriptdat += 'window.onload = function() {drawLines();};'
+    scriptdat += 'function drawLines() {line1 = document.getElementById("pline1");points1 = line1.getAttribute("points");line1.setAttribute("points", "");pointl1 = points1.split(" ");tpoints1 = [];allpoints1 = "";i21 = 0;for(i11 = 0; i11 < pointl1.length; i11++){allpoints1 += pointl1[i11] + " ";tpoints1[i11] = allpoints1;window.setTimeout(function() {line1.setAttribute("points", tpoints1[i21]); i21++;}, i11*25);} line1.setAttribute("points", tpoints1[i21] + "0,0"); line2 = document.getElementById("pline2");points2 = line2.getAttribute("points");line2.setAttribute("points", "");pointl2 = points2.split(" ");tpoints2 = [];allpoints2 = "";i22 = 0;for(i12 = 0; i12 < pointl2.length; i12++){allpoints2 += pointl2[i12] + " ";tpoints2[i12] = allpoints2;window.setTimeout(function() {line2.setAttribute("points", tpoints2[i22]); i22++;}, i12*25);}}'
+    script.append(Comment(' --><![CDATA[' + scriptdat.replace(']]>', ']]]]><![CDATA[>') + ']]><!-- '))
     main = SubElement(svg, 'g')
     graph = SubElement(main, 'g')
     graph.set('transform', 'translate(65 10)')
-    renderGraph(graph, getScriptLoc() + '/../../src_data/treeringFlow16yrProcessed.csv')
+    renderGraph(graph, getScriptLoc() + '/../../src_data/treeringFlow10yrProcessed.csv')
     renderLabels(main)
     outsvg = open(getScriptLoc() + '/../../public_html/img/droughtMovingAverage.svg','w+')
     outsvg.truncate()
@@ -28,11 +33,11 @@ def main():
     outsvg.close()
     
 def prettify(elem):
-    rough_string = ElementTree.tostring(elem, 'utf-8')
+    rough_string = ElementTree.tostring(elem, 'Windows-1252')
     reparsed = minidom.parseString(rough_string)
     #xmlcss = reparsed.createProcessingInstruction('xml-stylesheet', 'type="text/css" href="../css/svg.css"')
     #reparsed.insertBefore(xmlcss, reparsed.firstChild)
-    return reparsed.toprettyxml(indent="  ")
+    return reparsed.toprettyxml(indent="  ", encoding="Windows-1252")
     
 def drawLine(ele, x1, y1, x2, y2, width = None, color = None):
     line = SubElement(ele, 'line')
@@ -54,20 +59,12 @@ def drawText(ele, x, y, tex):
     text.text=tex
     return text
     
-def drawGraphLine(ele, year1, perc1, year2, perc2, yrange, prange, ymin, pmin, itn):
+def drawGraphLine(ele, year1, perc1, yrange, prange, ymin, pmin):
     year1 = (year1 - ymin) * (500/yrange)
-    year2 = (year2 - ymin) * (500/yrange)
     pc = (prange/2) + pmin
     perc1 = (pc - perc1) + pc
-    perc2 = (pc - perc2) + pc
     perc1 = (perc1 - pmin) * (250/prange)
-    perc2 = (perc2 - pmin) * (250/prange)
-    gline = drawLine(ele, year1, perc1, year2, perc2)
-    animation = SubElement(gline, 'animate')
-    animation.set('attributeName', 'visibility')
-    animation.set('from', 'hidden')
-    animation.set('to', 'visible')
-    animation.set('dur', str(itn*.05))
+    return str(year1) + ',' + str(perc1) + ' '
     
 def getScriptLoc():
     return os.getcwd().replace('\\','/')
@@ -90,10 +87,6 @@ def renderGraph(ele, floc):
                 raw.append(row[2])
                 year2.append(row[0])
             i+= 1
-        #year = year[-100:]
-        #perc = perc[-100:]
-        #raw = raw[-100:]
-        #year2 = year2[-100:]
         minbot = math.floor(float(year[0])/10) * 10
         if(minbot > 1900):
             minbot = 1900
@@ -112,28 +105,37 @@ def renderGraph(ele, floc):
         sidestep = 250 / ((maxside - minside)/5)
         drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75')
         drawHighlightBox(ele, 2000, 2016, minbot, maxbot - minbot, '#CCCCB2')
-        for i in range(0, 16):
+        linecontainer2 = SubElement(ele, 'g')
+        linecontainer2.set('stroke', '#9999FF')
+        linecontainer2.set('stroke-width', '2')
+        linecontainer2.set('fill', 'none')
+        linecontainer1 = SubElement(ele, 'g')
+        linecontainer1.set('stroke', 'blue')
+        linecontainer1.set('stroke-width', '2')
+        linecontainer1.set('fill', 'none')
+        gline1 = ''
+        gline2 = ''
+        for i in range(0, len(year)):
+            gline1 += drawGraphLine(linecontainer1, float(year[i]), float(perc[i]), maxbot - minbot, maxside - minside, minbot, minside)
+        pline = SubElement(linecontainer1, 'polyline')
+        pline.set('points', gline1)
+        pline.set('id', 'pline1')
+        for i in range(0, len(year2)):
+            gline2 += drawGraphLine(linecontainer2, float(year2[i]), float(raw[i]), maxbot - minbot, maxside - minside, minbot, minside)
+        pline = SubElement(linecontainer2, 'polyline')
+        pline.set('points', gline2)
+        pline.set('id', 'pline2')
+        for i in range(0, 9):
             createLineBox(ele, int(year2[i]), int(year2[i])+1, minbot, maxbot - minbot, None, float(raw[i]), int(year2[i]), i)
-        for i in range(0, len(year)-1):
-            createLineBox(ele, int(year2[i+16]), int(year2[i+16])+1, minbot, maxbot - minbot, float(perc[i]), float(raw[i+16]), int(year2[i+16]), i+16)
+        for i in range(0, len(year)):
+            createLineBox(ele, int(year2[i+10-1]), int(year2[i+10-1])+1, minbot, maxbot - minbot, float(perc[i]), float(raw[i+10-1]), int(year2[i+10-1]), i+10-1)
         for i in range(0, int((maxbot - minbot)/10) + 1):
             if i % 2 == 0:
                 drawLine(ele, i * botstep, 250, i * botstep, 245, 2, 'black')
                 drawText(ele, (i * botstep) - (len(str(int((i*10)+minbot)))/2)*10, 270, str(int((i*10)+minbot)))
-        linecontainer2 = SubElement(ele, 'g')
-        linecontainer2.set('stroke', '#9999FF')
-        linecontainer2.set('stroke-width', '2')
-        linecontainer1 = SubElement(ele, 'g')
-        linecontainer1.set('stroke', 'blue')
-        linecontainer1.set('stroke-width', '2')
-        for i in range(0, len(year)-1):
-            drawGraphLine(linecontainer1, float(year[i]), float(perc[i]), float(year[i+1]), float(perc[i+1]), maxbot - minbot, maxside - minside, minbot, minside, i)
-        for i in range(0, len(year2)-1):
-            drawGraphLine(linecontainer2, float(year2[i]), float(raw[i]), float(year2[i+1]), float(raw[i+1]), maxbot - minbot, maxside - minside, minbot, minside, i)
-        drawMinLine(ele, perc, minside, maxside - minside)
         for i in range(0, int((maxside - minside)/5) + 1):
             drawLine(ele, 0, i * sidestep, 5, i * sidestep, 2, 'black')
-            drawText(ele, -30, 250 - (i * sidestep) + 5, str(int((i * 5) + minside)))
+            drawText(ele, -5, 250 - (i * sidestep) + 5, str(int((i * 5) + minside))).set('text-anchor', 'end')
             if int((i * 5) + minside) == 100:
                 drawLine(ele, 15, 250 - (i * sidestep), 485, 250 - (i * sidestep), 1, 'black')
         drawLine(ele, 0, 250, 500, 250, 2, 'black')
@@ -143,7 +145,7 @@ def renderGraph(ele, floc):
 
 def renderLabels(ele):
     botl =  'Year'
-    sidel = 'Averaged Flow Data'
+    sidel = 'Flow Volume (million acre-feet)'
     tex = drawText(ele, 25, 10 + 250 - (250 - (8* len(sidel))) / 2, sidel)
     tex.set('transform', 'rotate(-90 25,' + str(10 + 250 - (250 - (8 * len(sidel))) / 2) + ')')
     drawText(ele, (65+250) - (len(botl)*10)/2, 300, botl)
@@ -151,19 +153,22 @@ def renderLabels(ele):
 def createLineBox(ele, x1, x2, ymin, yrange, avg, raw, year, rot):
     box = highlightRange(ele, x1, x2, ymin, yrange)
     box.set('class', 'linebox')
-    box.set('fill', 'blue')
+    box.set('fill', 'black')
     box.set('opacity', '0')
     box.set('id', 'box' + str(rot))
     box.set('class', 'linebox')
-    css.text += '\n#box' + str(rot) + ':hover ~' + ' .num' + str(rot) + ' { opacity : 1 }'
+    css.text += '\n#box' + str(rot) + ':hover ~' + ' .num' + str(rot) + ' { opacity : 1 ;}'
     if avg == None:
-        text1 = drawText(ele, 15, 245, 'Average: NA')
+        value = ''
     else:
-        text1 = drawText(ele, 15, 245, 'Average: ' + str(round(avg, 2)))
+        value = str(round(avg, 2))
+    text1 = drawText(ele, 15, 245, '10-Year Average Flow Volume: ' + value + ' maf')
     text1.set('fill', 'blue')
     text1.set('opacity', '0')
     text1.set('font-weight', 'bold')
     text1.set('font-size', '12')
+    text1.set('stroke','black')
+    text1.set('stroke-width', '.5')
     text1.set('class', 'num' + str(rot))
     text2 = drawText(ele, 15, 15, 'Year: ' + str(year))
     text2.set('fill', 'black')
@@ -171,11 +176,13 @@ def createLineBox(ele, x1, x2, ymin, yrange, avg, raw, year, rot):
     text2.set('font-weight', 'bold')
     text2.set('font-size', '12')
     text2.set('class', 'num' + str(rot))
-    text3 = drawText(ele, 15, 230, 'Flow: ' + str(round(raw, 2)))
+    text3 = drawText(ele, 15, 230, 'Annual Flow Volume: ' + str(round(raw, 2))+ ' maf')
     text3.set('fill', '#9999FF')
     text3.set('opacity', '0')
     text3.set('font-weight', 'bold')
     text3.set('font-size', '12')
+    text3.set('stroke','black')
+    text3.set('stroke-width', '.5')
     text3.set('class', 'num' + str(rot))
     
 def drawMinLine(ele, percdata, pmin, prange):
