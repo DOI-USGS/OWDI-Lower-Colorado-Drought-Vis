@@ -33,11 +33,11 @@ def main():
     outsvg.close()
     
 def prettify(elem):
-    rough_string = ElementTree.tostring(elem, 'Windows-1252')
+    rough_string = ElementTree.tostring(elem)
     reparsed = minidom.parseString(rough_string)
     #xmlcss = reparsed.createProcessingInstruction('xml-stylesheet', 'type="text/css" href="../css/svg.css"')
     #reparsed.insertBefore(xmlcss, reparsed.firstChild)
-    return reparsed.toprettyxml(indent="  ", encoding="Windows-1252")
+    return reparsed.toprettyxml(indent="  ")
     
 def drawLine(ele, x1, y1, x2, y2, width = None, color = None):
     line = SubElement(ele, 'line')
