@@ -152,6 +152,11 @@ text {
     font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+#x-pictogram-sub-label {
+    font-size: 11px;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .caption {
     font-size: 12px;
     font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -178,4 +183,8 @@ text {
 
 #y-pictogram-label {
 	font-size: 1em;
+}
+
+#mead-elev-projected-svg {
+    margin-left: -0.25em;
 }

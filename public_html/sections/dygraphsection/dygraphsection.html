@@ -1,37 +1,33 @@
 <div class="widget">
 	<div class="sectionContent">
-		<p> Since 2000, the upper Colorado River basin has experienced the 15 driest years in over 100 years of historical recorded flows (Bureau of Reclamation), and one of the most severe droughts in the last 1200 years (Meko et al. 2012). </p>
-        <p>90% of the total basin water supply for both the upper and lower Colorado River basins comes from the upper basin (Bureau of Reclamation), so a drought in the upper basin has a significant impact on the lower basin. Of water supply from the upper basin, about 50% of streamflow comes from groundwater (Rumsey et al. 2015) </p>
-		
-		
-        <img id="usDroughtGif" src="{{baseUrl}}/img/usdrought.gif" alt="U.S. Drought"/>
-		
-		<button class="supportinginfo" id="section6Button">Supporting Info</button>
-		<div class="supportingInfoContent" id="section6Info">
-			<p> [Need BoR citations for ‘15 driest years in the >100 year historical record’ and ‘90% of total basin water supply comes from upper Colorado River basin’] </p>
-			<p> Meko, D.M., et al. 2007.Upper Colorado River Flow Reconstruction. IGBP PAGES/World Data Center for Paleoclimatology. Data Contribution Series # 2007-052. NOAA/NCDC Paleoclimatology Program, Boulder CO, USA. </p>
-			<p> Meko, D.M., C.A. Woodhouse, C.H. Baisan, T. Knight, J.J. Lukas, M.K. Hughes, and M.W. Salzer. 2007. Medieval drought in the upper Colorado River Basin. Geophysical Research Letters, Vol. 34, L10705, 24 May 2007. </p>
-            <p>Rumsey, Christine A., et al. "Regional scale estimates of baseflow and factors influencing baseflow in the Upper Colorado River Basin." Journal of Hydrology: Regional Studies 4 (2015): 91-107. </p>
-		</div>
+		<p> Since 2000, the Colorado River Basin has experienced the driest 16-year period in over 100 years of historical natural flows (Bureau of Reclamation, 2015) and one of the most severe droughts in the last 1,200 years (Meko et al., 2007a and 2007b). </p>
+            
+        <button class="supportinginfo" id="section6Button">Supporting Info</button>
         
-        <p> The impact of drought is also apparent in surface water. Streamflow in the Colorado River reflects drought conditions.
-        </p>
+        <div class="supportingInfoContent" id="section6Info">
+            <p>  Bureau of Reclamation, 2015. <a href="http://www.usbr.gov/lc/region/g4000/NaturalFlow/index.html" target="_blank">Colorado River Basin Natural Flow and Salt Data website</a>. </p>
+            
+            <p> Meko, D.M., et al. 2007a. <a href="ftp://ftp.ncdc.noaa.gov/pub/data/paleo/treering/reconstructions/northamerica/usa/upper-colorado-flow2007.txt" target="_blank">Upper Colorado River Flow Reconstruction</a>. IGBP PAGES/World Data Center for Paleoclimatology. Data Contribution Series # 2007-052. NOAA/NCDC Paleoclimatology Program, Boulder CO, USA. </p>
+            
+            <p> Meko, D.M., C.A. Woodhouse, C.H. Baisan, T. Knight, J.J. Lukas, M.K. Hughes, and M.W. Salzer. 2007b. <a href="http://onlinelibrary.wiley.com/doi/10.1029/2007GL029988/pdf" target="_blank">Medieval drought in the upper Colorado River Basin</a>. Geophysical Research Letters, Vol. 34, L10705.</p>
+
+        </div>
+       
+	   <p>The <a href="http://droughtmonitor.unl.edu/" target="_blank">U.S. Drought Monitor</a> shows the extent and intensity of drought conditions in the Western U.S. over time from 2000 to 2015.</p>
+	   
+	   	<a href="http://droughtmonitor.unl.edu/" target="_blank">
+        	<img id="usDroughtGif" src="{{baseUrl}}/img/usdrought.gif" alt="U.S. Drought"/>
+		</a>
         
-
-		<object id="droughtMovingAvg-object" data="img/droughtMovingAverage.svg" type="image/svg+xml">
-		</object>
-
-		<div class="graphCaption">
-			<p>Historical natural flow illustrates how streamflow responds to drought in the Colorado River basin. The plot above shows estimated <i>natural flow</i> at Lees Ferry, Arizona. <i>Natural flow</i> is the flow that would have occurred without human impacts such as reservoirs and upstream diversions. Lees Ferry is one of the uppermost stream gage locations in the Lower Colorado River Basin and is used as a proxy for water entering the Lower Basin via the Colorado River.
-			</p>
-			<p>Here, 15-year average natural flow at Lees Ferry shows periods of below and above average flow. The green bar indicates the period of reference for flow when water distributions were calculated, which occured during a particularly wet period of the 20th century. The most recent, 2000-2014 drought was the worst in the 20th century (and one of the worst 15-year periods in the last 1000 years).
-			</p>
-			<p>Historical observations are extended by a tree-ring reconstruction of streamflow going back approximately 1200 years, estimated by Meko et al. (2012). Because trees grow less during drought, tree ring cores can be used to estimate historical streamflow conditions going back many centuries. Tree ring samples were collected from locations throughout the upper basin to estimate historical, natural flow; and were validated using observed streamflow data. 
-			</p>
-			
-			<p class="explore-more"><a href="{{baseUrl}}/treeringdata/index.html" target="_blank"><img class="leaving" src="{{baseUrl}}/img/leavingapp-icon.png" alt="leaving application icon"/>Click here</a> to explore tree ring data</p>
-			
-		</div>
 	</div>
 </div>
+
+<script>
+    var button = $('#section6Button');
+    
+    button.click(function() {
+                 $('#section6Info').toggle();
+                 });
+                 
+    </script>
 

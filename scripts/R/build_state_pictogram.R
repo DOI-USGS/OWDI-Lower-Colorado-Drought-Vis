@@ -8,8 +8,6 @@ build_state_pictos <- function(svg, scale=100000){
   g_id <- newXMLNode('g',parent=root_nd,
              attrs=c(id="allocation-picto-highlight-3", class='hidden', stroke="none", fill="yellow"))
   newXMLNode('rect',parent=g_id,
-             attrs=c(x="154", y="270", width="28", height="14", rx="3", ry="3"))
-  newXMLNode('rect',parent=g_id,
              attrs=c(x="199", y="214", width="56", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
              attrs=c(x="269", y="200", width="14", height="14", rx="3", ry="3"))
@@ -19,16 +17,12 @@ build_state_pictos <- function(svg, scale=100000){
   g_id <- newXMLNode('g',parent=root_nd,
                      attrs=c(id="allocation-picto-highlight-2", class='hidden', stroke="none", fill="yellow"))
   newXMLNode('rect',parent=g_id,
-             attrs=c(x="168", y="270", width="14", height="14", rx="3", ry="3"))
-  newXMLNode('rect',parent=g_id,
              attrs=c(x="199", y="214", width="56", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
              attrs=c(x="157", y="104", width="14", height="14", rx="3", ry="3"))
   
   g_id <- newXMLNode('g',parent=root_nd,
                      attrs=c(id="allocation-picto-highlight-1", class='hidden', stroke="none", fill="yellow"))
-  newXMLNode('rect',parent=g_id,
-             attrs=c(x="168", y="270", width="14", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
              attrs=c(x="199", y="214", width="56", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
@@ -170,33 +164,15 @@ add_mexico <- function(root_nd,scale){
   x_start = 70
   y_start = 254
   block_picto(MX_id,x=x_start+14*6,y=y_start,number=2,'fill'='none')
-  y = block_picto(MX_id,x=x_start+28,y=y_start,number=4)
+  y = block_picto(MX_id,x=x_start+28,y=y_start,number=6)
   y = block_picto(MX_id,x=x_start,y=y,number=5)
   y = block_picto(MX_id,x=x_start,y=y,number=4)
   
   MX <- newXMLNode('g', parent=MX_id,
                    attrs = c('id'='Mexico-pictos-normal',class='shown'))
-  # -- full bucket, then partials
-  block_picto(MX,x=x_start+14*6,y=y_start,number=2,rx="0",ry="0",perc_full = 100,'stroke'='none')
-  
-  # -- add highlighter div on bottom --
-  
-  
-  MX <- newXMLNode('g', parent=MX_id,
-                   attrs = c('id'='Mexico-pictos-shortage1',class='shown'))
-  
-  
-  block_picto(MX,x=x_start+14*6,y=y_start,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
-  block_picto(MX,x=x_start+14*7,y=y_start,number=1,rx="0",ry="0", perc_full = (1-50000/scale)*100,'stroke'='none')
-  
-  MX <- newXMLNode('g', parent=MX_id,
-                   attrs = c('id'='Mexico-pictos-shortage2',class='shown'))
-  block_picto(MX,x=x_start+14*6,y=y_start,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
-  block_picto(MX,x=x_start+14*7,y=y_start,number=1,rx="0",ry="0", perc_full = (1-70000/scale)*100,'stroke'='none')
-  
-  MX <- newXMLNode('g', parent=MX_id,
-                   attrs = c('id'='Mexico-pictos-shortage3',class='shown'))
-  block_picto(MX,x=x_start+14*6,y=y_start,number=1,rx="0",ry="0",perc_full = (1-25000/scale)*100,'stroke'='none')
+#   # -- full bucket, then partials
+   block_picto(MX,x=x_start+14*6,y=y_start,number=2,rx="0",ry="0",perc_full = 100,'stroke'='none')
+
   
   m_id = newXMLNode('g', parent=MX_id,
                     attrs = c('id'='mexico-mouseovers', opacity='0', visibility='hidden'))

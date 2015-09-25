@@ -9,6 +9,7 @@ width=7.5
 height=7.6
 plot_dir = 'src_data/lower-co-map'
 svg_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
+min.contract = 15000
 simp_tol <- 7000
 grey_simp_tol <- 1.3*simp_tol # less res for non-highlighted states
 min_area <- 1e+10
@@ -16,8 +17,7 @@ epsg_code <- '+init=epsg:3479' #5070 for USGS CONUS albers?
 
 ylim <- c(-1806051, 1654371) # in epsg_code
 xlim <- c(-3193054, 5512372)
-n.users = 20
-top_users <- paste0('usage-',c(1:n.users))
+
 lo_co_states <- c("California","Nevada","Arizona")
 keep_non <- c("Texas","Utah","Colorado","New Mexico","Oregon","Wyoming","Oklahoma","Nebraska","Kansas")
 
@@ -29,7 +29,7 @@ user_styles = c('opacity'='0')
 co_river_styles = c('fill'='none', 'stroke-width'='4.5', 'stroke'='#1975d1', 'stroke-linejoin'="round", 
                     'style'="stroke-linejoin:round;stroke-linecap:round")
 co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round")
-top_user_styles = c('fill'='#E6E600', 'fill-opacity'='0.75', 'stroke-width'='2.5', 'stroke'='#E6E600', 'stroke-linejoin'="round")
+top_user_styles = c('fill'='#00CC99', 'fill-opacity'='0.75', 'stroke-width'='2.5', 'stroke'='#00CC99', 'stroke-linejoin'="round")
 
 
 mexico = readOGR(dsn = "src_data/mexico",layer="MEX_adm0") %>%
@@ -43,6 +43,10 @@ contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", strin
 
  
 sorted_contracts <- sort(as.numeric(contracts$mean),decreasing = T, index.return = T)
+sorted_contracts <- sorted_contracts[sorted_contracts$x > min.contract]
+n.users = length(sorted_contracts)
+top_users <- paste0('usage-',c(1:n.users))
+
 co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
 co_basin = readOGR(dsn = "src_data/CO_WBD", layer="WBDHU2_14-15-clean")
@@ -112,6 +116,7 @@ for (i in 1:n.users){
   spTransform(contracts[sorted_contracts$ix[i],], CRS(epsg_code)) %>%
     gSimplify(tol) %>%
     plot(add=TRUE)
+
 }
 
 

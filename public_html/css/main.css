@@ -11,6 +11,59 @@ nav {
 nav h3 {
 	color: #fff;
 }
+
+/*=====Leaving App CSS=====*/
+.leaving{
+	margin-right:3px;
+	}
+	
+.sectionContent .explore-more{
+	text-align:center;
+	}
+	
+.exploreMore{
+	border:1px solid #003366;
+	padding:10px 10px 0 10px;
+	border-radius:5px;
+	text-align:center !important;
+	margin:20px auto 20px auto !important;
+	}
+	
+.exploreMore img{
+	width:100%;
+	}
+	
+#dygraphExtra{
+	margin-top:20px;
+	}
+	
+#lakeMeadAnimatedExtra p{
+	font-weight:300;
+	margin-bottom:10px;
+	}
+	
+.exploreMore p,
+.downloadThis p{
+	text-align:center !important;
+	}
+	
+.extraButton{
+	background:#003366;
+	color:#fff;
+	padding:5px 15px;
+	border:none;
+	outline:none;
+	border-radius:3px;
+	font-size:.8em;
+	margin:-10px 0 10px 0;
+	}
+	
+.extraButton:hover{
+	background:#fff;
+	color:#003366;
+	border:1px solid #003366;
+	}
+
 /*=====Container CSS=====*/
 
 .container {
@@ -71,6 +124,17 @@ nav h3 {
 	height: 100%;
 }
 
+#waterSupplyVariableOverTimeContainer {
+	background-image: url('../img/keynotes/waterSupplyVariable-mobile.jpg');
+	background-position: center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
 #mainmMessageDroughtContainer {
 	background-image: url('../img/keynotes/drydirt-mobile.jpg');
 	background-position: center center;
@@ -83,7 +147,7 @@ nav h3 {
 }
 
 #basinReservoirContainer {
-	margin-bottom: 0px;
+	margin-bottom: 20px;
 }
 
 #mainMessage4Container {
@@ -98,7 +162,7 @@ nav h3 {
 }
 
 #mainMessage5Container {
-	background-image: url('../img/keynotes/keynote6-mobile.jpg');
+	background-image: url('../img/keynotes/oneRiverTwoParts-mobile.jpg');
 	background-position: center center;
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -125,7 +189,7 @@ nav h3 {
 	height: 100%;
 }
 
-#mainmMessage7Container {
+#mainMessage7Container {
 	background-image: url('../img/keynotes/keynote8-mobile.jpg');
 	background-position: center center;
 	background-position: center center;
@@ -137,6 +201,10 @@ nav h3 {
 	height: 100%;
 }
 
+#meadStaticContainer{
+	margin-bottom:20px;
+	}
+
 #meadAnimatedContainer {
 	background-position: center center;
 	background-position: center center;
@@ -145,6 +213,7 @@ nav h3 {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-repeat: no-repeat;
+	padding-top: 0px;
 }
 #endEraContainer {
 	background-image: url('../img/keynotes/keynote9-mobile.jpg');
@@ -169,6 +238,7 @@ nav h3 {
 	background-repeat: no-repeat;
 	height: 100%;
 }
+
 /*=====keynote css=====*/
 
 .keynote {
@@ -207,7 +277,8 @@ nav h3 {
 #keynote1 h2#emphasized{
 	font-weight:400;
 	}
-/*=====Container Content CSS=====*/
+	
+/*=====Container Section CSS=====*/
 
 .section {
 	position: relative;
@@ -254,29 +325,25 @@ nav h3 {
 .sectionContent ul li {
 	margin-bottom: 5px;
 }
+
 /*Supporting Info Buttons CSS*/
 
-.supportinginfo,
-.interact {
+.supportinginfo{
 	background: none;
 	color: #003366;
 	font-weight: bold;
 	padding: 10px;
 	border: 1px solid #003366;
 	border-radius: 5px;
-	margin: 20px 0 100px 0;
+	margin: 20px 0 50px 0;
 	outline: none;
 }
 
-.interact{
-	margin:-10px 0 20px 0;
-	}
-
-.supportinginfo:hover,
-.interact:hover{
+.supportinginfo:hover{
 	background: #003366;
 	color: #fff;
 }
+
 /*Supporting Info Content CSS*/
 
 .supportingInfoContent {
@@ -289,29 +356,27 @@ nav h3 {
 }
 
 .supportingInfoContent p {
-	margin-bottom: 10px;
+	margin-bottom: 0;
 	line-height: 1.5em;
 }
+
+/*=====Graph Caption CSS=====*/
 
 .graphCaption{
 	background:rgba(0,51,102,.2);
 	width:100%;
-	margin:20px 0 10px 0;
-	padding:10px;
+	margin:20px 0 20px 0;
+	padding:10px 10px 10px 10px;
 	border-radius:5px;
 	text-align:left;
 	}
-	
-.leaving{
-	margin-right:3px;
-	}
-	
-/*Photo Panel*/
+
+/*=====Photo Panel Mobile CSS=====*/
 #photoPanel img{
 		width:32.5%;
 		}
-
-/*Blue Dragon Section CSS*/
+	
+/*=====Blue Dragon CSS=====*/
 
 #blueDragon{
 		margin-bottom:20px;
@@ -323,43 +388,49 @@ nav h3 {
 	background:rgba(0,51,102,.2);
 	border-radius:5px;
 	}
+	
+/*=====dygraphsection CSS=====*/
 		
 #usDroughtGif{
 	margin-top:20px;
 	}
 	
-
-	
-.explore-more{
+#droughtMovingAvg-object{
 	margin-top:20px;
-	font-size:1.2em;
 	}
 	
-.sectionContent .explore-more{
-	text-align:center;
+#leesFerry{
+	margin-top:20px;
 	}
 	
-/*Black and white images*/
+/*=====Water-Usage Section CSS=====*/
+
+#JrGraph h2 {
+	font-size: 1em;
+}
 
 #black-white-images p{
 	margin-bottom:20px;
 	}
 	
 #black-white-images{
-	margin-top:50px;
+	margin-top:20px;
 	}
 	
 #black-white-images img{
 	margin-bottom:10px;
 	}
 	
-/*Water Usage Section CSS*/
+#animated-object{
+	display:none;
+	}
+	
+#animated-object-mobile{
+	display:block;
+	}
+	
 
-#JrGraph h2 {
-	font-size: 1em;
-}
-
-/*Before after CSS*/
+/*=====Before after CSS=====*/
 
 #before-after-reservoir,
 #hooverdam{
@@ -380,13 +451,17 @@ nav h3 {
 	margin-top: 25px;
 	width:100% !important;
 }
-	
-/*Lake Mead Animated Section CSS*/
 
+/*Lake Mead Animated Section CSS*/
 #meadSVGContainer h2 {
 	color: #fff;
 	margin-bottom: 30px;
-	;
+	width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 950px;
+    text-align: center;
 }
 
 .orangeLinks{
@@ -411,9 +486,59 @@ nav h3 {
 	display:none;
 	}
 	
+#meadAnimatedContainer {
+	max-width: 950px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .SVGInfo p{
 	margin-bottom:10px;
 	}
+	
+/*=====Last Section CSS=====*/
+#openWater{
+	margin-top:50px;
+	}
+	
+#collaboratorsCredit{
+	min-height:100px;
+	margin:20px 0 0 0;
+	}
+	
+#collaboratorsCredit h2{
+	text-align:left;
+	color:#000;
+	font-weight:300;
+	margin-bottom:10px;
+	}
+	
+#first{
+	margin-left:0;
+	}
+	
+.collaborator{
+	background:#B2B2B2;
+	height:100px;
+	margin:0 0 10px 0;
+	text-align:center;
+	}
+	
+@media screen and (min-width: 520px){
+	/*=====Basin Divided CSS=====*/
+
+	#blueDragonExplore{
+		margin-top:50px !important;
+		}
+		
+	#blueDragonExplore,
+	#basinExplore,
+	#dygraphExtra{
+		width:50%;
+		margin:0 auto;
+	}
+	
+}
 	
 @media screen and (min-width: 687px) {
 	nav {
@@ -436,7 +561,8 @@ nav h3 {
 	#mainMessage7Container,
 	#endEraContainer,
 	#finalMessageContainer,
-	#mainmMessageDroughtContainer{
+	#mainmMessageDroughtContainer,
+	#waterSupplyVariableOverTimeContainer{
 		-webkit-background-size: cover;
 		background-attachment: fixed;
 	}
@@ -452,6 +578,9 @@ nav h3 {
 	#mainMessage3Container {
 		background-image: url('../img/keynotes/keynote4.jpg');
 	}
+	#waterSupplyVariableOverTimeContainer {
+		background-image: url('../img/keynotes/waterSupplyVariable.jpg');
+	}
 	#mainmMessageDroughtContainer {
 		background-image: url('../img/keynotes/drydirt.jpg');
 	}
@@ -459,7 +588,7 @@ nav h3 {
 		background-image: url('../img/keynotes/keynote5.jpg');
 	}
 	#mainMessage5Container {
-		background-image: url('../img/keynotes/keynote6.jpg');
+		background-image: url('../img/keynotes/oneRiverTwoParts.jpg');
 	}
 	#mainMessage6Container {
 		background-image: url('../img/keynotes/keynote7.jpg');
@@ -473,6 +602,7 @@ nav h3 {
 	#finalMessageContainer {
 		background-image: url('../img/keynotes/keynote10.jpg');
 	}
+	
 	/*======keynote CSS======*/
 	
 	.keynote {
@@ -492,6 +622,13 @@ nav h3 {
 	#keynote2 h2 {
 		margin-top: 100px;
 	}
+	
+	/*======supporting info CSS======*/
+	
+	.supportinginfo{
+		margin-bottom:100px;
+		}
+		
 	/*======Content CSS======*/
 	
 	.sectionContent {
@@ -502,18 +639,9 @@ nav h3 {
 	.sectionContent h2{
 		font-size:1.3em;
 		}
-	/*Section 5 CSS*/
-	#texas-thumbnail{
-		width:70%;
-		}
-	
-	/*Black and white images*/
+		
 
-	#black-white-images p{
-		margin-bottom:50px;
-	}
-	
-	/*Section 9 CSS*/
+	/*======Water Usage Section CSS======*/
 	
 	#JrGraph h2 {
 		font-size: 1.5em;
@@ -522,26 +650,41 @@ nav h3 {
 		font-size: 1em !important;
 	}
 	
-	/*Section 16 CSS*/
-	.SVGInfo{
-		width:760px;
+	/*======Before After Section CSS======*/
+	
+	#before-after-section figure{
+		margin-top:50px;
 		}
+	
+	/*======Lake Mead Animated Section CSS======*/
 		
-	#meadSVGContainer object {
-		margin-left: 0%;
-                width: 800px;
-	}
 	#natural-flow-graph {
 		width: 80%;
 		height: 600px;
 	}
+	.collaborator{
+		width:32.6%;
+		float:left;
+		margin-left:1%;
+	}
+}
+
+@media screen and (min-width: 768px){
+	#animated-object{
+		display:block;
+	}
+	
+	#animated-object-mobile{
+		display:none;
+	}
 }
 
 @media screen and (min-width: 1025px) {
-	/*Keynote CSS*/
+	
+	/*======keynote CSS======*/
 	
 	.keynote {
-		width: 980px;
+		width: 960px;
 	}
 	.keynote h1 {
 		font-size: 2em;
@@ -549,8 +692,8 @@ nav h3 {
 	.keynote h2 {
 		font-size: 1.9em;
 	}
-	/*Section Content CSS*/
-	
+
+	/*======Section Content CSS======*/
 	.sectionContent {
 		width: 900px;
 	}
@@ -559,16 +702,16 @@ nav h3 {
 	}
 	
 	.graphCaption{
-		width:900px;
-		margin:0 auto;
+		margin:0 auto 10px auto;
 		}
 		
-	/*Photo Panel*/
+	/*======Photo Panel CSS======*/
+	
 	#photoPanel img{
 		width:33%;
 		}
 	
-	/*Blue Dragon Section CSS*/
+	/*======Blue Dragon Section CSS======*/
 	
 	#blueDragon{
 		width:800px;
@@ -581,37 +724,60 @@ nav h3 {
 		
 	#dragonText{
 		position:absolute;
-		top:100px;
-		right:-100px;
-		max-width:400px;
-		max-height: 40em;
-		overflow-y: scroll;
-	}
+		top:800px;
+		right:0;
+		width:200px;
+		}
 		
+	#blueDragonExplore{
+		width:50%;
+		margin:20px auto;
+		}
+		
+	/*======dygraph Section CSS======*/	
+	
 	#natural-flow-graph{
 		width:100% !important;
 		margin:0 auto 20px 0;
 		margin-left:-10px;
 		}
 		
-	#co-basin-object{
-		margin-top:50px;
-	}
+	#dygraphExtra{
+		width:50%;
+		margin:20px auto;
+		}
+	
+	/*======app-explanation CSS======*/	
 		
-	/*Water Usage CSS*/
+	
+	
+	
+	/*======Water Usage Section CSS======*/	
+	
+	#basinReservoirContainer{
+		margin-bottom: 100px;
+	}
+	
+	#black-white-images{
+		margin-top:100px;
+		}
 	
 	#JrGraph {
 		width: 900px;
 		margin: 0 auto;
 	}
-	/*before after css*/
+	
+	/*======before after Section CSS======*/	
+	
 	.extraPics img{
 		width:33%;
 	}
-	/*Lake Mead Animated CSS*/
 	
-	#meadSVGContainer {
-		width: 760px;
-		margin: 0 auto;
-	}
+	/*=====lake mead animated===*/
+	
+	#lakeMeadAnimatedExtra{
+		width:60%;
+		margin:20px auto;
+		}
+
 }

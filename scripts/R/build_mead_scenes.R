@@ -26,7 +26,7 @@ mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', 'fill
 contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
 sorted_contracts <- sort(as.numeric(contracts$mean),decreasing = T, index.return = T)
 non_zero_cont <- as.numeric(contracts$mean[sorted_contracts$ix])
-non_zero_cont <- non_zero_cont[1:20]
+non_zero_cont <- non_zero_cont[non_zero_cont > 15000]
 
 picto_scale = 100000 # acre-feet per bin
 mead_poly <- c(x1=545,y1=20,x2=545,y2=450,x3=410,y3=450,x4=290,y4= 20)
@@ -35,14 +35,15 @@ mead_names <- c(group_id='Mead-2D', water_id='Mead-water-level', border_id='Mead
 ani_dur <- c('mead-draw'="2s", 'mead-remove'='1s','stage-move'='1s',
              'river-draw'='5s','river-reset'='1s','basin-draw'='1s')
 
-
+contract_values <- prettyNum(round(as.numeric(contracts[sorted_contracts$ix,]$mean)),big.mark=",",scientific=FALSE)
+contract_titles <- gsub("\\b([a-z])([a-z]+)", "\\U\\1\\L\\2" ,tolower(contracts[sorted_contracts$ix,]$Contractor), perl=TRUE)
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
   add_flag_defs(id = 'usa-flag', x=0,y=-100, width=500,height=500, image_url='https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg') %>% 
   add_flag_defs(id = 'mexico-flag', x=120,y=150, width=650,height=547, image_url='https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg') %>% 
   edit_attr_svg(c('viewBox'='-50 0 640 547', 'onload'='init(evt)')) %>% 
-  add_rect(x="-50", width="640", height="547", fill="url(#background-image)", at=0, rx='6',ry='6', id='background-panel') %>%
+  add_rect(x="-50", width="100%", height="100%", style="max-width=950px", fill="url(#background-image)", at=0, rx='6',ry='6', id='background-panel') %>%
   add_scene_buttons() %>% 
   add_picto_legend() %>% 
   remove_svg_elements(elements = c('delete_group'='g')) %>% 
@@ -51,7 +52,7 @@ svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-backgr
   attr_svg_paths(attrs = list('California'=c("class"="california"), 'Nevada'=c("class"="nevada"), 'Arizona'=c("class"="arizona"),'Mexico'=c("class"="mexico"))) %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'draw-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="331;0;") %>%
   add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'reset-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values="0;331;") %>%
-  usage_bar_pictogram(values = non_zero_cont, value_mouse = contracts[sorted_contracts$ix,]$Contractor, value_contract = contracts[sorted_contracts$ix,]$mean, 
+  usage_bar_pictogram(values = non_zero_cont, value_mouse = contract_titles, value_contract = contract_values, 
                       scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
   add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
   build_state_pictos() %>%
