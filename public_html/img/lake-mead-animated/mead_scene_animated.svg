@@ -15,12 +15,12 @@ var elevations = {"flood":"> 1,200",
 "shortage-1":"1,050-1,075",
 "shortage-2":"1,025-1,050",
 "shortage-3":"< 1,025"}
-var storages = {"flood":"26.1",
-"surplus":"> 23.1",
-"normal":"16.2 to 23.1",
-"shortage-1":"9.6 to 16.2",
-"shortage-2":"7.7 tp 9.6",
-"shortage-3":"6.0 to 7.7"}
+var storages = {"flood":"> 23.1",
+"surplus":"16.2 to 23.1",
+"normal":"9.6 to 16.2",
+"shortage-1":"7.7 tp 9.6",
+"shortage-2":"6.0 to 7.7",
+"shortage-3":"< 6.0"}
 var conditions = 
 {"flood":"Flood Control Surplus",
 "surplus":"Quantified & Domestic Surplus",
