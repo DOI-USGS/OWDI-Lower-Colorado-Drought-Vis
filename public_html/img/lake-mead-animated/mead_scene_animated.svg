@@ -16,14 +16,14 @@ var elevations = {"flood":"> 1,200",
 "shortage-2":"1,025-1,050",
 "shortage-3":"< 1,025"}
 var storages = {"flood":"26.1",
-"surplus":"23.1",
-"normal":"16.2",
-"shortage-1":"9.6",
-"shortage-2":"7.7",
-"shortage-3":"6.0"}
+"surplus":"> 23.1",
+"normal":"16.2 to 23.1",
+"shortage-1":"9.6 to 16.2",
+"shortage-2":"7.7 tp 9.6",
+"shortage-3":"6.0 to 7.7"}
 var conditions = 
 {"flood":"Flood Control Surplus",
-"surplus":"Domestic Surplus",
+"surplus":"Quantified & Domestic Surplus",
 "normal":"Normal Condition",
 "shortage-1":"Shortage Condition Tier 1",
 "shortage-2":"Shortage Condition Tier 2",
@@ -63,7 +63,7 @@ document.getElementById("allocation-context").firstChild.data = conditions[state
 }
 function setMeadCondition(storage_id){
 document.getElementById("allocation-state").firstChild.data = storage_id
-document.getElementById("mead-storage-text").firstChild.data = "Storage: " + storages[storage_id] + " maf"
+document.getElementById("mead-storage-text").firstChild.data = storages[storage_id] + " maf"
 document.getElementById("mead-elevation-text").firstChild.data = "Elevation: " + elevations[storage_id] + " feet"
 document.getElementById("mead-condition-text").firstChild.data = conditions[storage_id]
 }
@@ -481,7 +481,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
         <rect x="30" y="-134.46438" width="10" height="4.46438000000001" rx="0" ry="0" stroke="none"/>
         <rect x="30" y="-140" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-3" x="28" y="-142" width="14" height="140" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Metropolitan Water District');displayPictoValue(evt, '  944,644 acre-feet');document.getElementById('picto-highlight-3').setAttribute('opacity','0.8');document.getElementById('usage-3').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-3').setAttribute('opacity','0.0');document.getElementById('usage-3').setAttribute('opacity','0.0');"/>
+      <rect id="picto-3" x="28" y="-142" width="14" height="140" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Metropolitan Water District');displayPictoValue(evt, '944,644 acre-feet');document.getElementById('picto-highlight-3').setAttribute('opacity','0.8');document.getElementById('usage-3').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-3').setAttribute('opacity','0.0');document.getElementById('usage-3').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-4" transform="translate(25.0,486.0)">
       <rect x="42" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-4"/>
@@ -492,7 +492,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
         <rect x="44" y="-52.20612" width="10" height="6.20612" rx="0" ry="0" stroke="none"/>
         <rect x="44" y="-56" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-4" x="42" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Palo Verde Irrigation District');displayPictoValue(evt, '  362,061 acre-feet');document.getElementById('picto-highlight-4').setAttribute('opacity','0.8');document.getElementById('usage-4').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-4').setAttribute('opacity','0.0');document.getElementById('usage-4').setAttribute('opacity','0.0');"/>
+      <rect id="picto-4" x="42" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Palo Verde Irrigation District');displayPictoValue(evt, '362,061 acre-feet');document.getElementById('picto-highlight-4').setAttribute('opacity','0.8');document.getElementById('usage-4').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-4').setAttribute('opacity','0.0');document.getElementById('usage-4').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-5" transform="translate(25.0,486.0)">
       <rect x="56" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-5"/>
@@ -503,7 +503,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
         <rect x="58" y="-48.51148" width="10" height="2.51148" rx="0" ry="0" stroke="none"/>
         <rect x="58" y="-56" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-5" x="56" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Coachella Valley Water District');displayPictoValue(evt, '  325,115 acre-feet');document.getElementById('picto-highlight-5').setAttribute('opacity','0.8');document.getElementById('usage-5').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-5').setAttribute('opacity','0.0');document.getElementById('usage-5').setAttribute('opacity','0.0');"/>
+      <rect id="picto-5" x="56" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Coachella Valley Water District');displayPictoValue(evt, '325,115 acre-feet');document.getElementById('picto-highlight-5').setAttribute('opacity','0.8');document.getElementById('usage-5').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-5').setAttribute('opacity','0.0');document.getElementById('usage-5').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-6" transform="translate(25.0,486.0)">
       <rect x="70" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-6"/>
@@ -513,7 +513,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
         <rect x="72" y="-35.73014" width="10" height="3.73014" rx="0" ry="0" stroke="none"/>
         <rect x="72" y="-42" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-6" x="70" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma County Water Users Association');displayPictoValue(evt, '  237,301 acre-feet');document.getElementById('picto-highlight-6').setAttribute('opacity','0.8');document.getElementById('usage-6').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-6').setAttribute('opacity','0.0');document.getElementById('usage-6').setAttribute('opacity','0.0');"/>
+      <rect id="picto-6" x="70" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma County Water Users Association');displayPictoValue(evt, '237,301 acre-feet');document.getElementById('picto-highlight-6').setAttribute('opacity','0.8');document.getElementById('usage-6').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-6').setAttribute('opacity','0.0');document.getElementById('usage-6').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-7" transform="translate(25.0,486.0)">
       <rect x="84" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-7"/>
@@ -523,7 +523,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
         <rect x="86" y="-32.25156" width="10" height="0.25156" rx="0" ry="0" stroke="none"/>
         <rect x="86" y="-42" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-7" x="84" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Robert b. Griffith Water Project');displayPictoValue(evt, '  202,516 acre-feet');document.getElementById('picto-highlight-7').setAttribute('opacity','0.8');document.getElementById('usage-7').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-7').setAttribute('opacity','0.0');document.getElementById('usage-7').setAttribute('opacity','0.0');"/>
+      <rect id="picto-7" x="84" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Robert b. Griffith Water Project');displayPictoValue(evt, '202,516 acre-feet');document.getElementById('picto-highlight-7').setAttribute('opacity','0.8');document.getElementById('usage-7').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-7').setAttribute('opacity','0.0');document.getElementById('usage-7').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-8" transform="translate(25.0,486.0)">
       <rect x="98" y="-30" width="14" height="28" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-8"/>
@@ -532,7 +532,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
         <rect x="100" y="-27.6214" width="10" height="9.6214" rx="0" ry="0" stroke="none"/>
         <rect x="100" y="-28" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-8" x="98" y="-30" width="14" height="28" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Colorado River Indian Reservation');displayPictoValue(evt, '  196,214 acre-feet');document.getElementById('picto-highlight-8').setAttribute('opacity','0.8');document.getElementById('usage-8').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-8').setAttribute('opacity','0.0');document.getElementById('usage-8').setAttribute('opacity','0.0');"/>
+      <rect id="picto-8" x="98" y="-30" width="14" height="28" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Colorado River Indian Reservation');displayPictoValue(evt, '196,214 acre-feet');document.getElementById('picto-highlight-8').setAttribute('opacity','0.8');document.getElementById('usage-8').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-8').setAttribute('opacity','0.0');document.getElementById('usage-8').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-9" transform="translate(25.0,486.0)">
       <rect x="112" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-9"/>
@@ -540,7 +540,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
         <rect x="114" y="-7.73678" width="10" height="3.73678" rx="0" ry="0" stroke="none"/>
         <rect x="114" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-9" x="112" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Irrigation District');displayPictoValue(evt, '   37,368 acre-feet');document.getElementById('picto-highlight-9').setAttribute('opacity','0.8');document.getElementById('usage-9').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-9').setAttribute('opacity','0.0');document.getElementById('usage-9').setAttribute('opacity','0.0');"/>
+      <rect id="picto-9" x="112" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Irrigation District');displayPictoValue(evt, '37,368 acre-feet');document.getElementById('picto-highlight-9').setAttribute('opacity','0.8');document.getElementById('usage-9').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-9').setAttribute('opacity','0.0');document.getElementById('usage-9').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-10" transform="translate(25.0,486.0)">
       <rect x="126" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-10"/>
@@ -548,7 +548,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
         <rect x="128" y="-5.78186" width="10" height="1.78186" rx="0" ry="0" stroke="none"/>
         <rect x="128" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-10" x="126" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Fort Mojave Indian Reservation');displayPictoValue(evt, '   17,819 acre-feet');document.getElementById('picto-highlight-10').setAttribute('opacity','0.8');document.getElementById('usage-10').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-10').setAttribute('opacity','0.0');document.getElementById('usage-10').setAttribute('opacity','0.0');"/>
+      <rect id="picto-10" x="126" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Fort Mojave Indian Reservation');displayPictoValue(evt, '17,819 acre-feet');document.getElementById('picto-highlight-10').setAttribute('opacity','0.8');document.getElementById('usage-10').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-10').setAttribute('opacity','0.0');document.getElementById('usage-10').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-11" transform="translate(25.0,486.0)">
       <rect x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-11"/>
@@ -556,7 +556,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
         <rect x="142" y="-5.50892" width="10" height="1.50892" rx="0" ry="0" stroke="none"/>
         <rect x="142" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-11" x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'City Of Henderson');displayPictoValue(evt, '   15,089 acre-feet');document.getElementById('picto-highlight-11').setAttribute('opacity','0.8');document.getElementById('usage-11').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-11').setAttribute('opacity','0.0');document.getElementById('usage-11').setAttribute('opacity','0.0');"/>
+      <rect id="picto-11" x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'City Of Henderson');displayPictoValue(evt, '15,089 acre-feet');document.getElementById('picto-highlight-11').setAttribute('opacity','0.8');document.getElementById('usage-11').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-11').setAttribute('opacity','0.0');document.getElementById('usage-11').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-12" transform="translate(25.0,486.0)">
       <rect x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-12"/>
@@ -564,7 +564,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
         <rect x="156" y="-5.50828" width="10" height="1.50828" rx="0" ry="0" stroke="none"/>
         <rect x="156" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-12" x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Mohave Valley i.d.d.');displayPictoValue(evt, '   15,083 acre-feet');document.getElementById('picto-highlight-12').setAttribute('opacity','0.8');document.getElementById('usage-12').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-12').setAttribute('opacity','0.0');document.getElementById('usage-12').setAttribute('opacity','0.0');"/>
+      <rect id="picto-12" x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Mohave Valley i.d.d.');displayPictoValue(evt, '15,083 acre-feet');document.getElementById('picto-highlight-12').setAttribute('opacity','0.8');document.getElementById('usage-12').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-12').setAttribute('opacity','0.0');document.getElementById('usage-12').setAttribute('opacity','0.0');"/>
     </g>
   </g>
   <g id="Mead-2D" class="hidden">
@@ -577,7 +577,8 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
       <text id="mead-elevation-text" class="small-text" x="538" fill="#FFFFFF" dy="2.8em" stroke="none" style="text-anchor:end;">  </text>
       <text id="mead-condition-text" class="small-text" x="538" fill="#FFFFFF" dy="4.2em" stroke="none" style="text-anchor:end;">  </text>
     </g>
-    <text id="mead-storage-text" class="label" x="476" y="440" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
+    <text id="mead-storage-text" class="label" x="476" y="443" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
+    <text id="mead-storage-label" class="label" dy="-1.1em" x="476" y="443" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">Live Storage:</text>
     <text id="allocation-info" class="label" x="55" y="450" fill="#FFFFFF" stroke="none" style="text-anchor:start;">  </text>
     <text id="allocation-value" class="label" x="385" y="510" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
     <text id="allocation-context" class="label" x="385" y="510" dy="1.2em" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
