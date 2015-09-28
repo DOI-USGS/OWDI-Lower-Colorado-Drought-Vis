@@ -17,11 +17,6 @@ nav h3 {
 	margin-right:3px;
 	}
 	
-.explore-more{
-	margin:0 !important;
-	font-size:1.2em;
-	}
-	
 .sectionContent .explore-more{
 	text-align:center;
 	}
@@ -31,7 +26,7 @@ nav h3 {
 	padding:10px 10px 0 10px;
 	border-radius:5px;
 	text-align:center !important;
-	margin:20px 0 20px 0;
+	margin:20px auto 20px auto !important;
 	}
 	
 .exploreMore img{
@@ -361,7 +356,7 @@ nav h3 {
 }
 
 .supportingInfoContent p {
-	margin-bottom: 10px;
+	margin-bottom: 0;
 	line-height: 1.5em;
 }
 
@@ -371,7 +366,7 @@ nav h3 {
 	background:rgba(0,51,102,.2);
 	width:100%;
 	margin:20px 0 20px 0;
-	padding:10px 10px 2px 10px;
+	padding:10px 10px 10px 10px;
 	border-radius:5px;
 	text-align:left;
 	}
@@ -380,7 +375,7 @@ nav h3 {
 #photoPanel img{
 		width:32.5%;
 		}
-
+	
 /*=====Blue Dragon CSS=====*/
 
 #blueDragon{
@@ -424,6 +419,14 @@ nav h3 {
 	
 #black-white-images img{
 	margin-bottom:10px;
+	}
+	
+#animated-object{
+	display:none;
+	}
+	
+#animated-object-mobile{
+	display:block;
 	}
 	
 
@@ -522,10 +525,19 @@ nav h3 {
 	}
 	
 @media screen and (min-width: 520px){
+	/*=====Basin Divided CSS=====*/
+
 	#blueDragonExplore{
-		width:60%;
+		margin-top:50px !important;
+		}
+		
+	#blueDragonExplore,
+	#basinExplore,
+	#dygraphExtra{
+		width:50%;
 		margin:0 auto;
 	}
+	
 }
 	
 @media screen and (min-width: 687px) {
@@ -657,6 +669,16 @@ nav h3 {
 	}
 }
 
+@media screen and (min-width: 768px){
+	#animated-object{
+		display:block;
+	}
+	
+	#animated-object-mobile{
+		display:none;
+	}
+}
+
 @media screen and (min-width: 1025px) {
 	
 	/*======keynote CSS======*/
@@ -702,7 +724,7 @@ nav h3 {
 		
 	#dragonText{
 		position:absolute;
-		top:100px;
+		top:800px;
 		right:0;
 		width:200px;
 		}

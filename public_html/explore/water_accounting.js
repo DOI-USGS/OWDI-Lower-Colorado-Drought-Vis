@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 	owdiDrought.waterAccounting.styles = {
 		watershed: {
-			"fillOpacity": 0.2,
+			"fillOpacity": 0.55,
 			"color": "#9d9d9d",
 			"weight": 2,
 			"fillColor": "#9d9d9d"
@@ -97,6 +97,10 @@ $(document).ready(function() {
 		}
 		return value;
 	}
+	
+	function numberWithCommas(x) {
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
 
 	// Info control
 	owdiDrought.waterAccounting.info = L.control();
@@ -106,8 +110,8 @@ $(document).ready(function() {
 		return this._div;
 	};
 	owdiDrought.waterAccounting.info.update = function(props) {
-		this._div.innerHTML = '<h2>Lower Colorado River Water Use Contracts</h2><br /> <h4>Five Year Mean</h4>' + (props ?
-			'<b>' + props.Contractor + '</b><br />' + props.mean + ' acre feet' : 'Hover over a contractor polygon');
+		this._div.innerHTML = '<h2>Information on Lower Colorado River Water Entitlement Holders</h2><br /> <h4>Five Year Average (2010-2014)</h4>' + (props ?
+			'<b>' + props.Contractor + '</b><br />' + numberWithCommas(Math.round(props.mean)) + ' acre feet' : 'Hover over a district');
 	};
 	owdiDrought.waterAccounting.info.addTo(owdiDrought.waterAccounting.map);
 
@@ -130,7 +134,7 @@ $(document).ready(function() {
 				from + (to ? '&ndash;' + to : '+'));
 		}
 		labels.push(
-			'<br/><i style="background:' + '#9d9d9d' + '"></i>Colorado River Watershed');
+			'<br/><i style="background:' + '#9d9d9d' + '"></i>Colorado River Basin');
 
 		div.innerHTML = labels.join('<br>');
 		return div;

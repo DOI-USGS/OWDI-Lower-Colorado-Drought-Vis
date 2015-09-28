@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="Windows-1252"?>
 <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">text {font-family: Sans-Serif; pointer-events: none ;}.linebox:hover { opacity : .25 }
 #box0:hover ~ .num0 { opacity : 1 ;}
@@ -111,1081 +111,462 @@
 #box107:hover ~ .num107 { opacity : 1 ;}
 #box108:hover ~ .num108 { opacity : 1 ;}
 #box109:hover ~ .num109 { opacity : 1 ;}</style>
+  <body>
+    <script>
+      <!-- -->
+<![CDATA[window.onload = function() {drawLines();};function drawLines() {line1 = document.getElementById("pline1");points1 = line1.getAttribute("points");line1.setAttribute("points", "");pointl1 = points1.split(" ");tpoints1 = [];allpoints1 = "";i21 = 0;for(i11 = 0; i11 < pointl1.length; i11++){allpoints1 += pointl1[i11] + " ";tpoints1[i11] = allpoints1;window.setTimeout(function() {line1.setAttribute("points", tpoints1[i21]); i21++;}, i11*25);} line1.setAttribute("points", tpoints1[i21] + "0,0"); line2 = document.getElementById("pline2");points2 = line2.getAttribute("points");line2.setAttribute("points", "");pointl2 = points2.split(" ");tpoints2 = [];allpoints2 = "";i22 = 0;for(i12 = 0; i12 < pointl2.length; i12++){allpoints2 += pointl2[i12] + " ";tpoints2[i12] = allpoints2;window.setTimeout(function() {line2.setAttribute("points", tpoints2[i22]); i22++;}, i12*25);}}]]>      <!-- -->
+    </script>
+  </body>
   <g>
     <g transform="translate(65 10)">
       <rect fill="#A3FF75" height="250" width="66.6666666667" x="25.0" y="0"/>
       <rect fill="#CCCCB2" height="250" width="66.6666666667" x="416.666666667" y="0"/>
-      <g stroke="#9999FF" stroke-width="2">
-        <line x1="25.0" x2="29.1666666667" y1="78.453" y2="51.3426375">
-          <animate attributeName="visibility" dur="0.0" from="hidden" to="visible"/>
-        </line>
-        <line x1="29.1666666667" x2="33.3333333333" y1="51.3426375" y2="166.112225">
-          <animate attributeName="visibility" dur="0.05" from="hidden" to="visible"/>
-        </line>
-        <line x1="33.3333333333" x2="37.5" y1="166.112225" y2="35.02335">
-          <animate attributeName="visibility" dur="0.1" from="hidden" to="visible"/>
-        </line>
-        <line x1="37.5" x2="41.6666666667" y1="35.02335" y2="130.0419375">
-          <animate attributeName="visibility" dur="0.15" from="hidden" to="visible"/>
-        </line>
-        <line x1="41.6666666667" x2="45.8333333333" y1="130.0419375" y2="116.874725">
-          <animate attributeName="visibility" dur="0.2" from="hidden" to="visible"/>
-        </line>
-        <line x1="45.8333333333" x2="50.0" y1="116.874725" y2="79.7074375">
-          <animate attributeName="visibility" dur="0.25" from="hidden" to="visible"/>
-        </line>
-        <line x1="50.0" x2="54.1666666667" y1="79.7074375" y2="130.79525">
-          <animate attributeName="visibility" dur="0.3" from="hidden" to="visible"/>
-        </line>
-        <line x1="54.1666666667" x2="58.3333333333" y1="130.79525" y2="45.5648375">
-          <animate attributeName="visibility" dur="0.35" from="hidden" to="visible"/>
-        </line>
-        <line x1="58.3333333333" x2="62.5" y1="45.5648375" y2="142.2091">
-          <animate attributeName="visibility" dur="0.4" from="hidden" to="visible"/>
-        </line>
-        <line x1="62.5" x2="66.6666666667" y1="142.2091" y2="60.7139375">
-          <animate attributeName="visibility" dur="0.45" from="hidden" to="visible"/>
-        </line>
-        <line x1="66.6666666667" x2="70.8333333333" y1="60.7139375" y2="25.71495">
-          <animate attributeName="visibility" dur="0.5" from="hidden" to="visible"/>
-        </line>
-        <line x1="70.8333333333" x2="75.0" y1="25.71495" y2="114.1757875">
-          <animate attributeName="visibility" dur="0.55" from="hidden" to="visible"/>
-        </line>
-        <line x1="75.0" x2="79.1666666667" y1="114.1757875" y2="154.3579125">
-          <animate attributeName="visibility" dur="0.6" from="hidden" to="visible"/>
-        </line>
-        <line x1="79.1666666667" x2="83.3333333333" y1="154.3579125" y2="33.9046125">
-          <animate attributeName="visibility" dur="0.65" from="hidden" to="visible"/>
-        </line>
-        <line x1="83.3333333333" x2="87.5" y1="33.9046125" y2="30.9152125">
-          <animate attributeName="visibility" dur="0.7" from="hidden" to="visible"/>
-        </line>
-        <line x1="87.5" x2="91.6666666667" y1="30.9152125" y2="81.91005">
-          <animate attributeName="visibility" dur="0.75" from="hidden" to="visible"/>
-        </line>
-        <line x1="91.6666666667" x2="95.8333333333" y1="81.91005" y2="74.6994125">
-          <animate attributeName="visibility" dur="0.8" from="hidden" to="visible"/>
-        </line>
-        <line x1="95.8333333333" x2="100.0" y1="74.6994125" y2="139.0275375">
-          <animate attributeName="visibility" dur="0.85" from="hidden" to="visible"/>
-        </line>
-        <line x1="100.0" x2="104.166666667" y1="139.0275375" y2="132.1162125">
-          <animate attributeName="visibility" dur="0.9" from="hidden" to="visible"/>
-        </line>
-        <line x1="104.166666667" x2="108.333333333" y1="132.1162125" y2="122.328375">
-          <animate attributeName="visibility" dur="0.95" from="hidden" to="visible"/>
-        </line>
-        <line x1="108.333333333" x2="112.5" y1="122.328375" y2="68.25985">
-          <animate attributeName="visibility" dur="1.0" from="hidden" to="visible"/>
-        </line>
-        <line x1="112.5" x2="116.666666667" y1="68.25985" y2="100.5708125">
-          <animate attributeName="visibility" dur="1.05" from="hidden" to="visible"/>
-        </line>
-        <line x1="116.666666667" x2="120.833333333" y1="100.5708125" y2="39.6302">
-          <animate attributeName="visibility" dur="1.1" from="hidden" to="visible"/>
-        </line>
-        <line x1="120.833333333" x2="125.0" y1="39.6302" y2="129.737">
-          <animate attributeName="visibility" dur="1.15" from="hidden" to="visible"/>
-        </line>
-        <line x1="125.0" x2="129.166666667" y1="129.737" y2="206.5733375">
-          <animate attributeName="visibility" dur="1.2" from="hidden" to="visible"/>
-        </line>
-        <line x1="129.166666667" x2="133.333333333" y1="206.5733375" y2="94.722675">
-          <animate attributeName="visibility" dur="1.25" from="hidden" to="visible"/>
-        </line>
-        <line x1="133.333333333" x2="137.5" y1="94.722675" y2="160.206225">
-          <animate attributeName="visibility" dur="1.3" from="hidden" to="visible"/>
-        </line>
-        <line x1="137.5" x2="141.666666667" y1="160.206225" y2="235.272625">
-          <animate attributeName="visibility" dur="1.35" from="hidden" to="visible"/>
-        </line>
-        <line x1="141.666666667" x2="145.833333333" y1="235.272625" y2="154.6206375">
-          <animate attributeName="visibility" dur="1.4" from="hidden" to="visible"/>
-        </line>
-        <line x1="145.833333333" x2="150.0" y1="154.6206375" y2="129.3891125">
-          <animate attributeName="visibility" dur="1.45" from="hidden" to="visible"/>
-        </line>
-        <line x1="150.0" x2="154.166666667" y1="129.3891125" y2="133.6743">
-          <animate attributeName="visibility" dur="1.5" from="hidden" to="visible"/>
-        </line>
-        <line x1="154.166666667" x2="158.333333333" y1="133.6743" y2="85.6460125">
-          <animate attributeName="visibility" dur="1.55" from="hidden" to="visible"/>
-        </line>
-        <line x1="158.333333333" x2="162.5" y1="85.6460125" y2="172.949225">
-          <animate attributeName="visibility" dur="1.6" from="hidden" to="visible"/>
-        </line>
-        <line x1="162.5" x2="166.666666667" y1="172.949225" y2="188.3543">
-          <animate attributeName="visibility" dur="1.65" from="hidden" to="visible"/>
-        </line>
-        <line x1="166.666666667" x2="170.833333333" y1="188.3543" y2="61.0415375">
-          <animate attributeName="visibility" dur="1.7" from="hidden" to="visible"/>
-        </line>
-        <line x1="170.833333333" x2="175.0" y1="61.0415375" y2="97.1858">
-          <animate attributeName="visibility" dur="1.75" from="hidden" to="visible"/>
-        </line>
-        <line x1="175.0" x2="179.166666667" y1="97.1858" y2="140.8574875">
-          <animate attributeName="visibility" dur="1.8" from="hidden" to="visible"/>
-        </line>
-        <line x1="179.166666667" x2="183.333333333" y1="140.8574875" y2="120.382225">
-          <animate attributeName="visibility" dur="1.85" from="hidden" to="visible"/>
-        </line>
-        <line x1="183.333333333" x2="187.5" y1="120.382225" y2="135.7434">
-          <animate attributeName="visibility" dur="1.9" from="hidden" to="visible"/>
-        </line>
-        <line x1="187.5" x2="191.666666667" y1="135.7434" y2="173.8068125">
-          <animate attributeName="visibility" dur="1.95" from="hidden" to="visible"/>
-        </line>
-        <line x1="191.666666667" x2="195.833333333" y1="173.8068125" y2="107.0064375">
-          <animate attributeName="visibility" dur="2.0" from="hidden" to="visible"/>
-        </line>
-        <line x1="195.833333333" x2="200.0" y1="107.0064375" y2="123.2588375">
-          <animate attributeName="visibility" dur="2.05" from="hidden" to="visible"/>
-        </line>
-        <line x1="200.0" x2="204.166666667" y1="123.2588375" y2="100.8302375">
-          <animate attributeName="visibility" dur="2.1" from="hidden" to="visible"/>
-        </line>
-        <line x1="204.166666667" x2="208.333333333" y1="100.8302375" y2="148.2448">
-          <animate attributeName="visibility" dur="2.15" from="hidden" to="visible"/>
-        </line>
-        <line x1="208.333333333" x2="212.5" y1="148.2448" y2="156.176325">
-          <animate attributeName="visibility" dur="2.2" from="hidden" to="visible"/>
-        </line>
-        <line x1="212.5" x2="216.666666667" y1="156.176325" y2="52.432225">
-          <animate attributeName="visibility" dur="2.25" from="hidden" to="visible"/>
-        </line>
-        <line x1="216.666666667" x2="220.833333333" y1="52.432225" y2="172.9322625">
-          <animate attributeName="visibility" dur="2.3" from="hidden" to="visible"/>
-        </line>
-        <line x1="220.833333333" x2="225.0" y1="172.9322625" y2="206.298725">
-          <animate attributeName="visibility" dur="2.35" from="hidden" to="visible"/>
-        </line>
-        <line x1="225.0" x2="229.166666667" y1="206.298725" y2="194.82615">
-          <animate attributeName="visibility" dur="2.4" from="hidden" to="visible"/>
-        </line>
-        <line x1="229.166666667" x2="233.333333333" y1="194.82615" y2="169.664075">
-          <animate attributeName="visibility" dur="2.45" from="hidden" to="visible"/>
-        </line>
-        <line x1="233.333333333" x2="237.5" y1="169.664075" y2="43.7379625">
-          <animate attributeName="visibility" dur="2.5" from="hidden" to="visible"/>
-        </line>
-        <line x1="237.5" x2="241.666666667" y1="43.7379625" y2="114.2186125">
-          <animate attributeName="visibility" dur="2.55" from="hidden" to="visible"/>
-        </line>
-        <line x1="241.666666667" x2="245.833333333" y1="114.2186125" y2="192.5228875">
-          <animate attributeName="visibility" dur="2.6" from="hidden" to="visible"/>
-        </line>
-        <line x1="245.833333333" x2="250.0" y1="192.5228875" y2="168.448">
-          <animate attributeName="visibility" dur="2.65" from="hidden" to="visible"/>
-        </line>
-        <line x1="250.0" x2="254.166666667" y1="168.448" y2="187.3717625">
-          <animate attributeName="visibility" dur="2.7" from="hidden" to="visible"/>
-        </line>
-        <line x1="254.166666667" x2="258.333333333" y1="187.3717625" y2="95.2798875">
-          <animate attributeName="visibility" dur="2.75" from="hidden" to="visible"/>
-        </line>
-        <line x1="258.333333333" x2="262.5" y1="95.2798875" y2="204.1364875">
-          <animate attributeName="visibility" dur="2.8" from="hidden" to="visible"/>
-        </line>
-        <line x1="262.5" x2="266.666666667" y1="204.1364875" y2="182.786625">
-          <animate attributeName="visibility" dur="2.85" from="hidden" to="visible"/>
-        </line>
-        <line x1="266.666666667" x2="270.833333333" y1="182.786625" y2="68.4663125">
-          <animate attributeName="visibility" dur="2.9" from="hidden" to="visible"/>
-        </line>
-        <line x1="270.833333333" x2="275.0" y1="68.4663125" y2="184.6831125">
-          <animate attributeName="visibility" dur="2.95" from="hidden" to="visible"/>
-        </line>
-        <line x1="275.0" x2="279.166666667" y1="184.6831125" y2="167.8722125">
-          <animate attributeName="visibility" dur="3.0" from="hidden" to="visible"/>
-        </line>
-        <line x1="279.166666667" x2="283.333333333" y1="167.8722125" y2="142.1423625">
-          <animate attributeName="visibility" dur="3.05" from="hidden" to="visible"/>
-        </line>
-        <line x1="283.333333333" x2="287.5" y1="142.1423625" y2="124.9308625">
-          <animate attributeName="visibility" dur="3.1" from="hidden" to="visible"/>
-        </line>
-        <line x1="287.5" x2="291.666666667" y1="124.9308625" y2="125.643775">
-          <animate attributeName="visibility" dur="3.15" from="hidden" to="visible"/>
-        </line>
-        <line x1="291.666666667" x2="295.833333333" y1="125.643775" y2="125.1845375">
-          <animate attributeName="visibility" dur="3.2" from="hidden" to="visible"/>
-        </line>
-        <line x1="295.833333333" x2="300.0" y1="125.1845375" y2="148.54515">
-          <animate attributeName="visibility" dur="3.25" from="hidden" to="visible"/>
-        </line>
-        <line x1="300.0" x2="304.166666667" y1="148.54515" y2="85.5288875">
-          <animate attributeName="visibility" dur="3.3" from="hidden" to="visible"/>
-        </line>
-        <line x1="304.166666667" x2="308.333333333" y1="85.5288875" y2="150.989275">
-          <animate attributeName="visibility" dur="3.35" from="hidden" to="visible"/>
-        </line>
-        <line x1="308.333333333" x2="312.5" y1="150.989275" y2="105.8159875">
-          <animate attributeName="visibility" dur="3.4" from="hidden" to="visible"/>
-        </line>
-        <line x1="312.5" x2="316.666666667" y1="105.8159875" y2="174.46945">
-          <animate attributeName="visibility" dur="3.45" from="hidden" to="visible"/>
-        </line>
-        <line x1="316.666666667" x2="320.833333333" y1="174.46945" y2="245.491275">
-          <animate attributeName="visibility" dur="3.5" from="hidden" to="visible"/>
-        </line>
-        <line x1="320.833333333" x2="325.0" y1="245.491275" y2="123.2853">
-          <animate attributeName="visibility" dur="3.55" from="hidden" to="visible"/>
-        </line>
-        <line x1="325.0" x2="329.166666667" y1="123.2853" y2="94.5754">
-          <animate attributeName="visibility" dur="3.6" from="hidden" to="visible"/>
-        </line>
-        <line x1="329.166666667" x2="333.333333333" y1="94.5754" y2="94.510225">
-          <animate attributeName="visibility" dur="3.65" from="hidden" to="visible"/>
-        </line>
-        <line x1="333.333333333" x2="337.5" y1="94.510225" y2="201.2817125">
-          <animate attributeName="visibility" dur="3.7" from="hidden" to="visible"/>
-        </line>
-        <line x1="337.5" x2="341.666666667" y1="201.2817125" y2="96.1492875">
-          <animate attributeName="visibility" dur="3.75" from="hidden" to="visible"/>
-        </line>
-        <line x1="341.666666667" x2="345.833333333" y1="96.1492875" y2="17.681075">
-          <animate attributeName="visibility" dur="3.8" from="hidden" to="visible"/>
-        </line>
-        <line x1="345.833333333" x2="350.0" y1="17.681075" y2="8.19945">
-          <animate attributeName="visibility" dur="3.85" from="hidden" to="visible"/>
-        </line>
-        <line x1="350.0" x2="354.166666667" y1="8.19945" y2="50.0764875">
-          <animate attributeName="visibility" dur="3.9" from="hidden" to="visible"/>
-        </line>
-        <line x1="354.166666667" x2="358.333333333" y1="50.0764875" y2="25.6774625">
-          <animate attributeName="visibility" dur="3.95" from="hidden" to="visible"/>
-        </line>
-        <line x1="358.333333333" x2="362.5" y1="25.6774625" y2="121.5663875">
-          <animate attributeName="visibility" dur="4.0" from="hidden" to="visible"/>
-        </line>
-        <line x1="362.5" x2="366.666666667" y1="121.5663875" y2="173.2143375">
-          <animate attributeName="visibility" dur="4.05" from="hidden" to="visible"/>
-        </line>
-        <line x1="366.666666667" x2="370.833333333" y1="173.2143375" y2="194.5758875">
-          <animate attributeName="visibility" dur="4.1" from="hidden" to="visible"/>
-        </line>
-        <line x1="370.833333333" x2="375.0" y1="194.5758875" y2="195.99795">
-          <animate attributeName="visibility" dur="4.15" from="hidden" to="visible"/>
-        </line>
-        <line x1="375.0" x2="379.166666667" y1="195.99795" y2="158.789475">
-          <animate attributeName="visibility" dur="4.2" from="hidden" to="visible"/>
-        </line>
-        <line x1="379.166666667" x2="383.333333333" y1="158.789475" y2="176.043525">
-          <animate attributeName="visibility" dur="4.25" from="hidden" to="visible"/>
-        </line>
-        <line x1="383.333333333" x2="387.5" y1="176.043525" y2="76.477075">
-          <animate attributeName="visibility" dur="4.3" from="hidden" to="visible"/>
-        </line>
-        <line x1="387.5" x2="391.666666667" y1="76.477075" y2="180.7610375">
-          <animate attributeName="visibility" dur="4.35" from="hidden" to="visible"/>
-        </line>
-        <line x1="391.666666667" x2="395.833333333" y1="180.7610375" y2="62.863275">
-          <animate attributeName="visibility" dur="4.4" from="hidden" to="visible"/>
-        </line>
-        <line x1="395.833333333" x2="400.0" y1="62.863275" y2="135.0598">
-          <animate attributeName="visibility" dur="4.45" from="hidden" to="visible"/>
-        </line>
-        <line x1="400.0" x2="404.166666667" y1="135.0598" y2="41.738975">
-          <animate attributeName="visibility" dur="4.5" from="hidden" to="visible"/>
-        </line>
-        <line x1="404.166666667" x2="408.333333333" y1="41.738975" y2="103.8165125">
-          <animate attributeName="visibility" dur="4.55" from="hidden" to="visible"/>
-        </line>
-        <line x1="408.333333333" x2="412.5" y1="103.8165125" y2="114.627625">
-          <animate attributeName="visibility" dur="4.6" from="hidden" to="visible"/>
-        </line>
-        <line x1="412.5" x2="416.666666667" y1="114.627625" y2="181.13785">
-          <animate attributeName="visibility" dur="4.65" from="hidden" to="visible"/>
-        </line>
-        <line x1="416.666666667" x2="420.833333333" y1="181.13785" y2="178.54855">
-          <animate attributeName="visibility" dur="4.7" from="hidden" to="visible"/>
-        </line>
-        <line x1="420.833333333" x2="425.0" y1="178.54855" y2="237.1403125">
-          <animate attributeName="visibility" dur="4.75" from="hidden" to="visible"/>
-        </line>
-        <line x1="425.0" x2="429.166666667" y1="237.1403125" y2="181.198025">
-          <animate attributeName="visibility" dur="4.8" from="hidden" to="visible"/>
-        </line>
-        <line x1="429.166666667" x2="433.333333333" y1="181.198025" y2="188.732625">
-          <animate attributeName="visibility" dur="4.85" from="hidden" to="visible"/>
-        </line>
-        <line x1="433.333333333" x2="437.5" y1="188.732625" y2="99.0033875">
-          <animate attributeName="visibility" dur="4.9" from="hidden" to="visible"/>
-        </line>
-        <line x1="437.5" x2="441.666666667" y1="99.0033875" y2="143.505925">
-          <animate attributeName="visibility" dur="4.95" from="hidden" to="visible"/>
-        </line>
-        <line x1="441.666666667" x2="445.833333333" y1="143.505925" y2="170.2082125">
-          <animate attributeName="visibility" dur="5.0" from="hidden" to="visible"/>
-        </line>
-        <line x1="445.833333333" x2="450.0" y1="170.2082125" y2="111.4314">
-          <animate attributeName="visibility" dur="5.05" from="hidden" to="visible"/>
-        </line>
-        <line x1="450.0" x2="454.166666667" y1="111.4314" y2="136.2774625">
-          <animate attributeName="visibility" dur="5.1" from="hidden" to="visible"/>
-        </line>
-        <line x1="454.166666667" x2="458.333333333" y1="136.2774625" y2="153.53235">
-          <animate attributeName="visibility" dur="5.15" from="hidden" to="visible"/>
-        </line>
-        <line x1="458.333333333" x2="462.5" y1="153.53235" y2="60.7758875">
-          <animate attributeName="visibility" dur="5.2" from="hidden" to="visible"/>
-        </line>
-        <line x1="462.5" x2="466.666666667" y1="60.7758875" y2="218.1644625">
-          <animate attributeName="visibility" dur="5.25" from="hidden" to="visible"/>
-        </line>
-        <line x1="466.666666667" x2="470.833333333" y1="218.1644625" y2="189.3625">
-          <animate attributeName="visibility" dur="5.3" from="hidden" to="visible"/>
-        </line>
-        <line x1="470.833333333" x2="475.0" y1="189.3625" y2="132.3375">
-          <animate attributeName="visibility" dur="5.35" from="hidden" to="visible"/>
-        </line>
-        <line x1="475.0" x2="479.166666667" y1="132.3375" y2="134.15">
-          <animate attributeName="visibility" dur="5.4" from="hidden" to="visible"/>
-        </line>
+      <g fill="none" stroke="#9999FF" stroke-width="2">
+        <polyline id="pline2" points="25.0,78.453 29.1666666667,51.3426375 33.3333333333,166.112225 37.5,35.02335 41.6666666667,130.0419375 45.8333333333,116.874725 50.0,79.7074375 54.1666666667,130.79525 58.3333333333,45.5648375 62.5,142.2091 66.6666666667,60.7139375 70.8333333333,25.71495 75.0,114.1757875 79.1666666667,154.3579125 83.3333333333,33.9046125 87.5,30.9152125 91.6666666667,81.91005 95.8333333333,74.6994125 100.0,139.0275375 104.166666667,132.1162125 108.333333333,122.328375 112.5,68.25985 116.666666667,100.5708125 120.833333333,39.6302 125.0,129.737 129.166666667,206.5733375 133.333333333,94.722675 137.5,160.206225 141.666666667,235.272625 145.833333333,154.6206375 150.0,129.3891125 154.166666667,133.6743 158.333333333,85.6460125 162.5,172.949225 166.666666667,188.3543 170.833333333,61.0415375 175.0,97.1858 179.166666667,140.8574875 183.333333333,120.382225 187.5,135.7434 191.666666667,173.8068125 195.833333333,107.0064375 200.0,123.2588375 204.166666667,100.8302375 208.333333333,148.2448 212.5,156.176325 216.666666667,52.432225 220.833333333,172.9322625 225.0,206.298725 229.166666667,194.82615 233.333333333,169.664075 237.5,43.7379625 241.666666667,114.2186125 245.833333333,192.5228875 250.0,168.448 254.166666667,187.3717625 258.333333333,95.2798875 262.5,204.1364875 266.666666667,182.786625 270.833333333,68.4663125 275.0,184.6831125 279.166666667,167.8722125 283.333333333,142.1423625 287.5,124.9308625 291.666666667,125.643775 295.833333333,125.1845375 300.0,148.54515 304.166666667,85.5288875 308.333333333,150.989275 312.5,105.8159875 316.666666667,174.46945 320.833333333,245.491275 325.0,123.2853 329.166666667,94.5754 333.333333333,94.510225 337.5,201.2817125 341.666666667,96.1492875 345.833333333,17.681075 350.0,8.19945 354.166666667,50.0764875 358.333333333,25.6774625 362.5,121.5663875 366.666666667,173.2143375 370.833333333,194.5758875 375.0,195.99795 379.166666667,158.789475 383.333333333,176.043525 387.5,76.477075 391.666666667,180.7610375 395.833333333,62.863275 400.0,135.0598 404.166666667,41.738975 408.333333333,103.8165125 412.5,114.627625 416.666666667,181.13785 420.833333333,178.54855 425.0,237.1403125 429.166666667,181.198025 433.333333333,188.732625 437.5,99.0033875 441.666666667,143.505925 445.833333333,170.2082125 450.0,111.4314 454.166666667,136.2774625 458.333333333,153.53235 462.5,60.7758875 466.666666667,218.1644625 470.833333333,189.3625 475.0,132.3375 479.166666667,134.15 "/>
       </g>
-      <g stroke="blue" stroke-width="2">
-        <line x1="62.5" x2="66.6666666667" y1="97.61245" y2="95.83854375">
-          <animate attributeName="visibility" dur="0.0" from="hidden" to="visible"/>
-        </line>
-        <line x1="66.6666666667" x2="70.8333333333" y1="95.83854375" y2="93.275775">
-          <animate attributeName="visibility" dur="0.05" from="hidden" to="visible"/>
-        </line>
-        <line x1="70.8333333333" x2="75.0" y1="93.275775" y2="88.08213125">
-          <animate attributeName="visibility" dur="0.1" from="hidden" to="visible"/>
-        </line>
-        <line x1="75.0" x2="79.1666666667" y1="88.08213125" y2="100.0155875">
-          <animate attributeName="visibility" dur="0.15" from="hidden" to="visible"/>
-        </line>
-        <line x1="79.1666666667" x2="83.3333333333" y1="100.0155875" y2="90.401855">
-          <animate attributeName="visibility" dur="0.2" from="hidden" to="visible"/>
-        </line>
-        <line x1="83.3333333333" x2="87.5" y1="90.401855" y2="81.80590375">
-          <animate attributeName="visibility" dur="0.25" from="hidden" to="visible"/>
-        </line>
-        <line x1="87.5" x2="91.6666666667" y1="81.80590375" y2="82.026165">
-          <animate attributeName="visibility" dur="0.3" from="hidden" to="visible"/>
-        </line>
-        <line x1="91.6666666667" x2="95.8333333333" y1="82.026165" y2="76.41658125">
-          <animate attributeName="visibility" dur="0.35" from="hidden" to="visible"/>
-        </line>
-        <line x1="95.8333333333" x2="100.0" y1="76.41658125" y2="85.76285125">
-          <animate attributeName="visibility" dur="0.4" from="hidden" to="visible"/>
-        </line>
-        <line x1="100.0" x2="104.166666667" y1="85.76285125" y2="84.7535625">
-          <animate attributeName="visibility" dur="0.45" from="hidden" to="visible"/>
-        </line>
-        <line x1="104.166666667" x2="108.333333333" y1="84.7535625" y2="90.91500625">
-          <animate attributeName="visibility" dur="0.5" from="hidden" to="visible"/>
-        </line>
-        <line x1="108.333333333" x2="112.5" y1="90.91500625" y2="95.16949625">
-          <animate attributeName="visibility" dur="0.55" from="hidden" to="visible"/>
-        </line>
-        <line x1="112.5" x2="116.666666667" y1="95.16949625" y2="93.80899875">
-          <animate attributeName="visibility" dur="0.6" from="hidden" to="visible"/>
-        </line>
-        <line x1="116.666666667" x2="120.833333333" y1="93.80899875" y2="82.3362275">
-          <animate attributeName="visibility" dur="0.65" from="hidden" to="visible"/>
-        </line>
-        <line x1="120.833333333" x2="125.0" y1="82.3362275" y2="91.91946625">
-          <animate attributeName="visibility" dur="0.7" from="hidden" to="visible"/>
-        </line>
-        <line x1="125.0" x2="129.166666667" y1="91.91946625" y2="109.48527875">
-          <animate attributeName="visibility" dur="0.75" from="hidden" to="visible"/>
-        </line>
-        <line x1="129.166666667" x2="133.333333333" y1="109.48527875" y2="110.76654125">
-          <animate attributeName="visibility" dur="0.8" from="hidden" to="visible"/>
-        </line>
-        <line x1="133.333333333" x2="137.5" y1="110.76654125" y2="119.3172225">
-          <animate attributeName="visibility" dur="0.85" from="hidden" to="visible"/>
-        </line>
-        <line x1="137.5" x2="141.666666667" y1="119.3172225" y2="128.94173125">
-          <animate attributeName="visibility" dur="0.9" from="hidden" to="visible"/>
-        </line>
-        <line x1="141.666666667" x2="145.833333333" y1="128.94173125" y2="131.19217375">
-          <animate attributeName="visibility" dur="0.95" from="hidden" to="visible"/>
-        </line>
-        <line x1="145.833333333" x2="150.0" y1="131.19217375" y2="131.8982475">
-          <animate attributeName="visibility" dur="1.0" from="hidden" to="visible"/>
-        </line>
-        <line x1="150.0" x2="154.166666667" y1="131.8982475" y2="138.4396925">
-          <animate attributeName="visibility" dur="1.05" from="hidden" to="visible"/>
-        </line>
-        <line x1="154.166666667" x2="158.333333333" y1="138.4396925" y2="136.9472125">
-          <animate attributeName="visibility" dur="1.1" from="hidden" to="visible"/>
-        </line>
-        <line x1="158.333333333" x2="162.5" y1="136.9472125" y2="150.279115">
-          <animate attributeName="visibility" dur="1.15" from="hidden" to="visible"/>
-        </line>
-        <line x1="162.5" x2="166.666666667" y1="150.279115" y2="156.140845">
-          <animate attributeName="visibility" dur="1.2" from="hidden" to="visible"/>
-        </line>
-        <line x1="166.666666667" x2="170.833333333" y1="156.140845" y2="141.587665">
-          <animate attributeName="visibility" dur="1.25" from="hidden" to="visible"/>
-        </line>
-        <line x1="170.833333333" x2="175.0" y1="141.587665" y2="141.8339775">
-          <animate attributeName="visibility" dur="1.3" from="hidden" to="visible"/>
-        </line>
-        <line x1="175.0" x2="179.166666667" y1="141.8339775" y2="139.89910375">
-          <animate attributeName="visibility" dur="1.35" from="hidden" to="visible"/>
-        </line>
-        <line x1="179.166666667" x2="183.333333333" y1="139.89910375" y2="128.41006375">
-          <animate attributeName="visibility" dur="1.4" from="hidden" to="visible"/>
-        </line>
-        <line x1="183.333333333" x2="187.5" y1="128.41006375" y2="126.52234">
-          <animate attributeName="visibility" dur="1.45" from="hidden" to="visible"/>
-        </line>
-        <line x1="187.5" x2="191.666666667" y1="126.52234" y2="130.96411">
-          <animate attributeName="visibility" dur="1.5" from="hidden" to="visible"/>
-        </line>
-        <line x1="191.666666667" x2="195.833333333" y1="130.96411" y2="128.29732375">
-          <animate attributeName="visibility" dur="1.55" from="hidden" to="visible"/>
-        </line>
-        <line x1="195.833333333" x2="200.0" y1="128.29732375" y2="132.05860625">
-          <animate attributeName="visibility" dur="1.6" from="hidden" to="visible"/>
-        </line>
-        <line x1="200.0" x2="204.166666667" y1="132.05860625" y2="124.8467075">
-          <animate attributeName="visibility" dur="1.65" from="hidden" to="visible"/>
-        </line>
-        <line x1="204.166666667" x2="208.333333333" y1="124.8467075" y2="120.8357575">
-          <animate attributeName="visibility" dur="1.7" from="hidden" to="visible"/>
-        </line>
-        <line x1="208.333333333" x2="212.5" y1="120.8357575" y2="130.34923625">
-          <animate attributeName="visibility" dur="1.75" from="hidden" to="visible"/>
-        </line>
-        <line x1="212.5" x2="216.666666667" y1="130.34923625" y2="125.87387875">
-          <animate attributeName="visibility" dur="1.8" from="hidden" to="visible"/>
-        </line>
-        <line x1="216.666666667" x2="220.833333333" y1="125.87387875" y2="129.08135625">
-          <animate attributeName="visibility" dur="1.85" from="hidden" to="visible"/>
-        </line>
-        <line x1="220.833333333" x2="225.0" y1="129.08135625" y2="137.67300625">
-          <animate attributeName="visibility" dur="1.9" from="hidden" to="visible"/>
-        </line>
-        <line x1="225.0" x2="229.166666667" y1="137.67300625" y2="143.58128125">
-          <animate attributeName="visibility" dur="1.95" from="hidden" to="visible"/>
-        </line>
-        <line x1="229.166666667" x2="233.333333333" y1="143.58128125" y2="143.1670075">
-          <animate attributeName="visibility" dur="2.0" from="hidden" to="visible"/>
-        </line>
-        <line x1="233.333333333" x2="237.5" y1="143.1670075" y2="136.84016">
-          <animate attributeName="visibility" dur="2.05" from="hidden" to="visible"/>
-        </line>
-        <line x1="237.5" x2="241.666666667" y1="136.84016" y2="135.9361375">
-          <animate attributeName="visibility" dur="2.1" from="hidden" to="visible"/>
-        </line>
-        <line x1="241.666666667" x2="245.833333333" y1="135.9361375" y2="145.1054025">
-          <animate attributeName="visibility" dur="2.15" from="hidden" to="visible"/>
-        </line>
-        <line x1="245.833333333" x2="250.0" y1="145.1054025" y2="147.1257225">
-          <animate attributeName="visibility" dur="2.2" from="hidden" to="visible"/>
-        </line>
-        <line x1="250.0" x2="254.166666667" y1="147.1257225" y2="150.24526625">
-          <animate attributeName="visibility" dur="2.25" from="hidden" to="visible"/>
-        </line>
-        <line x1="254.166666667" x2="258.333333333" y1="150.24526625" y2="154.5300325">
-          <animate attributeName="visibility" dur="2.3" from="hidden" to="visible"/>
-        </line>
-        <line x1="258.333333333" x2="262.5" y1="154.5300325" y2="157.650455">
-          <animate attributeName="visibility" dur="2.35" from="hidden" to="visible"/>
-        </line>
-        <line x1="262.5" x2="266.666666667" y1="157.650455" y2="155.299245">
-          <animate attributeName="visibility" dur="2.4" from="hidden" to="visible"/>
-        </line>
-        <line x1="266.666666667" x2="270.833333333" y1="155.299245" y2="142.66326125">
-          <animate attributeName="visibility" dur="2.45" from="hidden" to="visible"/>
-        </line>
-        <line x1="270.833333333" x2="275.0" y1="142.66326125" y2="144.165165">
-          <animate attributeName="visibility" dur="2.5" from="hidden" to="visible"/>
-        </line>
-        <line x1="275.0" x2="279.166666667" y1="144.165165" y2="156.57859">
-          <animate attributeName="visibility" dur="2.55" from="hidden" to="visible"/>
-        </line>
-        <line x1="279.166666667" x2="283.333333333" y1="156.57859" y2="159.370965">
-          <animate attributeName="visibility" dur="2.6" from="hidden" to="visible"/>
-        </line>
-        <line x1="283.333333333" x2="287.5" y1="159.370965" y2="152.6117625">
-          <animate attributeName="visibility" dur="2.65" from="hidden" to="visible"/>
-        </line>
-        <line x1="287.5" x2="291.666666667" y1="152.6117625" y2="148.33134">
-          <animate attributeName="visibility" dur="2.7" from="hidden" to="visible"/>
-        </line>
-        <line x1="291.666666667" x2="295.833333333" y1="148.33134" y2="142.1126175">
-          <animate attributeName="visibility" dur="2.75" from="hidden" to="visible"/>
-        </line>
-        <line x1="295.833333333" x2="300.0" y1="142.1126175" y2="147.43914375">
-          <animate attributeName="visibility" dur="2.8" from="hidden" to="visible"/>
-        </line>
-        <line x1="300.0" x2="304.166666667" y1="147.43914375" y2="135.57838375">
-          <animate attributeName="visibility" dur="2.85" from="hidden" to="visible"/>
-        </line>
-        <line x1="304.166666667" x2="308.333333333" y1="135.57838375" y2="132.39864875">
-          <animate attributeName="visibility" dur="2.9" from="hidden" to="visible"/>
-        </line>
-        <line x1="308.333333333" x2="312.5" y1="132.39864875" y2="136.13361625">
-          <animate attributeName="visibility" dur="2.95" from="hidden" to="visible"/>
-        </line>
-        <line x1="312.5" x2="316.666666667" y1="136.13361625" y2="135.11225">
-          <animate attributeName="visibility" dur="3.0" from="hidden" to="visible"/>
-        </line>
-        <line x1="316.666666667" x2="320.833333333" y1="135.11225" y2="142.87415625">
-          <animate attributeName="visibility" dur="3.05" from="hidden" to="visible"/>
-        </line>
-        <line x1="320.833333333" x2="325.0" y1="142.87415625" y2="140.98845">
-          <animate attributeName="visibility" dur="3.1" from="hidden" to="visible"/>
-        </line>
-        <line x1="325.0" x2="329.166666667" y1="140.98845" y2="137.95290375">
-          <animate attributeName="visibility" dur="3.15" from="hidden" to="visible"/>
-        </line>
-        <line x1="329.166666667" x2="333.333333333" y1="137.95290375" y2="134.83954875">
-          <animate attributeName="visibility" dur="3.2" from="hidden" to="visible"/>
-        </line>
-        <line x1="333.333333333" x2="337.5" y1="134.83954875" y2="142.44926625">
-          <animate attributeName="visibility" dur="3.25" from="hidden" to="visible"/>
-        </line>
-        <line x1="337.5" x2="341.666666667" y1="142.44926625" y2="137.20968">
-          <animate attributeName="visibility" dur="3.3" from="hidden" to="visible"/>
-        </line>
-        <line x1="341.666666667" x2="345.833333333" y1="137.20968" y2="130.42489875">
-          <animate attributeName="visibility" dur="3.35" from="hidden" to="visible"/>
-        </line>
-        <line x1="345.833333333" x2="350.0" y1="130.42489875" y2="116.14591625">
-          <animate attributeName="visibility" dur="3.4" from="hidden" to="visible"/>
-        </line>
-        <line x1="350.0" x2="354.166666667" y1="116.14591625" y2="110.57196625">
-          <animate attributeName="visibility" dur="3.45" from="hidden" to="visible"/>
-        </line>
-        <line x1="354.166666667" x2="358.333333333" y1="110.57196625" y2="95.6927675">
-          <animate attributeName="visibility" dur="3.5" from="hidden" to="visible"/>
-        </line>
-        <line x1="358.333333333" x2="362.5" y1="95.6927675" y2="83.30027875">
-          <animate attributeName="visibility" dur="3.55" from="hidden" to="visible"/>
-        </line>
-        <line x1="362.5" x2="366.666666667" y1="83.30027875" y2="88.2931825">
-          <animate attributeName="visibility" dur="3.6" from="hidden" to="visible"/>
-        </line>
-        <line x1="366.666666667" x2="370.833333333" y1="88.2931825" y2="98.29323125">
-          <animate attributeName="visibility" dur="3.65" from="hidden" to="visible"/>
-        </line>
-        <line x1="370.833333333" x2="375.0" y1="98.29323125" y2="108.44200375">
-          <animate attributeName="visibility" dur="3.7" from="hidden" to="visible"/>
-        </line>
-        <line x1="375.0" x2="379.166666667" y1="108.44200375" y2="104.19278">
-          <animate attributeName="visibility" dur="3.75" from="hidden" to="visible"/>
-        </line>
-        <line x1="379.166666667" x2="383.333333333" y1="104.19278" y2="112.18220375">
-          <animate attributeName="visibility" dur="3.8" from="hidden" to="visible"/>
-        </line>
-        <line x1="383.333333333" x2="387.5" y1="112.18220375" y2="118.06180375">
-          <animate attributeName="visibility" dur="3.85" from="hidden" to="visible"/>
-        </line>
-        <line x1="387.5" x2="391.666666667" y1="118.06180375" y2="135.3179625">
-          <animate attributeName="visibility" dur="3.9" from="hidden" to="visible"/>
-        </line>
-        <line x1="391.666666667" x2="395.833333333" y1="135.3179625" y2="136.59664125">
-          <animate attributeName="visibility" dur="3.95" from="hidden" to="visible"/>
-        </line>
-        <line x1="395.833333333" x2="400.0" y1="136.59664125" y2="147.534875">
-          <animate attributeName="visibility" dur="4.0" from="hidden" to="visible"/>
-        </line>
-        <line x1="400.0" x2="404.166666667" y1="147.534875" y2="139.55213375">
-          <animate attributeName="visibility" dur="4.05" from="hidden" to="visible"/>
-        </line>
-        <line x1="404.166666667" x2="408.333333333" y1="139.55213375" y2="132.61235125">
-          <animate attributeName="visibility" dur="4.1" from="hidden" to="visible"/>
-        </line>
-        <line x1="408.333333333" x2="412.5" y1="132.61235125" y2="124.617525">
-          <animate attributeName="visibility" dur="4.15" from="hidden" to="visible"/>
-        </line>
-        <line x1="412.5" x2="416.666666667" y1="124.617525" y2="123.131515">
-          <animate attributeName="visibility" dur="4.2" from="hidden" to="visible"/>
-        </line>
-        <line x1="416.666666667" x2="420.833333333" y1="123.131515" y2="125.1074225">
-          <animate attributeName="visibility" dur="4.25" from="hidden" to="visible"/>
-        </line>
-        <line x1="420.833333333" x2="425.0" y1="125.1074225" y2="131.21710125">
-          <animate attributeName="visibility" dur="4.3" from="hidden" to="visible"/>
-        </line>
-        <line x1="425.0" x2="429.166666667" y1="131.21710125" y2="141.68919625">
-          <animate attributeName="visibility" dur="4.35" from="hidden" to="visible"/>
-        </line>
-        <line x1="429.166666667" x2="433.333333333" y1="141.68919625" y2="142.486355">
-          <animate attributeName="visibility" dur="4.4" from="hidden" to="visible"/>
-        </line>
-        <line x1="433.333333333" x2="437.5" y1="142.486355" y2="146.10036625">
-          <animate attributeName="visibility" dur="4.45" from="hidden" to="visible"/>
-        </line>
-        <line x1="437.5" x2="441.666666667" y1="146.10036625" y2="146.94497875">
-          <animate attributeName="visibility" dur="4.5" from="hidden" to="visible"/>
-        </line>
-        <line x1="441.666666667" x2="445.833333333" y1="146.94497875" y2="159.7919025">
-          <animate attributeName="visibility" dur="4.55" from="hidden" to="visible"/>
-        </line>
-        <line x1="445.833333333" x2="450.0" y1="159.7919025" y2="160.55339125">
-          <animate attributeName="visibility" dur="4.6" from="hidden" to="visible"/>
-        </line>
-        <line x1="450.0" x2="454.166666667" y1="160.55339125" y2="162.718375">
-          <animate attributeName="visibility" dur="4.65" from="hidden" to="visible"/>
-        </line>
-        <line x1="454.166666667" x2="458.333333333" y1="162.718375" y2="159.957825">
-          <animate attributeName="visibility" dur="4.7" from="hidden" to="visible"/>
-        </line>
-        <line x1="458.333333333" x2="462.5" y1="159.957825" y2="148.18055875">
-          <animate attributeName="visibility" dur="4.75" from="hidden" to="visible"/>
-        </line>
-        <line x1="462.5" x2="466.666666667" y1="148.18055875" y2="146.28297375">
-          <animate attributeName="visibility" dur="4.8" from="hidden" to="visible"/>
-        </line>
-        <line x1="466.666666667" x2="470.833333333" y1="146.28297375" y2="147.09942125">
-          <animate attributeName="visibility" dur="4.85" from="hidden" to="visible"/>
-        </line>
-        <line x1="470.833333333" x2="475.0" y1="147.09942125" y2="141.45990875">
-          <animate attributeName="visibility" dur="4.9" from="hidden" to="visible"/>
-        </line>
-        <line x1="475.0" x2="479.166666667" y1="141.45990875" y2="144.97457">
-          <animate attributeName="visibility" dur="4.95" from="hidden" to="visible"/>
-        </line>
+      <g fill="none" stroke="blue" stroke-width="2">
+        <polyline id="pline1" points="62.5,97.61245 66.6666666667,95.83854375 70.8333333333,93.275775 75.0,88.08213125 79.1666666667,100.0155875 83.3333333333,90.401855 87.5,81.80590375 91.6666666667,82.026165 95.8333333333,76.41658125 100.0,85.76285125 104.166666667,84.7535625 108.333333333,90.91500625 112.5,95.16949625 116.666666667,93.80899875 120.833333333,82.3362275 125.0,91.91946625 129.166666667,109.48527875 133.333333333,110.76654125 137.5,119.3172225 141.666666667,128.94173125 145.833333333,131.19217375 150.0,131.8982475 154.166666667,138.4396925 158.333333333,136.9472125 162.5,150.279115 166.666666667,156.140845 170.833333333,141.587665 175.0,141.8339775 179.166666667,139.89910375 183.333333333,128.41006375 187.5,126.52234 191.666666667,130.96411 195.833333333,128.29732375 200.0,132.05860625 204.166666667,124.8467075 208.333333333,120.8357575 212.5,130.34923625 216.666666667,125.87387875 220.833333333,129.08135625 225.0,137.67300625 229.166666667,143.58128125 233.333333333,143.1670075 237.5,136.84016 241.666666667,135.9361375 245.833333333,145.1054025 250.0,147.1257225 254.166666667,150.24526625 258.333333333,154.5300325 262.5,157.650455 266.666666667,155.299245 270.833333333,142.66326125 275.0,144.165165 279.166666667,156.57859 283.333333333,159.370965 287.5,152.6117625 291.666666667,148.33134 295.833333333,142.1126175 300.0,147.43914375 304.166666667,135.57838375 308.333333333,132.39864875 312.5,136.13361625 316.666666667,135.11225 320.833333333,142.87415625 325.0,140.98845 329.166666667,137.95290375 333.333333333,134.83954875 337.5,142.44926625 341.666666667,137.20968 345.833333333,130.42489875 350.0,116.14591625 354.166666667,110.57196625 358.333333333,95.6927675 362.5,83.30027875 366.666666667,88.2931825 370.833333333,98.29323125 375.0,108.44200375 379.166666667,104.19278 383.333333333,112.18220375 387.5,118.06180375 391.666666667,135.3179625 395.833333333,136.59664125 400.0,147.534875 404.166666667,139.55213375 408.333333333,132.61235125 412.5,124.617525 416.666666667,123.131515 420.833333333,125.1074225 425.0,131.21710125 429.166666667,141.68919625 433.333333333,142.486355 437.5,146.10036625 441.666666667,146.94497875 445.833333333,159.7919025 450.0,160.55339125 454.166666667,162.718375 458.333333333,159.957825 462.5,148.18055875 466.666666667,146.28297375 470.833333333,147.09942125 475.0,141.45990875 479.166666667,144.97457 "/>
       </g>
-      <rect class="linebox" fill="blue" height="250" id="box0" opacity="0" width="4.16666666667" x="25.0" y="0"/>
-      <text class="num0" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: NA</text>
+      <rect class="linebox" fill="black" height="250" id="box0" opacity="0" width="4.16666666667" x="25.0" y="0"/>
+      <text class="num0" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume:  maf</text>
       <text class="num0" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1906</text>
-      <text class="num0" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 18.72</text>
-      <rect class="linebox" fill="blue" height="250" id="box1" opacity="0" width="4.16666666667" x="29.1666666667" y="0"/>
-      <text class="num1" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: NA</text>
+      <text class="num0" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 18.72 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box1" opacity="0" width="4.16666666667" x="29.1666666667" y="0"/>
+      <text class="num1" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume:  maf</text>
       <text class="num1" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1907</text>
-      <text class="num1" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 20.89</text>
-      <rect class="linebox" fill="blue" height="250" id="box2" opacity="0" width="4.16666666667" x="33.3333333333" y="0"/>
-      <text class="num2" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: NA</text>
+      <text class="num1" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 20.89 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box2" opacity="0" width="4.16666666667" x="33.3333333333" y="0"/>
+      <text class="num2" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume:  maf</text>
       <text class="num2" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1908</text>
-      <text class="num2" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.71</text>
-      <rect class="linebox" fill="blue" height="250" id="box3" opacity="0" width="4.16666666667" x="37.5" y="0"/>
-      <text class="num3" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: NA</text>
+      <text class="num2" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.71 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box3" opacity="0" width="4.16666666667" x="37.5" y="0"/>
+      <text class="num3" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume:  maf</text>
       <text class="num3" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1909</text>
-      <text class="num3" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 22.2</text>
-      <rect class="linebox" fill="blue" height="250" id="box4" opacity="0" width="4.16666666667" x="41.6666666667" y="0"/>
-      <text class="num4" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: NA</text>
+      <text class="num3" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 22.2 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box4" opacity="0" width="4.16666666667" x="41.6666666667" y="0"/>
+      <text class="num4" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume:  maf</text>
       <text class="num4" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1910</text>
-      <text class="num4" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.6</text>
-      <rect class="linebox" fill="blue" height="250" id="box5" opacity="0" width="4.16666666667" x="45.8333333333" y="0"/>
-      <text class="num5" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: NA</text>
+      <text class="num4" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.6 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box5" opacity="0" width="4.16666666667" x="45.8333333333" y="0"/>
+      <text class="num5" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume:  maf</text>
       <text class="num5" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1911</text>
-      <text class="num5" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.65</text>
-      <rect class="linebox" fill="blue" height="250" id="box6" opacity="0" width="4.16666666667" x="50.0" y="0"/>
-      <text class="num6" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: NA</text>
+      <text class="num5" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.65 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box6" opacity="0" width="4.16666666667" x="50.0" y="0"/>
+      <text class="num6" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume:  maf</text>
       <text class="num6" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1912</text>
-      <text class="num6" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 18.62</text>
-      <rect class="linebox" fill="blue" height="250" id="box7" opacity="0" width="4.16666666667" x="54.1666666667" y="0"/>
-      <text class="num7" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: NA</text>
+      <text class="num6" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 18.62 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box7" opacity="0" width="4.16666666667" x="54.1666666667" y="0"/>
+      <text class="num7" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume:  maf</text>
       <text class="num7" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1913</text>
-      <text class="num7" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.54</text>
-      <rect class="linebox" fill="blue" height="250" id="box8" opacity="0" width="4.16666666667" x="58.3333333333" y="0"/>
-      <text class="num8" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: NA</text>
+      <text class="num7" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.54 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box8" opacity="0" width="4.16666666667" x="58.3333333333" y="0"/>
+      <text class="num8" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume:  maf</text>
       <text class="num8" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1914</text>
-      <text class="num8" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 21.35</text>
-      <rect class="linebox" fill="blue" height="250" id="box9" opacity="0" width="4.16666666667" x="62.5" y="0"/>
-      <text class="num9" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.19</text>
+      <text class="num8" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 21.35 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box9" opacity="0" width="4.16666666667" x="62.5" y="0"/>
+      <text class="num9" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.19 maf</text>
       <text class="num9" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1915</text>
-      <text class="num9" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.62</text>
-      <rect class="linebox" fill="blue" height="250" id="box10" opacity="0" width="4.16666666667" x="66.6666666667" y="0"/>
-      <text class="num10" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.33</text>
+      <text class="num9" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.62 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box10" opacity="0" width="4.16666666667" x="66.6666666667" y="0"/>
+      <text class="num10" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.33 maf</text>
       <text class="num10" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1916</text>
-      <text class="num10" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 20.14</text>
-      <rect class="linebox" fill="blue" height="250" id="box11" opacity="0" width="4.16666666667" x="70.8333333333" y="0"/>
-      <text class="num11" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.54</text>
+      <text class="num10" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 20.14 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box11" opacity="0" width="4.16666666667" x="70.8333333333" y="0"/>
+      <text class="num11" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.54 maf</text>
       <text class="num11" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1917</text>
-      <text class="num11" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 22.94</text>
-      <rect class="linebox" fill="blue" height="250" id="box12" opacity="0" width="4.16666666667" x="75.0" y="0"/>
-      <text class="num12" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.95</text>
+      <text class="num11" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 22.94 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box12" opacity="0" width="4.16666666667" x="75.0" y="0"/>
+      <text class="num12" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.95 maf</text>
       <text class="num12" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1918</text>
-      <text class="num12" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.87</text>
-      <rect class="linebox" fill="blue" height="250" id="box13" opacity="0" width="4.16666666667" x="79.1666666667" y="0"/>
-      <text class="num13" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.0</text>
+      <text class="num12" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.87 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box13" opacity="0" width="4.16666666667" x="79.1666666667" y="0"/>
+      <text class="num13" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.0 maf</text>
       <text class="num13" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1919</text>
-      <text class="num13" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.65</text>
-      <rect class="linebox" fill="blue" height="250" id="box14" opacity="0" width="4.16666666667" x="83.3333333333" y="0"/>
-      <text class="num14" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.77</text>
+      <text class="num13" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.65 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box14" opacity="0" width="4.16666666667" x="83.3333333333" y="0"/>
+      <text class="num14" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.77 maf</text>
       <text class="num14" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1920</text>
-      <text class="num14" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 22.29</text>
-      <rect class="linebox" fill="blue" height="250" id="box15" opacity="0" width="4.16666666667" x="87.5" y="0"/>
-      <text class="num15" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 18.46</text>
+      <text class="num14" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 22.29 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box15" opacity="0" width="4.16666666667" x="87.5" y="0"/>
+      <text class="num15" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 18.46 maf</text>
       <text class="num15" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1921</text>
-      <text class="num15" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 22.53</text>
-      <rect class="linebox" fill="blue" height="250" id="box16" opacity="0" width="4.16666666667" x="91.6666666667" y="0"/>
-      <text class="num16" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 18.44</text>
+      <text class="num15" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 22.53 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box16" opacity="0" width="4.16666666667" x="91.6666666667" y="0"/>
+      <text class="num16" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 18.44 maf</text>
       <text class="num16" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1922</text>
-      <text class="num16" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 18.45</text>
-      <rect class="linebox" fill="blue" height="250" id="box17" opacity="0" width="4.16666666667" x="95.8333333333" y="0"/>
-      <text class="num17" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 18.89</text>
+      <text class="num16" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 18.45 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box17" opacity="0" width="4.16666666667" x="95.8333333333" y="0"/>
+      <text class="num17" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 18.89 maf</text>
       <text class="num17" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1923</text>
-      <text class="num17" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 19.02</text>
-      <rect class="linebox" fill="blue" height="250" id="box18" opacity="0" width="4.16666666667" x="100.0" y="0"/>
-      <text class="num18" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 18.14</text>
+      <text class="num17" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 19.02 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box18" opacity="0" width="4.16666666667" x="100.0" y="0"/>
+      <text class="num18" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 18.14 maf</text>
       <text class="num18" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1924</text>
-      <text class="num18" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.88</text>
-      <rect class="linebox" fill="blue" height="250" id="box19" opacity="0" width="4.16666666667" x="104.166666667" y="0"/>
-      <text class="num19" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 18.22</text>
+      <text class="num18" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.88 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box19" opacity="0" width="4.16666666667" x="104.166666667" y="0"/>
+      <text class="num19" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 18.22 maf</text>
       <text class="num19" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1925</text>
-      <text class="num19" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.43</text>
-      <rect class="linebox" fill="blue" height="250" id="box20" opacity="0" width="4.16666666667" x="108.333333333" y="0"/>
-      <text class="num20" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.73</text>
+      <text class="num19" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.43 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box20" opacity="0" width="4.16666666667" x="108.333333333" y="0"/>
+      <text class="num20" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.73 maf</text>
       <text class="num20" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1926</text>
-      <text class="num20" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.21</text>
-      <rect class="linebox" fill="blue" height="250" id="box21" opacity="0" width="4.16666666667" x="112.5" y="0"/>
-      <text class="num21" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.39</text>
+      <text class="num20" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.21 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box21" opacity="0" width="4.16666666667" x="112.5" y="0"/>
+      <text class="num21" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.39 maf</text>
       <text class="num21" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1927</text>
-      <text class="num21" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 19.54</text>
-      <rect class="linebox" fill="blue" height="250" id="box22" opacity="0" width="4.16666666667" x="116.666666667" y="0"/>
-      <text class="num22" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.5</text>
+      <text class="num21" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 19.54 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box22" opacity="0" width="4.16666666667" x="116.666666667" y="0"/>
+      <text class="num22" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.5 maf</text>
       <text class="num22" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1928</text>
-      <text class="num22" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 16.95</text>
-      <rect class="linebox" fill="blue" height="250" id="box23" opacity="0" width="4.16666666667" x="120.833333333" y="0"/>
-      <text class="num23" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 18.41</text>
+      <text class="num22" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 16.95 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box23" opacity="0" width="4.16666666667" x="120.833333333" y="0"/>
+      <text class="num23" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 18.41 maf</text>
       <text class="num23" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1929</text>
-      <text class="num23" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 21.83</text>
-      <rect class="linebox" fill="blue" height="250" id="box24" opacity="0" width="4.16666666667" x="125.0" y="0"/>
-      <text class="num24" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.65</text>
+      <text class="num23" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 21.83 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box24" opacity="0" width="4.16666666667" x="125.0" y="0"/>
+      <text class="num24" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.65 maf</text>
       <text class="num24" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1930</text>
-      <text class="num24" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.62</text>
-      <rect class="linebox" fill="blue" height="250" id="box25" opacity="0" width="4.16666666667" x="129.166666667" y="0"/>
-      <text class="num25" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 16.24</text>
+      <text class="num24" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.62 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box25" opacity="0" width="4.16666666667" x="129.166666667" y="0"/>
+      <text class="num25" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 16.24 maf</text>
       <text class="num25" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1931</text>
-      <text class="num25" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 8.47</text>
-      <rect class="linebox" fill="blue" height="250" id="box26" opacity="0" width="4.16666666667" x="133.333333333" y="0"/>
-      <text class="num26" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 16.14</text>
+      <text class="num25" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 8.47 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box26" opacity="0" width="4.16666666667" x="133.333333333" y="0"/>
+      <text class="num26" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 16.14 maf</text>
       <text class="num26" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1932</text>
-      <text class="num26" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.42</text>
-      <rect class="linebox" fill="blue" height="250" id="box27" opacity="0" width="4.16666666667" x="137.5" y="0"/>
-      <text class="num27" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 15.45</text>
+      <text class="num26" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.42 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box27" opacity="0" width="4.16666666667" x="137.5" y="0"/>
+      <text class="num27" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 15.45 maf</text>
       <text class="num27" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1933</text>
-      <text class="num27" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.18</text>
-      <rect class="linebox" fill="blue" height="250" id="box28" opacity="0" width="4.16666666667" x="141.666666667" y="0"/>
-      <text class="num28" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.68</text>
+      <text class="num27" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.18 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box28" opacity="0" width="4.16666666667" x="141.666666667" y="0"/>
+      <text class="num28" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.68 maf</text>
       <text class="num28" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1934</text>
-      <text class="num28" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 6.18</text>
-      <rect class="linebox" fill="blue" height="250" id="box29" opacity="0" width="4.16666666667" x="145.833333333" y="0"/>
-      <text class="num29" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.5</text>
+      <text class="num28" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 6.18 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box29" opacity="0" width="4.16666666667" x="145.833333333" y="0"/>
+      <text class="num29" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.5 maf</text>
       <text class="num29" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1935</text>
-      <text class="num29" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.63</text>
-      <rect class="linebox" fill="blue" height="250" id="box30" opacity="0" width="4.16666666667" x="150.0" y="0"/>
-      <text class="num30" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.45</text>
+      <text class="num29" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.63 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box30" opacity="0" width="4.16666666667" x="150.0" y="0"/>
+      <text class="num30" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.45 maf</text>
       <text class="num30" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1936</text>
-      <text class="num30" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.65</text>
-      <rect class="linebox" fill="blue" height="250" id="box31" opacity="0" width="4.16666666667" x="154.166666667" y="0"/>
-      <text class="num31" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.92</text>
+      <text class="num30" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.65 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box31" opacity="0" width="4.16666666667" x="154.166666667" y="0"/>
+      <text class="num31" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.92 maf</text>
       <text class="num31" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1937</text>
-      <text class="num31" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.31</text>
-      <rect class="linebox" fill="blue" height="250" id="box32" opacity="0" width="4.16666666667" x="158.333333333" y="0"/>
-      <text class="num32" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.04</text>
+      <text class="num31" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.31 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box32" opacity="0" width="4.16666666667" x="158.333333333" y="0"/>
+      <text class="num32" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.04 maf</text>
       <text class="num32" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1938</text>
-      <text class="num32" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 18.15</text>
-      <rect class="linebox" fill="blue" height="250" id="box33" opacity="0" width="4.16666666667" x="162.5" y="0"/>
-      <text class="num33" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 12.98</text>
+      <text class="num32" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 18.15 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box33" opacity="0" width="4.16666666667" x="162.5" y="0"/>
+      <text class="num33" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 12.98 maf</text>
       <text class="num33" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1939</text>
-      <text class="num33" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.16</text>
-      <rect class="linebox" fill="blue" height="250" id="box34" opacity="0" width="4.16666666667" x="166.666666667" y="0"/>
-      <text class="num34" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 12.51</text>
+      <text class="num33" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.16 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box34" opacity="0" width="4.16666666667" x="166.666666667" y="0"/>
+      <text class="num34" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 12.51 maf</text>
       <text class="num34" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1940</text>
-      <text class="num34" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.93</text>
-      <rect class="linebox" fill="blue" height="250" id="box35" opacity="0" width="4.16666666667" x="170.833333333" y="0"/>
-      <text class="num35" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.67</text>
+      <text class="num34" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.93 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box35" opacity="0" width="4.16666666667" x="170.833333333" y="0"/>
+      <text class="num35" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.67 maf</text>
       <text class="num35" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1941</text>
-      <text class="num35" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 20.12</text>
-      <rect class="linebox" fill="blue" height="250" id="box36" opacity="0" width="4.16666666667" x="175.0" y="0"/>
-      <text class="num36" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.65</text>
+      <text class="num35" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 20.12 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box36" opacity="0" width="4.16666666667" x="175.0" y="0"/>
+      <text class="num36" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.65 maf</text>
       <text class="num36" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1942</text>
-      <text class="num36" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.23</text>
-      <rect class="linebox" fill="blue" height="250" id="box37" opacity="0" width="4.16666666667" x="179.166666667" y="0"/>
-      <text class="num37" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.81</text>
+      <text class="num36" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.23 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box37" opacity="0" width="4.16666666667" x="179.166666667" y="0"/>
+      <text class="num37" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.81 maf</text>
       <text class="num37" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1943</text>
-      <text class="num37" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.73</text>
-      <rect class="linebox" fill="blue" height="250" id="box38" opacity="0" width="4.16666666667" x="183.333333333" y="0"/>
-      <text class="num38" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.73</text>
+      <text class="num37" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.73 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box38" opacity="0" width="4.16666666667" x="183.333333333" y="0"/>
+      <text class="num38" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.73 maf</text>
       <text class="num38" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1944</text>
-      <text class="num38" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.37</text>
-      <rect class="linebox" fill="blue" height="250" id="box39" opacity="0" width="4.16666666667" x="187.5" y="0"/>
-      <text class="num39" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.88</text>
+      <text class="num38" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.37 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box39" opacity="0" width="4.16666666667" x="187.5" y="0"/>
+      <text class="num39" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.88 maf</text>
       <text class="num39" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1945</text>
-      <text class="num39" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.14</text>
-      <rect class="linebox" fill="blue" height="250" id="box40" opacity="0" width="4.16666666667" x="191.666666667" y="0"/>
-      <text class="num40" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.52</text>
+      <text class="num39" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.14 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box40" opacity="0" width="4.16666666667" x="191.666666667" y="0"/>
+      <text class="num40" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.52 maf</text>
       <text class="num40" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1946</text>
-      <text class="num40" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.1</text>
-      <rect class="linebox" fill="blue" height="250" id="box41" opacity="0" width="4.16666666667" x="195.833333333" y="0"/>
-      <text class="num41" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.74</text>
+      <text class="num40" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.1 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box41" opacity="0" width="4.16666666667" x="195.833333333" y="0"/>
+      <text class="num41" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.74 maf</text>
       <text class="num41" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1947</text>
-      <text class="num41" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 16.44</text>
-      <rect class="linebox" fill="blue" height="250" id="box42" opacity="0" width="4.16666666667" x="200.0" y="0"/>
-      <text class="num42" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.44</text>
+      <text class="num41" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 16.44 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box42" opacity="0" width="4.16666666667" x="200.0" y="0"/>
+      <text class="num42" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.44 maf</text>
       <text class="num42" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1948</text>
-      <text class="num42" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.14</text>
-      <rect class="linebox" fill="blue" height="250" id="box43" opacity="0" width="4.16666666667" x="204.166666667" y="0"/>
-      <text class="num43" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 15.01</text>
+      <text class="num42" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.14 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box43" opacity="0" width="4.16666666667" x="204.166666667" y="0"/>
+      <text class="num43" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 15.01 maf</text>
       <text class="num43" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1949</text>
-      <text class="num43" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 16.93</text>
-      <rect class="linebox" fill="blue" height="250" id="box44" opacity="0" width="4.16666666667" x="208.333333333" y="0"/>
-      <text class="num44" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 15.33</text>
+      <text class="num43" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 16.93 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box44" opacity="0" width="4.16666666667" x="208.333333333" y="0"/>
+      <text class="num44" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 15.33 maf</text>
       <text class="num44" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1950</text>
-      <text class="num44" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.14</text>
-      <rect class="linebox" fill="blue" height="250" id="box45" opacity="0" width="4.16666666667" x="212.5" y="0"/>
-      <text class="num45" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.57</text>
+      <text class="num44" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.14 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box45" opacity="0" width="4.16666666667" x="212.5" y="0"/>
+      <text class="num45" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.57 maf</text>
       <text class="num45" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1951</text>
-      <text class="num45" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.51</text>
-      <rect class="linebox" fill="blue" height="250" id="box46" opacity="0" width="4.16666666667" x="216.666666667" y="0"/>
-      <text class="num46" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.93</text>
+      <text class="num45" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.51 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box46" opacity="0" width="4.16666666667" x="216.666666667" y="0"/>
+      <text class="num46" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.93 maf</text>
       <text class="num46" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1952</text>
-      <text class="num46" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 20.81</text>
-      <rect class="linebox" fill="blue" height="250" id="box47" opacity="0" width="4.16666666667" x="220.833333333" y="0"/>
-      <text class="num47" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.67</text>
+      <text class="num46" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 20.81 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box47" opacity="0" width="4.16666666667" x="220.833333333" y="0"/>
+      <text class="num47" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.67 maf</text>
       <text class="num47" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1953</text>
-      <text class="num47" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.17</text>
-      <rect class="linebox" fill="blue" height="250" id="box48" opacity="0" width="4.16666666667" x="225.0" y="0"/>
-      <text class="num48" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.99</text>
+      <text class="num47" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.17 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box48" opacity="0" width="4.16666666667" x="225.0" y="0"/>
+      <text class="num48" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.99 maf</text>
       <text class="num48" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1954</text>
-      <text class="num48" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 8.5</text>
-      <rect class="linebox" fill="blue" height="250" id="box49" opacity="0" width="4.16666666667" x="229.166666667" y="0"/>
-      <text class="num49" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.51</text>
+      <text class="num48" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 8.5 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box49" opacity="0" width="4.16666666667" x="229.166666667" y="0"/>
+      <text class="num49" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.51 maf</text>
       <text class="num49" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1955</text>
-      <text class="num49" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.41</text>
-      <rect class="linebox" fill="blue" height="250" id="box50" opacity="0" width="4.16666666667" x="233.333333333" y="0"/>
-      <text class="num50" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.55</text>
+      <text class="num49" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.41 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box50" opacity="0" width="4.16666666667" x="233.333333333" y="0"/>
+      <text class="num50" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.55 maf</text>
       <text class="num50" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1956</text>
-      <text class="num50" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.43</text>
-      <rect class="linebox" fill="blue" height="250" id="box51" opacity="0" width="4.16666666667" x="237.5" y="0"/>
-      <text class="num51" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.05</text>
+      <text class="num50" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.43 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box51" opacity="0" width="4.16666666667" x="237.5" y="0"/>
+      <text class="num51" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.05 maf</text>
       <text class="num51" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1957</text>
-      <text class="num51" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 21.5</text>
-      <rect class="linebox" fill="blue" height="250" id="box52" opacity="0" width="4.16666666667" x="241.666666667" y="0"/>
-      <text class="num52" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.13</text>
+      <text class="num51" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 21.5 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box52" opacity="0" width="4.16666666667" x="241.666666667" y="0"/>
+      <text class="num52" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.13 maf</text>
       <text class="num52" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1958</text>
-      <text class="num52" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.86</text>
-      <rect class="linebox" fill="blue" height="250" id="box53" opacity="0" width="4.16666666667" x="245.833333333" y="0"/>
-      <text class="num53" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.39</text>
+      <text class="num52" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.86 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box53" opacity="0" width="4.16666666667" x="245.833333333" y="0"/>
+      <text class="num53" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.39 maf</text>
       <text class="num53" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1959</text>
-      <text class="num53" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.6</text>
-      <rect class="linebox" fill="blue" height="250" id="box54" opacity="0" width="4.16666666667" x="250.0" y="0"/>
-      <text class="num54" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.23</text>
+      <text class="num53" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.6 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box54" opacity="0" width="4.16666666667" x="250.0" y="0"/>
+      <text class="num54" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.23 maf</text>
       <text class="num54" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1960</text>
-      <text class="num54" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.52</text>
-      <rect class="linebox" fill="blue" height="250" id="box55" opacity="0" width="4.16666666667" x="254.166666667" y="0"/>
-      <text class="num55" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 12.98</text>
+      <text class="num54" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.52 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box55" opacity="0" width="4.16666666667" x="254.166666667" y="0"/>
+      <text class="num55" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 12.98 maf</text>
       <text class="num55" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1961</text>
-      <text class="num55" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.01</text>
-      <rect class="linebox" fill="blue" height="250" id="box56" opacity="0" width="4.16666666667" x="258.333333333" y="0"/>
-      <text class="num56" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 12.64</text>
+      <text class="num55" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.01 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box56" opacity="0" width="4.16666666667" x="258.333333333" y="0"/>
+      <text class="num56" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 12.64 maf</text>
       <text class="num56" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1962</text>
-      <text class="num56" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.38</text>
-      <rect class="linebox" fill="blue" height="250" id="box57" opacity="0" width="4.16666666667" x="262.5" y="0"/>
-      <text class="num57" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 12.39</text>
+      <text class="num56" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.38 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box57" opacity="0" width="4.16666666667" x="262.5" y="0"/>
+      <text class="num57" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 12.39 maf</text>
       <text class="num57" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1963</text>
-      <text class="num57" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 8.67</text>
-      <rect class="linebox" fill="blue" height="250" id="box58" opacity="0" width="4.16666666667" x="266.666666667" y="0"/>
-      <text class="num58" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 12.58</text>
+      <text class="num57" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 8.67 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box58" opacity="0" width="4.16666666667" x="266.666666667" y="0"/>
+      <text class="num58" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 12.58 maf</text>
       <text class="num58" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1964</text>
-      <text class="num58" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.38</text>
-      <rect class="linebox" fill="blue" height="250" id="box59" opacity="0" width="4.16666666667" x="270.833333333" y="0"/>
-      <text class="num59" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.59</text>
+      <text class="num58" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.38 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box59" opacity="0" width="4.16666666667" x="270.833333333" y="0"/>
+      <text class="num59" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.59 maf</text>
       <text class="num59" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1965</text>
-      <text class="num59" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 19.52</text>
-      <rect class="linebox" fill="blue" height="250" id="box60" opacity="0" width="4.16666666667" x="275.0" y="0"/>
-      <text class="num60" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.47</text>
+      <text class="num59" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 19.52 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box60" opacity="0" width="4.16666666667" x="275.0" y="0"/>
+      <text class="num60" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.47 maf</text>
       <text class="num60" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1966</text>
-      <text class="num60" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.23</text>
-      <rect class="linebox" fill="blue" height="250" id="box61" opacity="0" width="4.16666666667" x="279.166666667" y="0"/>
-      <text class="num61" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 12.47</text>
+      <text class="num60" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.23 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box61" opacity="0" width="4.16666666667" x="279.166666667" y="0"/>
+      <text class="num61" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 12.47 maf</text>
       <text class="num61" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1967</text>
-      <text class="num61" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.57</text>
-      <rect class="linebox" fill="blue" height="250" id="box62" opacity="0" width="4.16666666667" x="283.333333333" y="0"/>
-      <text class="num62" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 12.25</text>
+      <text class="num61" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.57 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box62" opacity="0" width="4.16666666667" x="283.333333333" y="0"/>
+      <text class="num62" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 12.25 maf</text>
       <text class="num62" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1968</text>
-      <text class="num62" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.63</text>
-      <rect class="linebox" fill="blue" height="250" id="box63" opacity="0" width="4.16666666667" x="287.5" y="0"/>
-      <text class="num63" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 12.79</text>
+      <text class="num62" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.63 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box63" opacity="0" width="4.16666666667" x="287.5" y="0"/>
+      <text class="num63" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 12.79 maf</text>
       <text class="num63" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1969</text>
-      <text class="num63" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.01</text>
-      <rect class="linebox" fill="blue" height="250" id="box64" opacity="0" width="4.16666666667" x="291.666666667" y="0"/>
-      <text class="num64" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.13</text>
+      <text class="num63" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.01 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box64" opacity="0" width="4.16666666667" x="291.666666667" y="0"/>
+      <text class="num64" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.13 maf</text>
       <text class="num64" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1970</text>
-      <text class="num64" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.95</text>
-      <rect class="linebox" fill="blue" height="250" id="box65" opacity="0" width="4.16666666667" x="295.833333333" y="0"/>
-      <text class="num65" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.63</text>
+      <text class="num64" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.95 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box65" opacity="0" width="4.16666666667" x="295.833333333" y="0"/>
+      <text class="num65" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.63 maf</text>
       <text class="num65" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1971</text>
-      <text class="num65" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.99</text>
-      <rect class="linebox" fill="blue" height="250" id="box66" opacity="0" width="4.16666666667" x="300.0" y="0"/>
-      <text class="num66" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.2</text>
+      <text class="num65" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.99 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box66" opacity="0" width="4.16666666667" x="300.0" y="0"/>
+      <text class="num66" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.2 maf</text>
       <text class="num66" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1972</text>
-      <text class="num66" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.12</text>
-      <rect class="linebox" fill="blue" height="250" id="box67" opacity="0" width="4.16666666667" x="304.166666667" y="0"/>
-      <text class="num67" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.15</text>
+      <text class="num66" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.12 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box67" opacity="0" width="4.16666666667" x="304.166666667" y="0"/>
+      <text class="num67" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.15 maf</text>
       <text class="num67" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1973</text>
-      <text class="num67" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 18.16</text>
-      <rect class="linebox" fill="blue" height="250" id="box68" opacity="0" width="4.16666666667" x="308.333333333" y="0"/>
-      <text class="num68" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.41</text>
+      <text class="num67" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 18.16 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box68" opacity="0" width="4.16666666667" x="308.333333333" y="0"/>
+      <text class="num68" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.41 maf</text>
       <text class="num68" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1974</text>
-      <text class="num68" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.92</text>
-      <rect class="linebox" fill="blue" height="250" id="box69" opacity="0" width="4.16666666667" x="312.5" y="0"/>
-      <text class="num69" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.11</text>
+      <text class="num68" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.92 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box69" opacity="0" width="4.16666666667" x="312.5" y="0"/>
+      <text class="num69" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.11 maf</text>
       <text class="num69" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1975</text>
-      <text class="num69" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 16.53</text>
-      <rect class="linebox" fill="blue" height="250" id="box70" opacity="0" width="4.16666666667" x="316.666666667" y="0"/>
-      <text class="num70" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.19</text>
+      <text class="num69" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 16.53 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box70" opacity="0" width="4.16666666667" x="316.666666667" y="0"/>
+      <text class="num70" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.19 maf</text>
       <text class="num70" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1976</text>
-      <text class="num70" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.04</text>
-      <rect class="linebox" fill="blue" height="250" id="box71" opacity="0" width="4.16666666667" x="320.833333333" y="0"/>
-      <text class="num71" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.57</text>
+      <text class="num70" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.04 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box71" opacity="0" width="4.16666666667" x="320.833333333" y="0"/>
+      <text class="num71" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.57 maf</text>
       <text class="num71" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1977</text>
-      <text class="num71" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 5.36</text>
-      <rect class="linebox" fill="blue" height="250" id="box72" opacity="0" width="4.16666666667" x="325.0" y="0"/>
-      <text class="num72" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.72</text>
+      <text class="num71" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 5.36 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box72" opacity="0" width="4.16666666667" x="325.0" y="0"/>
+      <text class="num72" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.72 maf</text>
       <text class="num72" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1978</text>
-      <text class="num72" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.14</text>
-      <rect class="linebox" fill="blue" height="250" id="box73" opacity="0" width="4.16666666667" x="329.166666667" y="0"/>
-      <text class="num73" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.96</text>
+      <text class="num72" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.14 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box73" opacity="0" width="4.16666666667" x="329.166666667" y="0"/>
+      <text class="num73" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.96 maf</text>
       <text class="num73" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1979</text>
-      <text class="num73" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.43</text>
-      <rect class="linebox" fill="blue" height="250" id="box74" opacity="0" width="4.16666666667" x="333.333333333" y="0"/>
-      <text class="num74" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.21</text>
+      <text class="num73" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.43 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box74" opacity="0" width="4.16666666667" x="333.333333333" y="0"/>
+      <text class="num74" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.21 maf</text>
       <text class="num74" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1980</text>
-      <text class="num74" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.44</text>
-      <rect class="linebox" fill="blue" height="250" id="box75" opacity="0" width="4.16666666667" x="337.5" y="0"/>
-      <text class="num75" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.6</text>
+      <text class="num74" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.44 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box75" opacity="0" width="4.16666666667" x="337.5" y="0"/>
+      <text class="num75" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.6 maf</text>
       <text class="num75" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1981</text>
-      <text class="num75" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 8.9</text>
-      <rect class="linebox" fill="blue" height="250" id="box76" opacity="0" width="4.16666666667" x="341.666666667" y="0"/>
-      <text class="num76" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.02</text>
+      <text class="num75" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 8.9 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box76" opacity="0" width="4.16666666667" x="341.666666667" y="0"/>
+      <text class="num76" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.02 maf</text>
       <text class="num76" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1982</text>
-      <text class="num76" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.31</text>
-      <rect class="linebox" fill="blue" height="250" id="box77" opacity="0" width="4.16666666667" x="345.833333333" y="0"/>
-      <text class="num77" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.57</text>
+      <text class="num76" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.31 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box77" opacity="0" width="4.16666666667" x="345.833333333" y="0"/>
+      <text class="num77" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.57 maf</text>
       <text class="num77" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1983</text>
-      <text class="num77" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 23.59</text>
-      <rect class="linebox" fill="blue" height="250" id="box78" opacity="0" width="4.16666666667" x="350.0" y="0"/>
-      <text class="num78" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 15.71</text>
+      <text class="num77" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 23.59 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box78" opacity="0" width="4.16666666667" x="350.0" y="0"/>
+      <text class="num78" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 15.71 maf</text>
       <text class="num78" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1984</text>
-      <text class="num78" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 24.34</text>
-      <rect class="linebox" fill="blue" height="250" id="box79" opacity="0" width="4.16666666667" x="354.166666667" y="0"/>
-      <text class="num79" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 16.15</text>
+      <text class="num78" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 24.34 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box79" opacity="0" width="4.16666666667" x="354.166666667" y="0"/>
+      <text class="num79" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 16.15 maf</text>
       <text class="num79" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1985</text>
-      <text class="num79" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 20.99</text>
-      <rect class="linebox" fill="blue" height="250" id="box80" opacity="0" width="4.16666666667" x="358.333333333" y="0"/>
-      <text class="num80" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.34</text>
+      <text class="num79" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 20.99 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box80" opacity="0" width="4.16666666667" x="358.333333333" y="0"/>
+      <text class="num80" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.34 maf</text>
       <text class="num80" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1986</text>
-      <text class="num80" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 22.95</text>
-      <rect class="linebox" fill="blue" height="250" id="box81" opacity="0" width="4.16666666667" x="362.5" y="0"/>
-      <text class="num81" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 18.34</text>
+      <text class="num80" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 22.95 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box81" opacity="0" width="4.16666666667" x="362.5" y="0"/>
+      <text class="num81" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 18.34 maf</text>
       <text class="num81" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1987</text>
-      <text class="num81" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.27</text>
-      <rect class="linebox" fill="blue" height="250" id="box82" opacity="0" width="4.16666666667" x="366.666666667" y="0"/>
-      <text class="num82" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.94</text>
+      <text class="num81" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.27 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box82" opacity="0" width="4.16666666667" x="366.666666667" y="0"/>
+      <text class="num82" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.94 maf</text>
       <text class="num82" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1988</text>
-      <text class="num82" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.14</text>
-      <rect class="linebox" fill="blue" height="250" id="box83" opacity="0" width="4.16666666667" x="370.833333333" y="0"/>
-      <text class="num83" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 17.14</text>
+      <text class="num82" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.14 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box83" opacity="0" width="4.16666666667" x="370.833333333" y="0"/>
+      <text class="num83" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 17.14 maf</text>
       <text class="num83" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1989</text>
-      <text class="num83" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.43</text>
-      <rect class="linebox" fill="blue" height="250" id="box84" opacity="0" width="4.16666666667" x="375.0" y="0"/>
-      <text class="num84" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 16.32</text>
+      <text class="num83" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.43 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box84" opacity="0" width="4.16666666667" x="375.0" y="0"/>
+      <text class="num84" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 16.32 maf</text>
       <text class="num84" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1990</text>
-      <text class="num84" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.32</text>
-      <rect class="linebox" fill="blue" height="250" id="box85" opacity="0" width="4.16666666667" x="379.166666667" y="0"/>
-      <text class="num85" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 16.66</text>
+      <text class="num84" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.32 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box85" opacity="0" width="4.16666666667" x="379.166666667" y="0"/>
+      <text class="num85" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 16.66 maf</text>
       <text class="num85" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1991</text>
-      <text class="num85" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.3</text>
-      <rect class="linebox" fill="blue" height="250" id="box86" opacity="0" width="4.16666666667" x="383.333333333" y="0"/>
-      <text class="num86" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 16.03</text>
+      <text class="num85" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.3 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box86" opacity="0" width="4.16666666667" x="383.333333333" y="0"/>
+      <text class="num86" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 16.03 maf</text>
       <text class="num86" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1992</text>
-      <text class="num86" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.92</text>
-      <rect class="linebox" fill="blue" height="250" id="box87" opacity="0" width="4.16666666667" x="387.5" y="0"/>
-      <text class="num87" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 15.56</text>
+      <text class="num86" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.92 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box87" opacity="0" width="4.16666666667" x="387.5" y="0"/>
+      <text class="num87" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 15.56 maf</text>
       <text class="num87" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1993</text>
-      <text class="num87" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 18.88</text>
-      <rect class="linebox" fill="blue" height="250" id="box88" opacity="0" width="4.16666666667" x="391.666666667" y="0"/>
-      <text class="num88" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.17</text>
+      <text class="num87" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 18.88 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box88" opacity="0" width="4.16666666667" x="391.666666667" y="0"/>
+      <text class="num88" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.17 maf</text>
       <text class="num88" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1994</text>
-      <text class="num88" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.54</text>
-      <rect class="linebox" fill="blue" height="250" id="box89" opacity="0" width="4.16666666667" x="395.833333333" y="0"/>
-      <text class="num89" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.07</text>
+      <text class="num88" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.54 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box89" opacity="0" width="4.16666666667" x="395.833333333" y="0"/>
+      <text class="num89" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.07 maf</text>
       <text class="num89" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1995</text>
-      <text class="num89" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 19.97</text>
-      <rect class="linebox" fill="blue" height="250" id="box90" opacity="0" width="4.16666666667" x="400.0" y="0"/>
-      <text class="num90" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.2</text>
+      <text class="num89" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 19.97 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box90" opacity="0" width="4.16666666667" x="400.0" y="0"/>
+      <text class="num90" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.2 maf</text>
       <text class="num90" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1996</text>
-      <text class="num90" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.2</text>
-      <rect class="linebox" fill="blue" height="250" id="box91" opacity="0" width="4.16666666667" x="404.166666667" y="0"/>
-      <text class="num91" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.84</text>
+      <text class="num90" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.2 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box91" opacity="0" width="4.16666666667" x="404.166666667" y="0"/>
+      <text class="num91" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.84 maf</text>
       <text class="num91" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1997</text>
-      <text class="num91" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 21.66</text>
-      <rect class="linebox" fill="blue" height="250" id="box92" opacity="0" width="4.16666666667" x="408.333333333" y="0"/>
-      <text class="num92" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.39</text>
+      <text class="num91" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 21.66 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box92" opacity="0" width="4.16666666667" x="408.333333333" y="0"/>
+      <text class="num92" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.39 maf</text>
       <text class="num92" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1998</text>
-      <text class="num92" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 16.69</text>
-      <rect class="linebox" fill="blue" height="250" id="box93" opacity="0" width="4.16666666667" x="412.5" y="0"/>
-      <text class="num93" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 15.03</text>
+      <text class="num92" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 16.69 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box93" opacity="0" width="4.16666666667" x="412.5" y="0"/>
+      <text class="num93" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 15.03 maf</text>
       <text class="num93" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 1999</text>
-      <text class="num93" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.83</text>
-      <rect class="linebox" fill="blue" height="250" id="box94" opacity="0" width="4.16666666667" x="416.666666667" y="0"/>
-      <text class="num94" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 15.15</text>
+      <text class="num93" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 15.83 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box94" opacity="0" width="4.16666666667" x="416.666666667" y="0"/>
+      <text class="num94" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 15.15 maf</text>
       <text class="num94" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2000</text>
-      <text class="num94" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.51</text>
-      <rect class="linebox" fill="blue" height="250" id="box95" opacity="0" width="4.16666666667" x="420.833333333" y="0"/>
-      <text class="num95" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.99</text>
+      <text class="num94" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.51 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box95" opacity="0" width="4.16666666667" x="420.833333333" y="0"/>
+      <text class="num95" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.99 maf</text>
       <text class="num95" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2001</text>
-      <text class="num95" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.72</text>
-      <rect class="linebox" fill="blue" height="250" id="box96" opacity="0" width="4.16666666667" x="425.0" y="0"/>
-      <text class="num96" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 14.5</text>
+      <text class="num95" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.72 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box96" opacity="0" width="4.16666666667" x="425.0" y="0"/>
+      <text class="num96" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 14.5 maf</text>
       <text class="num96" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2002</text>
-      <text class="num96" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 6.03</text>
-      <rect class="linebox" fill="blue" height="250" id="box97" opacity="0" width="4.16666666667" x="429.166666667" y="0"/>
-      <text class="num97" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.66</text>
+      <text class="num96" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 6.03 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box97" opacity="0" width="4.16666666667" x="429.166666667" y="0"/>
+      <text class="num97" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.66 maf</text>
       <text class="num97" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2003</text>
-      <text class="num97" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.5</text>
-      <rect class="linebox" fill="blue" height="250" id="box98" opacity="0" width="4.16666666667" x="433.333333333" y="0"/>
-      <text class="num98" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.6</text>
+      <text class="num97" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 10.5 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box98" opacity="0" width="4.16666666667" x="433.333333333" y="0"/>
+      <text class="num98" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.6 maf</text>
       <text class="num98" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2004</text>
-      <text class="num98" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.9</text>
-      <rect class="linebox" fill="blue" height="250" id="box99" opacity="0" width="4.16666666667" x="437.5" y="0"/>
-      <text class="num99" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.31</text>
+      <text class="num98" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.9 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box99" opacity="0" width="4.16666666667" x="437.5" y="0"/>
+      <text class="num99" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.31 maf</text>
       <text class="num99" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2005</text>
-      <text class="num99" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.08</text>
-      <rect class="linebox" fill="blue" height="250" id="box100" opacity="0" width="4.16666666667" x="441.666666667" y="0"/>
-      <text class="num100" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.24</text>
+      <text class="num99" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 17.08 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box100" opacity="0" width="4.16666666667" x="441.666666667" y="0"/>
+      <text class="num100" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.24 maf</text>
       <text class="num100" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2006</text>
-      <text class="num100" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.52</text>
-      <rect class="linebox" fill="blue" height="250" id="box101" opacity="0" width="4.16666666667" x="445.833333333" y="0"/>
-      <text class="num101" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 12.22</text>
+      <text class="num100" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 13.52 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box101" opacity="0" width="4.16666666667" x="445.833333333" y="0"/>
+      <text class="num101" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 12.22 maf</text>
       <text class="num101" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2007</text>
-      <text class="num101" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.38</text>
-      <rect class="linebox" fill="blue" height="250" id="box102" opacity="0" width="4.16666666667" x="450.0" y="0"/>
-      <text class="num102" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 12.16</text>
+      <text class="num101" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 11.38 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box102" opacity="0" width="4.16666666667" x="450.0" y="0"/>
+      <text class="num102" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 12.16 maf</text>
       <text class="num102" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2008</text>
-      <text class="num102" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 16.09</text>
-      <rect class="linebox" fill="blue" height="250" id="box103" opacity="0" width="4.16666666667" x="454.166666667" y="0"/>
-      <text class="num103" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 11.98</text>
+      <text class="num102" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 16.09 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box103" opacity="0" width="4.16666666667" x="454.166666667" y="0"/>
+      <text class="num103" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 11.98 maf</text>
       <text class="num103" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2009</text>
-      <text class="num103" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.1</text>
-      <rect class="linebox" fill="blue" height="250" id="box104" opacity="0" width="4.16666666667" x="458.333333333" y="0"/>
-      <text class="num104" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 12.2</text>
+      <text class="num103" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.1 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box104" opacity="0" width="4.16666666667" x="458.333333333" y="0"/>
+      <text class="num104" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 12.2 maf</text>
       <text class="num104" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2010</text>
-      <text class="num104" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.72</text>
-      <rect class="linebox" fill="blue" height="250" id="box105" opacity="0" width="4.16666666667" x="462.5" y="0"/>
-      <text class="num105" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.15</text>
+      <text class="num104" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 12.72 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box105" opacity="0" width="4.16666666667" x="462.5" y="0"/>
+      <text class="num105" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.15 maf</text>
       <text class="num105" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2011</text>
-      <text class="num105" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 20.14</text>
-      <rect class="linebox" fill="blue" height="250" id="box106" opacity="0" width="4.16666666667" x="466.666666667" y="0"/>
-      <text class="num106" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.3</text>
+      <text class="num105" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 20.14 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box106" opacity="0" width="4.16666666667" x="466.666666667" y="0"/>
+      <text class="num106" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.3 maf</text>
       <text class="num106" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2012</text>
-      <text class="num106" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 7.55</text>
-      <rect class="linebox" fill="blue" height="250" id="box107" opacity="0" width="4.16666666667" x="470.833333333" y="0"/>
-      <text class="num107" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.23</text>
+      <text class="num106" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 7.55 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box107" opacity="0" width="4.16666666667" x="470.833333333" y="0"/>
+      <text class="num107" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.23 maf</text>
       <text class="num107" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2013</text>
-      <text class="num107" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.85</text>
-      <rect class="linebox" fill="blue" height="250" id="box108" opacity="0" width="4.16666666667" x="475.0" y="0"/>
-      <text class="num108" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.68</text>
+      <text class="num107" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 9.85 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box108" opacity="0" width="4.16666666667" x="475.0" y="0"/>
+      <text class="num108" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.68 maf</text>
       <text class="num108" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2014</text>
-      <text class="num108" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.41</text>
-      <rect class="linebox" fill="blue" height="250" id="box109" opacity="0" width="4.16666666667" x="479.166666667" y="0"/>
-      <text class="num109" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average: 13.4</text>
+      <text class="num108" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.41 maf</text>
+      <rect class="linebox" fill="black" height="250" id="box109" opacity="0" width="4.16666666667" x="479.166666667" y="0"/>
+      <text class="num109" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="245">10-Year Average Flow Volume: 13.4 maf</text>
       <text class="num109" fill="black" font-size="12" font-weight="bold" opacity="0" x="15" y="15">Year: 2015</text>
-      <text class="num109" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.27</text>
+      <text class="num109" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke="black" stroke-width=".5" x="15" y="230">Annual Flow Volume: 14.27 maf</text>
       <line stroke="black" stroke-width="2" x1="0.0" x2="0.0" y1="250" y2="245"/>
       <text fill="black" x="-20.0" y="270">1900</text>
       <line stroke="black" stroke-width="2" x1="83.3333333333" x2="83.3333333333" y1="250" y2="245"/>
@@ -1201,15 +582,15 @@
       <line stroke="black" stroke-width="2" x1="500.0" x2="500.0" y1="250" y2="245"/>
       <text fill="black" x="480.0" y="270">2020</text>
       <line stroke="black" stroke-width="2" x1="0" x2="5" y1="0.0" y2="0.0"/>
-      <text fill="black" x="-30" y="255.0">5</text>
+      <text fill="black" text-anchor="end" x="-5" y="255.0">5</text>
       <line stroke="black" stroke-width="2" x1="0" x2="5" y1="62.5" y2="62.5"/>
-      <text fill="black" x="-30" y="192.5">10</text>
+      <text fill="black" text-anchor="end" x="-5" y="192.5">10</text>
       <line stroke="black" stroke-width="2" x1="0" x2="5" y1="125.0" y2="125.0"/>
-      <text fill="black" x="-30" y="130.0">15</text>
+      <text fill="black" text-anchor="end" x="-5" y="130.0">15</text>
       <line stroke="black" stroke-width="2" x1="0" x2="5" y1="187.5" y2="187.5"/>
-      <text fill="black" x="-30" y="67.5">20</text>
+      <text fill="black" text-anchor="end" x="-5" y="67.5">20</text>
       <line stroke="black" stroke-width="2" x1="0" x2="5" y1="250.0" y2="250.0"/>
-      <text fill="black" x="-30" y="5.0">25</text>
+      <text fill="black" text-anchor="end" x="-5" y="5.0">25</text>
       <line stroke="black" stroke-width="2" x1="0" x2="500" y1="250" y2="250"/>
       <line stroke="black" stroke-width="2" x1="0" x2="0" y1="250" y2="0"/>
       <line stroke="black" stroke-width="2" x1="0" x2="500" y1="0" y2="0"/>
