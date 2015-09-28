@@ -122,7 +122,7 @@ $(document).ready(function() {
 	owdiDrought.waterAccounting.legend.onAdd = function(map) {
 		var div = L.DomUtil.create('div', 'info legend'),
 			grades = [0, 120, 600, 400000, 2500000],
-			labels = ["<b>Acre Feet</b>"],
+			labels = ["<b>Acre Feet</b><br /><em>Shaded areas on map represent District boundaries,<br/> not water use locations.</em>"],
 			from, to;
 
 		for (var i = 0; i < grades.length; i++) {
