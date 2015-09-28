@@ -339,7 +339,7 @@ nav h3 {
 	outline: none;
 }
 
-.supportinginfo:hover{
+.supportinginfo:focus{
 	background: #003366;
 	color: #fff;
 }
@@ -704,6 +704,11 @@ nav h3 {
 	.graphCaption{
 		margin:0 auto 10px auto;
 		}
+		
+	.supportinginfo:hover{
+	background: #003366;
+	color: #fff;
+	}
 		
 	/*======Photo Panel CSS======*/
 	
