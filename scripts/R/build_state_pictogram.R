@@ -7,6 +7,7 @@ build_state_pictos <- function(svg, scale=100000){
   add_california(root_nd,scale)
   g_id <- newXMLNode('g',parent=root_nd,
              attrs=c(id="allocation-picto-highlight-3", class='hidden', stroke="none", fill="yellow"))
+  
   newXMLNode('rect',parent=g_id,
              attrs=c(x="199", y="214", width="56", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
@@ -161,6 +162,10 @@ add_mexico <- function(root_nd,scale){
   # mexico- 15
   MX_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='Mexico-pictos','stroke'='#1975d1','stroke-width'=picto_lw,'fill'='#1975d1',class='hidden'))
+  txt_id <- newXMLNode('text', parent = MX_id, 
+             attrs = c(y='535', fill='#FFFFFF',stroke='none',style='text-anchor:start;',class='small-text'))
+  newXMLNode('tspan', parent=txt_id, newXMLTextNode('location of blue boxes does not represent location of water use.'), attrs = c('font-style' = "italic"))
+  
   x_start = 70
   y_start = 254
   block_picto(MX_id,x=x_start+14*6,y=y_start,number=2,'fill'='none')
