@@ -418,9 +418,7 @@ ecmascript_mead_proj <- function(){
                  document.getElementById('flood').setAttribute('class','level-move');
                  document.getElementById('surplus').setAttribute('class','level-move');
                  document.getElementById('normal').setAttribute('class','level-move');
-                 document.getElementById('shortage1').setAttribute('class','level-move');
-                 document.getElementById('shortage2').setAttribute('class','level-move');
-                 document.getElementById('shortage3').setAttribute('class','level-move');
+                 document.getElementById('shortage').setAttribute('class','level-move');
 				 setTimeout(function(){
 				         {
                   document.getElementById('Projected-marker').setAttribute('class','shown');

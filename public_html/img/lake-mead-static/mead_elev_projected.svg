@@ -32,9 +32,7 @@ function moveInToMomsHouse(){
                  document.getElementById('flood').setAttribute('class','level-move');
                  document.getElementById('surplus').setAttribute('class','level-move');
                  document.getElementById('normal').setAttribute('class','level-move');
-                 document.getElementById('shortage1').setAttribute('class','level-move');
-                 document.getElementById('shortage2').setAttribute('class','level-move');
-                 document.getElementById('shortage3').setAttribute('class','level-move');
+                 document.getElementById('shortage').setAttribute('class','level-move');
 				 setTimeout(function(){
 				         {
                   document.getElementById('Projected-marker').setAttribute('class','shown');
@@ -47,16 +45,12 @@ document.getElementById('condition-markers').setAttribute('class','shown');}
   <rect id="flood" x="100" y="30" width="760" height="44.5" fill="#0066CC" opacity="0.8" class="level-fill"/>
   <rect id="surplus" x="100" y="74" width="760" height="122.5" fill="#0066CC" opacity="0.7" class="level-fill"/>
   <rect id="normal" x="100" y="196" width="760" height="155.5" fill="#0066CC" opacity="0.6" class="level-fill"/>
-  <rect id="shortage1" x="100" y="351" width="760" height="55.5" fill="#0066CC" opacity="0.5" class="level-fill"/>
-  <rect id="shortage2" x="100" y="406" width="760" height="56.5" fill="#0066CC" opacity="0.4" class="level-fill"/>
-  <rect id="shortage3" x="100" y="462" width="760" height="78.5" fill="#0066CC" opacity="0.3" class="level-fill"/>
+  <rect id="shortage" x="100" y="351" width="760" height="189.5" fill="#0066CC" opacity="0.4" class="level-fill"/>
   <g class="hidden" id="condition-markers">
-    <text x="860" y="52" dy="0.5em" dx="0.4em" class="small-text">Flood Control Surplus</text>
-    <text x="860" y="135" dy="0.5em" dx="0.4em" class="small-text">Domestic Surplus</text>
+    <text x="860" y="52" dy="0.5em" dx="0.4em" class="small-text">Flood Control Conditions</text>
+    <text x="860" y="135" dy="0.5em" dx="0.4em" class="small-text">Surplus Conditions</text>
     <text x="860" y="273.5" dy="0.5em" dx="0.4em" class="small-text">Normal Conditions</text>
-    <text x="860" y="378.5" dy="0.5em" dx="0.4em" class="small-text">Shortage Tier 1</text>
-    <text x="860" y="434" dy="0.5em" dx="0.4em" class="small-text">Shortage Tier 2</text>
-    <text x="860" y="501" dy="0.5em" dx="0.4em" class="small-text">Shortage Tier 3</text>
+    <text x="860" y="445.5" dy="0.5em" dx="0.4em" class="small-text">Shortage Conditions</text>
   </g>
   <g id="axes" class="label">
     <rect id="axis.box" x="100.0" y="10.0" width="760.0" height="530.0" style="fill:none;stroke:black"/>
