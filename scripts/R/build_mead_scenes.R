@@ -39,7 +39,7 @@ contract_values <- prettyNum(round(as.numeric(contracts[sorted_contracts$ix,]$Fi
 contract_titles <- gsub("\\b([a-z])([a-z]+)", "\\U\\1\\L\\2" ,tolower(contracts[sorted_contracts$ix,]$Contractor), perl=TRUE)
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 #stripping apostrophes from contract names which were causing problems
-contract_titles <- gsub("'", '', contract_titles)
+contract_titles <- gsub("'", "\\\\'", contract_titles)
 
 svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
   add_flag_defs(id = 'usa-flag', x=0,y=-100, width=500,height=500, image_url='https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg') %>% 
