@@ -134,7 +134,7 @@ $(document).ready(function() {
 				from + (to ? '&ndash;' + to : '+'));
 		}
 		labels.push(
-			'<br/><i style="background:' + '#9d9d9d' + '"></i>Colorado River Basin');
+			'<br/><i style="background:' + '#9d9d9d' + '"></i>Colorado River Basin<br/><br/><a href="http://www.usbr.gov/lc/region/g4000/wtracct.html#Decree" target="_blank">Review Water Accounting Reports 1964-Present</a>');
 
 		div.innerHTML = labels.join('<br>');
 		return div;
@@ -181,8 +181,8 @@ $(document).ready(function() {
 		$.getJSON("../data/wbd1415.geojson"),
 		$.getJSON("../data/wat_acc_cont.geojson")
 	).done(function(d1, d2) {
-		owdiDrought.waterAccounting.addDataToMap(d1, owdiDrought.waterAccounting.styles.watershed, "Colorado River Watershed");
-		owdiDrought.waterAccounting.addDataToMap(d2, owdiDrought.waterAccounting.styles.hucStyle, "Water Contracts");
+		owdiDrought.waterAccounting.addDataToMap(d1, owdiDrought.waterAccounting.styles.watershed, "Colorado River Basin");
+		owdiDrought.waterAccounting.addDataToMap(d2, owdiDrought.waterAccounting.styles.hucStyle, "Entitlement Holders");
 
 		owdiDrought.waterAccounting.geojson = L.geoJson(d2, {
 			style: owdiDrought.waterAccounting.styles.hucStyle,
