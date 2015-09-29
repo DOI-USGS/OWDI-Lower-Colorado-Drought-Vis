@@ -42,7 +42,7 @@ rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="CRB_Rivers")
 contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
 
  
-sorted_contracts <- sort(as.numeric(contracts$mean),decreasing = T, index.return = T)
+sorted_contracts <- sort(as.numeric(contracts$FiveYrAvg_),decreasing = T, index.return = T)
 sorted_contracts <- sorted_contracts[sorted_contracts$x > min.contract]
 n.users = length(sorted_contracts)
 top_users <- paste0('usage-',c(1:n.users))
@@ -109,12 +109,12 @@ spTransform(co_river_join, CRS(epsg_code)) %>%
 
 for (i in 1:n.users){
   area <- suppressWarnings(gArea(contracts[sorted_contracts$ix[i],])) # suppressing proj warning
-  if (area < 0.01)
-    tol = 50
-  else
-    tol = 100
+#   if (area < 0.01)
+#     tol = 50
+#   else
+#     tol = 100
   spTransform(contracts[sorted_contracts$ix[i],], CRS(epsg_code)) %>%
-    gSimplify(tol) %>%
+#    gSimplify(tol) %>%
     plot(add=TRUE)
 
 }
