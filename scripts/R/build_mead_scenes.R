@@ -19,7 +19,7 @@ co_river_styles = c('style'="stroke-dasharray:341;stroke-dashoffset:341;stroke-l
 co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", class='hidden')
 pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'class'='hidden')
 mead_water_styles = c(fill='#1975d1',stroke='none')
-mead_border_styles = c(fill='none','stroke-width'="2.5",stroke='#FFFFFF','stroke-linejoin'='round','stroke-linecap'="round")
+mead_border_styles = c(fill='none','stroke-width'="2.5",'stroke'='#FFFFFF','stroke-linejoin'='round','stroke-linecap'="round")
 mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', 'fill-opacity'='0.35')
 
 
@@ -38,6 +38,8 @@ ani_dur <- c('mead-draw'="2s", 'mead-remove'='1s','stage-move'='1s',
 contract_values <- prettyNum(round(as.numeric(contracts[sorted_contracts$ix,]$FiveYrAvg_)),big.mark=",",scientific=FALSE)
 contract_titles <- gsub("\\b([a-z])([a-z]+)", "\\U\\1\\L\\2" ,tolower(contracts[sorted_contracts$ix,]$Contractor), perl=TRUE)
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
+#stripping apostrophes from contract names which were causing problems
+contract_titles <- gsub("'", '', contract_titles)
 
 svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
   add_flag_defs(id = 'usa-flag', x=0,y=-100, width=500,height=500, image_url='https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg') %>% 
