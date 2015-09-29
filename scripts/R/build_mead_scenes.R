@@ -24,8 +24,8 @@ mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', 'fill
 
 
 contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
-sorted_contracts <- sort(as.numeric(contracts$mean),decreasing = T, index.return = T)
-non_zero_cont <- as.numeric(contracts$mean[sorted_contracts$ix])
+sorted_contracts <- sort(as.numeric(contracts$FiveYrAvg_),decreasing = T, index.return = T)
+non_zero_cont <- as.numeric(contracts$FiveYrAvg_[sorted_contracts$ix])
 non_zero_cont <- non_zero_cont[non_zero_cont > 15000]
 
 picto_scale = 100000 # acre-feet per bin
@@ -35,7 +35,7 @@ mead_names <- c(group_id='Mead-2D', water_id='Mead-water-level', border_id='Mead
 ani_dur <- c('mead-draw'="2s", 'mead-remove'='1s','stage-move'='1s',
              'river-draw'='5s','river-reset'='1s','basin-draw'='1s')
 
-contract_values <- prettyNum(round(as.numeric(contracts[sorted_contracts$ix,]$mean)),big.mark=",",scientific=FALSE)
+contract_values <- prettyNum(round(as.numeric(contracts[sorted_contracts$ix,]$FiveYrAvg_)),big.mark=",",scientific=FALSE)
 contract_titles <- gsub("\\b([a-z])([a-z]+)", "\\U\\1\\L\\2" ,tolower(contracts[sorted_contracts$ix,]$Contractor), perl=TRUE)
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
