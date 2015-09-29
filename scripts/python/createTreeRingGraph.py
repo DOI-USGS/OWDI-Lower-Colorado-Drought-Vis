@@ -103,8 +103,8 @@ def renderGraph(ele, floc):
         maxside = math.ceil(float(max)/5) * 5
         botstep = 500 / ((maxbot - minbot)/10)
         sidestep = 250 / ((maxside - minside)/5)
-        drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75')
-        drawHighlightBox(ele, 2000, 2016, minbot, maxbot - minbot, '#CCCCB2')
+        drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75', 'Pre-Compact Period')
+        drawHighlightBox(ele, 2000, 2016, minbot, maxbot - minbot, '#CCCCB2', 'Current Drought Period')
         linecontainer2 = SubElement(ele, 'g')
         linecontainer2.set('stroke', '#9999FF')
         linecontainer2.set('stroke-width', '2')
@@ -193,7 +193,7 @@ def drawMinLine(ele, percdata, pmin, prange):
     drawLine(ele, 15, 250 - ((min - pmin)*(250/prange)), 485, 250 - ((min - pmin)*(250/prange)), 1, 'red')
     drawText(ele, 15, 250 - ((min - pmin)*(250/prange)) - 5, 'Minimum').set('fill', 'red')
     
-def drawHighlightBox(ele, x1, x2, ymin, yrange, color):
+def drawHighlightBox(ele, x1, x2, ymin, yrange, color, text):
     rect = SubElement(ele, 'rect')
     x1 = (x1 - ymin) * (500/yrange)
     x2 = (x2 - ymin) * (500/yrange)
@@ -202,6 +202,9 @@ def drawHighlightBox(ele, x1, x2, ymin, yrange, color):
     rect.set('width', str(x2 - x1))
     rect.set('x', str(x1))
     rect.set('fill', color)
+    t = drawText(ele, str(x1+2), str(23), text)
+    t.set('fill','black')
+    t.set('font-size', '6')
 
 def highlightRange(ele, x1, x2, ymin, yrange):
     rect = SubElement(ele, 'rect')
