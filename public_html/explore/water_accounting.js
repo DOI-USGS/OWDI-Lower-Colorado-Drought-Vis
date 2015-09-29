@@ -23,7 +23,7 @@ $(document).ready(function() {
 				color: 'white',
 				dashArray: '3',
 				fillOpacity: 0.4,
-				fillColor: owdiDrought.waterAccounting.getColor(feature.properties.mean)
+				fillColor: owdiDrought.waterAccounting.getColor(feature.properties.FiveYrAvg_)
 			};
 		}
 	}
@@ -111,7 +111,7 @@ $(document).ready(function() {
 	};
 	owdiDrought.waterAccounting.info.update = function(props) {
 		this._div.innerHTML = '<h2>Information on Lower Colorado River Water Entitlement Holders</h2><br /> <h4>Five Year Average (2010-2014)</h4>' + (props ?
-			'<b>' + props.Contractor + '</b><br />' + numberWithCommas(Math.round(props.mean)) + ' acre feet' : 'Hover over a district');
+			'<b>' + props.Contractor + '</b><br />' + numberWithCommas(Math.round(props.FiveYrAvg_)) + ' acre feet' : 'Hover over a district');
 	};
 	owdiDrought.waterAccounting.info.addTo(owdiDrought.waterAccounting.map);
 
