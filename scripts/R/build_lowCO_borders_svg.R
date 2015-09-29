@@ -107,13 +107,13 @@ spTransform(co_river_join, CRS(epsg_code)) %>%
   plot(add=TRUE)
 
 
-for (i in 1:n.users){
-  area <- suppressWarnings(gArea(contracts[sorted_contracts$ix[i],])) # suppressing proj warning
+#for (i in 1:n.users){
+#  area <- suppressWarnings(gArea(contracts[sorted_contracts$ix[i],])) # suppressing proj warning
 #   if (area < 0.01)
 #     tol = 50
 #   else
 #     tol = 100
-  spTransform(contracts[sorted_contracts$ix[i],], CRS(epsg_code)) %>%
+   spTransform(contracts, CRS(epsg_code)) %>%
 #    gSimplify(tol) %>%
     plot(add=TRUE)
 
