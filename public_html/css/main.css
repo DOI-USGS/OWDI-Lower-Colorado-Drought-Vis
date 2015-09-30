@@ -408,6 +408,13 @@ nav h3 {
 		width:32.5%;
 		}
 	
+/*welcome section CSS*/
+
+#scrollDownArrow{
+	position:absolute;
+	bottom:200px;
+	}
+
 /*=====Blue Dragon CSS=====*/
 
 #blueDragon{
