@@ -57,9 +57,8 @@ $( document ).ready( function () {
 
         scene.addTo( window.owdiDrought.SMController );
     };
-	
-	//Marty Function here...
-	
+
+	//Allows the nav to find the containers based on its ID's
 	window.owdiDrought.nav = function(fragment){
 		window.location.hash = fragment;
 	};
