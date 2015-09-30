@@ -63,6 +63,38 @@ nav h3 {
 	color:#003366;
 	border:1px solid #003366;
 	}
+	
+.menu{
+	background:#003366;
+	height:60px;
+	padding:0px !important;
+	margin-bottom:0px !important;
+	}
+	
+#stickynav{
+	height:60px;
+	}
+	
+.navBox:first-child{
+	border-left:1px solid #fff;
+	}
+	
+.navBox{
+	width:9.06%;
+	height:60px;
+	float:left;
+	border-right:1px solid #fff;
+	}
+	
+.navLink{
+	display:inline-block;
+	width:100%;
+	height:100%;
+	padding-top:19px;
+	text-decoration:none;
+	color:#fff;
+	font-weight:300;
+	}
 
 /*=====Container CSS=====*/
 
@@ -135,7 +167,7 @@ nav h3 {
 	height: 100%;
 }
 
-#mainmMessageDroughtContainer {
+#mainMessageDroughtContainer {
 	background-image: url('../img/keynotes/drydirt-mobile.jpg');
 	background-position: center center;
 	background-size: cover;
@@ -561,7 +593,7 @@ nav h3 {
 	#mainMessage7Container,
 	#endEraContainer,
 	#finalMessageContainer,
-	#mainmMessageDroughtContainer,
+	#mainMessageDroughtContainer,
 	#waterSupplyVariableOverTimeContainer{
 		-webkit-background-size: cover;
 		background-attachment: fixed;
@@ -581,7 +613,7 @@ nav h3 {
 	#waterSupplyVariableOverTimeContainer {
 		background-image: url('../img/keynotes/waterSupplyVariable.jpg');
 	}
-	#mainmMessageDroughtContainer {
+	#mainMessageDroughtContainer {
 		background-image: url('../img/keynotes/drydirt.jpg');
 	}
 	#mainMessage4Container {
@@ -680,6 +712,19 @@ nav h3 {
 }
 
 @media screen and (min-width: 1025px) {
+	
+	#stickynav{
+		width:960px;
+		margin:0 auto;
+		height:60px;
+	}
+	
+	.navLink:hover{
+		background:#fff;
+		color:#003366;
+		cursor:pointer;
+		text-decoration:none;
+		}
 	
 	/*======keynote CSS======*/
 	
