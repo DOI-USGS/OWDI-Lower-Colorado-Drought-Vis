@@ -19,13 +19,13 @@ co_river_styles = c('style'="stroke-dasharray:341;stroke-dashoffset:341;stroke-l
 co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", class='hidden')
 pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'class'='hidden')
 mead_water_styles = c(fill='#1975d1',stroke='none')
-mead_border_styles = c(fill='none','stroke-width'="2.5",stroke='#FFFFFF','stroke-linejoin'='round','stroke-linecap'="round")
+mead_border_styles = c(fill='none','stroke-width'="2.5",'stroke'='#FFFFFF','stroke-linejoin'='round','stroke-linecap'="round")
 mexico_styles = c('fill'='none', 'stroke-width'='1.5', 'stroke'='#C0C0C0', 'fill-opacity'='0.35')
 
 
 contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
-sorted_contracts <- sort(as.numeric(contracts$mean),decreasing = T, index.return = T)
-non_zero_cont <- as.numeric(contracts$mean[sorted_contracts$ix])
+sorted_contracts <- sort(as.numeric(contracts$FiveYrAvg_),decreasing = T, index.return = T)
+non_zero_cont <- as.numeric(contracts$FiveYrAvg_[sorted_contracts$ix])
 non_zero_cont <- non_zero_cont[non_zero_cont > 15000]
 
 picto_scale = 100000 # acre-feet per bin
@@ -35,9 +35,11 @@ mead_names <- c(group_id='Mead-2D', water_id='Mead-water-level', border_id='Mead
 ani_dur <- c('mead-draw'="2s", 'mead-remove'='1s','stage-move'='1s',
              'river-draw'='5s','river-reset'='1s','basin-draw'='1s')
 
-contract_values <- prettyNum(round(as.numeric(contracts[sorted_contracts$ix,]$mean)),big.mark=",",scientific=FALSE)
+contract_values <- prettyNum(round(as.numeric(contracts[sorted_contracts$ix,]$FiveYrAvg_)),big.mark=",",scientific=FALSE)
 contract_titles <- gsub("\\b([a-z])([a-z]+)", "\\U\\1\\L\\2" ,tolower(contracts[sorted_contracts$ix,]$Contractor), perl=TRUE)
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
+#escaping apostrophes so that they don't cause the svg animation to error
+contract_titles <- gsub("'", "\\\\'", contract_titles)
 
 svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
   add_flag_defs(id = 'usa-flag', x=0,y=-100, width=500,height=500, image_url='https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg') %>% 
