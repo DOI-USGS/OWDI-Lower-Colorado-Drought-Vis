@@ -113,11 +113,11 @@ spTransform(co_river_join, CRS(epsg_code)) %>%
 #     tol = 50
 #   else
 #     tol = 100
-  spTransform(contracts, CRS(epsg_code)) %>%
+   spTransform(contracts, CRS(epsg_code)) %>%
 #    gSimplify(tol) %>%
     plot(add=TRUE)
 
-#}
+}
 
 
 dev.off()
