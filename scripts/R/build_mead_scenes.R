@@ -38,7 +38,7 @@ ani_dur <- c('mead-draw'="2s", 'mead-remove'='1s','stage-move'='1s',
 contract_values <- prettyNum(round(as.numeric(contracts[sorted_contracts$ix,]$FiveYrAvg_)),big.mark=",",scientific=FALSE)
 contract_titles <- gsub("\\b([a-z])([a-z]+)", "\\U\\1\\L\\2" ,tolower(contracts[sorted_contracts$ix,]$Contractor), perl=TRUE)
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
-#stripping apostrophes from contract names which were causing problems
+#escaping apostrophes so that they don't cause the svg animation to error
 contract_titles <- gsub("'", "\\\\'", contract_titles)
 
 svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
