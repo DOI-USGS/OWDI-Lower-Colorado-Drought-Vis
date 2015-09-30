@@ -57,6 +57,12 @@ $( document ).ready( function () {
 
         scene.addTo( window.owdiDrought.SMController );
     };
+	
+	//Marty Function here...
+	
+	window.owdiDrought.nav = function(fragment){
+		window.location.hash = fragment;
+	};
 
     var fillDom = ( function () {
         // For every container, find the sections it holds. Then for each section,
