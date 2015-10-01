@@ -95,7 +95,32 @@ nav h3 {
 	color:#fff;
 	font-weight:300;
 	}
-
+	
+.socialMedia{
+	height:40px;
+	position:absolute;
+	right:10px;
+	top:10px;
+	text-align:left;
+	}
+	
+.onWhite{
+	top:-80px;
+	}
+	
+#tooHigh{
+	top:-50px;
+	}
+	
+.socialMedia img{
+	width:25px;
+	}
+	
+#welcomeSocial{
+	top:20px;
+	right:40px;
+	}
+	
 /*=====Container CSS=====*/
 
 .container {
@@ -731,6 +756,11 @@ nav h3 {
 		color:#003366;
 		cursor:pointer;
 		text-decoration:none;
+		}
+		
+	.socialMedia img{
+		display:block;
+		margin-bottom:20px;
 		}
 	
 	/*======keynote CSS======*/
