@@ -25,3 +25,9 @@
 		$('.original').css('visibility','visible');
 	  }
 	}
+	
+	
+	
+	
+	
+	
