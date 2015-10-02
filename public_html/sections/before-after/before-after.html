@@ -42,9 +42,13 @@
   </div>
   
   <p>Since 2001, Lake Mead’s elevation dropped from 1,196 to 1,075 feet by June 2015 (a decline of 121 feet). As the upper photo slider shows, the decline in the reservoir elevation during this time has exposed a white band of mineralized rock around the shoreline. The declining reservoir level has also exposed Hoover Dam’s four intake towers, two on the right side and two on the left side of the photo slider. Water from the reservoir flows through these intake towers at specified release volumes to meet downstream water demands in Arizona, California, Nevada, and Mexico, while producing hydropower as water flows through Hoover Dam’s 17 hydroelectric turbines.	</p>
+  <div id="beforeAfter01HiddenContent" class="hiddenContent">
   <p>The lower photos show the conditions of Lake Mead and the upstream face of Hoover Dam in 2001 at elevation 1,196 feet (left photo) and the conditions in June 2015 at elevation 1,075 feet (center photo). The lower photos also show the Nevada spillway in the bottom right corner of the photos. There are two spillways at Hoover Dam, one on the Nevada side and one on the Arizona side of the dam. At higher reservoir levels, spillways would be use to bypass flow around the Hoover Dam powerplant to prevent water from overtopping the dam. When water reaches the top of the spillway drum gates, it flows into the spillways, bypassing the dam via a series of tunnels and re-entering the river channel below the dam.	</p>
   <p>Every 1-foot drop in the elevation of Lake Mead reduces Hoover Dam’s powerplant capacity by approximately 5.7 megawatts (Reclamation estimate, as reported in Illia, 2010).  Since Lake Mead was last full in 2000, Hoover Dam’s powerplant capacity has fallen from 2,074 to 1,563 megawatts (as of August 2015). Reclamation has mitigated some of this impact by replacing traditional turbines with “wide-head” turbines, which are capable of generating more efficiently at lower reservoir levels, and making significant efficiency improvements to the powerplant (Kuckro, 2014).	</p>
   <p>At Lake Powell, risk to the Glen Canyon Dam powerplant is related to declining reservoir levels and the potential for loss of generating capacity below elevation 3,490 feet. Based on Reclamation analysis conducted in August 2015, the earliest this is projected to occur is 2019 (about a 5 percent chance of occurring). Since Lake Powell finished filling in 1980, its water surface elevation has fallen to as low as elevation 3,555 feet (33 percent of capacity) in April 2005, approximately 65 feet above minimum power pool.</p>
+  </div>
+  
+  <p id="beforeAfter01ReadMore" class="readMore">Read More</p>
 
 
 <!--Docks-->
@@ -103,5 +107,19 @@
     button.click(function() {
                  $('#sectionBAInfo').toggle();
                  });
+				 
+	var beforeAfter01ReadMore = $('#beforeAfter01ReadMore');
+	var beforeAfter01HiddenContent = $('#beforeAfter01HiddenContent');
+	
+	beforeAfter01ReadMore.on('click', function(){
+		
+		beforeAfter01HiddenContent.toggle();
+		
+		if($(this).text() == 'Read More'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More');
+				}
+		});	
                  
     </script>

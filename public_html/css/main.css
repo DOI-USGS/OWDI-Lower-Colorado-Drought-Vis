@@ -103,6 +103,19 @@ nav h3 {
 	display:none;
 	}
 	
+/*Hidden Content CSS*/
+
+.hiddenContent{
+	display:none;
+	}
+	
+.readMore{
+	color:#003366 !important;
+	text-align:center !important;
+	font-weight:400 !important;
+	cursor:pointer;
+	}
+	
 /*Social Media CSS*/
 	
 .socialMedia{
