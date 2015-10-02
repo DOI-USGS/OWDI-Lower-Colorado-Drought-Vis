@@ -58,6 +58,11 @@ $( document ).ready( function () {
         scene.addTo( window.owdiDrought.SMController );
     };
 
+	//Allows the nav to find the containers based on its ID's
+	window.owdiDrought.nav = function(fragment){
+		window.location.hash = fragment;
+	};
+
     var fillDom = ( function () {
         // For every container, find the sections it holds. Then for each section,
         // use the section's HTML id attribtue to load the template. Once the template

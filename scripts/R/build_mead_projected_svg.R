@@ -86,9 +86,7 @@ peak = floor(dinosvg:::tran_y(axes$y_lim[2], axes, fig))
 flood = floor(dinosvg:::tran_y(1219.6, axes, fig))
 surplus = floor(dinosvg:::tran_y(1200, axes, fig))
 normal = floor(dinosvg:::tran_y(1145, axes, fig))
-shortage1 = floor(dinosvg:::tran_y(1075, axes, fig))
-shortage2 = floor(dinosvg:::tran_y(1050, axes, fig))
-shortage3 = floor(dinosvg:::tran_y(1025, axes, fig))
+shortage = floor(dinosvg:::tran_y(1075, axes, fig))
 bottom = floor(dinosvg:::tran_y(axes$y_lim[1], axes, fig))
 
 newXMLNode('rect',parent = svg_nd, attrs = c(id='peak',x = fig$px_lim$x[1], y = peak,
@@ -101,30 +99,20 @@ newXMLNode('rect',parent = svg_nd, attrs = c(id='surplus',x = fig$px_lim$x[1], y
                                            width=fig$px_lim$x[2]-fig$px_lim$x[1], height=normal-surplus+0.5,
                                            fill='#0066CC',opacity=0.7, class='level-fill'))
 newXMLNode('rect',parent = svg_nd, attrs = c(id='normal',x = fig$px_lim$x[1], y = normal,
-                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=shortage1-normal+0.5,
+                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=shortage-normal+0.5,
                                              fill='#0066CC',opacity=0.6, class='level-fill'))
-newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage1',x = fig$px_lim$x[1], y = shortage1,
-                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=shortage2-shortage1+0.5,
-                                             fill='#0066CC',opacity=0.5, class='level-fill'))
-newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage2',x = fig$px_lim$x[1], y = shortage2,
-                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=shortage3-shortage2+0.5,
+newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage',x = fig$px_lim$x[1], y = shortage,
+                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=bottom-shortage+0.5,
                                              fill='#0066CC',opacity=0.4, class='level-fill'))
-newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage3',x = fig$px_lim$x[1], y = shortage3,
-                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=bottom-shortage3+0.5,
-                                             fill='#0066CC',opacity=0.3, class='level-fill'))
 g_id = newXMLNode("g", parent = svg_nd, attrs=c(class='hidden', id='condition-markers'))
-newXMLNode("text", parent = g_id, newXMLTextNode('Flood Control Surplus'),
+newXMLNode("text", parent = g_id, newXMLTextNode('Flood Control Conditions'),
            attrs = c(x = fig$px_lim$x[2], y = mean(c(surplus,flood)),dy="0.5em", dx="0.4em",class='small-text'))
-newXMLNode("text", parent = g_id, newXMLTextNode('Domestic Surplus'),
+newXMLNode("text", parent = g_id, newXMLTextNode('Surplus Conditions'),
            attrs = c(x = fig$px_lim$x[2], y = mean(c(normal,surplus)),dy="0.5em", dx="0.4em",class='small-text'))
 newXMLNode("text", parent = g_id, newXMLTextNode('Normal Conditions'),
-           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage1,normal)),dy="0.5em", dx="0.4em",class='small-text'))
-newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 1'),
-           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage2,shortage1)),dy="0.5em", dx="0.4em",class='small-text'))
-newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 2'),
-           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage3,shortage2)),dy="0.5em", dx="0.4em",class='small-text'))
-newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 3'),
-           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage3,bottom)),dy="0.5em", dx="0.4em",class='small-text'))
+           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage,normal)),dy="0.5em", dx="0.4em",class='small-text'))
+newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Conditions'),
+           attrs = c(x = fig$px_lim$x[2], y = mean(c(bottom,shortage)),dy="0.5em", dx="0.4em",class='small-text'))
 
 
 
@@ -237,8 +225,8 @@ cat(paste(c(lines[1], declaration, lines[-1]),collapse = '\n'), file = svg_file,
 axes <- list('tick_len' = 5,
              'y_label' = "Elevation of Lake Mead (feet)",
              'x_label' = "Year",
-             'y_ticks' = seq(1000,1225,25),
-             'y_tk_label' = seq(1000,1225,25),
+             'y_ticks' = seq(1000,1225,50),
+             'y_tk_label' = seq(1000,1225,50),
              'x_ticks' = seq(2000,xMaxR,5),
              'x_tk_label' = seq(2000,xMaxR,5),
              'y_lim' = c(990,1229),
@@ -271,9 +259,7 @@ peak = floor(dinosvg:::tran_y(axes$y_lim[2], axes, fig))
 flood = floor(dinosvg:::tran_y(1219.6, axes, fig))
 surplus = floor(dinosvg:::tran_y(1200, axes, fig))
 normal = floor(dinosvg:::tran_y(1145, axes, fig))
-shortage1 = floor(dinosvg:::tran_y(1075, axes, fig))
-shortage2 = floor(dinosvg:::tran_y(1050, axes, fig))
-shortage3 = floor(dinosvg:::tran_y(1025, axes, fig))
+shortage = floor(dinosvg:::tran_y(1075, axes, fig))
 bottom = floor(dinosvg:::tran_y(axes$y_lim[1], axes, fig))
 
 newXMLNode('rect',parent = svg_nd, attrs = c(id='peak',x = fig$px_lim$x[1], y = peak,
@@ -286,30 +272,20 @@ newXMLNode('rect',parent = svg_nd, attrs = c(id='surplus',x = fig$px_lim$x[1], y
                                              width=fig$px_lim$x[2]-fig$px_lim$x[1], height=normal-surplus+0.5,
                                              fill='#0066CC',opacity=0.7, class='level-fill'))
 newXMLNode('rect',parent = svg_nd, attrs = c(id='normal',x = fig$px_lim$x[1], y = normal,
-                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=shortage1-normal+0.5,
+                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=shortage-normal+0.5,
                                              fill='#0066CC',opacity=0.6, class='level-fill'))
-newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage1',x = fig$px_lim$x[1], y = shortage1,
-                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=shortage2-shortage1+0.5,
-                                             fill='#0066CC',opacity=0.5, class='level-fill'))
-newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage2',x = fig$px_lim$x[1], y = shortage2,
-                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=shortage3-shortage2+0.5,
+newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage',x = fig$px_lim$x[1], y = shortage,
+                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=bottom-shortage+0.5,
                                              fill='#0066CC',opacity=0.4, class='level-fill'))
-newXMLNode('rect',parent = svg_nd, attrs = c(id='shortage3',x = fig$px_lim$x[1], y = shortage3,
-                                             width=fig$px_lim$x[2]-fig$px_lim$x[1], height=bottom-shortage3+0.5,
-                                             fill='#0066CC',opacity=0.3, class='level-fill'))
 g_id = newXMLNode("g", parent = svg_nd, attrs=c(class='hidden', id='condition-markers'))
-newXMLNode("text", parent = g_id, newXMLTextNode('Flood Control Surplus'),
+newXMLNode("text", parent = g_id, newXMLTextNode('Flood Control Conditions'),
            attrs = c(x = fig$px_lim$x[2], y = mean(c(surplus,flood)),dy="0.5em", dx="0.4em",class='small-text'))
-newXMLNode("text", parent = g_id, newXMLTextNode('Domestic Surplus'),
+newXMLNode("text", parent = g_id, newXMLTextNode('Surplus Conditions'),
            attrs = c(x = fig$px_lim$x[2], y = mean(c(normal,surplus)),dy="0.5em", dx="0.4em",class='small-text'))
 newXMLNode("text", parent = g_id, newXMLTextNode('Normal Conditions'),
-           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage1,normal)),dy="0.5em", dx="0.4em",class='small-text'))
-newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 1'),
-           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage2,shortage1)),dy="0.5em", dx="0.4em",class='small-text'))
-newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 2'),
-           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage3,shortage2)),dy="0.5em", dx="0.4em",class='small-text'))
-newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Tier 3'),
-           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage3,bottom)),dy="0.5em", dx="0.4em",class='small-text'))
+           attrs = c(x = fig$px_lim$x[2], y = mean(c(shortage,normal)),dy="0.5em", dx="0.4em",class='small-text'))
+newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Conditions'),
+           attrs = c(x = fig$px_lim$x[2], y = mean(c(bottom,shortage)),dy="0.5em", dx="0.4em",class='small-text'))
 
 
 

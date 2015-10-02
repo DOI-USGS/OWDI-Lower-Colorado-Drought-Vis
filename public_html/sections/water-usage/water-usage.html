@@ -12,17 +12,14 @@
 
   <div id="JrGraph">
     
-    <object id="animated-object" data="img/water-usage/flow_animation.svg" type="image/svg+xml"></object>
+    <object id="animated-object" class="triggerMe" data="img/water-usage/flow_animation.svg" type="image/svg+xml"></object>
 	
-	<object id="animated-object-mobile" data="img/water-usage/flow_animation-mobile.svg" type="image/svg+xml"></object>
+	<object id="animated-object-mobile" class="triggerMe" data="img/water-usage/flow_animation-mobile.svg" type="image/svg+xml"></object>
     <div class="graphCaption">
       <p>Trends in water supply and water use in the Colorado River Basin are shown above. When water use exceeds the water supply in a given year, water stored is reduced. During the past 20 years, average water supply and average water use have been about equal. Under these conditions, reservoirs are replenished much more slowly. Water supply and water use data in the graphic above are estimated by Reclamation using water accounting information, USGS <a href="http://waterdata.usgs.gov/nwis/wys_rpt/?site_no=09380000&agency_cd=USGS" target="_blank">stream gage data</a>, and other sources. </p>
       
       <p>In this graphic, water use is equal to “consumptive use” (surface water diversions and groundwater pumping minus measured and unmeasured return flows) as estimated by Reclamation in its <a href=" http://www.usbr.gov/lc/region/g4000/wtracct.html" target="_blank">annual water accounting reports</a>. Other methods of estimating water use that account for withdrawals of surface and groundwater, and incorporate water that is used and returned to the stream, are made by the USGS.
       </p>
-      
-     
-      
       
     </div>
     
@@ -42,19 +39,30 @@
   </div>
 		
 	</div>
+	
+	<div class="socialMedia onWhite">
+		<img src="{{baseUrl}}/img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
+		<img src="{{baseUrl}}/img/social-media/github-blue-01.svg" alt="github icon"/>
+		<img src="{{baseUrl}}/img/social-media/link-blue-01.svg" alt="link icon"/>
+	</div>
+	
 </div>
 <script>
 (function() {
   var triggered = false,
     parentContainer = "#waterUsageContainer",
     animation = function() {
-      animationSVG = document.getElementById('animated-object').getSVGDocument();
+      animationSVG = document.getElementsByClassName('triggerMe');
+	  for(var i = 0; i < animationSVG.length; i++){
+		  	var svgElement = animationSVG[i].getSVGDocument();
+			if (svgElement && svgElement.visibleAxes && !triggered) {
+        svgElement.visibleAxes();
+        triggered = true;
+      		};
+		  }
 
       // Only call if SVG is loaded and has this function
-      if (animationSVG && animationSVG.visibleAxes && !triggered) {
-        animationSVG.visibleAxes();
-        triggered = true;
-      };
+      
     }
 
   $('#section10Button').click(function() {

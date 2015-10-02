@@ -1497,7 +1497,7 @@
 				transform="matrix(1 0 0 1 469.2676 322.1812)"
 				font-size="4.5451"
 				id="text17930"
-				font-family="'Arial-BoldMT'">HEADGATE DAM</text>
+				font-family="'Arial-BoldMT'">HEADGATE ROCK DAM</text>
 		</g>
 		<g id="paloVerdeGroup" class="riverGroup" onmouseover="showBbox(evt, 'paloVerde')" onmouseout="hideBbox(evt, 'paloVerde')">
 			<path id="paloVerdeFootprint" class="footprint"
@@ -2211,7 +2211,7 @@
 				id="text17938"
 				font-size="4.5451"
 				transform="matrix(1 0 0 1 359.6897 435.6604)"
-				font-family="'Arial-BoldMT'">RESEVOIR &amp; WORKS</text>
+				font-family="'Arial-BoldMT'">RESERVOIR &amp; WORKS</text>
 			<text
 				id="text17940"
 				font-size="4.5451"

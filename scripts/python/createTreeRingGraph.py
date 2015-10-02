@@ -33,11 +33,11 @@ def main():
     outsvg.close()
     
 def prettify(elem):
-    rough_string = ElementTree.tostring(elem, 'Windows-1252')
+    rough_string = ElementTree.tostring(elem)
     reparsed = minidom.parseString(rough_string)
     #xmlcss = reparsed.createProcessingInstruction('xml-stylesheet', 'type="text/css" href="../css/svg.css"')
     #reparsed.insertBefore(xmlcss, reparsed.firstChild)
-    return reparsed.toprettyxml(indent="  ", encoding="Windows-1252")
+    return reparsed.toprettyxml(indent="  ")
     
 def drawLine(ele, x1, y1, x2, y2, width = None, color = None):
     line = SubElement(ele, 'line')
@@ -103,8 +103,8 @@ def renderGraph(ele, floc):
         maxside = math.ceil(float(max)/5) * 5
         botstep = 500 / ((maxbot - minbot)/10)
         sidestep = 250 / ((maxside - minside)/5)
-        drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75')
-        drawHighlightBox(ele, 2000, 2016, minbot, maxbot - minbot, '#CCCCB2')
+        drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75', 'Pre-Compact', 'Period')
+        drawHighlightBox(ele, 2000, 2016, minbot, maxbot - minbot, '#CCCCB2', 'Current Drought', 'Period')
         linecontainer2 = SubElement(ele, 'g')
         linecontainer2.set('stroke', '#9999FF')
         linecontainer2.set('stroke-width', '2')
@@ -162,7 +162,7 @@ def createLineBox(ele, x1, x2, ymin, yrange, avg, raw, year, rot):
         value = ''
     else:
         value = str(round(avg, 2))
-    text1 = drawText(ele, 15, 245, '10-Year Average Flow Volume: ' + value + ' maf')
+    text1 = drawText(ele, 15 + 81.666666, 245, 'Long-Term Running Average: ' + value + ' maf')
     text1.set('fill', 'blue')
     text1.set('opacity', '0')
     text1.set('font-weight', 'bold')
@@ -170,13 +170,13 @@ def createLineBox(ele, x1, x2, ymin, yrange, avg, raw, year, rot):
     text1.set('stroke','black')
     text1.set('stroke-width', '.5')
     text1.set('class', 'num' + str(rot))
-    text2 = drawText(ele, 15, 15, 'Year: ' + str(year))
+    text2 = drawText(ele, 15 + 81.666666, 215, 'Year: ' + str(year))
     text2.set('fill', 'black')
     text2.set('opacity', '0')
     text2.set('font-weight', 'bold')
     text2.set('font-size', '12')
     text2.set('class', 'num' + str(rot))
-    text3 = drawText(ele, 15, 230, 'Annual Flow Volume: ' + str(round(raw, 2))+ ' maf')
+    text3 = drawText(ele, 15 + 81.666666, 230, 'Annual Flow Volume: ' + str(round(raw, 2))+ ' maf')
     text3.set('fill', '#9999FF')
     text3.set('opacity', '0')
     text3.set('font-weight', 'bold')
@@ -193,7 +193,7 @@ def drawMinLine(ele, percdata, pmin, prange):
     drawLine(ele, 15, 250 - ((min - pmin)*(250/prange)), 485, 250 - ((min - pmin)*(250/prange)), 1, 'red')
     drawText(ele, 15, 250 - ((min - pmin)*(250/prange)) - 5, 'Minimum').set('fill', 'red')
     
-def drawHighlightBox(ele, x1, x2, ymin, yrange, color):
+def drawHighlightBox(ele, x1, x2, ymin, yrange, color, text1, text2):
     rect = SubElement(ele, 'rect')
     x1 = (x1 - ymin) * (500/yrange)
     x2 = (x2 - ymin) * (500/yrange)
@@ -202,6 +202,12 @@ def drawHighlightBox(ele, x1, x2, ymin, yrange, color):
     rect.set('width', str(x2 - x1))
     rect.set('x', str(x1))
     rect.set('fill', color)
+    t = drawText(ele, str(x1+2), str(10), text1)
+    t.set('fill','black')
+    t.set('font-size', '8')
+    t = drawText(ele, str(x1+2), str(20), text2)
+    t.set('fill','black')
+    t.set('font-size', '8')
 
 def highlightRange(ele, x1, x2, ymin, yrange):
     rect = SubElement(ele, 'rect')

@@ -63,7 +63,73 @@ nav h3 {
 	color:#003366;
 	border:1px solid #003366;
 	}
-
+	
+/*Sticky Nav CSS*/
+	
+.menu{
+	background:#003366;
+	height:60px;
+	padding:0px !important;
+	margin-bottom:0px !important;
+	}
+	
+#stickynav{
+	height:60px;
+	}
+	
+.navBox:first-child{
+	border-left:1px solid #fff;
+	}
+	
+.navBox{
+	width:9.06%;
+	height:60px;
+	float:left;
+	border-right:1px solid #fff;
+	position:relative;
+	}
+	
+.navLink{
+	display:inline-block;
+	width:100%;
+	height:100%;
+	padding-top:19px;
+	text-decoration:none;
+	color:#fff;
+	font-weight:300;
+	}
+	
+.toolTip{
+	display:none;
+	}
+	
+/*Social Media CSS*/
+	
+.socialMedia{
+	height:40px;
+	position:absolute;
+	right:10px;
+	top:10px;
+	text-align:left;
+	}
+	
+.onWhite{
+	top:-80px;
+	}
+	
+#tooHigh{
+	top:-50px;
+	}
+	
+.socialMedia img{
+	width:25px;
+	}
+	
+#welcomeSocial{
+	top:20px;
+	right:40px;
+	}
+	
 /*=====Container CSS=====*/
 
 .container {
@@ -135,7 +201,7 @@ nav h3 {
 	height: 100%;
 }
 
-#mainmMessageDroughtContainer {
+#mainMessageDroughtContainer {
 	background-image: url('../img/keynotes/drydirt-mobile.jpg');
 	background-position: center center;
 	background-size: cover;
@@ -339,7 +405,7 @@ nav h3 {
 	outline: none;
 }
 
-.supportinginfo:hover{
+.supportinginfo:focus{
 	background: #003366;
 	color: #fff;
 }
@@ -376,6 +442,13 @@ nav h3 {
 		width:32.5%;
 		}
 	
+/*welcome section CSS*/
+
+#scrollDownArrow{
+	position:absolute;
+	bottom:200px;
+	}
+
 /*=====Blue Dragon CSS=====*/
 
 #blueDragon{
@@ -561,7 +634,7 @@ nav h3 {
 	#mainMessage7Container,
 	#endEraContainer,
 	#finalMessageContainer,
-	#mainmMessageDroughtContainer,
+	#mainMessageDroughtContainer,
 	#waterSupplyVariableOverTimeContainer{
 		-webkit-background-size: cover;
 		background-attachment: fixed;
@@ -581,7 +654,7 @@ nav h3 {
 	#waterSupplyVariableOverTimeContainer {
 		background-image: url('../img/keynotes/waterSupplyVariable.jpg');
 	}
-	#mainmMessageDroughtContainer {
+	#mainMessageDroughtContainer {
 		background-image: url('../img/keynotes/drydirt.jpg');
 	}
 	#mainMessage4Container {
@@ -681,6 +754,49 @@ nav h3 {
 
 @media screen and (min-width: 1025px) {
 	
+	#stickynav{
+		width:960px;
+		margin:0 auto;
+		height:60px;
+	}
+	
+	.navLink:hover{
+		background:#fff;
+		color:#003366;
+		cursor:pointer;
+		text-decoration:none;
+		}
+		
+	.navBox:hover .toolTip{
+	display:block !important;
+	}
+
+	.toolTip{
+		background:rgb(220,220,220);
+		padding:10px;
+		width:160px;
+		position:absolute;
+		bottom:-45px;
+		display:none;
+	}
+	
+	.toolTip:after{
+		content:"";
+		width: 0; 
+		height: 0; 
+		position:absolute;
+		top:-5px;
+		left:10px;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 5px solid rgb(220,220,220);
+	}
+		
+	.socialMedia img{
+		display:block;
+		margin-bottom:20px;
+		}
+	
 	/*======keynote CSS======*/
 	
 	.keynote {
@@ -704,6 +820,11 @@ nav h3 {
 	.graphCaption{
 		margin:0 auto 10px auto;
 		}
+		
+	.supportinginfo:hover{
+	background: #003366;
+	color: #fff;
+	}
 		
 	/*======Photo Panel CSS======*/
 	

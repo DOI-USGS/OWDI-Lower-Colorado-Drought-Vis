@@ -32,9 +32,7 @@ function moveInToMomsHouse(){
                  document.getElementById('flood').setAttribute('class','level-move');
                  document.getElementById('surplus').setAttribute('class','level-move');
                  document.getElementById('normal').setAttribute('class','level-move');
-                 document.getElementById('shortage1').setAttribute('class','level-move');
-                 document.getElementById('shortage2').setAttribute('class','level-move');
-                 document.getElementById('shortage3').setAttribute('class','level-move');
+                 document.getElementById('shortage').setAttribute('class','level-move');
 				 setTimeout(function(){
 				         {
                   document.getElementById('Projected-marker').setAttribute('class','shown');
@@ -47,16 +45,12 @@ document.getElementById('condition-markers').setAttribute('class','shown');}
   <rect id="flood" x="80" y="22" width="340" height="28.5" fill="#0066CC" opacity="0.8" class="level-fill"/>
   <rect id="surplus" x="80" y="50" width="340" height="75.5" fill="#0066CC" opacity="0.7" class="level-fill"/>
   <rect id="normal" x="80" y="125" width="340" height="97.5" fill="#0066CC" opacity="0.6" class="level-fill"/>
-  <rect id="shortage1" x="80" y="222" width="340" height="35.5" fill="#0066CC" opacity="0.5" class="level-fill"/>
-  <rect id="shortage2" x="80" y="257" width="340" height="34.5" fill="#0066CC" opacity="0.4" class="level-fill"/>
-  <rect id="shortage3" x="80" y="291" width="340" height="49.5" fill="#0066CC" opacity="0.3" class="level-fill"/>
+  <rect id="shortage" x="80" y="222" width="340" height="118.5" fill="#0066CC" opacity="0.4" class="level-fill"/>
   <g class="hidden" id="condition-markers">
-    <text x="420" y="36" dy="0.5em" dx="0.4em" class="small-text">Flood Control Surplus</text>
-    <text x="420" y="87.5" dy="0.5em" dx="0.4em" class="small-text">Domestic Surplus</text>
+    <text x="420" y="36" dy="0.5em" dx="0.4em" class="small-text">Flood Control Conditions</text>
+    <text x="420" y="87.5" dy="0.5em" dx="0.4em" class="small-text">Surplus Conditions</text>
     <text x="420" y="173.5" dy="0.5em" dx="0.4em" class="small-text">Normal Conditions</text>
-    <text x="420" y="239.5" dy="0.5em" dx="0.4em" class="small-text">Shortage Tier 1</text>
-    <text x="420" y="274" dy="0.5em" dx="0.4em" class="small-text">Shortage Tier 2</text>
-    <text x="420" y="315.5" dy="0.5em" dx="0.4em" class="small-text">Shortage Tier 3</text>
+    <text x="420" y="281" dy="0.5em" dx="0.4em" class="small-text">Shortage Conditions</text>
   </g>
   <g id="axes" class="label">
     <rect id="axis.box" x="80.0" y="10.0" width="340.0" height="330.0" style="fill:none;stroke:black"/>
@@ -72,24 +66,14 @@ document.getElementById('condition-markers').setAttribute('class','shown');}
     <text transform="translate(366.7,340.0)rotate(0)" text-anchor="middle" dy="1.0em">2015</text>
     <line x1="80.0" y1="326.2" x2="85.0" y2="326.2" style="stroke:black;stroke-width:1.5"/>
     <text transform="translate(75.0,331.2)rotate(0)" text-anchor="end">1000</text>
-    <line x1="80.0" y1="291.7" x2="85.0" y2="291.7" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,296.7)rotate(0)" text-anchor="end">1025</text>
     <line x1="80.0" y1="257.2" x2="85.0" y2="257.2" style="stroke:black;stroke-width:1.5"/>
     <text transform="translate(75.0,262.2)rotate(0)" text-anchor="end">1050</text>
-    <line x1="80.0" y1="222.6" x2="85.0" y2="222.6" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,227.6)rotate(0)" text-anchor="end">1075</text>
     <line x1="80.0" y1="188.1" x2="85.0" y2="188.1" style="stroke:black;stroke-width:1.5"/>
     <text transform="translate(75.0,193.1)rotate(0)" text-anchor="end">1100</text>
-    <line x1="80.0" y1="153.6" x2="85.0" y2="153.6" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,158.6)rotate(0)" text-anchor="end">1125</text>
     <line x1="80.0" y1="119.1" x2="85.0" y2="119.1" style="stroke:black;stroke-width:1.5"/>
     <text transform="translate(75.0,124.1)rotate(0)" text-anchor="end">1150</text>
-    <line x1="80.0" y1="84.6" x2="85.0" y2="84.6" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,89.6)rotate(0)" text-anchor="end">1175</text>
     <line x1="80.0" y1="50.0" x2="85.0" y2="50.0" style="stroke:black;stroke-width:1.5"/>
     <text transform="translate(75.0,55.0)rotate(0)" text-anchor="end">1200</text>
-    <line x1="80.0" y1="15.5" x2="85.0" y2="15.5" style="stroke:black;stroke-width:1.5"/>
-    <text transform="translate(75.0,20.5)rotate(0)" text-anchor="end">1225</text>
     <g id="legend" class="label" alignment-baseline="central">
       <text id="date_text" x="110" y="300" dy="-0.6em" dx="0.4em" class="legend"> </text>
       <text id="elev_text" x="110" y="300" dy="0.4em" dx="0.4em" fill="#000000" class="legend"> </text>
