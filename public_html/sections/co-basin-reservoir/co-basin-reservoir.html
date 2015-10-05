@@ -25,7 +25,10 @@
 	<div class="socialMedia onWhite">
 		<img src="{{baseUrl}}/img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
 		<img src="{{baseUrl}}/img/social-media/github-blue-01.svg" alt="github icon"/>
-		<img src="{{baseUrl}}/img/social-media/link-blue-01.svg" alt="link icon"/>
+		<img id="basinReservoirLinkOut" src="{{baseUrl}}/img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="basinReservoirLink" class="takeLinkBlue" >
+			<input id="basinReservoirURL" type="text" value="http://go.usa.gov/#basinReservoirContainer">
+		</div>
 	</div>
 	
 </div>
@@ -36,6 +39,11 @@
   button.click(function() {
     $('#section7Info').toggle();
   });
+  
+  $('#basinReservoirLinkOut').on('click', function(){
+			$('#basinReservoirLink').toggle();
+			$('#basinReservoirURL').select();
+		});
 
 </script>
 

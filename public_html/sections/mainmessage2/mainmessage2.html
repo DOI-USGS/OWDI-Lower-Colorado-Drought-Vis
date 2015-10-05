@@ -9,9 +9,21 @@
 	<div class="socialMedia">
 		<img src="{{baseUrl}}/img/social-media/twitter-whie-01.svg" alt="twitter icon"/>
 		<img src="{{baseUrl}}/img/social-media/github-white-01.svg" alt="github icon"/>
-		<img src="{{baseUrl}}/img/social-media/link-white-01.svg" alt="link icon"/>
+		<img id="controlStructuresLinkOut" src="{{baseUrl}}/img/social-media/link-white-01.svg" alt="link icon"/>
+		<div id="controlStructuresLink" class="takeLink" >
+			<input id="controlStructuresURL" type="text" value="http://go.usa.gov/#ControlStructures">
+		</div>
 	</div>
 
 </div>
+
+<script>
+
+	$('#controlStructuresLinkOut').on('click', function(){
+		$('#controlStructuresLink').toggle();
+		$('#controlStructuresURL').select();
+		});
+
+</script>
 
 

@@ -11,8 +11,20 @@
 	<div class="socialMedia">
 		<img src="{{baseUrl}}/img/social-media/twitter-whie-01.svg" alt="twitter icon"/>
 		<img src="{{baseUrl}}/img/social-media/github-white-01.svg" alt="github icon"/>
-		<img src="{{baseUrl}}/img/social-media/link-white-01.svg" alt="link icon"/>
+		<img id="decliningStorageLinkOut" src="{{baseUrl}}/img/social-media/link-white-01.svg" alt="link icon"/>
+		<div id="decliningStorageLink" class="takeLink" >
+			<input id="decliningStorageURL" type="text" value="http://go.usa.gov/#DecliningStorage">
+		</div>
 	</div>
 	
 
 </div>
+
+<script>
+
+	$('#decliningStorageLinkOut').on('click', function(){
+		$('#decliningStorageLink').toggle();
+		$('#decliningStorageURL').select();
+		});
+
+</script>

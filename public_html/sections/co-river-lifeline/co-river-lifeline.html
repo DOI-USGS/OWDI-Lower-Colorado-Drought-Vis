@@ -39,7 +39,10 @@
 	<div class="socialMedia onWhite">
 		<img src="{{baseUrl}}/img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
 		<img src="{{baseUrl}}/img/social-media/github-blue-01.svg" alt="github icon"/>
-		<img src="{{baseUrl}}/img/social-media/link-blue-01.svg" alt="link icon"/>
+		<img id="coRiverLifeLineLinkOut" src="{{baseUrl}}/img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="coRiverLifeLineLink" class="takeLinkBlue" >
+			<input id="coRiverLifeLineURL" type="text" value="http://go.usa.gov/#coRiverLifeLine">
+		</div>
 	</div>
 	
 </div>
@@ -50,5 +53,10 @@
     button.click(function() {
                  $('#sectionLLInfo').toggle();
                  });
+				 
+	$('#coRiverLifeLineLinkOut').on('click', function(){
+			$('#coRiverLifeLineLink').toggle();
+			$('#coRiverLifeLineURL').select();
+		});
                  
     </script>

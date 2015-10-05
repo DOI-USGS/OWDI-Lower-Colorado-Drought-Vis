@@ -41,7 +41,10 @@
 	<div class="socialMedia onWhite" id="tooHigh">
 		<img src="{{baseUrl}}/img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
 		<img src="{{baseUrl}}/img/social-media/github-blue-01.svg" alt="github icon"/>
-		<img src="{{baseUrl}}/img/social-media/link-blue-01.svg" alt="link icon"/>
+		<img id="basinDividedLinkOut" src="{{baseUrl}}/img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="basinDividedLink" class="takeLinkBlue" >
+			<input id="basinDividedURL" type="text" value="http://go.usa.gov/#basin-divided">
+		</div>
 	</div>
     
 </div>
@@ -68,4 +71,9 @@
 				$(this).text('Read More');
 				}
 		});	
+		
+		$('#basinDividedLinkOut').on('click', function(){
+			$('#basinDividedLink').toggle();
+			$('#basinDividedURL').select();
+		});
 </script>

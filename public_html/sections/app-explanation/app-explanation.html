@@ -21,7 +21,10 @@
 	<div class="socialMedia onWhite">
 		<img src="{{baseUrl}}/img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
 		<img src="{{baseUrl}}/img/social-media/github-blue-01.svg" alt="github icon"/>
-		<img src="{{baseUrl}}/img/social-media/link-blue-01.svg" alt="link icon"/>
+		<img id="appExplainLinkOut" src="{{baseUrl}}/img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="appExplainLink" class="takeLinkBlue" >
+			<input id="appExplainURL" type="text" value="http://go.usa.gov/#app-explanation">
+		</div>
 	</div>
 	
 </div>
@@ -39,4 +42,9 @@ var appExplainhiddenContent = $('#appExplainHiddenContent');
 				$(this).text('Read More');
 				}
 		});	
+		
+		$('#appExplainLinkOut').on('click', function(){
+			$('#appExplainLink').toggle();
+			$('#appExplainURL').select();
+		});
 </script>
