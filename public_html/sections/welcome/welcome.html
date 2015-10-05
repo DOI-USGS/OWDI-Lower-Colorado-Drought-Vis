@@ -13,8 +13,21 @@
 	<div class="socialMedia" id="welcomeSocial">
 		<img src="{{baseUrl}}/img/social-media/twitter-whie-01.svg" alt="twitter icon"/>
 		<img src="{{baseUrl}}/img/social-media/github-white-01.svg" alt="github icon"/>
-		<img src="{{baseUrl}}/img/social-media/link-white-01.svg" alt="link icon"/>
+		<img id="welcomeLinkOut" src="{{baseUrl}}/img/social-media/link-white-01.svg" alt="link icon"/>
+		<div id="welcomeLink" class="takeLink" >
+			<input id="welcomeURL" type="text" value="http://nca2014.globalchange.gov/report/sectors/water#intro-section">
+		</div>
 	</div>
 	
 </div>
+
+<script>
+
+	$('#welcomeLinkOut').on('click', function(){
+		$('#welcomeLink').toggle();
+		$('#welcomeURL').select();
+		});
+
+
+</script>
 
