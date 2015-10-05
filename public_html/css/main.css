@@ -121,13 +121,14 @@ nav h3 {
 .socialMedia{
 	height:40px;
 	position:absolute;
-	right:10px;
-	top:10px;
+	right:30px;
+	top:30px;
 	text-align:left;
 	}
 	
 .onWhite{
 	top:-80px;
+	right:0;
 	}
 	
 #tooHigh{
@@ -144,8 +145,8 @@ nav h3 {
 	right:40px;
 	}
 	
-.takeLink{
-	background:#fff;
+.takeLink,
+.takeLinkBlue{
 	width:200px;
 	height:40px;
 	padding:7px 10px 0px 10px;
@@ -156,7 +157,16 @@ nav h3 {
 	display:none;
 	}
 	
-.takeLink:after{
+.takeLink{
+	background:#fff;
+	}
+	
+.takeLinkBlue{
+	background:#003366;
+	}
+	
+.takeLink:after,
+.takeLinkBlue:after{
 		content:"";
 		width: 0; 
 		height: 0; 
@@ -165,10 +175,19 @@ nav h3 {
 		right:6px;
 		border-left: 5px solid transparent;
 		border-right: 5px solid transparent;
+		
+	}
+	
+.takeLink:after{
 		border-bottom: 5px solid #fff;
 	}
 	
-.takeLink input{
+.takeLinkBlue:after{
+		border-bottom: 5px solid #003366;
+	}
+	
+.takeLink input,
+.takeLinkBlue input{
 	width:100%;
 	height:25px;
 	padding:5px;
@@ -753,26 +772,16 @@ nav h3 {
 	
 	/*Social Media CSS*/
 	
-	.takeLink{
-		background:#fff;
-		width:200px;
-		height:40px;
-		padding:7px 10px 0px 10px;
-		position:absolute;
+	.takeLink,
+	.takeLinkBlue{
 		right:30px;
 		top:70px
 	}
 	
-	.takeLink:after{
-		content:"";
-		width: 0; 
-		height: 0; 
-		position:absolute;
+	.takeLink:after,
+	.takeLinkBlue:after{
 		top:50%;
 		right:-7px;
-		border-left: 5px solid transparent;
-		border-right: 5px solid transparent;
-		border-bottom: 5px solid #fff;
 		transform: rotate(90deg);
 	}
 		

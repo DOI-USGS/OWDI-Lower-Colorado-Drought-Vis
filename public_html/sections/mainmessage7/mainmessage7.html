@@ -8,7 +8,19 @@
 	<div class="socialMedia">
 		<img src="{{baseUrl}}/img/social-media/twitter-whie-01.svg" alt="twitter icon"/>
 		<img src="{{baseUrl}}/img/social-media/github-white-01.svg" alt="github icon"/>
-		<img src="{{baseUrl}}/img/social-media/link-white-01.svg" alt="link icon"/>
+		<img id="shortageLinkOut" src="{{baseUrl}}/img/social-media/link-white-01.svg" alt="link icon"/>
+		<div id="shortageLink" class="takeLink" >
+			<input id="shortageURL" type="text" value="http://go.usa.gov/#Shortage">
+		</div>
 	</div>
 	
 </div>
+
+<script>
+
+	$('#shortageLinkOut').on('click', function(){
+		$('#shortageLink').toggle();
+		$('#shortageURL').select();
+		});
+
+</script>
