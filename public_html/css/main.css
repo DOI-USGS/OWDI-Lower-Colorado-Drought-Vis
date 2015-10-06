@@ -583,7 +583,7 @@ nav h3 {
 	/*=====Basin Divided CSS=====*/
 
 	#blueDragonExplore{
-		margin-top:50px !important;
+		margin-top:100px !important;
 		}
 		
 	#blueDragonExplore,
@@ -723,11 +723,20 @@ nav h3 {
 @media screen and (min-width: 768px){
 	#animated-object{
 		display:block;
+		margin-top:100px;
 	}
 	
 	#animated-object-mobile{
 		display:none;
 	}
+	
+	#utah{
+		margin-top:100px;
+		}
+		
+	#droughtMovingAvg-object{
+		margin-top:100px;
+		}
 }
 
 @media screen and (min-width: 1025px) {
@@ -858,7 +867,7 @@ nav h3 {
 		
 	#dygraphExtra{
 		width:50%;
-		margin:20px auto;
+		margin:100px auto !important;
 		}
 	
 	/*======app-explanation CSS======*/	
@@ -891,7 +900,7 @@ nav h3 {
 	
 	#lakeMeadAnimatedExtra{
 		width:60%;
-		margin:20px auto;
+		margin:100px auto !important;
 		}
 
 }
