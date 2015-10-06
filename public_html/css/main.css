@@ -720,6 +720,26 @@ nav h3 {
 	}
 }
 
+@media only screen
+	and (min-device-width: 768px)
+	and (max-device-width: 1024px)
+	and (-webkit-min-device-pixel-ratio: 1){
+		#Introduction,
+		#Lifeline,
+		#ControlStructures,
+		#StorageCapacity,
+		#SupplyDemand,
+		#OneRiver,
+		#DecliningStorage,
+		#Shortage,
+		#EraOfHope,
+		#ExtendedDrought,
+		#WaterSupply{
+			background-attachment: scroll !important;
+		}
+		
+		}
+
 @media screen and (min-width: 768px){
 	#animated-object{
 		display:block;
