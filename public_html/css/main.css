@@ -142,7 +142,7 @@ nav h3 {
 	
 #welcomeSocial{
 	top:20px;
-	right:40px;
+	right:10px;
 	}
 	
 .takeLink,
@@ -428,7 +428,7 @@ nav h3 {
 
 #scrollDownArrow{
 	position:absolute;
-	bottom:200px;
+	bottom:100px;
 	}
 
 /*=====Blue Dragon CSS=====*/
@@ -600,6 +600,14 @@ nav h3 {
 		margin-top: 1px;
 		padding: 1px 5px;
 		height: 28px;
+	}
+	
+	#scrollDownArrow{
+		bottom:200px;
+	}
+	
+	#welcomeSocial{
+		right:30px;
 	}
 	/*======Container CSS======*/
 	
