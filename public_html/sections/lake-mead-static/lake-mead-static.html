@@ -34,6 +34,7 @@
             
             
 		</div>
+		
 		<div id="meadElevationContainer">
 			<object id="mead-elev-object" data="{{baseUrl}}/img/lake-mead-static/mead_elev_projected.svg" type="image/svg+xml"></object>
 			<div class="graphCaption">
@@ -43,13 +44,17 @@
             
                 
         <p> Since the drought began in 2000, Lake Mead’s elevation has declined by nearly 140 feet, declining every year except for 2005 and 2011. Projections of Lake Mead elevations are made by Reclamation and summarized in the <a href="http://www.usbr.gov/lc/region/g4000/24mo/index.html" target="_blank">Colorado River Basin 24-Month Study reports</a>. The 24-Month Study is Reclamation’s monthly operations model, simulating 12 major reservoirs in the Colorado River Basin on a monthly time step for a period of 24 months. These include nine reservoirs in the Upper Basin (Fontenelle, Flaming Gorge, Taylor Park, Blue Mesa, Morrow Point, Crystal, Vallecito, Navajo, and Lake Powell) and three reservoirs in the Lower Basin (Lake Mead, Lake Mohave, and Lake Havasu). Model output is used for annual and monthly decision support for mid-term operations (looking out 1 to 2 years). </p>
-        
+		
+        <div id="lakeMeadHiddenContent" class="hiddenContent">
         <p>The 24-Month Study utilizes forecasted Upper Basin inflow hydrology (provided by the <a href="http://www.cbrfc.noaa.gov/" target="_blank">Colorado Basin River Forecast Center</a>), projected reservoir operations, projected diversion and consumptive use schedules, and other factors, to generate a single scenario of potential reservoir conditions.</p>
        
        
        <p>As Lake Mead’s elevation declines, the Lower Basin comes closer to its first ever shortage condition. The annual operating conditions for Lake Mead and Lake Powell in the upcoming year are based on projected January 1 reservoir elevations from the August 24-Month Study consistent with the 2007 Record of Decision on Colorado River Interim Guidelines for Lower Basin Shortages and the Coordinated Operations for Lake Powell and Lake Mead (<a href="http://www.usbr.gov/lc/region/programs/strategies.html" target="_blank">2007 Interim Guidelines</a>). The January 1 projections and resulting annual operation for Lake Mead and Lake Powell are reported in the Annual Operating Plan for Colorado River Reservoirs (AOP) for the upcoming year. The <a href="http://www.usbr.gov/lc/region/g4000/AOP2016/AOP16_draft.pdf" target="_blank">draft 2016 AOP</a>, the <a href="http://www.usbr.gov/lc/region/g4000/aop/AOP15.pdf" target="_blank">2015 AOP</a>, and <a href="http://www.usbr.gov/lc/region/g4000/aop/index.html" target="_blank">previous years’ AOPs</a> can be found on Reclamation’s website.</p>
                 
         <p>In addition to impacting water supply, impacts of changing reservoir levels also extend to the aquatic ecosystem. Water level changes and natural disturbances, such as storm events and resulting local runoff, can re-suspend sediments. Because some Lake Mead sediments contain contaminants, re-suspension of sediment may be of concern to ecological health (<a href="http://pubs.usgs.gov/circ/1381/pdf/circ1381.pdf" target="_blank">U.S. Geological Survey, 2012</a>).</p>
+		</div>
+		
+		<p id="lakeMeadReadMore" class="readMore">Read More >></p>
                 
     
 		</div>
@@ -58,7 +63,10 @@
 	<div class="socialMedia onWhite">
 		<img src="{{baseUrl}}/img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
 		<img src="{{baseUrl}}/img/social-media/github-blue-01.svg" alt="github icon"/>
-		<img src="{{baseUrl}}/img/social-media/link-blue-01.svg" alt="link icon"/>
+		<img id="lakeMeadLinkOut" src="{{baseUrl}}/img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="lakeMeadLink" class="takeLinkBlue" >
+			<input id="lakeMeadURL" type="text" value="http://go.usa.gov/#meadStaticContainer">
+		</div>
 	</div>
 
 
@@ -90,4 +98,23 @@
 	button.click(function () {
 		$('#section15Info').toggle();
 	});
+	
+	var lakeMeadReadMore = $('#lakeMeadReadMore');
+	var lakeMeadHiddenContent = $('#lakeMeadHiddenContent');
+	
+	lakeMeadReadMore.on('click', function(){
+		
+		lakeMeadHiddenContent.toggle();
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+		});	
+		
+		$('#lakeMeadLinkOut').on('click', function(){
+			$('#lakeMeadLink').toggle();
+			$('#lakeMeadURL').select();
+		});
 </script>

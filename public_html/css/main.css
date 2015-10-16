@@ -103,18 +103,32 @@ nav h3 {
 	display:none;
 	}
 	
+/*Hidden Content CSS*/
+
+.hiddenContent{
+	display:none;
+	}
+	
+.readMore{
+	color:#003366 !important;
+	text-align:center !important;
+	font-weight:400 !important;
+	cursor:pointer;
+	}
+	
 /*Social Media CSS*/
 	
 .socialMedia{
 	height:40px;
 	position:absolute;
-	right:10px;
-	top:10px;
+	right:30px;
+	top:30px;
 	text-align:left;
 	}
 	
 .onWhite{
 	top:-80px;
+	right:0;
 	}
 	
 #tooHigh{
@@ -123,11 +137,61 @@ nav h3 {
 	
 .socialMedia img{
 	width:25px;
+	cursor:pointer;
 	}
 	
 #welcomeSocial{
 	top:20px;
-	right:40px;
+	right:10px;
+	}
+	
+.takeLink,
+.takeLinkBlue{
+	width:200px;
+	height:40px;
+	padding:7px 10px 0px 10px;
+	position:absolute;
+	right:0;
+	top:25px;
+	z-index:10000;
+	display:none;
+	}
+	
+.takeLink{
+	background:#fff;
+	}
+	
+.takeLinkBlue{
+	background:#003366;
+	}
+	
+.takeLink:after,
+.takeLinkBlue:after{
+		content:"";
+		width: 0; 
+		height: 0; 
+		position:absolute;
+		top:-5px;
+		right:6px;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		
+	}
+	
+.takeLink:after{
+		border-bottom: 5px solid #fff;
+	}
+	
+.takeLinkBlue:after{
+		border-bottom: 5px solid #003366;
+	}
+	
+.takeLink input,
+.takeLinkBlue input{
+	width:100%;
+	height:25px;
+	padding:5px;
+	outline:none;
 	}
 	
 /*=====Container CSS=====*/
@@ -139,8 +203,17 @@ nav h3 {
 	clear:both;
 }
 
-#welcomeContainer {
-	background-image: url('../img/keynotes/welcome-mobile.jpg');
+#Introduction,
+#Lifeline,
+#ControlStructures,
+#StorageCapacity,
+#WaterSupply,
+#ExtendedDrought,
+#SupplyDemand,
+#OneRiver,
+#DecliningStorage,
+#Shortage,
+#EraOfHope{
 	background-position: center center;
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -150,6 +223,10 @@ nav h3 {
 	height: 100%;
 	width: 100%;
 	padding: 0;
+	}
+
+#Introduction {
+	background-image: url('../img/keynotes/welcome-mobile.jpg');
 }
 
 #co-basin-map {
@@ -157,153 +234,58 @@ nav h3 {
 	margin-bottom: -50px;
 }
 
-#mainMessage1Container {
+#Lifeline {
 	background-image: url('../img/keynotes/keynote2-mobile.jpg');
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	height: 100%;
 }
 
-#mainMessage2Container {
+#ControlStructures {
 	background-image: url('../img/keynotes/keynote3-mobile.jpg');
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	height: 100%;
 }
 
-#mainMessage3Container {
+#StorageCapacity {
 	background-image: url('../img/keynotes/keynote4-mobile.jpg');
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	height: 100%;
 }
 
-#waterSupplyVariableOverTimeContainer {
+#WaterSupply {
 	background-image: url('../img/keynotes/waterSupplyVariable-mobile.jpg');
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	height: 100%;
 }
 
-#mainMessageDroughtContainer {
+#ExtendedDrought {
 	background-image: url('../img/keynotes/drydirt-mobile.jpg');
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	height: 100%;
 }
 
 #basinReservoirContainer {
 	margin-bottom: 20px;
 }
 
-#mainMessage4Container {
+#SupplyDemand {
 	background-image: url('../img/keynotes/keynote5-mobile.jpg');
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	height: 100%;
 }
 
-#mainMessage5Container {
+#OneRiver {
 	background-image: url('../img/keynotes/oneRiverTwoParts-mobile.jpg');
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	height: 100%;
-	margin-bottom: 50px;
 }
 
 #basinDividedContainer {
 	margin-bottom: 20px;
 }
 
-#mainMessage6Container {
+#DecliningStorage {
 	background-image: url('../img/keynotes/keynote7-mobile.jpg');
-	background-position: center center;
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	height: 100%;
 }
 
-#mainMessage7Container {
+#Shortage {
 	background-image: url('../img/keynotes/keynote8-mobile.jpg');
-	background-position: center center;
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	height: 100%;
 }
 
 #meadStaticContainer{
 	margin-bottom:20px;
 	}
 
-#meadAnimatedContainer {
-	background-position: center center;
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	padding-top: 0px;
-}
-#endEraContainer {
+#EraOfHope {
 	background-image: url('../img/keynotes/keynote9-mobile.jpg');
-	background-position: center center;
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	height: 100%;
 }
 
-#finalMessageContainer {
-	background-image: url('../img/keynotes/keynote10-mobile.jpg');
-	background-position: center center;
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	height: 100%;
-}
 
 /*=====keynote css=====*/
 
@@ -446,7 +428,7 @@ nav h3 {
 
 #scrollDownArrow{
 	position:absolute;
-	bottom:200px;
+	bottom:100px;
 	}
 
 /*=====Blue Dragon CSS=====*/
@@ -601,7 +583,7 @@ nav h3 {
 	/*=====Basin Divided CSS=====*/
 
 	#blueDragonExplore{
-		margin-top:50px !important;
+		margin-top:100px !important;
 		}
 		
 	#blueDragonExplore,
@@ -619,61 +601,65 @@ nav h3 {
 		padding: 1px 5px;
 		height: 28px;
 	}
+	
+	#scrollDownArrow{
+		bottom:200px;
+	}
+	
+	#welcomeSocial{
+		right:30px;
+	}
 	/*======Container CSS======*/
 	
 	.container {
 		padding: 50px;
 	}
-	#welcomeContainer,
-	#mainMessage1Container,
-	#mainMessage2Container,
-	#mainMessage3Container,
-	#mainMessage4Container,
-	#mainMessage5Container,
-	#mainMessage6Container,
-	#mainMessage7Container,
-	#endEraContainer,
-	#finalMessageContainer,
-	#mainMessageDroughtContainer,
-	#waterSupplyVariableOverTimeContainer{
+	#Introduction,
+	#Lifeline,
+	#ControlStructures,
+	#StorageCapacity,
+	#SupplyDemand,
+	#OneRiver,
+	#DecliningStorage,
+	#Shortage,
+	#EraOfHope,
+	#ExtendedDrought,
+	#WaterSupply{
 		-webkit-background-size: cover;
 		background-attachment: fixed;
 	}
-	#welcomeContainer {
+	#Introduction {
 		background-image: url('../img/keynotes/welcome.jpg');
 	}
-	#mainMessage1Container {
+	#Lifeline {
 		background-image: url('../img/keynotes/keynote2.jpg');
 	}
-	#mainMessage2Container {
+	#ControlStructures {
 		background-image: url('../img/keynotes/keynote3.jpg');
 	}
-	#mainMessage3Container {
+	#StorageCapacity {
 		background-image: url('../img/keynotes/keynote4.jpg');
 	}
-	#waterSupplyVariableOverTimeContainer {
+	#WaterSupply {
 		background-image: url('../img/keynotes/waterSupplyVariable.jpg');
 	}
-	#mainMessageDroughtContainer {
+	#ExtendedDrought {
 		background-image: url('../img/keynotes/drydirt.jpg');
 	}
-	#mainMessage4Container {
+	#SupplyDemand {
 		background-image: url('../img/keynotes/keynote5.jpg');
 	}
-	#mainMessage5Container {
+	#OneRiver {
 		background-image: url('../img/keynotes/oneRiverTwoParts.jpg');
 	}
-	#mainMessage6Container {
+	#DecliningStorage {
 		background-image: url('../img/keynotes/keynote7.jpg');
 	}
-	#mainMessage7Container {
+	#Shortage {
 		background-image: url('../img/keynotes/keynote8.jpg');
 	}
-	#endEraContainer {
+	#EraOfHope {
 		background-image: url('../img/keynotes/keynote9.jpg');
-	}
-	#finalMessageContainer {
-		background-image: url('../img/keynotes/keynote10.jpg');
 	}
 	
 	/*======keynote CSS======*/
@@ -742,14 +728,43 @@ nav h3 {
 	}
 }
 
+@media only screen
+	and (min-device-width: 768px)
+	and (max-device-width: 1024px)
+	and (-webkit-min-device-pixel-ratio: 1){
+		#Introduction,
+		#Lifeline,
+		#ControlStructures,
+		#StorageCapacity,
+		#SupplyDemand,
+		#OneRiver,
+		#DecliningStorage,
+		#Shortage,
+		#EraOfHope,
+		#ExtendedDrought,
+		#WaterSupply{
+			background-attachment: scroll !important;
+		}
+		
+		}
+
 @media screen and (min-width: 768px){
 	#animated-object{
 		display:block;
+		margin-top:100px;
 	}
 	
 	#animated-object-mobile{
 		display:none;
 	}
+	
+	#utah{
+		margin-top:100px;
+		}
+		
+	#droughtMovingAvg-object{
+		margin-top:100px;
+		}
 }
 
 @media screen and (min-width: 1025px) {
@@ -790,6 +805,21 @@ nav h3 {
 		border-left: 5px solid transparent;
 		border-right: 5px solid transparent;
 		border-bottom: 5px solid rgb(220,220,220);
+	}
+	
+	/*Social Media CSS*/
+	
+	.takeLink,
+	.takeLinkBlue{
+		right:30px;
+		top:70px
+	}
+	
+	.takeLink:after,
+	.takeLinkBlue:after{
+		top:50%;
+		right:-7px;
+		transform: rotate(90deg);
 	}
 		
 	.socialMedia img{
@@ -865,7 +895,7 @@ nav h3 {
 		
 	#dygraphExtra{
 		width:50%;
-		margin:20px auto;
+		margin:100px auto !important;
 		}
 	
 	/*======app-explanation CSS======*/	
@@ -898,7 +928,7 @@ nav h3 {
 	
 	#lakeMeadAnimatedExtra{
 		width:60%;
-		margin:20px auto;
+		margin:100px auto !important;
 		}
 
 }
