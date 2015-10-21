@@ -2,7 +2,7 @@
 usage_col <- '#B22C2C'
 supply_col <- '#0066CC'
 
-
+conv = 1.23348 # multiple maf by this to get billion m3
 supply_usage_svg <- function(data, unit = 'Imperial', form.factor='desktop', language = 'en'){
   
   
@@ -20,13 +20,13 @@ supply_usage_svg <- function(data, unit = 'Imperial', form.factor='desktop', lan
   dinosvg:::animate_attribute(a_id, attr_name = "opacity", 
                               begin = "indefinite", id = "visibleAxes", 
                               fill = 'freeze', dur = '1s', from = "0", to = "1")
-  dinosvg::add_axes(a_id, get_axes(data, form.factor), fig, x_tick_rotate = 0)
+  dinosvg::add_axes(a_id, get_axes(data, form.factor, language), fig, x_tick_rotate = 0)
   label.shifts <- list('mobile'=list('y-label'=c(dy='-0.4em'), 'x-label'=c(dy='-0.8em')),
                        'desktop'=list('y-label'=c(dy='-1em'), 'x-label'=c(dy='-0.5em')))
   attr_svg(svg_nd, attr=label.shifts[[form.factor]], 'text')
   
   add_legend(g_id, form.factor, language, fig)
-  add_lines(g_id, data, form.factor)
+  add_lines(g_id, data, form.factor, language)
   
   return(svg_nd)
   
@@ -42,8 +42,12 @@ get_fig <- function(form.factor){
   return(fig)
 }
 get_axes <- function(data, form.factor, language){
+  unit <- c('es'='billion cubic meters', 'en'='million acre-feet')
   x.ticks = c('desktop'=10, 'mobile'=5)
-  y.label = c('desktop'="Volume (million acre-feet)", 'mobile'="Basin-wide Volume (million acre-feet)")
+  y.label = c('desktop'=paste0("Volume (",unit[[language]],")"), 'mobile'=paste0("Basin-wide Volume (",unit[[language]],")"))
+
+  y.ticks = list('es'=seq(0,30*conv,5), 'en'=seq(0,25,5))
+  y.lim = list('es'=c(0,30*conv), 'en'=c(0,29))
   
   get_ticks <- function(x, n){
     x.rng = range(x)
@@ -56,11 +60,11 @@ get_axes <- function(data, form.factor, language){
   axes <- list('tick_len' = 5,
                'y_label' = y.label[[form.factor]],
                'x_label' = "Year",
-               'y_ticks' = seq(0,25,5),
-               'y_tk_label' = seq(0,25,5),
+               'y_ticks' = y.ticks[[language]],
+               'y_tk_label' = y.ticks[[language]],
                'x_ticks' = get_ticks(data$times, x.ticks[[form.factor]]),
                'x_tk_label' = get_ticks(data$times, x.ticks[[form.factor]]),
-               'y_lim' = c(0,29),
+               'y_lim' = y.lim[[language]],
                'x_lim' = c(range(data$times)[1]-2, range(data$times)[2]+2))
   return(axes)
 }
@@ -92,9 +96,9 @@ add_legend <- function(g_id, form.factor, language, fig){
   
 }
 
-add_lines <- function(g_id, data, form.factor){
+add_lines <- function(g_id, data, form.factor, language){
   
-  axes = get_axes(data, form.factor)
+  axes = get_axes(data, form.factor, language)
   fig = get_fig(form.factor)
   
   line_width <- '3'
@@ -103,7 +107,11 @@ add_lines <- function(g_id, data, form.factor){
   years = data$times
   flows = data$supply
   usage = data$usage
-  
+  if (language == 'es'){
+    flows = flows*conv
+    usage = usage*conv
+  }
+
   x <- sapply(years, FUN = function(x) dinosvg:::tran_x(x, axes, fig))
   y <- sapply(flows, FUN = function(y) dinosvg:::tran_y(y, axes, fig))
   line_length <- function(x1,y1,x2,y2){
@@ -175,11 +183,12 @@ add_lines <- function(g_id, data, form.factor){
   # -----
   usage.label = c('desktop'='Annual Basin-wide Consumptive Use', 'mobile'='Consumptive Use')
   supply.label = c('desktop'='Annual Basin-wide Water Supply', 'mobile'='Water Supply')
+  unit = c('es'='bcm','en'='maf')
   for (i in 1:length(x)){
     #refine this so it is actually halfway points
     
-    use = ifelse(is.na(usage[i]), '', sprintf('%1.1f maf',usage[i]))
-    flow = ifelse(is.na(flows[i]), '', sprintf('%1.1f maf',flows[i]))
+    use = ifelse(is.na(usage[i]), '', sprintf('%1.1f %s',usage[i], unit[[language]]))
+    flow = ifelse(is.na(flows[i]), '', sprintf('%1.1f %s',flows[i], unit[[language]]))
     newXMLNode('rect','parent' = g_id, 
                attrs = c(id = sprintf('year_%s',years[i]), x = sprintf('%1.2f',x[i]-width/2), y = fig$px_lim$y[2], width = sprintf('%1.2f',width), height = fig$px_lim$y[1]-fig$px_lim$y[2],
                          'fill-opacity'="0.0", 
