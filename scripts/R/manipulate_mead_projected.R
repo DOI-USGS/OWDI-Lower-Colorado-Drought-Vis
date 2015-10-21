@@ -33,7 +33,7 @@ get_axes <- function(data, form.factor, language){
   x.ticks = c('desktop'=8, 'mobile'=4)
   y.label = c('desktop'=paste0("Elevation of Lake Mead (",unit[[language]],")"), 'mobile'=paste0("Elevation of Lake Mead (",unit[[language]],")"))
   
-  y.ticks = list('es'=seq(1000,1225,25)*conv, 'en'=seq(1000,1225,25))
+  y.ticks = list('es'=seq(1000*conv,1225*conv,10), 'en'=seq(1000,1225,25))
   y.lim = list('es'=c(990*conv,1229*conv), 'en'=c(990,1229))
   
   get_ticks <- function(x, n){
