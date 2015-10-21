@@ -3,7 +3,7 @@ usage_col <- '#B22C2C'
 supply_col <- '#0066CC'
 
 
-init_figure_supply_use <- function(data, unit = 'Imperial', form.factor='desktop', language = 'en'){
+supply_usage_svg <- function(data, unit = 'Imperial', form.factor='desktop', language = 'en'){
   
   
   fig = get_fig(form.factor)
@@ -25,7 +25,7 @@ init_figure_supply_use <- function(data, unit = 'Imperial', form.factor='desktop
                        'desktop'=list('y-label'=c(dy='-1em'), 'x-label'=c(dy='-0.5em')))
   attr_svg(svg_nd, attr=label.shifts[[form.factor]], 'text')
   
-  add_legend(g_id, form.factor, fig)
+  add_legend(g_id, form.factor, language, fig)
   add_lines(g_id, data, form.factor)
   
   return(svg_nd)
@@ -41,8 +41,9 @@ get_fig <- function(form.factor){
                      "y" = c(fig$h-fig$margins[3]-fig$margins[1], fig$margins[3]))
   return(fig)
 }
-get_axes <- function(data, form.factor){
+get_axes <- function(data, form.factor, language){
   x.ticks = c('desktop'=10, 'mobile'=5)
+  y.label = c('desktop'="Volume (million acre-feet)", 'mobile'="Basin-wide Volume (million acre-feet)")
   
   get_ticks <- function(x, n){
     x.rng = range(x)
@@ -53,7 +54,7 @@ get_axes <- function(data, form.factor){
   
   # --- pixel dims ---
   axes <- list('tick_len' = 5,
-               'y_label' = "Volume (million acre-feet)",
+               'y_label' = y.label[[form.factor]],
                'x_label' = "Year",
                'y_ticks' = seq(0,25,5),
                'y_tk_label' = seq(0,25,5),
@@ -75,18 +76,19 @@ read_supply_use <- function(){
   return(data.frame(times=years, supply=flows, usage=usage))
 }
 
-add_legend <- function(g_id, language, fig){
+add_legend <- function(g_id, form.factor, language, fig){
   #-- legend --
   leg_id <- newXMLNode("g", 'parent' = g_id,
                        attrs = c('id' = "legend", visibility = 'hidden',
                                  class="label", 'alignment-baseline' = "central"))
-  
+  text.place = list('mobile'=list(c(dy='1.0em', dx='0.5em'), c(dy='2.0em', dx='0.5em'), c(dy='3.0em', dx='0.5em')),
+                    'desktop'=list(c(dy='1.5em', dx='1.0em'), c(dy='2.5em', dx='1.0em'), c(dy='3.5em', dx='1.0em')))
   newXMLNode("text", parent = leg_id, newXMLTextNode('year'),
-             attrs = c(id="year_text", x=fig$margins[2], y=fig$margins[3],class='legend', dy='1.5em', dx='1.0em'))
+             attrs = c(id="year_text", x=fig$margins[2], y=fig$margins[3],class='legend', text.place[[form.factor]][[1]]))
   newXMLNode("text", parent = leg_id, newXMLTextNode('use_text'),
-             attrs = c(id="use_text", x=fig$margins[2], y=fig$margins[3], fill = usage_col,class='legend', dy='2.5em', dx='1.0em'))
+             attrs = c(id="use_text", x=fig$margins[2], y=fig$margins[3], fill = usage_col,class='legend', text.place[[form.factor]][[2]]))
   newXMLNode("text", parent = leg_id, newXMLTextNode('supply_text'),
-             attrs = c(id="supply_text", x=fig$margins[2], y=fig$margins[3], fill = supply_col,class='legend', dy='3.5em', dx='1.0em'))
+             attrs = c(id="supply_text", x=fig$margins[2], y=fig$margins[3], fill = supply_col,class='legend', text.place[[form.factor]][[3]]))
   
 }
 
@@ -171,6 +173,8 @@ add_lines <- function(g_id, data, form.factor){
                               begin = "timeAdvance.begin", id = "usage", 
                               fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
   # -----
+  usage.label = c('desktop'='Annual Basin-wide Consumptive Use', 'mobile'='Consumptive Use')
+  supply.label = c('desktop'='Annual Basin-wide Water Supply', 'mobile'='Water Supply')
   for (i in 1:length(x)){
     #refine this so it is actually halfway points
     
@@ -181,8 +185,8 @@ add_lines <- function(g_id, data, form.factor){
                          'fill-opacity'="0.0", 
                          onmousemove=paste0(sprintf("legendViz(evt,'supply-%s');",years[i]),
                                             sprintf("ChangeText(evt, 'year_text','Year: %s');",years[i]),
-                                            sprintf("ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: %s');", use),
-                                            sprintf("ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: %s');", flow)),
+                                            sprintf("ChangeText(evt, 'use_text','%s: %s');", usage.label[[form.factor]],use),
+                                            sprintf("ChangeText(evt, 'supply_text','%s: %s');", supply.label[[form.factor]], flow)),
                          onmouseover=paste0(sprintf("highlightViz(evt,'supply-%s','0.1');",years[i])),
                          onmouseout=paste0("document.getElementById('legend').setAttribute('visibility', 'hidden');",
                                            sprintf("highlightViz(evt,'supply-%s','0.0');",years[i]))))
