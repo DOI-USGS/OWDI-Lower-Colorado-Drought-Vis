@@ -149,7 +149,7 @@ $( document ).ready( function () {
 
         window.console.trace( "Application loaded" );
         window.owdiDrought.SMController.scrollTo( 0 );
-        var fadeTimeInMs = 1500;
+        var fadeTimeInMs = 4000;
 
         $( "#overlay" ).fadeOut( fadeTimeInMs, "swing", function () {
             $( this ).remove();
