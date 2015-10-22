@@ -148,13 +148,13 @@ $( document ).ready( function () {
         // At this point, the DOM will have been built
 
         window.console.trace( "Application loaded" );
-        window.owdiDrought.SMController.scrollTo( 0 );
         var fadeTimeInMs = 1500;
-
         $( "#overlay" ).fadeOut( fadeTimeInMs, "swing", function () {
             $( this ).remove();
             $( window ).resize();
+			window.owdiDrought.SMController.scrollTo( 0 );
         } );
+		
     } );
 
     // Track window size and emit events when we pass through width thresholds
