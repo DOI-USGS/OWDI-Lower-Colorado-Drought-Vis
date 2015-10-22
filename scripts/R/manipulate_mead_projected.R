@@ -106,7 +106,7 @@ add_legend <- function(g_id, form.factor, language, fig){
 
 get_fig <- function(form.factor){
   fig.dims <- list('mobile'=list('w' = 500,'h' = 400, 'margins' = c(60,80,10, 10)),
-                   'desktop'=list('w' = 960,'h' = 600,'margins' = c(50,100,10, 100)))
+                   'desktop'=list('w' = 960,'h' = 600,'margins' = c(50,100,10, 120)))
   fig <- fig.dims[[form.factor]]
   
   fig$px_lim <- list("x" = c(fig$margins[2], fig$w-fig$margins[4]),
@@ -120,8 +120,10 @@ add_annotations <- function(svg_nd, form.factor, language, fig, axes){
   if (form.factor == 'desktop'){
     x = get_heights(axes, fig)
     g_id = newXMLNode("g", parent = svg_nd, attrs=c(class='hidden', id='condition-markers'))
-    newXMLNode("text", parent = g_id, newXMLTextNode('Flood Control Conditions'),
-               attrs = c(x = fig$px_lim$x[2], y = mean(c(x$surplus,x$flood)),dy="0.5em", dx="0.4em",class='small-text'))
+    newXMLNode("text", parent = g_id, newXMLTextNode('Flood Control'),
+               attrs = c(x = fig$px_lim$x[2], y = mean(c(x$surplus,x$flood)),dx="0.4em",class='small-text'))
+    newXMLNode("text", parent = g_id, newXMLTextNode('Conditions'),
+               attrs = c(x = fig$px_lim$x[2], y = mean(c(x$surplus,x$flood)), dy="1.0em", dx="0.4em",class='small-text'))
     newXMLNode("text", parent = g_id, newXMLTextNode('Surplus Conditions'),
                attrs = c(x = fig$px_lim$x[2], y = mean(c(x$normal,x$surplus)),dy="0.5em", dx="0.4em",class='small-text'))
     newXMLNode("text", parent = g_id, newXMLTextNode('Normal Conditions'),
