@@ -33,7 +33,7 @@ supply_usage_svg <- function(data, unit = 'Imperial', form.factor='desktop', lan
 }
 
 get_fig <- function(form.factor){
-  fig.dims <- list('mobile'=list('w' = 500,'h' = 400, 'margins' = c(40,60,10, 60)),
+  fig.dims <- list('mobile'=list('w' = 500,'h' = 400, 'margins' = c(40,60,10, 10)),
                    'desktop'=list('w' = 960,'h' = 600,'margins' = c(50,100,10, 100)))
   fig <- fig.dims[[form.factor]]
   
@@ -119,6 +119,7 @@ add_lines <- function(g_id, data, form.factor, language){
     return(len)
   }
   
+  tot_time <- tail(years,1) - head(years,1)
   difTimes <- cumsum(diff(years)/tot_time)
   difTimes <- c(0,difTimes)*ani_time
   x1 <- head(x,-1)
@@ -127,7 +128,7 @@ add_lines <- function(g_id, data, form.factor, language){
   y2 <- tail(y,-1)
   line_len <- line_length(x1,y1,x2,y2)
   tot_len <- sum(line_len)
-  tot_time <- tail(years,1) - head(years,1)
+  
   
   # calc_lengths 
   values <- paste(tot_len- cumsum(line_len),collapse=';')
