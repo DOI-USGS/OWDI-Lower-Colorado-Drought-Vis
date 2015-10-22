@@ -139,6 +139,11 @@ $( document ).ready( function () {
         // so when it's populated, resolve the deferred object being returned to the caller so it
         // can act
         loadTemplateDeferred.always( deferred.resolve );
+		
+		$('body').css({'overflow':'hidden'});
+  		$(document).bind('scroll',function () { 
+       		window.scrollTo(0,0); 
+  		});
 
         return deferred;
     } )();
@@ -148,11 +153,14 @@ $( document ).ready( function () {
         // At this point, the DOM will have been built
 
         window.console.trace( "Application loaded" );
-        var fadeTimeInMs = 1500;
+        window.owdiDrought.SMController.scrollTo( 0 );
+        var fadeTimeInMs = 1000;
+		
         $( "#overlay" ).fadeOut( fadeTimeInMs, "swing", function () {
             $( this ).remove();
             $( window ).resize();
-			window.owdiDrought.SMController.scrollTo( 0 );
+			$(document).unbind('scroll'); 
+  			$('body').css({'overflow':'visible'});
         } );
 		
     } );
