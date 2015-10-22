@@ -35,7 +35,7 @@ get_axes <- function(data, form.factor, language){
   x.label = c('desktop'='Year', 'mobile'='')
   y.label = c('desktop'=paste0("Elevation of Lake Mead (",unit[[language]],")"), 'mobile'=paste0("Elevation of Lake Mead (",unit[[language]],")"))
   
-  y.ticks = list('es'=list('desktop'=seq(1000*conv,1225*conv,10),'mobile'=seq(1000*conv,1225*conv,50)), 'en'=list('desktop'=seq(1000,1225,25), 'mobile'=seq(1000,1225,50)))
+  y.ticks = list('es'=list('desktop'=seq(305,370,10),'mobile'=seq(310,370,20)), 'en'=list('desktop'=seq(1000,1225,25), 'mobile'=seq(1000,1225,50)))
   y.lim = list('es'=c(990*conv,1229*conv), 'en'=c(990,1229))
   
   get_ticks <- function(x, n){
@@ -44,9 +44,7 @@ get_axes <- function(data, form.factor, language){
     ticks = ticks[ticks >= x.rng[1] & ticks <= x.rng[2]]
     return(ticks)
   }
-  
-  yMinR <- round(min(data$Value),-1)
-  yMaxR <- round(max(data$Value),-1)
+
   
   posDate = data$posDate
   xMinR <- as.numeric(strftime(posDate[which.min(posDate)], 
@@ -55,7 +53,6 @@ get_axes <- function(data, form.factor, language){
                                format = "%Y"))
   maxMonth <- as.numeric(strftime(posDate[which.max(posDate)], 
                                   format = "%m")) + 3 # go to 3 months past the last date in the series
-  
   axes <- list('tick_len' = 5,
                'y_label' = y.label[[form.factor]],
                'x_label' = x.label[[form.factor]],
@@ -70,15 +67,13 @@ get_axes <- function(data, form.factor, language){
 }
 
 
-get_heights = function(axes, fig){
-  x = c()
-  x$peak = floor(dinosvg:::tran_y(axes$y_lim[2], axes, fig))
-  x$flood = floor(dinosvg:::tran_y(1219.6, axes, fig))
-  x$surplus = floor(dinosvg:::tran_y(1200, axes, fig))
-  x$normal = floor(dinosvg:::tran_y(1145, axes, fig))
-  x$shortage = floor(dinosvg:::tran_y(1075, axes, fig))
-  x$bottom = floor(dinosvg:::tran_y(axes$y_lim[1], axes, fig))
+get_heights = function(axes, fig, language){
+  elevs = list('en'=c('peak'=axes$y_lim[2], 'flood'=1219.6, 'surplus'=1200, 'normal'=1145, 'shortage'=1075, bottom=axes$y_lim[1]))
+  elevs$es = elevs$en
+  elevs$es[c('flood','surplus','normal','shortage')] <- elevs$en[c('flood','surplus','normal','shortage')]*conv
   
+  x = lapply(elevs[[language]], function(x) floor(dinosvg:::tran_y(x, axes, fig)))
+
   return(x)
 }
 add_legend <- function(g_id, form.factor, language, fig){
@@ -118,7 +113,7 @@ get_fig <- function(form.factor){
 
 add_annotations <- function(svg_nd, form.factor, language, fig, axes){
   if (form.factor == 'desktop'){
-    x = get_heights(axes, fig)
+    x = get_heights(axes, fig, language)
     g_id = newXMLNode("g", parent = svg_nd, attrs=c(class='hidden', id='condition-markers'))
     newXMLNode("text", parent = g_id, newXMLTextNode('Flood Control'),
                attrs = c(x = fig$px_lim$x[2], y = mean(c(x$surplus,x$flood)),dx="0.4em",class='small-text'))
@@ -159,7 +154,7 @@ add_annotations <- function(svg_nd, form.factor, language, fig, axes){
 add_blocks <- function(svg_nd, form.factor, language, fig, axes){
   
 
-  x = get_heights(axes, fig)
+  x = get_heights(axes, fig, language)
   newXMLNode('rect',parent = svg_nd, attrs = c(id='peak',x = fig$px_lim$x[1], y = x$peak,
                                                width=fig$px_lim$x[2]-fig$px_lim$x[1], height=x$flood-x$peak+0.2,
                                                fill='#0066CC',opacity=0.9, class='level-fill'))
@@ -180,7 +175,7 @@ add_blocks <- function(svg_nd, form.factor, language, fig, axes){
 
 add_lines <- function(g_id, data, form.factor, language){
   
-  
+  y.vals = list('es'=data$Value*conv, 'en'=data$Value)
   axes = get_axes(data, form.factor, language)
   fig = get_fig(form.factor)
   y_offset <- c('desktop'=fig$px_lim$y[1]-20, 'mobile'=fig$px_lim$y[2]+20)
@@ -188,14 +183,14 @@ add_lines <- function(g_id, data, form.factor, language){
   
   posDate = data$posDate
   
-  x <- as.numeric(strftime(posDate, format = "%j"))/365+
+  x.raw <- as.numeric(strftime(posDate, format = "%j"))/365+
     as.numeric(strftime(posDate, format = "%Y"))
   
-  y = data$Value
+  y.raw = y.vals[[language]]
   
   time_ids <- strftime(posDate, '%Y-%m-%d')
-  x <- sapply(x, FUN = function(x) dinosvg:::tran_x(x, axes, fig))
-  y <- sapply(y, FUN = function(y) dinosvg:::tran_y(y, axes, fig))
+  x <- sapply(x.raw, FUN = function(x) dinosvg:::tran_x(x, axes, fig))
+  y <- sapply(y.raw, FUN = function(y) dinosvg:::tran_y(y, axes, fig))
   
   is.model <- data$Model != "Historical"
   is.most <- data$RunType == 0 # most probable run
@@ -236,13 +231,13 @@ add_lines <- function(g_id, data, form.factor, language){
   for (i in 1:length(x)){
     #refine this so it is actually halfway points
     
-    elev = ifelse(is.na(data$Value[i]), '', prettyNum(data$Value[i],big.mark=",",scientific=FALSE))
-    
+    elev = ifelse(is.na(y[i]), '', prettyNum(round(y.raw[i], digits=1),big.mark=","))
+    unit = c('es'='m','en'='ft')
     
     if (is.model[i]){
-      elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s ft');ChangeText(evt, 'model_text','*%s');", elev,prob_run_title))
+      elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s %s');ChangeText(evt, 'model_text','*%s');", elev,unit[[language]],prob_run_title))
     } else {
-      elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s ft');", elev),
+      elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s %s');", elev, unit[[language]]),
                           "ChangeText(evt, 'model_text',' ');")
       
     }
