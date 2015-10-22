@@ -139,6 +139,11 @@ $( document ).ready( function () {
         // so when it's populated, resolve the deferred object being returned to the caller so it
         // can act
         loadTemplateDeferred.always( deferred.resolve );
+		
+		$('body').css({'overflow':'hidden'});
+  		$(document).bind('scroll',function () { 
+       		window.scrollTo(0,0); 
+  		});
 
         return deferred;
     } )();
@@ -149,12 +154,15 @@ $( document ).ready( function () {
 
         window.console.trace( "Application loaded" );
         window.owdiDrought.SMController.scrollTo( 0 );
-        var fadeTimeInMs = 1500;
-
+        var fadeTimeInMs = 1000;
+		
         $( "#overlay" ).fadeOut( fadeTimeInMs, "swing", function () {
             $( this ).remove();
             $( window ).resize();
+			$(document).unbind('scroll'); 
+  			$('body').css({'overflow':'visible'});
         } );
+		
     } );
 
     // Track window size and emit events when we pass through width thresholds
