@@ -234,7 +234,7 @@ add_lines <- function(g_id, data, form.factor, language){
   for (i in 1:length(x)){
     #refine this so it is actually halfway points
     
-    elev = ifelse(is.na(data$Value[i]), '', sprintf('%1.1f',data$Value[i]))
+    elev = ifelse(is.na(data$Value[i]), '', prettyNum(data$Value[i],big.mark=",",scientific=FALSE))
     
     
     if (is.model[i]){
