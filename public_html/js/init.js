@@ -192,18 +192,18 @@ $( document ).ready( function () {
 	
 	// Water Usage
 	(function() {
-		var triggered = false,
-		  parentContainer = "#waterUsageContainer",
-		  animation = function() {
-			var animationSVG = document.getElementsByClassName('triggerMe');
-			for(var i = 0; i < animationSVG.length; i++){
-				var svgElement = animationSVG[i].getSVGDocument();
-				if (svgElement && svgElement.visibleAxes && !triggered) {
-					svgElement.visibleAxes();
-					triggered = true;
-				};
+		var triggered = [false, false],
+			parentContainer = "#waterUsageContainer",
+			animation = function() {
+				var animationSVG = document.getElementsByClassName('triggerMe');
+				for(var i = 0; i < animationSVG.length; i++){
+					var svgElement = animationSVG[i].getSVGDocument();
+					if (svgElement && svgElement.visibleAxes && !triggered[i]) {
+						svgElement.visibleAxes();
+						triggered[i] = true;
+					};
+				}
 			}
-		}
 
 		$('#section10Button').click(function() {
 		  $('#section10Info').toggle();
