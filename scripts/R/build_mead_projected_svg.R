@@ -14,7 +14,7 @@ source('scripts/R/manipulate_mead_projected.R')
 svg_dir <- 'public_html/img/lake-mead-static/'
 declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
 form.factors = c('desktop','mobile')
-languages=c('en')#'es',
+languages=c('es','en')
 data = read_mead_projected()
 
 for (form.factor in form.factors){
