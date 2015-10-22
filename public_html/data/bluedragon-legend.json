@@ -1,0 +1,329 @@
+{
+	"hoover": [
+		{
+			"number": 1,
+			"designation": "Hoover Dam",
+			"typeOfMeasurement": "Rated Section & AVM",
+			"reportingAgency": "USGS & USBR"
+		}
+	],
+	"davis": [
+		{
+			"number": 2,
+			"designation": "Davis Dam",
+			"typeOfMeasurement": "Rate Section & AVM",
+			"reportingAgency": "USGS & USBR"
+		}
+	],
+	"needles": [
+		{
+			"number": 3,
+			"designation": "Needles",
+			"typeOfMeasurement": "GOES",
+			"reportingAgency": "USGS & USBR"
+		},
+		{
+			"number": 4,
+			"designation": "Topock Bridge",
+			"typeOfMeasurement": "Abandoned 1982",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 5,
+			"designation": "Topock",
+			"typeOfMeasurement": "GOES",
+			"reportingAgency": "USBR"
+		}
+	],
+	"parker": [
+		{
+			"number": 6,
+			"designation": "Parker Dam",
+			"typeOfMeasurement": "Rate Section & AVM",
+			"reportingAgency": "USGS & USBR"
+		},
+		{
+			"number": 18,
+			"designation": "Lake Havasu near Parker Dam",
+			"typeOfMeasurement": "Recording Gage",
+			"reportingAgency": "USGS"
+		}
+	],
+	"headgate": [
+		{
+			"number": 7,
+			"designation": "Headgate Rock Diversion Dam",
+			"typeOfMeasurement": "Recording Gage",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 8,
+			"designation": "Parker Gage",
+			"typeOfMeasurement": "Rated Section",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 19,
+			"designation": "Colorado River Indian Reservation Diversion",
+			"typeOfMeasurement": "Calibrated Gage",
+			"reportingAgency": "BIA & USGS"
+		}
+	],
+	"paloVerde": [
+		{
+			"number": 9,
+			"designation": "Water Wheel",
+			"typeOfMeasurement": "Rated Section",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 10,
+			"designation": "Colorado River at Palo Verde Dam",
+			"typeOfMeasurement": "Calibrated Gage",
+			"reportingAgency": "USGS"
+		},
+		{
+			"number": 20,
+			"designation": "Colorado River Indian Reservation Return to River",
+			"typeOfMeasurement": "Rated Section",
+			"reportingAgency": "BIA & USGS"
+		},
+		{
+			"number": 21,
+			"designation": "Palo Verde Irrigation District Diversion",
+			"typeOfMeasurement": "Calibrated Gate & AVM",
+			"reportingAgency": "USGS & USBR"
+		}
+	],
+	"outfall": [
+		{
+			"number": 11,
+			"designation": "Taylor Ferry",
+			"typeOfMeasurement": "Recording Gage",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 12,
+			"designation": "Colorado River below Cibola Valley",
+			"typeOfMeasurement": "Rated Section",
+			"reportingAgency": "USGS & USBR"
+		},
+		{
+			"number": 22,
+			"designation": "Palo Verde Irrigation District Return to River (outfall drain)",
+			"typeOfMeasurement": "Rate Section & AVM",
+			"reportingAgency": "USBR"
+		}
+	],
+	"imperial": [
+		{
+			"number": 13,
+			"designation": "Imperial Dam",
+			"typeOfMeasurement": "Recording Gage",
+			"reportingAgency": "USGS"
+		},
+			{
+			"number": 23,
+			"designation": "Gila Gravity Main Canal Sta 30+00",
+			"typeOfMeasurement": "Rate Section & AVM",
+			"reportingAgency": "USGS & USBR"
+		},
+		{
+			"number": 28,
+			"designation": "Station 50 Near Imperial Dam",
+			"typeOfMeasurement": "Rate Section & AVM",
+			"reportingAgency": "IID & USBR"
+		}
+	],
+	"morelos": [
+		{
+			"number": 14,
+			"designation": "Yuma Gage",
+			"typeOfMeasurement": "Rated Section",
+			"reportingAgency": "USGS"
+		},
+		{
+			"number": 15,
+			"designation": "Colorado River at Northerly Boundary",
+			"typeOfMeasurement": "Rated Section",
+			"reportingAgency": "IBWC"
+		},
+		{
+			"number": 16,
+			"designation": "Colorado River at Southerly Boundary",
+			"typeOfMeasurement": "Rated Section",
+			"reportingAgency": "IBWC"
+		},
+		{
+			"number": 17,
+			"designation": "Gila River Near Dome",
+			"typeOfMeasurement": "Rated Section",
+			"reportingAgency": "USGS"
+		},
+
+		{
+			"number": 24,
+			"designation": "Welton Mohawk Main Canal",
+			"typeOfMeasurement": "AVM",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 25,
+			"designation": "South Gila Canal",
+			"typeOfMeasurement": "AVM",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 26,
+			"designation": "Yuma Mesa Main Canal",
+			"typeOfMeasurement": "AVM",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 27,
+			"designation": "Unit B Main Canal",
+			"typeOfMeasurement": "AVM",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 29,
+			"designation": "Reservation Main Turnout A.A.C. Sta 308+00",
+			"typeOfMeasurement": "Calibrated Gage",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 30,
+			"designation": "Titsink Turnout A.A.C. Sta 381+00",
+			"typeOfMeasurement": "Pershall Flume",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 31,
+			"designation": "Yoqui Turnout A.A.C. Sta 586+00",
+			"typeOfMeasurement": "Pershall Flume",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 32,
+			"designation": "Pontiac Turnout A.A.C. Sta 691+85",
+			"typeOfMeasurement": "Pershall Flume",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 33,
+			"designation": "Yuma Main Canal at Siphon Drop Turnout",
+			"typeOfMeasurement": "Rated Turbine Gate",
+			"reportingAgency": "USGS & USBR"
+		},
+		{
+			"number": 34,
+			"designation": "Yuma Main Canal below Colorado River Siphon",
+			"typeOfMeasurement": "Rated Siphon",
+			"reportingAgency": "USGS"
+		},
+		{
+			"number": 35,
+			"designation": "Pilot Knob Power Plant and Wasteway A.A.C. Sta 1093+92",
+			"typeOfMeasurement": "Calibrated Gage",
+			"reportingAgency": "IID"
+		},
+		{
+			"number": 36,
+			"designation": "Below Pilot Knob Wasteway",
+			"typeOfMeasurement": "Slope Section",
+			"reportingAgency": "IID & USGS"
+		},
+		{
+			"number": 39,
+			"designation": "Morelos Dam",
+			"typeOfMeasurement": "Metering Section",
+			"reportingAgency": "IBWC"
+		},
+		{
+			"number": 40,
+			"designation": "West Main Canal",
+			"typeOfMeasurement": "Rated Section & Recorder",
+			"reportingAgency": "IBWC"
+		},
+		{
+			"number": 41,
+			"designation": "East Main Canal",
+			"typeOfMeasurement": "Rated Section & Recorder",
+			"reportingAgency": "IBWC"
+		},
+		{
+			"number": 42,
+			"designation": "Main Drain",
+			"typeOfMeasurement": "Rated Pumps",
+			"reportingAgency": "YCWUA"
+		},
+		{
+			"number": 43,
+			"designation": "Drainage Return Reservation Division",
+			"typeOfMeasurement": "Rated Section",
+			"reportingAgency": "USBR"
+		},
+		{
+			"number": 44,
+			"designation": "Regulatory Waste Return to River",
+			"typeOfMeasurement": "Computed",
+			"reportingAgency": "USGS"
+		},
+		{
+			"number": 45,
+			"designation": "M.O.D.E. No. 1",
+			"typeOfMeasurement": "Calibrated Gage",
+			"reportingAgency": "USGS"
+		},
+		{
+			"number": 46,
+			"designation": "Yuma Mesta Conduit",
+			"typeOfMeasurement": "Venturi Flowmeter",
+			"reportingAgency": "USGS"
+		},
+		{
+			"number": 47,
+			"designation": "M.O.D.E. No. 2",
+			"typeOfMeasurement": "Pershall Flume & Recorder",
+			"reportingAgency": "USGS"
+		},
+		{
+			"number": 48,
+			"designation": "M.O.D.E. No. 3",
+			"typeOfMeasurement": "Pershall Flume & Recorder",
+			"reportingAgency": "IBWC"
+		},
+		{
+			"number": 49,
+			"designation": "Cooper Lateral Spillway",
+			"typeOfMeasurement": "Weir & Recorder",
+			"reportingAgency": "IBWC"
+		},
+		{
+			"number": 50,
+			"designation": "11 Mile Spillway",
+			"typeOfMeasurement": "Rated Gate & Recorder",
+			"reportingAgency": "IBWC"
+		},
+		{
+			"number": 51,
+			"designation": "21 Mile Spillway",
+			"typeOfMeasurement": "Rated Flume & Recorder",
+			"reportingAgency": "IBWC"
+		}
+	],
+	"salton": [
+		{
+			"number": 37,
+			"designation": "Coachella Turnout",
+			"typeOfMeasurement": "Calibrated Gage",
+			"reportingAgency": "IID & USBR"
+		},
+		{
+			"number": 38,
+			"designation": "Drop No. 1 A.A.C. Sta 1908+00",
+			"typeOfMeasurement": "Calibrated Gage",
+			"reportingAgency": "IID & USBR"
+		}
+	]
+}

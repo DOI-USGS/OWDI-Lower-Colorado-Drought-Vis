@@ -134,3 +134,11 @@
 	-webkit-transform: translate(0px, -1240px) scale(3);
 	-moz-transform: translate(0px, -1240px) scale(3);
 }
+
+.legendHidden {
+	display: none;
+}
+
+.legendShown {
+	display: block;
+}
