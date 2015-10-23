@@ -1,0 +1,50 @@
+<div class="widget">
+	<div class="sectionContent">
+		<p>{{ tr.appExplanation1 }}</p>
+		
+	<div id="appExplainHiddenContent" class="hiddenContent">
+		<p>{{ tr.appExplanation2 }}</p>
+
+		<p>{{ tr.appExplanation3 }}</p>
+        
+        	<p>{{ tr.appExplanation4 }}</p>
+        
+	        <p>{{ tr.appExplanation5 }}</p>
+        
+	        <p>{{ tr.appExplanation6 }}</p>
+		</div><!--Hidden Content-->
+		
+		<p id="appExplainReadMore" class="readMore">{{ tr.readMore }}</p>
+		
+	</div>
+	
+	<div class="socialMedia onWhite">
+		<img src="../img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
+		<img src="../img/social-media/github-blue-01.svg" alt="github icon"/>
+		<img id="appExplainLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="appExplainLink" class="takeLinkBlue" >
+			<input id="appExplainURL" type="text" value="http://go.usa.gov/#app-explanation">
+		</div>
+	</div>
+	
+</div>
+<script>
+var appExplainreadMore = $('#appExplainReadMore');
+var appExplainhiddenContent = $('#appExplainHiddenContent');
+	
+	appExplainreadMore.on('click', function(){
+		
+		appExplainhiddenContent.toggle();
+		
+		if($(this).text() == '{{ tr.readMore }}'){
+			$(this).text('{{ tr.hideText }}');
+			}else{
+				$(this).text('{{ tr.readMore }}');
+				}
+		});	
+		
+		$('#appExplainLinkOut').on('click', function(){
+			$('#appExplainLink').toggle();
+			$('#appExplainURL').select();
+		});
+</script>

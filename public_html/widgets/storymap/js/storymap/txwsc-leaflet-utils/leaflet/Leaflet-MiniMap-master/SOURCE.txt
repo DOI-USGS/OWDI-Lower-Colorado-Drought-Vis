@@ -1,7 +1,0 @@
-======================================
-Leaflet-MiniMap  : A minimap control plugin for Leaflet 
-======================================
-https://github.com/Norkart/Leaflet-MiniMap
-downloaded 20150212
-======================================
-

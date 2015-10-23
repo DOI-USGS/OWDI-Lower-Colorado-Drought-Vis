@@ -22,6 +22,7 @@ $( document ).ready( function () {
     window.owdiDrought = window.owdiDrought || {};
     window.owdiDrought.SMController = new ScrollMagic.Controller( scrollMagicOptions );
     window.owdiDrought.formFactor = "";
+    window.owdiDrought.slider.sliderInit();
 
     window.owdiDrought.addScene = function ( sceneItem ) {
         var scene = new ScrollMagic.Scene( {
@@ -58,104 +59,26 @@ $( document ).ready( function () {
         scene.addTo( window.owdiDrought.SMController );
     };
 
-	//Allows the nav to find the containers based on its ID's
-	window.owdiDrought.nav = function(fragment){
-		window.location.hash = fragment;
-	};
-
-    var fillDom = ( function () {
-        // For every container, find the sections it holds. Then for each section,
-        // use the section's HTML id attribtue to load the template. Once the template
-        // is loaded, apply it to the specific container->section. This can be further
-        // refactored to include subsections within each section. Some sections have a
-        // function that should be triggered after loading it.
-        var containers = $( ".container" ),
-            // A deferred that is passed back to the caller and resolved when I've loaded all
-            // of the templates and applied them to the dom
-            deferred = $.Deferred(),
-            // Loads the Handlebars template and returns a deferred object to the caller.
-            // The context is the passed-in container and section ids
-            loadTemplate = function ( containerId, sectionId ) {
-                return $.ajax( {
-                    url: "sections/" + sectionId + "/" + sectionId + ".html",
-                    context: {
-                        containerId: containerId,
-                        sectionId: sectionId
-                    }
-                } );
-            },
-            templateLoadError = function () {
-                console.warn( "Could not load the template for container " + this.containerId + ", section " + this.sectionId );
-            },
-            // Applies the Handlebars template to the designated container -> section
-            applyTemplate = function ( templateHTML, status, jqXHR, templateData ) {
-                var host = window.location.origin;
-                if ( !host ) {
-                    host = "//" + window.location.host;
-                }
-                var template = Handlebars.compile( templateHTML ),
-                    extendedTemplateData = $.extend( {}, templateData, {
-                        baseUrl: host + window.location.pathname
-                    } ),
-                    html = template( extendedTemplateData );
-
-                $( "#" + this.containerId + " > #" + this.sectionId ).html( html );
-            },
-            // In case anything needs to be initialized in a section, do that here using
-            // the section's HTML id attribute
-            initializeSections = function () {
-                switch ( this.sectionId ) {
-                case "before-after":
-                    owdiDrought.slider.sliderInit();
-                    break;
-                }
-            },
-            // This variable is set at this level of the scope because I need to attach a
-            // resolution for a deferred after it comes out of the loop below. This allows me
-            // to resolve the deferred after the last container's DOM is populated which
-            // allows us to do things like remove an overlay when the app has finished loading
-            loadTemplateDeferred;
-
-        // Run through each container and section to load the Handlebars templates and apply them
-        for ( var cIdx = 0; cIdx < containers.length; cIdx++ ) {
-            var $container = $( containers[ cIdx ] ),
-                sections = $container.find( ".section" );
-
-            for ( var sIdx = 0; sIdx < sections.length; sIdx++ ) {
-                var $section = $( sections[ sIdx ] ),
-                    containerId = $container.attr( "id" ),
-                    sectionId = $section.attr( "id" );
-
-                loadTemplateDeferred = loadTemplate( containerId, sectionId );
-
-                loadTemplateDeferred
-                    .done( applyTemplate, initializeSections )
-                    .fail( templateLoadError );
-
-            }
-        }
-
-        // At this point, the loadTemplateDeferred object is the last container/section combo
-        // so when it's populated, resolve the deferred object being returned to the caller so it
-        // can act
-        loadTemplateDeferred.always( deferred.resolve );
-
-        return deferred;
-    } )();
+    //Allows the nav to find the containers based on its ID's
+    window.owdiDrought.nav = function(fragment){
+        window.location.hash = fragment;
+    };
 
     // The fillDom deferred object will be resolved when the DOM for the application has been loaded
-    fillDom.done( function () {
+    (function () {
         // At this point, the DOM will have been built
 
         window.console.trace( "Application loaded" );
         window.owdiDrought.SMController.scrollTo( 0 );
-        var fadeTimeInMs = 1500;
-
+        var fadeTimeInMs = 1000;
+		
         $( "#overlay" ).fadeOut( fadeTimeInMs, "swing", function () {
             $( this ).remove();
             $( window ).resize();
+			$(document).unbind('scroll'); 
+			$('body').css({'overflow':'visible'});
         } );
-    } );
+    } )();
 
     // Track window size and emit events when we pass through width thresholds
     var magicWidth = 686; // Pixel width to use to base mobile/desktop on
@@ -184,6 +107,114 @@ $( document ).ready( function () {
 
     } );
 
+    // Before/After section
+    (function() {
+      "use strict";
+      // Bind the before/after spans
+      $('figure.cd-image-container .button-before').on('click', owdiDrought.slider.beforeButtonClicked);
+      $('figure.cd-image-container .button-after').on('click', owdiDrought.slider.afterButtonClicked);
+    })();
+	 
+	 // Lake Mead animated
+	 (function() {
+		"use strict";
+		var triggered = false,
+			parentContainer = "#meadSVGContainer",
+			animation = function() {
+				var animationSVG = document.getElementById("mead-object").getSVGDocument();
+				$(animationSVG).find("#decrement-scene").on("click", function() {
+						var stepNumber = animationSVG.sceneNum;
+						$(".SVGInfo:visible").fadeOut({
+							complete: function() {
+								switch (stepNumber) {
+								case 0:
+									$("#draw-river").fadeIn();
+									break;
+								case 1:
+									$("#draw-basin").fadeIn();
+									break;
+								case 2:
+									$("#highlight-user-2").fadeIn();
+									break;
+								case 3:
+									$("#mead-info-1").fadeIn();
+									break;
+								case 4:
+									$("#mead-info-2").fadeIn();
+									break;
+								case 5:
+									$("#mead-info-3").fadeIn();
+									break;
+								case 6:
+									$("#mead-info-4").fadeIn();
+									break;
+								case 7:
+									$("#mead-info-5").fadeIn();
+									break;
+								}
+							}
+						});
+					});
+					// Only call if SVG is loaded and has this function
+				if (animationSVG && animationSVG.drawRiver && !triggered) {
+					animationSVG.drawRiver();
+					triggered = true;
+				}
+			};
+
+		window.owdiDrought.addScene({
+			parentContainer: parentContainer,
+			duration: 100,
+			enter: animation
+		});
+	})();
+	
+	// Lake Mead static
+	(function () {
+		var triggered = false,
+		parentContainer = "#meadElevationContainer",
+		animation = function () {
+			var animationSVG = document.getElementById('mead-elev-object').getSVGDocument();
+
+			// Only call if SVG is loaded and has this function
+			if (animationSVG && animationSVG.drawTiers && !triggered) {
+				animationSVG.drawTiers();
+				triggered = true;
+			}
+		};
+
+		window.owdiDrought.addScene({
+			parentContainer: parentContainer,
+			duration: 100,
+			enter: animation
+		});
+	})();
+	
+	// Water Usage
+	(function() {
+		var triggered = [false, false],
+			parentContainer = "#waterUsageContainer",
+			animation = function() {
+				var animationSVG = document.getElementsByClassName('triggerMe');
+				for(var i = 0; i < animationSVG.length; i++){
+					var svgElement = animationSVG[i].getSVGDocument();
+					if (svgElement && svgElement.visibleAxes && !triggered[i]) {
+						svgElement.visibleAxes();
+						triggered[i] = true;
+					};
+				}
+			}
+
+		$('#section10Button').click(function() {
+		  $('#section10Info').toggle();
+		});
+
+		window.owdiDrought.addScene({
+		  parentContainer: parentContainer,
+		  duration: 100,
+		  enter: animation
+		});
+	 })();
 
     // Update the last modified timestamp in the footer
     $( "#last-mod-timestamp" ).html( document.lastModified );
