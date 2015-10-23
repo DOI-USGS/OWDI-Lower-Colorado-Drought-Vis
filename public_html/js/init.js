@@ -182,6 +182,35 @@ $( document ).ready( function () {
 				triggered = true;
 			}
 		};
+		
+		$(window).resize(function(){
+				 triggered = false;
+				 });
+
+		window.owdiDrought.addScene({
+			parentContainer: parentContainer,
+			duration: 100,
+			enter: animation
+		});
+	})();
+	
+	(function () {
+		var triggered = false,
+		parentContainer = "#meadElevationContainer",
+		animation = function () {
+			var animationMobileSVG = document.getElementById('mead-elev-object-mobile').getSVGDocument();
+
+			// Only call if SVG is loaded and has this function
+			if (animationMobileSVG && animationMobileSVG.drawTiers && !triggered) {
+				animationMobileSVG.drawTiers();
+				triggered = true;
+			}
+			
+		};
+		
+		$(window).resize(function(){
+				 triggered = false;
+				 });
 
 		window.owdiDrought.addScene({
 			parentContainer: parentContainer,
