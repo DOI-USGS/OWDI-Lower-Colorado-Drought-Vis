@@ -11,6 +11,8 @@ library(dplyr)
 source('scripts/R/build_ecmascript.R')
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 source('scripts/R/manipulate_mead_projected.R')
+source('scripts/R/read_translation.R')
+
 svg_dir <- 'public_html/img/lake-mead-static/'
 declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
 form.factors = c('desktop','mobile')
@@ -31,3 +33,4 @@ for (form.factor in form.factors){
         file = svg_file, append = FALSE)
   }
 }
+warning('"*September 2015 Most Probable" text is not included in translation')

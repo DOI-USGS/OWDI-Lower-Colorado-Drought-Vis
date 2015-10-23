@@ -33,7 +33,7 @@ supply_usage_svg <- function(data, unit = 'Imperial', form.factor='desktop', lan
 }
 
 get_fig <- function(form.factor){
-  fig.dims <- list('mobile'=list('w' = 500,'h' = 400, 'margins' = c(40,60,10, 60)),
+  fig.dims <- list('mobile'=list('w' = 500,'h' = 400, 'margins' = c(40,60,10, 10)),
                    'desktop'=list('w' = 960,'h' = 600,'margins' = c(50,100,10, 100)))
   fig <- fig.dims[[form.factor]]
   
@@ -42,9 +42,10 @@ get_fig <- function(form.factor){
   return(fig)
 }
 get_axes <- function(data, form.factor, language){
-  unit <- c('es'='billion cubic meters', 'en'='million acre-feet')
+  unit <- c('es'=lt('usageFigMetricUnits',language),'en'=lt('usageFigImperialUnits',language))
   x.ticks = c('desktop'=10, 'mobile'=5)
-  y.label = c('desktop'=paste0("Volume (",unit[[language]],")"), 'mobile'=paste0("Basin-wide Volume (",unit[[language]],")"))
+  y.label = c('desktop'=paste0(lt('usageFigYlabDesktop',language)," (",unit[[language]],")"), 
+              'mobile'=paste0(lt('usageFigYlabMobile',language)," (",unit[[language]],")"))
 
   y.ticks = list('es'=seq(0,30*conv,5), 'en'=seq(0,25,5))
   y.lim = list('es'=c(0,30*conv), 'en'=c(0,29))
@@ -59,7 +60,7 @@ get_axes <- function(data, form.factor, language){
   # --- pixel dims ---
   axes <- list('tick_len' = 5,
                'y_label' = y.label[[form.factor]],
-               'x_label' = "Year",
+               'x_label' = lt('usageFigXlab',language),
                'y_ticks' = y.ticks[[language]],
                'y_tk_label' = y.ticks[[language]],
                'x_ticks' = get_ticks(data$times, x.ticks[[form.factor]]),
@@ -119,6 +120,7 @@ add_lines <- function(g_id, data, form.factor, language){
     return(len)
   }
   
+  tot_time <- tail(years,1) - head(years,1)
   difTimes <- cumsum(diff(years)/tot_time)
   difTimes <- c(0,difTimes)*ani_time
   x1 <- head(x,-1)
@@ -127,7 +129,7 @@ add_lines <- function(g_id, data, form.factor, language){
   y2 <- tail(y,-1)
   line_len <- line_length(x1,y1,x2,y2)
   tot_len <- sum(line_len)
-  tot_time <- tail(years,1) - head(years,1)
+  
   
   # calc_lengths 
   values <- paste(tot_len- cumsum(line_len),collapse=';')
@@ -181,8 +183,8 @@ add_lines <- function(g_id, data, form.factor, language){
                               begin = "timeAdvance.begin", id = "usage", 
                               fill = 'freeze', dur = sprintf('%fs',ani_time), values = values)
   # -----
-  usage.label = c('desktop'='Annual Basin-wide Consumptive Use', 'mobile'='Consumptive Use')
-  supply.label = c('desktop'='Annual Basin-wide Water Supply', 'mobile'='Water Supply')
+  usage.label = c('desktop'=lt('usageFigUseDesktop',language), 'mobile'=lt('usageFigUseMobile',language))
+  supply.label = c('desktop'=lt('usageFigSupplyDesktop',language), 'mobile'=lt('usageFigSupplyMobile',language))
   unit = c('es'='bcm','en'='maf')
   for (i in 1:length(x)){
     #refine this so it is actually halfway points
@@ -193,7 +195,7 @@ add_lines <- function(g_id, data, form.factor, language){
                attrs = c(id = sprintf('year_%s',years[i]), x = sprintf('%1.2f',x[i]-width/2), y = fig$px_lim$y[2], width = sprintf('%1.2f',width), height = fig$px_lim$y[1]-fig$px_lim$y[2],
                          'fill-opacity'="0.0", 
                          onmousemove=paste0(sprintf("legendViz(evt,'supply-%s');",years[i]),
-                                            sprintf("ChangeText(evt, 'year_text','Year: %s');",years[i]),
+                                            sprintf("ChangeText(evt, 'year_text','%s: %s');",lt('usageFigXlab',language),years[i]),
                                             sprintf("ChangeText(evt, 'use_text','%s: %s');", usage.label[[form.factor]],use),
                                             sprintf("ChangeText(evt, 'supply_text','%s: %s');", supply.label[[form.factor]], flow)),
                          onmouseover=paste0(sprintf("highlightViz(evt,'supply-%s','0.1');",years[i])),
