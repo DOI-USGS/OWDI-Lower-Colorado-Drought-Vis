@@ -11,11 +11,13 @@ library(dplyr)
 source('scripts/R/build_ecmascript.R')
 source('scripts/R/manipulate_supply_usage.R')
 source('scripts/R/manipulate_lowCO_borders_svg.R')
+source('scripts/R/read_translation.R')
+
 
 svg_dir <- 'public_html/img/water-usage/'
 declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
 form.factors = c('desktop','mobile')
-languages=c('es','en')
+languages=c('en', 'es') 
 data = read_supply_use()
 
 # create figure w/ axis based on units and form factor
