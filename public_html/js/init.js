@@ -190,6 +190,26 @@ $( document ).ready( function () {
 		});
 	})();
 	
+	(function () {
+		var triggered = false,
+		parentContainer = "#meadElevationContainer",
+		animation = function () {
+			var animationSVG = document.getElementById('mead-elev-object-mobile').getSVGDocument();
+
+			// Only call if SVG is loaded and has this function
+			if (animationSVG && animationSVG.drawTiers && !triggered) {
+				animationSVG.drawTiers();
+				triggered = true;
+			}
+		};
+
+		window.owdiDrought.addScene({
+			parentContainer: parentContainer,
+			duration: 100,
+			enter: animation
+		});
+	})();
+	
 	// Water Usage
 	(function() {
 		var triggered = [false, false],
