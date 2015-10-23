@@ -1,20 +1,20 @@
 <div class="widget">
 	<div class="sectionContent">
-		<p>{{ tr.appExplanation1 }}</p>
+		<p>{{{ tr.appExplanation1 }}}</p>
 		
 	<div id="appExplainHiddenContent" class="hiddenContent">
-		<p>{{ tr.appExplanation2 }}</p>
+		<p>{{{ tr.appExplanation2 }}}</p>
 
-		<p>{{ tr.appExplanation3 }}</p>
+		<p>{{{ tr.appExplanation3 }}}</p>
         
-        	<p>{{ tr.appExplanation4 }}</p>
+        	<p>{{{ tr.appExplanation4 }}}</p>
         
-	        <p>{{ tr.appExplanation5 }}</p>
+	        <p>{{{ tr.appExplanation5 }}}</p>
         
-	        <p>{{ tr.appExplanation6 }}</p>
+	        <p>{{{ tr.appExplanation6 }}}</p>
 		</div><!--Hidden Content-->
 		
-		<p id="appExplainReadMore" class="readMore">{{ tr.readMore }}</p>
+		<p id="appExplainReadMore" class="readMore">{{{ tr.readMore }}}</p>
 		
 	</div>
 	
@@ -36,10 +36,10 @@ var appExplainhiddenContent = $('#appExplainHiddenContent');
 		
 		appExplainhiddenContent.toggle();
 		
-		if($(this).text() == '{{ tr.readMore }}'){
-			$(this).text('{{ tr.hideText }}');
+		if($(this).text() == '{{{ tr.readMore }}}'){
+			$(this).text('{{{ tr.hideText }}}');
 			}else{
-				$(this).text('{{ tr.readMore }}');
+				$(this).text('{{{ tr.readMore }}}');
 				}
 		});	
 		
