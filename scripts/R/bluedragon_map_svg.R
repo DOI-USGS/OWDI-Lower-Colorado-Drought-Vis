@@ -11,6 +11,12 @@ transformBbox <- function (x, srcCrs, dstCrs) {
   return(spBbox)
 }
 
+transformPoint <- function(x, srcCrs, dstCrs) {
+  point = SpatialPoints(cbind(x[1], x[2]), proj4string = CRS(srcCrs))
+  point = spTransform(point, CRS(dstCrs))
+  return(point)
+}
+
 bboxes <- list(
   hooverBbox=c(-114.7476482391,36.0050206578,-114.715719223,36.0300823705),
   davisBbox=c(-114.5924663544,35.1912759619,-114.5559883118,35.2145603133),
@@ -23,6 +29,12 @@ bboxes <- list(
   easternBbox=c(-113.9206695557,32.6625003547,-113.4420776367,32.9625864419),
   morelosBbox=c(-114.9540710449,32.6000478333,-113.8375854492,32.803436167),
   saltonBbox=c(-115.749206543,32.6671247331,-114.9087524414,33.4108095511)
+)
+
+referencePoints <- list(
+	lasVegas=list(latlon=c(-115.1739, 36.1215), name="Las Vegas", pos=2),
+	mexicali=list(latlon=c(-115.4678, 32.6633), name="Mexicali", pos=1),
+	phoenix=list(latlon=c(-112.0667,33.4500), name="Phoenix", pos=4)
 )
 
 width=7.5
@@ -47,6 +59,8 @@ mexico_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#BBBBBB', 'stro
 co_river_styles = c('fill'='none', 'stroke-width'='3.5', 'stroke'='#0066CC', 'stroke-linejoin'="round", 
                     'style'="stroke-linejoin:round;stroke-linecap:round")
 bbox_styles = c('fill'='none', 'stroke'='none')
+ref_styles = c('fill'='none', 'stroke-width'=2.5, 'stroke'='#000000')
+ref_text_styles = c()
 
 mexico = readOGR(dsn = "src_data/mexico",layer="MEX_adm0") %>%
   spTransform(CRS(epsg_code)) %>%
@@ -99,15 +113,25 @@ for (i in 1:length(bboxes)) {
   plot(spBbox, add=TRUE) 
 }
 
+ref_svg_names <- c()
+for (i in 1:length(referencePoints)) {
+  refName = names(referencePoints)[i]
+  ref = referencePoints[[i]]
+  spPoint <- transformPoint(ref$latlon, wgs84, epsg_code)
+  plot(spPoint, pch=1, add=TRUE)
+  text(spPoint@coords[1,1], spPoint@coords[1,2], labels=ref$name, pos=ref$pos, offset=.5)
+  ref_svg_names <- c(ref_svg_names, paste0(refName, "-point"), paste0(refName, "-text"))
+}
+
 dev.off()
 
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- clean_svg_doc(svg) %>%
-  name_svg_elements(svg, ele_names = c('Mexico', lo_co_states, 'Colorado-river', names(bboxes))) %>%
-  group_svg_elements(groups = list('mexico' = 'Mexico', 'lo-co-states' = lo_co_states, 'co-river-polyline' = 'Colorado-river', 'bboxes' = names(bboxes))) %>%
+  name_svg_elements(svg, ele_names = c('Mexico', lo_co_states, 'Colorado-river', names(bboxes), ref_svg_names)) %>%
+  group_svg_elements(groups = list('mexico' = 'Mexico', 'lo-co-states' = lo_co_states, 'co-river-polyline' = 'Colorado-river', 'bboxes' = names(bboxes), 'refPoints' = paste0(names(referencePoints), "-point"), 'refText' = paste0(names(referencePoints), "-text"))) %>%
   group_svg_elements(groups = c(lo_co_states,'Mexico', 'Colorado-river')) %>% # additional <g/> for each lo-co-state and mexico
-  attr_svg_groups(attrs = list('mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'bboxes' = bbox_styles)) %>%
+  attr_svg_groups(attrs = list('mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'bboxes' = bbox_styles, 'refPoints' = ref_styles, 'refText' = ref_text_styles)) %>%
   toString.XMLNode()
 
 cat(svg, file = svg_file, append = FALSE)
