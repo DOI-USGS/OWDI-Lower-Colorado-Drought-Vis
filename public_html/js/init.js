@@ -182,6 +182,10 @@ $( document ).ready( function () {
 				triggered = true;
 			}
 		};
+		
+		$(window).resize(function(){
+				 triggered = false;
+				 });
 
 		window.owdiDrought.addScene({
 			parentContainer: parentContainer,
@@ -194,14 +198,19 @@ $( document ).ready( function () {
 		var triggered = false,
 		parentContainer = "#meadElevationContainer",
 		animation = function () {
-			var animationSVG = document.getElementById('mead-elev-object-mobile').getSVGDocument();
+			var animationMobileSVG = document.getElementById('mead-elev-object-mobile').getSVGDocument();
 
 			// Only call if SVG is loaded and has this function
-			if (animationSVG && animationSVG.drawTiers && !triggered) {
-				animationSVG.drawTiers();
+			if (animationMobileSVG && animationMobileSVG.drawTiers && !triggered) {
+				animationMobileSVG.drawTiers();
 				triggered = true;
 			}
+			
 		};
+		
+		$(window).resize(function(){
+				 triggered = false;
+				 });
 
 		window.owdiDrought.addScene({
 			parentContainer: parentContainer,
