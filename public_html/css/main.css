@@ -481,9 +481,6 @@ nav h3 {
 	display:none;
 	}
 	
-#animated-object-mobile{
-	display:block;
-	}
 	
 
 /*=====Before after CSS=====*/
@@ -507,6 +504,16 @@ nav h3 {
 	margin-top: 25px;
 	width:100% !important;
 }
+
+/*Lake Mead Static CSS*/
+#mead-elev-object{
+	display:none;
+	}
+	
+#mead-elev-object-mobile{
+	display:block;
+	}
+	
 
 /*Lake Mead Animated Section CSS*/
 #meadSVGContainer h2 {
@@ -758,6 +765,14 @@ nav h3 {
 	#animated-object-mobile{
 		display:none;
 	}
+	
+	#mead-elev-object{
+		display:block;
+		}
+		
+	#mead-elev-object-mobile{
+		display:none;
+		}
 	
 	#utah{
 		margin-top:100px;
