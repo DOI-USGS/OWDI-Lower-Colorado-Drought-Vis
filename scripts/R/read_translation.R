@@ -3,8 +3,15 @@ library(xml2)
 translation <- list()
 
 lookupTranslation <- function(key, lang) {
-  return(translation[[lang]][[key]])
+  out = translation[[lang]][[key]]
+  if (is.null(out))
+    return(paste0('***',key,'***'))
+  else
+    return(out)
+  
 }
+
+lt <- lookupTranslation
 
 for (lang in c("en", "es")) {
   # read back xml file

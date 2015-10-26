@@ -30,10 +30,10 @@ mead_projected_svg <- function(data, unit = 'Imperial', form.factor='desktop', l
 }
 
 get_axes <- function(data, form.factor, language){
-  unit <- c('es'='meters', 'en'='feet')
+  unit <- c('es'=lt('projFigMetricUnits',language), 'en'=lt('projFigImperialUnits',language))
   x.ticks = c('desktop'=8, 'mobile'=6)
-  x.label = c('desktop'='Year', 'mobile'='')
-  y.label = c('desktop'=paste0("Elevation of Lake Mead (",unit[[language]],")"), 'mobile'=paste0("Elevation of Lake Mead (",unit[[language]],")"))
+  x.label = c('desktop'=lt('projFigXlab',language), 'mobile'='')
+  y.label = paste0(lt('projFigYlab',language)," (",unit[[language]],")")
   
   y.ticks = list('es'=list('desktop'=seq(305,370,10),'mobile'=seq(310,370,20)), 'en'=list('desktop'=seq(1000,1225,25), 'mobile'=seq(1000,1225,50)))
   y.lim = list('es'=c(990*conv,1229*conv), 'en'=c(990,1229))
@@ -54,7 +54,7 @@ get_axes <- function(data, form.factor, language){
   maxMonth <- as.numeric(strftime(posDate[which.max(posDate)], 
                                   format = "%m")) + 3 # go to 3 months past the last date in the series
   axes <- list('tick_len' = 5,
-               'y_label' = y.label[[form.factor]],
+               'y_label' = y.label,
                'x_label' = x.label[[form.factor]],
                'y_ticks' = y.ticks[[language]][[form.factor]],
                'y_tk_label' = y.ticks[[language]][[form.factor]],
@@ -115,15 +115,15 @@ add_annotations <- function(svg_nd, form.factor, language, fig, axes){
   if (form.factor == 'desktop'){
     x = get_heights(axes, fig, language)
     g_id = newXMLNode("g", parent = svg_nd, attrs=c(class='hidden', id='condition-markers'))
-    newXMLNode("text", parent = g_id, newXMLTextNode('Flood Control'),
+    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigFloodDesktop1',language)),
                attrs = c(x = fig$px_lim$x[2], y = mean(c(x$surplus,x$flood)),dx="0.4em",class='small-text'))
-    newXMLNode("text", parent = g_id, newXMLTextNode('Conditions'),
+    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigFloodDesktop2',language)),
                attrs = c(x = fig$px_lim$x[2], y = mean(c(x$surplus,x$flood)), dy="1.0em", dx="0.4em",class='small-text'))
-    newXMLNode("text", parent = g_id, newXMLTextNode('Surplus Conditions'),
+    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigSurplusDesktop',language)),
                attrs = c(x = fig$px_lim$x[2], y = mean(c(x$normal,x$surplus)),dy="0.5em", dx="0.4em",class='small-text'))
-    newXMLNode("text", parent = g_id, newXMLTextNode('Normal Conditions'),
+    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigNormalDesktop',language)),
                attrs = c(x = fig$px_lim$x[2], y = mean(c(x$shortage,x$normal)),dy="0.5em", dx="0.4em",class='small-text'))
-    newXMLNode("text", parent = g_id, newXMLTextNode('Shortage Conditions'),
+    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigShortageDesktop',language)),
                attrs = c(x = fig$px_lim$x[2], y = mean(c(x$bottom,x$shortage)),dy="0.5em", dx="0.4em",class='small-text')) 
   } else {
     g_id = newXMLNode("g", parent = svg_nd, attrs=c(class='hidden', id='condition-markers'))
@@ -136,7 +136,7 @@ add_annotations <- function(svg_nd, form.factor, language, fig, axes){
     bin.w = (x.rng-spaces*space.w)/bins
     bin.h = 20
     y.off = 34
-    labels = c('Flood Control', "Surplus",'Normal','Shortage')
+    labels = c(lt('projFigFloodMobile',language), lt('projFigSurplusMobile',language),lt('projFigNormalMobile',language),lt('projFigShortageMobile',language))
     opacity = c(.8, .7, .6, .4)
     for (i in seq_len(length(labels))){
       newXMLNode('rect',parent = g_id, attrs = c(x = x1+(i-1)*(bin.w+space.w), y = fig$h-fig$margins[3]-fig$margins[1]+y.off,
@@ -207,11 +207,11 @@ add_lines <- function(g_id, data, form.factor, language){
   x_offset <- c(x[is.most][1] -4, x[is.most][1] + 18)
   
   
-  newXMLNode("text", parent = g_id, newXMLTextNode('Historical'),
+  newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigHistorical',language)),
              attrs = c(id="Historical-marker", class='hidden', 'text-anchor'=t_anc[[form.factor]],
                        'transform'=sprintf("rotate(-90,%1.1f,%1.1f),translate(%1.1f,%1.1f)",
                                            x_offset[1],y_offset[[form.factor]],x_offset[1],y_offset[[form.factor]])))
-  newXMLNode("text", parent = g_id, newXMLTextNode('Projected'),
+  newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigProjected',language)),
              attrs = c(id="Projected-marker", class='hidden','text-anchor'=t_anc[[form.factor]],
                        'transform'=sprintf("rotate(-90,%1.1f,%1.1f),translate(%1.1f,%1.1f)",
                                            x_offset[2],y_offset[[form.factor]],x_offset[2],y_offset[[form.factor]])))
@@ -235,9 +235,9 @@ add_lines <- function(g_id, data, form.factor, language){
     unit = c('es'='m','en'='ft')
     
     if (is.model[i]){
-      elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s %s');ChangeText(evt, 'model_text','*%s');", elev,unit[[language]],prob_run_title))
+      elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','%s: %s %s');ChangeText(evt, 'model_text','*%s');", lt('projFigElevLegend',language),elev,unit[[language]],prob_run_title))
     } else {
-      elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','Elevation: %s %s');", elev, unit[[language]]),
+      elev_text <- paste0(sprintf("ChangeText(evt, 'elev_text','%s: %s %s');", lt('projFigElevLegend',language), elev, unit[[language]]),
                           "ChangeText(evt, 'model_text',' ');")
       
     }
