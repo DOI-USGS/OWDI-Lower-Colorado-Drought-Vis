@@ -31,10 +31,10 @@ bboxes <- list(
   saltonBbox=c(-115.749206543,32.6671247331,-114.9087524414,33.4108095511)
 )
 
-referencePoints <- list(
-	lasVegas=list(latlon=c(-115.1739, 36.1215), name="Las Vegas", pos=2),
-	mexicali=list(latlon=c(-115.4678, 32.6633), name="Mexicali", pos=1),
-	phoenix=list(latlon=c(-112.0667,33.4500), name="Phoenix", pos=4)
+refPts <- list(
+	lasVegas=list(latlon=c(-115.1739, 36.1215), name="Las Vegas", pos=c(150.4375, 232.785156)),
+	mexicali=list(latlon=c(-115.4678, 32.6633), name="Mexicali", pos=c(139.222656, 340.339844)),
+	phoenix=list(latlon=c(-112.0667,33.4500), name="Phoenix", pos=c(228.886719, 317.398438))
 )
 
 width=7.5
@@ -46,6 +46,8 @@ grey_simp_tol <- 1.3*simp_tol # less res for non-highlighted states
 min_area <- 1e+10
 wgs84 <- '+init=epsg:4326'
 epsg_code <- '+init=epsg:3479' #5070 for USGS CONUS albers?
+textDx <- 12.5
+textDy <- 5
 
 mapbbox <- c(-119.53125,28.304380683,-101.42578125,40.7139558263) # in wgs84
 projBbox <- transformBbox(mapbbox, wgs84, epsg_code)
@@ -114,13 +116,11 @@ for (i in 1:length(bboxes)) {
 }
 
 ref_svg_names <- c()
-for (i in 1:length(referencePoints)) {
-  refName = names(referencePoints)[i]
-  ref = referencePoints[[i]]
+for (i in 1:length(refPts)) {
+  refName = names(refPts)[i]
+  ref = refPts[[i]]
   spPoint <- transformPoint(ref$latlon, wgs84, epsg_code)
   plot(spPoint, pch=1, add=TRUE)
-  text(spPoint@coords[1,1], spPoint@coords[1,2], labels=ref$name, pos=ref$pos, offset=.5)
-  ref_svg_names <- c(ref_svg_names, paste0(refName, "-point"), paste0(refName, "-text"))
 }
 
 dev.off()
@@ -128,10 +128,16 @@ dev.off()
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- clean_svg_doc(svg) %>%
-  name_svg_elements(svg, ele_names = c('Mexico', lo_co_states, 'Colorado-river', names(bboxes), ref_svg_names)) %>%
-  group_svg_elements(groups = list('mexico' = 'Mexico', 'lo-co-states' = lo_co_states, 'co-river-polyline' = 'Colorado-river', 'bboxes' = names(bboxes), 'refPoints' = paste0(names(referencePoints), "-point"), 'refText' = paste0(names(referencePoints), "-text"))) %>%
+  name_svg_elements(svg, ele_names = c('Mexico', lo_co_states, 'Colorado-river', names(bboxes), names(refPts))) %>%
+  group_svg_elements(groups = list('mexico' = 'Mexico', 'lo-co-states' = lo_co_states, 'co-river-polyline' = 'Colorado-river', 'bboxes' = names(bboxes), 'refPoints' = names(refPts))) %>%
   group_svg_elements(groups = c(lo_co_states,'Mexico', 'Colorado-river')) %>% # additional <g/> for each lo-co-state and mexico
-  attr_svg_groups(attrs = list('mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'bboxes' = bbox_styles, 'refPoints' = ref_styles, 'refText' = ref_text_styles)) %>%
+  attr_svg_groups(attrs = list('mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'bboxes' = bbox_styles, 'refPoints' = ref_styles)) %>%
+  add_text(text=refPts[[1]]$name, x=as.character(refPts[[1]]$pos[1] - textDx),
+           y=as.character(refPts[[1]]$pos[2] + textDy), 'fill'='#000000', 'text-anchor'="end", 'font-size'="1.5em") %>%
+  add_text(text=refPts[[2]]$name, x=as.character(refPts[[2]]$pos[1]  - textDx),
+           y=as.character(refPts[[2]]$pos[2] + textDy), 'fill'='#000000', 'text-anchor'="end", 'font-size'="1.5em") %>%
+  add_text(text=refPts[[3]]$name, x=as.character(refPts[[3]]$pos[1]  + textDx),
+           y=as.character(refPts[[3]]$pos[2] + textDy), 'fill'='#000000', 'text-anchor'="start", 'font-size'="1.5em") %>%
   toString.XMLNode()
 
 cat(svg, file = svg_file, append = FALSE)
