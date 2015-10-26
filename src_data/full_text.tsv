@@ -171,21 +171,21 @@ projFigFloodMobile	Flood Control
 projFigSurplusMobile	Surplus
 projFigNormalMobile	Normal
 projFigShortageMobile	Shortage
-lowCoFigLowerBasin  Lower Colorado Basin
-lowCoFigUpperBasin  Upper Colorado Basin
-lowCoFigRiver Colorado River
-natFlowFigYlab  Flow Volume
-natFlowFigXlab  Year
-natFlowPreCompactText Pre-Compact Period
-natFlowCurrentDroughtText Current Drought Period
-natFlowLegendYear Year
-natFlowLegendVolume Annual Flow Volume
-natFlowLegendAverage  Long-Term Running Average
-unitsMetricVolume million cubic meters
-unitsImperialVolume million acre-feet
-unitsMetricVolumeAbbr 10^6 m^3
-unitsImperialVolumeAbbr maf
-unitsMetricElevation  meters
-unitsImperialElevation  feet
-unitsMetricElevationAbbr  m
-unitsImperialElevationAbbr  ft
+lowCoFigLowerBasin	Lower Colorado Basin
+lowCoFigUpperBasin	Upper Colorado Basin
+lowCoFigRiver	Colorado River
+natFlowFigYlab	Flow Volume
+natFlowFigXlab	Year
+natFlowPreCompactText	Pre-Compact Period
+natFlowCurrentDroughtText	Current Drought Period
+natFlowLegendYear	Year
+natFlowLegendVolume	Annual Flow Volume
+natFlowLegendAverage	Long-Term Running Average
+unitsMetricVolume	million cubic meters
+unitsImperialVolume	million acre-feet
+unitsMetricVolumeAbbr	10^6 m^3
+unitsImperialVolumeAbbr	maf
+unitsMetricElevation	meters
+unitsImperialElevation	feet
+unitsMetricElevationAbbr	m
+unitsImperialElevationAbbr	ft
