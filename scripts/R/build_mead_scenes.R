@@ -7,11 +7,11 @@ source('scripts/R/build_usage_pictogram.R')
 source('scripts/R/build_state_pictogram.R')
 source('scripts/R/build_ecmascript.R')
 source('scripts/R/build_mead_levels.R')
-
+source('scripts/R/read_translation.R')
 
 declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
 
-plot_dir = 'public_html/img/lake-mead-animated'
+plot_dir = 'public_html/en/img'
 read_dir = 'src_data/lower-co-map'
 svg_file = file.path(read_dir,paste0('lo_CO_borders','.svg'))
 out_file = file.path(plot_dir,paste0('mead_scene_animated','.svg'))
@@ -42,8 +42,8 @@ svg <- xmlParse(svg_file, useInternalNode=TRUE)
 contract_titles <- gsub("'", "\\\\'", contract_titles)
 
 svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
-  add_flag_defs(id = 'usa-flag', x=0,y=-100, width=500,height=500, image_url='https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg') %>% 
-  add_flag_defs(id = 'mexico-flag', x=120,y=150, width=650,height=547, image_url='https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg') %>% 
+  add_flag_defs(id = 'usa-flag', x=0,y=-100, width=500,height=500, image_url='US_flag.svg') %>% 
+  add_flag_defs(id = 'mexico-flag', x=120,y=150, width=650,height=547, image_url='Mexico_flag.svg') %>% 
   edit_attr_svg(c('viewBox'='-50 0 640 547', 'onload'='init(evt)')) %>% 
   add_rect(x="-50", width="100%", height="100%", style="max-width=950px", fill="url(#background-image)", at=0, rx='6',ry='6', id='background-panel') %>%
   add_scene_buttons() %>% 
