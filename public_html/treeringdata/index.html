@@ -4,24 +4,63 @@
 <meta charset="utf-8"/>
 <script src="../js/htmlwidgets-0.3.2/htmlwidgets.js"></script>
 <script src="//code.jquery.com/jquery-latest.min.js"></script>
-<link href="../js/dygraphs-1.0.1/dygraph.css" rel="stylesheet" />
+<link href="../css/dygraph.css" rel="stylesheet" type="text/css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/dygraph/1.1.1/dygraph-combined.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
 <script src="../js/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
 <script src="../js/dygraphs-binding-0.4.3/dygraphs.js"></script>
 
+<link rel="icon" href="../img/usgs.ico" type="image/x-icon" />
+<link href="../css/overlay.css" rel="stylesheet" type="text/css">
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+<link href="../css/normalize.css" rel="stylesheet" type="text/css">
+<link href="../css/print.css" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,500,700,100,300" rel="stylesheet" type="text/css">
+
 </head>
-<body style="background-color:white;">
-<div id="htmlwidget_container">
-  <div id="htmlwidget-5749" style="width:960px;height:500px;" class="dygraphs"></div>
-</div>
+<body>
+
+  <div id="htmlwidget_container">
+    <div id="htmlwidget-5749" class="dygraphs"></div>
+  </div>
+
+  <div id="TreeRingDataLegend" class="container">
+    <div id="legend_div" style="height:30"></div>
+  </div>
+
+  <div class="graphCaption">
+    <p> Each line or ribbon of color represents a measure of natural flow (flow without abstractions).
+      Tree-Ring Reconstructed is the estimate of natural flow based on tree rings, while Observed is based on flow gage readings.
+      The red and blue lines are smoother versions of the average of tree-ring reconstructed and observed flow.
+      The very light blue ribbon area represents the range of uncertainty in the tree ring reconstructed data.
+    </p>
+
+    <p> Move the slider at the bottom to zoom in and out on the timeline of natural flows, going back as far as 762 AD if you like. Or click and drag horizontally to zoom in on a particular time period, or vertically to zoom in on a flow range. Double click anywhere on the plot to zoom out again.
+    </p>
+
+    <p>In the graphic above, the 10-year average <a href="http://www.usbr.gov/lc/region/g4000/NaturalFlow/documentation.html">natural flow</a> at Lees Ferry shows periods of below and above average annual flow (approximately 14.8 maf). The most recent drought for the 2000-2015 period (indicated by the brown shaded area) was the driest 16-year period in the past 100 years and one of the driest 16-year periods in the past 1,200 years. The graphic also depicts how during the early part of the 1900s, which corresponds to the period of reference used to set the apportionments for the Upper and Lower Basins in the <a href="http://www.usbr.gov/lc/region/g1000/pdfiles/crcompct.pdf" target="_blank">1922 Colorado River Compact</a>, was an unusually wet period (indicated by the green shaded area). At the time the 1922 Colorado River Compact went into effect, the average annual inflow at Lees Ferry was approximately 18.0 maf.
+    </p>
+  </div>
+
+<script type="application/htmlwidget-sizing" data-for="htmlwidget-5749">{ "viewer": {
+ "width":               450,
+"height":               350,
+"padding":                10,
+"fill": false
+},"browser": {
+ "width":               960,
+"height":               500,
+"padding":                [40,40,200,40],
+"fill": false
+} }</script>
+
 <script type="application/json" data-for="htmlwidget-5749">{ "x": {
  "attrs": {
  "title": "Colorado River Natural Flow at Lees Ferry, AZ",
 "labels": [ "year", "Tree-Ring Reconstructed", "Observed", "15-Year Average", "Average", "Lowest 15-Year Average in Record" ],
 "axes": {
  "x": [],
-"y": [] 
+"y": []
 },
 "showRangeSelector": true,
 "dateWindow": [ "1812-06-12T00:00:00Z", "2012-06-12T00:00:00Z" ],
@@ -32,35 +71,36 @@
 "customBars": true,
 "series": {
  "Tree-Ring Reconstructed": {
- "axis": "y" 
+ "axis": "y"
 },
 "Observed": {
- "axis": "y" 
+ "axis": "y"
 },
 "15-Year Average": {
- "axis": "y" 
+ "axis": "y"
 },
 "Average": {
- "axis": "y" 
+ "axis": "y"
 },
 "Lowest 15-Year Average in Record": {
- "axis": "y" 
-} 
+ "axis": "y"
+}
 },
 "colors": [
  "#00CCFF",
 "#3333FF",
 "red",
 "forestgreen",
-"gold" 
+"gold"
 ],
 "ylabel": "Flow (million acre-feet per year)",
 "xlabel": "Year",
 "legend": "auto",
 "labelsDivWidth":               400,
 "labelsShowZeroValues": true,
-"labelsSeparateLines": false,
-"hideOverlayOnMouseOut": true 
+"labelsDiv":"legend_div",
+"labelsSeparateLines":true,
+"hideOverlayOnMouseOut": true
 },
 "scale": "yearly",
 "annotations": [],
@@ -68,8 +108,8 @@
  {
  "from": "2000-01-01T00:00:00Z",
 "to": "2013-01-01T00:00:00Z",
-"color": "#EFEFEF" 
-} 
+"color": "#EFEFEF"
+}
 ],
 "events": [],
 "data": [
@@ -1325,7 +1365,7 @@
 [ null, null, null ],
 [ null, null, null ],
 [ null, null, null ],
-[ null, null, null ] 
+[ null, null, null ]
 ],
 [
  [ null, null, null ],
@@ -2578,7 +2618,7 @@
 [         14.097803,         14.097803,         14.097803 ],
 [         12.717412,         12.717412,         12.717412 ],
 [         20.137929,         20.137929,         20.137929 ],
-[          7.546843,          7.546843,          7.546843 ] 
+[          7.546843,          7.546843,          7.546843 ]
 ],
 [
  [ null, null, null ],
@@ -3831,7 +3871,7 @@
 [ 13.87373724373333, 13.87373724373333, 13.87373724373333 ],
 [ 13.47782826546667, 13.47782826546667, 13.47782826546667 ],
 [ 13.82940750173333, 13.82940750173333, 13.82940750173333 ],
-[ 13.06948502626667, 13.06948502626667, 13.06948502626667 ] 
+[ 13.06948502626667, 13.06948502626667, 13.06948502626667 ]
 ],
 [
  [ 14.64170301280735, 14.64170301280735, 14.64170301280735 ],
@@ -5084,7 +5124,7 @@
 [ 14.64170301280735, 14.64170301280735, 14.64170301280735 ],
 [ 14.64170301280735, 14.64170301280735, 14.64170301280735 ],
 [ 14.64170301280735, 14.64170301280735, 14.64170301280735 ],
-[ 14.64170301280735, 14.64170301280735, 14.64170301280735 ] 
+[ 14.64170301280735, 14.64170301280735, 14.64170301280735 ]
 ],
 [
  [ 12.04287434826666, 12.04287434826666, 12.04287434826666 ],
@@ -6337,20 +6377,9 @@
 [ 12.04287434826666, 12.04287434826666, 12.04287434826666 ],
 [ 12.04287434826666, 12.04287434826666, 12.04287434826666 ],
 [ 12.04287434826666, 12.04287434826666, 12.04287434826666 ],
-[ 12.04287434826666, 12.04287434826666, 12.04287434826666 ] 
-] 
-] 
+[ 12.04287434826666, 12.04287434826666, 12.04287434826666 ]
+]
+]
 },"evals": [ "attrs.interactionModel" ] }</script>
-<script type="application/htmlwidget-sizing" data-for="htmlwidget-5749">{ "viewer": {
- "width":               450,
-"height":               350,
-"padding":                10,
-"fill": true 
-},"browser": {
- "width":               960,
-"height":               500,
-"padding":                40,
-"fill": true 
-} }</script>
 </body>
 </html>
