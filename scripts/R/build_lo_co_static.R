@@ -22,9 +22,9 @@ for (lang in c("en", "es")) {
     remove_svg_elements(elements = c('delete_group'='g','top-users'='g', 'non-lo-co-mask'='mask','mexico-mask'='mask')) %>%
     add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('220','300'),cy=c('200','300')) %>%
     attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles)) %>%
-    add_text(text=lt(lowCoFigLowerBasin, lang), x="320", y="230", 'fill'='#B22C2C', 'text-anchor'="start") %>%
-    add_text(text=lt(lowCoFigUpperBasin, lang), x="338", y="130", 'fill'='#B22C2C', 'text-anchor'="start") %>%
-    add_text(text=lt(lowCoFigRiver, lang), x="345", y="70", 'fill'='#1975d1', 'text-anchor'="start") %>%
+    add_text(text=lt('lowCoFigLowerBasin', lang), x="320", y="230", 'fill'='#B22C2C', 'text-anchor'="start") %>%
+    add_text(text=lt('lowCoFigUpperBasin', lang), x="338", y="130", 'fill'='#B22C2C', 'text-anchor'="start") %>%
+    add_text(text=lt('lowCoFigRiver', lang), x="345", y="70", 'fill'='#1975d1', 'text-anchor'="start") %>%
     toString.XMLNode()
   
   lines <- strsplit(svg,'[\n]')[[1]]
