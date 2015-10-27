@@ -1,6 +1,0 @@
-======================================================
-CartoDB/odyssey.js
-  Making it easy to merge map and narrative 
-DOWNLOAD FROM: https://github.com/CartoDB/odyssey.js/tree/master
-on 20150210
-======================================================

@@ -138,6 +138,7 @@ nav h3 {
 .socialMedia img{
 	width:25px;
 	cursor:pointer;
+	margin-left:20px;
 	}
 
 #welcomeSocial{
@@ -203,6 +204,12 @@ nav h3 {
 	clear:both;
 }
 
+#TreeRingDataLegend{
+  height: 50px;
+	margin-top: -15px;
+	margin-bottom: 40px;
+	}
+
 #Introduction,
 #Lifeline,
 #ControlStructures,
@@ -210,11 +217,6 @@ nav h3 {
 #WaterSupply,
 #ExtendedDrought,
 #SupplyDemand,
-#TreeRingDataLegend{
-  height: 50px;
-	margin-top: -15px;
-	margin-bottom: 40px;
-	}
 #OneRiver,
 #DecliningStorage,
 #Shortage,
@@ -489,7 +491,6 @@ nav h3 {
 	display:block;
 	}
 
-
 /*=====Before after CSS=====*/
 
 #before-after-reservoir,
@@ -511,6 +512,16 @@ nav h3 {
 	margin-top: 25px;
 	width:100% !important;
 }
+
+/*Lake Mead Static CSS*/
+#mead-elev-object{
+	display:none;
+	}
+
+#mead-elev-object-mobile{
+	display:block;
+	}
+
 
 /*Lake Mead Animated Section CSS*/
 #meadSVGContainer h2 {
@@ -762,6 +773,14 @@ nav h3 {
 	#animated-object-mobile{
 		display:none;
 	}
+
+	#mead-elev-object{
+		display:block;
+		}
+
+	#mead-elev-object-mobile{
+		display:none;
+		}
 
 	#utah{
 		margin-top:100px;

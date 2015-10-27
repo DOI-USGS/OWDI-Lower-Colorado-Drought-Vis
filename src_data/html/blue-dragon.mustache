@@ -1,0 +1,73 @@
+<div class="widget">
+
+<div class="sectionContent" id="blueDragonSection">
+
+        <p>{{{ tr.blueDragon1 }}}</p>
+        
+		<div id="blueDragonHiddenContent" class="hiddenContent">
+        <p>{{{ tr.blueDragon2 }}}</p>
+        
+        <p>{{{ tr.blueDragon3 }}}</p>
+        
+        <p>{{{ tr.blueDragon4 }}}</p>
+		</div>
+		
+		<p id="blueDragonReadMore" class="readMore">{{{ tr.readMore }}}</p>
+        
+        <p>{{{ tr.blueDragon5 }}}</p>
+       
+	<div id="blueDragon">
+		
+		<object id="bluedragon-object" data="../img/bluedragon-animate.svg" type="image/svg+xml" ></object>
+	</div>
+	
+	<a href="bluedragon.pdf" target="_blank">
+		<div id="dragonText">
+			<h4>{{{ tr.blueDragon6 }}}</h4>
+		</div>
+	</a>
+	
+		<div class="exploreMore" id="blueDragonExplore">
+			<a href="http://txpub.usgs.gov/DSS/StoryMaps/BlueDragon/" target="_blank">
+				<img src="../img/texas-app.jpg" alt="texas water science center app"/>
+			</a>
+			<p>{{{ tr.blueDragon8 }}}</p>
+			<a href="http://txpub.usgs.gov/DSS/StoryMaps/BlueDragon/" target="_blank"><button class="extraButton">{{{ tr.explore }}}</button></a>
+		</div>
+		
+	</div>
+	
+	<div class="socialMedia onWhite">
+		<img src="../img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
+		<img src="../img/social-media/github-blue-01.svg" alt="github icon"/>
+		<img id="blueDragonLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="blueDragonLink" class="takeLinkBlue" >
+			<input id="blueDragonURL" type="text" value="http://go.usa.gov/#blue-dragon">
+		</div>
+	</div>
+
+</div>
+
+<script>
+
+	var blueDragonReadMore = $('#blueDragonReadMore');
+	var blueDragonHiddenContent = $('#blueDragonHiddenContent');
+	
+	blueDragonReadMore.on('click', function(){
+		
+		blueDragonHiddenContent.toggle();
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+		});	
+		
+		$('#blueDragonLinkOut').on('click', function(){
+			$('#blueDragonLink').toggle();
+			$('#blueDragonURL').select();
+		});
+
+
+</script>

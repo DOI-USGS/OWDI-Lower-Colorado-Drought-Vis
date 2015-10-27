@@ -1,0 +1,120 @@
+<div class="widget">
+  <div class="sectionContent" id="before-after-section">
+    <p>{{{ tr.beforeAfter1 }}}</p>
+  
+    
+	<!--landsat-->
+  <figure class="cd-image-container">
+    <img src="../img/before-after/after05.jpg" alt="Original Image" />
+    <span class="cd-image-label button-after" data-type="original">2014</span>
+    <div class="cd-resize-img">
+      <!-- the resizable image on top -->
+      <img src="../img/before-after/before05.jpg" alt="Modified Image" />
+      <span class="cd-image-label button-before" data-type="modified">1999</span>
+    </div>
+    <span class="cd-handle"></span>
+    <!-- slider handle -->
+  </figure>
+  <!-- cd-image-container -->
+  
+  <p>{{{ tr.beforeAfter2 }}} </p>
+	
+  
+<!--Hoover Dam-->
+  <figure id="hooverdam" class="cd-image-container">
+    <img src="../img/before-after/after02.jpg" alt="Original Image" />
+    <span class="cd-image-label button-after" data-type="original">2015</span>
+    <div class="cd-resize-img">
+      <!-- the resizable image on top -->
+      <img src="../img/before-after/before02.jpg" alt="Modified Image" />
+      <span class="cd-image-label button-before" data-type="modified">2001</span>
+    </div>
+    <span class="cd-handle"></span>
+    <!-- slider handle -->
+  </figure>
+  <!-- cd-image-container -->
+  
+  <div class="extraPics">
+	<img src="../img/before-after/extrapic02.jpg"/>
+	<img src="../img/before-after/extrapic03.jpg"/>
+  </div>
+  
+  <p>{{{ tr.beforeAfter3 }}}</p>
+  <div id="beforeAfter01HiddenContent" class="hiddenContent">
+  <p>{{{ tr.beforeAfter4 }}}</p>
+  <p>{{{ tr.beforeAfter5 }}}</p>
+  <p>{{{ tr.beforeAfter6 }}}</p>
+  </div>
+  
+  <p id="beforeAfter01ReadMore" class="readMore">{{{ tr.readMore }}}</p>
+
+
+<!--Docks-->
+  <figure class="cd-image-container">
+    <img src="../img/before-after/after04.jpg" alt="Original Image" />
+    <span class="cd-image-label button-after" data-type="original">2015</span>
+    <div class="cd-resize-img">
+      <!-- the resizable image on top -->
+      <img src="../img/before-after/before04.jpg" alt="Modified Image" />
+      <span class="cd-image-label button-before" data-type="modified">2003</span>
+    </div>
+    <span class="cd-handle"></span>
+    <!-- slider handle -->
+  </figure>
+  <!-- cd-image-container -->
+  
+  <p>{{{ tr.beforeAfter7 }}}</p>
+  <p>{{{ tr.beforeAfter8 }}}</p>
+  
+  
+  
+  </div>
+  
+  
+  <button class="supportinginfo" id="sectionBAButton">{{{ tr.suppInfo }}}</button>
+  
+  <div class="supportingInfoContent" id="sectionBAInfo">
+      <p>{{{ tr.beforeAfter9 }}}</p>
+      
+      <p>{{{ tr.beforeAfter10 }}}</p>
+      
+
+  </div>
+  
+  	<div class="socialMedia onWhite">
+		<img src="../img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
+		<img src="../img/social-media/github-blue-01.svg" alt="github icon"/>
+		<img id="beforeAfterLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="beforeAfterLink" class="takeLinkBlue" >
+			<input id="beforeAfterURL" type="text" value="http://go.usa.gov/#beforeAfterContainer">
+		</div>
+	</div>
+  
+</div>
+
+<script>
+    var button = $('#sectionBAButton');
+    
+    button.click(function() {
+                 $('#sectionBAInfo').toggle();
+                 });
+				 
+	var beforeAfter01ReadMore = $('#beforeAfter01ReadMore');
+	var beforeAfter01HiddenContent = $('#beforeAfter01HiddenContent');
+	
+	beforeAfter01ReadMore.on('click', function(){
+		
+		beforeAfter01HiddenContent.toggle();
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+		});	
+		
+		$('#beforeAfterLinkOut').on('click', function(){
+			$('#beforeAfterLink').toggle();
+			$('#beforeAfterURL').select();
+		});
+    </script>

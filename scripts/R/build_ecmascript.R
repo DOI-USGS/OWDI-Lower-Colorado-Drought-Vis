@@ -331,13 +331,8 @@ ecmascript_supply_usage <- function(){
     svgDocument = evt.target.ownerDocument;
     svgDocument.timeAdvance = this.timeAdvance;
     svgDocument.visibleAxes = this.visibleAxes;
-    svgDocument.setMobile = this.setMobile;
-    svgDocument.setDesktop = this.setDesktop;
   }
-  
-  legend = svgDocument.getElementById("legend");
-  window.parent.addEventListener("form-factor-desktop", setDesktop, false);
-  window.parent.addEventListener("form-factor-mobile", setMobile, false);  
+    legend = svgDocument.getElementById("legend");
   }
   function legendViz(evt,elementname)
   {
@@ -367,14 +362,6 @@ ecmascript_supply_usage <- function(){
   textelement = svgDocument.getElementById(elementname);                      
   textelement.firstChild.data = legendtext;
   }
-  function setMobile(){
-  	svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
-    svgDocument.getElementById("y-label").setAttribute("y","-10");       
-  }
-  function setDesktop(){
-    svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
-    svgDocument.getElementById("y-label").setAttribute("y","0");                          
-  }
   function timeAdvance(){
     var ele = document.getElementById("timeAdvance");
     ele.beginElement();
@@ -390,12 +377,9 @@ ecmascript_mead_proj <- function(){
   scripts <- c('function init(evt){',
                'if ( window.svgDocument == null ) {',
                'svgDocument = evt.target.ownerDocument;',
-               'svgDocument.setMobile = this.setMobile;',
-               'svgDocument.drawTiers = this.moveInToMomsHouse;',
-               'svgDocument.setDesktop = this.setDesktop;}',
+               'svgDocument.drawTiers = this.moveInToMomsHouse;}',
                '}',
-               'window.parent.addEventListener("form-factor-desktop", setDesktop, false);',
-               'window.parent.addEventListener("form-factor-mobile", setMobile, false);',
+
                "function ChangeText(evt, elementname, legendtext)
                {
                textelement = svgDocument.getElementById(elementname);                      
@@ -405,14 +389,7 @@ ecmascript_mead_proj <- function(){
                {
                  evt.target.setAttribute("fill-opacity", opacity);
                }',
-               'function setMobile(){
-                 svgDocument.getElementById("legend").setAttribute("transform","scale(1.5)translate(-40,-8)");
-                 svgDocument.getElementById("y-label").setAttribute("y","-12");       
-               }
-               function setDesktop(){
-                 svgDocument.getElementById("legend").setAttribute("transform","scale(1.0)translate(0,0)");     
-                 svgDocument.getElementById("y-label").setAttribute("y","0");                          
-               }',
+
                "function moveInToMomsHouse(){
                  document.getElementById('peak').setAttribute('class','level-move');
                  document.getElementById('flood').setAttribute('class','level-move');

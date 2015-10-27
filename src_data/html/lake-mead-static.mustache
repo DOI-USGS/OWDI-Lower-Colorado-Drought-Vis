@@ -1,0 +1,96 @@
+<div class="widget">
+	<div class="sectionContent">
+        <p>{{{ tr.lakeMeadStatic1 }}}</p>
+        
+		<p>{{{ tr.lakeMeadStatic2 }}}</p>
+
+
+
+		<button class="supportinginfo spacer" id="section15Button">{{{ tr.suppInfo }}}</button>
+
+		<div class="supportingInfoContent" id="section15Info">
+
+<p>{{{ tr.lakeMeadStatic3 }}}</p>
+
+
+			<p><a href="http://www.cbrfc.noaa.gov/" target="_blank">{{{ tr.lakeMeadStatic4 }}}</a>
+			</p>
+            
+			<p><a href="http://waterdata.usgs.gov/nwis" target="_blank">{{{ tr.lakeMeadStatic5 }}}</a>.</p>
+
+            <p>{{{ tr.lakeMeadStatic6 }}}</p>
+            
+            <p><a href="http://www.usbr.gov/uc/water/crsp/studies/index.html" target="_blank">{{{ tr.lakeMeadStatic7 }}}</a>.
+            </p>
+            <p><a href="http://www.usbr.gov/lc/region/g4000/24mo/index.html" target="_blank">{{{ tr.lakeMeadStatic8 }}}</a>.
+            </p>
+            
+            <p><a href="http://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf" target="_blank">{{{ tr.lakeMeadStatic9 }}}</a></p>
+            
+            
+		</div>
+		
+		<div id="meadElevationContainer">
+			<object id="mead-elev-object" data="../img/lake-mead-static/mead_elev_projected-desktop-en.svg" type="image/svg+xml"></object>
+			<object id="mead-elev-object-mobile" data="../img/lake-mead-static/mead_elev_projected-mobile-en.svg" type="image/svg+xml"></object>
+			<div class="graphCaption">
+                <p>{{{ tr.lakeMeadStatic10 }}}</p>
+                
+        </div>
+            
+                
+        <p>{{{ tr.lakeMeadStatic11 }}}</p>
+		
+        <div id="lakeMeadHiddenContent" class="hiddenContent">
+        <p>{{{ tr.lakeMeadStatic12 }}}</p>
+       
+       
+       <p>{{{ tr.lakeMeadStatic13 }}}</p>
+                
+        <p>{{{ tr.lakeMeadStatic14 }}}</p>
+		</div>
+		
+		<p id="lakeMeadReadMore" class="readMore">{{{ tr.readMore }}}</p>
+                
+    
+		</div>
+	</div>
+	
+	<div class="socialMedia onWhite">
+		<img src="../img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
+		<img src="../img/social-media/github-blue-01.svg" alt="github icon"/>
+		<img id="lakeMeadLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="lakeMeadLink" class="takeLinkBlue" >
+			<input id="lakeMeadURL" type="text" value="http://go.usa.gov/#meadStaticContainer">
+		</div>
+	</div>
+
+
+</div>
+
+<script>
+	var button = $('#section15Button');
+
+	button.click(function () {
+		$('#section15Info').toggle();
+	});
+	
+	var lakeMeadReadMore = $('#lakeMeadReadMore');
+	var lakeMeadHiddenContent = $('#lakeMeadHiddenContent');
+	
+	lakeMeadReadMore.on('click', function(){
+		
+		lakeMeadHiddenContent.toggle();
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+		});	
+		
+		$('#lakeMeadLinkOut').on('click', function(){
+			$('#lakeMeadLink').toggle();
+			$('#lakeMeadURL').select();
+		});
+</script>

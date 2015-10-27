@@ -1,0 +1,28 @@
+<div class="widget">
+	<div id="keynote2" class="keynote">
+    	<div id="pin2" class="pin">
+        	<h2>{{{ tr.mainMessage1 }}}</h2>
+        </div>
+    </div>
+	
+	<div class="socialMedia">
+		<img src="../img/social-media/twitter-whie-01.svg" alt="twitter icon"/>
+		<img src="../img/social-media/github-white-01.svg" alt="github icon"/>
+		<img id="lifeLineLinkOut" src="../img/social-media/link-white-01.svg" alt="link icon"/>
+		<div id="lifeLineLink" class="takeLink" >
+			<input id="lifeLineURL" type="text" value="http://go.usa.gov/#Lifeline">
+		</div>
+	</div>
+	
+</div>
+
+<script>
+
+	$('#lifeLineLinkOut').on('click', function(){
+		$('#lifeLineLink').toggle();
+		$('#lifeLineURL').select();
+		});
+
+</script>
+
+
