@@ -11,7 +11,9 @@ source('scripts/R/read_translation.R')
 
 declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
 
-plot_dir = 'public_html/en/img'
+lang = 'es'
+
+plot_dir = sprintf('public_html/%s/img',lang)
 read_dir = 'src_data/lower-co-map'
 svg_file = file.path(read_dir,paste0('lo_CO_borders','.svg'))
 out_file = file.path(plot_dir,paste0('mead_scene_animated','.svg'))
@@ -28,7 +30,8 @@ sorted_contracts <- sort(as.numeric(contracts$FiveYrAvg_),decreasing = T, index.
 non_zero_cont <- as.numeric(contracts$FiveYrAvg_[sorted_contracts$ix])
 non_zero_cont <- non_zero_cont[non_zero_cont > 15000]
 
-picto_scale = 100000 # acre-feet per bin
+# 100,000 acre-feet =~ 123 million m3
+picto_scale = ifelse(lang=='en',100000,200000.000000999) # acre-feet per bin, vs million m3
 mead_poly <- c(x1=545,y1=20,x2=545,y2=450,x3=410,y3=450,x4=290,y4= 20)
 mead_yvals <- get_mead_yval(mead_poly, storage = c(26.2, 23.1, 16.2, 9.6, 7.7, 6.0)) # flood, surplus, normal, shortage 1,2,3
 mead_names <- c(group_id='Mead-2D', water_id='Mead-water-level', border_id='Mead-2D-border')
