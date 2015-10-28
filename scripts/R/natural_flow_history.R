@@ -43,9 +43,10 @@ read_flow_data <- function() {
   flow_df <- flow_df %>%
     mutate(MeanTreeGage = rowMeans(cbind(TreeRings, FlowGage), na.rm=TRUE),
            TreeGage10YrRunMean = running_mean(MeanTreeGage),
-           TreeGageAllYrMean = mean(MeanTreeGage),
-           Min10YrMean = min(TreeGage10YrRunMean, na.rm=TRUE)) %>%
-    select(-MeanTreeGage)
+           TreeGageAllYrMean = mean(MeanTreeGage), 
+           Min10YrMean = min(TreeGage10YrRunMean, na.rm=TRUE)
+           ) %>%
+    select(-MeanTreeGage, -Min10YrMean)
   
   flow_df <- flow_df %>% 
     mutate(Year = as.Date(paste0(Year, "-1-1")))
@@ -84,8 +85,8 @@ plot_flow_data <- function(flow_data) {
     dyRangeSelector(dateWindow = as.Date(c("1812", "2012"), format="%Y")) %>% 
     dySeries(c("TreeRingsLwr", "TreeRings", "TreeRingsUpr"), label = "Tree-Ring Reconstructed Annual Natural Flow", color="#00CCFF") %>%
     dySeries(c("FlowGage"), label = "Historical Annual Natural Flow", color="#3333FF") %>%
-    dySeries(c("TreeGage10YrRunMean"), label = "10-Year Average", color="red") %>%
-    dySeries(c("TreeGageAllYrMean"), label = "Long-Term Average", "forestgreen") %>%
+    dySeries(c("TreeGage10YrRunMean"), label = "10-Year Average", color="#C11B17") %>%
+    dySeries(c("TreeGageAllYrMean"), label = "Long-Term Average", "#FBB917") %>%
     dyAxis("y", label = "Flow Volume (million acre-feet)") %>%
     dyAxis("x", label = "Year") %>%
     dyLegend(labelsSeparateLines=TRUE, labelsDiv="legend_div") %>%
