@@ -68,7 +68,6 @@ $( document ).ready( function () {
     (function () {
         // At this point, the DOM will have been built
 
-        window.console.trace( "Application loaded" );
         window.owdiDrought.SMController.scrollTo( 0 );
         var fadeTimeInMs = 1000;
 		
