@@ -16,11 +16,11 @@ nav h3 {
 .leaving{
 	margin-right:3px;
 	}
-	
+
 .sectionContent .explore-more{
 	text-align:center;
 	}
-	
+
 .exploreMore{
 	border:1px solid #003366;
 	padding:10px 10px 0 10px;
@@ -28,25 +28,25 @@ nav h3 {
 	text-align:center !important;
 	margin:20px auto 20px auto !important;
 	}
-	
+
 .exploreMore img{
 	width:100%;
 	}
-	
+
 #dygraphExtra{
 	margin-top:20px;
 	}
-	
+
 #lakeMeadAnimatedExtra p{
 	font-weight:300;
 	margin-bottom:10px;
 	}
-	
+
 .exploreMore p,
 .downloadThis p{
 	text-align:center !important;
 	}
-	
+
 .extraButton{
 	background:#003366;
 	color:#fff;
@@ -57,30 +57,30 @@ nav h3 {
 	font-size:.8em;
 	margin:-10px 0 10px 0;
 	}
-	
+
 .extraButton:hover{
 	background:#fff;
 	color:#003366;
 	border:1px solid #003366;
 	}
-	
+
 /*Sticky Nav CSS*/
-	
+
 .menu{
 	background:#003366;
 	height:60px;
 	padding:0px !important;
 	margin-bottom:0px !important;
 	}
-	
+
 #stickynav{
 	height:60px;
 	}
-	
+
 .navBox:first-child{
 	border-left:1px solid #fff;
 	}
-	
+
 .navBox{
 	width:9.06%;
 	height:60px;
@@ -88,7 +88,7 @@ nav h3 {
 	border-right:1px solid #fff;
 	position:relative;
 	}
-	
+
 .navLink{
 	display:inline-block;
 	width:100%;
@@ -98,26 +98,26 @@ nav h3 {
 	color:#fff;
 	font-weight:300;
 	}
-	
+
 .toolTip{
 	display:none;
 	}
-	
+
 /*Hidden Content CSS*/
 
 .hiddenContent{
 	display:none;
 	}
-	
+
 .readMore{
 	color:#003366 !important;
 	text-align:center !important;
 	font-weight:400 !important;
 	cursor:pointer;
 	}
-	
+
 /*Social Media CSS*/
-	
+
 .socialMedia{
 	height:40px;
 	position:absolute;
@@ -125,27 +125,27 @@ nav h3 {
 	top:30px;
 	text-align:left;
 	}
-	
+
 .onWhite{
 	top:-80px;
 	right:0;
 	}
-	
+
 #tooHigh{
 	top:-50px;
 	}
-	
+
 .socialMedia img{
 	width:25px;
 	cursor:pointer;
 	margin-left:20px;
 	}
-	
+
 #welcomeSocial{
 	top:20px;
 	right:10px;
 	}
-	
+
 .takeLink,
 .takeLinkBlue{
 	width:200px;
@@ -157,36 +157,36 @@ nav h3 {
 	z-index:10000;
 	display:none;
 	}
-	
+
 .takeLink{
 	background:#fff;
 	}
-	
+
 .takeLinkBlue{
 	background:#003366;
 	}
-	
+
 .takeLink:after,
 .takeLinkBlue:after{
 		content:"";
-		width: 0; 
-		height: 0; 
+		width: 0;
+		height: 0;
 		position:absolute;
 		top:-5px;
 		right:6px;
 		border-left: 5px solid transparent;
 		border-right: 5px solid transparent;
-		
+
 	}
-	
+
 .takeLink:after{
 		border-bottom: 5px solid #fff;
 	}
-	
+
 .takeLinkBlue:after{
 		border-bottom: 5px solid #003366;
 	}
-	
+
 .takeLink input,
 .takeLinkBlue input{
 	width:100%;
@@ -194,7 +194,7 @@ nav h3 {
 	padding:5px;
 	outline:none;
 	}
-	
+
 /*=====Container CSS=====*/
 
 .container {
@@ -203,6 +203,12 @@ nav h3 {
 	text-align: center;
 	clear:both;
 }
+
+#TreeRingDataLegend{
+  height: 50px;
+	margin-top: -15px;
+	margin-bottom: 40px;
+	}
 
 #Introduction,
 #Lifeline,
@@ -322,11 +328,11 @@ nav h3 {
 #keynote1 h2{
 	font-weight:300;
 	}
-	
+
 #keynote1 h2#emphasized{
 	font-weight:400;
 	}
-	
+
 /*=====Container Section CSS=====*/
 
 .section {
@@ -424,7 +430,7 @@ nav h3 {
 #photoPanel img{
 		width:32.5%;
 		}
-	
+
 /*welcome section CSS*/
 
 #scrollDownArrow{
@@ -437,28 +443,28 @@ nav h3 {
 #blueDragon{
 		margin-bottom:20px;
 		}
-		
+
 #dragonText{
 	padding:10px;
 	margin:10px 0 20px 0;
 	background:rgba(0,51,102,.2);
 	border-radius:5px;
 	}
-	
+
 /*=====dygraphsection CSS=====*/
-		
+
 #usDroughtGif{
 	margin-top:20px;
 	}
-	
+
 #droughtMovingAvg-object{
 	margin-top:20px;
 	}
-	
+
 #leesFerry{
 	margin-top:20px;
 	}
-	
+
 /*=====Water-Usage Section CSS=====*/
 
 #JrGraph h2 {
@@ -468,20 +474,22 @@ nav h3 {
 #black-white-images p{
 	margin-bottom:20px;
 	}
-	
+
 #black-white-images{
 	margin-top:20px;
 	}
-	
+
 #black-white-images img{
 	margin-bottom:10px;
 	}
-	
+
 #animated-object{
 	display:none;
 	}
-	
-	
+
+#animated-object-mobile{
+	display:block;
+	}
 
 /*=====Before after CSS=====*/
 
@@ -495,11 +503,11 @@ nav h3 {
 	margin-bottom:10px;
 	text-align:left;
 	}
-	
+
 .extraPics img{
 	width:32.5%;
 	}
-	
+
 .cd-image-container {
 	margin-top: 25px;
 	width:100% !important;
@@ -509,11 +517,11 @@ nav h3 {
 #mead-elev-object{
 	display:none;
 	}
-	
+
 #mead-elev-object-mobile{
 	display:block;
 	}
-	
+
 
 /*Lake Mead Animated Section CSS*/
 #meadSVGContainer h2 {
@@ -537,7 +545,7 @@ nav h3 {
 		text-align: left;
 		line-height: 1.7em;
 	}
-	
+
 #draw-basin,
 #highlight-user-2,
 #mead-info-1,
@@ -548,7 +556,7 @@ nav h3 {
 #mead-info-6{
 	display:none;
 	}
-	
+
 #meadAnimatedContainer {
 	max-width: 950px;
 	margin-left: auto;
@@ -558,67 +566,67 @@ nav h3 {
 .SVGInfo p{
 	margin-bottom:10px;
 	}
-	
+
 /*=====Last Section CSS=====*/
 #openWater{
 	margin-top:50px;
 	}
-	
+
 #collaboratorsCredit{
 	min-height:100px;
 	margin:20px 0 0 0;
 	}
-	
+
 #collaboratorsCredit h2{
 	text-align:left;
 	color:#000;
 	font-weight:300;
 	margin-bottom:10px;
 	}
-	
+
 #first{
 	margin-left:0;
 	}
-	
+
 .collaborator{
 	background:#B2B2B2;
 	height:100px;
 	margin:0 0 10px 0;
 	text-align:center;
 	}
-	
+
 @media screen and (min-width: 520px){
 	/*=====Basin Divided CSS=====*/
 
 	#blueDragonExplore{
 		margin-top:100px !important;
 		}
-		
+
 	#blueDragonExplore,
 	#basinExplore,
 	#dygraphExtra{
 		width:50%;
 		margin:0 auto;
 	}
-	
+
 }
-	
+
 @media screen and (min-width: 687px) {
 	nav {
 		margin-top: 1px;
 		padding: 1px 5px;
 		height: 28px;
 	}
-	
+
 	#scrollDownArrow{
 		bottom:200px;
 	}
-	
+
 	#welcomeSocial{
 		right:30px;
 	}
 	/*======Container CSS======*/
-	
+
 	.container {
 		padding: 50px;
 	}
@@ -669,9 +677,9 @@ nav h3 {
 	#EraOfHope {
 		background-image: url('../img/keynotes/keynote9.jpg');
 	}
-	
+
 	/*======keynote CSS======*/
-	
+
 	.keynote {
 		top: 35%;
 	}
@@ -689,42 +697,42 @@ nav h3 {
 	#keynote2 h2 {
 		margin-top: 100px;
 	}
-	
+
 	/*======supporting info CSS======*/
-	
+
 	.supportinginfo{
 		margin-bottom:100px;
 		}
-		
+
 	/*======Content CSS======*/
-	
+
 	.sectionContent {
 		width: 90%;
 		margin: 0 auto;
 	}
-	
+
 	.sectionContent h2{
 		font-size:1.3em;
 		}
-		
+
 
 	/*======Water Usage Section CSS======*/
-	
+
 	#JrGraph h2 {
 		font-size: 1.5em;
 	}
 	text {
 		font-size: 1em !important;
 	}
-	
+
 	/*======Before After Section CSS======*/
-	
+
 	#before-after-section figure{
 		margin-top:50px;
 		}
-	
+
 	/*======Lake Mead Animated Section CSS======*/
-		
+
 	#natural-flow-graph {
 		width: 80%;
 		height: 600px;
@@ -753,7 +761,7 @@ nav h3 {
 		#WaterSupply{
 			background-attachment: scroll !important;
 		}
-		
+
 		}
 
 @media screen and (min-width: 768px){
@@ -761,43 +769,43 @@ nav h3 {
 		display:block;
 		margin-top:100px;
 	}
-	
+
 	#animated-object-mobile{
 		display:none;
 	}
-	
+
 	#mead-elev-object{
 		display:block;
 		}
-		
+
 	#mead-elev-object-mobile{
 		display:none;
 		}
-	
+
 	#utah{
 		margin-top:100px;
 		}
-		
+
 	#droughtMovingAvg-object{
 		margin-top:100px;
 		}
 }
 
 @media screen and (min-width: 1025px) {
-	
+
 	#stickynav{
 		width:960px;
 		margin:0 auto;
 		height:60px;
 	}
-	
+
 	.navLink:hover{
 		background:#fff;
 		color:#003366;
 		cursor:pointer;
 		text-decoration:none;
 		}
-		
+
 	.navBox:hover .toolTip{
 	display:block !important;
 	}
@@ -810,11 +818,11 @@ nav h3 {
 		bottom:-45px;
 		display:none;
 	}
-	
+
 	.toolTip:after{
 		content:"";
-		width: 0; 
-		height: 0; 
+		width: 0;
+		height: 0;
 		position:absolute;
 		top:-5px;
 		left:10px;
@@ -822,29 +830,29 @@ nav h3 {
 		border-right: 5px solid transparent;
 		border-bottom: 5px solid rgb(220,220,220);
 	}
-	
+
 	/*Social Media CSS*/
-	
+
 	.takeLink,
 	.takeLinkBlue{
 		right:30px;
 		top:70px
 	}
-	
+
 	.takeLink:after,
 	.takeLinkBlue:after{
 		top:50%;
 		right:-7px;
 		transform: rotate(90deg);
 	}
-		
+
 	.socialMedia img{
 		display:block;
 		margin-bottom:20px;
 		}
-	
+
 	/*======keynote CSS======*/
-	
+
 	.keynote {
 		width: 960px;
 	}
@@ -862,86 +870,86 @@ nav h3 {
 	.sectionContent h3 {
 		font-size: 1.6em;
 	}
-	
+
 	.graphCaption{
 		margin:0 auto 10px auto;
 		}
-		
+
 	.supportinginfo:hover{
 	background: #003366;
 	color: #fff;
 	}
-		
+
 	/*======Photo Panel CSS======*/
-	
+
 	#photoPanel img{
 		width:33%;
 		}
-	
+
 	/*======Blue Dragon Section CSS======*/
-	
+
 	#blueDragon{
 		width:800px;
 		margin:20px auto 20px 0;
 		}
-		
+
 	#blueDragonSection{
 		position:relative;
 		}
-		
+
 	#dragonText{
 		position:absolute;
 		top:800px;
 		right:0;
 		width:200px;
 		}
-		
+
 	#blueDragonExplore{
 		width:50%;
 		margin:20px auto;
 		}
-		
-	/*======dygraph Section CSS======*/	
-	
+
+	/*======dygraph Section CSS======*/
+
 	#natural-flow-graph{
 		width:100% !important;
 		margin:0 auto 20px 0;
 		margin-left:-10px;
 		}
-		
+
 	#dygraphExtra{
 		width:50%;
 		margin:100px auto !important;
 		}
-	
-	/*======app-explanation CSS======*/	
-		
-	
-	
-	
-	/*======Water Usage Section CSS======*/	
-	
+
+	/*======app-explanation CSS======*/
+
+
+
+
+	/*======Water Usage Section CSS======*/
+
 	#basinReservoirContainer{
 		margin-bottom: 100px;
 	}
-	
+
 	#black-white-images{
 		margin-top:100px;
 		}
-	
+
 	#JrGraph {
 		width: 900px;
 		margin: 0 auto;
 	}
-	
-	/*======before after Section CSS======*/	
-	
+
+	/*======before after Section CSS======*/
+
 	.extraPics img{
 		width:33%;
 	}
-	
+
 	/*=====lake mead animated===*/
-	
+
 	#lakeMeadAnimatedExtra{
 		width:60%;
 		margin:100px auto !important;
