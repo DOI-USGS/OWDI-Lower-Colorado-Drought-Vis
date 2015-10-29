@@ -98,6 +98,15 @@ nav h3 {
 	color:#fff;
 	font-weight:300;
 	}
+	
+@media only screen 
+	and (min-device-width: 320px)
+	and (max-device-width: 480px)
+	and (-webkit-min-device-pixel-ratio: 2){
+		.navBox{
+			width:9.08%;
+			}
+		}
 
 .toolTip{
 	display:none;
