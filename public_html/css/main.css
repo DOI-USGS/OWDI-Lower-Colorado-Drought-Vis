@@ -98,15 +98,6 @@ nav h3 {
 	color:#fff;
 	font-weight:300;
 	}
-	
-@media only screen 
-	and (min-device-width: 320px)
-	and (max-device-width: 480px)
-	and (-webkit-min-device-pixel-ratio: 2){
-		.navBox{
-			width:9.08%;
-			}
-		}
 
 .toolTip{
 	display:none;
@@ -603,6 +594,19 @@ nav h3 {
 	margin:0 0 10px 0;
 	text-align:center;
 	}
+	
+@media only screen 
+	and (min-device-width: 320px)
+	and (max-device-width: 480px)
+	and (-webkit-min-device-pixel-ratio: 2){
+		.navBox{
+			width:9.08%;
+			}
+			
+		.keynote{
+			top:35% !important;
+			}
+		}
 
 @media screen and (min-width: 520px){
 	/*=====Basin Divided CSS=====*/
