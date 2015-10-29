@@ -415,7 +415,7 @@ nav h3 {
 	display: none;
 	padding: 15px;
 	color: #000;
-	margin: -50px 0 100px 0;
+	margin: 0px 0 100px 0;
 	border-radius: 5px;
 }
 
@@ -639,6 +639,7 @@ nav h3 {
 	.container {
 		padding: 50px;
 	}
+	
 	#Introduction,
 	#Lifeline,
 	#ControlStructures,
@@ -711,6 +712,10 @@ nav h3 {
 
 	.supportinginfo{
 		margin-bottom:100px;
+		}
+		
+	.supportingInfoContent{
+		margin-top:-50px;
 		}
 
 	/*======Content CSS======*/
