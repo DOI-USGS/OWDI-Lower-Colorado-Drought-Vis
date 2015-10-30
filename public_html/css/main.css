@@ -436,6 +436,8 @@ nav h3 {
 #scrollDownArrow{
 	position:absolute;
 	bottom:100px;
+	border:none;
+	left:50%;
 	}
 
 /*=====Blue Dragon CSS=====*/
