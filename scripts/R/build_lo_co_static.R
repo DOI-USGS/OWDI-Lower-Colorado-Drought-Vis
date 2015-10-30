@@ -7,7 +7,7 @@ declaration <- '<?xml-stylesheet type="text/css" href="../../../css/svg.css" ?>'
 
 for (lang in c("en", "es")) {
   
-  plot_dir = paste0('public_html/', lang, '/img')
+  plot_dir = sprintf('public_html/%s/img', lang)
   read_dir = 'src_data/lower-co-map'
   svg_file = file.path(read_dir,paste0('lo_CO_borders','.svg'))
   out_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
