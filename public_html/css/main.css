@@ -566,7 +566,7 @@ nav h3 {
 .SVGInfo p{
 	margin-bottom:10px;
 	}
-	
+/*IE SVG width fix*/	
 #mead-object,
 #mead-elev-object,
 #utah,
