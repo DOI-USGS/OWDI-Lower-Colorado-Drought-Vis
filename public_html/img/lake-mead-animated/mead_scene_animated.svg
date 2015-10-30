@@ -90,15 +90,15 @@ document.getElementById("allocation-value").firstChild.data = " ";
 document.getElementById("allocation-context").firstChild.data = " ";
 }
 function incrementScene(){
-if (this.sceneNum < scenes.length-1){
-this.sceneNum++;
-scenes[this.sceneNum]();
+if (svgDocument.sceneNum < scenes.length-1){
+svgDocument.sceneNum++;
+scenes[svgDocument.sceneNum]();
 }
 }
 function decrementScene(){
-if (this.sceneNum > 0){
-this.sceneNum--;
-scenes[this.sceneNum]();
+if (svgDocument.sceneNum > 0){
+svgDocument.sceneNum--;
+scenes[svgDocument.sceneNum]();
 }
 }
 function scene1(){
@@ -392,8 +392,8 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
   <g id="decrement-scene">
     <rect x="-50" width="35" height="547" fill="white" opacity="0.3" onclick="decrementScene()"/>
     <path d="M-25 293.5 L-40 273.5 L-25 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round" onclick="decrementScene()"/>
-    <rect x="555" width="35" height="547" fill="white" opacity="0.3" onclick="incrementScene()"/>
-    <path d="M565 293.5 L580 273.5 L565 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round" onclick="incrementScene()"/>
+    <rect x="555" width="35" height="547" fill="white" opacity="0.3" onclick="incrementScene(svgDocument)"/>
+    <path d="M565 293.5 L580 273.5 L565 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round" onclick="incrementScene(svgDocument)"/>
   </g>
   <g id="increment-scene"/>
   <g id="mead-pictogram-legend" transform="translate(200,135)" opacity="0" class="legend-hidden">
