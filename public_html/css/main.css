@@ -566,6 +566,15 @@ nav h3 {
 .SVGInfo p{
 	margin-bottom:10px;
 	}
+/*IE SVG width fix*/	
+#mead-object,
+#mead-elev-object,
+#utah,
+#droughtMovingAvg-object,
+#bluedragon-object,
+#co-basin-object{
+	width:100%;
+	}
 
 /*=====Last Section CSS=====*/
 #openWater{
