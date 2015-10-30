@@ -23,6 +23,7 @@ $( document ).ready( function () {
     window.owdiDrought.SMController = new ScrollMagic.Controller( scrollMagicOptions );
     window.owdiDrought.formFactor = "";
     window.owdiDrought.slider.sliderInit();
+	window.isIE = navigator.userAgent.indexOf("MSIE ") > -1;
 
     window.owdiDrought.addScene = function ( sceneItem ) {
         var scene = new ScrollMagic.Scene( {
