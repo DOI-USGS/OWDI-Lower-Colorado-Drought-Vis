@@ -11,7 +11,7 @@ source('scripts/R/read_translation.R')
 
 declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
 
-lang = 'es'
+lang = 'en'
 
 plot_dir = sprintf('public_html/%s/img',lang)
 read_dir = 'src_data/lower-co-map'

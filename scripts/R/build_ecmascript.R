@@ -94,16 +94,16 @@ ecmascript_mead_map <- function(){
 '}',
                
                'function incrementScene(){',
-               'if (this.sceneNum < scenes.length-1){',
-                'this.sceneNum++;',
-               'scenes[this.sceneNum]();',
+               'if (svgDocument.sceneNum < scenes.length-1){',
+                'svgDocument.sceneNum++;',
+               'scenes[svgDocument.sceneNum]();',
                '}',
                '}',
                
                'function decrementScene(){',
-               'if (this.sceneNum > 0){',
-                'this.sceneNum--;',
-               'scenes[this.sceneNum]();',
+               'if (svgDocument.sceneNum > 0){',
+                'svgDocument.sceneNum--;',
+               'scenes[svgDocument.sceneNum]();',
                '}',
                '}',
                
