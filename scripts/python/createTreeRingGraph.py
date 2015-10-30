@@ -107,7 +107,7 @@ def renderGraph(ele, floc):
         botstep = 500 / ((maxbot - minbot)/10)
         sidestep = 250 / ((maxside - minside)/5)
         drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75', getValue('natFlowPreCompactText').split(' ')[0], getValue('natFlowPreCompactText').split(' ')[1])
-        drawHighlightBox(ele, 2000, 2016, minbot, maxbot - minbot, '#CCCCB2', getValue('natFlowCurrentDroughtText').split(' ')[0] + getValue('natFlowCurrentDroughtText').split(' ')[1], getValue('natFlowCurrentDroughtText').split(' ')[2])
+        drawHighlightBox(ele, 2000, 2016, minbot, maxbot - minbot, '#CCCCB2', getValue('natFlowCurrentDroughtText').split(' ')[0] + " " + getValue('natFlowCurrentDroughtText').split(' ')[1], getValue('natFlowCurrentDroughtText').split(' ')[2])
         linecontainer2 = SubElement(ele, 'g')
         linecontainer2.set('stroke', '#9999FF')
         linecontainer2.set('stroke-width', '2')
