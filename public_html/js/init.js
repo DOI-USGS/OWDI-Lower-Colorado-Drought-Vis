@@ -230,9 +230,9 @@ $( document ).ready( function () {
 					if (svgElement && svgElement.visibleAxes && !triggered[i]) {
 						svgElement.visibleAxes();
 						triggered[i] = true;
-					};
+					}
 				}
-			}
+			};
 
 		$('#section10Button').click(function() {
 		  $('#section10Info').toggle();
