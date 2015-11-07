@@ -373,7 +373,13 @@ ecmascript_supply_usage <- function(){
   }
   function timeAdvance(){
     var ele = document.getElementById("timeAdvance");
+  if ("beginElement" in ele) {
     ele.beginElement();
+  } else {
+    document.getElementById("usage-liner").setAttribute("style","stroke:#B22C2C;stroke-width:3");
+		document.getElementById("supply-liner").setAttribute("style","stroke:#0066CC;stroke-width:3");
+  }
+    
   }
   function visibleAxes(){
   document.getElementById("plot-contents").setAttribute("class","shown");

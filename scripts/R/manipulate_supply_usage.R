@@ -130,7 +130,7 @@ add_lines <- function(g_id, data, form.factor, language){
   
   # calc_lengths 
   values <- paste(tot_len- cumsum(line_len),collapse=';')
-  line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none', 
+  line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none', id='supply-liner',
                                 style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0f;stroke-linejoin:round;stroke-dashoffset:%0.0f",
                                                supply_col,line_width,tot_len+1,tot_len+1))
   dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
@@ -173,7 +173,7 @@ add_lines <- function(g_id, data, form.factor, language){
   # -----usage line
   values <- paste(tot_len- cumsum(line_len),collapse=';')
   
-  line_nd <- dinosvg:::linepath(g_id, x[!is.na(y)],y[!is.na(y)], fill = 'none',
+  line_nd <- dinosvg:::linepath(g_id, x[!is.na(y)],y[!is.na(y)], fill = 'none', id='usage-liner',
                                 style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0fpx;stroke-linejoin:round;stroke-dashoffset:%0.0f",
                                                usage_col, line_width, tot_len+1,tot_len+1))
   dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
