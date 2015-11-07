@@ -44,12 +44,12 @@
     ele.beginElement();
   }
   function visibleAxes(){
-    var ele = document.getElementById("visibleAxes");
-    ele.beginElement();
+  document.getElementById("plot-contents").setAttribute("class","shown");
+  setTimeout(function(){
+  {timeAdvance();}},1000)
   }]]></script>
-  <g id="surface0">
-    <g id="axes" opacity="0" class="label">
-      <animate attributeName="opacity" begin="indefinite" id="visibleAxes" fill="freeze" dur="1s" from="0" to="1"/>
+  <g id="plot-contents" class="hidden">
+    <g id="axes" class="label">
       <rect id="axis.box" x="60.0" y="10.0" width="430.0" height="340.0" style="fill:#FFFFFF;stroke:black"/>
       <text transform="translate(30.0,180.0)rotate(270)" text-anchor="middle" id="y-label" dy="-0.4em">***usageFigYlabMobile*** (***usageFigMetricUnits***)</text>
       <text transform="translate(245.0,410.0)rotate(0)" text-anchor="middle" id="x-label" dy="-0.8em">***usageFigXlab***</text>

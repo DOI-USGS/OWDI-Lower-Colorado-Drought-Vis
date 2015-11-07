@@ -376,8 +376,9 @@ ecmascript_supply_usage <- function(){
     ele.beginElement();
   }
   function visibleAxes(){
-    var ele = document.getElementById("visibleAxes");
-    ele.beginElement();
+  document.getElementById("plot-contents").setAttribute("class","shown");
+  setTimeout(function(){
+  {timeAdvance();}},1000)
   }'
 }
 
