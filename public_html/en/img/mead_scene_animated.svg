@@ -109,13 +109,13 @@ hide("top-users");
 hide("pictogram-topfive");
 hide("mead-pictogram-legend");
 setTimeout(function(){
-        {show("mouser-helper");}},5000)
+{show("mouser-helper");}},5000)
 setTimeout(function(){
-		{hide("mouser-helper");}},6000)
+  {hide("mouser-helper");}},6000)
 setTimeout(function(){
-		{show("mouser-helper");}},6800)
+{show("mouser-helper");}},6800)
 setTimeout(function(){
-		{hide("mouser-helper");}},8000)
+{hide("mouser-helper");}},8000)
 }
 function scene2(){
 hide("mouser-helper");
@@ -401,13 +401,13 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
   <g id="decrement-scene">
     <rect x="-50" width="35" height="547" fill="white" opacity="0.3"/>
     <path d="M-25 293.5 L-40 273.5 L-25 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round"/>
-	<rect x="-50" width="35" height="547" fill="white" opacity="0.0" onclick="decrementScene()"/>
+    <rect x="-50" width="35" height="547" fill="white" opacity="0.0" onclick="decrementScene()"/>
   </g>
   <g id="increment-scene">
     <rect x="555" width="35" height="547" fill="white" opacity="0.3"/>
-    <path d="M565 293.5 L580 273.5 L565 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round"/>
+    <path d="M565 293.5 L580 273.5 L565 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round" onclick="incrementScene()"/>
     <path id="mouser-helper" d="m201.453995,112.872002l-183.068584,-100.156902l78.608601,195.193897l31.298012,-50.675995l61.883972,67.641998l23.437012,-22.837006l-63.26799,-66.993988l51.108978,-22.172005z" fill="#ffffff" stroke="#000000" stroke-width="8" stroke-linejoin="round" opacity="0.6" transform="translate(555,280),scale(0.15,0.15)" class="hidden"/>
-	<rect x="555" width="35" height="547" fill="white" opacity="0.0" onclick="incrementScene()"/>
+    <rect x="555" width="35" height="547" fill="white" opacity="0.0" onclick="incrementScene()"/>
   </g>
   <g id="mead-pictogram-legend" transform="translate(200,135)" opacity="0" class="legend-hidden">
     <rect x="150" y="270" width="130" height="45" stroke="#FFFFFF" fill="none"/>
