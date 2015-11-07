@@ -14,7 +14,7 @@ source('scripts/R/manipulate_lowCO_borders_svg.R')
 source('scripts/R/read_translation.R')
 
 
-svg_dir <- 'public_html/img/water-usage/'
+
 declaration <- '<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>'
 form.factors = c('desktop','mobile')
 languages=c('en', 'es') 
@@ -24,10 +24,11 @@ data = read_supply_use()
 
 for (form.factor in form.factors){
   for (language in languages){
+    svg_dir <- sprintf('public_html/%s/img/',language)
     svg_nd <- supply_usage_svg(data, form.factor=form.factor, language=language)
     
     
-    svg_file = file.path(svg_dir, paste0('flow_animation-',form.factor,'-',language,'.svg'))
+    svg_file = file.path(svg_dir, paste0('flow_animation-',form.factor,'.svg'))
     saveXML(svg_nd, file = svg_file)
     svg <- xmlParse(svg_file, useInternalNode=TRUE) %>%
       toString.XMLNode()

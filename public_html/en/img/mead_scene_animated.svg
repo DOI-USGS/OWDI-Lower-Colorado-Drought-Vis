@@ -18,7 +18,7 @@ var elevations = {"flood":"> 1,200",
 var storages = {"flood":"> 23.1",
 "surplus":"16.2 to 23.1",
 "normal":"9.6 to 16.2",
-"shortage-1":"7.7 tp 9.6",
+"shortage-1":"7.7 to 9.6",
 "shortage-2":"6.0 to 7.7",
 "shortage-3":"< 6.0"}
 var conditions = 
@@ -294,7 +294,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
   <rect x="-50" width="100%" height="100%" style="max-width=950px" fill="url(#background-image)" rx="6" ry="6" id="background-panel"/>
   <defs>
     <pattern id="mexico-flag" patternUnits="userSpaceOnUse" x="120" y="150" width="650" height="547">
-      <image xlink:href="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" width="650" height="547" opacity="1"/>
+      <image xlink:href="Mexico_flag.svg" width="650" height="547" opacity="1"/>
     </pattern>
     <clipPath id="Mead-clip">
       <path d="M 545 20 L 545 450 L 410 450 L 290 20" stroke="none"/>
@@ -308,7 +308,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
   </g>
   <defs>
     <pattern id="usa-flag" patternUnits="userSpaceOnUse" x="0" y="-100" width="500" height="500">
-      <image xlink:href="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" width="500" height="500" opacity="1"/>
+      <image xlink:href="US_flag.svg" width="500" height="500" opacity="1"/>
     </pattern>
   </defs>
   <defs>
@@ -392,8 +392,8 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
   <g id="decrement-scene">
     <rect x="-50" width="35" height="547" fill="white" opacity="0.3" onclick="decrementScene()"/>
     <path d="M-25 293.5 L-40 273.5 L-25 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round" onclick="decrementScene()"/>
-    <rect x="555" width="35" height="547" fill="white" opacity="0.3" onclick="incrementScene(svgDocument)"/>
-    <path d="M565 293.5 L580 273.5 L565 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round" onclick="incrementScene(svgDocument)"/>
+    <rect x="555" width="35" height="547" fill="white" opacity="0.3" onclick="incrementScene()"/>
+    <path d="M565 293.5 L580 273.5 L565 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round" onclick="incrementScene()"/>
   </g>
   <g id="increment-scene"/>
   <g id="mead-pictogram-legend" transform="translate(200,135)" opacity="0" class="legend-hidden">
