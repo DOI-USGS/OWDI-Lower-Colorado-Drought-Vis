@@ -600,7 +600,7 @@
       <line stroke="black" stroke-width="2" x1="0" x2="500" y1="0" y2="0"/>
       <line stroke="black" stroke-width="2" x1="500" x2="500" y1="0" y2="250"/>
     </g>
-    <text fill="black" transform="rotate(-90 25,259)" x="25" y="259">Flow Volume (million acre-feet)</text>
+    <text fill="black" transform="rotate(-90 25,255)" x="25" y="255">Flow Volume(million acre-feet)</text>
     <text fill="black" x="295" y="300">Year</text>
   </g>
 </svg>
