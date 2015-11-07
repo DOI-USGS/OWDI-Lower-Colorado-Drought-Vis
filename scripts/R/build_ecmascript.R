@@ -391,7 +391,7 @@ ecmascript_mead_proj <- function(){
                }',
 
                "function moveInToMomsHouse(){
-                 document.getElementById('peak').setAttribute('class','level-move');
+                 
                  document.getElementById('flood').setAttribute('class','level-move');
                  document.getElementById('surplus').setAttribute('class','level-move');
                  document.getElementById('normal').setAttribute('class','level-move');

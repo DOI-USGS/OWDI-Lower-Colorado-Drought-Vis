@@ -155,11 +155,8 @@ add_blocks <- function(svg_nd, form.factor, language, fig, axes){
   
 
   x = get_heights(axes, fig, language)
-  newXMLNode('rect',parent = svg_nd, attrs = c(id='peak',x = fig$px_lim$x[1], y = x$peak,
-                                               width=fig$px_lim$x[2]-fig$px_lim$x[1], height=x$flood-x$peak+0.2,
-                                               fill='#0066CC',opacity=0.9, class='level-fill'))
-  newXMLNode('rect',parent = svg_nd, attrs = c(id='flood',x = fig$px_lim$x[1], y = x$flood,
-                                               width=fig$px_lim$x[2]-fig$px_lim$x[1], height=x$surplus-x$flood+0.2,
+  newXMLNode('rect',parent = svg_nd, attrs = c(id='flood',x = fig$px_lim$x[1], y = x$peak,
+                                               width=fig$px_lim$x[2]-fig$px_lim$x[1], height=x$surplus-x$peak+0.2,
                                                fill='#0066CC', opacity=0.8, class='level-fill'))
   newXMLNode('rect',parent = svg_nd, attrs = c(id='surplus',x = fig$px_lim$x[1], y = x$surplus,
                                                width=fig$px_lim$x[2]-fig$px_lim$x[1], height=x$normal-x$surplus+0.2,

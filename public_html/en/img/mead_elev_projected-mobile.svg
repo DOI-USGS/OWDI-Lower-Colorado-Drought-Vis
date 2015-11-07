@@ -16,7 +16,7 @@ function highlightEle(evt,opacity)
                  evt.target.setAttribute("fill-opacity", opacity);
                }
 function moveInToMomsHouse(){
-                 document.getElementById('peak').setAttribute('class','level-move');
+                 
                  document.getElementById('flood').setAttribute('class','level-move');
                  document.getElementById('surplus').setAttribute('class','level-move');
                  document.getElementById('normal').setAttribute('class','level-move');
@@ -29,8 +29,7 @@ function moveInToMomsHouse(){
 document.getElementById('condition-markers').setAttribute('class','shown');}
 				     }, 1500);
                  }]]></script>
-  <rect id="peak" x="80" y="10" width="410" height="12.2" fill="#0066CC" opacity="0.9" class="level-fill"/>
-  <rect id="flood" x="80" y="22" width="410" height="26.2" fill="#0066CC" opacity="0.8" class="level-fill"/>
+  <rect id="flood" x="80" y="10" width="410" height="38.2" fill="#0066CC" opacity="0.8" class="level-fill"/>
   <rect id="surplus" x="80" y="48" width="410" height="74.2" fill="#0066CC" opacity="0.7" class="level-fill"/>
   <rect id="normal" x="80" y="122" width="410" height="94.2" fill="#0066CC" opacity="0.6" class="level-fill"/>
   <rect id="shortage" x="80" y="216" width="410" height="114.2" fill="#0066CC" opacity="0.4" class="level-fill"/>
