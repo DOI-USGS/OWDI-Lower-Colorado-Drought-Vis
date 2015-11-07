@@ -114,9 +114,18 @@ ecmascript_mead_map <- function(){
               'hide("top-users");',
               'hide("pictogram-topfive");',
               'hide("mead-pictogram-legend");',
+'setTimeout(function(){',
+  '{show("mouser-helper");}},5000)',
+'setTimeout(function(){',
+'  {hide("mouser-helper");}},6000)',
+'setTimeout(function(){',
+  '{show("mouser-helper");}},6800)',
+'setTimeout(function(){',
+  '{hide("mouser-helper");}},8000)',
                '}',
                
                'function scene2(){',
+'hide("mouser-helper");',
 'show("pictogram-topfive");',
 'show("top-users");',
 'show("non-lo-co-states");',
@@ -364,11 +373,18 @@ ecmascript_supply_usage <- function(){
   }
   function timeAdvance(){
     var ele = document.getElementById("timeAdvance");
+  if ("beginElement" in ele) {
     ele.beginElement();
+  } else {
+    document.getElementById("usage-liner").setAttribute("style","stroke:#B22C2C;stroke-width:3");
+		document.getElementById("supply-liner").setAttribute("style","stroke:#0066CC;stroke-width:3");
+  }
+    
   }
   function visibleAxes(){
-    var ele = document.getElementById("visibleAxes");
-    ele.beginElement();
+  document.getElementById("plot-contents").setAttribute("class","shown");
+  setTimeout(function(){
+  {timeAdvance();}},1000)
   }'
 }
 
@@ -391,7 +407,7 @@ ecmascript_mead_proj <- function(){
                }',
 
                "function moveInToMomsHouse(){
-                 document.getElementById('peak').setAttribute('class','level-move');
+                 
                  document.getElementById('flood').setAttribute('class','level-move');
                  document.getElementById('surplus').setAttribute('class','level-move');
                  document.getElementById('normal').setAttribute('class','level-move');

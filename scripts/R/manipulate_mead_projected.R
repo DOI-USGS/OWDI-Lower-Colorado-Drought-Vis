@@ -155,11 +155,8 @@ add_blocks <- function(svg_nd, form.factor, language, fig, axes){
   
 
   x = get_heights(axes, fig, language)
-  newXMLNode('rect',parent = svg_nd, attrs = c(id='peak',x = fig$px_lim$x[1], y = x$peak,
-                                               width=fig$px_lim$x[2]-fig$px_lim$x[1], height=x$flood-x$peak+0.2,
-                                               fill='#0066CC',opacity=0.9, class='level-fill'))
-  newXMLNode('rect',parent = svg_nd, attrs = c(id='flood',x = fig$px_lim$x[1], y = x$flood,
-                                               width=fig$px_lim$x[2]-fig$px_lim$x[1], height=x$surplus-x$flood+0.2,
+  newXMLNode('rect',parent = svg_nd, attrs = c(id='flood',x = fig$px_lim$x[1], y = x$peak,
+                                               width=fig$px_lim$x[2]-fig$px_lim$x[1], height=x$surplus-x$peak+0.2,
                                                fill='#0066CC', opacity=0.8, class='level-fill'))
   newXMLNode('rect',parent = svg_nd, attrs = c(id='surplus',x = fig$px_lim$x[1], y = x$surplus,
                                                width=fig$px_lim$x[2]-fig$px_lim$x[1], height=x$normal-x$surplus+0.2,
@@ -245,7 +242,7 @@ add_lines <- function(g_id, data, form.factor, language){
     newXMLNode('rect','parent' = g_id, 
                attrs = c(id = time_ids[i], x = sprintf('%1.2f',x[i]-width/2), y = fig$px_lim$y[2], width = sprintf('%1.2f',width), height = fig$px_lim$y[1]-fig$px_lim$y[2],
                          'fill-opacity'="0.0", 
-                         onmousemove=paste0(sprintf("document.getElementById('legend-line').setAttribute('visibility','visbile');ChangeText(evt, 'date_text','%s');",time_ids[i]),
+                         onmousemove=paste0(sprintf("document.getElementById('legend-line').setAttribute('visibility','visbile');ChangeText(evt, 'date_text','%s: %s');",lt('projFigDateLegend',language),time_ids[i]),
                                             elev_text),
                          onmouseover="highlightEle(evt,'0.1')",
                          onmouseout="highlightEle(evt,'0.0')"))

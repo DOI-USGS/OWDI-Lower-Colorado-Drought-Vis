@@ -12,14 +12,11 @@ supply_usage_svg <- function(data, unit = 'Imperial', form.factor='desktop', lan
                        attrs = c(version = '1.1', onload="init(evt)", preserveAspectRatio="xMinYMin meet", viewBox=sprintf("0 0 %1.0f %1.0f",fig$w, fig$h)))
   
   add_ecmascript(svg_nd, text = ecmascript_supply_usage())
-  g_id <- newXMLNode('g', parent = svg_nd, attrs = c(id="surface0"))
+  g_id <- newXMLNode('g', parent = svg_nd, attrs = c(id="plot-contents", class="hidden"))
 
   
   
-  a_id <- newXMLNode('g', parent = g_id, attrs = c('id' = "axes", opacity = '0', class='label'))
-  dinosvg:::animate_attribute(a_id, attr_name = "opacity", 
-                              begin = "indefinite", id = "visibleAxes", 
-                              fill = 'freeze', dur = '1s', from = "0", to = "1")
+  a_id <- newXMLNode('g', parent = g_id, attrs = c('id' = "axes", class='label'))
   dinosvg::add_axes(a_id, get_axes(data, form.factor, language), fig, x_tick_rotate = 0)
   label.shifts <- list('mobile'=list('y-label'=c(dy='-0.4em'), 'x-label'=c(dy='-0.8em')),
                        'desktop'=list('y-label'=c(dy='-1em'), 'x-label'=c(dy='-0.5em')))
@@ -133,7 +130,7 @@ add_lines <- function(g_id, data, form.factor, language){
   
   # calc_lengths 
   values <- paste(tot_len- cumsum(line_len),collapse=';')
-  line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none', 
+  line_nd <- dinosvg:::linepath(g_id, x,y,fill = 'none', id='supply-liner',
                                 style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0f;stroke-linejoin:round;stroke-dashoffset:%0.0f",
                                                supply_col,line_width,tot_len+1,tot_len+1))
   dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
@@ -176,7 +173,7 @@ add_lines <- function(g_id, data, form.factor, language){
   # -----usage line
   values <- paste(tot_len- cumsum(line_len),collapse=';')
   
-  line_nd <- dinosvg:::linepath(g_id, x[!is.na(y)],y[!is.na(y)], fill = 'none',
+  line_nd <- dinosvg:::linepath(g_id, x[!is.na(y)],y[!is.na(y)], fill = 'none', id='usage-liner',
                                 style =sprintf("stroke:%s;stroke-width:%s;stroke-dasharray:%0.0fpx;stroke-linejoin:round;stroke-dashoffset:%0.0f",
                                                usage_col, line_width, tot_len+1,tot_len+1))
   dinosvg:::animate_attribute(line_nd, attr_name = "stroke-dashoffset", 
