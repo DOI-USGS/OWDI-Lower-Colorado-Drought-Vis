@@ -13,21 +13,16 @@
   }
   function legendViz(evt,elementname)
   {
-  var r = document.getElementById(elementname).r
-  if ("beginElement" in document.getElementById("timeAdvance")) {
-  	if (r.animVal.value === 0){
-    	legend.setAttributeNS(null,"visibility","hidden");
-  	  } else {
-    	legend.setAttributeNS(null,"visibility","visible");
-  	  }
+  var r = document.getElementById(elementname).r.animVal.value
+  
+  if (r === 0){
+    legend.setAttributeNS(null,"visibility","hidden");
   } else {
-  	legend.setAttributeNS(null,"visibility","visible");
+    legend.setAttributeNS(null,"visibility","visible");
   }
   
-  
-  
   }
-  function highlightViz(evt,elementname,opacity)
+function highlightViz(evt,elementname,opacity)
   {
   var r = document.getElementById(elementname).r
   if ("beginElement" in document.getElementById("timeAdvance")) {

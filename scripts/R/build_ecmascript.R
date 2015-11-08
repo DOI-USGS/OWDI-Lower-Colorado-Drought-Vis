@@ -354,17 +354,19 @@ ecmascript_supply_usage <- function(){
   }
   
   }
-  function highlightViz(evt,elementname,opacity)
+function highlightViz(evt,elementname,opacity)
   {
-  var r = document.getElementById(elementname).r.animVal.value
-  
-  if (r === 0){
-    evt.target.setAttribute("fill-opacity", "0.0");
-  } else {
-    evt.target.setAttribute("fill-opacity", opacity);
-  }
-  
-  }
+  var r = document.getElementById(elementname).r
+  if ("beginElement" in document.getElementById("timeAdvance")) {
+	if (r.animVal.value === 0){
+  	evt.target.setAttribute("fill-opacity", "0.0");
+	  } else {
+  	evt.target.setAttribute("fill-opacity", opacity);
+	  }
+} else {
+	evt.target.setAttribute("fill-opacity", opacity);
+}
+}
   
   function ChangeText(evt, elementname, legendtext)
   {
