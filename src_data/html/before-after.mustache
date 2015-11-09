@@ -87,17 +87,22 @@
   	<p>{{{ tr.beforeAfter7 }}}</p>
   </div>
   
-  <p>{{{ tr.beforeAfter8 }}}</p>
+  	<div id="beforeAfter02HiddenContent" class="hiddenContent">
+  
+  		<p>{{{ tr.beforeAfter8 }}}</p>
+		
+	</div>
+	
+	<p id="beforeAfter02ReadMore" class="readMore">{{{ tr.readMore }}}</p>
   
   <button class="supportinginfo" id="sectionBAButton">{{{ tr.suppInfo }}}</button>
   
   <div class="supportingInfoContent" id="sectionBAInfo">
   	
       <p>{{{ tr.beforeAfter9 }}}</p>
-      
+	
       <p>{{{ tr.beforeAfter10 }}}</p>
-      
-
+	
   </div>
   
   
@@ -129,6 +134,17 @@
 		
 		beforeAfter01HiddenContent.toggle();
 		$('#hideMe').toggle();
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+		});	
+		
+		$('#beforeAfter02ReadMore').on('click', function(){
+		
+		$('#beforeAfter02HiddenContent').toggle();
 		
 		if($(this).text() == 'Read More >>'){
 			$(this).text('Hide Text');
