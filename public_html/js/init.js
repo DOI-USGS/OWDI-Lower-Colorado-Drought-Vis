@@ -122,7 +122,7 @@ $( document ).ready( function () {
 			parentContainer = "#meadSVGContainer",
 			animation = function() {
 				var animationSVG = document.getElementById("mead-object").getSVGDocument();
-				$(animationSVG).find("#decrement-scene").on("click", function() {
+				$(animationSVG).find("#decrement-scene, #increment-scene").on("click", function() {
 						var stepNumber = animationSVG.sceneNum;
 						$(".SVGInfo:visible").fadeOut({
 							complete: function() {

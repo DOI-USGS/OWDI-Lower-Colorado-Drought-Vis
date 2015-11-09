@@ -16,8 +16,9 @@
     <!-- slider handle -->
   </figure>
   <!-- cd-image-container -->
-  
-  <p>{{{ tr.beforeAfter2 }}} </p>
+  <div class="graphCaption">
+  	<p>{{{ tr.beforeAfter2 }}} </p>
+  </div>
   
   <!--landsat-->
   <figure class="cd-image-container">
@@ -53,11 +54,13 @@
 	<img src="../img/before-after/extrapic03.jpg"/>
   </div>
   
-  <p>{{{ tr.beforeAfter3 }}}</p>
+  <div class="graphCaption">
+  	<p>{{{ tr.beforeAfter3 }}}</p>
+	<p id="hideMe" class="hiddenContent">{{{ tr.beforeAfter4 }}}</p>
+  </div>
   <div id="beforeAfter01HiddenContent" class="hiddenContent">
-  <p>{{{ tr.beforeAfter4 }}}</p>
-  <p>{{{ tr.beforeAfter5 }}}</p>
-  <p>{{{ tr.beforeAfter6 }}}</p>
+  	<p>{{{ tr.beforeAfter5 }}}</p>
+  	<p>{{{ tr.beforeAfter6 }}}</p>
   </div>
   
   <p id="beforeAfter01ReadMore" class="readMore">{{{ tr.readMore }}}</p>
@@ -77,12 +80,16 @@
   </figure>
   <!-- cd-image-container -->
   
-  <p>{{{ tr.beforeAfter7 }}}</p>
+  <div class="graphCaption">
+  	<p>{{{ tr.beforeAfter7 }}}</p>
+  </div>
+  
   <p>{{{ tr.beforeAfter8 }}}</p>
   
   <button class="supportinginfo" id="sectionBAButton">{{{ tr.suppInfo }}}</button>
   
   <div class="supportingInfoContent" id="sectionBAInfo">
+  	
       <p>{{{ tr.beforeAfter9 }}}</p>
       
       <p>{{{ tr.beforeAfter10 }}}</p>
@@ -118,6 +125,7 @@
 	beforeAfter01ReadMore.on('click', function(){
 		
 		beforeAfter01HiddenContent.toggle();
+		$('#hideMe').toggle();
 		
 		if($(this).text() == 'Read More >>'){
 			$(this).text('Hide Text');
