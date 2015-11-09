@@ -122,16 +122,17 @@ $(document).ready(function() {
 	});
 	owdiDrought.waterAccounting.legend.onAdd = function(map) {
 		var div = L.DomUtil.create('div', 'info legend'),
-			grades = ["0", "120", "600", "400,000", "2,500,000"],
+			gradeLabels = ["0", "120", "600", "400,000", "2,500,000"],
+			grades = [0, 120, 600, 400000, 2500000],
 			labels = ["<h4>Five Year Average (2010-2014)</h4><br/><b>Acre Feet</b><br /><em>Shaded areas on map represent District boundaries,<br/> not water use locations.</em>"],
 			from, to;
 
 		for (var i = 0; i < grades.length; i++) {
-			from = grades[i];
-			to = grades[i + 1];
+			from = gradeLabels[i];
+			to = gradeLabels[i + 1];
 
 		labels.push(
-				'<i style="background:' + owdiDrought.waterAccounting.getColor(from + 1) + '"></i> ' +
+				'<i style="background:' + owdiDrought.waterAccounting.getColor(grades[i] + 1) + '"></i> ' +
 				from + (to ? '&ndash;' + to : '+'));
 		}
 		labels.push(
