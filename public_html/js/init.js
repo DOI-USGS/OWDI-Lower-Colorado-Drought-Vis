@@ -62,7 +62,7 @@ $( document ).ready( function () {
 
     //Allows the nav to find the containers based on its ID's
     window.owdiDrought.nav = function(fragment){
-        window.location.hash = fragment;
+        window.location.href = fragment;
     };
 
     // The fillDom deferred object will be resolved when the DOM for the application has been loaded
