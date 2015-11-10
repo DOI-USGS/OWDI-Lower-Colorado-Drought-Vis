@@ -24,6 +24,7 @@
         <link href="../css/overlay.css" rel="stylesheet" type="text/css">
         <link href="../css/main.css" rel="stylesheet" type="text/css">
         <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+		<link href="../css/svg.css" rel="stylesheet" type="text/css">
         <link href="../css/print.css" rel="stylesheet" type="text/css">
         <link href="../css/before-after.css" rel="stylesheet" type="text/css">
         <link href="../css/dygraph.css" rel="stylesheet" type="text/css">
@@ -59,30 +60,71 @@
 
         <!-- Main content -->
         <span id="application">
-
-            <!-- BEGIN USGS Header Template -->
-            <div id="usgscolorband">
-                <div id="usgsheader">
-                    <div id="usgsidentifier">
-                        <a href="http://www.usgs.gov/" target="_blank"><img src="../img/header-footer/usgslogo.jpg" alt="USGS - science for a changing world" 
-                         title="U.S. Geological Survey Home Page" /></a>
-                    </div> <!--usgsidentifier-->
-                    <img src="../img/header-footer/banner.png" alt="banner" />
-                    <div id="usgsccsabox">
-                        <div id="usgsccsa">
-                            <a href="http://www.usgs.gov/">USGS Home</a>
-                            <br /><a href="http://answers.usgs.gov/cgi-bin/gsanswers?tmplt=2">Contact USGS</a>
-                            <br /><a href="http://search.usgs.gov/">Search USGS</a>
-                            <br />
-                        </div> <!--usgsccsa-->
-                    </div> <!--usgsccsabox-->
-                </div> <!--usgsheader-->
-            </div> <!--colorband-->
-            <!-- END USGS Header Template -->
-
-            <nav>
-                <h3>Colorado River Basin Drought</h3>
-            </nav>
+		
+		<div id="stickynavContainer" class="menu container">
+		<section id="stickynav" class="section">
+		<div class="widget">
+			
+			<div class="navBox">
+				<a id="welcomeLink" href="javascript:void(0);" onclick="owdiDrought.nav('#Introduction')" class="navLink">1</a>
+				<div class="toolTip">Introduction</div>
+			</div>
+			
+			<div class="navBox">
+				<a id="lifelineLink" href="javascript:void(0);" onclick="owdiDrought.nav('#Lifeline')" class="navLink">2</a>
+				<div class="toolTip">Lifeline</div>
+			</div>
+			
+			<div class="navBox">
+				<a href="javascript:void(0);" onclick="owdiDrought.nav('#OneRiver')" class="navLink">3</a>
+				<div class="toolTip">One river</div>
+			</div>
+			
+			<div class="navBox">
+				<a href="javascript:void(0);" onclick="owdiDrought.nav('#ControlStructures')" class="navLink">4</a>
+				<div class="toolTip">Control structures</div>
+			</div>
+			
+			<div class="navBox">
+				<a href="javascript:void(0);" onclick="owdiDrought.nav('#WaterSupply')" class="navLink">5</a>
+				<div class="toolTip">Water supply</div>
+			</div>
+			
+			<div class="navBox">
+				<a href="javascript:void(0);" onclick="owdiDrought.nav('#ExtendedDrought')" class="navLink">6</a>
+				<div class="toolTip">Extended drought</div>
+			</div>
+			
+			<div class="navBox">
+				<a href="javascript:void(0);" onclick="owdiDrought.nav('#StorageCapacity')" class="navLink">7</a>
+				<div class="toolTip">Storage capacity</div>
+			</div>
+			
+			<div class="navBox">
+				<a href="javascript:void(0);" onclick="owdiDrought.nav('#SupplyDemand')" class="navLink">8</a>
+				<div class="toolTip">Supply & demand</div>
+			</div>
+			
+			<div class="navBox">
+				<a href="javascript:void(0);" onclick="owdiDrought.nav('#DecliningStorage')" class="navLink">9</a>
+				<div class="toolTip">Declining storage</div>
+			</div>
+			
+			<div class="navBox">
+				<a href="javascript:void(0);" onclick="owdiDrought.nav('#Shortage')" class="navLink">10</a>
+				<div class="toolTip">Shortage</div>
+			</div>
+			
+			<div class="navBox">
+				<a href="javascript:void(0);" onclick="owdiDrought.nav('#EraOfHope')" class="navLink">11</a>
+				<div class="toolTip">Era of hope</div>
+			</div>
+			
+		</div>
+		
+				</section>
+            </div>
+		
             <div id="Introduction" class="container">
                 <section id="welcome" class="section">
 		<div class="widget">
@@ -171,68 +213,6 @@
 					$('#appExplainURL').select();
 				});
 		</script>		</section>
-            </div>
-	    <div id="stickynavContainer" class="menu container">
-		<section id="stickynav" class="section">
-		<div class="widget">
-			
-			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('Introduction')" class="navLink">1</a>
-				<div class="toolTip">Introduction</div>
-			</div>
-			
-			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('Lifeline')" class="navLink">2</a>
-				<div class="toolTip">Lifeline</div>
-			</div>
-			
-			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('OneRiver')" class="navLink">3</a>
-				<div class="toolTip">One river</div>
-			</div>
-			
-			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('ControlStructures')" class="navLink">4</a>
-				<div class="toolTip">Control structures</div>
-			</div>
-			
-			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('ExtendedDrought')" class="navLink">5</a>
-				<div class="toolTip">Extended drought</div>
-			</div>
-			
-			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('WaterSupply')" class="navLink">6</a>
-				<div class="toolTip">Water supply</div>
-			</div>
-			
-			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('StorageCapacity')" class="navLink">7</a>
-				<div class="toolTip">Storage capacity</div>
-			</div>
-			
-			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('SupplyDemand')" class="navLink">8</a>
-				<div class="toolTip">Supply & demand</div>
-			</div>
-			
-			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('DecliningStorage')" class="navLink">9</a>
-				<div class="toolTip">Declining storage</div>
-			</div>
-			
-			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('Shortage')" class="navLink">10</a>
-				<div class="toolTip">Shortage</div>
-			</div>
-			
-			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('EraOfHope')" class="navLink">11</a>
-				<div class="toolTip">Era of hope</div>
-			</div>
-			
-		</div>
-				</section>
             </div>
 	    <div id="Lifeline" class="container">
                 <section id="mainmessage1" class="section">
@@ -491,8 +471,6 @@
 				</div>
 				
 				<p id="blueDragonReadMore" class="readMore">Read More >></p>
-		        
-		        <p>The graphic below depicts the major dams, reservoirs, and control structures of the Lower Colorado River.</p>
 				
 				<h4></h4>
 		       
@@ -500,6 +478,8 @@
 				
 				<object id="bluedragon-object" data="../img/bluedragon-animate.svg" type="image/svg+xml" ></object>
 			</div>
+			
+			<p>The graphic below depicts the major dams, reservoirs, and control structures of the Lower Colorado River.</p>
 			
 			<a href="../bluedragon.pdf" target="_blank">
 				<div id="dragonText">
@@ -551,85 +531,6 @@
 		
 		
 		</script>		</section>
-            </div>
-	    <div id="ExtendedDrought" class="container">
-                <section id="mainmessagedirt" class="section">
-		<div class="widget">
-			<div id="keynotedirt" class="keynote">
-		    	<div id="pindirt" class="pin">
-		        	<h2>The western U.S. is experiencing an extended drought.</h2>
-		        </div>
-		    </div>
-			
-			<div class="socialMedia">
-				<img src="../img/social-media/twitter-whie-01.svg" alt="twitter icon"/>
-				<img src="../img/social-media/github-white-01.svg" alt="github icon"/>
-				<img id="ExtendedDroughtLinkOut" src="../img/social-media/link-white-01.svg" alt="link icon"/>
-				<div id="ExtendedDroughtLink" class="takeLink" >
-					<input id="ExtendedDroughtURL" type="text" value="http://go.usa.gov/#ExtendedDrought">
-				</div>
-			</div>
-		</div>
-		
-		<script>
-		
-			$('#ExtendedDroughtLinkOut').on('click', function(){
-				$('#ExtendedDroughtLink').toggle();
-				$('#ExtendedDroughtURL').select();
-				});
-		
-		</script>		</section>
-            </div>
-	    <div id="droughtContainer" class="container">
-                <section id="dygraphsection" class="section">
-		<div class="widget">
-			<div class="sectionContent">
-				<p>Since 2000, the Colorado River Basin has experienced the driest 16-year period in over 100 years of historical natural flows (Bureau of Reclamation, 2015) and one of the most severe droughts in the last 1,200 years (Meko et al., 2007a and 2007b).</p>
-		            
-		        <button class="supportinginfo" id="section6Button">Supporting Info</button>
-		        
-		        <div class="supportingInfoContent" id="section6Info">
-		            <p>Bureau of Reclamation, 2015. <a href="http://www.usbr.gov/lc/region/g4000/NaturalFlow/index.html" target="_blank">Colorado River Basin Natural Flow and Salt Data website</a>.</p>
-		            
-		            <p>Meko, D.M., et al. 2007a. <a href="ftp://ftp.ncdc.noaa.gov/pub/data/paleo/treering/reconstructions/northamerica/usa/upper-colorado-flow2007.txt" target="_blank">Upper Colorado River Flow Reconstruction</a>. IGBP PAGES/World Data Center for Paleoclimatology. Data Contribution Series # 2007-052. NOAA/NCDC Paleoclimatology Program, Boulder CO, USA.</p>
-		            
-		            <p>Meko, D.M., C.A. Woodhouse, C.H. Baisan, T. Knight, J.J. Lukas, M.K. Hughes, and M.W. Salzer. 2007b. <a href="http://onlinelibrary.wiley.com/doi/10.1029/2007GL029988/pdf" target="_blank">Medieval drought in the upper Colorado River Basin</a>. Geophysical Research Letters, Vol. 34, L10705.</p>
-		
-		        </div>
-		       
-			   <p>The <a href="http://droughtmonitor.unl.edu/" target="_blank">U.S. Drought Monitor</a> shows the extent and intensity of drought conditions in the Western U.S. over time from 2000 to 2015.</p>
-			   
-			   	<a href="http://droughtmonitor.unl.edu/" target="_blank">
-		        	<img id="usDroughtGif" src="../img/usdrought.gif" alt="U.S. Drought Monitor"/>
-				</a>
-		        
-			</div>
-			
-			<div class="socialMedia onWhite">
-				<img src="../img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
-				<img src="../img/social-media/github-blue-01.svg" alt="github icon"/>
-				<img id="droughtMonitorLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
-				<div id="droughtMonitorLink" class="takeLinkBlue" >
-					<input id="droughtMonitorURL" type="text" value="http://go.usa.gov/#droughtContainer">
-				</div>
-			</div>
-			
-		</div>
-		
-		<script>
-		    var button = $('#section6Button');
-		    
-		    button.click(function() {
-		        $('#section6Info').toggle();
-		    });
-						 
-			$('#droughtMonitorLinkOut').on('click', function(){
-					$('#droughtMonitorLink').toggle();
-					$('#droughtMonitorURL').select();
-				});
-		
-		    </script>
-				</section>
             </div>
 	    <div id="WaterSupply" class="container">
                 <section id="waterSupplyVariableOverTime" class="section">
@@ -758,6 +659,85 @@
 				});
 		                 
 		    </script>		</section>
+            </div>
+		<div id="ExtendedDrought" class="container">
+                <section id="mainmessagedirt" class="section">
+		<div class="widget">
+			<div id="keynotedirt" class="keynote">
+		    	<div id="pindirt" class="pin">
+		        	<h2>The western U.S. is experiencing an extended drought.</h2>
+		        </div>
+		    </div>
+			
+			<div class="socialMedia">
+				<img src="../img/social-media/twitter-whie-01.svg" alt="twitter icon"/>
+				<img src="../img/social-media/github-white-01.svg" alt="github icon"/>
+				<img id="ExtendedDroughtLinkOut" src="../img/social-media/link-white-01.svg" alt="link icon"/>
+				<div id="ExtendedDroughtLink" class="takeLink" >
+					<input id="ExtendedDroughtURL" type="text" value="http://go.usa.gov/#ExtendedDrought">
+				</div>
+			</div>
+		</div>
+		
+		<script>
+		
+			$('#ExtendedDroughtLinkOut').on('click', function(){
+				$('#ExtendedDroughtLink').toggle();
+				$('#ExtendedDroughtURL').select();
+				});
+		
+		</script>		</section>
+            </div>
+	    <div id="droughtContainer" class="container">
+                <section id="dygraphsection" class="section">
+		<div class="widget">
+			<div class="sectionContent">
+				<p>Since 2000, the Colorado River Basin has experienced the driest 16-year period in over 100 years of historical natural flows (Bureau of Reclamation, 2015) and one of the most severe droughts in the last 1,200 years (Meko et al., 2007a and 2007b).</p>
+		            
+			   <p>The <a href="http://droughtmonitor.unl.edu/" target="_blank">U.S. Drought Monitor</a> shows the extent and intensity of drought conditions in the Western U.S. over time from 2000 to 2015.</p>
+			   
+			   	<a href="http://droughtmonitor.unl.edu/" target="_blank">
+		        	<img id="usDroughtGif" src="../img/usdrought.gif" alt="U.S. Drought Monitor"/>
+				</a>
+				
+				<button class="supportinginfo" id="section6Button">Supporting Info</button>
+				
+				<div class="supportingInfoContent" id="section6Info">
+		            <p>Bureau of Reclamation, 2015. <a href="http://www.usbr.gov/lc/region/g4000/NaturalFlow/index.html" target="_blank">Colorado River Basin Natural Flow and Salt Data website</a>.</p>
+		            
+		            <p>Meko, D.M., et al. 2007a. <a href="ftp://ftp.ncdc.noaa.gov/pub/data/paleo/treering/reconstructions/northamerica/usa/upper-colorado-flow2007.txt" target="_blank">Upper Colorado River Flow Reconstruction</a>. IGBP PAGES/World Data Center for Paleoclimatology. Data Contribution Series # 2007-052. NOAA/NCDC Paleoclimatology Program, Boulder CO, USA.</p>
+		            
+		            <p>Meko, D.M., C.A. Woodhouse, C.H. Baisan, T. Knight, J.J. Lukas, M.K. Hughes, and M.W. Salzer. 2007b. <a href="http://onlinelibrary.wiley.com/doi/10.1029/2007GL029988/pdf" target="_blank">Medieval drought in the upper Colorado River Basin</a>. Geophysical Research Letters, Vol. 34, L10705.</p>
+		
+		    	</div>
+		        
+			</div>
+			
+			<div class="socialMedia onWhite">
+				<img src="../img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
+				<img src="../img/social-media/github-blue-01.svg" alt="github icon"/>
+				<img id="droughtMonitorLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
+				<div id="droughtMonitorLink" class="takeLinkBlue" >
+					<input id="droughtMonitorURL" type="text" value="http://go.usa.gov/#droughtContainer">
+				</div>
+			</div>
+			
+		</div>
+		
+		<script>
+		    var button = $('#section6Button');
+		    
+		    button.click(function() {
+		        $('#section6Info').toggle();
+		    });
+						 
+			$('#droughtMonitorLinkOut').on('click', function(){
+					$('#droughtMonitorLink').toggle();
+					$('#droughtMonitorURL').select();
+				});
+		
+		    </script>
+				</section>
             </div>
             <div id="StorageCapacity" class="container">
                 <section id="mainmessage3" class="section">
@@ -1003,8 +983,9 @@
 		    <!-- slider handle -->
 		  </figure>
 		  <!-- cd-image-container -->
-		  
-		  <p>In the photo slider above, the change in Lake Mead's surface area can be seen from the pre-drought conditions in 1999 to the current drought conditions as of 2014. The red area that emerges in the photo slide above represents the loss in the reservoir's surface area as Lake Mead's elevation has declined. Water surface area extent maps are based on <a href="http://landsat.usgs.gov/" target="_blank">U.S. Geological Survey Landsat</a> surface reflectance-corrected images acquired in the month of June in 1999 and 2014. For both composites, two Landsat images acquired within 16 days of each other have been merged to generate cloud-free composites suitable for measurement and change comparison. </p>
+		  <div class="graphCaption">
+		  	<p>In the photo slider above, the change in Lake Mead's surface area can be seen from the pre-drought conditions in 1999 to the current drought conditions as of 2014. The red area that emerges in the photo slide above represents the loss in the reservoir's surface area as Lake Mead's elevation has declined. Water surface area extent maps are based on <a href="http://landsat.usgs.gov/" target="_blank">U.S. Geological Survey Landsat</a> surface reflectance-corrected images acquired in the month of June in 1999 and 2014. For both composites, two Landsat images acquired within 16 days of each other have been merged to generate cloud-free composites suitable for measurement and change comparison. </p>
+		  </div>
 		  
 		  <!--landsat-->
 		  <figure class="cd-image-container">
@@ -1019,6 +1000,9 @@
 		    <!-- slider handle -->
 		  </figure>
 		  <!-- cd-image-container -->
+		  <div class="graphCaption">
+		  	<p> </p>
+		  </div>
 			
 		  
 		<!--Hoover Dam-->
@@ -1040,11 +1024,13 @@
 			<img src="../img/before-after/extrapic03.jpg"/>
 		  </div>
 		  
-		  <p>Since 2001, Lake Mead's elevation dropped from 1,196 to 1,075 feet by June 2015 (a decline of 121 feet). As the upper photo slider shows, the decline in the reservoir elevation during this time has exposed a white band of mineralized rock around the shoreline. The declining reservoir level has also exposed Hoover Dam's four intake towers, two on the right side and two on the left side of the photo slider. Water from the reservoir flows through these intake towers at specified release volumes to meet downstream water demands in Arizona, California, Nevada, and Mexico, while producing hydropower as water flows through Hoover Dam's 17 hydroelectric turbines.</p>
+		  <div class="graphCaption">
+		  	<p>Since 2001, Lake Mead's elevation dropped from 1,196 to 1,075 feet by June 2015 (a decline of 121 feet). As the upper photo slider shows, the decline in the reservoir elevation during this time has exposed a white band of mineralized rock around the shoreline. The declining reservoir level has also exposed Hoover Dam's four intake towers, two on the right side and two on the left side of the photo slider. Water from the reservoir flows through these intake towers at specified release volumes to meet downstream water demands in Arizona, California, Nevada, and Mexico, while producing hydropower as water flows through Hoover Dam's 17 hydroelectric turbines.</p>
+			<p id="hideMe" class="hiddenContent">The lower photos show the conditions of Lake Mead and the upstream face of Hoover Dam in 2001 at elevation 1,196 feet (left photo) and the conditions in June 2015 at elevation 1,075 feet (center photo). The lower photos also show the Nevada spillway in the bottom right corner of the photos. There are two spillways at Hoover Dam, one on the Nevada side and one on the Arizona side of the dam. At higher reservoir levels, spillways would be use to bypass flow around the Hoover Dam powerplant to prevent water from overtopping the dam. When water reaches the top of the spillway drum gates, it flows into the spillways, bypassing the dam via a series of tunnels and re-entering the river channel below the dam.</p>
+		  </div>
 		  <div id="beforeAfter01HiddenContent" class="hiddenContent">
-		  <p>The lower photos show the conditions of Lake Mead and the upstream face of Hoover Dam in 2001 at elevation 1,196 feet (left photo) and the conditions in June 2015 at elevation 1,075 feet (center photo). The lower photos also show the Nevada spillway in the bottom right corner of the photos. There are two spillways at Hoover Dam, one on the Nevada side and one on the Arizona side of the dam. At higher reservoir levels, spillways would be use to bypass flow around the Hoover Dam powerplant to prevent water from overtopping the dam. When water reaches the top of the spillway drum gates, it flows into the spillways, bypassing the dam via a series of tunnels and re-entering the river channel below the dam.</p>
-		  <p>Every 1-foot drop in the elevation of Lake Mead reduces Hoover Dam's powerplant capacity by approximately 5.7 megawatts (Reclamation estimate, as reported in Illia, 2010).  Since Lake Mead was last full in 2000, Hoover Dam's powerplant capacity has fallen from 2,074 to 1,563 megawatts (as of August 2015). Reclamation has mitigated some of this impact by replacing traditional turbines with "wide-head" turbines, which are capable of generating more efficiently at lower reservoir levels, and making significant efficiency improvements to the powerplant (Kuckro, 2014).</p>
-		  <p>At Lake Powell, risk to the Glen Canyon Dam powerplant is related to declining reservoir levels and the potential for loss of generating capacity below elevation 3,490 feet. Based on Reclamation analysis conducted in August 2015, the earliest this is projected to occur is 2019 (about a 5 percent chance of occurring). Since Lake Powell finished filling in 1980, its water surface elevation has fallen to as low as elevation 3,555 feet (33 percent of capacity) in April 2005, approximately 65 feet above minimum power pool.</p>
+		  	<p>Every 1-foot drop in the elevation of Lake Mead reduces Hoover Dam's powerplant capacity by approximately 5.7 megawatts (Reclamation estimate, as reported in Illia, 2010).  Since Lake Mead was last full in 2000, Hoover Dam's powerplant capacity has fallen from 2,074 to 1,563 megawatts (as of August 2015). Reclamation has mitigated some of this impact by replacing traditional turbines with "wide-head" turbines, which are capable of generating more efficiently at lower reservoir levels, and making significant efficiency improvements to the powerplant (Kuckro, 2014).</p>
+		  	<p>At Lake Powell, risk to the Glen Canyon Dam powerplant is related to declining reservoir levels and the potential for loss of generating capacity below elevation 3,490 feet. Based on Reclamation analysis conducted in August 2015, the earliest this is projected to occur is 2019 (about a 5 percent chance of occurring). Since Lake Powell finished filling in 1980, its water surface elevation has fallen to as low as elevation 3,555 feet (33 percent of capacity) in April 2005, approximately 65 feet above minimum power pool.</p>
 		  </div>
 		  
 		  <p id="beforeAfter01ReadMore" class="readMore">Read More >></p>
@@ -1064,17 +1050,26 @@
 		  </figure>
 		  <!-- cd-image-container -->
 		  
-		  <p>The photo slider above shows Hemenway Harbor, located the southwestern portion of Lake Mead, with the location of Las Vegas Marina at elevation 1,152 feet in January 2003, and the new location of Las Vegas Marina at elevation 1,078 feet in May 2015. The photos also depict the increased exposure of Lake Mead's shoreline and the emergence of the Boulder Islands, located on the right side of the photo, as the reservoir elevation declined.</p>
-		  <p>Lake Mead's declining reservoir elevation has impacted marinas and boat launching facilities at the Lake Mead National Recreation Area, requiring the relocation of marinas and the extension of boat ramps to keep recreational facilities open. To continue to provide boat access as reservoir levels have declined, the National Park Service, responsible for Lake Mead National Recreation Area, has been <a href="http://www.azcentral.com/news/articles/2010/11/01/20101101lake-mead-water-level-down.html" target="_blank">extending boat ramps since 2002</a> and <a href="http://bouldercityreview.com/sections/news/lake-meadhoover-dam/lake-mead%E2%80%99s-level-rises-slightly.html" target="_blank">planned to spend $5 million extending ramps in 2015</a>. Additional recreational impacts not shown in these photos include: In 2007, the Overton Beach marina became inoperable and facilities from Overton Beach were moved to two other marinas, Callville Bay and Temple Bar, located in Boulder Canyon and Temple Basin areas of Lake Mead, respectively. In 2008, Lake Mead Marina was moved from the location it had occupied since the 1960s to its current location in Hemenway Harbor.</p>
+		  <div class="graphCaption">
+		  	<p>The photo slider above shows Hemenway Harbor, located the southwestern portion of Lake Mead, with the location of Las Vegas Marina at elevation 1,152 feet in January 2003, and the new location of Las Vegas Marina at elevation 1,078 feet in May 2015. The photos also depict the increased exposure of Lake Mead's shoreline and the emergence of the Boulder Islands, located on the right side of the photo, as the reservoir elevation declined.</p>
+		  </div>
+		  
+		  	<div id="beforeAfter02HiddenContent" class="hiddenContent">
+		  
+		  		<p>Lake Mead's declining reservoir elevation has impacted marinas and boat launching facilities at the Lake Mead National Recreation Area, requiring the relocation of marinas and the extension of boat ramps to keep recreational facilities open. To continue to provide boat access as reservoir levels have declined, the National Park Service, responsible for Lake Mead National Recreation Area, has been <a href="http://www.azcentral.com/news/articles/2010/11/01/20101101lake-mead-water-level-down.html" target="_blank">extending boat ramps since 2002</a> and <a href="http://bouldercityreview.com/sections/news/lake-meadhoover-dam/lake-mead%E2%80%99s-level-rises-slightly.html" target="_blank">planned to spend $5 million extending ramps in 2015</a>. Additional recreational impacts not shown in these photos include: In 2007, the Overton Beach marina became inoperable and facilities from Overton Beach were moved to two other marinas, Callville Bay and Temple Bar, located in Boulder Canyon and Temple Basin areas of Lake Mead, respectively. In 2008, Lake Mead Marina was moved from the location it had occupied since the 1960s to its current location in Hemenway Harbor.</p>
+				
+			</div>
+			
+			<p id="beforeAfter02ReadMore" class="readMore">Read More >></p>
 		  
 		  <button class="supportinginfo" id="sectionBAButton">Supporting Info</button>
 		  
 		  <div class="supportingInfoContent" id="sectionBAInfo">
+		  	
 		      <p>Illia, T. 2010. <a href="http://southwest.construction.com/southwest_contractor_news/2010/0927_LakeMeadLevel.asp" target="_blank">Big Drop in Lake Mead Level Curbs Hoover Water, Power</a>. ENR Southwest website.</p>
-		      
+			
 		      <p>Kuckro, R., 2014. <a href="http://southwest.construction.com/southwest_contractor_news/2010/0927_LakeMeadLevel.asp" target="_blank">Receding Lake Mead poses challenges to Hoover Dam's power output</a>. E&amp;E Publishing EnergyWire website.</p>
-		      
-		
+			
 		  </div>
 		  
 		  
@@ -1105,6 +1100,18 @@
 			beforeAfter01ReadMore.on('click', function(){
 				
 				beforeAfter01HiddenContent.toggle();
+				$('#hideMe').toggle();
+				
+				if($(this).text() == 'Read More >>'){
+					$(this).text('Hide Text');
+					}else{
+						$(this).text('Read More >>');
+						}
+				});	
+				
+				$('#beforeAfter02ReadMore').on('click', function(){
+				
+				$('#beforeAfter02HiddenContent').toggle();
 				
 				if($(this).text() == 'Read More >>'){
 					$(this).text('Hide Text');
@@ -1156,32 +1163,6 @@
 		        
 				<p>Scroll down to learn more about Lake Mead's operational conditions, how operational conditions are determined, and the potential impacts on water deliveries in the Lower Basin.</p>
 		
-		
-		
-				<button class="supportinginfo spacer" id="section15Button">Supporting Info</button>
-		
-				<div class="supportingInfoContent" id="section15Info">
-		
-		<p><a href="http://www.usbr.gov/lc/region/programs/climateresearch/Charter_ModelingWorkGroup.pdf" target="_blank">Bureau of Reclamation Colorado River Modeling Work Group Methods</a> take into account temperature, snowpack, precipitation, consumptive use, and other factors, from many data sources beyond operations and observations made by the  Bureau of Reclamation. Other datasets include:</p>
-		
-		
-					<p><a href="http://www.cbrfc.noaa.gov/" target="_blank">National Oceanic and Atmospheric Administration Colorado River Basin River Forecast Center</a>
-					</p>
-		            
-					<p><a href="http://waterdata.usgs.gov/nwis" target="_blank">U.S. Geological Survey Stream Gage Information</a>.</p>
-		
-		            <p>Reclamation's 24-Month Study reports:</p>
-		            
-		            <p><a href="http://www.usbr.gov/uc/water/crsp/studies/index.html" target="_blank">Upper Colorado Region Water Operations</a>.
-		            </p>
-		            <p><a href="http://www.usbr.gov/lc/region/g4000/24mo/index.html" target="_blank">Lower Colorado Region Water Operations</a>.
-		            </p>
-		            
-		            <p><a href="http://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf" target="_blank">2007 Record of Decision on Colorado River Interim Guidelines for Lower Basin Shortages and the Coordinated Operations for Lake Powell and Lake Mead (2007 Interim Guidelines)</a></p>
-		            
-		            
-				</div>
-				
 				<div id="meadElevationContainer">
 					<object id="mead-elev-object" data="img/mead_elev_projected-desktop.svg" type="image/svg+xml"></object>
 					<object id="mead-elev-object-mobile" data="img/mead_elev_projected-mobile.svg" type="image/svg+xml"></object>
@@ -1221,11 +1202,6 @@
 		</div>
 		
 		<script>
-			var button = $('#section15Button');
-		
-			button.click(function () {
-				$('#section15Info').toggle();
-			});
 			
 			var lakeMeadReadMore = $('#lakeMeadReadMore');
 			var lakeMeadHiddenContent = $('#lakeMeadHiddenContent');
@@ -1256,58 +1232,118 @@
 				</object>
 			</div>
 			<div class="SVGInfo" id="draw-river">
-				<p>The Colorado River is one of the the principal sources of water for irrigation and domestic use in Arizona, southern California, southern Nevada, and portions of northwestern Mexico.</p>
+				<div class="graphCaption">
+					<p>The Colorado River is one of the the principal sources of water for irrigation and domestic use in Arizona, southern California, southern Nevada, and portions of northwestern Mexico.</p>
+				</div>
 			</div>
 			<div class="SVGInfo" id="draw-basin">
+				<div class="graphCaption">
+		        	<p>On behalf of the Secretary of the Interior, and pursuant to the <a href="http://www.usbr.gov/lc/region/pao/pdfiles/supctdec.pdf" target="_blank">Consolidated Decree of the U.S. Supreme Court in Arizona v. California (547 U.S. 150 (2006))</a>, Reclamation's Lower Colorado Region annually provides detailed and accurate records of diversions, return flows, and consumptive use of water delivered from the mainstream of the Colorado River below Lees Ferry to entitlement holders within the Lower Colorado River Basin.</p>
+		        
+					<div id="lakeMeadHidden01" class="hiddenContent">
+						<p>The pictogram above depicts average consumptive use by select Lower Colorado River water entitlement holders for the 5-year period from 2010-2014. Each blue block represents a volume of 100,000 acre feet and partially shaded blue blocks represent volumes less than 100,000 acre-feet. Mouse over the bars to see the average consumptive use (2010-2014) by select Lower Colorado River entitlement holders (highlighted in yellow).</p>
+		
+		        		<p>Click <a href="http://www.usbr.gov/lc/region/g4000/wtracct.html" target="_blank">here</a> to learn more about Lower Colorado River Water Accounting reports and click <a href="http://www.usbr.gov/lc/region/g4000/contracts/entitlements.html" target="_blank">here</a> to learn more about Lower Colorado River water entitlements and water delivery contracts.</p>
+					</div>
+				</div>
 				
-		        <p>On behalf of the Secretary of the Interior, and pursuant to the <a href="http://www.usbr.gov/lc/region/pao/pdfiles/supctdec.pdf" target="_blank">Consolidated Decree of the U.S. Supreme Court in Arizona v. California (547 U.S. 150 (2006))</a>, Reclamation's Lower Colorado Region annually provides detailed and accurate records of diversions, return flows, and consumptive use of water delivered from the mainstream of the Colorado River below Lees Ferry to entitlement holders within the Lower Colorado River Basin.</p>
-		        
-				<p>The pictogram above depicts average consumptive use by select Lower Colorado River water entitlement holders for the 5-year period from 2010-2014. Each blue block represents a volume of 100,000 acre feet and partially shaded blue blocks represent volumes less than 100,000 acre-feet. Mouse over the bars to see the average consumptive use (2010-2014) by select Lower Colorado River entitlement holders (highlighted in yellow).</p>
-		
-		        <p>Click <a href="http://www.usbr.gov/lc/region/g4000/wtracct.html" target="_blank">here</a> to learn more about Lower Colorado River Water Accounting reports and click <a href="http://www.usbr.gov/lc/region/g4000/contracts/entitlements.html" target="_blank">here</a> to learn more about Lower Colorado River water entitlements and water delivery contracts.</p>
-		
-		        
-		        
+				<p id="lakeMeadRead01" class="readMore">Read More >></p>
+				 
 			</div>
 			<!--draw-basin-->
 			<div class="SVGInfo" id="highlight-user-2">
-		
-		        <p>The pictogram above depicts the elevation range (from approximately 1,200 to 1,229 feet) and annual water deliveries in the Lower Basin when Lake Mead is operating in a Flood Control Surplus Condition. Blue boxes represent delivery to states (not to specific locations within states). When in flood control, Lake Mead's operations are coordinated with the U.S. Army Corps of Engineers, pursuant to the 1984 Field Working Agreement between Reclamation and the U.S. Army Corps of Engineers.</p>
+				<div class="graphCaption">
+		        	<p>The pictogram above depicts the elevation range (from approximately 1,200 to 1,229 feet) and annual water deliveries in the Lower Basin when Lake Mead is operating in a Flood Control Surplus Condition. Blue boxes represent delivery to states (not to specific locations within states). When in flood control, Lake Mead's operations are coordinated with the U.S. Army Corps of Engineers, pursuant to the 1984 Field Working Agreement between Reclamation and the U.S. Army Corps of Engineers.</p>
+		        	
+					<div id="lakeMeadHidden02" class="hiddenContent">
+		        		<p>The operating condition of Lake Mead for the upcoming year is determined by the projected January 1 elevation from Reclamation's August 24-Month Study, consistent with the <a href="http://www.usbr.gov/lc/region/programs/strategies.html" target="_blank">2007 Interim Guidelines</a> and as reported in the <a href="http://www.usbr.gov/lc/region/g4000/aop/AOP15.pdf" target="_blank">Annual Operating Plan for Colorado River Reservoirs (AOP)</a>. The 2007 Interim Guidelines, adopted in December 2007 and in effect for an interim period through 2026, provide an objective methodology for determining the operating conditions and annual releases from Lake Powell and Lake Mead throughout the full range of reservoir operations, including low reservoir conditions. The 2007 Interim Guidelines also include criteria for implementing shortage and surplus conditions in the Lower Colorado River Basin.</p>
 		        
-		        <p>The operating condition of Lake Mead for the upcoming year is determined by the projected January 1 elevation from Reclamation's August 24-Month Study, consistent with the <a href="http://www.usbr.gov/lc/region/programs/strategies.html" target="_blank">2007 Interim Guidelines</a> and as reported in the <a href="http://www.usbr.gov/lc/region/g4000/aop/AOP15.pdf" target="_blank">Annual Operating Plan for Colorado River Reservoirs (AOP)</a>. The 2007 Interim Guidelines, adopted in December 2007 and in effect for an interim period through 2026, provide an objective methodology for determining the operating conditions and annual releases from Lake Powell and Lake Mead throughout the full range of reservoir operations, including low reservoir conditions. The 2007 Interim Guidelines also include criteria for implementing shortage and surplus conditions in the Lower Colorado River Basin.</p>
-		        
-		        <p>In accordance with the <a href="http://www.ibwc.state.gov/Files/1944Treaty.pdf" target="_blank">1944 U.S.-Mexico Water Treaty</a>, when Lake Mead is operating in flood control, an additional 200,000 acre-feet of water will be delivered to Mexico for a total annual delivery of 1.7 maf.</p>
-		        
-		        
+		        		<p>In accordance with the <a href="http://www.ibwc.state.gov/Files/1944Treaty.pdf" target="_blank">1944 U.S.-Mexico Water Treaty</a>, when Lake Mead is operating in flood control, an additional 200,000 acre-feet of water will be delivered to Mexico for a total annual delivery of 1.7 maf.</p>
+					</div>
+				</div>
+				
+				<p id="lakeMeadRead02" class="readMore">Read More >></p>
+		         
 			</div>
 			<!--highlight-user-2-->
 			<div class="SVGInfo" id="mead-info-1">
+				<div class="graphCaption">
 		                <p>A Quantified Surplus Condition or Domestic Surplus Condition exists when Lake Mead's January 1 elevation for the upcoming year is projected to be between 1,145 feet and approximately 1,200 feet. In a surplus condition, entitlement holders in the Lower Basin may take delivery of additional water consistent with applicable surplus entitlements. Click <a href="http://www.usbr.gov/lc/region/g4000/contracts/entitlements.html" target="_blank">here</a> to find out more about Lower Colorado River water entitlements, surplus entitlements, and water delivery contracts.</p>
-		                <p>Consistent with Minute 319 to the 1944 U.S.-Mexico Water Treaty, Mexico may also take delivery of additional water within this elevation range.</p>
-		                <p>Please visit the <a href="http://www.ibwc.state.gov/home.html" target="_blank">International Boundary and Water Commission website</a> to learn more about the 1944 U.S.-Mexico Water Treaty and <a href="http://www.ibwc.gov/Files/Minutes/Minute_319.pdf" target="_blank">Minute 319</a> (in effect through 2017).</p>
+						<div id="lakeMeadHidden03" class="hiddenContent">
+		                	<p>Consistent with Minute 319 to the 1944 U.S.-Mexico Water Treaty, Mexico may also take delivery of additional water within this elevation range.</p>
+		                	<p>Please visit the <a href="http://www.ibwc.state.gov/home.html" target="_blank">International Boundary and Water Commission website</a> to learn more about the 1944 U.S.-Mexico Water Treaty and <a href="http://www.ibwc.gov/Files/Minutes/Minute_319.pdf" target="_blank">Minute 319</a> (in effect through 2017).</p>
+						</div>
+				</div>
+				<p id="lakeMeadRead03" class="readMore">Read More >></p>
 			</div>
 			<!--mead-info-1-->
 			<div class="SVGInfo" id="mead-info-2">
-		        <p>A Normal Condition or Intentionally Created Surplus (ICS) Surplus Condition exists when Lake Mead's January 1 elevation for the upcoming year is projected to be between 1,075 and 1,145 feet. In a Normal/ICS Surplus Condition, water deliveries in the Lower Basin during the calendar year are limited to 7.5 maf, plus or minus any credits for ICS creation or delivery.</p>
-		        <p>In accordance with the 1944 U.S.-Mexico Water Treaty, when Lake Mead is not in a Flood Control Condition, water deliveries to Mexico during the calendar year are limited to 1.5 maf, plus or minus any water deferred, Intentionally Created MexicPursuant to the 2007 Interim Guidelines, a Lower Basin Shortage Condition exists when Lake Mead's January 1 elevation for the upcoming year is projected to be 1,075 feet or below. A Level 1 Shortage Condition exists when Lake Mead's January 1 elevation is projected to be between elevations 1,050 and 1,075 feet. Annual delivery reductions for Nevada and Arizona are 13,000 acre-feet and 320,000 acre-feet, respectively.an Allocation (ICMA) created, or additional water delivered pursuant to Sections III.1 and III.4 of Minute 319.</p>
+				<div class="graphCaption">
+		        	<p>A Normal Condition or Intentionally Created Surplus (ICS) Surplus Condition exists when Lake Mead's January 1 elevation for the upcoming year is projected to be between 1,075 and 1,145 feet. In a Normal/ICS Surplus Condition, water deliveries in the Lower Basin during the calendar year are limited to 7.5 maf, plus or minus any credits for ICS creation or delivery.</p>
+					<div id="lakeMeadHidden04" class="hiddenContent">
+		        		<p>In accordance with the 1944 U.S.-Mexico Water Treaty, when Lake Mead is not in a Flood Control Condition, water deliveries to Mexico during the calendar year are limited to 1.5 maf, plus or minus any water deferred, Intentionally Created MexicPursuant to the 2007 Interim Guidelines, a Lower Basin Shortage Condition exists when Lake Mead's January 1 elevation for the upcoming year is projected to be 1,075 feet or below. A Level 1 Shortage Condition exists when Lake Mead's January 1 elevation is projected to be between elevations 1,050 and 1,075 feet. Annual delivery reductions for Nevada and Arizona are 13,000 acre-feet and 320,000 acre-feet, respectively.an Allocation (ICMA) created, or additional water delivered pursuant to Sections III.1 and III.4 of Minute 319.</p>
+					</div>
+				</div>
+				
+				<p id="lakeMeadRead04" class="readMore">Read More >></p>
 				
 			</div>
 			<!--mead-info-2-->
 			<div class="SVGInfo" id="mead-info-3">
-		        <p>Pursuant to the 2007 Interim Guidelines, a Lower Basin Shortage Condition exists when Lake Mead's January 1 elevation for the upcoming year is projected to be 1,075 feet or below. A Level 1 Shortage Condition exists when Lake Mead's January 1 elevation is projected to be between elevations 1,050 and 1,075 feet. Annual delivery reductions for Nevada and Arizona are 13,000 acre-feet and 320,000 acre-feet, respectively.</p>
-				<p>Pursuant to Minute 319, when Lake Mead's January 1 elevation is projected to be between elevations 1,050 and 1,075 feet, Mexico's annual delivery may be reduced by 50,000 acre-feet. This delivery reduction may be offset by delivery of ICMA or water deferred under Section III.1 for a total annual delivery of 1.5 maf.</p>
+				<div class="graphCaption">
+		       		<p>Pursuant to the 2007 Interim Guidelines, a Lower Basin Shortage Condition exists when Lake Mead's January 1 elevation for the upcoming year is projected to be 1,075 feet or below. A Level 1 Shortage Condition exists when Lake Mead's January 1 elevation is projected to be between elevations 1,050 and 1,075 feet. Annual delivery reductions for Nevada and Arizona are 13,000 acre-feet and 320,000 acre-feet, respectively.</p>
+					<div id="lakeMeadHidden05" class="hiddenContent">
+						<p>Pursuant to Minute 319, when Lake Mead's January 1 elevation is projected to be between elevations 1,050 and 1,075 feet, Mexico's annual delivery may be reduced by 50,000 acre-feet. This delivery reduction may be offset by delivery of ICMA or water deferred under Section III.1 for a total annual delivery of 1.5 maf.</p>
+					</div>
+				</div>
+				<p id="lakeMeadRead05" class="readMore">Read More >></p>
 			</div>
 			<!--mead-info-3-->
 			<div class="SVGInfo" id="mead-info-4">
-		        <p>Pursuant to the 2007 Interim Guidelines, a Level 2 Shortage Condition exists when Lake Mead's January 1 elevation is projected to be between elevations 1,025 and 1,050 feet. Annual delivery reductions for Nevada and Arizona are 17,000 acre-feet and 400,000 acre-feet, respectively.</p>
-		        <p>Pursuant to Minute 319, when Lake Mead's January 1 elevation is projected to be between elevations 1,025 and 1,050 feet, Mexico's annual delivery may be reduced by 70,000 acre-feet. This delivery reduction may be offset by delivery of ICMA or water deferred under Section III.1 for a total annual delivery of 1.5 maf.</p>
+				<div class="graphCaption">
+		        	<p>Pursuant to the 2007 Interim Guidelines, a Level 2 Shortage Condition exists when Lake Mead's January 1 elevation is projected to be between elevations 1,025 and 1,050 feet. Annual delivery reductions for Nevada and Arizona are 17,000 acre-feet and 400,000 acre-feet, respectively.</p>
+					<div id="lakeMeadHidden06" class="hiddenContent">
+		        		<p>Pursuant to Minute 319, when Lake Mead's January 1 elevation is projected to be between elevations 1,025 and 1,050 feet, Mexico's annual delivery may be reduced by 70,000 acre-feet. This delivery reduction may be offset by delivery of ICMA or water deferred under Section III.1 for a total annual delivery of 1.5 maf.</p>
+					</div>
+				</div>
+				<p id="lakeMeadRead06" class="readMore">Read More >></p>
 			</div>
 			<!--mead-info-4-->
 			<div class="SVGInfo" id="mead-info-5">
-		        <p>Pursuant to the 2007 Interim Guidelines, a Level 3 Shortage Condition exists when Lake Mead's January 1 elevation is projected to be below elevation 1,025 feet. Annual delivery reductions for Nevada and Arizona are 20,000 acre-feet and 480,000 acre-feet, respectively. In addition, if Lake Mead is below elevation 1,025 feet, the Secretary of the Interior shall consult with the seven Colorado River Basin States to consider further measures consistent with applicable Federal law.</p>
-		        <p>Pursuant to Minute 319, when Lake Mead's January 1 elevation is projected to be below elevation 1,025 feet, Mexico's annual delivery may be reduced by 125,000 acre-feet. This delivery reduction may be offset by delivery of ICMA or water deferred under Section III.1 for a total annual delivery of 1.5 maf.</p>
+				<div class="graphCaption">
+		        	<p>Pursuant to the 2007 Interim Guidelines, a Level 3 Shortage Condition exists when Lake Mead's January 1 elevation is projected to be below elevation 1,025 feet. Annual delivery reductions for Nevada and Arizona are 20,000 acre-feet and 480,000 acre-feet, respectively. In addition, if Lake Mead is below elevation 1,025 feet, the Secretary of the Interior shall consult with the seven Colorado River Basin States to consider further measures consistent with applicable Federal law.</p>
+					<div id="lakeMeadHidden07" class="hiddenContent">
+		        		<p>Pursuant to Minute 319, when Lake Mead's January 1 elevation is projected to be below elevation 1,025 feet, Mexico's annual delivery may be reduced by 125,000 acre-feet. This delivery reduction may be offset by delivery of ICMA or water deferred under Section III.1 for a total annual delivery of 1.5 maf.</p>
+					</div>
+				</div>
+				<p id="lakeMeadRead07" class="readMore">Read More >></p>
 			</div>
 			<!--mead-info-5-->
+			
+			<button class="supportinginfo spacer" id="section15Button">Supporting Info</button>
+		
+				<div class="supportingInfoContent" id="section15Info">
+		
+		<p><a href="http://www.usbr.gov/lc/region/programs/climateresearch/Charter_ModelingWorkGroup.pdf" target="_blank">Bureau of Reclamation Colorado River Modeling Work Group Methods</a> take into account temperature, snowpack, precipitation, consumptive use, and other factors, from many data sources beyond operations and observations made by the  Bureau of Reclamation. Other datasets include:</p>
+		
+		
+					<p><a href="http://www.cbrfc.noaa.gov/" target="_blank">National Oceanic and Atmospheric Administration Colorado River Basin River Forecast Center</a>
+					</p>
+		            
+					<p><a href="http://waterdata.usgs.gov/nwis" target="_blank">U.S. Geological Survey Stream Gage Information</a>.</p>
+		
+		            <p>Reclamation's 24-Month Study reports:</p>
+		            
+		            <p><a href="http://www.usbr.gov/uc/water/crsp/studies/index.html" target="_blank">Upper Colorado Region Water Operations</a>.
+		            </p>
+		            <p><a href="http://www.usbr.gov/lc/region/g4000/24mo/index.html" target="_blank">Lower Colorado Region Water Operations</a>.
+		            </p>
+		            
+		            <p><a href="http://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf" target="_blank">2007 Record of Decision on Colorado River Interim Guidelines for Lower Basin Shortages and the Coordinated Operations for Lake Powell and Lake Mead (2007 Interim Guidelines)</a></p>
+		            
+		            
+				</div>
+				
 			<div class="exploreMore" id="lakeMeadAnimatedExtra">
 					<a href="../explore" target="_blank">
 						<img src="../img/leafletmapthumbnail.png" alt="Leaflet Map of the Colorado River Basin"/>
@@ -1316,7 +1352,92 @@
 					<a href="../explore" target="_blank"><button id="
 					lakeMeadAnimatedExtraButton" class="extraButton">Explore</button></a>
 			</div>
-		</div>		</section>
+		</div>
+		
+		<script>
+			var button = $('#section15Button');
+		
+			button.click(function () {
+				$('#section15Info').toggle();
+			});
+			
+			$('#lakeMeadRead01').on('click', function(){
+				
+				$('#lakeMeadHidden01').toggle();
+				
+				if($(this).text() == 'Read More >>'){
+					$(this).text('Hide Text');
+					}else{
+						$(this).text('Read More >>');
+						}
+			});	
+				
+			$('#lakeMeadRead02').on('click', function(){
+				
+				$('#lakeMeadHidden02').toggle();
+				
+				if($(this).text() == 'Read More >>'){
+					$(this).text('Hide Text');
+					}else{
+						$(this).text('Read More >>');
+						}
+			});	
+			
+			$('#lakeMeadRead03').on('click', function(){
+				
+				$('#lakeMeadHidden03').toggle();
+				
+				if($(this).text() == 'Read More >>'){
+					$(this).text('Hide Text');
+					}else{
+						$(this).text('Read More >>');
+						}
+			});	
+			
+			$('#lakeMeadRead04').on('click', function(){
+				
+				$('#lakeMeadHidden04').toggle();
+				
+				if($(this).text() == 'Read More >>'){
+					$(this).text('Hide Text');
+					}else{
+						$(this).text('Read More >>');
+						}
+			});	
+			
+			$('#lakeMeadRead05').on('click', function(){
+				
+				$('#lakeMeadHidden05').toggle();
+				
+				if($(this).text() == 'Read More >>'){
+					$(this).text('Hide Text');
+					}else{
+						$(this).text('Read More >>');
+						}
+			});	
+			
+			$('#lakeMeadRead06').on('click', function(){
+				
+				$('#lakeMeadHidden06').toggle();
+				
+				if($(this).text() == 'Read More >>'){
+					$(this).text('Hide Text');
+					}else{
+						$(this).text('Read More >>');
+						}
+			});	
+			
+			$('#lakeMeadRead07').on('click', function(){
+				
+				$('#lakeMeadHidden07').toggle();
+				
+				if($(this).text() == 'Read More >>'){
+					$(this).text('Hide Text');
+					}else{
+						$(this).text('Read More >>');
+						}
+			});	
+		</script>		</section>
             </div>
 	    <div id="EraOfHope" class="container">
                 <section id="end-era" class="section">
@@ -1384,6 +1505,16 @@
 		            <p>Minute 319: Interior Secretary Salazar and Reclamation Commissioner Connor Join U.S. and Mexico Delegations for Historic Colorado River Water Agreement Ceremony.<a href="http://www.usbr.gov/lc/region/feature/minute319.html" target="_blank">November 20, 2012 press release</a>.</p>
 		        
 				</div>
+				
+				<div id="creditLogos">
+					<img src="../img/credit-logos/usgslogo.jpg" alt="usgs logo"/>
+					<img id="doi" src="../img/credit-logos/doi.png" alt="DOI logo"/>
+					<img class="equalizer" src="../img/credit-logos/bor.png" alt="BOR logo"/>
+					<img class="equalizer" src="../img/credit-logos/owdi.png" alt="OWDI logo"/>
+				</div>
+				
+				<p></p>
+				
 			</div>
 			
 			<div class="socialMedia onWhite">
@@ -1426,27 +1557,6 @@
 				});
 		</script>		</section>
             </div>
-
-            <!-- BEGIN USGS Footer Template -->
-            <div id="usgsfooter">
-                <p id="usgsfooterbar">
-                    <a href="http://www.usgs.gov/laws/accessibility.html" title="Accessibility Policy (Section 508)" target="_blank">Accessibility</a>
-                    <a href="http://www.usgs.gov/foia/" title="Freedom of Information Act" target="_blank">FOIA</a>
-                    <a href="http://www.usgs.gov/laws/privacy.html" title="Privacy policies of the U.S. Geological Survey." target="_blank">Privacy</a>
-                    <a href="http://www.usgs.gov/laws/policies_notices.html" title="Policies and notices that govern information posted on USGS Web sites." target="_blank">Policies and Notices</a>
-                </p><!--usgsfooterbar-->
-                <p id="usgsfootertext">
-                    <a href="http://www.usa.gov/" alt="USA.gov logo" title="USAGov: Government Made Easy" width="90" height="26" target="_blank">
-                    <img id="usa" src="../img/header-footer/usa_gov.png" alt="usa_gov pic" /></a>
-                    <a href="http://www.doi.gov/" target="_blank">U.S. Department of the Interior</a> |
-                    <a href="http://www.usgs.gov/" target="_blank">U.S. Geological Survey</a> |
-                    <a href="http://www.doioig.gov/" target="_blank">DOI Inspector General</a>
-                    <p>URL: http//cida.usgs.gov/ca_drought</p>
-                    <p>Contact Information: <a href="mailto:cida_webmaster@usgs.gov?Subject=Colorado+Drought+Visualization" target="_top">gs-cida_ca_drought_cida_app@usgs.gov</a></p>
-                    <p>Page last modified: <span id="last-mod-timestamp"></span></p>
-                </p><!--usgsfootertext-->
-            </div><!--usgsfooter-->
-            <!-- END USGS Footer Template -->
 
         </span>
 

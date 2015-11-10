@@ -608,6 +608,19 @@ nav h3 {
 	text-align:center;
 	}
 	
+#creditLogos img{
+	margin:0 10px 10px 0;
+	alignment-baseline:middle;
+	}
+	
+#doi{
+	width:120px;
+	}
+	
+.equalizer{
+	width:200px;
+	}
+	
 @media only screen 
 	and (min-device-width: 320px)
 	and (max-device-width: 480px)
