@@ -24,6 +24,7 @@
         <link href="../css/overlay.css" rel="stylesheet" type="text/css">
         <link href="../css/main.css" rel="stylesheet" type="text/css">
         <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+		<link href="../css/svg.css" rel="stylesheet" type="text/css">
         <link href="../css/print.css" rel="stylesheet" type="text/css">
         <link href="../css/before-after.css" rel="stylesheet" type="text/css">
         <link href="../css/dygraph.css" rel="stylesheet" type="text/css">
@@ -65,12 +66,12 @@
 		<div class="widget">
 			
 			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('#Introduction')" class="navLink">1</a>
+				<a id="welcomeLink" href="javascript:void(0);" onclick="owdiDrought.nav('#Introduction')" class="navLink">1</a>
 				<div class="toolTip">Introduction</div>
 			</div>
 			
 			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('#Lifeline')" class="navLink">2</a>
+				<a id="lifelineLink" href="javascript:void(0);" onclick="owdiDrought.nav('#Lifeline')" class="navLink">2</a>
 				<div class="toolTip">Lifeline</div>
 			</div>
 			
@@ -85,13 +86,13 @@
 			</div>
 			
 			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('#ExtendedDrought')" class="navLink">5</a>
-				<div class="toolTip">Extended drought</div>
+				<a href="javascript:void(0);" onclick="owdiDrought.nav('#WaterSupply')" class="navLink">5</a>
+				<div class="toolTip">Water supply</div>
 			</div>
 			
 			<div class="navBox">
-				<a href="javascript:void(0);" onclick="owdiDrought.nav('#WaterSupply')" class="navLink">6</a>
-				<div class="toolTip">Water supply</div>
+				<a href="javascript:void(0);" onclick="owdiDrought.nav('#ExtendedDrought')" class="navLink">6</a>
+				<div class="toolTip">Extended drought</div>
 			</div>
 			
 			<div class="navBox">
@@ -531,85 +532,6 @@
 		
 		</script>		</section>
             </div>
-	    <div id="ExtendedDrought" class="container">
-                <section id="mainmessagedirt" class="section">
-		<div class="widget">
-			<div id="keynotedirt" class="keynote">
-		    	<div id="pindirt" class="pin">
-		        	<h2>The western U.S. is experiencing an extended drought.</h2>
-		        </div>
-		    </div>
-			
-			<div class="socialMedia">
-				<img src="../img/social-media/twitter-whie-01.svg" alt="twitter icon"/>
-				<img src="../img/social-media/github-white-01.svg" alt="github icon"/>
-				<img id="ExtendedDroughtLinkOut" src="../img/social-media/link-white-01.svg" alt="link icon"/>
-				<div id="ExtendedDroughtLink" class="takeLink" >
-					<input id="ExtendedDroughtURL" type="text" value="http://go.usa.gov/#ExtendedDrought">
-				</div>
-			</div>
-		</div>
-		
-		<script>
-		
-			$('#ExtendedDroughtLinkOut').on('click', function(){
-				$('#ExtendedDroughtLink').toggle();
-				$('#ExtendedDroughtURL').select();
-				});
-		
-		</script>		</section>
-            </div>
-	    <div id="droughtContainer" class="container">
-                <section id="dygraphsection" class="section">
-		<div class="widget">
-			<div class="sectionContent">
-				<p>Since 2000, the Colorado River Basin has experienced the driest 16-year period in over 100 years of historical natural flows (Bureau of Reclamation, 2015) and one of the most severe droughts in the last 1,200 years (Meko et al., 2007a and 2007b).</p>
-		            
-		        <button class="supportinginfo" id="section6Button">Supporting Info</button>
-		        
-		        <div class="supportingInfoContent" id="section6Info">
-		            <p>Bureau of Reclamation, 2015. <a href="http://www.usbr.gov/lc/region/g4000/NaturalFlow/index.html" target="_blank">Colorado River Basin Natural Flow and Salt Data website</a>.</p>
-		            
-		            <p>Meko, D.M., et al. 2007a. <a href="ftp://ftp.ncdc.noaa.gov/pub/data/paleo/treering/reconstructions/northamerica/usa/upper-colorado-flow2007.txt" target="_blank">Upper Colorado River Flow Reconstruction</a>. IGBP PAGES/World Data Center for Paleoclimatology. Data Contribution Series # 2007-052. NOAA/NCDC Paleoclimatology Program, Boulder CO, USA.</p>
-		            
-		            <p>Meko, D.M., C.A. Woodhouse, C.H. Baisan, T. Knight, J.J. Lukas, M.K. Hughes, and M.W. Salzer. 2007b. <a href="http://onlinelibrary.wiley.com/doi/10.1029/2007GL029988/pdf" target="_blank">Medieval drought in the upper Colorado River Basin</a>. Geophysical Research Letters, Vol. 34, L10705.</p>
-		
-		        </div>
-		       
-			   <p>The <a href="http://droughtmonitor.unl.edu/" target="_blank">U.S. Drought Monitor</a> shows the extent and intensity of drought conditions in the Western U.S. over time from 2000 to 2015.</p>
-			   
-			   	<a href="http://droughtmonitor.unl.edu/" target="_blank">
-		        	<img id="usDroughtGif" src="../img/usdrought.gif" alt="U.S. Drought Monitor"/>
-				</a>
-		        
-			</div>
-			
-			<div class="socialMedia onWhite">
-				<img src="../img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
-				<img src="../img/social-media/github-blue-01.svg" alt="github icon"/>
-				<img id="droughtMonitorLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
-				<div id="droughtMonitorLink" class="takeLinkBlue" >
-					<input id="droughtMonitorURL" type="text" value="http://go.usa.gov/#droughtContainer">
-				</div>
-			</div>
-			
-		</div>
-		
-		<script>
-		    var button = $('#section6Button');
-		    
-		    button.click(function() {
-		        $('#section6Info').toggle();
-		    });
-						 
-			$('#droughtMonitorLinkOut').on('click', function(){
-					$('#droughtMonitorLink').toggle();
-					$('#droughtMonitorURL').select();
-				});
-		
-		    </script>
-				</section>
-            </div>
 	    <div id="WaterSupply" class="container">
                 <section id="waterSupplyVariableOverTime" class="section">
 		<div class="widget">
@@ -737,6 +659,85 @@
 				});
 		                 
 		    </script>		</section>
+            </div>
+		<div id="ExtendedDrought" class="container">
+                <section id="mainmessagedirt" class="section">
+		<div class="widget">
+			<div id="keynotedirt" class="keynote">
+		    	<div id="pindirt" class="pin">
+		        	<h2>The western U.S. is experiencing an extended drought.</h2>
+		        </div>
+		    </div>
+			
+			<div class="socialMedia">
+				<img src="../img/social-media/twitter-whie-01.svg" alt="twitter icon"/>
+				<img src="../img/social-media/github-white-01.svg" alt="github icon"/>
+				<img id="ExtendedDroughtLinkOut" src="../img/social-media/link-white-01.svg" alt="link icon"/>
+				<div id="ExtendedDroughtLink" class="takeLink" >
+					<input id="ExtendedDroughtURL" type="text" value="http://go.usa.gov/#ExtendedDrought">
+				</div>
+			</div>
+		</div>
+		
+		<script>
+		
+			$('#ExtendedDroughtLinkOut').on('click', function(){
+				$('#ExtendedDroughtLink').toggle();
+				$('#ExtendedDroughtURL').select();
+				});
+		
+		</script>		</section>
+            </div>
+	    <div id="droughtContainer" class="container">
+                <section id="dygraphsection" class="section">
+		<div class="widget">
+			<div class="sectionContent">
+				<p>Since 2000, the Colorado River Basin has experienced the driest 16-year period in over 100 years of historical natural flows (Bureau of Reclamation, 2015) and one of the most severe droughts in the last 1,200 years (Meko et al., 2007a and 2007b).</p>
+		            
+		        <button class="supportinginfo" id="section6Button">Supporting Info</button>
+		        
+		        <div class="supportingInfoContent" id="section6Info">
+		            <p>Bureau of Reclamation, 2015. <a href="http://www.usbr.gov/lc/region/g4000/NaturalFlow/index.html" target="_blank">Colorado River Basin Natural Flow and Salt Data website</a>.</p>
+		            
+		            <p>Meko, D.M., et al. 2007a. <a href="ftp://ftp.ncdc.noaa.gov/pub/data/paleo/treering/reconstructions/northamerica/usa/upper-colorado-flow2007.txt" target="_blank">Upper Colorado River Flow Reconstruction</a>. IGBP PAGES/World Data Center for Paleoclimatology. Data Contribution Series # 2007-052. NOAA/NCDC Paleoclimatology Program, Boulder CO, USA.</p>
+		            
+		            <p>Meko, D.M., C.A. Woodhouse, C.H. Baisan, T. Knight, J.J. Lukas, M.K. Hughes, and M.W. Salzer. 2007b. <a href="http://onlinelibrary.wiley.com/doi/10.1029/2007GL029988/pdf" target="_blank">Medieval drought in the upper Colorado River Basin</a>. Geophysical Research Letters, Vol. 34, L10705.</p>
+		
+		        </div>
+		       
+			   <p>The <a href="http://droughtmonitor.unl.edu/" target="_blank">U.S. Drought Monitor</a> shows the extent and intensity of drought conditions in the Western U.S. over time from 2000 to 2015.</p>
+			   
+			   	<a href="http://droughtmonitor.unl.edu/" target="_blank">
+		        	<img id="usDroughtGif" src="../img/usdrought.gif" alt="U.S. Drought Monitor"/>
+				</a>
+		        
+			</div>
+			
+			<div class="socialMedia onWhite">
+				<img src="../img/social-media/twitter-blue-01.svg" alt="twitter icon"/>
+				<img src="../img/social-media/github-blue-01.svg" alt="github icon"/>
+				<img id="droughtMonitorLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
+				<div id="droughtMonitorLink" class="takeLinkBlue" >
+					<input id="droughtMonitorURL" type="text" value="http://go.usa.gov/#droughtContainer">
+				</div>
+			</div>
+			
+		</div>
+		
+		<script>
+		    var button = $('#section6Button');
+		    
+		    button.click(function() {
+		        $('#section6Info').toggle();
+		    });
+						 
+			$('#droughtMonitorLinkOut').on('click', function(){
+					$('#droughtMonitorLink').toggle();
+					$('#droughtMonitorURL').select();
+				});
+		
+		    </script>
+				</section>
             </div>
             <div id="StorageCapacity" class="container">
                 <section id="mainmessage3" class="section">
