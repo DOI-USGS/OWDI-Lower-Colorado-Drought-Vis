@@ -92,6 +92,31 @@
 		<p id="lakeMeadRead07" class="readMore">{{{ tr.readMore }}}</p>
 	</div>
 	<!--mead-info-5-->
+	
+	<button class="supportinginfo spacer" id="section15Button">{{{ tr.suppInfo }}}</button>
+
+		<div class="supportingInfoContent" id="section15Info">
+
+<p>{{{ tr.lakeMeadStatic3 }}}</p>
+
+
+			<p><a href="http://www.cbrfc.noaa.gov/" target="_blank">{{{ tr.lakeMeadStatic4 }}}</a>
+			</p>
+            
+			<p><a href="http://waterdata.usgs.gov/nwis" target="_blank">{{{ tr.lakeMeadStatic5 }}}</a>.</p>
+
+            <p>{{{ tr.lakeMeadStatic6 }}}</p>
+            
+            <p><a href="http://www.usbr.gov/uc/water/crsp/studies/index.html" target="_blank">{{{ tr.lakeMeadStatic7 }}}</a>.
+            </p>
+            <p><a href="http://www.usbr.gov/lc/region/g4000/24mo/index.html" target="_blank">{{{ tr.lakeMeadStatic8 }}}</a>.
+            </p>
+            
+            <p><a href="http://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf" target="_blank">{{{ tr.lakeMeadStatic9 }}}</a></p>
+            
+            
+		</div>
+		
 	<div class="exploreMore" id="lakeMeadAnimatedExtra">
 			<a href="../explore" target="_blank">
 				<img src="../img/leafletmapthumbnail.png" alt="Leaflet Map of the Colorado River Basin"/>
@@ -103,6 +128,12 @@
 </div>
 
 <script>
+	var button = $('#section15Button');
+
+	button.click(function () {
+		$('#section15Info').toggle();
+	});
+	
 	$('#lakeMeadRead01').on('click', function(){
 		
 		$('#lakeMeadHidden01').toggle();
