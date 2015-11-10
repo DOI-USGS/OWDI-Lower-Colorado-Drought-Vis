@@ -71,6 +71,28 @@ group_svg_elements <- function(svg, groups){
   invisible(svg)
 }
 
+group_svg_group <- function(svg, groups){
+  
+  # create groups
+  root_nd <- xmlRoot(svg)
+  for (i in 1:length(groups)){
+    if (is.list(groups)){
+      g_id <- newXMLNode('g', parent = root_nd, attrs = c('id' = names(groups)[i]))
+      for (j in 1:length(groups[[i]])){
+        path_nodes <- xpathApply(svg, sprintf("//*[local-name()='g'][@id='%s']",groups[[i]][j]))
+        addChildren(g_id, kids = list(path_nodes))
+      }
+    } else {
+      
+      path_nodes <- xpathApply(svg, sprintf("//*[local-name()='g'][@id='%s']",groups[i]))
+      parent_nd <- xpathApply(svg, sprintf("//*[local-name()='g'][@id='%s']/parent::node()",groups[i]))
+      g_id <- newXMLNode('g', parent = parent_nd)
+      addChildren(g_id, kids = list(path_nodes))
+    }
+  }
+  invisible(svg)
+}
+
 #' @param svg an open svg doc (see xml_doc <- xmlParse(svg_file, useInternalNode=TRUE))
 #' @param attrs a list of styles that match group or element IDs
 #' @import XML

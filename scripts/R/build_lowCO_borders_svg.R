@@ -5,8 +5,8 @@ library(XML)
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 source('scripts/R/create_contract_areas.R')
 
-width=7.5
-height=7.6
+width=11
+height=9.6
 plot_dir = 'src_data/lower-co-map'
 svg_file = file.path(plot_dir,paste0('lo_CO_borders','.svg'))
 min.contract = 15000
@@ -15,8 +15,8 @@ grey_simp_tol <- 1.3*simp_tol # less res for non-highlighted states
 min_area <- 1e+10
 epsg_code <- '+init=epsg:3479' #5070 for USGS CONUS albers?
 
-ylim <- c(-1806051, 1654371) # in epsg_code
-xlim <- c(-3193054, 5512372)
+ylim <- c(-2806051, 1254371) # in epsg_code
+xlim <- c(-2893054, 9512372)
 
 lo_co_states <- c("California","Nevada","Arizona")
 keep_non <- c("Texas","Utah","Colorado","New Mexico","Oregon","Wyoming","Oklahoma","Nebraska","Kansas")
@@ -32,9 +32,11 @@ co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5'
 top_user_styles = c('fill'='#00CC99', 'fill-opacity'='0.75', 'stroke-width'='2.5', 'stroke'='#00CC99', 'stroke-linejoin'="round")
 
 
-mexico = readOGR(dsn = "src_data/mexico",layer="MEX_adm0") %>%
+mexico = readOGR(dsn = "src_data/mexico",layer="mexstates") %>%
   spTransform(CRS(epsg_code)) %>%
   gSimplify(simp_tol)
+
+
 
 states = readOGR(dsn = "src_data/states_21basic",layer="states") 
 rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="CRB_Rivers")
@@ -120,12 +122,14 @@ user_att <- vector('list',n.users) %>%
   lapply(function(x)x=c('opacity'='0')) %>% 
   setNames(paste0('usage-',1:n.users))
 
+mexico_names = paste0("Mexico-",1:32)
 svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- clean_svg_doc(svg) %>%
-  name_svg_elements(svg, ele_names = c(keep_non, 'Mexico', lo_co_states,'Lower-Colorado-river-basin','Upper-Colorado-river-basin','Colorado-river',top_users)) %>%
-  group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'mexico' = 'Mexico', 'lo-co-states' = lo_co_states,'co-basin-polygon' = c('Upper-Colorado-river-basin','Lower-Colorado-river-basin'), 'co-river-polyline' = 'Colorado-river','top-users' = top_users)) %>%
-  group_svg_elements(groups = c(lo_co_states,'Mexico','Colorado-river','Upper-Colorado-river-basin','Lower-Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
+  name_svg_elements(svg, ele_names = c(keep_non, mexico_names, lo_co_states,'Lower-Colorado-river-basin','Upper-Colorado-river-basin','Colorado-river',top_users)) %>% 
+  group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'Mexico' = mexico_names, 'lo-co-states' = lo_co_states,'co-basin-polygon' = c('Upper-Colorado-river-basin','Lower-Colorado-river-basin'), 'co-river-polyline' = 'Colorado-river','top-users' = top_users)) %>% 
+  group_svg_elements(groups = c(lo_co_states,'Colorado-river',mexico_names,'Upper-Colorado-river-basin','Lower-Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
+  group_svg_group(groups = list('mexico'='Mexico')) %>% 
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles, 'top-users'=top_user_styles)) %>%
   attr_svg_paths(attrs = user_att) %>% 
   add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%

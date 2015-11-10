@@ -53,8 +53,8 @@ for (lang in c('en','es')){
     add_picto_legend() %>% 
     remove_svg_elements(elements = c('delete_group'='g')) %>% 
     add_ecmascript(ecmascript_mead_map()) %>%
-    attr_svg_groups(attrs = list('co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles, 'mexico' = mexico_styles, "top-users"=c('class'='hidden'))) %>%
-    attr_svg_paths(attrs = list('California'=c("class"="california"), 'Nevada'=c("class"="nevada"), 'Arizona'=c("class"="arizona"),'Mexico'=c("class"="mexico"))) %>%
+    attr_svg_groups(attrs = list('co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles, 'mexico' = mexico_styles, "top-users"=c('class'='hidden'),"Mexico"=c("class"="mexico"))) %>%
+    attr_svg_paths(attrs = list('California'=c("class"="california"), 'Nevada'=c("class"="nevada"), 'Arizona'=c("class"="arizona"))) %>% #,"Mexico"=c("class"="mexico")
     add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'draw-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="331;0;") %>%
     add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'reset-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values="0;331;") %>%
     usage_bar_pictogram(values = non_zero_cont, value_mouse = contract_titles, value_contract = contract_values, 
