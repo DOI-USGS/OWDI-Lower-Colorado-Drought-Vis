@@ -127,12 +127,12 @@ svg <- xmlParse(svg_file, useInternalNode=TRUE)
 
 svg <- clean_svg_doc(svg) %>%
   name_svg_elements(svg, ele_names = c(keep_non, mexico_names, lo_co_states,'Lower-Colorado-river-basin','Upper-Colorado-river-basin','Colorado-river',top_users)) %>% 
-  group_svg_elements(groups = list('total-g' = c(keep_non,mexico_names,lo_co_states,'Upper-Colorado-river-basin','Lower-Colorado-river-basin','Colorado-river',top_users))) %>% 
   group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'Mexico' = mexico_names, 'lo-co-states' = lo_co_states,'co-basin-polygon' = c('Upper-Colorado-river-basin','Lower-Colorado-river-basin'), 'co-river-polyline' = 'Colorado-river','top-users' = top_users)) %>% 
   group_svg_elements(groups = c(lo_co_states,'Colorado-river',mexico_names,'Upper-Colorado-river-basin','Lower-Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
   group_svg_group(groups = list('mexico'='Mexico')) %>% 
-  attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles, 'top-users'=top_user_styles)) %>%
+  attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-basin-polygon'=co_basin_styles, 'top-users'=top_user_styles, 'co-river-polyline' = co_river_styles)) %>%
   attr_svg_paths(attrs = user_att) %>% 
+  group_svg_group(groups = list('total-g' = c('non-lo-co-states',"lo-co-states", 'co-basin-polygon',"top-users", "mexico", "co-river-polyline"))) %>% 
   attr_svg_groups(attrs = list('total-g'=c(transform="translate(10,-20),scale(0.97)"))) %>% 
   add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
   edit_attr_svg(c('viewBox'='0 0 540 547')) %>% 

@@ -45,8 +45,8 @@ for (lang in c('en','es')){
   contract_titles <- gsub("'", "\\\\'", contract_titles)
   
   svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
-    add_flag_defs(id = 'usa-flag', x=0,y=-100, width=500,height=500, image_url='US_flag.svg') %>% 
-    add_flag_defs(id = 'mexico-flag', x=120,y=150, width=650,height=547, image_url='Mexico_flag.svg') %>% 
+    add_flag_defs(id = 'usa-flag', x=-10,y=-80, width=500,height=500, image_url='US_flag.svg') %>% 
+    add_flag_defs(id = 'mexico-flag', x=120,y=170, width=650,height=547, image_url='Mexico_flag.svg') %>% 
     edit_attr_svg(c('viewBox'='-50 0 640 547', 'onload'='init(evt)')) %>% 
     add_rect(x="-50", width="100%", height="100%", style="max-width=950px", fill="url(#background-image)", at=0, rx='6',ry='6', id='background-panel') %>%
     add_scene_buttons() %>% 
