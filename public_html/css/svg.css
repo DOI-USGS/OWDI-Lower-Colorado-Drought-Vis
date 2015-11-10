@@ -38,8 +38,8 @@
 
 .level-move {
     -ms-transform: scale(1,1); /* IE 9 */
-    -webkit-transform:  scale(1,1); /* Safari */
-    transform:  scale(1,1);
+    -webkit-transform:  scale(1,1) translateZ(0); /* Safari */
+    transform:  scale(1,1); 
 }
 .mead-flood {
     -ms-transform: translate(0px,41.81159px); /* IE 9 */
