@@ -30,35 +30,36 @@ var conditions =
 "shortage-3":"Shortage Condition Tier 3"}
 function displayAllocationName(evt, name) {
 var data = {"California":{
-"flood":"4,400,000",
-"surplus":"4,400,000",
-"normal":"4,400,000",
-"shortage-1":"4,400,000",
-"shortage-2":"4,400,000",
-"shortage-3":"4,400,000"},
+"flood":["4,400,000 acre-feet/year,","plus additional deliveries as requested."],
+"surplus":["4,400,000 acre-feet/year,","plus surplus water."],
+"normal":["4,400,000 acre-feet/year,","plus or minus any ICS created or delivered."],
+"shortage-1":["","4,400,000 acre-feet/year"],
+"shortage-2":["","4,400,000 acre-feet/year"],
+"shortage-3":["","4,400,000 acre-feet/year"]},
 "Arizona":{
-"flood":"2,800,000",
-"surplus":"2,800,000",
-"normal":"2,800,000",
-"shortage-1":"2,480,000",
-"shortage-2":"2,400,000",
-"shortage-3":"2,320,000"},
+"flood":["2,800,000 acre-feet/year,","plus additional deliveries as requested."],
+"surplus":["2,800,000 acre-feet/year,","plus surplus water."],
+"normal":["2,800,000 acre-feet/year,","plus or minus any ICS created or delivered."],
+"shortage-1":["2,480,000 acre-feet/year,","(deliveries reduced by 320,000 acre-feet)."],
+"shortage-2":["2,400,000 acre-feet/year,","(deliveries reduced by 400,000 acre-feet)."],
+"shortage-3":["2,320,000 acre-feet/year,","(deliveries reduced by 480,000 acre-feet)."]},
 "Nevada":{
-"flood":"300,000",
-"surplus":"300,000",
-"normal":"300,000",
-"shortage-1":"287,000",
-"shortage-2":"283,000",
-"shortage-3":"280,000"},
+"flood":["300,000 acre-feet/year,","plus additional deliveries as requested."],
+"surplus":["300,000 acre-feet/year,","plus surplus water."],
+"normal":["300,000 acre-feet/year,","plus or minus any ICS created or delivered."],
+"shortage-1":["287,000 acre-feet/year,","(deliveries reduced by 13,000 acre-feet)."],
+"shortage-2":["283,000 acre-feet/year,","(deliveries reduced by 17,000 acre-feet)."],
+"shortage-3":["280,000 acre-feet/year,","(deliveries reduced by 20,000 acre-feet)."]},
 "Mexico":{
-"flood":"1,500,000",
-"surplus":"1,500,000",
-"normal":"1,500,000",
-"shortage-1":"1,500,000",
-"shortage-2":"1,500,000",
-"shortage-3":"1,500,000"}};
+"flood":["","1,700,000 acre-feet/year."],
+"surplus":["1,500,000 acre-feet/year,","plus surplus water."],
+"normal":["1,500,000 acre-feet/year, plus or minus","any water deferred or delivered under Minute 319."],
+"shortage-1":["1,500,000 acre-feet/year, (deliveries reduced by","50,000 acre-feet; reductions may be offset under Minute 319)."],
+"shortage-2":["1,500,000 acre-feet/year, (deliveries reduced by","70,000 acre-feet; reductions may be offset under Minute 319)."],
+"shortage-3":["1,500,000 acre-feet/year, (deliveries reduced by","125,000 acre-feet; reductions may be offset under Minute 319)."]}};
 var state = document.getElementById("allocation-state").firstChild.data
-document.getElementById("allocation-value").firstChild.data = name + ": " + data[name][state] +" acre-feet/year";
+document.getElementById("allocation-value-1").firstChild.data = name + ": " + data[name][state][0];
+document.getElementById("allocation-value-2").firstChild.data = data[name][state][1];
 document.getElementById("allocation-context").firstChild.data = conditions[state];
 }
 function setMeadCondition(storage_id){
@@ -86,7 +87,8 @@ function lowlightState(evt, name) {
 document.getElementById(name).setAttribute("stroke","#FFFFFF");
 }
 function hideAllocationName(evt) {
-document.getElementById("allocation-value").firstChild.data = " ";
+document.getElementById("allocation-value-1").firstChild.data = " ";
+document.getElementById("allocation-value-2").firstChild.data = " ";
 document.getElementById("allocation-context").firstChild.data = " ";
 }
 function incrementScene(){
@@ -589,8 +591,9 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <text id="mead-storage-text" class="label" x="476" y="443" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
     <text id="mead-storage-label" class="label" dy="-1.1em" x="476" y="443" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">Live Storage:</text>
     <text id="allocation-info" class="label" x="55" y="450" fill="#FFFFFF" stroke="none" style="text-anchor:start;">  </text>
-    <text id="allocation-value" class="label" x="385" y="500" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
-    <text id="allocation-context" class="label" x="385" y="500" dy="1.2em" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
+    <text id="allocation-value-1" class="small-text" x="380" y="480" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
+    <text id="allocation-value-2" class="small-text" x="380" y="480" dy="1.1em" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
+    <text id="allocation-context" class="label" x="380" y="480" dy="2.0em" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
     <text id="allocation-state" class="label" x="55" y="400" fill="none" stroke="none" style="text-anchor:start;">  </text>
   </g>
   <g id="California-pictos" stroke="#1975d1" stroke-width="1.5" fill="#1975d1" class="hidden">
