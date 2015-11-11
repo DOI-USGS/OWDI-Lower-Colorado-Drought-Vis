@@ -138,36 +138,51 @@ hide("sankey-lines");
 document.getElementById("mead-pictogram-legend").setAttribute("class","legend-box");
 }
 function scene3(){
-hide("mouser-helper");
-showStateMouseovers();
-show("Nevada-pictos");
-show("California-pictos");
-show("Arizona-pictos");
-show("Mexico-pictos");
-hide("pictogram-topfive");
-show("sankey-lines");
-hide("top-users");
-hide("co-river-polyline");
-hide("co-basin-polygon");
-moveStates();
-hide("non-lo-co-states");
-document.getElementById("mead-pictogram-legend").setAttribute("class","legend-moved");
-show("Mead-2D");
-	document.getElementById("Mead-water-level").setAttribute("class","mead-flood");
-	document.getElementById("mead-elevation-text-position").setAttribute("class","mead-flood");
+	hide("mouser-helper");
+	showStateMouseovers();
+	show("Nevada-pictos");
+	show("California-pictos");
+	show("Arizona-pictos");
+	show("Mexico-pictos");
+	hide("pictogram-topfive");
+	show("sankey-lines");
+	hide("top-users");
+	hide("co-river-polyline");
+	hide("co-basin-polygon");
+	moveStates();
+	hide("non-lo-co-states");
+	document.getElementById("mead-pictogram-legend").setAttribute("class","legend-moved");
+	show("Mead-2D");
+	if ("beginElement" in document.getElementById("draw-colorado-river")) {
+		document.getElementById("Mead-water-level").setAttribute("class","mead-flood");
+		document.getElementById("mead-elevation-text-position").setAttribute("class","mead-flood");
+	} else {
+		document.getElementById("Mead-water-level").setAttribute("transform","translate(0,41.81159)");
+		document.getElementById("mead-elevation-text-position").setAttribute("transform","translate(0,41.81159)");
+	}
 	setMeadCondition("flood");
 	setAllocationsNormal();
 }
 function scene4(){
 hide("mouser-helper");
-	document.getElementById("Mead-water-level").setAttribute("class","mead-surplus");
-	document.getElementById("mead-elevation-text-position").setAttribute("class","mead-surplus");
+	if ("beginElement" in document.getElementById("draw-colorado-river")) {
+		document.getElementById("Mead-water-level").setAttribute("class","mead-surplus");
+		document.getElementById("mead-elevation-text-position").setAttribute("class","mead-surplus");
+	} else {
+		document.getElementById("Mead-water-level").setAttribute("transform","translate(0,90.109)");
+		document.getElementById("mead-elevation-text-position").setAttribute("transform","translate(0,90.109)");
+	}
 	setMeadCondition("surplus");
 	setAllocationsNormal();
 }
 function scene5(){
+if ("beginElement" in document.getElementById("draw-colorado-river")) {
 	document.getElementById("Mead-water-level").setAttribute("class","mead-normal");
 	document.getElementById("mead-elevation-text-position").setAttribute("class","mead-normal");
+	} else {
+		document.getElementById("Mead-water-level").setAttribute("transform","translate(0,197.61)");
+		document.getElementById("mead-elevation-text-position").setAttribute("transform","translate(0,197.61)");
+	}
 	setMeadCondition("normal");
 	setAllocationsNormal();
 }
