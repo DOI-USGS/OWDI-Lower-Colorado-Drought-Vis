@@ -1,4 +1,1 @@
-http://www.diva-gis.org/gdata
-Selected Mexico, Administrative Areas
-Downloaded http://biogeo.ucdavis.edu/data/diva/adm/MEX_adm.zip
-Unzipped and extract only MEX_adm0 shapefile from this set, which provies admin unit outline rather than individual political units within Mexico.
+http://www.arcgis.com/home/item.html?id=ac9041c51b5c49c683fbfec61dc03ba8

@@ -17,7 +17,7 @@ for (lang in c('en','es')){
   read_dir = 'src_data/lower-co-map'
   svg_file = file.path(read_dir,paste0('lo_CO_borders','.svg'))
   out_file = file.path(plot_dir,paste0('mead_scene_animated','.svg'))
-  co_river_styles = c('style'="stroke-dasharray:341;stroke-dashoffset:341;stroke-linejoin:round;stroke-linecap:round;")
+  co_river_styles = c('style'="stroke-dasharray:351;stroke-dashoffset:351;stroke-linejoin:round;stroke-linecap:round;")
   co_basin_styles = c('fill'='#B22C2C', 'fill-opacity'='0.3', 'stroke-width'='2.5', 'stroke'='#B22C2C', 'stroke-linejoin'="round", class='hidden')
   pictogram_styles = c('fill'='none', 'stroke-width'='2.5', 'stroke'='#FFFFFF', 'class'='hidden')
   mead_water_styles = c(fill='#1975d1',stroke='none')
@@ -45,18 +45,18 @@ for (lang in c('en','es')){
   contract_titles <- gsub("'", "\\\\'", contract_titles)
   
   svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
-    add_flag_defs(id = 'usa-flag', x=0,y=-100, width=500,height=500, image_url='US_flag.svg') %>% 
-    add_flag_defs(id = 'mexico-flag', x=120,y=150, width=650,height=547, image_url='Mexico_flag.svg') %>% 
+    add_flag_defs(id = 'usa-flag', x=-10,y=-80, width=500,height=500, image_url='US_flag.svg') %>% 
+    add_flag_defs(id = 'mexico-flag', x=120,y=170, width=650,height=547, image_url='Mexico_flag.svg') %>% 
     edit_attr_svg(c('viewBox'='-50 0 640 547', 'onload'='init(evt)')) %>% 
     add_rect(x="-50", width="100%", height="100%", style="max-width=950px", fill="url(#background-image)", at=0, rx='6',ry='6', id='background-panel') %>%
     add_scene_buttons() %>% 
     add_picto_legend() %>% 
     remove_svg_elements(elements = c('delete_group'='g')) %>% 
     add_ecmascript(ecmascript_mead_map()) %>%
-    attr_svg_groups(attrs = list('co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles, 'mexico' = mexico_styles, "top-users"=c('class'='hidden'))) %>%
-    attr_svg_paths(attrs = list('California'=c("class"="california"), 'Nevada'=c("class"="nevada"), 'Arizona'=c("class"="arizona"),'Mexico'=c("class"="mexico"))) %>%
-    add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'draw-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="331;0;") %>%
-    add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'reset-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values="0;331;") %>%
+    attr_svg_groups(attrs = list('co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles, 'mexico' = mexico_styles, "top-users"=c('class'='hidden'),"Mexico"=c("class"="mexico"))) %>%
+    attr_svg_paths(attrs = list('California'=c("class"="california"), 'Nevada'=c("class"="nevada"), 'Arizona'=c("class"="arizona"))) %>% #,"Mexico"=c("class"="mexico")
+    add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'draw-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="351;0;") %>%
+    add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'reset-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values="0;351;") %>%
     usage_bar_pictogram(values = non_zero_cont, value_mouse = contract_titles, value_contract = contract_values, 
                         scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
     add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
