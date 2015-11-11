@@ -43,7 +43,7 @@ rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="CRB_Rivers")
 #mx.rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="Colorado_Mexico")
 contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
 
- 
+
 sorted_contracts <- sort(as.numeric(contracts$FiveYrAvg_),decreasing = T, index.return = T)
 sorted_values <- sorted_contracts$x[sorted_contracts$x > min.contract]
 sorted_contract_i <- sorted_contracts$ix[sorted_contracts$x > min.contract]
@@ -111,11 +111,11 @@ spTransform(co_river_join, CRS(epsg_code)) %>%
 
 
 for (i in 1:n.users){
-
+  
   spTransform(contracts[sorted_contract_i[i],], CRS(epsg_code)) %>%
     plot(add=TRUE)
-
-
+  
+  
 }
 dev.off()
 user_att <- vector('list',n.users) %>% 
