@@ -135,7 +135,11 @@ hide("Mead-2D");
 hideStateMouseovers();
 show("mead-pictogram-legend");
 hide("sankey-lines");
+if ("beginElement" in document.getElementById("draw-colorado-river")) {
 document.getElementById("mead-pictogram-legend").setAttribute("class","legend-box");
+} else {
+	document.getElementById("mead-pictogram-legend").setAttribute("transform","translate(200, 135)");
+}
 }
 function scene3(){
 	hide("mouser-helper");
@@ -151,7 +155,11 @@ function scene3(){
 	hide("co-basin-polygon");
 	moveStates();
 	hide("non-lo-co-states");
-	document.getElementById("mead-pictogram-legend").setAttribute("class","legend-moved");
+	if ("beginElement" in document.getElementById("draw-colorado-river")) {
+		document.getElementById("mead-pictogram-legend").setAttribute("class","legend-moved");
+	} else {
+		document.getElementById("mead-pictogram-legend").setAttribute("transform","translate(-135, 190)");
+	}
 	show("Mead-2D");
 	if ("beginElement" in document.getElementById("draw-colorado-river")) {
 		document.getElementById("Mead-water-level").setAttribute("class","mead-flood");
@@ -187,20 +195,35 @@ if ("beginElement" in document.getElementById("draw-colorado-river")) {
 	setAllocationsNormal();
 }
 function scene6(){
-	document.getElementById("Mead-water-level").setAttribute("class","mead-shortage-1");
-	document.getElementById("mead-elevation-text-position").setAttribute("class","mead-shortage-1");
+	if ("beginElement" in document.getElementById("draw-colorado-river")) {
+		document.getElementById("Mead-water-level").setAttribute("class","mead-shortage-1");
+		document.getElementById("mead-elevation-text-position").setAttribute("class","mead-shortage-1");
+	} else {
+		document.getElementById("Mead-water-level").setAttribute("transform","translate(0,300.4)");
+		document.getElementById("mead-elevation-text-position").setAttribute("transform","translate(0,300.4)");
+	}
 	setMeadCondition("shortage-1");
 	setAllocationsShortage1();
 }
 function scene7(){
+if ("beginElement" in document.getElementById("draw-colorado-river")) {
 	document.getElementById("Mead-water-level").setAttribute("class","mead-shortage-2");
 	document.getElementById("mead-elevation-text-position").setAttribute("class","mead-shortage-2");
+	} else {
+	document.getElementById("Mead-water-level").setAttribute("transform","translate(0,330.04)");
+	document.getElementById("mead-elevation-text-position").setAttribute("transform","translate(0,330.04)");
+	}
 	setMeadCondition("shortage-2");
 	setAllocationsShortage2();
 }
 function scene8(){
+if ("beginElement" in document.getElementById("draw-colorado-river")) {
 	document.getElementById("Mead-water-level").setAttribute("class","mead-shortage-3");
 	document.getElementById("mead-elevation-text-position").setAttribute("class","mead-shortage-3");
+	} else {
+	document.getElementById("Mead-water-level").setAttribute("transform","translate(0,356.52)");
+	document.getElementById("mead-elevation-text-position").setAttribute("transform","translate(0,356.52)");
+	}
 	setMeadCondition("shortage-3");
 	setAllocationsShortage3();
 }
