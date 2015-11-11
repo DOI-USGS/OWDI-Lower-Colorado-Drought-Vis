@@ -205,24 +205,23 @@ var ele = document.getElementById(name);
 ele.setAttribute("class","hidden");
 }
 function resetStates(){ 
-document.getElementById("California").setAttribute("class","california");
-document.getElementById("Nevada").setAttribute("class","nevada");
-document.getElementById("Arizona").setAttribute("class","arizona");
-document.getElementById("Mexico").setAttribute("class","mexico");
+
 var riverDraw = document.getElementById("draw-colorado-river");
-if (!"beginElement" in riverDraw) {
-	document.getElementById("California").setAttribute("transform","translate(0,0)");
-	document.getElementById("Nevada").setAttribute("transform","translate(0,0)");
-	document.getElementById("Arizona").setAttribute("transform","translate(0,0)");
-	document.getElementById("Mexico").setAttribute("transform","translate(0,0),scale(1.0)");
-	document.getElementById("Mexico").setAttribute("stroke-width","1");
-}
+	if (!"beginElement" in riverDraw) {
+		document.getElementById("California").setAttribute("transform","translate(0,0)");
+		document.getElementById("Nevada").setAttribute("transform","translate(0,0)");
+		document.getElementById("Arizona").setAttribute("transform","translate(0,0)");
+		document.getElementById("Mexico").setAttribute("transform","translate(0,0),scale(1.0)");
+		document.getElementById("Mexico").setAttribute("stroke-width","1");
+	} else {
+		document.getElementById("California").setAttribute("class","california");
+		document.getElementById("Nevada").setAttribute("class","nevada");
+		document.getElementById("Arizona").setAttribute("class","arizona");
+		document.getElementById("Mexico").setAttribute("class","mexico");
+	}
 }
 function moveStates(){
-document.getElementById("California").setAttribute("class","california-moved");
-document.getElementById("Nevada").setAttribute("class","nevada-moved");
-document.getElementById("Arizona").setAttribute("class","arizona-moved");
-document.getElementById("Mexico").setAttribute("class","mexico-moved");
+
 	var riverDraw = document.getElementById("draw-colorado-river");
 	if (!"beginElement" in riverDraw) {
 		document.getElementById("California").setAttribute("transform","translate(-40,-20)");
@@ -230,6 +229,11 @@ document.getElementById("Mexico").setAttribute("class","mexico-moved");
 		document.getElementById("Arizona").setAttribute("transform","translate(-8,-12)");
 		document.getElementById("Mexico").setAttribute("transform","translate(-78,105),scale(0.55)");
 		document.getElementById("Mexico").setAttribute("stroke-width","2.73");
+	} else {
+		document.getElementById("California").setAttribute("class","california-moved");
+		document.getElementById("Nevada").setAttribute("class","nevada-moved");
+		document.getElementById("Arizona").setAttribute("class","arizona-moved");
+		document.getElementById("Mexico").setAttribute("class","mexico-moved");
 	}
 }
 function drawCoRiver(name){
