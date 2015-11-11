@@ -245,7 +245,7 @@ add_scene_buttons <- function(svg){
 
 add_picto_legend <- function(svg){
   root_nd <- xmlRoot(svg)
-  g_nd = newXMLNode('g',parent=root_nd,attrs = c(id='mead-pictogram-legend',transform='translate(200,135)',opacity="0",class="legend-hidden"))
+  g_nd = newXMLNode('g',parent=root_nd,attrs = c(id='mead-pictogram-legend',transform='translate(200,135)',class="legend-hidden"))
   newXMLNode('rect',parent=g_nd,attrs=c(x="150", y="270", width="130", height="45", stroke="#FFFFFF", fill="none"))
   newXMLNode('text', parent=g_nd, newXMLTextNode("Legend"), attrs=c(class='legend-text', x="215", y="278", fill="#FFFFFF", dy="0.7em", stroke="none", style="text-anchor: middle;"))
   newXMLNode('rect',parent=g_nd,attrs=c(x="156", y="300", width="10", height="10", rx="2", ry="2", fill="#1975d1", stroke="#1975d1", 'stroke-width'="1.5"))
