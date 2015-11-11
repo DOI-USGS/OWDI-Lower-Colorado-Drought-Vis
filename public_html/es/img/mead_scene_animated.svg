@@ -105,7 +105,7 @@ scenes[svgDocument.sceneNum]();
 }
 function scene1(){
 show("co-river-polyline");
-draw("colorado-river");
+drawCoRiver();
 show("co-basin-polygon");
 hide("top-users");
 hide("pictogram-topfive");
@@ -138,6 +138,7 @@ hide("sankey-lines");
 document.getElementById("mead-pictogram-legend").setAttribute("class","legend-box");
 }
 function scene3(){
+hide("mouser-helper");
 showStateMouseovers();
 show("Nevada-pictos");
 show("California-pictos");
@@ -158,6 +159,7 @@ show("Mead-2D");
 	setAllocationsNormal();
 }
 function scene4(){
+hide("mouser-helper");
 	document.getElementById("Mead-water-level").setAttribute("class","mead-surplus");
 	document.getElementById("mead-elevation-text-position").setAttribute("class","mead-surplus");
 	setMeadCondition("surplus");
@@ -214,8 +216,13 @@ document.getElementById("Nevada").setAttribute("class","nevada-moved");
 document.getElementById("Arizona").setAttribute("class","arizona-moved");
 document.getElementById("Mexico").setAttribute("class","mexico-moved");
 }
-function draw(name){
-document.getElementById("draw-"+name).beginElement();}
+function drawCoRiver(name){
+var riverDraw = document.getElementById("draw-colorado-river")
+if ("beginElement" in riverDraw) {
+		riverDraw.beginElement();
+} else {
+		 document.getElementById("co-river-polyline").setAttribute("style","stroke-linejoin:round;stroke-linecap:round;");
+}}
 function drawUserPicto(user_id){
 	document.getElementById("usage-"+user_id).setAttribute("opacity","0.8");
 	document.getElementById("picto-highlight-"+user_id).setAttribute("opacity","0.8");
