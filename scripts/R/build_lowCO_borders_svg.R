@@ -132,7 +132,7 @@ svg <- clean_svg_doc(svg) %>%
   group_svg_group(groups = list('mexico'='Mexico')) %>% 
   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'lo-co-states' = lo_co_styles, 'co-basin-polygon'=co_basin_styles, 'top-users'=top_user_styles, 'co-river-polyline' = co_river_styles)) %>%
   attr_svg_paths(attrs = user_att) %>% 
-  group_svg_group(groups = list('total-g' = c('non-lo-co-states',"mexico", "lo-co-states", "top-users",'co-basin-polygon', "co-river-polyline"))) %>% 
+  group_svg_group(groups = list('total-g' = c('non-lo-co-states',"mexico", "lo-co-states", 'co-basin-polygon', "co-river-polyline", "top-users"))) %>% 
   attr_svg_groups(attrs = list('total-g'=c(transform="translate(10,-20),scale(0.97)"))) %>% 
   add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
   edit_attr_svg(c('viewBox'='0 0 540 547')) %>% 
