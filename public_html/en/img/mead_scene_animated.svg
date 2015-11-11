@@ -575,7 +575,7 @@ parent.setAttribute(element.getAttribute("attributeName"), element.getAttribute(
     <path id="mouser-helper" d="m201.453995,112.872002l-183.068584,-100.156902l78.608601,195.193897l31.298012,-50.675995l61.883972,67.641998l23.437012,-22.837006l-63.26799,-66.993988l51.108978,-22.172005z" fill="#ffffff" stroke="#000000" stroke-width="8" stroke-linejoin="round" opacity="0.6" transform="translate(555,280),scale(0.15,0.15)" class="hidden"/>
     <rect x="555" width="35" height="547" fill="white" opacity="0.0" onclick="incrementScene()"/>
   </g>
-  <g id="mead-pictogram-legend" transform="translate(200,135)" opacity="0" class="legend-hidden">
+  <g id="mead-pictogram-legend" transform="translate(200,135)" class="legend-hidden">
     <rect x="150" y="270" width="130" height="45" stroke="#FFFFFF" fill="none"/>
     <text class="legend-text" x="215" y="278" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: middle;">Legend</text>
     <rect x="156" y="300" width="10" height="10" rx="2" ry="2" fill="#1975d1" stroke="#1975d1" stroke-width="1.5"/>
