@@ -49,7 +49,9 @@ read_flow_data <- function() {
     select(-MeanTreeGage, -Min10YrMean)
   
   flow_df <- flow_df %>% 
-    mutate(Year = as.Date(paste0(Year, "-1-1")))
+    mutate(
+      #LegendYear = Year,
+      Year = as.Date(paste0(Year, "-1-1")))
   
   # write the data to file; this is how the html will actually access it.
   # http://dygraphs.com/data.html: '"CSV" is actually a bit of a misnomer: the 
@@ -87,8 +89,12 @@ plot_flow_data <- function(flow_data) {
     dySeries(c("FlowGage"), label = "Historical Annual Natural Flow", color="#3333FF") %>%
     dySeries(c("TreeGage10YrRunMean"), label = "10-Year Average", color="#C11B17") %>%
     dySeries(c("TreeGageAllYrMean"), label = "Long-Term Average", "#FBB917") %>%
-    dyAxis("y", label = "Flow Volume (million acre-feet)") %>%
+    #dySeries(c("LegendYear"), label = "Year", color="transparent", axis = "y2") %>%
     dyAxis("x", label = "Year") %>%
+    dyAxis("y", label = "Flow Volume (million acre-feet)") %>%
+    #dyAxis("y2", label = "", 
+    #       valueFormatter="", 
+    #       axisLabelFormatter=htmlwidgets::JS('function(x) return "";')) %>%
     dyLegend(labelsSeparateLines=TRUE, labelsDiv="legend_div") %>%
     dyShading(from = "2000-1-1", to = "2013-1-1")
   
@@ -100,7 +106,7 @@ plot_flow_data <- function(flow_data) {
   # arg seems to only work if there aren't any folders in the file name, and
   # "libdir" seems to have to be a descendent of the folder where "file" is
   # located.
-  oldwd <- setwd("public_html/widgets/slide_3")
+  oldwd <- setwd("temp/treeringdata")
   htmlwidgets::saveWidget(dg, "natural_flow_history.html", selfcontained = FALSE, libdir = "js")
   setwd(oldwd)
   
@@ -108,3 +114,4 @@ plot_flow_data <- function(flow_data) {
   dg
 }
 dg <- plot_flow_data(flow_data)
+dg
