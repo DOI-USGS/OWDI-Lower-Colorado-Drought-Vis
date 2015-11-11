@@ -109,7 +109,12 @@ drawCoRiver();
 show("co-basin-polygon");
 hide("top-users");
 hide("pictogram-topfive");
-hide("mead-pictogram-legend");
+if ("beginElement" in document.getElementById("draw-colorado-river")) {
+	hide("mead-pictogram-legend");
+	} else {
+		document.getElementById("mead-pictogram-legend").setAttribute("opacity","0");
+	}
+
 setTimeout(function(){
 {show("mouser-helper");}},5000)
 setTimeout(function(){
@@ -133,11 +138,13 @@ hide("Arizona-pictos");
 hide("Mexico-pictos");
 hide("Mead-2D");
 hideStateMouseovers();
-show("mead-pictogram-legend");
+
 hide("sankey-lines");
 if ("beginElement" in document.getElementById("draw-colorado-river")) {
+	show("mead-pictogram-legend");
 document.getElementById("mead-pictogram-legend").setAttribute("class","legend-box");
 } else {
+	document.getElementById("mead-pictogram-legend").setAttribute("opacity","1");
 	document.getElementById("mead-pictogram-legend").setAttribute("transform","translate(200, 135)");
 }
 }
