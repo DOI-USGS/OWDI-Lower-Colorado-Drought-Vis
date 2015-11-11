@@ -24,6 +24,7 @@
         <link href="../css/overlay.css" rel="stylesheet" type="text/css">
         <link href="../css/main.css" rel="stylesheet" type="text/css">
         <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+		<link href="../css/svg.css" rel="stylesheet" type="text/css">
         <link href="../css/print.css" rel="stylesheet" type="text/css">
         <link href="../css/before-after.css" rel="stylesheet" type="text/css">
         <link href="../css/dygraph.css" rel="stylesheet" type="text/css">
@@ -59,30 +60,13 @@
 
         <!-- Main content -->
         <span id="application">
-
-            <!-- BEGIN USGS Header Template -->
-            <div id="usgscolorband">
-                <div id="usgsheader">
-                    <div id="usgsidentifier">
-                        <a href="http://www.usgs.gov/" target="_blank"><img src="../img/header-footer/usgslogo.jpg" alt="USGS - science for a changing world" 
-                         title="U.S. Geological Survey Home Page" /></a>
-                    </div> <!--usgsidentifier-->
-                    <img src="../img/header-footer/banner.png" alt="banner" />
-                    <div id="usgsccsabox">
-                        <div id="usgsccsa">
-                            <a href="http://www.usgs.gov/">USGS Home</a>
-                            <br /><a href="http://answers.usgs.gov/cgi-bin/gsanswers?tmplt=2">Contact USGS</a>
-                            <br /><a href="http://search.usgs.gov/">Search USGS</a>
-                            <br />
-                        </div> <!--usgsccsa-->
-                    </div> <!--usgsccsabox-->
-                </div> <!--usgsheader-->
-            </div> <!--colorband-->
-            <!-- END USGS Header Template -->
-
-            <nav>
-                <h3>{{ tr.coDroughtHeader }}</h3>
-            </nav>
+		
+		<div id="stickynavContainer" class="menu container">
+		<section id="stickynav" class="section">
+		{{> stickynav }}
+		</section>
+            </div>
+		
             <div id="Introduction" class="container">
                 <section id="welcome" class="section">
 		{{> welcome }}
@@ -91,11 +75,6 @@
 	    <div id="app-explanationContainer" class="container">
                 <section id="app-explanation" class="section">
 		{{> app-explanation }}
-		</section>
-            </div>
-	    <div id="stickynavContainer" class="menu container">
-		<section id="stickynav" class="section">
-		{{> stickynav }}
 		</section>
             </div>
 	    <div id="Lifeline" class="container">
@@ -128,16 +107,6 @@
 		{{> blue-dragon }}
 		</section>
             </div>
-	    <div id="ExtendedDrought" class="container">
-                <section id="mainmessagedirt" class="section">
-		{{> mainmessagedirt }}
-		</section>
-            </div>
-	    <div id="droughtContainer" class="container">
-                <section id="dygraphsection" class="section">
-		{{> dygraphsection }}
-		</section>
-            </div>
 	    <div id="WaterSupply" class="container">
                 <section id="waterSupplyVariableOverTime" class="section">
 		{{> waterSupplyVariableOverTime }}
@@ -146,6 +115,16 @@
 	    <div id="waterSupplyVariableContentContainer" class="container">
                 <section id="waterSupplyVariableContent" class="section">
 		{{> waterSupplyVariableContent }}
+		</section>
+            </div>
+		<div id="ExtendedDrought" class="container">
+                <section id="mainmessagedirt" class="section">
+		{{> mainmessagedirt }}
+		</section>
+            </div>
+	    <div id="droughtContainer" class="container">
+                <section id="dygraphsection" class="section">
+		{{> dygraphsection }}
 		</section>
             </div>
             <div id="StorageCapacity" class="container">
@@ -203,27 +182,6 @@
 		{{> credits }}
 		</section>
             </div>
-
-            <!-- BEGIN USGS Footer Template -->
-            <div id="usgsfooter">
-                <p id="usgsfooterbar">
-                    <a href="http://www.usgs.gov/laws/accessibility.html" title="Accessibility Policy (Section 508)" target="_blank">Accessibility</a>
-                    <a href="http://www.usgs.gov/foia/" title="Freedom of Information Act" target="_blank">FOIA</a>
-                    <a href="http://www.usgs.gov/laws/privacy.html" title="Privacy policies of the U.S. Geological Survey." target="_blank">Privacy</a>
-                    <a href="http://www.usgs.gov/laws/policies_notices.html" title="Policies and notices that govern information posted on USGS Web sites." target="_blank">Policies and Notices</a>
-                </p><!--usgsfooterbar-->
-                <p id="usgsfootertext">
-                    <a href="http://www.usa.gov/" alt="USA.gov logo" title="USAGov: Government Made Easy" width="90" height="26" target="_blank">
-                    <img id="usa" src="../img/header-footer/usa_gov.png" alt="usa_gov pic" /></a>
-                    <a href="http://www.doi.gov/" target="_blank">U.S. Department of the Interior</a> |
-                    <a href="http://www.usgs.gov/" target="_blank">U.S. Geological Survey</a> |
-                    <a href="http://www.doioig.gov/" target="_blank">DOI Inspector General</a>
-                    <p>URL: http//cida.usgs.gov/ca_drought</p>
-                    <p>Contact Information: <a href="mailto:cida_webmaster@usgs.gov?Subject=Colorado+Drought+Visualization" target="_top">gs-cida_ca_drought_cida_app@usgs.gov</a></p>
-                    <p>Page last modified: <span id="last-mod-timestamp"></span></p>
-                </p><!--usgsfootertext-->
-            </div><!--usgsfooter-->
-            <!-- END USGS Footer Template -->
 
         </span>
 
