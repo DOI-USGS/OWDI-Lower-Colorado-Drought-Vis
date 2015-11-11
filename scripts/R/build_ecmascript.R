@@ -111,7 +111,7 @@ ecmascript_mead_map <- function(){
                
                'function scene1(){',
                'show("co-river-polyline");',
-                'draw("colorado-river");',
+                'drawCoRiver();',
               'show("co-basin-polygon");',
               'hide("top-users");',
               'hide("pictogram-topfive");',
@@ -146,6 +146,7 @@ ecmascript_mead_map <- function(){
                '}',
                
                'function scene3(){',
+'hide("mouser-helper");',
 'showStateMouseovers();',
 'show("Nevada-pictos");',
 'show("California-pictos");',
@@ -166,6 +167,7 @@ ecmascript_mead_map <- function(){
 '\tsetAllocationsNormal();',
                '}',
 'function scene4(){',
+'hide("mouser-helper");',
 '\tdocument.getElementById("Mead-water-level").setAttribute("class","mead-surplus");',
 '\tdocument.getElementById("mead-elevation-text-position").setAttribute("class","mead-surplus");',
 '\tsetMeadCondition("surplus");',
@@ -229,8 +231,13 @@ ecmascript_mead_map <- function(){
 '}',
 
 
-'function draw(name){',
-'document.getElementById("draw-"+name).beginElement();}',
+'function drawCoRiver(name){',
+'var riverDraw = document.getElementById("draw-colorado-river")',
+  'if ("beginElement" in riverDraw) {',
+'\t\triverDraw.beginElement();',
+'} else {',
+'\t\t document.getElementById("co-river-polyline").setAttribute("style","stroke-linejoin:round;stroke-linecap:round;");',
+'}}',
                
                
                'function drawUserPicto(user_id){',
