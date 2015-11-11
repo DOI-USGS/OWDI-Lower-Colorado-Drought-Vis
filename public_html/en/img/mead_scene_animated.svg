@@ -207,7 +207,7 @@ ele.setAttribute("class","hidden");
 function resetStates(){ 
 
 var riverDraw = document.getElementById("draw-colorado-river");
-	if (!"beginElement" in riverDraw) {
+	if (!("beginElement" in riverDraw)) {
 		document.getElementById("California").setAttribute("transform","translate(0,0)");
 		document.getElementById("Nevada").setAttribute("transform","translate(0,0)");
 		document.getElementById("Arizona").setAttribute("transform","translate(0,0)");
@@ -223,7 +223,7 @@ var riverDraw = document.getElementById("draw-colorado-river");
 function moveStates(){
 
 	var riverDraw = document.getElementById("draw-colorado-river");
-	if (!"beginElement" in riverDraw) {
+	if (!("beginElement" in riverDraw)) {
 		document.getElementById("California").setAttribute("transform","translate(-40,-20)");
 		document.getElementById("Nevada").setAttribute("transform","translate(-23,-27)");
 		document.getElementById("Arizona").setAttribute("transform","translate(-8,-12)");
