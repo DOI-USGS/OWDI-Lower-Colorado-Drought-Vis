@@ -102,7 +102,7 @@ def renderGraph(ele, floc):
         for num in raw:
             if float(num) > max:
                 max = float(num)
-        minside = math.floor(float(min)/5) * 5
+        minside = 0
         maxside = math.ceil(float(max)/5) * 5
         botstep = 500 / ((maxbot - minbot)/10)
         sidestep = 250 / ((maxside - minside)/5)
@@ -178,7 +178,6 @@ def createLineBox(ele, x1, x2, ymin, yrange, avg, raw, year, rot):
     text1.set('opacity', '0')
     text1.set('font-weight', 'bold')
     text1.set('font-size', '12')
-    #text1.set('stroke','black')
     text1.set('stroke-width', '.5')
     text1.set('class', 'num' + str(rot))
     text2 = drawText(ele, 15 + 81.666666, 215, getValue('natFlowLegendYear') + ': ' + str(year))
@@ -192,7 +191,6 @@ def createLineBox(ele, x1, x2, ymin, yrange, avg, raw, year, rot):
     text3.set('opacity', '0')
     text3.set('font-weight', 'bold')
     text3.set('font-size', '12')
-    #text3.set('stroke','black')
     text3.set('stroke-width', '.5')
     text3.set('class', 'num' + str(rot))
     
