@@ -12,6 +12,16 @@ nav h3 {
 	color: #fff;
 }
 
+.current{
+	background:#fff;
+	color:#003366 !important;
+	}
+	
+.notCurrent{
+	background:#003366;
+	color:#fff !important;
+	}
+
 /*=====Leaving App CSS=====*/
 .leaving{
 	margin-right:3px;
@@ -71,6 +81,13 @@ nav h3 {
 	height:60px;
 	padding:0px !important;
 	margin-bottom:0px !important;
+	}
+	
+#stickynavContainer{
+	position:fixed;
+	width:100%;
+	height:60px;
+	z-index:1000;
 	}
 
 #stickynav{
@@ -142,7 +159,7 @@ nav h3 {
 	}
 
 #welcomeSocial{
-	top:20px;
+	top:80px;
 	right:10px;
 	}
 
@@ -537,6 +554,10 @@ nav h3 {
     max-width: 950px;
     text-align: center;
 }
+
+#lake-mead-animated .supportingInfoContent{
+	text-align:left;
+	}
 
 .orangeLinks{
 	color:#FB7F00;
