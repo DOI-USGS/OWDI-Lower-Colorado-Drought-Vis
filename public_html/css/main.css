@@ -1,17 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 
-nav {
-	height: 28px;
-	background: #003366;
-	color: #fff;
-	padding: 2px 5px;
-}
-
-nav h3 {
-	color: #fff;
-}
-
 .current{
 	background:#fff;
 	color:#003366 !important;
@@ -866,7 +855,7 @@ nav h3 {
 
 	.navLink:hover{
 		background:#fff;
-		color:#003366;
+		color:#003366 !important;
 		cursor:pointer;
 		text-decoration:none;
 		}
