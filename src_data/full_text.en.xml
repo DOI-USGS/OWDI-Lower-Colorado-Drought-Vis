@@ -192,7 +192,7 @@
 	<natFlowCurrentDroughtTextLine2>Period</natFlowCurrentDroughtTextLine2>
 	<natFlowLegendYear>Year</natFlowLegendYear>
 	<natFlowLegendVolume>Annual Flow Volume</natFlowLegendVolume>
-	<natFlowLegendAverage>Long-Term Running Average</natFlowLegendAverage>
+	<natFlowLegendAverage>10-Year Running Average</natFlowLegendAverage>
 	<unitsMetricVolume>million cubic meters</unitsMetricVolume>
 	<unitsImperialVolume>million acre-feet</unitsImperialVolume>
 	<unitsMetricVolumeAbbr>10^6 m^3</unitsMetricVolumeAbbr>
