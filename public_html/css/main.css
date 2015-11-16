@@ -127,18 +127,18 @@
 .socialMedia{
 	height:40px;
 	position:absolute;
-	right:30px;
+	right:10px;
 	top:30px;
 	text-align:left;
 	}
 
 .onWhite{
-	top:-80px;
+	top:-25px;
 	right:0;
 	}
 
 #tooHigh{
-	top:-50px;
+	top:-25px;
 	}
 
 .socialMedia img{
@@ -204,7 +204,7 @@
 /*=====Container CSS=====*/
 
 .container {
-	margin: 0 0 100px 0;
+	margin: 0 0 20px 0;
 	padding: 15px;
 	text-align: center;
 	clear:both;
@@ -672,11 +672,21 @@
 	}
 
 	#welcomeSocial{
-		right:30px;
+		right:35px;
+	}
+	
+	.socialMedia{
+		right:35px;
+		}
+	
+	.onWhite{
+		right:0;
+		top:-80px;
 	}
 	/*======Container CSS======*/
 
 	.container {
+		margin:0 0 100px 0;
 		padding: 50px;
 	}
 	
