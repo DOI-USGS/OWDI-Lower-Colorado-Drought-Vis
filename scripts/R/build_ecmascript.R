@@ -59,7 +59,7 @@ ecmascript_mead_map <- function(){
   var state = document.getElementById("allocation-state").firstChild.data
   document.getElementById("allocation-value-1").firstChild.data = name + ": " + data[name][state][0];
   document.getElementById("allocation-value-2").firstChild.data = data[name][state][1];
-  document.getElementById("allocation-context").firstChild.data = conditions[state];
+  document.getElementById("allocation-context").firstChild.data = " ";
   }
   function setMeadCondition(storage_id){
   document.getElementById("allocation-state").firstChild.data = storage_id
