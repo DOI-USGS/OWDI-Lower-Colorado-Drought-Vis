@@ -32,10 +32,9 @@
 <script>
 var appExplainreadMore = $('#appExplainReadMore');
 var appExplainhiddenContent = $('#appExplainHiddenContent');
-	
 	appExplainreadMore.on('click', function(){
-		
-		appExplainhiddenContent.toggle();
+	
+		appExplainhiddenContent.slideToggle('slow');
 		
 		if($(this).text() == '{{{ tr.readMore }}}'){
 			$(this).text('{{{ tr.hideText }}}');
