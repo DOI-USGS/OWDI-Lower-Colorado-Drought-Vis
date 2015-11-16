@@ -137,7 +137,7 @@
 	
 	beforeAfter01ReadMore.on('click', function(){
 		
-		beforeAfter01HiddenContent.toggle();
+		beforeAfter01HiddenContent.slideToggle('slow');
 		$('#hideMe').toggle();
 		
 		if($(this).text() == 'Read More >>'){
@@ -149,7 +149,7 @@
 		
 		$('#beforeAfter02ReadMore').on('click', function(){
 		
-		$('#beforeAfter02HiddenContent').toggle();
+		$('#beforeAfter02HiddenContent').slideToggle('slow');
 		
 		if($(this).text() == 'Read More >>'){
 			$(this).text('Hide Text');
