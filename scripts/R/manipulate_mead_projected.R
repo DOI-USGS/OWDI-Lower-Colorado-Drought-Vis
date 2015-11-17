@@ -225,7 +225,7 @@ add_lines <- function(g_id, data, form.factor, language){
   
   # -----
   width = 7 # FIX THIS!!!
-  for (i in 1:length(x)){
+  for (i in which(is.hist | is.most)){
     #refine this so it is actually halfway points
     
     elev = ifelse(is.na(y[i]), '', prettyNum(round(y.raw[i], digits=1),big.mark=","))
