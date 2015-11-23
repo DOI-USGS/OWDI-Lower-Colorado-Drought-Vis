@@ -619,17 +619,12 @@
 	}
 	
 #creditLogos img{
+	width:25%;
 	margin:0 10px 10px 0;
 	alignment-baseline:middle;
 	}
 	
-#doi{
-	width:120px;
-	}
-	
-.equalizer{
-	width:200px;
-	}
+
 	
 @media only screen 
 	and (min-device-width: 320px)
@@ -852,6 +847,18 @@
 
 	#droughtMovingAvg-object{
 		margin-top:100px;
+		}
+		
+	#creditLogos img{
+		width:15%;
+	}
+	
+	#doi{
+		width:12% !important;
+		}
+		
+	#osu{
+		width:10% !important;
 		}
 }
 
