@@ -152,6 +152,11 @@ text {
     font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.tiny-text {
+    font-size: 11px;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 #x-pictogram-sub-label {
     font-size: 11px;
     font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;

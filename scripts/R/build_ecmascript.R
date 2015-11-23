@@ -24,9 +24,9 @@ ecmascript_mead_map <- function(){
   {"flood":"Flood Control Surplus",
   "surplus":"Quantified & Domestic Surplus",
   "normal":"Normal Condition",
-  "shortage-1":"Shortage Condition Tier 1",
-  "shortage-2":"Shortage Condition Tier 2",
-  "shortage-3":"Shortage Condition Tier 3"}
+  "shortage-1":"Shortage Condition Level 1",
+  "shortage-2":"Shortage Condition Level 2",
+  "shortage-3":"Shortage Condition Level 3"}
   function displayAllocationName(evt, name) {
   var data = {"California":{
   "flood":["4,400,000 acre-feet/year,","plus additional deliveries as requested."],
@@ -119,6 +119,7 @@ ecmascript_mead_map <- function(){
   {hide("mouser-helper");}},8000)
   }
   function scene2(){
+  show("Mexico-border");
   hide("mouser-helper");
   show("pictogram-topfive");
   show("top-users");
@@ -144,6 +145,7 @@ ecmascript_mead_map <- function(){
   }
   function scene3(){
   hide("mouser-helper");
+  hide("Mexico-border");
   showStateMouseovers();
   show("Nevada-pictos");
   show("California-pictos");
