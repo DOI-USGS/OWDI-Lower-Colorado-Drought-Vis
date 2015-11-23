@@ -87,8 +87,8 @@ plot_flow_data <- function(flow_data) {
     dyRangeSelector(dateWindow = as.Date(c("1812", "2012"), format="%Y")) %>% 
     dySeries(c("TreeRingsLwr", "TreeRings", "TreeRingsUpr"), label = "Tree-Ring Reconstructed Annual Natural Flow", color="#00CCFF") %>%
     dySeries(c("FlowGage"), label = "Historical Annual Natural Flow", color="#3333FF") %>%
-    dySeries(c("TreeGage10YrRunMean"), label = "10-Year Average", color="#C11B17") %>%
-    dySeries(c("TreeGageAllYrMean"), label = "Long-Term Average", "#FBB917") %>%
+    dySeries(c("TreeGage10YrRunMean"), label = "10-Year Average Flow", color="#C11B17") %>%
+    dySeries(c("TreeGageAllYrMean"), label = "Long-Term Average Flow", "#FBB917") %>%
     #dySeries(c("LegendYear"), label = "Year", color="transparent", axis = "y2") %>%
     dyAxis("x", label = "Year") %>%
     dyAxis("y", label = "Flow Volume (million acre-feet)") %>%
