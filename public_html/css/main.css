@@ -473,6 +473,11 @@
 #leesFerry{
 	margin-top:20px;
 	}
+	
+#treeRingList{
+	list-style:disc;
+	margin:0 0 0 20px;
+	}
 
 /*=====Water-Usage Section CSS=====*/
 
