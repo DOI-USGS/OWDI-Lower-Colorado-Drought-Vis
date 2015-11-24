@@ -45,7 +45,7 @@ states = readOGR(dsn = "src_data/states_21basic",layer="states")
 rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="CRB_Rivers")
 contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
 co_basin = readOGR(dsn = "src_data/CO_WBD", layer="LC_UC_Basin_2015")
-writeOGR(co_basin, dsn = "public_html/data/wbd1415.geojson", driver = "GeoJSON", layer="OGRGeoJSON", overwrite_layer=TRUE)
+writeOGR(spTransform(co_basin, CRS("+proj=longlat + datum=wgs84")), dsn = "public_html/data/wbd1415.geojson", driver = "GeoJSON", layer="OGRGeoJSON", overwrite_layer=TRUE)
 
 sorted_contracts <- sort(as.numeric(contracts$FiveYrAvg_),decreasing = T, index.return = T)
 sorted_values <- sorted_contracts$x[sorted_contracts$x > min.contract]
