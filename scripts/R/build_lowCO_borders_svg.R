@@ -43,9 +43,8 @@ mexico_bdr <- readOGR(dsn = "src_data/mexico_outline",layer="mex_outline") %>%
 
 states = readOGR(dsn = "src_data/states_21basic",layer="states") 
 rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="CRB_Rivers")
-#mx.rivers = readOGR(dsn = "src_data/CRB_Rivers", layer="Colorado_Mexico")
 contracts = readOGR("public_html/data/wat_acc_cont.geojson", "OGRGeoJSON", stringsAsFactors = F)
-
+co_basin = readOGR(dsn = "src_data/CO_WBD", layer="LC_UC_Basin_2015")
 
 sorted_contracts <- sort(as.numeric(contracts$FiveYrAvg_),decreasing = T, index.return = T)
 sorted_values <- sorted_contracts$x[sorted_contracts$x > min.contract]
@@ -55,7 +54,7 @@ top_users <- paste0('usage-',c(1:n.users))
 
 co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
-co_basin = readOGR(dsn = "src_data/CO_WBD", layer="LC_UC_Basin_2015")
+
 
 
 area <- lapply(mexico@polygons, function(x) sapply(x@Polygons, function(y) y@area))
