@@ -865,6 +865,10 @@
 	#osu{
 		width:10% !important;
 		}
+		
+	#wswc{
+		width:8% !important;
+		}
 }
 
 @media screen and (min-width: 1025px) {
