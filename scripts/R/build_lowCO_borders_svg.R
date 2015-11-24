@@ -55,7 +55,8 @@ top_users <- paste0('usage-',c(1:n.users))
 
 co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
-co_basin = readOGR(dsn = "src_data/CO_WBD", layer="WBDHU2_14-15-clean")
+co_basin = readOGR(dsn = "src_data/CO_WBD", layer="LC_UC_Basin_2015")
+
 
 area <- lapply(mexico@polygons, function(x) sapply(x@Polygons, function(y) y@area))
 mainPolys <- lapply(area, function(x) which(x > min_area))
