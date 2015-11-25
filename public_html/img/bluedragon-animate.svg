@@ -37,7 +37,7 @@
 		]]>
 	</script>
 	
-	<svg x="50" y="50" width="250" height="250">
+	<svg x="50" y="50" width="250" height="250" viewBox="0 0 540 547">
 		<g id="insetGroup">
     <g id="mexico" fill="none" stroke-width="2.5" stroke="#BBBBBB" stroke-linejoin="round">
     <g>
@@ -679,24 +679,20 @@
 			<text
 				id="text17012"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(1 0 0 1 428.9472 108.255)">1</text>
 			<text
 				id="text17626"
 				font-size="4.8162"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 496.0967 37.9407)">LAKE</text>
 			<text
 				id="text17628"
 				font-size="4.8162"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 496.0967 43.7356)">MEAD</text>
 			<text
 				id="text17922"
 				font-size="4.5451"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(1 0 0 1 473.1214 71.7489)">HOOVER DAM</text>
 		</g>
 		<g id="davisGroup" class="riverGroup" onmouseover="showBbox(evt, 'davisBbox')" onmouseout="hideBbox(evt, 'davisBbox')">
@@ -918,22 +914,22 @@
 				id="path17014"
 				d="m 466.7,187.6 1.1,-1.8 c 0.1,-0.1 0.2,-0.1 0.3,0 l 1.1,1.8 c 0.1,0.1 0,0.3 -0.1,0.3 l -2.1,0 c -0.3,0 -0.3,-0.2 -0.3,-0.3 z" />
 			<text
-				style="font-size:2.41790009px;font-family:Arial-BoldMT"
+				style="font-size:2.41790009px;"
 				id="text17016"
 				font-size="2.4179"
 				transform="translate(464.5468,187.4212)">2</text>
 			<text
-				style="font-size:4.88450003px;font-family:Arial-BoldMT;fill:#1e628c"
+				style="font-size:4.88450003px;fill:#1e628c"
 				id="text17630"
 				font-size="4.8845"
 				transform="translate(467.0918,120.6467)">LAKE</text>
 			<text
-				style="font-size:4.88450003px;font-family:Arial-BoldMT;fill:#1e628c"
+				style="font-size:4.88450003px;fill:#1e628c"
 				id="text17632"
 				font-size="4.8845"
 				transform="translate(467.0918,126.4883)">MOHAVE</text>
 			<text
-				style="font-size:4.54510021px;font-family:Arial-BoldMT"
+				style="font-size:4.54510021px;"
 				id="text17924"
 				font-size="4.5451"
 				transform="translate(497.2932,153.1567)">DAVIS DAM</text>
@@ -957,7 +953,7 @@
 				id="text17020"
 				font-size="2.4179"
 				transform="translate(477.9492,211.1065)"
-				style="font-size:2.41790009px;font-family:Arial-BoldMT">3</text>
+				style="font-size:2.41790009px;">3</text>
 			<path
 				id="path17022"
 				d="m 490.3,213.6 1.1,-1.8 c 0.1,-0.1 0.2,-0.1 0.3,0 l 1.1,1.8 c 0.1,0.1 0,0.3 -0.1,0.3 l -2.1,0 c -0.3,0 -0.4,-0.1 -0.3,-0.3 z" />
@@ -965,7 +961,7 @@
 				id="text17024"
 				font-size="2.4179"
 				transform="translate(488.2991,213.925)"
-				style="font-size:2.41790009px;font-family:Arial-BoldMT">4</text>
+				style="font-size:2.41790009px;">4</text>
 			<path
 				id="path17026"
 				d="m 499.3,199.3 1.1,-1.8 c 0.1,-0.1 0.2,-0.1 0.3,0 l 1.1,1.8 c 0.1,0.1 0,0.3 -0.1,0.3 l -2.1,0 c -0.3,0 -0.4,-0.1 -0.3,-0.3 z" />
@@ -973,7 +969,7 @@
 				id="text17028"
 				font-size="2.4179"
 				transform="translate(497.2932,199.6252)"
-				style="font-size:2.41790009px;font-family:Arial-BoldMT">5</text>
+				style="font-size:2.41790009px;">5</text>
 			<polyline
 				style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10"
 				stroke-miterlimit="10"
@@ -986,7 +982,6 @@
 			<text
 				transform="matrix(0.5583 -0.8297 0.8297 0.5583 514.1297 301.8628)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="5.1712"
 				id="text17638">RIVER</text>
 			<path
@@ -995,8 +990,7 @@
 			<text
 				id="text17032"
 				font-size="2.4179"
-				transform="matrix(1 0 0 1 498.3458 289.5513)"
-				font-family="'Arial-BoldMT'">6</text>
+				transform="matrix(1 0 0 1 498.3458 289.5513)">6</text>
 			<path
 				stroke-miterlimit="10"
 				d="M521,261.7l1.4-0.7c0,0-2.7-6.8-10.7-7.2       c0,0-8.9-0.2-11.4,8.6l1.2,0.6c0,0,1.7-7.6,9.8-7.8C519.5,255.2,521,261.7,521,261.7z"
@@ -1127,30 +1121,25 @@
 			<text
 				id="text17080"
 				font-size="2.4179"
-				transform="matrix(1 0 0 1 495.6367 232.1241)"
-				font-family="'Arial-BoldMT'">18</text>
+				transform="matrix(1 0 0 1 495.6367 232.1241)">18</text>
 			<text
 				id="text17634"
 				font-size="4.8845"
 				transform="matrix(1 0 0 1 519.754 200.8456)"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">LAKE</text>
 			<text
 				id="text17636"
 				font-size="4.8845"
 				transform="matrix(1 0 0 1 519.754 206.6867)"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">HAVASU</text>
 			<text
 				id="text17926"
 				font-size="4.5451"
-				transform="matrix(1 0 0 1 523.2323 266.606)"
-				font-family="'Arial-BoldMT'">PARKER </text>
+				transform="matrix(1 0 0 1 523.2323 266.606)">PARKER</text>
 			<text
 				id="text17928"
 				font-size="4.5451"
-				transform="matrix(1 0 0 1 523.2323 272.0789)"
-				font-family="'Arial-BoldMT'">DAM</text>
+				transform="matrix(1 0 0 1 523.2323 272.0789)">DAM</text>
 		</g>
 		<g id="headgateGroup" class="riverGroup" onmouseover="showBbox(evt, 'headgateBbox')" onmouseout="hideBbox(evt, 'headgateBbox')">
 			<path id="headgateFootprint" class="footprint"
@@ -1461,41 +1450,35 @@
 			<text
 				transform="matrix(1 0 0 1 443.2948 312.9823)"
 				font-size="2.4179"
-				id="text17036"
-				font-family="'Arial-BoldMT'">7</text>
+				id="text17036">7</text>
 			<path
 				d="M429.8,329.8l1.1-1.8c0.1-0.1,0.2-0.1,0.3,0l1.1,1.8c0.1,0.1,0,0.3-0.1,0.3H430C429.8,330.1,429.7,330,429.8,329.8z"
 				id="path17038" />
 			<text
 				transform="matrix(1 0 0 1 429.7881 332.491)"
 				font-size="2.4179"
-				id="text17040"
-				font-family="'Arial-BoldMT'">8</text>
+				id="text17040">8</text>
 			<path
 				d="M445.5,324.1l1.1-1.8c0.1-0.1,0.2-0.1,0.3,0l1.1,1.8c0.1,0.1,0,0.3-0.1,0.3h-2.1C445.5,324.4,445.4,324.2,445.5,324.1z"
 				id="path17082" />
 			<text
 				transform="matrix(1 0 0 1 442.3203 324.6849)"
 				font-size="2.4179"
-				id="text17084"
-				font-family="'Arial-BoldMT'">19</text>
+				id="text17084">19</text>
 			<text
 				transform="matrix(1 0 0 1 446.5683 337.8189)"
 				font-size="2.2571"
 				id="text17642"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Main Canal, Colorado</text>
 			<text
 				transform="matrix(1 0 0 1 446.5683 340.5323)"
 				font-size="2.2571"
 				id="text17644"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">River Indian Reservation</text>
 			<text
 				transform="matrix(1 0 0 1 469.2676 322.1812)"
 				font-size="4.5451"
-				id="text17930"
-				font-family="'Arial-BoldMT'">HEADGATE ROCK DAM</text>
+				id="text17930">HEADGATE ROCK DAM</text>
 		</g>
 		<g id="paloVerdeGroup" class="riverGroup" onmouseover="showBbox(evt, 'paloVerdeBbox')" onmouseout="hideBbox(evt, 'paloVerdeBbox')">
 			<path id="paloVerdeFootprint" class="footprint"
@@ -1805,32 +1788,28 @@
 			<text
 				transform="matrix(1 0 0 1 411.4807 351.1647)"
 				font-size="2.4179"
-				id="text17044"
-				font-family="'Arial-BoldMT'">9</text>
+				id="text17044">9</text>
 			<path
 				d="M425.4,383.6l1.1-1.8c0.1-0.1,0.2-0.1,0.3,0l1.1,1.8c0.1,0.1,0,0.3-0.1,0.3h-2.1C425.5,383.9,425.4,383.7,425.4,383.6z"
 				id="path17046" />
 			<text
 				transform="matrix(1 0 0 1 428.8301 384.5097)"
 				font-size="2.4179"
-				id="text17048"
-				font-family="'Arial-BoldMT'">10</text>
+				id="text17048">10</text>
 			<path
 				d="M432.9,343.3l1.1-1.8c0.1-0.1,0.2-0.1,0.3,0l1.1,1.8c0.1,0.1,0,0.3-0.1,0.3h-2.1C432.9,343.6,432.8,343.5,432.9,343.3z"
 				id="path17086" />
 			<text
 				transform="matrix(1 0 0 1 433.246 345.6811)"
 				font-size="2.4179"
-				id="text17088"
-				font-family="'Arial-BoldMT'">20</text>
+				id="text17088">20</text>
 			<path
 				d="M419.2,378.5l1.1-1.8c0.1-0.1,0.2-0.1,0.3,0l1.1,1.8c0.1,0.1,0,0.3-0.1,0.3h-2.2C419.2,378.8,419.1,378.6,419.2,378.5z"
 				id="path17090" />
 			<text
 				transform="matrix(1 0 0 1 416.4631 378.2682)"
 				font-size="2.4179"
-				id="text17092"
-				font-family="'Arial-BoldMT'">21</text>
+				id="text17092">21</text>
 			<polyline
 				stroke-miterlimit="10"
 				points="407.6,404.6 407.6,405.2       408.2,405.2     "
@@ -1975,30 +1954,25 @@
 				transform="matrix(1 0 0 1 426.4182 392.4832)"
 				font-size="2.2571"
 				id="text17646"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Duplicate</text>
 			<text
 				transform="matrix(1 0 0 1 426.4182 395.1967)"
 				font-size="2.2571"
 				id="text17648"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Main Canal</text>
 			<text
 				transform="matrix(1 0 0 1 396.6757 394.2462)"
 				font-size="2.2571"
 				id="text17650"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Main Canal</text>
 			<text
 				transform="matrix(1 0 0 1 448.2676 350.0618)"
 				font-size="4.5451"
-				id="text17932"
-				font-family="'Arial-BoldMT'">PALO VERDE </text>
+				id="text17932">PALO VERDE </text>
 			<text
 				transform="matrix(1 0 0 1 448.2676 355.5352)"
 				font-size="4.5451"
-				id="text17934"
-				font-family="'Arial-BoldMT'">DIVERSION DAM</text>
+				id="text17934">DIVERSION DAM</text>
 		</g>
 		<g id="outwashGroup" class="riverGroup" onmouseover="showBbox(evt, 'outfallBbox')" onmouseout="hideBbox(evt, 'outfallBbox')">
 			<path id="outfallFootprint" class="footprint"
@@ -2027,29 +2001,25 @@
 			<text
 				transform="matrix(1 0 0 1 427.3811 413.2558)"
 				font-size="2.4179"
-				id="text17052"
-				font-family="'Arial-BoldMT'">11</text>
+				id="text17052">11</text>
 			<path
 				d="M444.9,437.6l1.1-1.8c0.1-0.1,0.2-0.1,0.3,0l1.1,1.8c0.1,0.1,0,0.3-0.1,0.3h-2.1C444.9,437.9,444.9,437.7,444.9,437.6z"
 				id="path17054" />
 			<text
 				transform="matrix(1 0 0 1 448.3087 437.5469)"
 				font-size="2.4179"
-				id="text17056"
-				font-family="'Arial-BoldMT'">12</text>
+				id="text17056">12</text>
 			<path
 				d="M425.1,422.2l1.1-1.8c0.1-0.1,0.2-0.1,0.3,0l1.1,1.8c0.1,0.1,0,0.3-0.1,0.3h-2.1C425.1,422.4,425,422.3,425.1,422.2z"
 				id="path17094" />
 			<text
 				transform="matrix(1 0 0 1 422.3655 421.3518)"
 				font-size="2.4179"
-				id="text17096"
-				font-family="'Arial-BoldMT'">22</text>
+				id="text17096">22</text>
 			<text
 				transform="matrix(1 0 0 1 394.4522 422.4514)"
 				font-size="2.2571"
 				id="text17652"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Outfall Drain</text>
 		</g>
 		<g id="imperialGroup" class="riverGroup" onmouseover="showBbox(evt, 'imperialBbox')" onmouseout="hideBbox(evt, 'imperialBbox')">
@@ -2170,61 +2140,51 @@
 			<text
 				id="text17060"
 				font-size="2.4179"
-				transform="matrix(1 0 0 1 432.3683 491.5624)"
-				font-family="'Arial-BoldMT'">13</text>
+				transform="matrix(1 0 0 1 432.3683 491.5624)">13</text>
 			<path
 				id="path17098"
 				d="M424.3,508.5l1.1-1.8c0.1-0.1,0.2-0.1,0.3,0l1.1,1.8c0.1,0.1,0,0.3-0.1,0.3h-2.1C424.3,508.8,424.2,508.6,424.3,508.5z" />
 			<text
 				id="text17100"
 				font-size="2.4179"
-				transform="matrix(1 0 0 1 424.4933 510.8202)"
-				font-family="'Arial-BoldMT'">23</text>
+				transform="matrix(1 0 0 1 424.4933 510.8202)">23</text>
 			<path
 				id="path17118"
 				d="M393.2,517.9l1.1-1.8c0.1-0.1,0.2-0.1,0.3,0l1.1,1.8c0.1,0.1,0,0.3-0.1,0.3h-2.1C393.3,518.2,393.2,518,393.2,517.9z" />
 			<text
 				id="text17120"
 				font-size="2.4179"
-				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 393.0157 520.2498)"
-				font-family="'Arial-BoldMT'">28</text>
+				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 393.0157 520.2498)">28</text>
 			<text
 				id="text17640"
 				font-size="4.7318"
 				transform="matrix(0.1716 -0.9852 0.9852 0.1716 436.4113 478.3222)"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">COLORADO</text>
 			<text
 				id="text17660"
 				font-size="2.2571"
 				transform="matrix(0.3085 -0.9512 0.9512 0.3085 396.6749 528.4976)"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Channel</text>
 			<text
 				id="text17936"
 				font-size="4.5451"
-				transform="matrix(1 0 0 1 359.6897 430.1875)"
-				font-family="'Arial-BoldMT'">SENATOR WASH DAM</text>
+				transform="matrix(1 0 0 1 359.6897 430.1875)">SENATOR WASH DAM</text>
 			<text
 				id="text17938"
 				font-size="4.5451"
-				transform="matrix(1 0 0 1 359.6897 435.6604)"
-				font-family="'Arial-BoldMT'">RESERVOIR &amp; WORKS</text>
+				transform="matrix(1 0 0 1 359.6897 435.6604)">RESERVOIR &amp; WORKS</text>
 			<text
 				id="text17940"
 				font-size="4.5451"
-				transform="matrix(1 0 0 1 380.6924 487.2187)"
-				font-family="'Arial-BoldMT'">IMPERIAL</text>
+				transform="matrix(1 0 0 1 380.6924 487.2187)">IMPERIAL</text>
 			<text
 				id="text17942"
 				font-size="4.5451"
-				transform="matrix(1 0 0 1 380.6924 492.6925)"
-				font-family="'Arial-BoldMT'">DAM</text>
+				transform="matrix(1 0 0 1 380.6924 492.6925)">DAM</text>
 			<text
 				id="text17944"
 				font-size="4.5451"
-				transform="matrix(1 0 0 1 344.09 517.0547)"
-				font-family="'Arial-BoldMT'">LAGUNA DAM</text>
+				transform="matrix(1 0 0 1 344.09 517.0547)">LAGUNA DAM</text>
 		</g>
 		<g id="morelosGroup" class="riverGroup" onmouseover="showBbox(evt, 'morelosBbox')" onmouseout="hideBbox(evt, 'morelosBbox')">
 			<path id="morelosFootprint" class="footprint"
@@ -3935,7 +3895,6 @@
 				id="path17070" />
 			<text
 				transform="matrix(1 0 0 1 156.2666 767.7678)"
-				font-family="'Arial-BoldMT'"
 				font-size="2.4179"
 				id="text17072">16</text>
 			<path
@@ -3943,7 +3902,6 @@
 				id="path17114" />
 			<text
 				transform="matrix(1 0 0 1 256.8755 712.176)"
-				font-family="'Arial-BoldMT'"
 				font-size="2.4179"
 				id="text17116">27</text>
 			<path
@@ -3951,7 +3909,6 @@
 				id="path17166" />
 			<text
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 158.1779 770.6413)"
-				font-family="'Arial-BoldMT'"
 				font-size="2.4179"
 				id="text17168">40</text>
 			<path
@@ -3959,7 +3916,6 @@
 				id="path17170" />
 			<text
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 171.8325 776.6776)"
-				font-family="'Arial-BoldMT'"
 				font-size="2.4179"
 				id="text17172">41</text>
 			<path
@@ -3967,7 +3923,6 @@
 				id="path17174" />
 			<text
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 165.554 764.7604)"
-				font-family="'Arial-BoldMT'"
 				font-size="2.4179"
 				id="text17176">42</text>
 			<path
@@ -3975,7 +3930,6 @@
 				id="path17206" />
 			<text
 				transform="matrix(0.9995 3.166416e-02 -3.166416e-02 0.9995 182.3348 677.5977)"
-				font-family="'Arial-BoldMT'"
 				font-size="2.4179"
 				id="text17208">50</text>
 			<path
@@ -3983,19 +3937,16 @@
 				id="path17210" />
 			<text
 				transform="matrix(0.9995 3.166416e-02 -3.166416e-02 0.9995 156.8125 762.3781)"
-				font-family="'Arial-BoldMT'"
 				font-size="2.4179"
 				id="text17212">51</text>
 			<text
 				transform="matrix(0.8302 -0.5575 0.5575 0.8302 319.4834 692.4881)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.257"
 				id="text17752">“A” Canal</text>
 			<text
 				transform="matrix(0.1754 -0.9845 0.9845 0.1754 221.542 682.6201)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2571"
 				id="text17822">Central</text>
 			<path
@@ -7476,7 +7427,6 @@
 			<text
 				id="text17064"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(1 0 0 1 259.299 613.7382)">14</text>
 			<path
 				id="path17066"
@@ -7484,7 +7434,6 @@
 			<text
 				id="text17068"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(1 0 0 1 207.8093 631.2128)">15</text>
 			<path
 				id="path17074"
@@ -7492,7 +7441,6 @@
 			<text
 				id="text17076"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(1 0 0 1 389.465 605.6113)">17</text>
 			<path
 				id="path17102"
@@ -7500,7 +7448,6 @@
 			<text
 				id="text17104"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(1 0 0 1 388.9553 618.1113)">24</text>
 			<path
 				id="path17106"
@@ -7508,7 +7455,6 @@
 			<text
 				id="text17108"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(1 0 0 1 364.6749 658.3167)">25</text>
 			<path
 				id="path17110"
@@ -7516,7 +7462,6 @@
 			<text
 				id="text17112"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(1 0 0 1 369.3866 664.6113)">26</text>
 			<path
 				id="path17122"
@@ -7524,7 +7469,6 @@
 			<text
 				id="text17124"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 341.934 551.3713)">29</text>
 			<path
 				id="path17126"
@@ -7532,7 +7476,6 @@
 			<text
 				id="text17128"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 328.0578 541.7875)">30</text>
 			<path
 				id="path17130"
@@ -7540,7 +7483,6 @@
 			<text
 				id="text17132"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 293.6306 553.0623)">31</text>
 			<path
 				id="path17134"
@@ -7548,7 +7490,6 @@
 			<text
 				id="text17136"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 272.6554 566.9059)">32</text>
 			<path
 				id="path17138"
@@ -7556,7 +7497,6 @@
 			<text
 				id="text17140"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 264.9818 579.8149)">33</text>
 			<path
 				id="path17142"
@@ -7564,7 +7504,6 @@
 			<text
 				id="text17144"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 262.184 624.546)">34</text>
 			<path
 				id="path17146"
@@ -7572,7 +7511,6 @@
 			<text
 				id="text17148"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 205.3616 603.2038)">35</text>
 			<path
 				id="path17150"
@@ -7580,7 +7518,6 @@
 			<text
 				id="text17152"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 202.7307 614.3516)">36</text>
 			<path
 				id="path17162"
@@ -7588,7 +7525,6 @@
 			<text
 				id="text17164"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 188.5781 635.7184)">39</text>
 			<path
 				id="path17178"
@@ -7596,7 +7532,6 @@
 			<text
 				id="text17180"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 274.9367 614.2162)">43</text>
 			<path
 				id="path17182"
@@ -7604,7 +7539,6 @@
 			<text
 				id="text17184"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 264.7133 618.811)">44</text>
 			<path
 				id="path17186"
@@ -7612,7 +7546,6 @@
 			<text
 				id="text17188"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9995 3.166416e-02 -3.166416e-02 0.9995 310.4383 641.5128)">45</text>
 			<path
 				id="path17190"
@@ -7620,7 +7553,6 @@
 			<text
 				id="text17192"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9995 3.166416e-02 -3.166416e-02 0.9995 240.8295 625.6711)">46</text>
 			<path
 				id="path17194"
@@ -7628,7 +7560,6 @@
 			<text
 				id="text17196"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9995 3.166416e-02 -3.166416e-02 0.9995 217.8391 613.2025)">47</text>
 			<path
 				id="path17198"
@@ -7636,7 +7567,6 @@
 			<text
 				id="text17200"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9995 3.166416e-02 -3.166416e-02 0.9995 199.7236 643.4846)">48</text>
 			<path
 				id="path17202"
@@ -7644,7 +7574,6 @@
 			<text
 				id="text17204"
 				font-size="2.4179"
-				font-family="'Arial-BoldMT'"
 				transform="matrix(0.9995 3.166416e-02 -3.166416e-02 0.9995 197.7177 648.9103)">49</text>
 			<polyline
 				id="polyline17286"
@@ -8272,277 +8201,231 @@
 			<text
 				id="text17654"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.8579 -0.5138 0.5138 0.8579 408.0254 563.2794)">Main</text>
 			<text
 				id="text17656"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.5941 -0.8044 0.8044 0.5941 422.6593 548.9398)">Canal</text>
 			<text
 				id="text17658"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.795 -0.6066 0.6066 0.795 377.6677 542.3932)">Dredged</text>
 			<text
 				id="text17662"
 				font-size="3.8573"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 369.3851 564.1917)">Mittry</text>
 			<text
 				id="text17664"
 				font-size="3.8573"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 369.3851 568.8371)">Lake</text>
 			<text
 				id="text17666"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 368.2366 571.6068)">Gila</text>
 			<text
 				id="text17668"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.9486 -0.3165 0.3165 0.9486 381.4398 572.2969)">Gravity</text>
 			<text
 				id="text17670"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 371.2256 581.3089)">North Gila Turnout No. 1</text>
 			<text
 				id="text17672"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 368.2366 597.4062)">North Gila Turnout No. 2</text>
 			<text
 				id="text17674"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.5429 -0.8398 0.8398 0.5429 347.283 581.9442)">Drain No. 1</text>
 			<text
 				id="text17676"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.3644 -0.9312 0.9312 0.3644 348.6067 603.91)">North</text>
 			<text
 				id="text17678"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.2701 -0.9628 0.9628 0.2701 350.9252 593.9328)">Gila</text>
 			<text
 				id="text17680"
 				font-size="2.2572"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.5808 -0.8141 0.8141 0.5808 353.6886 581.644)">Canal</text>
 			<text
 				id="text17682"
 				font-size="4.5291"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.9137 0.4063 -0.4063 0.9137 434.7351 630.2578)">Gila</text>
 			<text
 				id="text17684"
 				font-size="4.5291"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.8938 -0.4484 0.4484 0.8938 449.6795 629.7208)">River</text>
 			<text
 				id="text17686"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.5491 0.8357 -0.8357 0.5491 408.0199 607.8807)">Dome</text>
 			<text
 				id="text17688"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.5491 0.8357 -0.8357 0.5491 415.9533 616.2874)">Canal</text>
 			<text
 				id="text17690"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.8098 0.5867 -0.5867 0.8098 418.0164 628.7085)">Wellton</text>
 			<text
 				id="text17692"
 				font-size="2.2572"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.973 0.2309 -0.2309 0.973 433.8821 640.2236)">Mohawk</text>
 			<text
 				id="text17694"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.9708 -0.2397 0.2397 0.9708 462.5642 647.2937)">Mohawk</text>
 			<text
 				id="text17696"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.646 -0.7633 0.7633 0.646 489.469 634.4542)">Canal</text>
 			<text
 				id="text17698"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 431.3419 645.2823)">Wellton</text>
 			<text
 				id="text17700"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.8754 -0.4834 0.4834 0.8754 484.67 625.8445)">Canal</text>
 			<text
 				id="text17702"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.8955 -0.445 0.445 0.8955 460.7587 640.2232)">Main</text>
 			<text
 				id="text17704"
 				font-size="2.2572"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.7129 0.7013 -0.7013 0.7129 396.6758 622.6153)">Wellton-Mohawk</text>
 			<text
 				id="text17706"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.9773 0.2117 -0.2117 0.9773 415.4944 639.5599)">Canal</text>
 			<text
 				id="text17708"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 378.584 639.5596)">Fortuna</text>
 			<text
 				id="text17710"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 378.584 642.2736)">Wasteway</text>
 			<text
 				id="text17712"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.9748 -0.2231 0.2231 0.9748 320.8542 632.473)">Gila</text>
 			<text
 				id="text17714"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.846 -0.5332 0.5332 0.846 331.617 626.1143)">River</text>
 			<text
 				id="text17716"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.9985 5.399819e-02 -5.399819e-02 0.9985 347.2839 620.1674)">Pilot</text>
 			<text
 				id="text17718"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.9985 5.399819e-02 -5.399819e-02 0.9985 366.0267 618.2234)">Channel</text>
 			<text
 				id="text17720"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(-1.773923e-02 -0.9998 0.9998 -1.773923e-02 347.7593 640.224)">DPOC 3</text>
 			<text
 				id="text17722"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(-1.773923e-02 -0.9998 0.9998 -1.773923e-02 328.0582 652.0665)">DPOC 2</text>
 			<text
 				id="text17724"
 				font-size="2.2572"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.8223 -0.5691 0.5691 0.8223 334.1723 638.0788)">Outlet</text>
 			<text
 				id="text17726"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.9999 -1.211953e-02 1.211953e-02 0.9999 352.577 629.0298)">Drain</text>
 			<text
 				id="text17728"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 319.4833 641.3343)">Main</text>
 			<text
 				id="text17730"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 299.8211 643.0374)">DPOC 1</text>
 			<text
 				id="text17732"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.946 0.3241 -0.3241 0.946 302.4629 648.1841)">South</text>
 			<text
 				id="text17734"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.9953 9.669887e-02 -9.669887e-02 0.9953 316.1544 654.7932)">Gila</text>
 			<text
 				id="text17736"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.9673 -0.2536 0.2536 0.9673 333.4257 652.8292)">Canal</text>
 			<text
 				id="text17738"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 281.441 627.6515)">Main</text>
 			<text
 				id="text17740"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 289.2433 627.6602)">Outlet</text>
 			<text
 				id="text17742"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 289.2433 630.3741)">  Drain</text>
 			<text
 				id="text17744"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 299.0461 630.8672)">Exten.</text>
 			<text
 				id="text17746"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 273.1867 645.5812)">DPOC 4</text>
 			<path
@@ -8555,73 +8438,61 @@
 			<text
 				id="text17750"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 322.0706 664.3117)">“B” Canal</text>
 			<text
 				id="text17754"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(-4.872852e-03 -1 1 -4.872852e-03 328.1098 584.4275)">Mohove</text>
 			<text
 				id="text17756"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.1831 -0.9831 0.9831 0.1831 327.7154 571.6312)">Canal</text>
 			<text
 				id="text17758"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 304.4484 558.4053)">Reservation</text>
 			<text
 				id="text17760"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 322.0705 555.963)">Main Channel</text>
 			<text
 				id="text17762"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 299.8211 594.805)">Houghtelin</text>
 			<text
 				id="text17764"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 299.8211 597.5185)">Lake</text>
 			<text
 				id="text17766"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.1205 -0.9927 0.9927 0.1205 286.6089 602.341)">Cocopoh</text>
 			<text
 				id="text17768"
 				font-size="2.2572"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.7965 -0.6047 0.6047 0.7965 294.0852 582.8463)">Canal</text>
 			<text
 				id="text17770"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.7413 -0.6712 0.6712 0.7413 271.6805 587.0756)">Main</text>
 			<text
 				id="text17772"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.9326 -0.3608 0.3608 0.9326 286.6089 574.582)">Drain</text>
 			<text
 				id="text17774"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 274.6689 619.1249)">Siphon</text>
 			<path
@@ -8634,25 +8505,21 @@
 			<text
 				id="text17778"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(-0.1647 -0.9863 0.9863 -0.1647 266.4565 606.8007)">Yuma Main Canal</text>
 			<text
 				id="text17780"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.8387 -0.5445 0.5445 0.8387 213.2999 599.7162)">All American</text>
 			<text
 				id="text17782"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.841 -0.541 0.541 0.841 301.4469 550.4263)">Canal</text>
 			<text
 				id="text17784"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 242.522 580.8927)">Ypsilanti</text>
 			<path
@@ -8665,7 +8532,6 @@
 			<text
 				id="text17788"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 246.2421 594.46)">Hualapai</text>
 			<path
@@ -8678,13 +8544,11 @@
 			<text
 				id="text17792"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 239.5422 598.3694)">Reservation</text>
 			<text
 				id="text17794"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 239.5422 601.0819)">Main Drain</text>
 			<path
@@ -8697,13 +8561,11 @@
 			<text
 				id="text17798"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 232.6995 603.9103)">Yuma Main Canal</text>
 			<text
 				id="text17800"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 232.6995 606.6243)">Wasteway</text>
 			<path
@@ -8716,134 +8578,112 @@
 			<text
 				id="text17804"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.5155 -0.8569 0.8569 0.5155 228.2641 604.7457)">Drain No. 88</text>
 			<text
 				id="text17806"
 				font-size="2.2572"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.863 -0.5053 0.5053 0.863 216.3703 603.9105)">Drain No. 8</text>
 			<text
 				id="text17808"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 213.6609 624.8108)">Cooper</text>
 			<text
 				id="text17810"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(1 0 0 1 230.1037 624.3518)">Canal</text>
 			<text
 				id="text17812"
 				font-size="2.257"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.384 -0.9233 0.9233 0.384 208.4978 643.8448)">N. West</text>
 			<text
 				id="text17814"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(7.352413e-02 -0.9973 0.9973 7.352413e-02 215.7254 636.2607)">Drain</text>
 			<text
 				id="text17816"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(-1.420321e-02 -0.9999 0.9999 -1.420321e-02 204.1286 654.3643)">Main Drain Ext.</text>
 			<text
 				id="text17818"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(4.213136e-02 -0.9991 0.9991 4.213136e-02 240.9209 667.743)">Mesa</text>
 			<text
 				id="text17820"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(4.213136e-02 -0.9991 0.9991 4.213136e-02 241.6762 642.8055)">Conduit</text>
 			<text
 				id="text17824"
 				font-size="2.2571"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.3122 -0.95 0.95 0.3122 213.9922 655.2634)">Canal</text>
 			<text
 				id="text17826"
 				font-size="2.2572"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C"
 				transform="matrix(0.2125 -0.9772 0.9772 0.2125 252.7938 639.8861)">Canal</text>
 			<!-- HERE IS WHERE THERE MIGHT BE A GROUP -->
 			<text
 				transform="matrix(1 0 0 1 245.4729 676.7873)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2571"
 				id="text17828">Canal</text>
 			<text
 				transform="matrix(5.202057e-02 -0.9986 0.9986 5.202057e-02 252.7648 691.1049)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.257"
 				id="text17830">Main</text>
 			<text
 				transform="matrix(1.323000e-02 -0.9999 0.9999 1.323000e-02 240.4776 698.3474)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2571"
 				id="text17832">Yuma</text>
 			<text
 				transform="matrix(0.3955 -0.9185 0.9185 0.3955 193.6375 707.4275)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2572"
 				id="text17834">Main</text>
 			<text
 				transform="matrix(0.9953 9.710015e-02 -9.710015e-02 0.9953 207.809 683.3836)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2572"
 				id="text17836">Drain</text>
 			<text
 				transform="matrix(0.5112 -0.8595 0.8595 0.5112 204.1284 708.4934)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2572"
 				id="text17838">Drain</text>
 			<text
 				transform="matrix(0.7122 -0.702 0.702 0.7122 168.1106 758.0732)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2571"
 				id="text17840">Central</text>
 			<text
 				transform="matrix(8.499596e-02 -0.9964 0.9964 8.499596e-02 185.4507 736.8887)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2572"
 				id="text17842">Canal</text>
 			<text
 				transform="matrix(1 0 0 1 219.8703 738.9553)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2571"
 				id="text17844">East</text>
 			<text
 				transform="matrix(1 0 0 1 245.4729 723.7775)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2571"
 				id="text17846">Unit “B”</text>
 			<text
 				transform="matrix(1 0 0 1 245.4729 726.4905)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2571"
 				id="text17848">Main Canal</text>
 			<path
@@ -8856,31 +8696,26 @@
 			<text
 				transform="matrix(0.7381 -0.6747 0.6747 0.7381 167.0742 723.0108)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2571"
 				id="text17852">West</text>
 			<text
 				transform="matrix(0.5291 -0.8486 0.8486 0.5291 178.5727 686.3021)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2572"
 				id="text17854">Main</text>
 			<text
 				transform="matrix(1 0 0 1 179.55 690.7285)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2571"
 				id="text17860">Main Outlet</text>
 			<text
 				transform="matrix(1 0 0 1 179.55 693.4424)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2571"
 				id="text17862">Drain Exten.</text>
 			<text
 				transform="matrix(1 0 0 1 179.55 696.1564)"
 				fill="#1E628C"
-				font-family="'Arial-BoldMT'"
 				font-size="2.2571"
 				id="text17864">(Bypass Drain)</text>
 			<path
@@ -9312,16 +9147,14 @@
 			<text
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 168.308 625.4445)"
 				font-size="2.4179"
-				id="text17156"
-				font-family="'Arial-BoldMT'">37</text>
+				id="text17156">37</text>
 			<path
 				d="M165,633.4l1.1-1.8c0.1-0.1,0.2-0.1,0.3,0l1.1,1.8c0.1,0.1,0,0.3-0.1,0.3h-2.1C165.1,633.7,165,633.6,165,633.4z"
 				id="path17158" />
 			<text
 				transform="matrix(0.9958 -9.123528e-02 9.123528e-02 0.9958 168.3081 633.7791)"
 				font-size="2.4179"
-				id="text17160"
-				font-family="'Arial-BoldMT'">38</text>
+				id="text17160">38</text>
 			<path
 				id="path15287"
 				d="M156.1,630.5v2.2c0,0,4.8-0.1,5.2-0.4v-2C161.2,630.3,156.3,630.5,156.1,630.5z"
@@ -9961,7 +9794,6 @@
 				id="text17858"
 				font-size="2.2571"
 				transform="matrix(0.8321 0.5546 -0.5546 0.8321 146.6483 650.7719)"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Canal</text>
 			<path
 				id="path15299"
@@ -9987,49 +9819,41 @@
 				transform="matrix(0.9382 0.3462 -0.3462 0.9382 122.773 642.3679)"
 				font-size="2.2572"
 				id="text17856"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Alamo</text>
 			<text
 				transform="matrix(-0.4763 -0.8793 0.8793 -0.4763 139.6512 573.5326)"
 				font-size="2.2571"
 				id="text17868"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Coachella</text>
 			<text
 				transform="matrix(-0.4852 -0.8744 0.8744 -0.4852 122.7734 548.9405)"
 				font-size="2.2571"
 				id="text17870"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Canal</text>
 			<text
 				transform="matrix(-1.489584e-02 -0.9999 0.9999 -1.489584e-02 126.516 600.3832)"
 				font-size="2.2571"
 				id="text17872"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">East</text>
 			<text
 				transform="matrix(-0.1833 -0.9831 0.9831 -0.1833 120.7308 568.9881)"
 				font-size="2.2572"
 				id="text17874"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Highline</text>
 			<text
 				transform="matrix(-0.5629 -0.8265 0.8265 -0.5629 100.5201 522.9077)"
 				font-size="2.2571"
 				id="text17876"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Canal</text>
 			<text
 				transform="matrix(1 0 0 1 111.0777 596.1845)"
 				font-size="2.2571"
 				id="text17878"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Schenk</text>
 			<text
 				transform="matrix(1 0 0 1 111.0777 598.8984)"
 				font-size="2.2571"
 				id="text17880"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Canal</text>
 			<path
 				stroke-miterlimit="10"
@@ -10042,125 +9866,105 @@
 				transform="matrix(-0.2106 -0.9776 0.9776 -0.2106 97.7879 569.9975)"
 				font-size="4.5452"
 				id="text17884"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">River</text>
 			<text
 				transform="matrix(5.879780e-03 -1 1 5.879780e-03 99.1843 596.185)"
 				font-size="4.5452"
 				id="text17886"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Alamo</text>
 			<text
 				transform="matrix(0.6528 -0.7575 0.7575 0.6528 103.9634 626.0268)"
 				font-size="2.2571"
 				id="text17888"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Ash</text>
 			<text
 				transform="matrix(0.2845 -0.9587 0.9587 0.2845 107.4159 619.1241)"
 				font-size="2.2572"
-				id="text17890"
-				font-family="'Arial-BoldMT'">Canal</text>
+				id="text17890">Canal</text>
 			<text
 				transform="matrix(1 0 0 1 76.2238 615.5021)"
 				font-size="2.2571"
 				id="text17892"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Alamitos</text>
 			<text
 				transform="matrix(1 0 0 1 76.2238 618.2151)"
 				font-size="2.2571"
 				id="text17894"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Canal</text>
 			<text
 				transform="matrix(4.489659e-11 -1 1 4.489659e-11 71.0783 620.1678)"
 				font-size="2.2571"
 				id="text17896"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">CENTRAL MAIN CANAL</text>
 			<text
 				transform="matrix(-0.83 -0.5578 0.5578 -0.83 67.6346 624.9496)"
 				font-size="4.5452"
 				id="text17898"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">New</text>
 			<text
 				transform="matrix(0.1873 -0.9823 0.9823 0.1873 49.3171 611.7509)"
 				font-size="4.5451"
 				id="text17900"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">River</text>
 			<text
 				transform="matrix(1 0 0 1 46.17 571.2911)"
 				font-size="2.2571"
 				id="text17902"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Thistle</text>
 			<text
 				transform="matrix(1 0 0 1 46.17 574.0041)"
 				font-size="2.2571"
 				id="text17904"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Canal</text>
 			<text
 				transform="matrix(-0.3485 -0.9373 0.9373 -0.3485 54.8869 631.6378)"
 				font-size="2.2571"
 				id="text17906"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">West</text>
 			<text
 				transform="matrix(-0.648 -0.7616 0.7616 -0.648 42.627 618.2219)"
 				font-size="2.257"
 				id="text17908"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Side</text>
 			<text
 				transform="matrix(0.9145 -0.4047 0.4047 0.9145 43.8142 596.5981)"
 				font-size="2.2572"
 				id="text17910"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Tamarack</text>
 			<text
 				transform="matrix(0.7735 -0.6338 0.6338 0.7735 68.9242 578.4625)"
 				font-size="2.2571"
 				id="text17912"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Canal</text>
 			<text
 				transform="matrix(0.3798 0.9251 -0.9251 0.3798 52.7619 551.3715)"
 				font-size="2.2572"
 				id="text17914"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Trifolium</text>
 			<text
 				transform="matrix(0.9999 -1.320590e-02 1.320590e-02 0.9999 60.3232 562.4664)"
 				font-size="2.2571"
 				id="text17916"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">Canal</text>
 			<text
 				transform="matrix(1 0 0 1 60.3234 492.3556)"
 				font-size="4.5451"
 				id="text17918"
-				font-family="'Arial-BoldMT'"
 				fill="#1E628C">SALTON</text>
 			<text
 				font-size="4.5451"
 				id="text17920"
 				x="66.313866"
 				y="497.20828"
-				style="font-size:4.54510021px;font-family:Arial-BoldMT;fill:#1e628c">SEA</text>
+				style="font-size:4.54510021px;fill:#1e628c">SEA</text>
 			<text
 				id="text17946"
 				font-size="2.6557"
-				transform="matrix(1 0 0 1 50.9224 509.1995)"
-				font-family="'Arial-BoldMT'">Below</text>
+				transform="matrix(1 0 0 1 50.9224 509.1995)">Below</text>
 			<text
 				id="text17948"
 				font-size="2.6557"
-				transform="matrix(1 0 0 1 50.9224 512.3729)"
-				font-family="'Arial-BoldMT'">sea level</text>
+				transform="matrix(1 0 0 1 50.9224 512.3729)">sea level</text>
 		</g>
 	</g>
 </svg>
