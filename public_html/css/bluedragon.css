@@ -25,6 +25,11 @@
 	opacity: 0.0;
 }
 
+text {
+	cursor: default;
+	font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .riverGroup {
 	-webkit-transition: 1s ease-in-out;
 	-moz-transition: 1s ease-in-out;
@@ -39,10 +44,6 @@
 	-moz-transition: 1s ease-in-out;
 	-o-transition: 1s ease-in-out;
 	transition: 1s ease-in-out;
-}
-
-#insetGroup {
-	transform: scale(0.5);
 }
 
 .bbox {
