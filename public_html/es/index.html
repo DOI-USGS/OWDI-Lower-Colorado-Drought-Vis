@@ -1295,7 +1295,16 @@
 				$('#section15Info').toggle();
 			});
 			
-			
+			$('#lakeMeadRead01').on('click', function(){
+				
+				$('#lakeMeadHidden01').toggle();
+				
+				if($(this).text() == 'Read More >>'){
+					$(this).text('Hide Text');
+					}else{
+						$(this).text('Read More >>');
+						}
+			});	
 				
 			$('#lakeMeadRead02').on('click', function(){
 				
