@@ -542,14 +542,15 @@
 #mead-object{
 	display:none;
 	}
+	
+#meadSVGContainer{
+	margin:0 0 20px 0;
+	}
 
 #meadSVGContainer h2 {
 	color: #fff;
-	margin-bottom: 30px;
 	width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-
+    margin: 0 auto 30px auto;
     max-width: 950px;
     text-align: center;
 }
@@ -1004,6 +1005,10 @@
 		}
 
 	/*======dygraph Section CSS======*/
+	
+	#usdroughtgifexplore{
+		width:50%;
+		}
 
 	#natural-flow-graph{
 		width:100% !important;
