@@ -194,6 +194,10 @@ $( document ).ready( function () {
 					animationSVG.drawRiver();
 					triggered = true;
 				}
+				if (animationMobileSVG && animationMobileSVG.drawRiver && !triggered) {
+					animationMobileSVG.drawRiver();
+					triggered = true;
+				}
 			};
 
 		window.owdiDrought.addScene({
