@@ -71,6 +71,20 @@ for(i in 1:length(mainPolys)){
   }
 }
 
+area <- lapply(mexico_bdr@polygons, function(x) sapply(x@Polygons, function(y) y@area))
+mainPolys <- lapply(area, function(x) which(x > min_area))
+
+# get rid of all polys below area threshold
+mexico_bdr_simp <- mexico_bdr
+for(i in 1:length(mainPolys)){
+  if(length(mainPolys[[i]]) >= 1 && mainPolys[[i]][1] >= 1){
+    mexico_bdr_simp@polygons[[i]]@Polygons <- mexico_bdr_simp@polygons[[i]]@Polygons[mainPolys[[i]]]
+    mexico_bdr_simp@polygons[[i]]@plotOrder <- 1:length(mexico_bdr_simp@polygons[[i]]@Polygons)
+    
+  }
+}
+mexico_bdr <- mexico_bdr_simp
+rm(mexico_bdr_simp)
 
 svg(filename = svg_file,width=width, height=height)
 par(omi=c(0,0,0,0),mai=c(0,0,0,0))
