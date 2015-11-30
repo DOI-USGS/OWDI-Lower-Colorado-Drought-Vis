@@ -122,8 +122,42 @@ $( document ).ready( function () {
 			parentContainer = "#meadSVGContainer",
 			animation = function() {
 				var animationSVG = document.getElementById("mead-object").getSVGDocument();
+				var animationMobileSVG = document.getElementById("mead-object-mobile").getSVGDocument();
 				$(animationSVG).find("#decrement-scene, #increment-scene").on("click", function() {
 						var stepNumber = animationSVG.sceneNum;
+						$(".SVGInfo:visible").fadeOut({
+							complete: function() {
+								switch (stepNumber) {
+								case 0:
+									$("#draw-river").fadeIn();
+									break;
+								case 1:
+									$("#draw-basin").fadeIn();
+									break;
+								case 2:
+									$("#highlight-user-2").fadeIn();
+									break;
+								case 3:
+									$("#mead-info-1").fadeIn();
+									break;
+								case 4:
+									$("#mead-info-2").fadeIn();
+									break;
+								case 5:
+									$("#mead-info-3").fadeIn();
+									break;
+								case 6:
+									$("#mead-info-4").fadeIn();
+									break;
+								case 7:
+									$("#mead-info-5").fadeIn();
+									break;
+								}
+							}
+						});
+					});
+					$(animationMobileSVG).find("#decrement-scene, #increment-scene").on("click", function() {
+						var stepNumber = animationMobileSVG.sceneNum;
 						$(".SVGInfo:visible").fadeOut({
 							complete: function() {
 								switch (stepNumber) {

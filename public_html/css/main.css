@@ -663,6 +663,16 @@
 		width:50%;
 		margin:0 auto;
 	}
+	
+	/*US Drought Section CSS*/
+	#usdroughtgifexplore{
+		width:50%;
+		}
+		
+	#lakeMeadAnimatedExtra{
+		width:50%;
+		}
+
 
 }
 
@@ -800,7 +810,7 @@
 	#before-after-section figure{
 		margin-top:50px;
 		}
-
+	
 	/*======Lake Mead Animated Section CSS======*/
 
 	#natural-flow-graph {
@@ -1007,7 +1017,7 @@
 	/*======dygraph Section CSS======*/
 	
 	#usdroughtgifexplore{
-		width:50%;
+		width:40%;
 		}
 
 	#natural-flow-graph{
