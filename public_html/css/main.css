@@ -538,6 +538,11 @@
 
 
 /*Lake Mead Animated Section CSS*/
+
+#mead-object{
+	display:none;
+	}
+
 #meadSVGContainer h2 {
 	color: #fff;
 	margin-bottom: 30px;
@@ -843,6 +848,14 @@
 		}
 
 	#mead-elev-object-mobile{
+		display:none;
+		}
+		
+	#mead-object{
+		display:block;
+		}
+		
+	#mead-object-mobile{
 		display:none;
 		}
 
