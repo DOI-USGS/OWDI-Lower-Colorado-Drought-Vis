@@ -29,6 +29,8 @@ mead_names <- c(group_id='Mead-2D', water_id='Mead-water-level', border_id='Mead
 ani_dur <- c('mead-draw'="2s", 'mead-remove'='1s','stage-move'='1s',
              'river-draw'='5s','river-reset'='1s','basin-draw'='1s')
 
+view.box = c('desktop'='-50 0 640 547', 'mobile'='-65 0 670 547')
+x.edge = c('desktop'='-50', 'mobile'='-65')
 for (form.factor in c('desktop','mobile')){
   for (lang in c('en','es')){
     
@@ -50,9 +52,9 @@ for (form.factor in c('desktop','mobile')){
     svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
       add_flag_defs(id = 'usa-flag', x=-10,y=-80, width=500,height=500, image_url='US_flag.svg') %>% 
       add_flag_defs(id = 'mexico-flag', x=120,y=170, width=650,height=547, image_url='Mexico_flag.svg') %>% 
-      edit_attr_svg(c('viewBox'='-50 0 640 547', 'onload'='init(evt)')) %>% 
-      add_rect(x="-50", width="100%", height="100%", style="max-width=950px", fill="url(#background-image)", at=0, rx='6',ry='6', id='background-panel') %>%
-      add_scene_buttons() %>% 
+      edit_attr_svg(c('viewBox'=view.box[[form.factor]], 'onload'='init(evt)')) %>% 
+      add_rect(x=x.edge[[form.factor]], width="100%", height="100%", style="max-width=950px", fill="url(#background-image)", at=0, rx='6',ry='6', id='background-panel') %>%
+      add_scene_buttons(form.factor) %>% 
       add_picto_legend() %>% 
       attr_svg_paths(attrs = list('mexico-border'=border_line)) %>% 
       remove_svg_elements(elements = c('delete_group'='g')) %>% 

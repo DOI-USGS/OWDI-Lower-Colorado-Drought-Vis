@@ -227,18 +227,33 @@ add_ecmascript <- function(svg, text){
   
 }
 
-add_scene_buttons <- function(svg){
+add_scene_buttons <- function(svg, form.factor='desktop'){
   root_nd <- xmlRoot(svg)
   g_in = newXMLNode('g',parent=root_nd,attrs = c(id='decrement-scene'))
-  newXMLNode('rect',parent=g_in, attrs = c(x='-50',width="35",height="547",fill="white",opacity="0.3"))
-  newXMLNode('path',parent=g_in, attrs = c(d="M-25 293.5 L-40 273.5 L-25 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round"))
-  newXMLNode('rect',parent=g_in, attrs = c(x='-50',width="35",height="547",fill="white",opacity="0.0",onclick="decrementScene()"))
+  if (form.factor=='desktop'){
+    newXMLNode('rect',parent=g_in, attrs = c(x='-50',width="35",height="547",fill="white",opacity="0.3"))
+    newXMLNode('path',parent=g_in, attrs = c(d="M-25 293.5 L-40 273.5 L-25 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round"))
+    newXMLNode('rect',parent=g_in, attrs = c(x='-50',width="35",height="547",fill="white",opacity="0.0",onclick="decrementScene()"))
+  } else {
+    newXMLNode('rect',parent=g_in, attrs = c(x='-65',width="50",height="547",fill="white",opacity="0.3"))
+    newXMLNode('path',parent=g_in, attrs = c(d="M-35 293.5 L-50 273.5 L-35 253.5",style="stroke:grey;stroke-width:12;fill:none",'stroke-linecap'="round"))
+    newXMLNode('rect',parent=g_in, attrs = c(x='-65',width="50",height="547",fill="white",opacity="0.0",onclick="decrementScene()"))
+  }
+  
   g_dc = newXMLNode('g',parent=root_nd,attrs = c(id='increment-scene'))
-  newXMLNode('rect',parent=g_dc, attrs = c(x='555',width="35",height="547",fill="white",opacity="0.3"))
-  newXMLNode('path',parent=g_dc, attrs = c(d="M565 293.5 L580 273.5 L565 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round",onclick="incrementScene()"))
-  newXMLNode('path',parent=g_dc, attrs = c(id="mouser-helper", d="m201.453995,112.872002l-183.068584,-100.156902l78.608601,195.193897l31.298012,-50.675995l61.883972,67.641998l23.437012,-22.837006l-63.26799,-66.993988l51.108978,-22.172005z", 
-                                           fill="#ffffff", stroke="#000000", 'stroke-width'="8", 'stroke-linejoin'="round", opacity="0.6", transform="translate(555,280),scale(0.15,0.15)", class="hidden"))
-  newXMLNode('rect',parent=g_dc, attrs = c(x='555',width="35",height="547",fill="white",opacity="0.0",onclick="incrementScene()"))
+  if (form.factor=='desktop'){
+    newXMLNode('rect',parent=g_dc, attrs = c(x='555',width="35",height="547",fill="white",opacity="0.3"))
+    newXMLNode('path',parent=g_dc, attrs = c(d="M565 293.5 L580 273.5 L565 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round",onclick="incrementScene()"))
+    newXMLNode('path',parent=g_dc, attrs = c(id="mouser-helper", d="m201.453995,112.872002l-183.068584,-100.156902l78.608601,195.193897l31.298012,-50.675995l61.883972,67.641998l23.437012,-22.837006l-63.26799,-66.993988l51.108978,-22.172005z", 
+                                             fill="#ffffff", stroke="#000000", 'stroke-width'="8", 'stroke-linejoin'="round", opacity="0.6", transform="translate(555,280),scale(0.15,0.15)", class="hidden"))
+    newXMLNode('rect',parent=g_dc, attrs = c(x='555',width="35",height="547",fill="white",opacity="0.0",onclick="incrementScene()"))
+  } else {
+    newXMLNode('rect',parent=g_dc, attrs = c(x='555',width="50",height="547",fill="white",opacity="0.3"))
+    newXMLNode('path',parent=g_dc, attrs = c(d="M575 293.5 L590 273.5 L575 253.5",style="stroke:grey;stroke-width:12;fill:none",'stroke-linecap'="round",onclick="incrementScene()"))
+    newXMLNode('path',parent=g_dc, attrs = c(id="mouser-helper", d="m201.453995,112.872002l-183.068584,-100.156902l78.608601,195.193897l31.298012,-50.675995l61.883972,67.641998l23.437012,-22.837006l-63.26799,-66.993988l51.108978,-22.172005z", 
+                                             fill="#ffffff", stroke="#000000", 'stroke-width'="8", 'stroke-linejoin'="round", opacity="0.6", transform="translate(555,280),scale(0.15,0.15)", class="hidden"))
+    newXMLNode('rect',parent=g_dc, attrs = c(x='555',width="50",height="547",fill="white",opacity="0.0",onclick="incrementScene()"))
+  }
   invisible(svg)
   
 }
