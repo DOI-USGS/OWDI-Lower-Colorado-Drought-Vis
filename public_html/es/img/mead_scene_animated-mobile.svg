@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../../css/svg.css" ?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-50 0 640 547" onload="init(evt)" preserveAspectRatio="xMinYMin meet" version="1.1">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-65 0 670 547" onload="init(evt)" preserveAspectRatio="xMinYMin meet" version="1.1">
   <script type="text/ecmascript"><![CDATA[function init(evt){
 if ( window.svgDocument == null ) {
 svgDocument = evt.target.ownerDocument;
@@ -371,7 +371,7 @@ var elevations = {"flood":"> 1,200",
   }
   }
   }]]></script>
-  <rect x="-50" width="100%" height="100%" style="max-width=950px" fill="url(#background-image)" rx="6" ry="6" id="background-panel"/>
+  <rect x="-65" width="100%" height="100%" style="max-width=950px" fill="url(#background-image)" rx="6" ry="6" id="background-panel"/>
   <defs>
     <pattern id="mexico-flag" patternUnits="userSpaceOnUse" x="120" y="170" width="650" height="547">
       <image xlink:href="Mexico_flag.svg" width="650" height="547" opacity="1"/>
@@ -508,15 +508,15 @@ var elevations = {"flood":"> 1,200",
     </mask>
   </defs>
   <g id="decrement-scene">
-    <rect x="-50" width="35" height="547" fill="white" opacity="0.3"/>
-    <path d="M-25 293.5 L-40 273.5 L-25 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round"/>
-    <rect x="-50" width="35" height="547" fill="white" opacity="0.0" onclick="decrementScene()"/>
+    <rect x="-65" width="50" height="547" fill="white" opacity="0.3"/>
+    <path d="M-30 299 L-50 273.5 L-30 248" style="stroke:grey;stroke-width:12;fill:none" stroke-linecap="round"/>
+    <rect x="-65" width="50" height="547" fill="white" opacity="0.0" onclick="decrementScene()"/>
   </g>
   <g id="increment-scene">
-    <rect x="555" width="35" height="547" fill="white" opacity="0.3"/>
-    <path d="M565 293.5 L580 273.5 L565 253.5" style="stroke:grey;stroke-width:7;fill:none" stroke-linecap="round" onclick="incrementScene()"/>
+    <rect x="555" width="50" height="547" fill="white" opacity="0.3"/>
+    <path d="M570 299 L590 273.5 L570 248" style="stroke:grey;stroke-width:12;fill:none" stroke-linecap="round" onclick="incrementScene()"/>
     <path id="mouser-helper" d="m201.453995,112.872002l-183.068584,-100.156902l78.608601,195.193897l31.298012,-50.675995l61.883972,67.641998l23.437012,-22.837006l-63.26799,-66.993988l51.108978,-22.172005z" fill="#ffffff" stroke="#000000" stroke-width="8" stroke-linejoin="round" opacity="0.6" transform="translate(555,280),scale(0.15,0.15)" class="hidden"/>
-    <rect x="555" width="35" height="547" fill="white" opacity="0.0" onclick="incrementScene()"/>
+    <rect x="555" width="50" height="547" fill="white" opacity="0.0" onclick="incrementScene()"/>
   </g>
   <g id="mead-pictogram-legend" transform="translate(200,135)" class="legend-hidden">
     <rect x="150" y="270" width="130" height="45" stroke="#FFFFFF" fill="none"/>
