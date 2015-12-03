@@ -212,4 +212,21 @@
 	<unitsMetricElevationAbbr>m</unitsMetricElevationAbbr>
 	<unitsImperialElevationAbbr>ft</unitsImperialElevationAbbr>
 	<projFigDateLegend>Date</projFigDateLegend>
+	<rdfAbout>Use this interactive data visualization to learn about the importance of the Colorado River, the impacts of the current drought, and the ways in which the drought is being managed in the Basin.</rdfAbout>
+	<rdfAcctPersonName>Emily Read</rdfAcctPersonName>
+	<rdfAcctPersonEmail>eread@usgs.gov</rdfAcctPersonEmail>
+	<rdfAcctPersonAffiliation>U.S. Geological Survey</rdfAcctPersonAffiliation>
+	<rdfAltHeadline>Drought in the Colorado River Basin: Insights using open data</rdfAltHeadline>
+	<rdfAudienceType>citizens, water users, resource managers, students, policy makers, scientists, computer scientists, data scientists</rdfAudienceType>
+	<rdfAudienceGeo>US, Mexico, global</rdfAudienceGeo>
+	<rdfAuthor>U.S. Department of Interior</rdfAuthor>
+	<rdfContributor>U.S. Department of Interior, U.S. Bureau of Reclamation, U.S. Geological Survey, U.S. Environmental Protection Agency, Oregon State University, Western States Water Council, Esri</rdfContributor>
+	<rdfDate>2015-12-15</rdfDate>
+	<rdfEditorName>Sandra Cooper</rdfEditorName>
+	<rdfEditorAffiliation>U.S. Geological Survey</rdfEditorAffiliation>
+	<rdfEducationalUse>learning resource, map, lesson</rdfEducationalUse>
+	<rdfHeadline>Drought in the Colorado River Basin</rdfHeadline>
+	<rdfKeywords>drought, water, data, software, visualizations, collaboration, data science, Colorado River, western U.S., water supply, agriculture, hydropower, allocations</rdfKeywords>
+	<rdfIsPartOf>https://www.doi.gov/water/</rdfIsPartOf>
+	<websiteUrl>https://www.doi.gov/water/owdi.cr.drought/</websiteUrl>
 </fullText>
