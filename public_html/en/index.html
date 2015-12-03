@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html prefix="og: http://ogp.me/ns#" lang="en">
     <head>
         <meta charset="utf-8" />
         
@@ -8,15 +7,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,   user-scalable=no" />
 
         <!-- RDFa Tags - http://ogp.me/ -->
-        <meta property="og:title" content="" />
+        <meta property="og:title" content="OWDI Drought" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="" />
-        <meta property="og:image" content="" />
-        <meta property="og:image:url" content="" />
-        <meta property="og:image:height" content="" />
-        <meta property="og:image:width" content="" />
-        <meta property="og:image:type" content="" />
-        <meta property="og:description" content="" />
+        <meta property="og:url" content="https://www.doi.gov/water/owdi.cr.drought/en" />
+        <meta property="og:image:url" content="https://www.doi.gov/water/owdi.cr.drought/img/thumbnail.png" />
+        <meta property="og:image:height" content="894" />
+        <meta property="og:image:width" content="761" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:description" content="Use this interactive data visualization to learn about the importance of the Colorado River, the impacts of the current drought, and the ways in which the drought is being managed in the Basin." />
         <meta property="og:locale" content="en_US" />
 
         <title>OWDI Drought</title>
@@ -24,25 +22,68 @@
         <link href="../css/overlay.css" rel="stylesheet" type="text/css">
         <link href="../css/main.css" rel="stylesheet" type="text/css">
         <link href="../css/normalize.css" rel="stylesheet" type="text/css">
-		<link href="../css/svg.css" rel="stylesheet" type="text/css">
+	<link href="../css/svg.css" rel="stylesheet" type="text/css">
         <link href="../css/print.css" rel="stylesheet" type="text/css">
         <link href="../css/before-after.css" rel="stylesheet" type="text/css">
         <link href="../css/dygraph.css" rel="stylesheet" type="text/css">
         <link href="//fonts.googleapis.com/css?family=Roboto:400,500,700,100,300" rel="stylesheet" type="text/css">
-		
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		
-		  ga('create', 'UA-66155743-1', 'auto');
-		  ga('send', 'pageview');
 
-		</script>
-      <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
-      <script type="text/javascript" src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-      <script type="text/javascript" src="../js/init.js"></script>
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"headline": "Drought in the Colorado River Basin",
+			"alternateHeadline": "Drought in the Colorado River Basin: Insights using open data",
+			"about": "Use this interactive data visualization to learn about the importance of the Colorado River, the impacts of the current drought, and the ways in which the drought is being managed in the Basin.",
+			"datePublished": "2015-12-15",
+			"educationalUse": "learning resource, map, lesson",
+			"accountablePerson": {
+				"@context": "http://schema.org",
+				"@type": "Person",
+				"name": "Emily Read",
+				"email": "eread@usgs.gov",
+				"affiliation": {
+					"@context": "http://schema.org",
+					"@type": "Organization",
+					"legalName"= "U.S. Geological Survey"
+				}
+			},
+			"audience": {
+				"@context": "http://schema.org",
+				"@type": "Audience",
+				"audienceType": "citizens, water users, resource managers, students, policy makers, scientists, computer scientists, data scientists"
+			},
+			"author": {
+				"@context": "http://schema.org",
+                                "@type": "Organization",
+                                "legalName"= "U.S. Department of Interior"
+			},
+			"editor": {
+				"@context": "http://schema.org",
+				"@type": "Person",
+                                "name": "Sandra Cooper",
+                                "affiliation": {
+                                        "@context": "http://schema.org",
+                                        "@type": "Organization",
+                                        "legalName"= "U.S. Geological Survey"
+                                }
+			},
+			"keywords": "drought, water, data, software, visualizations, collaboration, data science, Colorado River, western U.S., water supply, agriculture, hydropower, allocations",
+			"isPartOf": "https://www.doi.gov/water/"
+		}
+	</script>
+		
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-66155743-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="../js/init.js"></script>
     </head>
 
     <body>
