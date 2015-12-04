@@ -1,12 +1,11 @@
 @charset "UTF-8";
 /* CSS Document */
 
-*{padding:0; margin:0;}
+*{ margin:0;}
 
 a{
-	text-decoration:none;
+	text-decoration:none !important;
 	color:#003366;
-	font-weight:700;
 	}
 	
 a:hover{

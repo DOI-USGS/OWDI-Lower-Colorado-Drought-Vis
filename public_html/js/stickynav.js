@@ -159,3 +159,14 @@ new ScrollMagic.Scene({
 	.triggerHook(.05)
 	.setClassToggle('#eraLink', 'current')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
+	
+	
+new ScrollMagic.Scene({
+	triggerElement: '#stickynavContainer',
+	})
+	.triggerHook(0)
+	.setPin('#stickynavContainer')
+	.addTo(controller); // Add Scene to ScrollMagic Controller
+
+
+

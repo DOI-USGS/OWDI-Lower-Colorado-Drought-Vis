@@ -10,7 +10,6 @@
 	background:#003366;
 	color:#fff !important;
 	}
-	
 /*=====Leaving App CSS=====*/
 .leaving{
 	margin-right:3px;
@@ -65,18 +64,21 @@
 
 /*Sticky Nav CSS*/
 
-.menu{
+.navMenu{
 	background:#003366;
 	height:60px;
 	padding:0px !important;
 	margin-bottom:0px !important;
 	}
 	
+.navMenu a{
+	font-weight:300 !important;
+	}
+	
 #stickynavContainer{
-	position:fixed;
 	width:100%;
 	height:60px;
-	z-index:1000;
+	z-index:10;
 	}
 
 #stickynav{
@@ -105,7 +107,7 @@
 	font-weight:300;
 	}
 
-.toolTip{
+.navToolTip{
 	display:none;
 	}
 
@@ -209,6 +211,10 @@
 	text-align: center;
 	clear:both;
 }
+
+.container a{
+	font-weight:700;
+	}
 
 #TreeRingDataLegend{
   height: 50px;
@@ -913,20 +919,20 @@
 		text-decoration:none;
 		}
 
-	.navBox:hover .toolTip{
+	.navBox:hover .navToolTip{
 	display:block !important;
 	}
 
-	.toolTip{
+	.navToolTip{
 		background:rgb(220,220,220);
 		padding:10px;
 		width:160px;
 		position:absolute;
-		bottom:-45px;
+		bottom:-55px;
 		display:none;
 	}
 
-	.toolTip:after{
+	.navToolTip:after{
 		content:"";
 		width: 0;
 		height: 0;
