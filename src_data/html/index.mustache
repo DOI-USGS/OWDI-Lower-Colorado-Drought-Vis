@@ -20,6 +20,7 @@
         <title>{{ tr.siteTitle }}</title>
         <link rel="icon" href="../img/usgs.ico" type="image/x-icon" />
         <link href="../css/overlay.css" rel="stylesheet" type="text/css">
+		<link href="../css/doi.css" rel="stylesheet" type="text/css">
         <link href="../css/main.css" rel="stylesheet" type="text/css">
         <link href="../css/normalize.css" rel="stylesheet" type="text/css">
 	<link href="../css/svg.css" rel="stylesheet" type="text/css">
@@ -102,7 +103,13 @@
         <!-- Main content -->
         <span id="application">
 		
-		<div id="stickynavContainer" class="menu container">
+		<div id="doiHeaderContainer">
+			<section id="doiHeader">
+			{{> doiHeader }}
+			</section>
+		</div>
+		
+		<div id="stickynavContainer" class="navMenu container">
 		<section id="stickynav" class="section">
 		{{> stickynav }}
 		</section>
@@ -221,6 +228,12 @@
 	    <div id="creditsContainer" class="container">
                 <section id="credits" class="section">
 		{{> credits }}
+		</section>
+            </div>
+			
+		<div id="doiFooterContainer">
+                <section id="doifooter" class="section">
+		{{> doifooter }}
 		</section>
             </div>
 
