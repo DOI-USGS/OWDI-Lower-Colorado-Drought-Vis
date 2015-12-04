@@ -1,8 +1,8 @@
 # build svg line animation
 
-if(!require(dinosvg)){
-	devtools::install_github('jread-usgs/dinosvg')
-	library(dinosvg)
+if(!require(dinosvg) || packageVersion('dinosvg') != '0.1.9'){
+  devtools::install_github('jread-usgs/dinosvg@v0.1.9')
+  library(dinosvg)
 }
 
 
