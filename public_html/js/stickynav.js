@@ -134,14 +134,14 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
 	triggerElement: '#Shortage',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#decliningStorageLink', 'notCurrent')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	
 new ScrollMagic.Scene({
 	triggerElement: '#Shortage',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#shortageLink', 'current')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	
@@ -149,13 +149,24 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
 	triggerElement: '#EraOfHope',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#shortageLink', 'notCurrent')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	
 new ScrollMagic.Scene({
 	triggerElement: '#EraOfHope',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#eraLink', 'current')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
+	
+	
+new ScrollMagic.Scene({
+	triggerElement: '#stickynavContainer',
+	})
+	.triggerHook(0)
+	.setPin('#stickynavContainer')
+	.addTo(controller); // Add Scene to ScrollMagic Controller
+
+
+
