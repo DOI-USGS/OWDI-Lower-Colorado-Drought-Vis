@@ -22,7 +22,7 @@ contract_titles <- gsub("'", "\\\\'", contract_titles)
 #escaping apostrophes so that they don't cause the svg animation to error
 
 # 100,000 acre-feet =~ 123 million m3
-picto_scale = ifelse(lang=='en',100000,200000.000000999) # acre-feet per bin, vs million m3 *CONVERT TO ACTUAL!!!*
+picto_scale = ifelse(lang=='en',100000,100000) # acre-feet per bin, vs million m3 *CONVERT TO ACTUAL!!!*
 mead_poly <- c(x1=545,y1=20,x2=545,y2=450,x3=410,y3=450,x4=290,y4= 20)
 mead_yvals <- get_mead_yval(mead_poly, storage = c(26.2, 23.1, 16.2, 9.6, 7.7, 6.0)) # flood, surplus, normal, shortage 1,2,3
 mead_names <- c(group_id='Mead-2D', water_id='Mead-water-level', border_id='Mead-2D-border')
