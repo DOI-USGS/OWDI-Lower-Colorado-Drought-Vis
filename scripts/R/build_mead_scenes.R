@@ -22,7 +22,7 @@ contract_titles <- gsub("'", "\\\\'", contract_titles)
 #escaping apostrophes so that they don't cause the svg animation to error
 
 # 100,000 acre-feet =~ 123 million m3
-picto_scale = ifelse(lang=='en',100000,200000.000000999) # acre-feet per bin, vs million m3 *CONVERT TO ACTUAL!!!*
+picto_scale = ifelse(lang=='en',100000,100000) # acre-feet per bin, vs million m3 *CONVERT TO ACTUAL!!!*
 mead_poly <- c(x1=545,y1=20,x2=545,y2=450,x3=410,y3=450,x4=290,y4= 20)
 mead_yvals <- get_mead_yval(mead_poly, storage = c(26.2, 23.1, 16.2, 9.6, 7.7, 6.0)) # flood, surplus, normal, shortage 1,2,3
 mead_names <- c(group_id='Mead-2D', water_id='Mead-water-level', border_id='Mead-2D-border')
@@ -51,7 +51,7 @@ for (form.factor in c('desktop','mobile')){
     border.path = c(d = xmlAttrs(xpathApply(svg, "//*[local-name()='path'][@id='mexico-border']")[[1]])[['d']])
     svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
       add_flag_defs(id = 'usa-flag', x=-10,y=-80, width=500,height=500, image_url='US_flag.svg') %>% 
-      add_flag_defs(id = 'mexico-flag', x=120,y=170, width=650,height=547, image_url='Mexico_flag.svg') %>% 
+      add_flag_defs(id = 'mexico-flag', x=120,y=170, width=650,height=547, image_url='Mexico_flag.png') %>% 
       edit_attr_svg(c('viewBox'=view.box[[form.factor]], 'onload'='init(evt)')) %>% 
       add_rect(x=x.edge[[form.factor]], width="100%", height="100%", style="max-width=950px", fill="url(#background-image)", at=0, rx='6',ry='6', id='background-panel') %>%
       add_scene_buttons(form.factor) %>% 
