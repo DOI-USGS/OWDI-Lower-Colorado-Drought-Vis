@@ -374,7 +374,7 @@ var elevations = {"flood":"> 1,200",
   <rect x="-65" width="100%" height="100%" style="max-width=950px" fill="url(#background-image)" rx="6" ry="6" id="background-panel"/>
   <defs>
     <pattern id="mexico-flag" patternUnits="userSpaceOnUse" x="120" y="170" width="650" height="547">
-      <image xlink:href="Mexico_flag.svg" width="650" height="547" opacity="1"/>
+      <image xlink:href="Mexico_flag.png" width="650" height="547" opacity="1"/>
     </pattern>
     <clipPath id="Mead-clip">
       <path d="M 545 20 L 545 450 L 410 450 L 290 20" stroke="none"/>

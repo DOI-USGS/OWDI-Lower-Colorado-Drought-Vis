@@ -51,7 +51,7 @@ for (form.factor in c('desktop','mobile')){
     border.path = c(d = xmlAttrs(xpathApply(svg, "//*[local-name()='path'][@id='mexico-border']")[[1]])[['d']])
     svg <- add_background_defs(svg, id = 'background-image',image_url = 'mead-background.jpg') %>%
       add_flag_defs(id = 'usa-flag', x=-10,y=-80, width=500,height=500, image_url='US_flag.svg') %>% 
-      add_flag_defs(id = 'mexico-flag', x=120,y=170, width=650,height=547, image_url='Mexico_flag.svg') %>% 
+      add_flag_defs(id = 'mexico-flag', x=120,y=170, width=650,height=547, image_url='Mexico_flag.png') %>% 
       edit_attr_svg(c('viewBox'=view.box[[form.factor]], 'onload'='init(evt)')) %>% 
       add_rect(x=x.edge[[form.factor]], width="100%", height="100%", style="max-width=950px", fill="url(#background-image)", at=0, rx='6',ry='6', id='background-panel') %>%
       add_scene_buttons(form.factor) %>% 
