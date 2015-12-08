@@ -601,8 +601,8 @@
 #mead-object,
 #mead-elev-object,
 #animated-object,
-#utah,
 #droughtMovingAvg-object,
+#utah,
 #bluedragon-object,
 #co-basin-object{
 	width:100%;
@@ -855,7 +855,6 @@
 @media screen and (min-width: 768px){
 	#animated-object{
 		display:block;
-		margin-top:100px;
 	}
 
 	#animated-object-mobile{
@@ -882,9 +881,6 @@
 		margin-top:100px;
 		}
 
-	#droughtMovingAvg-object{
-		margin-top:100px;
-		}
 		
 	#creditLogosTop img,
 	#creditLogosBottom img{
