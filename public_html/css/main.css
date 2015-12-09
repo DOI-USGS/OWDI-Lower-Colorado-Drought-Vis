@@ -162,8 +162,9 @@
 	position:absolute;
 	right:0;
 	top:25px;
-	z-index:10000;
+	z-index:9;
 	display:none;
+	font-size:.9em !important;
 	}
 
 .takeLink{
