@@ -10,6 +10,10 @@
 	background:#003366;
 	color:#fff !important;
 	}
+	
+.chill{
+	margin-bottom:0 !important;
+	}
 /*=====Leaving App CSS=====*/
 .leaving{
 	margin-right:3px;
@@ -693,7 +697,7 @@
 	}
 
 	#scrollDownArrow{
-		bottom:200px;
+		bottom:250px;
 	}
 
 	#welcomeSocial{
@@ -850,6 +854,10 @@
 		#WaterSupply{
 			background-attachment: scroll !important;
 		}
+		
+		#scrollDownArrow{
+			bottom:200px;
+			}
 
 		}
 
