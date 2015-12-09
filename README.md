@@ -1,7 +1,7 @@
-# OWDI-Lower-Colorado-Drought-Vis
-Lower Colorado Drought Visualization
+# Drought in the Colorado River Basin: Insights using open data
+A collaborative activity of the [Open Water Data Initiative](http://acwi.gov/spatial/owdi/)
 
-to run this application locally, 
+To run this application locally, 
 
 `cd public_html`
 `python -m SimpleHTTPServer 8000`
@@ -15,3 +15,12 @@ This software is in the public domain because it contains materials that origina
 Although this software program has been used by the USGS, no warranty, expressed or implied, is made by the USGS or the U.S. Government as to the accuracy and functioning of the program and related program material nor shall the fact of distribution constitute any such warranty, and no responsibility is assumed by the USGS in connection therewith.
 
 This software is provided "AS IS."
+
+
+Source data and methods
+----------
+Source data is located within the "/src_data" directory. 
+Data used in visualizations is located within the "/public.html/data" directory.
+Methodology is described in visualization captions and text. 
+
+Questions about data, methods, and software can be addressed to the application developers using the [Issues](https://help.github.com/articles/creating-an-issue/) feature of GitHub for this repository. 
