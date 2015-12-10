@@ -59,20 +59,20 @@ co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 mex_simp <- simp_poly(mexico, min_area)
 mexico_bdr <- simp_poly(mexico_bdr, min_area)
 
-svg(filename = svg_file,width=width, height=height)
-par(omi=c(0,0,0,0),mai=c(0,0,0,0))
-
-
-# this keeps the svg paths in explicit order, for easy finding later
-for (state in keep_non){
-  state_border <- spTransform(states[states$STATE_NAME == state, ], CRS(epsg_code)) %>%
-    gSimplify(simp_tol)
+simp_poly <- function(poly, min_area){
+  area <- lapply(poly@polygons, function(x) sapply(x@Polygons, function(y) y@area))
+  mainPolys <- lapply(area, function(x) which(x > min_area))
   
-  if (state == keep_non[1]){
-    plot(state_border, ylim = ylim, xlim = xlim, border='grey90')
-  } else {
-    plot(state_border, border='grey90', add=TRUE)
+  # get rid of all polys below area threshold
+  poly_simp <- poly
+  for(i in 1:length(mainPolys)){
+    if(length(mainPolys[[i]]) >= 1 && mainPolys[[i]][1] >= 1){
+      poly_simp@polygons[[i]]@Polygons <- poly_simp@polygons[[i]]@Polygons[mainPolys[[i]]]
+      poly_simp@polygons[[i]]@plotOrder <- 1:length(poly_simp@polygons[[i]]@Polygons)
+      
+    }
   }
+  return(poly_simp)
 }
 
 plot(mex_simp, add=TRUE)
