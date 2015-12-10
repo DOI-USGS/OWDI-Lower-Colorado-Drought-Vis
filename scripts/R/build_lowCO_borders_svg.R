@@ -56,9 +56,6 @@ top_users <- paste0('usage-',c(1:n.users))
 
 co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
-mex_simp <- simp_poly(mexico, min_area)
-mexico_bdr <- simp_poly(mexico_bdr, min_area)
-
 simp_poly <- function(poly, min_area){
   area <- lapply(poly@polygons, function(x) sapply(x@Polygons, function(y) y@area))
   mainPolys <- lapply(area, function(x) which(x > min_area))
@@ -73,6 +70,25 @@ simp_poly <- function(poly, min_area){
     }
   }
   return(poly_simp)
+}
+
+mex_simp <- simp_poly(mexico, min_area)
+mexico_bdr <- simp_poly(mexico_bdr, min_area)
+
+
+svg(filename = svg_file,width=width, height=height)
+par(omi=c(0,0,0,0),mai=c(0,0,0,0))
+
+# this keeps the svg paths in explicit order, for easy finding later
+for (state in keep_non){
+  state_border <- spTransform(states[states$STATE_NAME == state, ], CRS(epsg_code)) %>%
+    gSimplify(simp_tol)
+  
+  if (state == keep_non[1]){
+    plot(state_border, ylim = ylim, xlim = xlim, border='grey90')
+  } else {
+    plot(state_border, border='grey90', add=TRUE)
+  }
 }
 
 plot(mex_simp, add=TRUE)
