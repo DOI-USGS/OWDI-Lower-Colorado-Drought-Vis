@@ -1,6 +1,7 @@
 require(rgdal)
 library(rgeos)
 library(magrittr)
+library(maptools)
 library(XML)
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 source('scripts/R/create_contract_areas.R')
@@ -55,40 +56,28 @@ top_users <- paste0('usage-',c(1:n.users))
 
 co_river <- rivers[substr(rivers$Name,1,14) == "Colorado River", ]
 
-
-
-
-area <- lapply(mexico@polygons, function(x) sapply(x@Polygons, function(y) y@area))
-mainPolys <- lapply(area, function(x) which(x > min_area))
-
-# get rid of all polys below area threshold
-mex_simp <- mexico
-for(i in 1:length(mainPolys)){
-  if(length(mainPolys[[i]]) >= 1 && mainPolys[[i]][1] >= 1){
-    mex_simp@polygons[[i]]@Polygons <- mex_simp@polygons[[i]]@Polygons[mainPolys[[i]]]
-    mex_simp@polygons[[i]]@plotOrder <- 1:length(mex_simp@polygons[[i]]@Polygons)
-    
+simp_poly <- function(poly, min_area){
+  area <- lapply(poly@polygons, function(x) sapply(x@Polygons, function(y) y@area))
+  mainPolys <- lapply(area, function(x) which(x > min_area))
+  
+  # get rid of all polys below area threshold
+  poly_simp <- poly
+  for(i in 1:length(mainPolys)){
+    if(length(mainPolys[[i]]) >= 1 && mainPolys[[i]][1] >= 1){
+      poly_simp@polygons[[i]]@Polygons <- poly_simp@polygons[[i]]@Polygons[mainPolys[[i]]]
+      poly_simp@polygons[[i]]@plotOrder <- 1:length(poly_simp@polygons[[i]]@Polygons)
+      
+    }
   }
+  return(poly_simp)
 }
 
-area <- lapply(mexico_bdr@polygons, function(x) sapply(x@Polygons, function(y) y@area))
-mainPolys <- lapply(area, function(x) which(x > min_area))
+mex_simp <- simp_poly(mexico, min_area)
+mexico_bdr <- simp_poly(mexico_bdr, min_area)
 
-# get rid of all polys below area threshold
-mexico_bdr_simp <- mexico_bdr
-for(i in 1:length(mainPolys)){
-  if(length(mainPolys[[i]]) >= 1 && mainPolys[[i]][1] >= 1){
-    mexico_bdr_simp@polygons[[i]]@Polygons <- mexico_bdr_simp@polygons[[i]]@Polygons[mainPolys[[i]]]
-    mexico_bdr_simp@polygons[[i]]@plotOrder <- 1:length(mexico_bdr_simp@polygons[[i]]@Polygons)
-    
-  }
-}
-mexico_bdr <- mexico_bdr_simp
-rm(mexico_bdr_simp)
 
 svg(filename = svg_file,width=width, height=height)
 par(omi=c(0,0,0,0),mai=c(0,0,0,0))
-
 
 # this keeps the svg paths in explicit order, for easy finding later
 for (state in keep_non){
@@ -128,11 +117,35 @@ spTransform(co_river_join, CRS(epsg_code)) %>%
   gSimplify(simp_tol) %>%
   plot(add=TRUE)
 
+simp_poly <- function(poly, min_area){
+  area <- lapply(poly@polygons, function(x) sapply(x@Polygons, function(y) y@area))
+  mainPolys <- lapply(area, function(x) which(x > min_area))
+  
+  # get rid of all polys below area threshold
+  poly_simp <- poly
+  for(i in 1:length(mainPolys)){
+    if(length(mainPolys[[i]]) >= 1 && mainPolys[[i]][1] >= 1){
+      poly_simp@polygons[[i]]@Polygons <- poly_simp@polygons[[i]]@Polygons[mainPolys[[i]]]
+      poly_simp@polygons[[i]]@plotOrder <- 1:length(poly_simp@polygons[[i]]@Polygons)
+      
+    }
+  }
+  slot(poly_simp, "polygons") <- lapply(slot(poly_simp, "polygons"),
+                                     checkPolygonsHoles)
+  slot(poly_simp, "polygons") <- lapply(slot(poly_simp, "polygons"),
+                                     "comment<-", NULL)
+  return(poly_simp)
+}
+
 
 for (i in 1:n.users){
-  spTransform(contracts[sorted_contract_i[i],], CRS(epsg_code)) %>%
+  
+  simp_poly(contracts[sorted_contract_i[i],], min_area = 0.0001) %>% 
+    spTransform(CRS(epsg_code)) %>%
+    gSimplify(5000, topologyPreserve=TRUE) %>%
     plot(add=TRUE)
 }
+
 dev.off()
 user_att <- vector('list',n.users) %>% 
   lapply(function(x)x=c('opacity'='0')) %>% 
