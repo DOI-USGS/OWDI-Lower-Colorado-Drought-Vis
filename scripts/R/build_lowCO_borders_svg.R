@@ -129,17 +129,30 @@ rm(mexico_bdr_simp)
 #   gSimplify(simp_tol) %>%
 #   plot(add=TRUE)
 
+simp_poly <- function(poly, min_area){
+  area <- lapply(poly@polygons, function(x) sapply(x@Polygons, function(y) y@area))
+  mainPolys <- lapply(area, function(x) which(x > min_area))
+  
+  # get rid of all polys below area threshold
+  poly_simp <- poly
+  for(i in 1:length(mainPolys)){
+    if(length(mainPolys[[i]]) >= 1 && mainPolys[[i]][1] >= 1){
+      poly_simp@polygons[[i]]@Polygons <- poly_simp@polygons[[i]]@Polygons[mainPolys[[i]]]
+      poly_simp@polygons[[i]]@plotOrder <- 1:length(poly_simp@polygons[[i]]@Polygons)
+      
+    }
+  }
+  return(poly_simp)
+}
+
 
 for (i in 1:n.users){
   par(omi=c(0,0,0,0),mai=c(0,0,0,0))
   png(filename = sprintf("src_data/lower-co-map/lo_CO_contracts-%s.png",i),width=width, height=height, res=300, units = 'in')
-  
-  spTransform(contracts[sorted_contract_i[i],], CRS(epsg_code)) %>%
-    plot(add=FALSE, border='grey80')
-  
-  spTransform(contracts[sorted_contract_i[i],], CRS(epsg_code)) %>%
-    gSimplify(100) %>%
-    plot(add=TRUE)
+  #simp_poly(contracts[sorted_contract_i[i],], min_area = 0.0001) %>% 
+    spTransform(contracts[sorted_contract_i[i],],CRS(epsg_code)) %>%
+    plot(add=FALSE)
+
   dev.off()
 }
 
