@@ -86,73 +86,82 @@ for(i in 1:length(mainPolys)){
 mexico_bdr <- mexico_bdr_simp
 rm(mexico_bdr_simp)
 
-svg(filename = svg_file,width=width, height=height)
-par(omi=c(0,0,0,0),mai=c(0,0,0,0))
+#svg(filename = svg_file,width=width, height=height)
+#par(omi=c(0,0,0,0),mai=c(0,0,0,0))
 
 
-# this keeps the svg paths in explicit order, for easy finding later
-for (state in keep_non){
-  state_border <- spTransform(states[states$STATE_NAME == state, ], CRS(epsg_code)) %>%
-    gSimplify(simp_tol)
-  
-  if (state == keep_non[1]){
-    plot(state_border, ylim = ylim, xlim = xlim, border='grey90')
-  } else {
-    plot(state_border, border='grey90', add=TRUE)
-  }
-}
+# 
+# # this keeps the svg paths in explicit order, for easy finding later
+# for (state in keep_non){
+#   state_border <- spTransform(states[states$STATE_NAME == state, ], CRS(epsg_code)) %>%
+#     gSimplify(simp_tol)
+#   
+#   if (state == keep_non[1]){
+#     plot(state_border, ylim = ylim, xlim = xlim, border='grey90')
+#   } else {
+#     plot(state_border, border='grey90', add=TRUE)
+#   }
+# }
+# 
+# plot(mex_simp, add=TRUE)
+# plot(mexico_bdr, add=TRUE)
+# 
+# for (state in lo_co_states){
+#   state_border <- spTransform(states[states$STATE_NAME == state, ], CRS(epsg_code)) %>%
+#     gSimplify(simp_tol)
+#   plot(state_border, add=TRUE)
+# }
+# order <- sort(as.character(co_river@data$OBJECTID), index.return = T)$ix
+# co_river_line <- coordinates(co_river@lines[[order[1]]])[[1]]
+# for (i in 2:length(co_river@lines)){
+#   co_river_line <- rbind(co_river_line, coordinates(co_river@lines[[order[i]]])[[1]])
+# }
+# line <- Line(co_river_line)
+# lines <- Lines(list(line), ID='co-river')
+# co_river_join <- SpatialLines(list(lines), proj4string = CRS('+proj=utm +zone=12 +datum=NAD83 +units=m +no_defs +ellps=GRS80 +towgs84=0,0,0'))
 
-plot(mex_simp, add=TRUE)
-plot(mexico_bdr, add=TRUE)
-
-for (state in lo_co_states){
-  state_border <- spTransform(states[states$STATE_NAME == state, ], CRS(epsg_code)) %>%
-    gSimplify(simp_tol)
-  plot(state_border, add=TRUE)
-}
-order <- sort(as.character(co_river@data$OBJECTID), index.return = T)$ix
-co_river_line <- coordinates(co_river@lines[[order[1]]])[[1]]
-for (i in 2:length(co_river@lines)){
-  co_river_line <- rbind(co_river_line, coordinates(co_river@lines[[order[i]]])[[1]])
-}
-line <- Line(co_river_line)
-lines <- Lines(list(line), ID='co-river')
-co_river_join <- SpatialLines(list(lines), proj4string = CRS('+proj=utm +zone=12 +datum=NAD83 +units=m +no_defs +ellps=GRS80 +towgs84=0,0,0'))
-
-spTransform(co_basin, CRS(epsg_code)) %>% 
-  gSimplify(simp_tol) %>%
-  plot(add=TRUE)
-
-
-spTransform(co_river_join, CRS(epsg_code)) %>%
-  gSimplify(simp_tol) %>%
-  plot(add=TRUE)
+# spTransform(co_basin, CRS(epsg_code)) %>% 
+#   gSimplify(simp_tol) %>% plot(add=F, border=NA)
+  #plot(add=TRUE, border=NA)
+# 
+# 
+# spTransform(co_river_join, CRS(epsg_code)) %>%
+#   gSimplify(simp_tol) %>%
+#   plot(add=TRUE)
 
 
 for (i in 1:n.users){
+  par(omi=c(0,0,0,0),mai=c(0,0,0,0))
+  png(filename = sprintf("src_data/lower-co-map/lo_CO_contracts-%s.png",i),width=width, height=height, res=300, units = 'in')
+  
   spTransform(contracts[sorted_contract_i[i],], CRS(epsg_code)) %>%
+    plot(add=FALSE, border='grey80')
+  
+  spTransform(contracts[sorted_contract_i[i],], CRS(epsg_code)) %>%
+    gSimplify(100) %>%
     plot(add=TRUE)
+  dev.off()
 }
-dev.off()
-user_att <- vector('list',n.users) %>% 
-  lapply(function(x)x=c('opacity'='0')) %>% 
-  setNames(paste0('usage-',1:n.users))
 
-
-mexico_names = paste0("Mexico-",1:32)
-svg <- xmlParse(svg_file, useInternalNode=TRUE)
-
-svg <- clean_svg_doc(svg) %>%
-  name_svg_elements(svg, ele_names = c(keep_non, mexico_names, 'mexico-border',lo_co_states,'Lower-Colorado-river-basin','Upper-Colorado-river-basin','Colorado-river',top_users)) %>% 
-  group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'Mexico' = mexico_names, 'Mexico-border'='mexico-border', 'lo-co-states' = lo_co_states,'co-basin-polygon' = c('Upper-Colorado-river-basin','Lower-Colorado-river-basin'), 'co-river-polyline' = 'Colorado-river','top-users' = top_users)) %>% 
-  group_svg_elements(groups = c(lo_co_states,'Colorado-river',mexico_names,'Upper-Colorado-river-basin','Lower-Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
-  group_svg_group(groups = list('mexico'='Mexico')) %>% 
-  attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'Mexico-border'=mexico_bdr_styles,'lo-co-states' = lo_co_styles, 'co-basin-polygon'=co_basin_styles, 'top-users'=top_user_styles, 'co-river-polyline' = co_river_styles)) %>%
-  attr_svg_paths(attrs = user_att) %>% 
-  group_svg_group(groups = list('total-g' = c('non-lo-co-states',"mexico", 'Mexico-border',"lo-co-states", 'co-basin-polygon', "co-river-polyline", "top-users"))) %>% 
-  attr_svg_groups(attrs = list('total-g'=c(transform="translate(10,-20),scale(0.97)"))) %>% 
-  add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
-  edit_attr_svg(c('viewBox'='0 0 540 547')) %>% 
-  toString.XMLNode()
-
-cat(svg, file = svg_file, append = FALSE)
+# user_att <- vector('list',n.users) %>% 
+#   lapply(function(x)x=c('opacity'='0')) %>% 
+#   setNames(paste0('usage-',1:n.users))
+# 
+# 
+# mexico_names = paste0("Mexico-",1:32)
+# svg <- xmlParse(svg_file, useInternalNode=TRUE)
+# 
+# svg <- clean_svg_doc(svg) %>%
+#   name_svg_elements(svg, ele_names = c(keep_non, mexico_names, 'mexico-border',lo_co_states,'Lower-Colorado-river-basin','Upper-Colorado-river-basin','Colorado-river',top_users)) %>% 
+#   group_svg_elements(groups = list('non-lo-co-states' = keep_non, 'Mexico' = mexico_names, 'Mexico-border'='mexico-border', 'lo-co-states' = lo_co_states,'co-basin-polygon' = c('Upper-Colorado-river-basin','Lower-Colorado-river-basin'), 'co-river-polyline' = 'Colorado-river','top-users' = top_users)) %>% 
+#   group_svg_elements(groups = c(lo_co_states,'Colorado-river',mexico_names,'Upper-Colorado-river-basin','Lower-Colorado-river-basin')) %>% # additional <g/> for each lo-co-state and mexico
+#   group_svg_group(groups = list('mexico'='Mexico')) %>% 
+#   attr_svg_groups(attrs = list('non-lo-co-states' = non_lo_styles, 'mexico' = mexico_styles, 'Mexico-border'=mexico_bdr_styles,'lo-co-states' = lo_co_styles, 'co-basin-polygon'=co_basin_styles, 'top-users'=top_user_styles, 'co-river-polyline' = co_river_styles)) %>%
+#   attr_svg_paths(attrs = user_att) %>% 
+#   group_svg_group(groups = list('total-g' = c('non-lo-co-states',"mexico", 'Mexico-border',"lo-co-states", 'co-basin-polygon', "co-river-polyline", "top-users"))) %>% 
+#   attr_svg_groups(attrs = list('total-g'=c(transform="translate(10,-20),scale(0.97)"))) %>% 
+#   add_radial_mask(r=c('300','300'), id = c('non-lo-co-mask','mexico-mask'), cx=c('250','300'),cy=c('200','300')) %>%
+#   edit_attr_svg(c('viewBox'='0 0 540 547')) %>% 
+#   toString.XMLNode()
+# 
+# cat(svg, file = svg_file, append = FALSE)
