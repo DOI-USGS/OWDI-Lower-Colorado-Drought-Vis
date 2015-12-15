@@ -27,7 +27,7 @@ def main(language):
     main = SubElement(svg, 'g')
     graph = SubElement(main, 'g')
     graph.set('transform', 'translate(65 10)')
-    renderGraph(graph, getScriptLoc() + '/../../src_data/treeringFlow10yrProcessed.csv')
+    renderGraph(graph, getScriptLoc() + '/../../src_data/flow10yrProcessed.csv')
     renderLabels(main)
     if lang:
         outsvg = open(getScriptLoc() + '/../../public_html/en/img/droughtMovingAverage.svg','w+')

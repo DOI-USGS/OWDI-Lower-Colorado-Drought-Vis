@@ -71,5 +71,5 @@ to_write = subset(to_write, Year >= 1906)
 
 to_write = merge(to_write, historical_pctile)
 
-write.csv(to_write, 'src_data/treeringFlow10yrProcessed.csv', row.names=FALSE)
+write.csv(to_write, 'src_data/flow10yrProcessed.csv', row.names=FALSE)
 
