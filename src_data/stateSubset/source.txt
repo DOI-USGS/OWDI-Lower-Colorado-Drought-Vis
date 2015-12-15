@@ -1,3 +1,0 @@
-http://nationalmap.gov/small_scale/atlasftp.html
-http://nationalmap.gov/small_scale/mld/1statep.html
-Extracted CA, NV and AZ into new file
