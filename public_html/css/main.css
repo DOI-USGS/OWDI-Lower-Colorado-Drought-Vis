@@ -132,6 +132,7 @@
 
 .socialMedia{
 	height:40px;
+	width:140px;
 	position:absolute;
 	right:10px;
 	top:30px;
@@ -151,6 +152,7 @@
 	width:25px;
 	cursor:pointer;
 	margin-left:20px;
+	float:left;
 	}
 
 #welcomeSocial{
@@ -705,7 +707,7 @@
 	}
 	
 	.socialMedia{
-		right:35px;
+		right:10px;
 		}
 	
 	.onWhite{
@@ -964,9 +966,14 @@
 		right:-7px;
 		transform: rotate(90deg);
 	}
+	
+	.socialMedia{
+		width:25px;
+		}
 
 	.socialMedia img{
 		display:block;
+		float:none;
 		margin-bottom:20px;
 		}
 

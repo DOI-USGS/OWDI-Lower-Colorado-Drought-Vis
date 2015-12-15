@@ -34,4 +34,4 @@ for (form.factor in form.factors){
         file = svg_file, append = FALSE)
   }
 }
-warning('"*September 2015 Most Probable" text is not included in translation')
+warning('"*December 2015 Most Probable" text is not included in translation')
