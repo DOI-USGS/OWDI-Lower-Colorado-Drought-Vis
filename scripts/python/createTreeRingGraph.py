@@ -1,11 +1,13 @@
 from xml.etree import ElementTree
 from xml.dom import minidom
-from xml.etree.ElementTree import Element, SubElement, Comment
+from xml.etree.ElementTree import Element, SubElement, Comment, parse
 import csv
 import os
 import math
 
-def main():
+def main(language):
+    global lang
+    lang = language
     svg = Element('svg')
     svg.set('xmlns', 'http://www.w3.org/2000/svg')
     svg.set('xmlns:xlink', 'http://www.w3.org/1999/xlink')
@@ -27,16 +29,17 @@ def main():
     graph.set('transform', 'translate(65 10)')
     renderGraph(graph, getScriptLoc() + '/../../src_data/treeringFlow10yrProcessed.csv')
     renderLabels(main)
-    outsvg = open(getScriptLoc() + '/../../public_html/img/droughtMovingAverage.svg','w+')
+    if lang:
+        outsvg = open(getScriptLoc() + '/../../public_html/en/img/droughtMovingAverage.svg','w+')
+    else:
+        outsvg = open(getScriptLoc() + '/../../public_html/es/img/droughtMovingAverage.svg','w+')
     outsvg.truncate()
-    outsvg.write(prettify(svg))
+    outsvg.write(fixIndentation(svg))
     outsvg.close()
     
-def prettify(elem):
+def fixIndentation(elem):
     rough_string = ElementTree.tostring(elem)
     reparsed = minidom.parseString(rough_string)
-    #xmlcss = reparsed.createProcessingInstruction('xml-stylesheet', 'type="text/css" href="../css/svg.css"')
-    #reparsed.insertBefore(xmlcss, reparsed.firstChild)
     return reparsed.toprettyxml(indent="  ")
     
 def drawLine(ele, x1, y1, x2, y2, width = None, color = None):
@@ -99,12 +102,12 @@ def renderGraph(ele, floc):
         for num in raw:
             if float(num) > max:
                 max = float(num)
-        minside = math.floor(float(min)/5) * 5
+        minside = 0
         maxside = math.ceil(float(max)/5) * 5
         botstep = 500 / ((maxbot - minbot)/10)
         sidestep = 250 / ((maxside - minside)/5)
-        drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75', 'Pre-Compact Period')
-        drawHighlightBox(ele, 2000, 2016, minbot, maxbot - minbot, '#CCCCB2', 'Current Drought Period')
+        drawHighlightBox(ele, 1906, 1922, minbot, maxbot - minbot, '#A3FF75', getValue('natFlowPreCompactTextLine1'), getValue('natFlowPreCompactTextLine2'))
+        drawHighlightBox(ele, 2000, 2016, minbot, maxbot - minbot, '#CCCCB2', getValue('natFlowCurrentDroughtTextLine1'), getValue('natFlowCurrentDroughtTextLine2'))
         linecontainer2 = SubElement(ele, 'g')
         linecontainer2.set('stroke', '#9999FF')
         linecontainer2.set('stroke-width', '2')
@@ -144,13 +147,21 @@ def renderGraph(ele, floc):
         drawLine(ele, 500, 0, 500, 250, 2, 'black')
 
 def renderLabels(ele):
-    botl =  'Year'
-    sidel = 'Flow Volume (million acre-feet)'
+    if lang:
+        unit = getValue('unitsImperialVolume')
+    else:
+        unit = getValue('unitsMetricVolume')
+    botl =  getValue('natFlowFigXlab')
+    sidel = getValue('natFlowFigYlab') + '(' + unit + ')'
     tex = drawText(ele, 25, 10 + 250 - (250 - (8* len(sidel))) / 2, sidel)
     tex.set('transform', 'rotate(-90 25,' + str(10 + 250 - (250 - (8 * len(sidel))) / 2) + ')')
     drawText(ele, (65+250) - (len(botl)*10)/2, 300, botl)
     
 def createLineBox(ele, x1, x2, ymin, yrange, avg, raw, year, rot):
+    if lang:
+        unit = getValue('unitsImperialVolumeAbbr')
+    else:
+        unit = getValue('unitsMetricVolumeAbbr')
     box = highlightRange(ele, x1, x2, ymin, yrange)
     box.set('class', 'linebox')
     box.set('fill', 'black')
@@ -162,26 +173,24 @@ def createLineBox(ele, x1, x2, ymin, yrange, avg, raw, year, rot):
         value = ''
     else:
         value = str(round(avg, 2))
-    text1 = drawText(ele, 15, 245, '10-Year Average Flow Volume: ' + value + ' maf')
+    text1 = drawText(ele, 15 + 81.666666, 245, getValue('natFlowLegendAverage')+': ' + value + ' ' + unit)
     text1.set('fill', 'blue')
     text1.set('opacity', '0')
     text1.set('font-weight', 'bold')
     text1.set('font-size', '12')
-    text1.set('stroke','black')
     text1.set('stroke-width', '.5')
     text1.set('class', 'num' + str(rot))
-    text2 = drawText(ele, 15, 15, 'Year: ' + str(year))
+    text2 = drawText(ele, 15 + 81.666666, 215, getValue('natFlowLegendYear') + ': ' + str(year))
     text2.set('fill', 'black')
     text2.set('opacity', '0')
     text2.set('font-weight', 'bold')
     text2.set('font-size', '12')
     text2.set('class', 'num' + str(rot))
-    text3 = drawText(ele, 15, 230, 'Annual Flow Volume: ' + str(round(raw, 2))+ ' maf')
+    text3 = drawText(ele, 15 + 81.666666, 230, getValue('natFlowLegendVolume')+': ' + str(round(raw, 2))+ ' ' + unit)
     text3.set('fill', '#9999FF')
     text3.set('opacity', '0')
     text3.set('font-weight', 'bold')
     text3.set('font-size', '12')
-    text3.set('stroke','black')
     text3.set('stroke-width', '.5')
     text3.set('class', 'num' + str(rot))
     
@@ -193,7 +202,7 @@ def drawMinLine(ele, percdata, pmin, prange):
     drawLine(ele, 15, 250 - ((min - pmin)*(250/prange)), 485, 250 - ((min - pmin)*(250/prange)), 1, 'red')
     drawText(ele, 15, 250 - ((min - pmin)*(250/prange)) - 5, 'Minimum').set('fill', 'red')
     
-def drawHighlightBox(ele, x1, x2, ymin, yrange, color, text):
+def drawHighlightBox(ele, x1, x2, ymin, yrange, color, text1, text2):
     rect = SubElement(ele, 'rect')
     x1 = (x1 - ymin) * (500/yrange)
     x2 = (x2 - ymin) * (500/yrange)
@@ -202,9 +211,12 @@ def drawHighlightBox(ele, x1, x2, ymin, yrange, color, text):
     rect.set('width', str(x2 - x1))
     rect.set('x', str(x1))
     rect.set('fill', color)
-    t = drawText(ele, str(x1+2), str(23), text)
+    t = drawText(ele, str(x1+2), str(10), text1)
     t.set('fill','black')
-    t.set('font-size', '6')
+    t.set('font-size', '8')
+    t = drawText(ele, str(x1+2), str(20), text2)
+    t.set('fill','black')
+    t.set('font-size', '8')
 
 def highlightRange(ele, x1, x2, ymin, yrange):
     rect = SubElement(ele, 'rect')
@@ -217,4 +229,12 @@ def highlightRange(ele, x1, x2, ymin, yrange):
     rect.set('fill', '#CCCCB2')
     return rect
     
-main()
+def getValue(key):
+    if lang:
+        data = parse(getScriptLoc() + '/../../src_data/full_text.en.xml').getroot()
+    else:
+        data = parse(getScriptLoc() + '/../../src_data/full_text.es.xml').getroot()
+    return data.find(key).text
+    
+main(True)
+#main(False)

@@ -71,6 +71,28 @@ group_svg_elements <- function(svg, groups){
   invisible(svg)
 }
 
+group_svg_group <- function(svg, groups){
+  
+  # create groups
+  root_nd <- xmlRoot(svg)
+  for (i in 1:length(groups)){
+    if (is.list(groups)){
+      g_id <- newXMLNode('g', parent = root_nd, attrs = c('id' = names(groups)[i]))
+      for (j in 1:length(groups[[i]])){
+        path_nodes <- xpathApply(svg, sprintf("//*[local-name()='g'][@id='%s']",groups[[i]][j]))
+        addChildren(g_id, kids = list(path_nodes))
+      }
+    } else {
+      
+      path_nodes <- xpathApply(svg, sprintf("//*[local-name()='g'][@id='%s']",groups[i]))
+      parent_nd <- xpathApply(svg, sprintf("//*[local-name()='g'][@id='%s']/parent::node()",groups[i]))
+      g_id <- newXMLNode('g', parent = parent_nd)
+      addChildren(g_id, kids = list(path_nodes))
+    }
+  }
+  invisible(svg)
+}
+
 #' @param svg an open svg doc (see xml_doc <- xmlParse(svg_file, useInternalNode=TRUE))
 #' @param attrs a list of styles that match group or element IDs
 #' @import XML
@@ -205,21 +227,40 @@ add_ecmascript <- function(svg, text){
   
 }
 
-add_scene_buttons <- function(svg){
+add_scene_buttons <- function(svg, form.factor='desktop'){
   root_nd <- xmlRoot(svg)
   g_in = newXMLNode('g',parent=root_nd,attrs = c(id='decrement-scene'))
-  newXMLNode('rect',parent=g_in, attrs = c(x='-50',width="35",height="547",fill="white",opacity="0.3",onclick="decrementScene()"))
-  newXMLNode('path',parent=g_in, attrs = c(d="M-25 293.5 L-40 273.5 L-25 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round",onclick="decrementScene()"))
+  if (form.factor=='desktop'){
+    newXMLNode('rect',parent=g_in, attrs = c(x='-50',width="35",height="547",fill="white",opacity="0.3"))
+    newXMLNode('path',parent=g_in, attrs = c(d="M-25 293.5 L-40 273.5 L-25 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round"))
+    newXMLNode('rect',parent=g_in, attrs = c(x='-50',width="35",height="547",fill="white",opacity="0.0",onclick="decrementScene()"))
+  } else {
+    newXMLNode('rect',parent=g_in, attrs = c(x='-65',width="50",height="547",fill="white",opacity="0.3"))
+    newXMLNode('path',parent=g_in, attrs = c(d="M-30 299 L-50 273.5 L-30 248",style="stroke:grey;stroke-width:12;fill:none",'stroke-linecap'="round"))
+    newXMLNode('rect',parent=g_in, attrs = c(x='-65',width="50",height="547",fill="white",opacity="0.0",onclick="decrementScene()"))
+  }
+  
   g_dc = newXMLNode('g',parent=root_nd,attrs = c(id='increment-scene'))
-  newXMLNode('rect',parent=g_in, attrs = c(x='555',width="35",height="547",fill="white",opacity="0.3",onclick="incrementScene()"))
-  newXMLNode('path',parent=g_in, attrs = c(d="M565 293.5 L580 273.5 L565 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round",onclick="incrementScene()"))
+  if (form.factor=='desktop'){
+    newXMLNode('rect',parent=g_dc, attrs = c(x='555',width="35",height="547",fill="white",opacity="0.3"))
+    newXMLNode('path',parent=g_dc, attrs = c(d="M565 293.5 L580 273.5 L565 253.5",style="stroke:grey;stroke-width:7;fill:none",'stroke-linecap'="round",onclick="incrementScene()"))
+    newXMLNode('path',parent=g_dc, attrs = c(id="mouser-helper", d="m201.453995,112.872002l-183.068584,-100.156902l78.608601,195.193897l31.298012,-50.675995l61.883972,67.641998l23.437012,-22.837006l-63.26799,-66.993988l51.108978,-22.172005z", 
+                                             fill="#ffffff", stroke="#000000", 'stroke-width'="8", 'stroke-linejoin'="round", opacity="0.6", transform="translate(555,280),scale(0.15,0.15)", class="hidden"))
+    newXMLNode('rect',parent=g_dc, attrs = c(x='555',width="35",height="547",fill="white",opacity="0.0",onclick="incrementScene()"))
+  } else {
+    newXMLNode('rect',parent=g_dc, attrs = c(x='555',width="50",height="547",fill="white",opacity="0.3"))
+    newXMLNode('path',parent=g_dc, attrs = c(d="M570 299 L590 273.5 L570 248",style="stroke:grey;stroke-width:12;fill:none",'stroke-linecap'="round",onclick="incrementScene()"))
+    newXMLNode('path',parent=g_dc, attrs = c(id="mouser-helper", d="m201.453995,112.872002l-183.068584,-100.156902l78.608601,195.193897l31.298012,-50.675995l61.883972,67.641998l23.437012,-22.837006l-63.26799,-66.993988l51.108978,-22.172005z", 
+                                             fill="#ffffff", stroke="#000000", 'stroke-width'="8", 'stroke-linejoin'="round", opacity="0.6", transform="translate(570,290),scale(0.15,0.15)", class="hidden"))
+    newXMLNode('rect',parent=g_dc, attrs = c(x='555',width="50",height="547",fill="white",opacity="0.0",onclick="incrementScene()"))
+  }
   invisible(svg)
   
 }
 
 add_picto_legend <- function(svg){
   root_nd <- xmlRoot(svg)
-  g_nd = newXMLNode('g',parent=root_nd,attrs = c(id='mead-pictogram-legend',transform='translate(200,135)',opacity="0",class="legend-hidden"))
+  g_nd = newXMLNode('g',parent=root_nd,attrs = c(id='mead-pictogram-legend',transform='translate(200,135)',class="legend-hidden"))
   newXMLNode('rect',parent=g_nd,attrs=c(x="150", y="270", width="130", height="45", stroke="#FFFFFF", fill="none"))
   newXMLNode('text', parent=g_nd, newXMLTextNode("Legend"), attrs=c(class='legend-text', x="215", y="278", fill="#FFFFFF", dy="0.7em", stroke="none", style="text-anchor: middle;"))
   newXMLNode('rect',parent=g_nd,attrs=c(x="156", y="300", width="10", height="10", rx="2", ry="2", fill="#1975d1", stroke="#1975d1", 'stroke-width'="1.5"))

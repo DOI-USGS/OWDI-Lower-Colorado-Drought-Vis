@@ -1,0 +1,207 @@
+<div class="widget">
+	<div id="meadSVGContainer">
+		<h2>Lake Mead</h2>
+		<object id="mead-object" data="img/mead_scene_animated-desktop.svg" type="image/svg+xml">
+		</object>
+		<object id="mead-object-mobile" data="img/mead_scene_animated-mobile.svg" type="image/svg+xml">
+		</object>
+	</div>
+	<div class="SVGInfo" id="draw-river">
+		<div class="graphCaption">
+			<p>{{{ tr.lakeMeadAnimated1 }}}</p>
+		</div>
+	</div>
+	<div class="SVGInfo" id="draw-basin">
+		<div class="graphCaption">
+        	<p>{{{ tr.lakeMeadAnimated2 }}}</p>
+
+				<p>{{{ tr.lakeMeadAnimated3 }}}</p>
+
+
+		</div>
+		
+
+		 
+	</div>
+	<!--draw-basin-->
+	<div class="SVGInfo" id="highlight-user-2">
+		<div class="graphCaption">
+        	<p>{{{ tr.lakeMeadAnimated5 }}}</p>
+        	
+
+		</div>
+
+         
+	</div>
+	<!--highlight-user-2-->
+	<div class="SVGInfo" id="mead-info-1">
+		<div class="graphCaption">
+                <p>{{{ tr.lakeMeadAnimated8 }}}</p>
+				<div id="lakeMeadHidden03" class="hiddenContent">
+                	<p>{{{ tr.lakeMeadAnimated10 }}}</p>
+				</div>
+		</div>
+		<p id="lakeMeadRead03" class="readMore">{{{ tr.readMore }}}</p>
+	</div>
+	<!--mead-info-1-->
+	<div class="SVGInfo" id="mead-info-2">
+		<div class="graphCaption">
+        	<p>{{{ tr.lakeMeadAnimated11 }}}</p>
+			<div id="lakeMeadHidden04" class="hiddenContent">
+        		<p>{{{ tr.lakeMeadAnimated12 }}}</p>
+			</div>
+		</div>
+		
+		<p id="lakeMeadRead04" class="readMore">{{{ tr.readMore }}}</p>
+		
+	</div>
+	<!--mead-info-2-->
+	<div class="SVGInfo" id="mead-info-3">
+		<div class="graphCaption">
+       		<p>{{{ tr.lakeMeadAnimated13 }}}</p>
+			<div id="lakeMeadHidden05" class="hiddenContent">
+				<p>{{{ tr.lakeMeadAnimated14 }}}</p>
+			</div>
+		</div>
+		<p id="lakeMeadRead05" class="readMore">{{{ tr.readMore }}}</p>
+	</div>
+	<!--mead-info-3-->
+	<div class="SVGInfo" id="mead-info-4">
+		<div class="graphCaption">
+        	<p>{{{ tr.lakeMeadAnimated15 }}}</p>
+			<div id="lakeMeadHidden06" class="hiddenContent">
+        		<p>{{{ tr.lakeMeadAnimated16 }}}</p>
+			</div>
+		</div>
+		<p id="lakeMeadRead06" class="readMore">{{{ tr.readMore }}}</p>
+	</div>
+	<!--mead-info-4-->
+	<div class="SVGInfo" id="mead-info-5">
+		<div class="graphCaption">
+        	<p>{{{ tr.lakeMeadAnimated17 }}}</p>
+			<div id="lakeMeadHidden07" class="hiddenContent">
+        		<p>{{{ tr.lakeMeadAnimated18 }}}</p>
+			</div>
+		</div>
+		<p id="lakeMeadRead07" class="readMore">{{{ tr.readMore }}}</p>
+	</div>
+	<!--mead-info-5-->
+	
+	<button class="supportinginfo spacer" id="section15Button">{{{ tr.suppInfo }}}</button>
+
+		<div class="supportingInfoContent" id="section15Info">
+
+
+
+
+			<p><a href="http://www.cbrfc.noaa.gov/" target="_blank">{{{ tr.lakeMeadStatic4 }}}</a>
+			</p>
+            
+			<p><a href="http://waterdata.usgs.gov/nwis" target="_blank">{{{ tr.lakeMeadStatic5 }}}</a>.</p>
+
+            <p>{{{ tr.lakeMeadStatic6 }}}</p>
+            
+            <p><a href="http://www.usbr.gov/uc/water/crsp/studies/index.html" target="_blank">{{{ tr.lakeMeadStatic7 }}}</a>.
+            </p>
+            <p><a href="http://www.usbr.gov/lc/region/g4000/24mo/index.html" target="_blank">{{{ tr.lakeMeadStatic8 }}}</a>.
+            </p>
+            
+            <p><a href="http://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf" target="_blank">{{{ tr.lakeMeadStatic9 }}}</a></p>
+            
+            
+		</div>
+		
+	<div class="exploreMore" id="lakeMeadAnimatedExtra">
+			<a href="../explore" target="_blank">
+				<img src="../img/leafletmapthumbnail.png" alt="Leaflet Map of the Colorado River Basin"/>
+			</a>
+			<p>{{{ tr.lakeMeadAnimated19 }}}</p>
+			<a href="../explore" target="_blank"><button id="
+			lakeMeadAnimatedExtraButton" class="extraButton">{{{ tr.explore }}}</button></a>
+	</div>
+</div>
+
+<script>
+	var button = $('#section15Button');
+
+	button.click(function () {
+		$('#section15Info').toggle();
+	});
+	
+	$('#lakeMeadRead01').on('click', function(){
+		
+		$('#lakeMeadHidden01').toggle();
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+	});	
+		
+	$('#lakeMeadRead02').on('click', function(){
+		
+		$('#lakeMeadHidden02').toggle();
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+	});	
+	
+	$('#lakeMeadRead03').on('click', function(){
+		
+		$('#lakeMeadHidden03').toggle();
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+	});	
+	
+	$('#lakeMeadRead04').on('click', function(){
+		
+		$('#lakeMeadHidden04').toggle();
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+	});	
+	
+	$('#lakeMeadRead05').on('click', function(){
+		
+		$('#lakeMeadHidden05').toggle();
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+	});	
+	
+	$('#lakeMeadRead06').on('click', function(){
+		
+		$('#lakeMeadHidden06').toggle();
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+	});	
+	
+	$('#lakeMeadRead07').on('click', function(){
+		
+		$('#lakeMeadHidden07').toggle();
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+	});	
+</script>

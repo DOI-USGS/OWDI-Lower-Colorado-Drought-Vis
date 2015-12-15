@@ -1,0 +1,24 @@
+<div class="widget">
+	<div id="keynote1" class="keynote">
+    	<div id="pin1" class="pin">
+        	<h1>{{{ tr.welcomeTitle }}}</h1>
+            <h2 id="emphasized">{{{ tr.welcomeSub }}}</h2>
+			
+			<a href="javascript:void(0)" onclick="window.scrollBy(0, 300);">
+				<img title="{{{ tr.scroll }}}" id="scrollDownArrow" src="../img/herdingarrow.png" alt="scroll down arrow"/>
+			</a>
+        </div>
+    </div>
+	
+</div>
+
+<script>
+
+	$('#welcomeLinkOut').on('click', function(){
+		$('#welcomeLink').toggle();
+		$('#welcomeURL').select();
+		});
+
+
+</script>
+

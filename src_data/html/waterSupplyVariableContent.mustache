@@ -1,0 +1,101 @@
+<div class="widget">
+    <div class="sectionContent">
+	
+    <p>{{{ tr.waterSupplyVariableContent1 }}}</p>
+    
+    <p>{{{ tr.waterSupplyVariableContent2 }}}</p>
+
+<h4>{{{tr.hoverOverHint}}}</h4>
+
+
+
+		<object id="droughtMovingAvg-object" data="img/droughtMovingAverage.svg" type="image/svg+xml">
+		</object>
+		
+        
+        <div class="graphCaption">
+            <p>{{{ tr.waterSupplyVariableContent3 }}}</p>
+            
+        </div>
+        
+
+
+<p>{{{ tr.waterSupplyVariableContent8 }}}</p>
+        
+<p>{{{ tr.waterSupplyVariableContent7 }}}</p>
+        
+
+<p>{{{ tr.waterSupplyVariableContent4 }}}</p>
+
+
+
+<div class="exploreMore" id="dygraphExtra">
+	<a href="../treeringdata/index.html" target="_blank">
+		<img src="../img/treeringthumbnail.png" alt="{{{ tr.waterSupplyVariableContent5 }}}"/>
+	</a>
+    <p>{{{ tr.waterSupplyVariableContent6 }}}</p>
+    <a href="../treeringdata/index.html" target="_blank"><button class="extraButton">{{{ tr.explore }}}</button></a>
+</div>
+
+
+
+   
+
+
+
+
+
+<button class="supportinginfo basins white" id="sectionVarSuppButton">{{{ tr.suppInfo }}}</button>
+
+<div class="supportingInfoContent" id="sectionVSInfo">
+    
+    
+    <p> <a href="http://www.usbr.gov/lc/region/g1000/pdfiles/crcompct.pdf" target="_blank">{{{ tr.waterSupplyVariableContent9 }}}</a>.</p>
+    
+    
+    <p>{{{ tr.waterSupplyVariableContent10 }}}</p>
+    
+    <p>{{{ tr.waterSupplyVariableContent11 }}}</p>
+    
+
+    <p>{{{ tr.coRiverLifeline8 }}}</p>
+    <p>{{{ tr.waterSupplyVariableContent12 }}}</p>
+
+
+    
+    <p><a href="http://ltrr.arizona.edu/" target="_blank">{{{ tr.waterSupplyVariableContent13 }}}</a></p>
+</div>
+
+    </div>
+	
+	<div class="socialMedia onWhite">
+		{{> twitter}}
+		{{> github}}
+		<img id="waterVariableLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="waterVariableLink" class="takeLinkBlue" >
+			<input id="waterVariableURL" type="text" value="http://doi.gov/water/owdi.cr.drought/#waterSupplyVariableContent">
+		</div>
+	</div>
+	
+</div>
+
+
+<script>
+    var button = $('#sectionNatFlowButton');
+    
+    button.click(function() {
+                 $('#sectionNFInfo').toggle();
+                 });
+                 
+    var button = $('#sectionVarSuppButton');
+    
+    button.click(function() {
+                 $('#sectionVSInfo').toggle();
+                 });
+				 
+	$('#waterVariableLinkOut').on('click', function(){
+			$('#waterVariableLink').toggle();
+			$('#waterVariableURL').select();
+		});
+                 
+    </script>

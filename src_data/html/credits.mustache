@@ -1,0 +1,99 @@
+<div class="widget">
+	<div class="sectionContent">
+        <p>{{{ tr.credits1 }}}</p>
+		
+		<div id="creditHiddenContent" class="hiddenContent">
+
+        <h3>{{{ tr.credits2h }}}</h3>
+        <p>{{{ tr.credits2 }}}</p>
+
+        <h3>{{{ tr.credits3h }}}</h3>
+		<p>{{{ tr.credits3 }}}</p>
+
+        <p>{{{ tr.credits4 }}}</p>
+
+        <p>{{{ tr.credits5 }}}</p>
+
+        <h3>{{{ tr.credits6h }}}</h3>
+        <p>{{{ tr.credits6 }}}</p>
+
+
+
+        <h3>{{{ tr.credits7h }}}</h3>
+        <p>{{{ tr.credits7 }}}</p>
+
+        <h3>{{{ tr.credits8h }}}</h3>
+        <p>{{{ tr.credits8 }}}</p>
+	</div>
+	
+	<p id="creditReadMore" class="readMore">{{{ tr.readMore }}}</p>
+
+		<button class="supportinginfo" id="creditsButton2">{{{ tr.suppInfo }}}</button>
+		
+		<div class="supportingInfoContent" id="creditsInfo2">
+
+            <p>{{{ tr.credits9 }}}</p>
+            <p><a href="http://www.usbr.gov/newsroom/docs/2014-07-30-Executed-Pilot-SCP-Funding-Agreement.pdf" target="_blank">{{{ tr.credits10 }}}</a>.</p>
+            <p><a href="http://www.usbr.gov/lc/region/g4000/LB_DroughtResponseMOU.pdf" target="_blank">{{{ tr.credits11 }}}</a>.</p>
+            <p><a href="http://www.usbr.gov/lc/region/programs/crbstudy/MovingForward/index.html" target="_blank">{{{ tr.credits12 }}}</a>.</p>
+            <p>{{{ tr.credits13 }}}</p>
+        
+		</div>
+		
+		<div id="creditLogosTop">
+			<img src="../img/credit-logos/usgslogo.jpg" alt="usgs logo"/>
+			<img id="doi" src="../img/credit-logos/doi.png" alt="DOI logo"/>
+			<img src="../img/credit-logos/bor.png" alt="BOR logo"/>
+			<img src="../img/credit-logos/owdi.png" alt="OWDI logo"/>
+		</div>
+		<div id="creditLogosBottom">
+			<img  id="osu"src="../img/credit-logos/osu.png" alt="OSU logo"/>
+			<img  id="wswc"src="../img/credit-logos/wswc.png" alt="wswc logo"/>
+			<img  id="epa"src="../img/credit-logos/epa.svg" alt="EPA logo"/>
+			<img  id="cida"src="../img/credit-logos/cida.png" alt="CIDA logo"/>
+		</div>
+		
+		
+		<p>{{{ tr.credits14 }}}</p>
+		
+	</div>
+	
+	<div class="socialMedia onWhite">
+		{{> twitter}}
+		{{> github}}
+		<img id="creditsLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="creditsLink" class="takeLinkBlue" >
+			<input id="creditsURL" type="text" value="http://doi.gov/water/owdi.cr.drought/#creditsContainer">
+		</div>
+	</div>
+	
+</div>
+
+<script>
+	$('#creditsButton2').click(function() {
+    $('#creditsInfo2').toggle();
+  });
+
+	$('#creditsButton').click(function() {
+    $('#creditsInfo').toggle();
+  });
+  
+  var creditsReadMore = $('#creditReadMore');
+	var creditsHiddenContent = $('#creditHiddenContent');
+	
+		creditsReadMore.on('click', function(){
+		
+		creditsHiddenContent.slideToggle('slow');
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+		});	
+		
+		$('#creditsLinkOut').on('click', function(){
+			$('#creditsLink').toggle();
+			$('#creditsURL').select();
+		});
+</script>

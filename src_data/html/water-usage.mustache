@@ -1,0 +1,73 @@
+<div class="widget">
+  <div class="sectionContent">
+      <p>{{{ tr.waterUsage1 }}}</p>
+      
+	  <div id="waterUsageHiddenContent" class="hiddenContent">
+      <p>{{{ tr.waterUsage2 }}}</p>
+      
+      <p>{{{ tr.waterUsage3 }}}</p>
+	  </div>
+      
+
+    <p id="waterUsageReadMore" class="readMore">{{{ tr.readMore }}}</p>
+
+<h4>{{{tr.hoverOverHint}}}</h4>
+
+  <div id="JrGraph">
+    <object id="animated-object" class="triggerMe" data="img/flow_animation-desktop.svg" type="image/svg+xml"></object>
+	
+	<object id="animated-object-mobile" class="triggerMe" data="img/flow_animation-mobile.svg" type="image/svg+xml"></object>
+
+    <div class="graphCaption">
+      <p>{{{ tr.waterUsage4 }}}</p>
+      
+      <p>{{{ tr.waterUsage5 }}}</p>
+      
+    </div>
+    
+    <button class="supportinginfo spacer" id="section10Button">{{{ tr.suppInfo }}}</button>
+    <div class="supportingInfoContent" id="section10Info">
+        
+        
+        <p>{{{ tr.waterUsage6 }}}</p>
+        
+        <p>{{{ tr.waterUsage7 }}}</p>
+        
+    </div>
+    
+    
+  </div>
+		
+	</div>
+	
+	<div class="socialMedia onWhite">
+		{{> twitter}}
+		{{> github}}
+		<img  id="waterUsageLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="waterUsageLink" class="takeLinkBlue" >
+			<input id="waterUsageURL" type="text" value="http://doi.gov/water/owdi.cr.drought/#waterUsageContainer">
+		</div>
+	</div>
+	
+</div>
+<script>
+	var waterUsageReadMore = $('#waterUsageReadMore');
+	var waterUsageHiddenContent = $('#waterUsageHiddenContent');
+	
+	waterUsageReadMore.on('click', function(){
+		
+		waterUsageHiddenContent.slideToggle('slow');
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+		});	
+		
+		$('#waterUsageLinkOut').on('click', function(){
+			$('#waterUsageLink').toggle();
+			$('#waterUsageURL').select();
+		});
+</script>
+

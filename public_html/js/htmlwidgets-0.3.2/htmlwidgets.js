@@ -201,7 +201,7 @@
       };
 
     } else {
-      el.style.width = px(sizing.width);
+      el.style.width = "100%";
       el.style.height = px(sizing.height);
 
       return {
@@ -583,4 +583,3 @@
     }
   };
 })();
-

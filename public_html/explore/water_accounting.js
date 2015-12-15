@@ -23,7 +23,7 @@ $(document).ready(function() {
 				color: 'white',
 				dashArray: '3',
 				fillOpacity: 0.4,
-				fillColor: owdiDrought.waterAccounting.getColor(feature.properties.mean)
+				fillColor: owdiDrought.waterAccounting.getColor(feature.properties.FiveYrAvg_)
 			};
 		}
 	}
@@ -99,9 +99,10 @@ $(document).ready(function() {
 	}
 	
 	function numberWithCommas(x) {
+		
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
-
+	
 	// Info control
 	owdiDrought.waterAccounting.info = L.control();
 	owdiDrought.waterAccounting.info.onAdd = function(map) {
@@ -110,8 +111,8 @@ $(document).ready(function() {
 		return this._div;
 	};
 	owdiDrought.waterAccounting.info.update = function(props) {
-		this._div.innerHTML = '<h2>Information on Lower Colorado River Water Entitlement Holders</h2><br /> <h4>Five Year Average (2010-2014)</h4>' + (props ?
-			'<b>' + props.Contractor + '</b><br />' + numberWithCommas(Math.round(props.mean)) + ' acre feet' : 'Hover over a district');
+		this._div.innerHTML = '<h2>Information on Lower Colorado River Water Entitlement Holders</h2>' + (props ?
+			'<b>' + props.Contractor + '</b><br />' + numberWithCommas(Math.round(props.FiveYrAvg_)) + ' acre feet' : 'Hover over a district');
 	};
 	owdiDrought.waterAccounting.info.addTo(owdiDrought.waterAccounting.map);
 
@@ -121,20 +122,21 @@ $(document).ready(function() {
 	});
 	owdiDrought.waterAccounting.legend.onAdd = function(map) {
 		var div = L.DomUtil.create('div', 'info legend'),
+			gradeLabels = ["0", "120", "600", "400,000", "2,500,000"],
 			grades = [0, 120, 600, 400000, 2500000],
-			labels = ["<b>Acre Feet</b><br /><em>Shaded areas on map represent District boundaries,<br/> not water use locations.</em>"],
+			labels = ["<h4>Five Year Average (2010-2014)</h4><br/><b>Acre Feet</b><br /><em>Shaded areas on map represent District boundaries,<br/> not water use locations.</em>"],
 			from, to;
 
 		for (var i = 0; i < grades.length; i++) {
-			from = grades[i];
-			to = grades[i + 1];
+			from = gradeLabels[i];
+			to = gradeLabels[i + 1];
 
-			labels.push(
-				'<i style="background:' + owdiDrought.waterAccounting.getColor(from + 1) + '"></i> ' +
+		labels.push(
+				'<i style="background:' + owdiDrought.waterAccounting.getColor(grades[i] + 1) + '"></i> ' +
 				from + (to ? '&ndash;' + to : '+'));
 		}
 		labels.push(
-			'<br/><i style="background:' + '#9d9d9d' + '"></i>Colorado River Basin');
+			'<br/><i style="background:' + '#9d9d9d' + '"></i>Colorado River Basin<br/><br/><a href="http://www.usbr.gov/lc/region/g4000/wtracct.html#Decree" target="_blank">Review Water Accounting Reports 1964-Present</a>');
 
 		div.innerHTML = labels.join('<br>');
 		return div;
@@ -181,8 +183,8 @@ $(document).ready(function() {
 		$.getJSON("../data/wbd1415.geojson"),
 		$.getJSON("../data/wat_acc_cont.geojson")
 	).done(function(d1, d2) {
-		owdiDrought.waterAccounting.addDataToMap(d1, owdiDrought.waterAccounting.styles.watershed, "Colorado River Watershed");
-		owdiDrought.waterAccounting.addDataToMap(d2, owdiDrought.waterAccounting.styles.hucStyle, "Water Contracts");
+		owdiDrought.waterAccounting.addDataToMap(d1, owdiDrought.waterAccounting.styles.watershed, "Colorado River Basin");
+		owdiDrought.waterAccounting.addDataToMap(d2, owdiDrought.waterAccounting.styles.hucStyle, "Entitlement Holders");
 
 		owdiDrought.waterAccounting.geojson = L.geoJson(d2, {
 			style: owdiDrought.waterAccounting.styles.hucStyle,

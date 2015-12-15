@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio="xMinYMin meet" viewBox="0 0 960 600">
+  <script type="text/ecmascript"><![CDATA[function init(evt)
+  {
+  if ( window.svgDocument == null )
+  {
+    svgDocument = evt.target.ownerDocument;
+    svgDocument.timeAdvance = this.timeAdvance;
+    svgDocument.visibleAxes = this.visibleAxes;
+  }
+    legend = svgDocument.getElementById("legend");
+  }
+  function legendViz(evt,elementname)
+   {
+  var r = document.getElementById(elementname).r
+  if ("beginElement" in document.getElementById("timeAdvance")) {
+  	if (r.animVal.value === 0){
+    	legend.setAttributeNS(null,"visibility","hidden");
+  	  } else {
+    	legend.setAttributeNS(null,"visibility","visible");
+  	  }
+
+   } else {
+ 	legend.setAttributeNS(null,"visibility","visible");
+
+   }
+   }
+  function highlightViz(evt,elementname,opacity)
+  {
+  var r = document.getElementById(elementname).r.animVal.value
+  
+  if (r === 0){
+    evt.target.setAttribute("fill-opacity", "0.0");
+  } else {
+    evt.target.setAttribute("fill-opacity", opacity);
+  }
+  
+  }
+  
+  function ChangeText(evt, elementname, legendtext)
+  {
+  textelement = svgDocument.getElementById(elementname);                      
+  textelement.firstChild.data = legendtext;
+  }
+  function timeAdvance(){
+    var ele = document.getElementById("timeAdvance");
+  if ("beginElement" in ele) {
+    ele.beginElement();
+  } else {
+    document.getElementById("usage-liner").setAttribute("style","stroke:#B22C2C;stroke-width:3");
+		document.getElementById("supply-liner").setAttribute("style","stroke:#0066CC;stroke-width:3");
+  }
+    
+  }
+  function visibleAxes(){
+  document.getElementById("plot-contents").setAttribute("class","shown");
+  setTimeout(function(){
+  {timeAdvance();}},1000)
+  }]]></script>
+  <g id="plot-contents" class="hidden">
+    <g id="axes" class="label">
+      <rect id="axis.box" x="100.0" y="10.0" width="760.0" height="530.0" style="fill:#FFFFFF;stroke:black"/>
+      <text transform="translate(70.0,275.0)rotate(270)" text-anchor="middle" id="y-label" dy="-1em">***usageFigYlabDesktop*** (***usageFigMetricUnits***)</text>
+      <text transform="translate(430.0,600.0)rotate(0)" text-anchor="middle" id="x-label" dy="-0.5em">***usageFigXlab***</text>
+      <line x1="141.5" y1="540.0" x2="141.5" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(141.5,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1910</text>
+      <line x1="210.5" y1="540.0" x2="210.5" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(210.5,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1920</text>
+      <line x1="279.6" y1="540.0" x2="279.6" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(279.6,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1930</text>
+      <line x1="348.7" y1="540.0" x2="348.7" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(348.7,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1940</text>
+      <line x1="417.8" y1="540.0" x2="417.8" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(417.8,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1950</text>
+      <line x1="486.9" y1="540.0" x2="486.9" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(486.9,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1960</text>
+      <line x1="556.0" y1="540.0" x2="556.0" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(556.0,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1970</text>
+      <line x1="625.1" y1="540.0" x2="625.1" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(625.1,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1980</text>
+      <line x1="694.2" y1="540.0" x2="694.2" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(694.2,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1990</text>
+      <line x1="763.3" y1="540.0" x2="763.3" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(763.3,540.0)rotate(0)" text-anchor="middle" dy="1.0em">2000</text>
+      <line x1="832.4" y1="540.0" x2="832.4" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(832.4,540.0)rotate(0)" text-anchor="middle" dy="1.0em">2010</text>
+      <line x1="100.0" y1="540.0" x2="105.0" y2="540.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,545.0)rotate(0)" text-anchor="end">0</text>
+      <line x1="100.0" y1="468.4" x2="105.0" y2="468.4" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,473.4)rotate(0)" text-anchor="end">5</text>
+      <line x1="100.0" y1="396.8" x2="105.0" y2="396.8" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,401.8)rotate(0)" text-anchor="end">10</text>
+      <line x1="100.0" y1="325.2" x2="105.0" y2="325.2" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,330.2)rotate(0)" text-anchor="end">15</text>
+      <line x1="100.0" y1="253.5" x2="105.0" y2="253.5" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,258.5)rotate(0)" text-anchor="end">20</text>
+      <line x1="100.0" y1="181.9" x2="105.0" y2="181.9" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,186.9)rotate(0)" text-anchor="end">25</text>
+      <line x1="100.0" y1="110.3" x2="105.0" y2="110.3" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,115.3)rotate(0)" text-anchor="end">30</text>
+      <line x1="100.0" y1="38.7" x2="105.0" y2="38.7" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,43.7)rotate(0)" text-anchor="end">35</text>
+    </g>
+    <g id="legend" visibility="hidden" class="label" alignment-baseline="central">
+      <text id="year_text" x="100" y="10" class="legend" dy="1.5em" dx="1.0em">year</text>
+      <text id="use_text" x="100" y="10" fill="#B22C2C" class="legend" dy="2.5em" dx="1.0em">use_text</text>
+      <text id="supply_text" x="100" y="10" fill="#0066CC" class="legend" dy="3.5em" dx="1.0em">supply_text</text>
+    </g>
+    <path d="M113.8,190.7 L120.7,140.1 L127.6,302.8 L134.5,114.5 L141.5,248.4 L148.4,240.1 L155.3,192.9 L162.2,265.4 L169.1,141.1 L176.0,281.2 L182.9,146.5 L189.8,110.3 L196.7,236.7 L203.6,279.6 L210.5,115.6 L217.5,105.7 L224.4,181.3 L231.3,163.4 L238.2,257.9 L245.1,259.3 L252.0,253.5 L258.9,164.0 L265.8,233.3 L272.7,146.0 L279.6,264.8 L286.5,366.6 L293.5,194.3 L300.4,304.9 L307.3,411.6 L314.2,309.2 L321.1,274.4 L328.0,269.2 L334.9,206.7 L341.8,319.1 L348.7,344.5 L355.6,144.0 L362.5,217.3 L369.5,284.4 L376.4,251.9 L383.3,270.3 L390.2,326.8 L397.1,230.1 L404.0,259.3 L410.9,219.8 L417.8,292.0 L424.7,303.3 L431.6,143.4 L438.5,322.2 L445.5,370.5 L452.4,343.4 L459.3,320.6 L466.2,138.4 L473.1,229.3 L480.0,347.5 L486.9,313.0 L493.8,342.9 L500.7,218.1 L507.6,370.5 L514.5,342.1 L521.5,161.0 L528.4,331.1 L535.3,313.0 L542.2,277.9 L549.1,249.4 L556.0,256.1 L562.9,258.8 L569.8,291.4 L576.7,191.1 L583.6,298.5 L590.5,235.6 L597.5,328.7 L604.4,429.5 L611.3,244.0 L618.2,197.1 L625.1,192.8 L632.0,362.1 L638.9,210.8 L645.8,92.0 L652.7,81.0 L659.6,142.9 L666.5,118.2 L673.5,242.1 L680.4,316.6 L687.3,351.2 L694.2,355.1 L701.1,298.4 L708.0,313.6 L714.9,150.7 L721.8,335.0 L728.7,151.0 L735.6,271.5 L742.5,139.6 L749.5,221.7 L756.4,240.6 L763.3,338.9 L770.2,332.0 L777.1,420.4 L784.0,338.2 L790.9,343.5 L797.8,193.2 L804.7,286.2 L811.6,322.6 L818.5,235.8 L825.5,276.6 L832.4,293.5 L839.3,166.4 L846.2,391.4 " fill="none" id="supply-liner" style="stroke:#0066CC;stroke-width:3;stroke-dasharray:8778;stroke-linejoin:round;stroke-dashoffset:8778">
+      <animate attributeName="stroke-dashoffset" begin="indefinite;visibleAxes.begin+1s" id="timeAdvance" fill="freeze" dur="12.000000s" values="8725.66303805239;8562.85719633216;8374.47417294453;8240.39276409247;8229.59867826871;8181.81434957619;8108.9780143581;7984.51248166777;7844.27381967478;7709.44897399884;7672.58456651758;7545.98314341172;7502.50786200193;7338.32013248628;7326.23533764149;7250.31379592623;7231.14113940163;7136.43538060349;7129.37888122721;7120.38198547222;7030.62369483872;6961.04636488324;6873.45918731806;6754.40430987481;6652.42497686723;6480.06234638245;6369.28851346755;6262.35256884399;6159.67195379042;6124.22525742004;6115.56481990075;6052.71371569176;5940.09788648525;5913.76776386984;5713.10944827521;5639.49150889467;5572.0210349875;5538.84695351349;5519.19801600697;5462.26824048775;5365.33831224178;5335.35892755854;5295.2151872021;5222.69446213613;5209.39915763995;5049.34709041106;4870.47952938235;4821.63523821489;4793.61352476725;4769.79406051356;4587.48481633698;4496.31529489808;4377.92366415994;4342.75410050568;4312.08023606964;4187.10472669176;4034.52918861061;4005.31745626764;3824.00526937045;3653.70834580505;3634.32753254839;3598.51164378402;3569.18385964226;3559.4978709014;3552.07783454471;3518.76668112087;3418.15383725693;3310.52958254323;3247.26159665701;3153.86612245015;3052.88484317169;2867.33871965231;2819.85764852303;2811.75909195455;2642.37733852963;2490.9797254609;2371.89835739501;2358.95573670871;2296.72256993428;2271.14472226148;2147.04372431288;2072.23853492845;2036.93964998902;2029.03490422437;1971.90908782751;1955.1577232947;1792.05278910233;1607.58554012615;1423.39186144339;1302.61198373221;1170.51244848024;1088.12611521472;1068.03254340515;969.498019465455;959.757156812858;871.133902794936;788.659071705777;779.919045064216;629.425299659407;536.196740020301;499.090290301718;411.990628947629;370.630322636556;352.352646526433;225.076333987607;0"/>
+    </path>
+    <g id="supply" style="fill:#0066CC" r="0" visibility="hidden">
+      <circle cx="113.8" cy="190.7" id="supply-1906">
+        <animate attributeName="r" begin="timeAdvance.begin+0.000s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="120.7" cy="140.1" id="supply-1907">
+        <animate attributeName="r" begin="timeAdvance.begin+0.000s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="127.6" cy="302.8" id="supply-1908">
+        <animate attributeName="r" begin="timeAdvance.begin+0.026s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="134.5" cy="114.5" id="supply-1909">
+        <animate attributeName="r" begin="timeAdvance.begin+0.140s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="141.5" cy="248.4" id="supply-1910">
+        <animate attributeName="r" begin="timeAdvance.begin+0.253s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="148.4" cy="240.1" id="supply-1911">
+        <animate attributeName="r" begin="timeAdvance.begin+0.366s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="155.3" cy="192.9" id="supply-1912">
+        <animate attributeName="r" begin="timeAdvance.begin+0.479s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="162.2" cy="265.4" id="supply-1913">
+        <animate attributeName="r" begin="timeAdvance.begin+0.592s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="169.1" cy="141.1" id="supply-1914">
+        <animate attributeName="r" begin="timeAdvance.begin+0.706s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="176.0" cy="281.2" id="supply-1915">
+        <animate attributeName="r" begin="timeAdvance.begin+0.819s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="182.9" cy="146.5" id="supply-1916">
+        <animate attributeName="r" begin="timeAdvance.begin+0.932s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="189.8" cy="110.3" id="supply-1917">
+        <animate attributeName="r" begin="timeAdvance.begin+1.045s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="196.7" cy="236.7" id="supply-1918">
+        <animate attributeName="r" begin="timeAdvance.begin+1.158s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="203.6" cy="279.6" id="supply-1919">
+        <animate attributeName="r" begin="timeAdvance.begin+1.272s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="210.5" cy="115.6" id="supply-1920">
+        <animate attributeName="r" begin="timeAdvance.begin+1.385s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="217.5" cy="105.7" id="supply-1921">
+        <animate attributeName="r" begin="timeAdvance.begin+1.498s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="224.4" cy="181.3" id="supply-1922">
+        <animate attributeName="r" begin="timeAdvance.begin+1.611s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="231.3" cy="163.4" id="supply-1923">
+        <animate attributeName="r" begin="timeAdvance.begin+1.725s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="238.2" cy="257.9" id="supply-1924">
+        <animate attributeName="r" begin="timeAdvance.begin+1.838s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="245.1" cy="259.3" id="supply-1925">
+        <animate attributeName="r" begin="timeAdvance.begin+1.951s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="252.0" cy="253.5" id="supply-1926">
+        <animate attributeName="r" begin="timeAdvance.begin+2.064s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="258.9" cy="164.0" id="supply-1927">
+        <animate attributeName="r" begin="timeAdvance.begin+2.177s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="265.8" cy="233.3" id="supply-1928">
+        <animate attributeName="r" begin="timeAdvance.begin+2.291s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="272.7" cy="146.0" id="supply-1929">
+        <animate attributeName="r" begin="timeAdvance.begin+2.404s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="279.6" cy="264.8" id="supply-1930">
+        <animate attributeName="r" begin="timeAdvance.begin+2.517s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="286.5" cy="366.6" id="supply-1931">
+        <animate attributeName="r" begin="timeAdvance.begin+2.630s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="293.5" cy="194.3" id="supply-1932">
+        <animate attributeName="r" begin="timeAdvance.begin+2.743s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="300.4" cy="304.9" id="supply-1933">
+        <animate attributeName="r" begin="timeAdvance.begin+2.857s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="307.3" cy="411.6" id="supply-1934">
+        <animate attributeName="r" begin="timeAdvance.begin+2.970s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="314.2" cy="309.2" id="supply-1935">
+        <animate attributeName="r" begin="timeAdvance.begin+3.083s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="321.1" cy="274.4" id="supply-1936">
+        <animate attributeName="r" begin="timeAdvance.begin+3.196s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="328.0" cy="269.2" id="supply-1937">
+        <animate attributeName="r" begin="timeAdvance.begin+3.309s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="334.9" cy="206.7" id="supply-1938">
+        <animate attributeName="r" begin="timeAdvance.begin+3.423s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="341.8" cy="319.1" id="supply-1939">
+        <animate attributeName="r" begin="timeAdvance.begin+3.536s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="348.7" cy="344.5" id="supply-1940">
+        <animate attributeName="r" begin="timeAdvance.begin+3.649s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="355.6" cy="144.0" id="supply-1941">
+        <animate attributeName="r" begin="timeAdvance.begin+3.762s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="362.5" cy="217.3" id="supply-1942">
+        <animate attributeName="r" begin="timeAdvance.begin+3.875s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="369.5" cy="284.4" id="supply-1943">
+        <animate attributeName="r" begin="timeAdvance.begin+3.989s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="376.4" cy="251.9" id="supply-1944">
+        <animate attributeName="r" begin="timeAdvance.begin+4.102s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="383.3" cy="270.3" id="supply-1945">
+        <animate attributeName="r" begin="timeAdvance.begin+4.215s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="390.2" cy="326.8" id="supply-1946">
+        <animate attributeName="r" begin="timeAdvance.begin+4.328s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="397.1" cy="230.1" id="supply-1947">
+        <animate attributeName="r" begin="timeAdvance.begin+4.442s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="404.0" cy="259.3" id="supply-1948">
+        <animate attributeName="r" begin="timeAdvance.begin+4.555s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="410.9" cy="219.8" id="supply-1949">
+        <animate attributeName="r" begin="timeAdvance.begin+4.668s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="417.8" cy="292.0" id="supply-1950">
+        <animate attributeName="r" begin="timeAdvance.begin+4.781s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="424.7" cy="303.3" id="supply-1951">
+        <animate attributeName="r" begin="timeAdvance.begin+4.894s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="431.6" cy="143.4" id="supply-1952">
+        <animate attributeName="r" begin="timeAdvance.begin+5.008s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="438.5" cy="322.2" id="supply-1953">
+        <animate attributeName="r" begin="timeAdvance.begin+5.121s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="445.5" cy="370.5" id="supply-1954">
+        <animate attributeName="r" begin="timeAdvance.begin+5.234s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="452.4" cy="343.4" id="supply-1955">
+        <animate attributeName="r" begin="timeAdvance.begin+5.347s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="459.3" cy="320.6" id="supply-1956">
+        <animate attributeName="r" begin="timeAdvance.begin+5.460s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="466.2" cy="138.4" id="supply-1957">
+        <animate attributeName="r" begin="timeAdvance.begin+5.574s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="473.1" cy="229.3" id="supply-1958">
+        <animate attributeName="r" begin="timeAdvance.begin+5.687s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="480.0" cy="347.5" id="supply-1959">
+        <animate attributeName="r" begin="timeAdvance.begin+5.800s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="486.9" cy="313.0" id="supply-1960">
+        <animate attributeName="r" begin="timeAdvance.begin+5.913s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="493.8" cy="342.9" id="supply-1961">
+        <animate attributeName="r" begin="timeAdvance.begin+6.026s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="500.7" cy="218.1" id="supply-1962">
+        <animate attributeName="r" begin="timeAdvance.begin+6.140s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="507.6" cy="370.5" id="supply-1963">
+        <animate attributeName="r" begin="timeAdvance.begin+6.253s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="514.5" cy="342.1" id="supply-1964">
+        <animate attributeName="r" begin="timeAdvance.begin+6.366s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="521.5" cy="161.0" id="supply-1965">
+        <animate attributeName="r" begin="timeAdvance.begin+6.479s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="528.4" cy="331.1" id="supply-1966">
+        <animate attributeName="r" begin="timeAdvance.begin+6.592s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="535.3" cy="313.0" id="supply-1967">
+        <animate attributeName="r" begin="timeAdvance.begin+6.706s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="542.2" cy="277.9" id="supply-1968">
+        <animate attributeName="r" begin="timeAdvance.begin+6.819s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="549.1" cy="249.4" id="supply-1969">
+        <animate attributeName="r" begin="timeAdvance.begin+6.932s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="556.0" cy="256.1" id="supply-1970">
+        <animate attributeName="r" begin="timeAdvance.begin+7.045s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="562.9" cy="258.8" id="supply-1971">
+        <animate attributeName="r" begin="timeAdvance.begin+7.158s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="569.8" cy="291.4" id="supply-1972">
+        <animate attributeName="r" begin="timeAdvance.begin+7.272s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="576.7" cy="191.1" id="supply-1973">
+        <animate attributeName="r" begin="timeAdvance.begin+7.385s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="583.6" cy="298.5" id="supply-1974">
+        <animate attributeName="r" begin="timeAdvance.begin+7.498s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="590.5" cy="235.6" id="supply-1975">
+        <animate attributeName="r" begin="timeAdvance.begin+7.611s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="597.5" cy="328.7" id="supply-1976">
+        <animate attributeName="r" begin="timeAdvance.begin+7.725s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="604.4" cy="429.5" id="supply-1977">
+        <animate attributeName="r" begin="timeAdvance.begin+7.838s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="611.3" cy="244.0" id="supply-1978">
+        <animate attributeName="r" begin="timeAdvance.begin+7.951s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="618.2" cy="197.1" id="supply-1979">
+        <animate attributeName="r" begin="timeAdvance.begin+8.064s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="625.1" cy="192.8" id="supply-1980">
+        <animate attributeName="r" begin="timeAdvance.begin+8.177s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="632.0" cy="362.1" id="supply-1981">
+        <animate attributeName="r" begin="timeAdvance.begin+8.291s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="638.9" cy="210.8" id="supply-1982">
+        <animate attributeName="r" begin="timeAdvance.begin+8.404s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="645.8" cy="92.0" id="supply-1983">
+        <animate attributeName="r" begin="timeAdvance.begin+8.517s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="652.7" cy="81.0" id="supply-1984">
+        <animate attributeName="r" begin="timeAdvance.begin+8.630s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="659.6" cy="142.9" id="supply-1985">
+        <animate attributeName="r" begin="timeAdvance.begin+8.743s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="666.5" cy="118.2" id="supply-1986">
+        <animate attributeName="r" begin="timeAdvance.begin+8.857s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="673.5" cy="242.1" id="supply-1987">
+        <animate attributeName="r" begin="timeAdvance.begin+8.970s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="680.4" cy="316.6" id="supply-1988">
+        <animate attributeName="r" begin="timeAdvance.begin+9.083s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="687.3" cy="351.2" id="supply-1989">
+        <animate attributeName="r" begin="timeAdvance.begin+9.196s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="694.2" cy="355.1" id="supply-1990">
+        <animate attributeName="r" begin="timeAdvance.begin+9.309s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="701.1" cy="298.4" id="supply-1991">
+        <animate attributeName="r" begin="timeAdvance.begin+9.423s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="708.0" cy="313.6" id="supply-1992">
+        <animate attributeName="r" begin="timeAdvance.begin+9.536s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="714.9" cy="150.7" id="supply-1993">
+        <animate attributeName="r" begin="timeAdvance.begin+9.649s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="721.8" cy="335.0" id="supply-1994">
+        <animate attributeName="r" begin="timeAdvance.begin+9.762s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="728.7" cy="151.0" id="supply-1995">
+        <animate attributeName="r" begin="timeAdvance.begin+9.875s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="735.6" cy="271.5" id="supply-1996">
+        <animate attributeName="r" begin="timeAdvance.begin+9.989s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="742.5" cy="139.6" id="supply-1997">
+        <animate attributeName="r" begin="timeAdvance.begin+10.102s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="749.5" cy="221.7" id="supply-1998">
+        <animate attributeName="r" begin="timeAdvance.begin+10.215s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="756.4" cy="240.6" id="supply-1999">
+        <animate attributeName="r" begin="timeAdvance.begin+10.328s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="763.3" cy="338.9" id="supply-2000">
+        <animate attributeName="r" begin="timeAdvance.begin+10.442s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="770.2" cy="332.0" id="supply-2001">
+        <animate attributeName="r" begin="timeAdvance.begin+10.555s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="777.1" cy="420.4" id="supply-2002">
+        <animate attributeName="r" begin="timeAdvance.begin+10.668s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="784.0" cy="338.2" id="supply-2003">
+        <animate attributeName="r" begin="timeAdvance.begin+10.781s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="790.9" cy="343.5" id="supply-2004">
+        <animate attributeName="r" begin="timeAdvance.begin+10.894s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="797.8" cy="193.2" id="supply-2005">
+        <animate attributeName="r" begin="timeAdvance.begin+11.008s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="804.7" cy="286.2" id="supply-2006">
+        <animate attributeName="r" begin="timeAdvance.begin+11.121s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="811.6" cy="322.6" id="supply-2007">
+        <animate attributeName="r" begin="timeAdvance.begin+11.234s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="818.5" cy="235.8" id="supply-2008">
+        <animate attributeName="r" begin="timeAdvance.begin+11.347s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="825.5" cy="276.6" id="supply-2009">
+        <animate attributeName="r" begin="timeAdvance.begin+11.460s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="832.4" cy="293.5" id="supply-2010">
+        <animate attributeName="r" begin="timeAdvance.begin+11.574s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="839.3" cy="166.4" id="supply-2011">
+        <animate attributeName="r" begin="timeAdvance.begin+11.687s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="846.2" cy="391.4" id="supply-2012">
+        <animate attributeName="r" begin="timeAdvance.begin+11.800s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+    </g>
+    <path d="M169.1,454.0 L176.0,452.7 L182.9,445.5 L189.8,440.7 L196.7,433.3 L203.6,434.5 L210.5,430.6 L217.5,439.6 L224.4,427.4 L231.3,426.3 L238.2,422.7 L245.1,424.8 L252.0,424.7 L258.9,425.2 L265.8,419.8 L272.7,416.9 L279.6,413.9 L286.5,422.0 L293.5,423.6 L300.4,419.0 L307.3,436.1 L314.2,416.6 L321.1,402.3 L328.0,401.3 L334.9,398.1 L341.8,394.8 L348.7,394.4 L355.6,399.9 L362.5,396.1 L369.5,399.5 L376.4,395.2 L383.3,395.6 L390.2,390.1 L397.1,388.1 L404.0,384.8 L410.9,381.7 L417.8,373.0 L424.7,363.4 L431.6,355.3 L438.5,351.3 L445.5,351.0 L452.4,355.1 L459.3,347.8 L466.2,356.2 L473.1,344.7 L480.0,344.1 L486.9,335.7 L493.8,339.6 L500.7,330.4 L507.6,333.8 L514.5,324.9 L521.5,330.8 L528.4,318.3 L535.3,327.6 L542.2,322.2 L549.1,322.0 L556.0,314.9 L562.9,304.8 L569.8,302.9 L576.7,299.2 L583.6,290.3 L590.5,300.2 L597.5,308.5 L604.4,312.5 L611.3,307.6 L618.2,298.0 L625.1,296.3 L632.0,291.0 L638.9,306.1 L645.8,305.4 L652.7,299.4 L659.6,290.9 L666.5,289.4 L673.5,279.9 L680.4,266.3 L687.3,261.9 L694.2,267.1 L701.1,277.1 L708.0,281.4 L714.9,272.6 L721.8,261.2 L728.7,280.2 L735.6,255.5 L742.5,254.0 L749.5,259.7 L756.4,257.5 L763.3,244.9 L770.2,245.5 L777.1,253.9 L784.0,272.2 L790.9,280.6 L797.8,284.0 L804.7,275.4 L811.6,270.0 L818.5,266.4 L825.5,269.5 L832.4,272.7 " fill="none" id="usage-liner" style="stroke:#B22C2C;stroke-width:3;stroke-dasharray:952px;stroke-linejoin:round;stroke-dashoffset:952">
+      <animate attributeName="stroke-dashoffset" begin="timeAdvance.begin" id="usage" fill="freeze" dur="12.000000s" values="951.212929751934;951.212929751934;951.212929751934;951.212929751934;951.212929751934;951.212929751934;951.212929751934;951.212929751934;944.169631336425;934.235801103762;925.779301580614;915.708481295501;908.695536730303;900.73199104257;889.338953755934;875.328136060339;868.326358029131;860.52775645982;853.300305925005;846.390093579435;839.463288757802;830.709421097947;823.226912817963;815.672396140599;805.044132327435;797.931079194404;789.616421625227;771.221322353741;750.565874076011;734.725974810721;727.74137767634;720.098371282166;712.45480394273;705.534017123571;696.702639286525;688.832244665007;681.155593841562;673.044057537238;666.12208967567;657.24482756067;650.075963353876;642.401561105797;634.832739985526;623.733565773296;611.855937929735;601.23786754096;593.262850574891;586.345036968117;578.308724424921;568.29850812782;557.431379655678;543.982447650572;537.045837590129;526.168879567098;518.197572864936;506.625969281335;498.889221474817;487.62359539148;478.541325081984;464.204439021852;452.611757975325;443.882257266255;436.968531416628;427.065321217836;414.790662849139;407.62761969236;399.822579126504;388.494445037161;376.390306514354;365.570046690415;357.609331252906;349.158214086367;337.309348698421;330.192195745919;321.507698532482;304.954966695172;298.012006570551;288.874427138856;277.921064113638;270.848969759605;259.09355096987;243.898924460608;235.701473391478;227.057822041141;214.936352742741;206.76406431357;195.52587876875;182.234640857063;162.028827467213;136.410934085262;129.32754331559;120.331043667214;113.071210188032;98.676396241877;91.7357593308132;80.8669639801535;61.3423560296072;50.4569536405196;42.7523316398039;31.6868498063124;22.9541622741068;15.1652818117486;7.62459656062708;0;0;0"/>
+    </path>
+    <rect id="year_1906" x="110.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1906');ChangeText(evt, 'year_text','***usageFigXlab***: 1906');ChangeText(evt, 'use_text','***usageFigUseDesktop***: ');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 24.4 bcm');" onmouseover="highlightViz(evt,'supply-1906','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1906','0.0');"/>
+    <rect id="year_1907" x="117.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1907');ChangeText(evt, 'year_text','***usageFigXlab***: 1907');ChangeText(evt, 'use_text','***usageFigUseDesktop***: ');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 27.9 bcm');" onmouseover="highlightViz(evt,'supply-1907','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1907','0.0');"/>
+    <rect id="year_1908" x="124.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1908');ChangeText(evt, 'year_text','***usageFigXlab***: 1908');ChangeText(evt, 'use_text','***usageFigUseDesktop***: ');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 16.6 bcm');" onmouseover="highlightViz(evt,'supply-1908','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1908','0.0');"/>
+    <rect id="year_1909" x="131.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1909');ChangeText(evt, 'year_text','***usageFigXlab***: 1909');ChangeText(evt, 'use_text','***usageFigUseDesktop***: ');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 29.7 bcm');" onmouseover="highlightViz(evt,'supply-1909','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1909','0.0');"/>
+    <rect id="year_1910" x="138.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1910');ChangeText(evt, 'year_text','***usageFigXlab***: 1910');ChangeText(evt, 'use_text','***usageFigUseDesktop***: ');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 20.4 bcm');" onmouseover="highlightViz(evt,'supply-1910','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1910','0.0');"/>
+    <rect id="year_1911" x="144.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1911');ChangeText(evt, 'year_text','***usageFigXlab***: 1911');ChangeText(evt, 'use_text','***usageFigUseDesktop***: ');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 20.9 bcm');" onmouseover="highlightViz(evt,'supply-1911','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1911','0.0');"/>
+    <rect id="year_1912" x="151.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1912');ChangeText(evt, 'year_text','***usageFigXlab***: 1912');ChangeText(evt, 'use_text','***usageFigUseDesktop***: ');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 24.2 bcm');" onmouseover="highlightViz(evt,'supply-1912','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1912','0.0');"/>
+    <rect id="year_1913" x="158.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1913');ChangeText(evt, 'year_text','***usageFigXlab***: 1913');ChangeText(evt, 'use_text','***usageFigUseDesktop***: ');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 19.2 bcm');" onmouseover="highlightViz(evt,'supply-1913','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1913','0.0');"/>
+    <rect id="year_1914" x="165.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1914');ChangeText(evt, 'year_text','***usageFigXlab***: 1914');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 6.0 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 27.9 bcm');" onmouseover="highlightViz(evt,'supply-1914','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1914','0.0');"/>
+    <rect id="year_1915" x="172.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1915');ChangeText(evt, 'year_text','***usageFigXlab***: 1915');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 6.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 18.1 bcm');" onmouseover="highlightViz(evt,'supply-1915','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1915','0.0');"/>
+    <rect id="year_1916" x="179.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1916');ChangeText(evt, 'year_text','***usageFigXlab***: 1916');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 6.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 27.5 bcm');" onmouseover="highlightViz(evt,'supply-1916','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1916','0.0');"/>
+    <rect id="year_1917" x="186.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1917');ChangeText(evt, 'year_text','***usageFigXlab***: 1917');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 6.9 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 30.0 bcm');" onmouseover="highlightViz(evt,'supply-1917','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1917','0.0');"/>
+    <rect id="year_1918" x="193.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1918');ChangeText(evt, 'year_text','***usageFigXlab***: 1918');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 7.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 21.2 bcm');" onmouseover="highlightViz(evt,'supply-1918','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1918','0.0');"/>
+    <rect id="year_1919" x="200.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1919');ChangeText(evt, 'year_text','***usageFigXlab***: 1919');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 7.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 18.2 bcm');" onmouseover="highlightViz(evt,'supply-1919','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1919','0.0');"/>
+    <rect id="year_1920" x="207.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1920');ChangeText(evt, 'year_text','***usageFigXlab***: 1920');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 7.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 29.6 bcm');" onmouseover="highlightViz(evt,'supply-1920','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1920','0.0');"/>
+    <rect id="year_1921" x="214.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1921');ChangeText(evt, 'year_text','***usageFigXlab***: 1921');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 7.0 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 30.3 bcm');" onmouseover="highlightViz(evt,'supply-1921','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1921','0.0');"/>
+    <rect id="year_1922" x="220.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1922');ChangeText(evt, 'year_text','***usageFigXlab***: 1922');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 7.9 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 25.0 bcm');" onmouseover="highlightViz(evt,'supply-1922','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1922','0.0');"/>
+    <rect id="year_1923" x="227.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1923');ChangeText(evt, 'year_text','***usageFigXlab***: 1923');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 7.9 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 26.3 bcm');" onmouseover="highlightViz(evt,'supply-1923','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1923','0.0');"/>
+    <rect id="year_1924" x="234.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1924');ChangeText(evt, 'year_text','***usageFigXlab***: 1924');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 8.2 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 19.7 bcm');" onmouseover="highlightViz(evt,'supply-1924','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1924','0.0');"/>
+    <rect id="year_1925" x="241.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1925');ChangeText(evt, 'year_text','***usageFigXlab***: 1925');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 8.0 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 19.6 bcm');" onmouseover="highlightViz(evt,'supply-1925','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1925','0.0');"/>
+    <rect id="year_1926" x="248.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1926');ChangeText(evt, 'year_text','***usageFigXlab***: 1926');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 8.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 20.0 bcm');" onmouseover="highlightViz(evt,'supply-1926','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1926','0.0');"/>
+    <rect id="year_1927" x="255.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1927');ChangeText(evt, 'year_text','***usageFigXlab***: 1927');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 8.0 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 26.2 bcm');" onmouseover="highlightViz(evt,'supply-1927','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1927','0.0');"/>
+    <rect id="year_1928" x="262.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1928');ChangeText(evt, 'year_text','***usageFigXlab***: 1928');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 8.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 21.4 bcm');" onmouseover="highlightViz(evt,'supply-1928','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1928','0.0');"/>
+    <rect id="year_1929" x="269.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1929');ChangeText(evt, 'year_text','***usageFigXlab***: 1929');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 8.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 27.5 bcm');" onmouseover="highlightViz(evt,'supply-1929','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1929','0.0');"/>
+    <rect id="year_1930" x="276.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1930');ChangeText(evt, 'year_text','***usageFigXlab***: 1930');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 8.8 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 19.2 bcm');" onmouseover="highlightViz(evt,'supply-1930','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1930','0.0');"/>
+    <rect id="year_1931" x="283.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1931');ChangeText(evt, 'year_text','***usageFigXlab***: 1931');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 8.2 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 12.1 bcm');" onmouseover="highlightViz(evt,'supply-1931','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1931','0.0');"/>
+    <rect id="year_1932" x="290.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1932');ChangeText(evt, 'year_text','***usageFigXlab***: 1932');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 8.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 24.1 bcm');" onmouseover="highlightViz(evt,'supply-1932','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1932','0.0');"/>
+    <rect id="year_1933" x="296.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1933');ChangeText(evt, 'year_text','***usageFigXlab***: 1933');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 8.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 16.4 bcm');" onmouseover="highlightViz(evt,'supply-1933','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1933','0.0');"/>
+    <rect id="year_1934" x="303.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1934');ChangeText(evt, 'year_text','***usageFigXlab***: 1934');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 7.3 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 9.0 bcm');" onmouseover="highlightViz(evt,'supply-1934','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1934','0.0');"/>
+    <rect id="year_1935" x="310.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1935');ChangeText(evt, 'year_text','***usageFigXlab***: 1935');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 8.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 16.1 bcm');" onmouseover="highlightViz(evt,'supply-1935','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1935','0.0');"/>
+    <rect id="year_1936" x="317.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1936');ChangeText(evt, 'year_text','***usageFigXlab***: 1936');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 9.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 18.5 bcm');" onmouseover="highlightViz(evt,'supply-1936','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1936','0.0');"/>
+    <rect id="year_1937" x="324.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1937');ChangeText(evt, 'year_text','***usageFigXlab***: 1937');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 9.7 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 18.9 bcm');" onmouseover="highlightViz(evt,'supply-1937','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1937','0.0');"/>
+    <rect id="year_1938" x="331.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1938');ChangeText(evt, 'year_text','***usageFigXlab***: 1938');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 9.9 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 23.3 bcm');" onmouseover="highlightViz(evt,'supply-1938','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1938','0.0');"/>
+    <rect id="year_1939" x="338.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1939');ChangeText(evt, 'year_text','***usageFigXlab***: 1939');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 10.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 15.4 bcm');" onmouseover="highlightViz(evt,'supply-1939','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1939','0.0');"/>
+    <rect id="year_1940" x="345.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1940');ChangeText(evt, 'year_text','***usageFigXlab***: 1940');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 10.2 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 13.6 bcm');" onmouseover="highlightViz(evt,'supply-1940','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1940','0.0');"/>
+    <rect id="year_1941" x="352.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1941');ChangeText(evt, 'year_text','***usageFigXlab***: 1941');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 9.8 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 27.7 bcm');" onmouseover="highlightViz(evt,'supply-1941','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1941','0.0');"/>
+    <rect id="year_1942" x="359.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1942');ChangeText(evt, 'year_text','***usageFigXlab***: 1942');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 10.0 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 22.5 bcm');" onmouseover="highlightViz(evt,'supply-1942','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1942','0.0');"/>
+    <rect id="year_1943" x="366.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1943');ChangeText(evt, 'year_text','***usageFigXlab***: 1943');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 9.8 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 17.8 bcm');" onmouseover="highlightViz(evt,'supply-1943','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1943','0.0');"/>
+    <rect id="year_1944" x="372.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1944');ChangeText(evt, 'year_text','***usageFigXlab***: 1944');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 10.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 20.1 bcm');" onmouseover="highlightViz(evt,'supply-1944','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1944','0.0');"/>
+    <rect id="year_1945" x="379.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1945');ChangeText(evt, 'year_text','***usageFigXlab***: 1945');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 10.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 18.8 bcm');" onmouseover="highlightViz(evt,'supply-1945','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1945','0.0');"/>
+    <rect id="year_1946" x="386.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1946');ChangeText(evt, 'year_text','***usageFigXlab***: 1946');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 10.5 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 14.9 bcm');" onmouseover="highlightViz(evt,'supply-1946','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1946','0.0');"/>
+    <rect id="year_1947" x="393.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1947');ChangeText(evt, 'year_text','***usageFigXlab***: 1947');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 10.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 21.6 bcm');" onmouseover="highlightViz(evt,'supply-1947','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1947','0.0');"/>
+    <rect id="year_1948" x="400.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1948');ChangeText(evt, 'year_text','***usageFigXlab***: 1948');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 10.8 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 19.6 bcm');" onmouseover="highlightViz(evt,'supply-1948','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1948','0.0');"/>
+    <rect id="year_1949" x="407.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1949');ChangeText(evt, 'year_text','***usageFigXlab***: 1949');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 11.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 22.4 bcm');" onmouseover="highlightViz(evt,'supply-1949','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1949','0.0');"/>
+    <rect id="year_1950" x="414.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1950');ChangeText(evt, 'year_text','***usageFigXlab***: 1950');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 11.7 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 17.3 bcm');" onmouseover="highlightViz(evt,'supply-1950','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1950','0.0');"/>
+    <rect id="year_1951" x="421.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1951');ChangeText(evt, 'year_text','***usageFigXlab***: 1951');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 12.3 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 16.5 bcm');" onmouseover="highlightViz(evt,'supply-1951','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1951','0.0');"/>
+    <rect id="year_1952" x="428.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1952');ChangeText(evt, 'year_text','***usageFigXlab***: 1952');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 12.9 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 27.7 bcm');" onmouseover="highlightViz(evt,'supply-1952','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1952','0.0');"/>
+    <rect id="year_1953" x="435.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1953');ChangeText(evt, 'year_text','***usageFigXlab***: 1953');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 13.2 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 15.2 bcm');" onmouseover="highlightViz(evt,'supply-1953','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1953','0.0');"/>
+    <rect id="year_1954" x="442.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1954');ChangeText(evt, 'year_text','***usageFigXlab***: 1954');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 13.2 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 11.8 bcm');" onmouseover="highlightViz(evt,'supply-1954','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1954','0.0');"/>
+    <rect id="year_1955" x="448.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1955');ChangeText(evt, 'year_text','***usageFigXlab***: 1955');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 12.9 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 13.7 bcm');" onmouseover="highlightViz(evt,'supply-1955','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1955','0.0');"/>
+    <rect id="year_1956" x="455.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1956');ChangeText(evt, 'year_text','***usageFigXlab***: 1956');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 13.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 15.3 bcm');" onmouseover="highlightViz(evt,'supply-1956','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1956','0.0');"/>
+    <rect id="year_1957" x="462.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1957');ChangeText(evt, 'year_text','***usageFigXlab***: 1957');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 12.8 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 28.0 bcm');" onmouseover="highlightViz(evt,'supply-1957','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1957','0.0');"/>
+    <rect id="year_1958" x="469.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1958');ChangeText(evt, 'year_text','***usageFigXlab***: 1958');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 13.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 21.7 bcm');" onmouseover="highlightViz(evt,'supply-1958','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1958','0.0');"/>
+    <rect id="year_1959" x="476.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1959');ChangeText(evt, 'year_text','***usageFigXlab***: 1959');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 13.7 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 13.4 bcm');" onmouseover="highlightViz(evt,'supply-1959','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1959','0.0');"/>
+    <rect id="year_1960" x="483.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1960');ChangeText(evt, 'year_text','***usageFigXlab***: 1960');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 14.3 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 15.8 bcm');" onmouseover="highlightViz(evt,'supply-1960','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1960','0.0');"/>
+    <rect id="year_1961" x="490.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1961');ChangeText(evt, 'year_text','***usageFigXlab***: 1961');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 14.0 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 13.8 bcm');" onmouseover="highlightViz(evt,'supply-1961','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1961','0.0');"/>
+    <rect id="year_1962" x="497.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1962');ChangeText(evt, 'year_text','***usageFigXlab***: 1962');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 14.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 22.5 bcm');" onmouseover="highlightViz(evt,'supply-1962','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1962','0.0');"/>
+    <rect id="year_1963" x="504.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1963');ChangeText(evt, 'year_text','***usageFigXlab***: 1963');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 14.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 11.8 bcm');" onmouseover="highlightViz(evt,'supply-1963','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1963','0.0');"/>
+    <rect id="year_1964" x="511.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1964');ChangeText(evt, 'year_text','***usageFigXlab***: 1964');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 15.0 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 13.8 bcm');" onmouseover="highlightViz(evt,'supply-1964','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1964','0.0');"/>
+    <rect id="year_1965" x="518.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1965');ChangeText(evt, 'year_text','***usageFigXlab***: 1965');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 14.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 26.5 bcm');" onmouseover="highlightViz(evt,'supply-1965','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1965','0.0');"/>
+    <rect id="year_1966" x="524.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1966');ChangeText(evt, 'year_text','***usageFigXlab***: 1966');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 15.5 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 14.6 bcm');" onmouseover="highlightViz(evt,'supply-1966','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1966','0.0');"/>
+    <rect id="year_1967" x="531.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1967');ChangeText(evt, 'year_text','***usageFigXlab***: 1967');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 14.8 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 15.8 bcm');" onmouseover="highlightViz(evt,'supply-1967','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1967','0.0');"/>
+    <rect id="year_1968" x="538.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1968');ChangeText(evt, 'year_text','***usageFigXlab***: 1968');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 15.2 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 18.3 bcm');" onmouseover="highlightViz(evt,'supply-1968','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1968','0.0');"/>
+    <rect id="year_1969" x="545.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1969');ChangeText(evt, 'year_text','***usageFigXlab***: 1969');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 15.2 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 20.3 bcm');" onmouseover="highlightViz(evt,'supply-1969','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1969','0.0');"/>
+    <rect id="year_1970" x="552.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1970');ChangeText(evt, 'year_text','***usageFigXlab***: 1970');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 15.7 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 19.8 bcm');" onmouseover="highlightViz(evt,'supply-1970','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1970','0.0');"/>
+    <rect id="year_1971" x="559.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1971');ChangeText(evt, 'year_text','***usageFigXlab***: 1971');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 16.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 19.6 bcm');" onmouseover="highlightViz(evt,'supply-1971','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1971','0.0');"/>
+    <rect id="year_1972" x="566.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1972');ChangeText(evt, 'year_text','***usageFigXlab***: 1972');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 16.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 17.4 bcm');" onmouseover="highlightViz(evt,'supply-1972','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1972','0.0');"/>
+    <rect id="year_1973" x="573.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1973');ChangeText(evt, 'year_text','***usageFigXlab***: 1973');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 16.8 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 24.4 bcm');" onmouseover="highlightViz(evt,'supply-1973','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1973','0.0');"/>
+    <rect id="year_1974" x="580.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1974');ChangeText(evt, 'year_text','***usageFigXlab***: 1974');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 17.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 16.9 bcm');" onmouseover="highlightViz(evt,'supply-1974','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1974','0.0');"/>
+    <rect id="year_1975" x="587.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1975');ChangeText(evt, 'year_text','***usageFigXlab***: 1975');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 16.7 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 21.3 bcm');" onmouseover="highlightViz(evt,'supply-1975','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1975','0.0');"/>
+    <rect id="year_1976" x="594.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1976');ChangeText(evt, 'year_text','***usageFigXlab***: 1976');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 16.2 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 14.8 bcm');" onmouseover="highlightViz(evt,'supply-1976','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1976','0.0');"/>
+    <rect id="year_1977" x="600.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1977');ChangeText(evt, 'year_text','***usageFigXlab***: 1977');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 15.9 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 7.7 bcm');" onmouseover="highlightViz(evt,'supply-1977','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1977','0.0');"/>
+    <rect id="year_1978" x="607.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1978');ChangeText(evt, 'year_text','***usageFigXlab***: 1978');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 16.2 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 20.7 bcm');" onmouseover="highlightViz(evt,'supply-1978','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1978','0.0');"/>
+    <rect id="year_1979" x="614.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1979');ChangeText(evt, 'year_text','***usageFigXlab***: 1979');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 16.9 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 23.9 bcm');" onmouseover="highlightViz(evt,'supply-1979','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1979','0.0');"/>
+    <rect id="year_1980" x="621.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1980');ChangeText(evt, 'year_text','***usageFigXlab***: 1980');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 17.0 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 24.2 bcm');" onmouseover="highlightViz(evt,'supply-1980','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1980','0.0');"/>
+    <rect id="year_1981" x="628.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1981');ChangeText(evt, 'year_text','***usageFigXlab***: 1981');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 17.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 12.4 bcm');" onmouseover="highlightViz(evt,'supply-1981','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1981','0.0');"/>
+    <rect id="year_1982" x="635.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1982');ChangeText(evt, 'year_text','***usageFigXlab***: 1982');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 16.3 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 23.0 bcm');" onmouseover="highlightViz(evt,'supply-1982','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1982','0.0');"/>
+    <rect id="year_1983" x="642.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1983');ChangeText(evt, 'year_text','***usageFigXlab***: 1983');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 16.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 31.3 bcm');" onmouseover="highlightViz(evt,'supply-1983','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1983','0.0');"/>
+    <rect id="year_1984" x="649.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1984');ChangeText(evt, 'year_text','***usageFigXlab***: 1984');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 16.8 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 32.0 bcm');" onmouseover="highlightViz(evt,'supply-1984','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1984','0.0');"/>
+    <rect id="year_1985" x="656.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1985');ChangeText(evt, 'year_text','***usageFigXlab***: 1985');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 17.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 27.7 bcm');" onmouseover="highlightViz(evt,'supply-1985','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1985','0.0');"/>
+    <rect id="year_1986" x="663.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1986');ChangeText(evt, 'year_text','***usageFigXlab***: 1986');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 17.5 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 29.4 bcm');" onmouseover="highlightViz(evt,'supply-1986','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1986','0.0');"/>
+    <rect id="year_1987" x="670.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1987');ChangeText(evt, 'year_text','***usageFigXlab***: 1987');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 18.2 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 20.8 bcm');" onmouseover="highlightViz(evt,'supply-1987','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1987','0.0');"/>
+    <rect id="year_1988" x="676.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1988');ChangeText(evt, 'year_text','***usageFigXlab***: 1988');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 19.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 15.6 bcm');" onmouseover="highlightViz(evt,'supply-1988','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1988','0.0');"/>
+    <rect id="year_1989" x="683.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1989');ChangeText(evt, 'year_text','***usageFigXlab***: 1989');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 19.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 13.2 bcm');" onmouseover="highlightViz(evt,'supply-1989','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1989','0.0');"/>
+    <rect id="year_1990" x="690.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1990');ChangeText(evt, 'year_text','***usageFigXlab***: 1990');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 19.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 12.9 bcm');" onmouseover="highlightViz(evt,'supply-1990','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1990','0.0');"/>
+    <rect id="year_1991" x="697.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1991');ChangeText(evt, 'year_text','***usageFigXlab***: 1991');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 18.4 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 16.9 bcm');" onmouseover="highlightViz(evt,'supply-1991','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1991','0.0');"/>
+    <rect id="year_1992" x="704.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1992');ChangeText(evt, 'year_text','***usageFigXlab***: 1992');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 18.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 15.8 bcm');" onmouseover="highlightViz(evt,'supply-1992','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1992','0.0');"/>
+    <rect id="year_1993" x="711.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1993');ChangeText(evt, 'year_text','***usageFigXlab***: 1993');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 18.7 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 27.2 bcm');" onmouseover="highlightViz(evt,'supply-1993','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1993','0.0');"/>
+    <rect id="year_1994" x="718.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1994');ChangeText(evt, 'year_text','***usageFigXlab***: 1994');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 19.5 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 14.3 bcm');" onmouseover="highlightViz(evt,'supply-1994','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1994','0.0');"/>
+    <rect id="year_1995" x="725.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1995');ChangeText(evt, 'year_text','***usageFigXlab***: 1995');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 18.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 27.2 bcm');" onmouseover="highlightViz(evt,'supply-1995','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1995','0.0');"/>
+    <rect id="year_1996" x="732.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1996');ChangeText(evt, 'year_text','***usageFigXlab***: 1996');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 19.9 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 18.7 bcm');" onmouseover="highlightViz(evt,'supply-1996','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1996','0.0');"/>
+    <rect id="year_1997" x="739.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1997');ChangeText(evt, 'year_text','***usageFigXlab***: 1997');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 20.0 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 28.0 bcm');" onmouseover="highlightViz(evt,'supply-1997','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1997','0.0');"/>
+    <rect id="year_1998" x="746.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1998');ChangeText(evt, 'year_text','***usageFigXlab***: 1998');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 19.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 22.2 bcm');" onmouseover="highlightViz(evt,'supply-1998','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1998','0.0');"/>
+    <rect id="year_1999" x="752.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1999');ChangeText(evt, 'year_text','***usageFigXlab***: 1999');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 19.7 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 20.9 bcm');" onmouseover="highlightViz(evt,'supply-1999','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1999','0.0');"/>
+    <rect id="year_2000" x="759.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2000');ChangeText(evt, 'year_text','***usageFigXlab***: 2000');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 20.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 14.0 bcm');" onmouseover="highlightViz(evt,'supply-2000','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2000','0.0');"/>
+    <rect id="year_2001" x="766.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2001');ChangeText(evt, 'year_text','***usageFigXlab***: 2001');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 20.6 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 14.5 bcm');" onmouseover="highlightViz(evt,'supply-2001','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2001','0.0');"/>
+    <rect id="year_2002" x="773.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2002');ChangeText(evt, 'year_text','***usageFigXlab***: 2002');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 20.0 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 8.4 bcm');" onmouseover="highlightViz(evt,'supply-2002','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2002','0.0');"/>
+    <rect id="year_2003" x="780.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2003');ChangeText(evt, 'year_text','***usageFigXlab***: 2003');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 18.7 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 14.1 bcm');" onmouseover="highlightViz(evt,'supply-2003','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2003','0.0');"/>
+    <rect id="year_2004" x="787.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2004');ChangeText(evt, 'year_text','***usageFigXlab***: 2004');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 18.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 13.7 bcm');" onmouseover="highlightViz(evt,'supply-2004','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2004','0.0');"/>
+    <rect id="year_2005" x="794.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2005');ChangeText(evt, 'year_text','***usageFigXlab***: 2005');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 17.9 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 24.2 bcm');" onmouseover="highlightViz(evt,'supply-2005','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2005','0.0');"/>
+    <rect id="year_2006" x="801.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2006');ChangeText(evt, 'year_text','***usageFigXlab***: 2006');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 18.5 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 17.7 bcm');" onmouseover="highlightViz(evt,'supply-2006','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2006','0.0');"/>
+    <rect id="year_2007" x="808.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2007');ChangeText(evt, 'year_text','***usageFigXlab***: 2007');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 18.8 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 15.2 bcm');" onmouseover="highlightViz(evt,'supply-2007','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2007','0.0');"/>
+    <rect id="year_2008" x="815.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2008');ChangeText(evt, 'year_text','***usageFigXlab***: 2008');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 19.1 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 21.2 bcm');" onmouseover="highlightViz(evt,'supply-2008','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2008','0.0');"/>
+    <rect id="year_2009" x="822.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2009');ChangeText(evt, 'year_text','***usageFigXlab***: 2009');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 18.9 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 18.4 bcm');" onmouseover="highlightViz(evt,'supply-2009','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2009','0.0');"/>
+    <rect id="year_2010" x="828.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2010');ChangeText(evt, 'year_text','***usageFigXlab***: 2010');ChangeText(evt, 'use_text','***usageFigUseDesktop***: 18.7 bcm');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 17.2 bcm');" onmouseover="highlightViz(evt,'supply-2010','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2010','0.0');"/>
+    <rect id="year_2011" x="835.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2011');ChangeText(evt, 'year_text','***usageFigXlab***: 2011');ChangeText(evt, 'use_text','***usageFigUseDesktop***: ');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 26.1 bcm');" onmouseover="highlightViz(evt,'supply-2011','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2011','0.0');"/>
+    <rect id="year_2012" x="842.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2012');ChangeText(evt, 'year_text','***usageFigXlab***: 2012');ChangeText(evt, 'use_text','***usageFigUseDesktop***: ');ChangeText(evt, 'supply_text','***usageFigSupplyDesktop***: 10.4 bcm');" onmouseover="highlightViz(evt,'supply-2012','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2012','0.0');"/>
+  </g>
+</svg>
+ 

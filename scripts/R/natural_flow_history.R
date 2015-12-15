@@ -17,7 +17,7 @@ read_flow_data <- function() {
   flow_file <- 'src_data/upper-colorado-flow2007.txt'
   lines <- readLines(flow_file)
   header_line <- grep("Year   Model  RecBCM  RMSE_BCM", lines)
-  running_mean <- function(x,n=15,sides=1) {
+  running_mean <- function(x,n=10,sides=1) {
     stats::filter(x, rep(1/n,n), sides=1) %>% as.numeric()
   }
   flow_df <- read.csv(flow_file, skip=(header_line-1), sep="", stringsAsFactors = F) %>%
@@ -28,8 +28,8 @@ read_flow_data <- function() {
     # means (1000 million acre feet)/(1233.48184 billion cubic meters) = 0.8107132
     mutate(TreeRings=TreeRings*0.8107132, TreeRingsLwr=TreeRingsLwr*0.8107132, TreeRingsUpr=TreeRingsUpr*0.8107132) %>%
     # could compute running averages here: 
-    # mutate(TreeRings15YrRunMean = running_mean(TreeRings), TreeRingsAllYrMean = mean(TreeRings)) %>%
-    select(Year, TreeRings, TreeRingsLwr, TreeRingsUpr) #TreeRings15YrRunMean, TreeRingsAllYrMean)
+    # mutate(TreeRings10YrRunMean = running_mean(TreeRings), TreeRingsAllYrMean = mean(TreeRings)) %>%
+    select(Year, TreeRings, TreeRingsLwr, TreeRingsUpr) #TreeRings10YrRunMean, TreeRingsAllYrMean)
   
   # add more recent flow data (still only up to 2012)
   flow_file_recent <- 'src_data/NaturalFlow.csv'
@@ -42,33 +42,35 @@ read_flow_data <- function() {
   # compute running means on the average of TreeRings and FlowGage (or just one, when only one is available)
   flow_df <- flow_df %>%
     mutate(MeanTreeGage = rowMeans(cbind(TreeRings, FlowGage), na.rm=TRUE),
-           TreeGage15YrRunMean = running_mean(MeanTreeGage),
-           TreeGageAllYrMean = mean(MeanTreeGage),
-           Min15YrMean = min(TreeGage15YrRunMean, na.rm=TRUE)) %>%
-    select(-MeanTreeGage)
+           TreeGage10YrRunMean = running_mean(MeanTreeGage),
+           TreeGageAllYrMean = mean(MeanTreeGage), 
+           Min10YrMean = min(TreeGage10YrRunMean, na.rm=TRUE)
+           ) %>%
+    select(-MeanTreeGage, -Min10YrMean)
   
   flow_df <- flow_df %>% 
-    mutate(Year = as.Date(paste0(Year, "-1-1")))
+    mutate(
+      #LegendYear = Year,
+      Year = as.Date(paste0(Year, "-1-1")))
   
   # write the data to file; this is how the html will actually access it.
   # http://dygraphs.com/data.html: '"CSV" is actually a bit of a misnomer: the 
   # data can be tab-delimited, too. The delimiter is set by the delimiter 
   # option. It default to ",". If no delimiter is found in the first row, it 
   # switches over to tab.'
-  custom_bars_format <- function(mid, low, high) {
-    if(missing(low) | missing(high)) low <- high <- mid
-    ifelse(complete.cases(data.frame(low, mid, high)),
-           paste(low, mid, high, sep=";"), 
-           NA)
-  }
-  flow_write <- flow_df %>% 
-    transmute(Year=format(Year, "%Y/%m/%d"),
-              TreeRings=custom_bars_format(TreeRings, TreeRingsLwr, TreeRingsUpr),
-              custom_bars_format(FlowGage), 
-              custom_bars_format(TreeGage15YrRunMean), 
-              custom_bars_format(TreeGageAllYrMean), 
-              custom_bars_format(Min15YrMean))
-  write.table(flow_write, "public_html/data/natural_flow_history.tsv", sep="\t", row.names=FALSE, col.names=FALSE, quote=FALSE, na="")
+#   custom_bars_format <- function(mid, low, high) {
+#     if(missing(low) | missing(high)) low <- high <- mid
+#     ifelse(complete.cases(data.frame(low, mid, high)),
+#            paste(low, mid, high, sep=";"), 
+#            NA)
+#   }
+#   flow_write <- flow_df %>% 
+#     transmute(Year=format(Year, "%Y/%m/%d"),
+#               TreeRings=custom_bars_format(TreeRings, TreeRingsLwr, TreeRingsUpr),
+#               custom_bars_format(FlowGage), 
+#               custom_bars_format(TreeGage10YrRunMean), 
+#               custom_bars_format(TreeGageAllYrMean))
+#   write.table(flow_write, "public_html/data/natural_flow_history.tsv", sep="\t", row.names=FALSE, col.names=FALSE, quote=FALSE, na="")
     
   flow_xts <- xts(flow_df %>% select(-Year) %>% as.matrix(), order.by=flow_df$Year)
   flow_xts
@@ -83,14 +85,17 @@ plot_flow_data <- function(flow_data) {
   # the figure
   dg <- dygraph(flow_data, main = 'Colorado River Natural Flow at Lees Ferry, AZ') %>%
     dyRangeSelector(dateWindow = as.Date(c("1812", "2012"), format="%Y")) %>% 
-    dySeries(c("TreeRingsLwr", "TreeRings", "TreeRingsUpr"), label = "Tree-Ring Reconstructed", color="#00CCFF") %>%
-    dySeries(c("FlowGage"), label = "Observed", color="#3333FF") %>%
-    dySeries(c("TreeGage15YrRunMean"), label = "15-Year Average", color="red") %>%
-    dySeries(c("TreeGageAllYrMean"), label = "Average", "forestgreen") %>%
-    dySeries(c("Min15YrMean"), label = "Lowest 15-Year Average in Record", color="gold") %>%
-    dyAxis("y", label = "Flow (million acre-feet per year)") %>%
+    dySeries(c("TreeRingsLwr", "TreeRings", "TreeRingsUpr"), label = "Tree-Ring Reconstructed Annual Natural Flow", color="#00CCFF") %>%
+    dySeries(c("FlowGage"), label = "Historical Annual Natural Flow", color="#3333FF") %>%
+    dySeries(c("TreeGage10YrRunMean"), label = "10-Year Average Flow", color="#C11B17") %>%
+    dySeries(c("TreeGageAllYrMean"), label = "Long-Term Average Flow", "#FBB917") %>%
+    #dySeries(c("LegendYear"), label = "Year", color="transparent", axis = "y2") %>%
     dyAxis("x", label = "Year") %>%
-    dyLegend(width = 400) %>%
+    dyAxis("y", label = "Flow Volume (million acre-feet)") %>%
+    #dyAxis("y2", label = "", 
+    #       valueFormatter="", 
+    #       axisLabelFormatter=htmlwidgets::JS('function(x) return "";')) %>%
+    dyLegend(labelsSeparateLines=TRUE, labelsDiv="legend_div") %>%
     dyShading(from = "2000-1-1", to = "2013-1-1")
   
   # potential dygraph enhancements
@@ -101,7 +106,7 @@ plot_flow_data <- function(flow_data) {
   # arg seems to only work if there aren't any folders in the file name, and
   # "libdir" seems to have to be a descendent of the folder where "file" is
   # located.
-  oldwd <- setwd("public_html/widgets/slide_3")
+  oldwd <- setwd("temp/treeringdata")
   htmlwidgets::saveWidget(dg, "natural_flow_history.html", selfcontained = FALSE, libdir = "js")
   setwd(oldwd)
   
@@ -109,3 +114,4 @@ plot_flow_data <- function(flow_data) {
   dg
 }
 dg <- plot_flow_data(flow_data)
+dg

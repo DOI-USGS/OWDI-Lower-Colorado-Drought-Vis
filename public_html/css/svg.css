@@ -38,8 +38,8 @@
 
 .level-move {
     -ms-transform: scale(1,1); /* IE 9 */
-    -webkit-transform:  scale(1,1); /* Safari */
-    transform:  scale(1,1);
+    -webkit-transform:  scale(1,1) translateZ(0); /* Safari */
+    transform:  scale(1,1); 
 }
 .mead-flood {
     -ms-transform: translate(0px,41.81159px); /* IE 9 */
@@ -99,9 +99,9 @@
 }
 
 .mexico-moved {
-    -ms-transform: translate(-70px, 95px) scale(0.55); /* IE 9 */
-    -webkit-transform: translate(-70px, 95px) scale(0.55); /* Safari */
-    transform: translate(-70px, 95px) scale(0.55);
+    -ms-transform: translate(-78px, 105px) scale(0.55); /* IE 9 */
+    -webkit-transform: translate(-78px, 105px) scale(0.55); /* Safari */
+    transform: translate(-78px, 105px) scale(0.55);
     stroke-width: 2.73;
     stroke: #458B00;
     fill: url(#mexico-flag);
@@ -149,6 +149,11 @@ text {
 
 .small-text {
     font-size: 12px;
+    font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.tiny-text {
+    font-size: 11px;
     font-family: Roboto, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 

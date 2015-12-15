@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="../../css/svg.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" onload="init(evt)" preserveAspectRatio="xMinYMin meet" viewBox="0 0 960 600">
+  <script type="text/ecmascript"><![CDATA[function init(evt)
+  {
+  if ( window.svgDocument == null )
+  {
+    svgDocument = evt.target.ownerDocument;
+    svgDocument.timeAdvance = this.timeAdvance;
+    svgDocument.visibleAxes = this.visibleAxes;
+  }
+    legend = svgDocument.getElementById("legend");
+  }
+  function legendViz(evt,elementname)
+   {
+  var r = document.getElementById(elementname).r
+  if ("beginElement" in document.getElementById("timeAdvance")) {
+  	if (r.animVal.value === 0){
+    	legend.setAttributeNS(null,"visibility","hidden");
+  	  } else {
+    	legend.setAttributeNS(null,"visibility","visible");
+  	  }
+
+   } else {
+ 	legend.setAttributeNS(null,"visibility","visible");
+
+   }
+   }
+  function highlightViz(evt,elementname,opacity)
+  {
+  var r = document.getElementById(elementname).r.animVal.value
+  
+  if (r === 0){
+    evt.target.setAttribute("fill-opacity", "0.0");
+  } else {
+    evt.target.setAttribute("fill-opacity", opacity);
+  }
+  
+  }
+  
+  function ChangeText(evt, elementname, legendtext)
+  {
+  textelement = svgDocument.getElementById(elementname);                      
+  textelement.firstChild.data = legendtext;
+  }
+  function timeAdvance(){
+    var ele = document.getElementById("timeAdvance");
+  if ("beginElement" in ele) {
+    ele.beginElement();
+  } else {
+    document.getElementById("usage-liner").setAttribute("style","stroke:#B22C2C;stroke-width:3");
+		document.getElementById("supply-liner").setAttribute("style","stroke:#0066CC;stroke-width:3");
+  }
+    
+  }
+  function visibleAxes(){
+  document.getElementById("plot-contents").setAttribute("class","shown");
+  setTimeout(function(){
+  {timeAdvance();}},1000)
+  }]]></script>
+  <g id="plot-contents" class="hidden">
+    <g id="axes" class="label">
+      <rect id="axis.box" x="100.0" y="10.0" width="760.0" height="530.0" style="fill:#FFFFFF;stroke:black"/>
+      <text transform="translate(70.0,275.0)rotate(270)" text-anchor="middle" id="y-label" dy="-1em">Volume (million acre-feet)</text>
+      <text transform="translate(430.0,600.0)rotate(0)" text-anchor="middle" id="x-label" dy="-0.5em">Year</text>
+      <line x1="141.5" y1="540.0" x2="141.5" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(141.5,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1910</text>
+      <line x1="210.5" y1="540.0" x2="210.5" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(210.5,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1920</text>
+      <line x1="279.6" y1="540.0" x2="279.6" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(279.6,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1930</text>
+      <line x1="348.7" y1="540.0" x2="348.7" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(348.7,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1940</text>
+      <line x1="417.8" y1="540.0" x2="417.8" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(417.8,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1950</text>
+      <line x1="486.9" y1="540.0" x2="486.9" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(486.9,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1960</text>
+      <line x1="556.0" y1="540.0" x2="556.0" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(556.0,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1970</text>
+      <line x1="625.1" y1="540.0" x2="625.1" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(625.1,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1980</text>
+      <line x1="694.2" y1="540.0" x2="694.2" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(694.2,540.0)rotate(0)" text-anchor="middle" dy="1.0em">1990</text>
+      <line x1="763.3" y1="540.0" x2="763.3" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(763.3,540.0)rotate(0)" text-anchor="middle" dy="1.0em">2000</text>
+      <line x1="832.4" y1="540.0" x2="832.4" y2="535.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(832.4,540.0)rotate(0)" text-anchor="middle" dy="1.0em">2010</text>
+      <line x1="100.0" y1="540.0" x2="105.0" y2="540.0" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,545.0)rotate(0)" text-anchor="end">0</text>
+      <line x1="100.0" y1="448.6" x2="105.0" y2="448.6" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,453.6)rotate(0)" text-anchor="end">5</text>
+      <line x1="100.0" y1="357.2" x2="105.0" y2="357.2" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,362.2)rotate(0)" text-anchor="end">10</text>
+      <line x1="100.0" y1="265.9" x2="105.0" y2="265.9" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,270.9)rotate(0)" text-anchor="end">15</text>
+      <line x1="100.0" y1="174.5" x2="105.0" y2="174.5" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,179.5)rotate(0)" text-anchor="end">20</text>
+      <line x1="100.0" y1="83.1" x2="105.0" y2="83.1" style="stroke:black;stroke-width:1.5"/>
+      <text transform="translate(95.0,88.1)rotate(0)" text-anchor="end">25</text>
+    </g>
+    <g id="legend" visibility="hidden" class="label" alignment-baseline="central">
+      <text id="year_text" x="100" y="10" class="legend" dy="1.5em" dx="1.0em">year</text>
+      <text id="use_text" x="100" y="10" fill="#B22C2C" class="legend" dy="2.5em" dx="1.0em">use_text</text>
+      <text id="supply_text" x="100" y="10" fill="#0066CC" class="legend" dy="3.5em" dx="1.0em">supply_text</text>
+    </g>
+    <path d="M113.8,178.7 L120.7,126.3 L127.6,294.6 L134.5,99.9 L141.5,238.4 L148.4,229.8 L155.3,180.9 L162.2,255.9 L169.1,127.3 L176.0,272.2 L182.9,132.9 L189.8,95.5 L196.7,226.3 L203.6,270.7 L210.5,101.0 L217.5,90.7 L224.4,168.9 L231.3,150.4 L238.2,248.1 L245.1,249.6 L252.0,243.7 L258.9,151.1 L265.8,222.7 L272.7,132.4 L279.6,255.3 L286.5,360.6 L293.5,182.4 L300.4,296.8 L307.3,407.2 L314.2,301.2 L321.1,265.2 L328.0,259.8 L334.9,195.2 L341.8,311.5 L348.7,337.8 L355.6,130.3 L362.5,206.1 L369.5,275.6 L376.4,242.0 L383.3,261.0 L390.2,319.5 L397.1,219.5 L404.0,249.6 L410.9,208.7 L417.8,283.4 L424.7,295.2 L431.6,129.7 L438.5,314.6 L445.5,364.7 L452.4,336.6 L459.3,313.0 L466.2,124.5 L473.1,218.6 L480.0,340.8 L486.9,305.2 L493.8,336.1 L500.7,207.0 L507.6,364.7 L514.5,335.3 L521.5,147.9 L528.4,323.9 L535.3,305.2 L542.2,268.8 L549.1,239.3 L556.0,246.4 L562.9,249.2 L569.8,282.9 L576.7,179.0 L583.6,290.1 L590.5,225.1 L597.5,321.4 L604.4,425.6 L611.3,233.8 L618.2,185.2 L625.1,180.9 L632.0,355.9 L638.9,199.5 L645.8,76.5 L652.7,65.2 L659.6,129.2 L666.5,103.7 L673.5,231.9 L680.4,308.9 L687.3,344.7 L694.2,348.7 L701.1,290.0 L708.0,305.8 L714.9,137.3 L721.8,328.0 L728.7,137.5 L735.6,262.3 L742.5,125.8 L749.5,210.7 L756.4,230.3 L763.3,331.9 L770.2,324.8 L777.1,416.2 L784.0,331.2 L790.9,336.8 L797.8,181.2 L804.7,277.4 L811.6,315.1 L818.5,225.3 L825.5,267.5 L832.4,285.0 L839.3,153.5 L846.2,386.3 " fill="none" id="supply-liner" style="stroke:#0066CC;stroke-width:3;stroke-dasharray:9075;stroke-linejoin:round;stroke-dashoffset:9075">
+      <animate attributeName="stroke-dashoffset" begin="indefinite;visibleAxes.begin+1s" id="timeAdvance" fill="freeze" dur="12.000000s" values="9021.71205143014;8853.3021574804;8658.43176012757;8519.73892685458;8508.72360603556;8459.32542690799;8383.99971988486;8255.25527748537;8110.19234190775;7970.73036948405;7932.63870820283;7801.68450456186;7756.74732172374;7586.90780499084;7574.54095682591;7496.02275343286;7476.27357455816;7378.31919245856;7371.25246712736;7362.12701545288;7269.29164618466;7197.33836531008;7106.74942221608;6983.60280049073;6878.12281198053;6699.82603353645;6585.24702613502;6474.63877252057;6368.43321139871;6331.80990708069;6323.03972305422;6258.04709771965;6141.56233786879;6114.38582355028;5906.8163223928;5830.68182329725;5760.90877547999;5726.63958656486;5706.39564400474;5647.53121149348;5547.2755721741;5516.31645374506;5474.82878665032;5399.8296696441;5386.19819365365;5220.63720300907;5035.61084452809;4985.11541667332;4956.1852579304;4931.61248041838;4743.02558921364;4648.73004679108;4526.26961852386;4489.93336372497;4458.25459243724;4328.98253487262;4171.15638033584;4140.99280765803;3953.43740384517;3777.27767751305;3757.3122515843;3720.30655252632;3690.02270640082;3680.17124457402;3672.71667755604;3638.30548887203;3534.23932543853;3422.91893007914;3357.49487804523;3260.89620260511;3156.44884037764;2964.51329840487;2915.42905056864;2907.25354119206;2732.04059394952;2575.43306507624;2452.25903623356;2438.9957690099;2374.64264516471;2348.24616065564;2219.87886136682;2142.5158235067;2106.04561913725;2098.07569138762;2039.00836032731;2021.77625952581;1853.0569413377;1662.23752750256;1471.70113045239;1346.76983148515;1210.12739341866;1124.919801065;1104.21405822294;1002.29822032277;992.38902690701;900.728064473728;815.428901558596;806.574627351314;650.902198210437;554.476224049913;516.13388735099;426.049374840919;383.302003578283;364.482828278342;232.830395351159;0"/>
+    </path>
+    <g id="supply" style="fill:#0066CC" r="0" visibility="hidden">
+      <circle cx="113.8" cy="178.7" id="supply-1906">
+        <animate attributeName="r" begin="timeAdvance.begin+0.000s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="120.7" cy="126.3" id="supply-1907">
+        <animate attributeName="r" begin="timeAdvance.begin+0.000s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="127.6" cy="294.6" id="supply-1908">
+        <animate attributeName="r" begin="timeAdvance.begin+0.026s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="134.5" cy="99.9" id="supply-1909">
+        <animate attributeName="r" begin="timeAdvance.begin+0.140s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="141.5" cy="238.4" id="supply-1910">
+        <animate attributeName="r" begin="timeAdvance.begin+0.253s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="148.4" cy="229.8" id="supply-1911">
+        <animate attributeName="r" begin="timeAdvance.begin+0.366s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="155.3" cy="180.9" id="supply-1912">
+        <animate attributeName="r" begin="timeAdvance.begin+0.479s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="162.2" cy="255.9" id="supply-1913">
+        <animate attributeName="r" begin="timeAdvance.begin+0.592s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="169.1" cy="127.3" id="supply-1914">
+        <animate attributeName="r" begin="timeAdvance.begin+0.706s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="176.0" cy="272.2" id="supply-1915">
+        <animate attributeName="r" begin="timeAdvance.begin+0.819s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="182.9" cy="132.9" id="supply-1916">
+        <animate attributeName="r" begin="timeAdvance.begin+0.932s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="189.8" cy="95.5" id="supply-1917">
+        <animate attributeName="r" begin="timeAdvance.begin+1.045s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="196.7" cy="226.3" id="supply-1918">
+        <animate attributeName="r" begin="timeAdvance.begin+1.158s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="203.6" cy="270.7" id="supply-1919">
+        <animate attributeName="r" begin="timeAdvance.begin+1.272s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="210.5" cy="101.0" id="supply-1920">
+        <animate attributeName="r" begin="timeAdvance.begin+1.385s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="217.5" cy="90.7" id="supply-1921">
+        <animate attributeName="r" begin="timeAdvance.begin+1.498s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="224.4" cy="168.9" id="supply-1922">
+        <animate attributeName="r" begin="timeAdvance.begin+1.611s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="231.3" cy="150.4" id="supply-1923">
+        <animate attributeName="r" begin="timeAdvance.begin+1.725s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="238.2" cy="248.1" id="supply-1924">
+        <animate attributeName="r" begin="timeAdvance.begin+1.838s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="245.1" cy="249.6" id="supply-1925">
+        <animate attributeName="r" begin="timeAdvance.begin+1.951s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="252.0" cy="243.7" id="supply-1926">
+        <animate attributeName="r" begin="timeAdvance.begin+2.064s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="258.9" cy="151.1" id="supply-1927">
+        <animate attributeName="r" begin="timeAdvance.begin+2.177s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="265.8" cy="222.7" id="supply-1928">
+        <animate attributeName="r" begin="timeAdvance.begin+2.291s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="272.7" cy="132.4" id="supply-1929">
+        <animate attributeName="r" begin="timeAdvance.begin+2.404s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="279.6" cy="255.3" id="supply-1930">
+        <animate attributeName="r" begin="timeAdvance.begin+2.517s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="286.5" cy="360.6" id="supply-1931">
+        <animate attributeName="r" begin="timeAdvance.begin+2.630s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="293.5" cy="182.4" id="supply-1932">
+        <animate attributeName="r" begin="timeAdvance.begin+2.743s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="300.4" cy="296.8" id="supply-1933">
+        <animate attributeName="r" begin="timeAdvance.begin+2.857s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="307.3" cy="407.2" id="supply-1934">
+        <animate attributeName="r" begin="timeAdvance.begin+2.970s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="314.2" cy="301.2" id="supply-1935">
+        <animate attributeName="r" begin="timeAdvance.begin+3.083s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="321.1" cy="265.2" id="supply-1936">
+        <animate attributeName="r" begin="timeAdvance.begin+3.196s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="328.0" cy="259.8" id="supply-1937">
+        <animate attributeName="r" begin="timeAdvance.begin+3.309s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="334.9" cy="195.2" id="supply-1938">
+        <animate attributeName="r" begin="timeAdvance.begin+3.423s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="341.8" cy="311.5" id="supply-1939">
+        <animate attributeName="r" begin="timeAdvance.begin+3.536s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="348.7" cy="337.8" id="supply-1940">
+        <animate attributeName="r" begin="timeAdvance.begin+3.649s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="355.6" cy="130.3" id="supply-1941">
+        <animate attributeName="r" begin="timeAdvance.begin+3.762s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="362.5" cy="206.1" id="supply-1942">
+        <animate attributeName="r" begin="timeAdvance.begin+3.875s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="369.5" cy="275.6" id="supply-1943">
+        <animate attributeName="r" begin="timeAdvance.begin+3.989s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="376.4" cy="242.0" id="supply-1944">
+        <animate attributeName="r" begin="timeAdvance.begin+4.102s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="383.3" cy="261.0" id="supply-1945">
+        <animate attributeName="r" begin="timeAdvance.begin+4.215s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="390.2" cy="319.5" id="supply-1946">
+        <animate attributeName="r" begin="timeAdvance.begin+4.328s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="397.1" cy="219.5" id="supply-1947">
+        <animate attributeName="r" begin="timeAdvance.begin+4.442s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="404.0" cy="249.6" id="supply-1948">
+        <animate attributeName="r" begin="timeAdvance.begin+4.555s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="410.9" cy="208.7" id="supply-1949">
+        <animate attributeName="r" begin="timeAdvance.begin+4.668s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="417.8" cy="283.4" id="supply-1950">
+        <animate attributeName="r" begin="timeAdvance.begin+4.781s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="424.7" cy="295.2" id="supply-1951">
+        <animate attributeName="r" begin="timeAdvance.begin+4.894s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="431.6" cy="129.7" id="supply-1952">
+        <animate attributeName="r" begin="timeAdvance.begin+5.008s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="438.5" cy="314.6" id="supply-1953">
+        <animate attributeName="r" begin="timeAdvance.begin+5.121s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="445.5" cy="364.7" id="supply-1954">
+        <animate attributeName="r" begin="timeAdvance.begin+5.234s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="452.4" cy="336.6" id="supply-1955">
+        <animate attributeName="r" begin="timeAdvance.begin+5.347s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="459.3" cy="313.0" id="supply-1956">
+        <animate attributeName="r" begin="timeAdvance.begin+5.460s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="466.2" cy="124.5" id="supply-1957">
+        <animate attributeName="r" begin="timeAdvance.begin+5.574s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="473.1" cy="218.6" id="supply-1958">
+        <animate attributeName="r" begin="timeAdvance.begin+5.687s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="480.0" cy="340.8" id="supply-1959">
+        <animate attributeName="r" begin="timeAdvance.begin+5.800s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="486.9" cy="305.2" id="supply-1960">
+        <animate attributeName="r" begin="timeAdvance.begin+5.913s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="493.8" cy="336.1" id="supply-1961">
+        <animate attributeName="r" begin="timeAdvance.begin+6.026s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="500.7" cy="207.0" id="supply-1962">
+        <animate attributeName="r" begin="timeAdvance.begin+6.140s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="507.6" cy="364.7" id="supply-1963">
+        <animate attributeName="r" begin="timeAdvance.begin+6.253s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="514.5" cy="335.3" id="supply-1964">
+        <animate attributeName="r" begin="timeAdvance.begin+6.366s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="521.5" cy="147.9" id="supply-1965">
+        <animate attributeName="r" begin="timeAdvance.begin+6.479s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="528.4" cy="323.9" id="supply-1966">
+        <animate attributeName="r" begin="timeAdvance.begin+6.592s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="535.3" cy="305.2" id="supply-1967">
+        <animate attributeName="r" begin="timeAdvance.begin+6.706s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="542.2" cy="268.8" id="supply-1968">
+        <animate attributeName="r" begin="timeAdvance.begin+6.819s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="549.1" cy="239.3" id="supply-1969">
+        <animate attributeName="r" begin="timeAdvance.begin+6.932s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="556.0" cy="246.4" id="supply-1970">
+        <animate attributeName="r" begin="timeAdvance.begin+7.045s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="562.9" cy="249.2" id="supply-1971">
+        <animate attributeName="r" begin="timeAdvance.begin+7.158s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="569.8" cy="282.9" id="supply-1972">
+        <animate attributeName="r" begin="timeAdvance.begin+7.272s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="576.7" cy="179.0" id="supply-1973">
+        <animate attributeName="r" begin="timeAdvance.begin+7.385s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="583.6" cy="290.1" id="supply-1974">
+        <animate attributeName="r" begin="timeAdvance.begin+7.498s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="590.5" cy="225.1" id="supply-1975">
+        <animate attributeName="r" begin="timeAdvance.begin+7.611s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="597.5" cy="321.4" id="supply-1976">
+        <animate attributeName="r" begin="timeAdvance.begin+7.725s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="604.4" cy="425.6" id="supply-1977">
+        <animate attributeName="r" begin="timeAdvance.begin+7.838s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="611.3" cy="233.8" id="supply-1978">
+        <animate attributeName="r" begin="timeAdvance.begin+7.951s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="618.2" cy="185.2" id="supply-1979">
+        <animate attributeName="r" begin="timeAdvance.begin+8.064s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="625.1" cy="180.9" id="supply-1980">
+        <animate attributeName="r" begin="timeAdvance.begin+8.177s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="632.0" cy="355.9" id="supply-1981">
+        <animate attributeName="r" begin="timeAdvance.begin+8.291s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="638.9" cy="199.5" id="supply-1982">
+        <animate attributeName="r" begin="timeAdvance.begin+8.404s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="645.8" cy="76.5" id="supply-1983">
+        <animate attributeName="r" begin="timeAdvance.begin+8.517s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="652.7" cy="65.2" id="supply-1984">
+        <animate attributeName="r" begin="timeAdvance.begin+8.630s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="659.6" cy="129.2" id="supply-1985">
+        <animate attributeName="r" begin="timeAdvance.begin+8.743s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="666.5" cy="103.7" id="supply-1986">
+        <animate attributeName="r" begin="timeAdvance.begin+8.857s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="673.5" cy="231.9" id="supply-1987">
+        <animate attributeName="r" begin="timeAdvance.begin+8.970s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="680.4" cy="308.9" id="supply-1988">
+        <animate attributeName="r" begin="timeAdvance.begin+9.083s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="687.3" cy="344.7" id="supply-1989">
+        <animate attributeName="r" begin="timeAdvance.begin+9.196s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="694.2" cy="348.7" id="supply-1990">
+        <animate attributeName="r" begin="timeAdvance.begin+9.309s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="701.1" cy="290.0" id="supply-1991">
+        <animate attributeName="r" begin="timeAdvance.begin+9.423s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="708.0" cy="305.8" id="supply-1992">
+        <animate attributeName="r" begin="timeAdvance.begin+9.536s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="714.9" cy="137.3" id="supply-1993">
+        <animate attributeName="r" begin="timeAdvance.begin+9.649s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="721.8" cy="328.0" id="supply-1994">
+        <animate attributeName="r" begin="timeAdvance.begin+9.762s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="728.7" cy="137.5" id="supply-1995">
+        <animate attributeName="r" begin="timeAdvance.begin+9.875s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="735.6" cy="262.3" id="supply-1996">
+        <animate attributeName="r" begin="timeAdvance.begin+9.989s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="742.5" cy="125.8" id="supply-1997">
+        <animate attributeName="r" begin="timeAdvance.begin+10.102s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="749.5" cy="210.7" id="supply-1998">
+        <animate attributeName="r" begin="timeAdvance.begin+10.215s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="756.4" cy="230.3" id="supply-1999">
+        <animate attributeName="r" begin="timeAdvance.begin+10.328s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="763.3" cy="331.9" id="supply-2000">
+        <animate attributeName="r" begin="timeAdvance.begin+10.442s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="770.2" cy="324.8" id="supply-2001">
+        <animate attributeName="r" begin="timeAdvance.begin+10.555s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="777.1" cy="416.2" id="supply-2002">
+        <animate attributeName="r" begin="timeAdvance.begin+10.668s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="784.0" cy="331.2" id="supply-2003">
+        <animate attributeName="r" begin="timeAdvance.begin+10.781s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="790.9" cy="336.8" id="supply-2004">
+        <animate attributeName="r" begin="timeAdvance.begin+10.894s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="797.8" cy="181.2" id="supply-2005">
+        <animate attributeName="r" begin="timeAdvance.begin+11.008s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="804.7" cy="277.4" id="supply-2006">
+        <animate attributeName="r" begin="timeAdvance.begin+11.121s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="811.6" cy="315.1" id="supply-2007">
+        <animate attributeName="r" begin="timeAdvance.begin+11.234s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="818.5" cy="225.3" id="supply-2008">
+        <animate attributeName="r" begin="timeAdvance.begin+11.347s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="825.5" cy="267.5" id="supply-2009">
+        <animate attributeName="r" begin="timeAdvance.begin+11.460s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="832.4" cy="285.0" id="supply-2010">
+        <animate attributeName="r" begin="timeAdvance.begin+11.574s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="839.3" cy="153.5" id="supply-2011">
+        <animate attributeName="r" begin="timeAdvance.begin+11.687s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+      <circle cx="846.2" cy="386.3" id="supply-2012">
+        <animate attributeName="r" begin="timeAdvance.begin+11.800s" fill="freeze" from="0" to="1.5" dur="0.01s"/>
+      </circle>
+    </g>
+    <path d="M169.1,451.1 L176.0,449.7 L182.9,442.3 L189.8,437.2 L196.7,429.6 L203.6,430.9 L210.5,426.8 L217.5,436.2 L224.4,423.6 L231.3,422.4 L238.2,418.6 L245.1,420.8 L252.0,420.7 L258.9,421.2 L265.8,415.7 L272.7,412.7 L279.6,409.5 L286.5,417.9 L293.5,419.6 L300.4,414.8 L307.3,432.5 L314.2,412.3 L321.1,397.6 L328.0,396.5 L334.9,393.2 L341.8,389.8 L348.7,389.4 L355.6,395.1 L362.5,391.2 L369.5,394.6 L376.4,390.2 L383.3,390.7 L390.2,384.9 L397.1,382.9 L404.0,379.5 L410.9,376.3 L417.8,367.3 L424.7,357.3 L431.6,348.9 L438.5,344.8 L445.5,344.5 L452.4,348.7 L459.3,341.2 L466.2,349.9 L473.1,337.9 L480.0,337.3 L486.9,328.6 L493.8,332.7 L500.7,323.1 L507.6,326.7 L514.5,317.5 L521.5,323.6 L528.4,310.6 L535.3,320.3 L542.2,314.7 L549.1,314.5 L556.0,307.1 L562.9,296.6 L569.8,294.7 L576.7,290.9 L583.6,281.6 L590.5,291.9 L597.5,300.5 L604.4,304.6 L611.3,299.6 L618.2,289.6 L625.1,287.9 L632.0,282.4 L638.9,298.0 L645.8,297.3 L652.7,291.1 L659.6,282.3 L666.5,280.7 L673.5,270.9 L680.4,256.9 L687.3,252.3 L694.2,257.7 L701.1,268.0 L708.0,272.5 L714.9,263.4 L721.8,251.6 L728.7,271.3 L735.6,245.7 L742.5,244.1 L749.5,250.1 L756.4,247.8 L763.3,234.7 L770.2,235.4 L777.1,244.1 L784.0,263.0 L790.9,271.7 L797.8,275.2 L804.7,266.3 L811.6,260.7 L818.5,257.0 L825.5,260.1 L832.4,263.5 " fill="none" id="usage-liner" style="stroke:#B22C2C;stroke-width:3;stroke-dasharray:968px;stroke-linejoin:round;stroke-dashoffset:968">
+      <animate attributeName="stroke-dashoffset" begin="timeAdvance.begin" id="usage" fill="freeze" dur="12.000000s" values="966.7152472875;966.7152472875;966.7152472875;966.7152472875;966.7152472875;966.7152472875;966.7152472875;966.7152472875;959.662629468848;949.550506084333;940.995949471081;930.739842424685;923.719669722284;915.687343740171;904.044380738164;889.666421876882;882.658187434944;874.800961832202;867.551701718605;860.641410705963;853.713364872437;844.844470250836;837.323375031032;829.725636670546;818.88424442809;811.757101515113;803.352656400748;784.411439592817;763.122241500464;746.838645618484;739.848781994147;732.156916270978;724.464454064049;717.542847465137;708.592096073035;700.658632902592;692.930995580724;684.741727176026;677.818856836402;668.819662282778;661.632926257543;653.907679401755;646.294720993816;634.959587063742;622.809424624617;611.978726619728;603.93423016986;597.015805038738;588.906292218662;578.713875264674;567.621964552382;553.830154346804;546.891617788995;535.78940123935;527.748841099513;515.918922165373;508.127410025028;496.617888492396;487.402376968057;472.684447443664;460.832465376721;451.989310485315;445.075259590027;434.995328248892;422.429964422319;415.249442492929;407.385377734375;395.810385057126;383.423308646362;372.380541083159;364.351217998522;355.802355398018;343.682283643067;336.550762046271;327.755154156074;310.729704874098;303.784374868931;294.510536774832;283.328221626747;276.244832640688;264.222534336173;248.610844358627;240.330530402775;231.578086130254;219.172887023498;210.919233513419;199.438456206275;185.811224778168;164.988919882093;138.550909499563;131.455451520943;122.330417770467;115.046612069494;100.268297582805;93.3254529558004;82.2317945792947;62.1169965952669;51.005926713699;43.2485564342062;31.9487293916407;23.1022079643033;15.2553081791015;7.67228816223212;0;0;0"/>
+    </path>
+    <rect id="year_1906" x="110.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1906');ChangeText(evt, 'year_text','Year: 1906');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: ');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 19.8 maf');" onmouseover="highlightViz(evt,'supply-1906','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1906','0.0');"/>
+    <rect id="year_1907" x="117.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1907');ChangeText(evt, 'year_text','Year: 1907');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: ');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 22.6 maf');" onmouseover="highlightViz(evt,'supply-1907','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1907','0.0');"/>
+    <rect id="year_1908" x="124.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1908');ChangeText(evt, 'year_text','Year: 1908');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: ');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 13.4 maf');" onmouseover="highlightViz(evt,'supply-1908','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1908','0.0');"/>
+    <rect id="year_1909" x="131.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1909');ChangeText(evt, 'year_text','Year: 1909');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: ');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 24.1 maf');" onmouseover="highlightViz(evt,'supply-1909','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1909','0.0');"/>
+    <rect id="year_1910" x="138.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1910');ChangeText(evt, 'year_text','Year: 1910');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: ');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 16.5 maf');" onmouseover="highlightViz(evt,'supply-1910','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1910','0.0');"/>
+    <rect id="year_1911" x="144.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1911');ChangeText(evt, 'year_text','Year: 1911');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: ');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 17.0 maf');" onmouseover="highlightViz(evt,'supply-1911','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1911','0.0');"/>
+    <rect id="year_1912" x="151.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1912');ChangeText(evt, 'year_text','Year: 1912');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: ');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 19.6 maf');" onmouseover="highlightViz(evt,'supply-1912','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1912','0.0');"/>
+    <rect id="year_1913" x="158.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1913');ChangeText(evt, 'year_text','Year: 1913');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: ');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 15.5 maf');" onmouseover="highlightViz(evt,'supply-1913','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1913','0.0');"/>
+    <rect id="year_1914" x="165.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1914');ChangeText(evt, 'year_text','Year: 1914');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 4.9 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 22.6 maf');" onmouseover="highlightViz(evt,'supply-1914','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1914','0.0');"/>
+    <rect id="year_1915" x="172.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1915');ChangeText(evt, 'year_text','Year: 1915');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 4.9 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 14.7 maf');" onmouseover="highlightViz(evt,'supply-1915','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1915','0.0');"/>
+    <rect id="year_1916" x="179.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1916');ChangeText(evt, 'year_text','Year: 1916');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 5.3 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 22.3 maf');" onmouseover="highlightViz(evt,'supply-1916','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1916','0.0');"/>
+    <rect id="year_1917" x="186.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1917');ChangeText(evt, 'year_text','Year: 1917');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 5.6 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 24.3 maf');" onmouseover="highlightViz(evt,'supply-1917','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1917','0.0');"/>
+    <rect id="year_1918" x="193.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1918');ChangeText(evt, 'year_text','Year: 1918');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.0 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 17.2 maf');" onmouseover="highlightViz(evt,'supply-1918','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1918','0.0');"/>
+    <rect id="year_1919" x="200.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1919');ChangeText(evt, 'year_text','Year: 1919');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.0 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 14.7 maf');" onmouseover="highlightViz(evt,'supply-1919','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1919','0.0');"/>
+    <rect id="year_1920" x="207.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1920');ChangeText(evt, 'year_text','Year: 1920');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.2 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 24.0 maf');" onmouseover="highlightViz(evt,'supply-1920','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1920','0.0');"/>
+    <rect id="year_1921" x="214.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1921');ChangeText(evt, 'year_text','Year: 1921');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 5.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 24.6 maf');" onmouseover="highlightViz(evt,'supply-1921','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1921','0.0');"/>
+    <rect id="year_1922" x="220.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1922');ChangeText(evt, 'year_text','Year: 1922');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.4 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 20.3 maf');" onmouseover="highlightViz(evt,'supply-1922','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1922','0.0');"/>
+    <rect id="year_1923" x="227.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1923');ChangeText(evt, 'year_text','Year: 1923');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.4 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 21.3 maf');" onmouseover="highlightViz(evt,'supply-1923','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1923','0.0');"/>
+    <rect id="year_1924" x="234.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1924');ChangeText(evt, 'year_text','Year: 1924');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.6 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 16.0 maf');" onmouseover="highlightViz(evt,'supply-1924','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1924','0.0');"/>
+    <rect id="year_1925" x="241.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1925');ChangeText(evt, 'year_text','Year: 1925');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.5 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 15.9 maf');" onmouseover="highlightViz(evt,'supply-1925','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1925','0.0');"/>
+    <rect id="year_1926" x="248.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1926');ChangeText(evt, 'year_text','Year: 1926');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.5 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 16.2 maf');" onmouseover="highlightViz(evt,'supply-1926','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1926','0.0');"/>
+    <rect id="year_1927" x="255.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1927');ChangeText(evt, 'year_text','Year: 1927');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.5 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 21.3 maf');" onmouseover="highlightViz(evt,'supply-1927','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1927','0.0');"/>
+    <rect id="year_1928" x="262.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1928');ChangeText(evt, 'year_text','Year: 1928');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.8 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 17.4 maf');" onmouseover="highlightViz(evt,'supply-1928','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1928','0.0');"/>
+    <rect id="year_1929" x="269.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1929');ChangeText(evt, 'year_text','Year: 1929');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 7.0 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 22.3 maf');" onmouseover="highlightViz(evt,'supply-1929','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1929','0.0');"/>
+    <rect id="year_1930" x="276.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1930');ChangeText(evt, 'year_text','Year: 1930');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 7.1 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 15.6 maf');" onmouseover="highlightViz(evt,'supply-1930','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1930','0.0');"/>
+    <rect id="year_1931" x="283.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1931');ChangeText(evt, 'year_text','Year: 1931');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 9.8 maf');" onmouseover="highlightViz(evt,'supply-1931','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1931','0.0');"/>
+    <rect id="year_1932" x="290.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1932');ChangeText(evt, 'year_text','Year: 1932');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.6 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 19.6 maf');" onmouseover="highlightViz(evt,'supply-1932','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1932','0.0');"/>
+    <rect id="year_1933" x="296.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1933');ChangeText(evt, 'year_text','Year: 1933');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 6.8 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 13.3 maf');" onmouseover="highlightViz(evt,'supply-1933','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1933','0.0');"/>
+    <rect id="year_1934" x="303.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1934');ChangeText(evt, 'year_text','Year: 1934');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 5.9 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 7.3 maf');" onmouseover="highlightViz(evt,'supply-1934','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1934','0.0');"/>
+    <rect id="year_1935" x="310.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1935');ChangeText(evt, 'year_text','Year: 1935');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 7.0 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 13.1 maf');" onmouseover="highlightViz(evt,'supply-1935','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1935','0.0');"/>
+    <rect id="year_1936" x="317.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1936');ChangeText(evt, 'year_text','Year: 1936');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 7.8 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 15.0 maf');" onmouseover="highlightViz(evt,'supply-1936','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1936','0.0');"/>
+    <rect id="year_1937" x="324.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1937');ChangeText(evt, 'year_text','Year: 1937');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 7.8 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 15.3 maf');" onmouseover="highlightViz(evt,'supply-1937','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1937','0.0');"/>
+    <rect id="year_1938" x="331.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1938');ChangeText(evt, 'year_text','Year: 1938');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 8.0 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 18.9 maf');" onmouseover="highlightViz(evt,'supply-1938','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1938','0.0');"/>
+    <rect id="year_1939" x="338.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1939');ChangeText(evt, 'year_text','Year: 1939');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 8.2 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 12.5 maf');" onmouseover="highlightViz(evt,'supply-1939','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1939','0.0');"/>
+    <rect id="year_1940" x="345.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1940');ChangeText(evt, 'year_text','Year: 1940');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 8.2 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 11.1 maf');" onmouseover="highlightViz(evt,'supply-1940','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1940','0.0');"/>
+    <rect id="year_1941" x="352.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1941');ChangeText(evt, 'year_text','Year: 1941');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 7.9 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 22.4 maf');" onmouseover="highlightViz(evt,'supply-1941','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1941','0.0');"/>
+    <rect id="year_1942" x="359.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1942');ChangeText(evt, 'year_text','Year: 1942');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 8.1 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 18.3 maf');" onmouseover="highlightViz(evt,'supply-1942','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1942','0.0');"/>
+    <rect id="year_1943" x="366.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1943');ChangeText(evt, 'year_text','Year: 1943');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 8.0 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 14.5 maf');" onmouseover="highlightViz(evt,'supply-1943','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1943','0.0');"/>
+    <rect id="year_1944" x="372.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1944');ChangeText(evt, 'year_text','Year: 1944');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 8.2 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 16.3 maf');" onmouseover="highlightViz(evt,'supply-1944','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1944','0.0');"/>
+    <rect id="year_1945" x="379.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1945');ChangeText(evt, 'year_text','Year: 1945');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 8.2 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 15.3 maf');" onmouseover="highlightViz(evt,'supply-1945','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1945','0.0');"/>
+    <rect id="year_1946" x="386.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1946');ChangeText(evt, 'year_text','Year: 1946');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 8.5 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 12.1 maf');" onmouseover="highlightViz(evt,'supply-1946','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1946','0.0');"/>
+    <rect id="year_1947" x="393.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1947');ChangeText(evt, 'year_text','Year: 1947');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 8.6 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 17.5 maf');" onmouseover="highlightViz(evt,'supply-1947','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1947','0.0');"/>
+    <rect id="year_1948" x="400.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1948');ChangeText(evt, 'year_text','Year: 1948');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 8.8 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 15.9 maf');" onmouseover="highlightViz(evt,'supply-1948','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1948','0.0');"/>
+    <rect id="year_1949" x="407.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1949');ChangeText(evt, 'year_text','Year: 1949');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 9.0 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 18.1 maf');" onmouseover="highlightViz(evt,'supply-1949','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1949','0.0');"/>
+    <rect id="year_1950" x="414.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1950');ChangeText(evt, 'year_text','Year: 1950');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 9.5 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 14.0 maf');" onmouseover="highlightViz(evt,'supply-1950','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1950','0.0');"/>
+    <rect id="year_1951" x="421.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1951');ChangeText(evt, 'year_text','Year: 1951');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 10.0 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 13.4 maf');" onmouseover="highlightViz(evt,'supply-1951','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1951','0.0');"/>
+    <rect id="year_1952" x="428.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1952');ChangeText(evt, 'year_text','Year: 1952');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 10.5 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 22.4 maf');" onmouseover="highlightViz(evt,'supply-1952','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1952','0.0');"/>
+    <rect id="year_1953" x="435.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1953');ChangeText(evt, 'year_text','Year: 1953');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 10.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 12.3 maf');" onmouseover="highlightViz(evt,'supply-1953','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1953','0.0');"/>
+    <rect id="year_1954" x="442.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1954');ChangeText(evt, 'year_text','Year: 1954');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 10.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 9.6 maf');" onmouseover="highlightViz(evt,'supply-1954','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1954','0.0');"/>
+    <rect id="year_1955" x="448.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1955');ChangeText(evt, 'year_text','Year: 1955');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 10.5 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 11.1 maf');" onmouseover="highlightViz(evt,'supply-1955','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1955','0.0');"/>
+    <rect id="year_1956" x="455.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1956');ChangeText(evt, 'year_text','Year: 1956');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 10.9 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 12.4 maf');" onmouseover="highlightViz(evt,'supply-1956','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1956','0.0');"/>
+    <rect id="year_1957" x="462.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1957');ChangeText(evt, 'year_text','Year: 1957');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 10.4 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 22.7 maf');" onmouseover="highlightViz(evt,'supply-1957','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1957','0.0');"/>
+    <rect id="year_1958" x="469.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1958');ChangeText(evt, 'year_text','Year: 1958');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 11.1 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 17.6 maf');" onmouseover="highlightViz(evt,'supply-1958','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1958','0.0');"/>
+    <rect id="year_1959" x="476.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1959');ChangeText(evt, 'year_text','Year: 1959');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 11.1 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 10.9 maf');" onmouseover="highlightViz(evt,'supply-1959','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1959','0.0');"/>
+    <rect id="year_1960" x="483.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1960');ChangeText(evt, 'year_text','Year: 1960');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 11.6 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 12.8 maf');" onmouseover="highlightViz(evt,'supply-1960','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1960','0.0');"/>
+    <rect id="year_1961" x="490.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1961');ChangeText(evt, 'year_text','Year: 1961');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 11.3 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 11.2 maf');" onmouseover="highlightViz(evt,'supply-1961','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1961','0.0');"/>
+    <rect id="year_1962" x="497.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1962');ChangeText(evt, 'year_text','Year: 1962');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 11.9 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 18.2 maf');" onmouseover="highlightViz(evt,'supply-1962','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1962','0.0');"/>
+    <rect id="year_1963" x="504.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1963');ChangeText(evt, 'year_text','Year: 1963');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 11.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 9.6 maf');" onmouseover="highlightViz(evt,'supply-1963','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1963','0.0');"/>
+    <rect id="year_1964" x="511.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1964');ChangeText(evt, 'year_text','Year: 1964');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 12.2 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 11.2 maf');" onmouseover="highlightViz(evt,'supply-1964','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1964','0.0');"/>
+    <rect id="year_1965" x="518.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1965');ChangeText(evt, 'year_text','Year: 1965');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 11.8 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 21.5 maf');" onmouseover="highlightViz(evt,'supply-1965','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1965','0.0');"/>
+    <rect id="year_1966" x="524.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1966');ChangeText(evt, 'year_text','Year: 1966');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 12.6 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 11.8 maf');" onmouseover="highlightViz(evt,'supply-1966','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1966','0.0');"/>
+    <rect id="year_1967" x="531.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1967');ChangeText(evt, 'year_text','Year: 1967');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 12.0 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 12.8 maf');" onmouseover="highlightViz(evt,'supply-1967','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1967','0.0');"/>
+    <rect id="year_1968" x="538.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1968');ChangeText(evt, 'year_text','Year: 1968');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 12.3 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 14.8 maf');" onmouseover="highlightViz(evt,'supply-1968','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1968','0.0');"/>
+    <rect id="year_1969" x="545.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1969');ChangeText(evt, 'year_text','Year: 1969');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 12.3 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 16.5 maf');" onmouseover="highlightViz(evt,'supply-1969','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1969','0.0');"/>
+    <rect id="year_1970" x="552.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1970');ChangeText(evt, 'year_text','Year: 1970');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 12.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 16.1 maf');" onmouseover="highlightViz(evt,'supply-1970','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1970','0.0');"/>
+    <rect id="year_1971" x="559.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1971');ChangeText(evt, 'year_text','Year: 1971');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 13.3 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 15.9 maf');" onmouseover="highlightViz(evt,'supply-1971','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1971','0.0');"/>
+    <rect id="year_1972" x="566.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1972');ChangeText(evt, 'year_text','Year: 1972');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 13.4 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 14.1 maf');" onmouseover="highlightViz(evt,'supply-1972','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1972','0.0');"/>
+    <rect id="year_1973" x="573.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1973');ChangeText(evt, 'year_text','Year: 1973');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 13.6 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 19.8 maf');" onmouseover="highlightViz(evt,'supply-1973','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1973','0.0');"/>
+    <rect id="year_1974" x="580.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1974');ChangeText(evt, 'year_text','Year: 1974');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 14.1 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 13.7 maf');" onmouseover="highlightViz(evt,'supply-1974','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1974','0.0');"/>
+    <rect id="year_1975" x="587.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1975');ChangeText(evt, 'year_text','Year: 1975');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 13.6 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 17.2 maf');" onmouseover="highlightViz(evt,'supply-1975','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1975','0.0');"/>
+    <rect id="year_1976" x="594.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1976');ChangeText(evt, 'year_text','Year: 1976');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 13.1 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 12.0 maf');" onmouseover="highlightViz(evt,'supply-1976','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1976','0.0');"/>
+    <rect id="year_1977" x="600.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1977');ChangeText(evt, 'year_text','Year: 1977');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 12.9 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 6.3 maf');" onmouseover="highlightViz(evt,'supply-1977','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1977','0.0');"/>
+    <rect id="year_1978" x="607.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1978');ChangeText(evt, 'year_text','Year: 1978');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 13.2 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 16.8 maf');" onmouseover="highlightViz(evt,'supply-1978','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1978','0.0');"/>
+    <rect id="year_1979" x="614.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1979');ChangeText(evt, 'year_text','Year: 1979');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 13.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 19.4 maf');" onmouseover="highlightViz(evt,'supply-1979','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1979','0.0');"/>
+    <rect id="year_1980" x="621.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1980');ChangeText(evt, 'year_text','Year: 1980');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 13.8 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 19.7 maf');" onmouseover="highlightViz(evt,'supply-1980','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1980','0.0');"/>
+    <rect id="year_1981" x="628.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1981');ChangeText(evt, 'year_text','Year: 1981');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 14.1 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 10.1 maf');" onmouseover="highlightViz(evt,'supply-1981','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1981','0.0');"/>
+    <rect id="year_1982" x="635.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1982');ChangeText(evt, 'year_text','Year: 1982');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 13.2 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 18.6 maf');" onmouseover="highlightViz(evt,'supply-1982','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1982','0.0');"/>
+    <rect id="year_1983" x="642.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1983');ChangeText(evt, 'year_text','Year: 1983');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 13.3 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 25.4 maf');" onmouseover="highlightViz(evt,'supply-1983','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1983','0.0');"/>
+    <rect id="year_1984" x="649.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1984');ChangeText(evt, 'year_text','Year: 1984');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 13.6 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 26.0 maf');" onmouseover="highlightViz(evt,'supply-1984','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1984','0.0');"/>
+    <rect id="year_1985" x="656.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1985');ChangeText(evt, 'year_text','Year: 1985');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 14.1 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 22.5 maf');" onmouseover="highlightViz(evt,'supply-1985','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1985','0.0');"/>
+    <rect id="year_1986" x="663.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1986');ChangeText(evt, 'year_text','Year: 1986');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 14.2 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 23.9 maf');" onmouseover="highlightViz(evt,'supply-1986','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1986','0.0');"/>
+    <rect id="year_1987" x="670.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1987');ChangeText(evt, 'year_text','Year: 1987');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 14.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 16.9 maf');" onmouseover="highlightViz(evt,'supply-1987','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1987','0.0');"/>
+    <rect id="year_1988" x="676.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1988');ChangeText(evt, 'year_text','Year: 1988');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 15.5 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 12.6 maf');" onmouseover="highlightViz(evt,'supply-1988','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1988','0.0');"/>
+    <rect id="year_1989" x="683.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1989');ChangeText(evt, 'year_text','Year: 1989');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 15.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 10.7 maf');" onmouseover="highlightViz(evt,'supply-1989','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1989','0.0');"/>
+    <rect id="year_1990" x="690.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1990');ChangeText(evt, 'year_text','Year: 1990');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 15.4 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 10.5 maf');" onmouseover="highlightViz(evt,'supply-1990','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1990','0.0');"/>
+    <rect id="year_1991" x="697.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1991');ChangeText(evt, 'year_text','Year: 1991');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 14.9 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 13.7 maf');" onmouseover="highlightViz(evt,'supply-1991','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1991','0.0');"/>
+    <rect id="year_1992" x="704.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1992');ChangeText(evt, 'year_text','Year: 1992');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 14.6 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 12.8 maf');" onmouseover="highlightViz(evt,'supply-1992','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1992','0.0');"/>
+    <rect id="year_1993" x="711.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1993');ChangeText(evt, 'year_text','Year: 1993');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 15.1 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 22.0 maf');" onmouseover="highlightViz(evt,'supply-1993','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1993','0.0');"/>
+    <rect id="year_1994" x="718.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1994');ChangeText(evt, 'year_text','Year: 1994');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 15.8 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 11.6 maf');" onmouseover="highlightViz(evt,'supply-1994','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1994','0.0');"/>
+    <rect id="year_1995" x="725.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1995');ChangeText(evt, 'year_text','Year: 1995');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 14.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 22.0 maf');" onmouseover="highlightViz(evt,'supply-1995','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1995','0.0');"/>
+    <rect id="year_1996" x="732.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1996');ChangeText(evt, 'year_text','Year: 1996');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 16.1 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 15.2 maf');" onmouseover="highlightViz(evt,'supply-1996','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1996','0.0');"/>
+    <rect id="year_1997" x="739.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1997');ChangeText(evt, 'year_text','Year: 1997');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 16.2 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 22.7 maf');" onmouseover="highlightViz(evt,'supply-1997','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1997','0.0');"/>
+    <rect id="year_1998" x="746.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1998');ChangeText(evt, 'year_text','Year: 1998');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 15.9 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 18.0 maf');" onmouseover="highlightViz(evt,'supply-1998','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1998','0.0');"/>
+    <rect id="year_1999" x="752.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-1999');ChangeText(evt, 'year_text','Year: 1999');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 16.0 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 16.9 maf');" onmouseover="highlightViz(evt,'supply-1999','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-1999','0.0');"/>
+    <rect id="year_2000" x="759.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2000');ChangeText(evt, 'year_text','Year: 2000');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 16.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 11.4 maf');" onmouseover="highlightViz(evt,'supply-2000','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2000','0.0');"/>
+    <rect id="year_2001" x="766.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2001');ChangeText(evt, 'year_text','Year: 2001');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 16.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 11.8 maf');" onmouseover="highlightViz(evt,'supply-2001','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2001','0.0');"/>
+    <rect id="year_2002" x="773.64" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2002');ChangeText(evt, 'year_text','Year: 2002');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 16.2 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 6.8 maf');" onmouseover="highlightViz(evt,'supply-2002','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2002','0.0');"/>
+    <rect id="year_2003" x="780.55" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2003');ChangeText(evt, 'year_text','Year: 2003');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 15.2 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 11.4 maf');" onmouseover="highlightViz(evt,'supply-2003','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2003','0.0');"/>
+    <rect id="year_2004" x="787.45" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2004');ChangeText(evt, 'year_text','Year: 2004');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 14.7 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 11.1 maf');" onmouseover="highlightViz(evt,'supply-2004','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2004','0.0');"/>
+    <rect id="year_2005" x="794.36" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2005');ChangeText(evt, 'year_text','Year: 2005');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 14.5 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 19.6 maf');" onmouseover="highlightViz(evt,'supply-2005','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2005','0.0');"/>
+    <rect id="year_2006" x="801.27" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2006');ChangeText(evt, 'year_text','Year: 2006');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 15.0 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 14.4 maf');" onmouseover="highlightViz(evt,'supply-2006','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2006','0.0');"/>
+    <rect id="year_2007" x="808.18" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2007');ChangeText(evt, 'year_text','Year: 2007');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 15.3 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 12.3 maf');" onmouseover="highlightViz(evt,'supply-2007','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2007','0.0');"/>
+    <rect id="year_2008" x="815.09" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2008');ChangeText(evt, 'year_text','Year: 2008');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 15.5 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 17.2 maf');" onmouseover="highlightViz(evt,'supply-2008','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2008','0.0');"/>
+    <rect id="year_2009" x="822.00" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2009');ChangeText(evt, 'year_text','Year: 2009');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 15.3 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 14.9 maf');" onmouseover="highlightViz(evt,'supply-2009','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2009','0.0');"/>
+    <rect id="year_2010" x="828.91" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2010');ChangeText(evt, 'year_text','Year: 2010');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: 15.1 maf');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 14.0 maf');" onmouseover="highlightViz(evt,'supply-2010','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2010','0.0');"/>
+    <rect id="year_2011" x="835.82" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2011');ChangeText(evt, 'year_text','Year: 2011');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: ');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 21.1 maf');" onmouseover="highlightViz(evt,'supply-2011','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2011','0.0');"/>
+    <rect id="year_2012" x="842.73" y="10" width="6.91" height="530" fill-opacity="0.0" onmousemove="legendViz(evt,'supply-2012');ChangeText(evt, 'year_text','Year: 2012');ChangeText(evt, 'use_text','Annual Basin-wide Consumptive Use: ');ChangeText(evt, 'supply_text','Annual Basin-wide Water Supply: 8.4 maf');" onmouseover="highlightViz(evt,'supply-2012','0.1');" onmouseout="document.getElementById('legend').setAttribute('visibility', 'hidden');highlightViz(evt,'supply-2012','0.0');"/>
+  </g>
+</svg>
+ 

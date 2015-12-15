@@ -1,0 +1,67 @@
+<div class="widget">
+	<div class="sectionContent">
+        <p>{{{ tr.lakeMeadStatic1 }}}</p>
+        
+		<p>{{{ tr.lakeMeadStatic2 }}}</p>
+		
+		<h4>{{{tr.hoverOverHint}}}</h4>
+
+		<div id="meadElevationContainer">
+			<object id="mead-elev-object" data="img/mead_elev_projected-desktop.svg" type="image/svg+xml"></object>
+			<object id="mead-elev-object-mobile" data="img/mead_elev_projected-mobile.svg" type="image/svg+xml"></object>
+			<div class="graphCaption">
+                <p>{{{ tr.lakeMeadStatic10 }}}</p>
+                
+        </div>
+            
+                
+        <p>{{{ tr.lakeMeadStatic11 }}}</p>
+		
+        <div id="lakeMeadHiddenContent" class="hiddenContent">
+        <p>{{{ tr.lakeMeadStatic12 }}}</p>
+       
+       
+       <p>{{{ tr.lakeMeadStatic13 }}}</p>
+                
+        <p>{{{ tr.lakeMeadStatic14 }}}</p>
+		</div>
+		
+		<p id="lakeMeadReadMore" class="readMore">{{{ tr.readMore }}}</p>
+                
+    
+		</div>
+	</div>
+	
+	<div class="socialMedia onWhite">
+		{{> twitter}}
+		{{> github}}
+		<img id="lakeMeadLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="lakeMeadLink" class="takeLinkBlue" >
+			<input id="lakeMeadURL" type="text" value="http://doi.gov/water/owdi.cr.drought/#meadStaticContainer">
+		</div>
+	</div>
+
+
+</div>
+
+<script>
+	
+	var lakeMeadReadMore = $('#lakeMeadReadMore');
+	var lakeMeadHiddenContent = $('#lakeMeadHiddenContent');
+	
+	lakeMeadReadMore.on('click', function(){
+		
+		lakeMeadHiddenContent.slideToggle('slow');
+		
+		if($(this).text() == 'Read More >>'){
+			$(this).text('Hide Text');
+			}else{
+				$(this).text('Read More >>');
+				}
+		});	
+		
+		$('#lakeMeadLinkOut').on('click', function(){
+			$('#lakeMeadLink').toggle();
+			$('#lakeMeadURL').select();
+		});
+</script>

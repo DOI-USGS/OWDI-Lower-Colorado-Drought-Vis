@@ -1,0 +1,62 @@
+<div class="widget">
+	<div class="sectionContent">
+        <p>{{{ tr.coRiverLifeline1 }}}</p>
+        
+        <ul>
+        	<li>{{{ tr.coRiverLifeline2 }}}</li>
+            
+            <li>{{{ tr.coRiverLifeline3 }}}</li>
+            
+            <li>{{{ tr.coRiverLifeline4 }}}</li>
+            <li>{{{ tr.coRiverLifeline5 }}}</li>
+            <li>{{{ tr.coRiverLifeline6 }}}</li>
+            <li>{{{ tr.coRiverLifeline7 }}}</li>
+            
+        </ul>
+        
+
+        <button class="supportinginfo" id="sectionLLButton">{{{ tr.suppInfo }}}</button>
+        
+        <div class="supportingInfoContent" id="sectionLLInfo">
+            <p> {{{ tr.coRiverLifeline8 }}}  </p>
+
+        </div>
+        
+        
+        
+		<div id="photoPanel">
+			<img src="../img/photo-panel/farming.jpg" alt="farming in Colorado"/>
+			<img src="../img/photo-panel/electricity.jpg" alt="electirciy in Colorado"/>
+			<img src="../img/photo-panel/recreation.jpg" alt="recreation in Colorado"/>
+			<img src="../img/photo-panel/wetland.jpg" alt="wetland in Colorado"/>
+			<img src="../img/photo-panel/desert.jpg" alt="desert in Colorado"/>
+			<img src="../img/photo-panel/recreation2.jpg" alt="recreation in Colorado"/>
+		</div>
+    
+		
+	</div>
+	
+	<div class="socialMedia onWhite">
+		{{> twitter}}
+		{{> github}}
+		<img id="coRiverLifeLineLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
+		<div id="coRiverLifeLineLink" class="takeLinkBlue" >
+			<input id="coRiverLifeLineURL" type="text" value="http://doi.gov/water/owdi.cr.drought/#coRiverLifeLine">
+		</div>
+	</div>
+	
+</div>
+
+<script>
+    var button = $('#sectionLLButton');
+    
+    button.click(function() {
+                 $('#sectionLLInfo').toggle();
+                 });
+				 
+	$('#coRiverLifeLineLinkOut').on('click', function(){
+			$('#coRiverLifeLineLink').toggle();
+			$('#coRiverLifeLineURL').select();
+		});
+
+    </script>
