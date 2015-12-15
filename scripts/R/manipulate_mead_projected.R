@@ -267,7 +267,7 @@ read_mead_projected <- function(){
   # determine the y-axis limits
   
   
-  meadData$posDate = as.POSIXct(meadData$Timestep, format='%Y/%m/%d')
+  meadData$posDate = as.POSIXct(meadData$Timestep, format='%m/%Y/%d')
   return(meadData)
   
 }
