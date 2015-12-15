@@ -263,11 +263,8 @@ read_mead_projected <- function(){
   # limit to only Mead, Pool Elevation
   meadData <- dplyr::filter(meadData, Object.Name == 'Mead', Slot.Name == 'Pool Elevation')
   
+  meadData$posDate = as.POSIXct(meadData$Timestep, format='%Y/%m/%d')
   
-  # determine the y-axis limits
-  
-  
-  meadData$posDate = as.POSIXct(meadData$Timestep, format='%m/%Y/%d')
-  return(meadData)
+  return(meadData[sort.int(meadData$posDate, index.return=TRUE)$ix, ])
   
 }
