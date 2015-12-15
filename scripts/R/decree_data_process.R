@@ -44,8 +44,6 @@ five_yr <- dat %>%
 #five_yr_2<-merge(five_yr, loc, by = "WaterUser")
 #write.csv(five_yr_2,"src_data/wat_acc_examp.csv",row.names=FALSE)
 
-
-<<<<<<< HEAD
 #Get the values of last five years by WaterUser
 topFiveYrs <- dataSub %>%
   group_by(WaterUser) %>%
