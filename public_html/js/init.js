@@ -65,20 +65,6 @@ $( document ).ready( function () {
         window.location.href = fragment;
     };
 
-    // The fillDom deferred object will be resolved when the DOM for the application has been loaded
-    (function () {
-        // At this point, the DOM will have been built
-
-        window.owdiDrought.SMController.scrollTo( 0 );
-        var fadeTimeInMs = 1000;
-		
-        $( "#overlay" ).fadeOut( fadeTimeInMs, "swing", function () {
-            $( this ).remove();
-            $( window ).resize();
-			$(document).unbind('scroll'); 
-			$('body').css({'overflow':'visible'});
-        } );
-    } )();
 
     // Track window size and emit events when we pass through width thresholds
     var magicWidth = 686; // Pixel width to use to base mobile/desktop on
@@ -285,4 +271,7 @@ $( document ).ready( function () {
 
     // Update the last modified timestamp in the footer
     $( "#last-mod-timestamp" ).html( document.lastModified );
+	
 } );
+
+
