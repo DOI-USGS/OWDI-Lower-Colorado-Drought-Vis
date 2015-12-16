@@ -59,14 +59,14 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
 	triggerElement: '#WaterSupply',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#controlLink', 'notCurrent')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	
 new ScrollMagic.Scene({
 	triggerElement: '#WaterSupply',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#waterSupplyLink', 'current')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	
@@ -74,14 +74,14 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
 	triggerElement: '#ExtendedDrought',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#waterSupplyLink', 'notCurrent')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	
 new ScrollMagic.Scene({
 	triggerElement: '#ExtendedDrought',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#extendedDroughtLink', 'current')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	
@@ -89,14 +89,14 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
 	triggerElement: '#StorageCapacity',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#extendedDroughtLink', 'notCurrent')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	
 new ScrollMagic.Scene({
 	triggerElement: '#StorageCapacity',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#storageCapacityLink', 'current')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	
@@ -104,14 +104,14 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
 	triggerElement: '#SupplyDemand',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#storageCapacityLink', 'notCurrent')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	
 new ScrollMagic.Scene({
 	triggerElement: '#SupplyDemand',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#supplyDemandLink', 'current')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	
@@ -119,14 +119,14 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
 	triggerElement: '#DecliningStorage',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#supplyDemandLink', 'notCurrent')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	
 new ScrollMagic.Scene({
 	triggerElement: '#DecliningStorage',
 	})
-	.triggerHook(0)
+	.triggerHook(.05)
 	.setClassToggle('#decliningStorageLink', 'current')
 	.addTo(controller); // Add Scene to ScrollMagic Controller
 	

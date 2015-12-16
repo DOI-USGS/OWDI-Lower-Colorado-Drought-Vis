@@ -83,22 +83,16 @@
 	  ga('send', 'pageview');
 	</script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+		$(document).on('mobileinit', function () {
+			$.mobile.hideUrlBar = false;
+		});
+	</script>
 	<script type="text/javascript" src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="../js/init.js"></script>
     </head>
 
     <body>
-        <!-- BEGIN Overlay -->
-        <!-- Overlay span - This span is removed once it's faded out -->
-        <span id="overlay">
-            <div id="overlay-content-wrap">
-                Welcome to the Colorado River Basin drought visualization
-                <div id="overlay-spinner">
-                    <img id="overlay-spinner-image" src="../img/spinner/spinner.gif" alt="[Loading Spinner]" />
-                </div>
-            </div>
-        </span>
-        <!-- END Overlay -->
 
         <!-- Main content -->
         <span id="application">
