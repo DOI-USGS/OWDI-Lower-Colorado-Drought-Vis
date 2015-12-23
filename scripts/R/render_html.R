@@ -1,6 +1,8 @@
 library(whisker)
 source("scripts/R/read_translation.R")
 
+version <- readLines(file("VERSION"), n = 1, warn = FALSE)
+
 src <- "src_data/html"
 template <- NULL
 partials <- list()
@@ -16,7 +18,7 @@ for (file in dir(src)) {
   }
 }
 for (lang in c("en", "es")) {
-  data <- list(tr=translation[[lang]], lang=lang, locale=locale[[lang]])
+  data <- list(tr=translation[[lang]], lang=lang, locale=locale[[lang]], version=version)
   cat(whisker.render(template = template, partials = partials, data = data),
       file=paste0("public_html/", lang, "/index.html"))
 }
