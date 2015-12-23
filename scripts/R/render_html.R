@@ -1,7 +1,9 @@
 library(whisker)
 source("scripts/R/read_translation.R")
 
-version <- readLines(file("VERSION"), n = 1, warn = FALSE)
+ver_file <- file("VERSION")
+version <- readLines(ver_file, n = 1, warn = FALSE)
+close(ver_file)
 
 src <- "src_data/html"
 template <- NULL
