@@ -7,8 +7,8 @@
 		<h4>{{{tr.hoverOverHint}}}</h4>
 
 		<div id="meadElevationContainer">
-			<object id="mead-elev-object" data="img/mead_elev_projected-desktop.svg" type="image/svg+xml"></object>
-			<object id="mead-elev-object-mobile" data="img/mead_elev_projected-mobile.svg" type="image/svg+xml"></object>
+			<object id="mead-elev-object" data="img/mead_elev_projected-desktop.svg?version={{ version }}" type="image/svg+xml"></object>
+			<object id="mead-elev-object-mobile" data="img/mead_elev_projected-mobile.svg?version={{ version }}" type="image/svg+xml"></object>
 			<div class="graphCaption">
                 <p>{{{ tr.lakeMeadStatic10 }}}</p>
                 
@@ -37,7 +37,7 @@
 		{{> github}}
 		<img id="lakeMeadLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
 		<div id="lakeMeadLink" class="takeLinkBlue" >
-			<input id="lakeMeadURL" type="text" value="http://doi.gov/water/owdi.cr.drought/en/index.html#meadStaticContainer">
+			<input id="lakeMeadURL" title="Link to Lake Mead Projections" type="text" value="http://doi.gov/water/owdi.cr.drought/en/index.html#meadStaticContainer">
 		</div>
 	</div>
 

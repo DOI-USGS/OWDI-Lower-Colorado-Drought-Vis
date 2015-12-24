@@ -5,11 +5,11 @@
 
 <!--landsat-->
 <figure class="cd-image-container">
-<img src="../img/before-after/powellafter.jpg" alt="Original Image" />
+<img src="../img/before-after/powellafter.jpg?version={{ version }}" alt="Original Image" />
 <span class="cd-image-label button-after" data-type="original">2014</span>
 <div class="cd-resize-img">
 <!-- the resizable image on top -->
-<img src="../img/before-after/powellbefore.jpg" alt="Modified Image" />
+<img src="../img/before-after/powellbefore.jpg?version={{ version }}" alt="Modified Image" />
 <span class="cd-image-label button-before" data-type="modified">1999</span>
 </div>
 <span class="cd-handle"></span>
@@ -22,11 +22,11 @@
 
 	<!--landsat-->
   <figure class="cd-image-container">
-    <img src="../img/before-after/after05.jpg" alt="Original Image" />
+    <img src="../img/before-after/after05.jpg?version={{ version }}" alt="Original Image" />
     <span class="cd-image-label button-after" data-type="original">2014</span>
     <div class="cd-resize-img">
       <!-- the resizable image on top -->
-      <img src="../img/before-after/before05.jpg" alt="Modified Image" />
+      <img src="../img/before-after/before05.jpg?version={{ version }}" alt="Modified Image" />
       <span class="cd-image-label button-before" data-type="modified">1999</span>
     </div>
     <span class="cd-handle"></span>
@@ -42,11 +42,11 @@
   
 <!--Hoover Dam-->
   <figure id="hooverdam" class="cd-image-container">
-    <img src="../img/before-after/after02.jpg" alt="Original Image" />
+    <img src="../img/before-after/after02.jpg?version={{ version }}" alt="Original Image" />
     <span class="cd-image-label button-after" data-type="original">2015</span>
     <div class="cd-resize-img">
       <!-- the resizable image on top -->
-      <img src="../img/before-after/before02.jpg" alt="Modified Image" />
+      <img src="../img/before-after/before02.jpg?version={{ version }}" alt="Modified Image" />
       <span class="cd-image-label button-before" data-type="modified">2001</span>
     </div>
     <span class="cd-handle"></span>
@@ -55,8 +55,8 @@
   <!-- cd-image-container -->
   
   <div class="extraPics">
-	<img src="../img/before-after/extrapic02.jpg"/>
-	<img src="../img/before-after/extrapic03.jpg"/>
+	<img src="../img/before-after/extrapic02.jpg?version={{ version }}" alt="Lake Mead at Hoover Dam 2001" />
+	<img src="../img/before-after/extrapic03.jpg?version={{ version }}" alt="Lake Mead at Hoover Dam 2015" />
   </div>
   
   <div class="graphCaption">
@@ -73,11 +73,11 @@
 
 <!--Docks-->
   <figure class="cd-image-container">
-    <img src="../img/before-after/after04.jpg" alt="Original Image" />
+    <img src="../img/before-after/after04.jpg?version={{ version }}" alt="Original Image" />
     <span class="cd-image-label button-after" data-type="original">2015</span>
     <div class="cd-resize-img">
       <!-- the resizable image on top -->
-      <img src="../img/before-after/before04.jpg" alt="Modified Image" />
+      <img src="../img/before-after/before04.jpg?version={{ version }}" alt="Modified Image" />
       <span class="cd-image-label button-before" data-type="modified">2003</span>
     </div>
     <span class="cd-handle"></span>
@@ -119,7 +119,7 @@
 		{{> github}}
 		<img id="beforeAfterLinkOut" src="../img/social-media/link-blue-01.svg" alt="link icon"/>
 		<div id="beforeAfterLink" class="takeLinkBlue" >
-			<input id="beforeAfterURL" type="text" value="http://doi.gov/water/owdi.cr.drought/en/index.html#beforeAfterContainer">
+			<input id="beforeAfterURL" title="Link to Before and After" type="text" value="http://doi.gov/water/owdi.cr.drought/en/index.html#beforeAfterContainer">
 		</div>
 	</div>
   
