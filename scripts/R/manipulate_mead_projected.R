@@ -251,20 +251,64 @@ add_lines <- function(g_id, data, form.factor, language){
 }
 
 
-read_mead_projected <- function(){
-  
+read_LEGACY_mead_historical <- function(){
   # -- from Alan Butler's code --
   hData <- read.csv('src_data/MeadHistorical.csv', stringsAsFactors = F)
   # add RunType column to historical data
   hData$RunType <- 99
-  modData <- read.csv('src_data/Mead24MSResults.csv', stringsAsFactors = F)
-  meadData <- rbind(hData, modData)
-  
-  # limit to only Mead, Pool Elevation
-  meadData <- dplyr::filter(meadData, Object.Name == 'Mead', Slot.Name == 'Pool Elevation')
+  meadData <- dplyr::filter(hData, Object.Name == 'Mead', Slot.Name == 'Pool Elevation')
   
   meadData$posDate = as.POSIXct(meadData$Timestep, format='%Y/%m/%d')
-  
   return(meadData[sort.int(meadData$posDate, index.return=TRUE)$ix, ])
+}
+
+read_mead_historical <- function(){
   
+  data = read.csv('src_data/DynamicMeadHistorical.csv', stringsAsFactors = F)
+  data$posDate = as.POSIXct(data$posDate, format='%Y-%m-%d')
+  return(data)
+}
+
+get_mead_filename <- function(){
+  date <- Sys.time()-86400*14 # two weeks earlier
+  paste0(toupper(format(date,'%b%y')), '.csv')
+}
+
+read_mead_projected <- function(){
+  # GET DATE!
+  
+  file.url <- sprintf('http://ibr3lcrsrv01.bor.doi.net:8080/webReports/%s', get_mead_filename())
+  lines <- readLines(file.url)
+  use.lines <- which(grepl(',HOOVER,', lines))
+  tf <- tempfile()
+  writeLines(paste(lines[c(use.lines[1]-1, use.lines)], collapse='\n'), tf)
+  data = read.csv(tf, stringsAsFactors = FALSE)
+  old.hist <- read_mead_historical()
+  
+  # historical:
+  filter(data, Historical.Flag == 'X') %>% 
+    select(Date, EOM.Elevation..Ft.) %>% 
+    rename(Value=EOM.Elevation..Ft.) %>% 
+    mutate(posDate = as.POSIXct(Date, format='%m/%d/%Y')) %>% 
+    select(-Date) %>% 
+    mutate(Slot.Name="Pool Elevation", units="ft", Model="Historical", RunType=99, Object.Name = "Mead") %>% 
+    filter(!posDate %in% old.hist$posDate) %>% 
+    arrange(posDate) %>% 
+    full_join(x=old.hist) %>% 
+    write.csv(file = 'src_data/DynamicMeadHistorical.csv', row.names = FALSE)
+  
+  hData <- read_mead_historical()
+  
+  # modeled:
+  all.data <- filter(data, Historical.Flag != 'X') %>% 
+    select(Date, EOM.Elevation..Ft., Scenario) %>% 
+    rename(Value=EOM.Elevation..Ft., Model=Scenario) %>% 
+    mutate(posDate = as.POSIXct(Date, format='%m/%d/%Y')) %>% 
+    select(-Date) %>% 
+    mutate(Slot.Name="Pool Elevation", units="ft", RunType=0, Object.Name = "Mead") %>% 
+    filter(!posDate %in% old.hist$posDate) %>% 
+    arrange(posDate) %>% 
+    full_join(x=hData)
+    
+  return(all.data)
 }
