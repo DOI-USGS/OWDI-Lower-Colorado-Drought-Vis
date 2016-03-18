@@ -184,10 +184,7 @@
 	<var-data-text-Californnia-surplus>plus surplus water.</var-data-text-Californnia-surplus>
 	
 	<var-data-text-Californnia-normal>plus or minus any ICS created or delivered.</var-data-text-Californnia-normal>
-	
-	<var-data-text-Californnia-shortage-1></var-data-text-Californnia-shortage-1>	
-	<var-data-text-Californnia-shortage-2></var-data-text-Californnia-shortage-2>
-	<var-data-text-Californnia-shortage-3></var-data-text-Californnia-shortage-3>
+
 	
 	<var-data-text-Arizona-flood>plus additional deliveries as requested.</var-data-text-Arizona-flood>
 	
@@ -213,7 +210,6 @@
 	
 	<var-data-text-Nevada-shortage-3>(deliveries reduced by 20,000 acre-feet).</var-data-text-Nevada-shortage-3>
 	
-	<var-data-text-Mexico-flood></var-data-text-Mexico-flood>
 	
 	<var-data-text-Mexico-surplus>plus surplus water.</var-data-text-Mexico-surplus>
 	
