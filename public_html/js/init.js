@@ -268,6 +268,14 @@ $( document ).ready( function () {
 		  enter: animation
 		});
 	 })();
+	 
+	$('#languageChanger').click(function(){
+		if(window.location.href.indexOf('/en/') > -1){
+			window.location.replace('/es/', '/en/');
+		}else if(window.location.href.indexOf('/es/') > -1){
+			window.location.replace('/en/', '/es/');
+		}
+	});
 
     // Update the last modified timestamp in the footer
     $( "#last-mod-timestamp" ).html( document.lastModified );
