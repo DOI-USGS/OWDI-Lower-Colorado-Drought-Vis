@@ -1,0 +1,608 @@
+<?xml version="1.0" ?>
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style type="text/css">text {font-family: Sans-Serif; pointer-events: none ;}.linebox:hover { opacity : .25 }
+#box0:hover ~ .num0 { opacity : 1 ;}
+#box1:hover ~ .num1 { opacity : 1 ;}
+#box2:hover ~ .num2 { opacity : 1 ;}
+#box3:hover ~ .num3 { opacity : 1 ;}
+#box4:hover ~ .num4 { opacity : 1 ;}
+#box5:hover ~ .num5 { opacity : 1 ;}
+#box6:hover ~ .num6 { opacity : 1 ;}
+#box7:hover ~ .num7 { opacity : 1 ;}
+#box8:hover ~ .num8 { opacity : 1 ;}
+#box9:hover ~ .num9 { opacity : 1 ;}
+#box10:hover ~ .num10 { opacity : 1 ;}
+#box11:hover ~ .num11 { opacity : 1 ;}
+#box12:hover ~ .num12 { opacity : 1 ;}
+#box13:hover ~ .num13 { opacity : 1 ;}
+#box14:hover ~ .num14 { opacity : 1 ;}
+#box15:hover ~ .num15 { opacity : 1 ;}
+#box16:hover ~ .num16 { opacity : 1 ;}
+#box17:hover ~ .num17 { opacity : 1 ;}
+#box18:hover ~ .num18 { opacity : 1 ;}
+#box19:hover ~ .num19 { opacity : 1 ;}
+#box20:hover ~ .num20 { opacity : 1 ;}
+#box21:hover ~ .num21 { opacity : 1 ;}
+#box22:hover ~ .num22 { opacity : 1 ;}
+#box23:hover ~ .num23 { opacity : 1 ;}
+#box24:hover ~ .num24 { opacity : 1 ;}
+#box25:hover ~ .num25 { opacity : 1 ;}
+#box26:hover ~ .num26 { opacity : 1 ;}
+#box27:hover ~ .num27 { opacity : 1 ;}
+#box28:hover ~ .num28 { opacity : 1 ;}
+#box29:hover ~ .num29 { opacity : 1 ;}
+#box30:hover ~ .num30 { opacity : 1 ;}
+#box31:hover ~ .num31 { opacity : 1 ;}
+#box32:hover ~ .num32 { opacity : 1 ;}
+#box33:hover ~ .num33 { opacity : 1 ;}
+#box34:hover ~ .num34 { opacity : 1 ;}
+#box35:hover ~ .num35 { opacity : 1 ;}
+#box36:hover ~ .num36 { opacity : 1 ;}
+#box37:hover ~ .num37 { opacity : 1 ;}
+#box38:hover ~ .num38 { opacity : 1 ;}
+#box39:hover ~ .num39 { opacity : 1 ;}
+#box40:hover ~ .num40 { opacity : 1 ;}
+#box41:hover ~ .num41 { opacity : 1 ;}
+#box42:hover ~ .num42 { opacity : 1 ;}
+#box43:hover ~ .num43 { opacity : 1 ;}
+#box44:hover ~ .num44 { opacity : 1 ;}
+#box45:hover ~ .num45 { opacity : 1 ;}
+#box46:hover ~ .num46 { opacity : 1 ;}
+#box47:hover ~ .num47 { opacity : 1 ;}
+#box48:hover ~ .num48 { opacity : 1 ;}
+#box49:hover ~ .num49 { opacity : 1 ;}
+#box50:hover ~ .num50 { opacity : 1 ;}
+#box51:hover ~ .num51 { opacity : 1 ;}
+#box52:hover ~ .num52 { opacity : 1 ;}
+#box53:hover ~ .num53 { opacity : 1 ;}
+#box54:hover ~ .num54 { opacity : 1 ;}
+#box55:hover ~ .num55 { opacity : 1 ;}
+#box56:hover ~ .num56 { opacity : 1 ;}
+#box57:hover ~ .num57 { opacity : 1 ;}
+#box58:hover ~ .num58 { opacity : 1 ;}
+#box59:hover ~ .num59 { opacity : 1 ;}
+#box60:hover ~ .num60 { opacity : 1 ;}
+#box61:hover ~ .num61 { opacity : 1 ;}
+#box62:hover ~ .num62 { opacity : 1 ;}
+#box63:hover ~ .num63 { opacity : 1 ;}
+#box64:hover ~ .num64 { opacity : 1 ;}
+#box65:hover ~ .num65 { opacity : 1 ;}
+#box66:hover ~ .num66 { opacity : 1 ;}
+#box67:hover ~ .num67 { opacity : 1 ;}
+#box68:hover ~ .num68 { opacity : 1 ;}
+#box69:hover ~ .num69 { opacity : 1 ;}
+#box70:hover ~ .num70 { opacity : 1 ;}
+#box71:hover ~ .num71 { opacity : 1 ;}
+#box72:hover ~ .num72 { opacity : 1 ;}
+#box73:hover ~ .num73 { opacity : 1 ;}
+#box74:hover ~ .num74 { opacity : 1 ;}
+#box75:hover ~ .num75 { opacity : 1 ;}
+#box76:hover ~ .num76 { opacity : 1 ;}
+#box77:hover ~ .num77 { opacity : 1 ;}
+#box78:hover ~ .num78 { opacity : 1 ;}
+#box79:hover ~ .num79 { opacity : 1 ;}
+#box80:hover ~ .num80 { opacity : 1 ;}
+#box81:hover ~ .num81 { opacity : 1 ;}
+#box82:hover ~ .num82 { opacity : 1 ;}
+#box83:hover ~ .num83 { opacity : 1 ;}
+#box84:hover ~ .num84 { opacity : 1 ;}
+#box85:hover ~ .num85 { opacity : 1 ;}
+#box86:hover ~ .num86 { opacity : 1 ;}
+#box87:hover ~ .num87 { opacity : 1 ;}
+#box88:hover ~ .num88 { opacity : 1 ;}
+#box89:hover ~ .num89 { opacity : 1 ;}
+#box90:hover ~ .num90 { opacity : 1 ;}
+#box91:hover ~ .num91 { opacity : 1 ;}
+#box92:hover ~ .num92 { opacity : 1 ;}
+#box93:hover ~ .num93 { opacity : 1 ;}
+#box94:hover ~ .num94 { opacity : 1 ;}
+#box95:hover ~ .num95 { opacity : 1 ;}
+#box96:hover ~ .num96 { opacity : 1 ;}
+#box97:hover ~ .num97 { opacity : 1 ;}
+#box98:hover ~ .num98 { opacity : 1 ;}
+#box99:hover ~ .num99 { opacity : 1 ;}
+#box100:hover ~ .num100 { opacity : 1 ;}
+#box101:hover ~ .num101 { opacity : 1 ;}
+#box102:hover ~ .num102 { opacity : 1 ;}
+#box103:hover ~ .num103 { opacity : 1 ;}
+#box104:hover ~ .num104 { opacity : 1 ;}
+#box105:hover ~ .num105 { opacity : 1 ;}
+#box106:hover ~ .num106 { opacity : 1 ;}
+#box107:hover ~ .num107 { opacity : 1 ;}
+#box108:hover ~ .num108 { opacity : 1 ;}
+#box109:hover ~ .num109 { opacity : 1 ;}</style>
+  <body>
+    <script>
+      <!-- -->
+<![CDATA[window.onload = function() {drawLines();};function drawLines() {line1 = document.getElementById("pline1");points1 = line1.getAttribute("points");line1.setAttribute("points", "");pointl1 = points1.split(" ");tpoints1 = [];allpoints1 = "";i21 = 0;for(i11 = 0; i11 < pointl1.length; i11++){allpoints1 += pointl1[i11] + " ";tpoints1[i11] = allpoints1;window.setTimeout(function() {line1.setAttribute("points", tpoints1[i21]); i21++;}, i11*25);} line1.setAttribute("points", tpoints1[i21] + "0,0"); line2 = document.getElementById("pline2");points2 = line2.getAttribute("points");line2.setAttribute("points", "");pointl2 = points2.split(" ");tpoints2 = [];allpoints2 = "";i22 = 0;for(i12 = 0; i12 < pointl2.length; i12++){allpoints2 += pointl2[i12] + " ";tpoints2[i12] = allpoints2;window.setTimeout(function() {line2.setAttribute("points", tpoints2[i22]); i22++;}, i12*25);}}]]>      <!-- -->
+    </script>
+  </body>
+  <g>
+    <g transform="translate(65 10)">
+      <rect fill="#A3FF75" height="250" width="66.6666666667" x="25.0" y="0"/>
+      <text fill="black" font-size="8" x="27.0" y="10">Previo al Pacto</text>
+      <text fill="black" font-size="8" x="27.0" y="20">Periodo</text>
+      <rect fill="#CCCCB2" height="250" width="66.6666666667" x="416.666666667" y="0"/>
+      <text fill="black" font-size="8" x="418.666666667" y="10">Sequía actual</text>
+      <text fill="black" font-size="8" x="418.666666667" y="20">Periodo</text>
+      <g fill="none" stroke="#9999FF" stroke-width="2">
+        <polyline id="pline2" points="25.0,62.7624 29.1666666667,41.07411 33.3333333333,132.88978 37.5,28.01868 41.6666666667,104.03355 45.8333333333,93.49978 50.0,63.76595 54.1666666667,104.6362 58.3333333333,36.45187 62.5,113.76728 66.6666666667,48.57115 70.8333333333,20.57196 75.0,91.34063 79.1666666667,123.48633 83.3333333333,27.12369 87.5,24.73217 91.6666666667,65.52804 95.8333333333,59.75953 100.0,111.22203 104.166666667,105.69297 108.333333333,97.8627 112.5,54.60788 116.666666667,80.45665 120.833333333,31.70416 125.0,103.7896 129.166666667,165.25867 133.333333333,75.77814 137.5,128.16498 141.666666667,188.2181 145.833333333,123.69651 150.0,103.51129 154.166666667,106.93944 158.333333333,68.51681 162.5,138.35938 166.666666667,150.68344 170.833333333,48.83323 175.0,77.74864 179.166666667,112.68599 183.333333333,96.30578 187.5,108.59472 191.666666667,139.04545 195.833333333,85.60515 200.0,98.60707 204.166666667,80.66419 208.333333333,118.59584 212.5,124.94106 216.666666667,41.94578 220.833333333,138.34581 225.0,165.03898 229.166666667,155.86092 233.333333333,135.73126 237.5,34.99037 241.666666667,91.37489 245.833333333,154.01831 250.0,134.7584 254.166666667,149.89741 258.333333333,76.22391 262.5,163.30919 266.666666667,146.2293 270.833333333,54.77305 275.0,147.74649 279.166666667,134.29777 283.333333333,113.71389 287.5,99.94469 291.666666667,100.51502 295.833333333,100.14763 300.0,118.83612 304.166666667,68.42311 308.333333333,120.79142 312.5,84.65279 316.666666667,139.57556 320.833333333,196.39302 325.0,98.62824 329.166666667,75.66032 333.333333333,75.60818 337.5,161.02537 341.666666667,76.91943 345.833333333,14.14486 350.0,6.55956 354.166666667,40.06119 358.333333333,20.54197 362.5,97.25311 366.666666667,138.57147 370.833333333,155.66071 375.0,156.79836 379.166666667,127.03158 383.333333333,140.83482 387.5,61.18166 391.666666667,144.60883 395.833333333,50.29062 400.0,108.04784 404.166666667,33.39118 408.333333333,83.05321 412.5,91.7021 416.666666667,144.91028 420.833333333,142.83884 425.0,189.71225 429.166666667,144.95842 433.333333333,150.9861 437.5,79.20271 441.666666667,114.80474 445.833333333,136.16657 450.0,89.14512 454.166666667,109.02197 458.333333333,122.82588 462.5,48.62071 466.666666667,174.53157 470.833333333,151.49 475.0,105.87 479.166666667,107.32 "/>
+      </g>
+      <g fill="none" stroke="blue" stroke-width="2">
+        <polyline id="pline1" points="62.5,78.08996 66.6666666667,76.670835 70.8333333333,74.62062 75.0,70.465705 79.1666666667,80.01247 83.3333333333,72.321484 87.5,65.444723 91.6666666667,65.620932 95.8333333333,61.133265 100.0,68.610281 104.166666667,67.80285 108.333333333,72.732005 112.5,76.135597 116.666666667,75.047199 120.833333333,65.868982 125.0,73.535573 129.166666667,87.588223 133.333333333,88.613233 137.5,95.453778 141.666666667,103.153385 145.833333333,104.953739 150.0,105.518598 154.166666667,110.751754 158.333333333,109.55777 162.5,120.223292 166.666666667,124.912676 170.833333333,113.270132 175.0,113.467182 179.166666667,111.919283 183.333333333,102.728051 187.5,101.217872 191.666666667,104.771288 195.833333333,102.637859 200.0,105.646885 204.166666667,99.877366 208.333333333,96.668606 212.5,104.279389 216.666666667,100.699103 220.833333333,103.265085 225.0,110.138405 229.166666667,114.865025 233.333333333,114.533606 237.5,109.472128 241.666666667,108.74891 245.833333333,116.084322 250.0,117.700578 254.166666667,120.196213 258.333333333,123.624026 262.5,126.120364 266.666666667,124.239396 270.833333333,114.130609 275.0,115.332132 279.166666667,125.262872 283.333333333,127.496772 287.5,122.08941 291.666666667,118.665072 295.833333333,113.690094 300.0,117.951315 304.166666667,108.462707 308.333333333,105.918919 312.5,108.906893 316.666666667,108.0898 320.833333333,114.299325 325.0,112.79076 329.166666667,110.362323 333.333333333,107.871639 337.5,113.959413 341.666666667,109.767744 345.833333333,104.339919 350.0,92.916733 354.166666667,88.457573 358.333333333,76.554214 362.5,66.640223 366.666666667,70.634546 370.833333333,78.634585 375.0,86.753603 379.166666667,83.354224 383.333333333,89.745763 387.5,94.449443 391.666666667,108.25437 395.833333333,109.277313 400.0,118.0279 404.166666667,111.641707 408.333333333,106.089881 412.5,99.69402 416.666666667,98.505212 420.833333333,100.085938 425.0,104.973681 429.166666667,113.351357 433.333333333,113.989084 437.5,116.880293 441.666666667,117.555983 445.833333333,127.833522 450.0,128.442713 454.166666667,130.1747 458.333333333,127.96626 462.5,118.544447 466.666666667,117.026379 470.833333333,117.679537 475.0,113.167927 479.166666667,115.979656 "/>
+      </g>
+      <rect class="linebox" fill="black" height="250" id="box0" opacity="0" width="4.16666666667" x="25.0" y="0"/>
+      <text class="num0" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años:  10^6 m^3</text>
+      <text class="num0" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1906</text>
+      <text class="num0" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 18.72 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box1" opacity="0" width="4.16666666667" x="29.1666666667" y="0"/>
+      <text class="num1" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años:  10^6 m^3</text>
+      <text class="num1" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1907</text>
+      <text class="num1" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 20.89 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box2" opacity="0" width="4.16666666667" x="33.3333333333" y="0"/>
+      <text class="num2" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años:  10^6 m^3</text>
+      <text class="num2" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1908</text>
+      <text class="num2" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 11.71 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box3" opacity="0" width="4.16666666667" x="37.5" y="0"/>
+      <text class="num3" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años:  10^6 m^3</text>
+      <text class="num3" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1909</text>
+      <text class="num3" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 22.2 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box4" opacity="0" width="4.16666666667" x="41.6666666667" y="0"/>
+      <text class="num4" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años:  10^6 m^3</text>
+      <text class="num4" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1910</text>
+      <text class="num4" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.6 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box5" opacity="0" width="4.16666666667" x="45.8333333333" y="0"/>
+      <text class="num5" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años:  10^6 m^3</text>
+      <text class="num5" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1911</text>
+      <text class="num5" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 15.65 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box6" opacity="0" width="4.16666666667" x="50.0" y="0"/>
+      <text class="num6" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años:  10^6 m^3</text>
+      <text class="num6" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1912</text>
+      <text class="num6" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 18.62 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box7" opacity="0" width="4.16666666667" x="54.1666666667" y="0"/>
+      <text class="num7" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años:  10^6 m^3</text>
+      <text class="num7" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1913</text>
+      <text class="num7" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.54 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box8" opacity="0" width="4.16666666667" x="58.3333333333" y="0"/>
+      <text class="num8" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años:  10^6 m^3</text>
+      <text class="num8" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1914</text>
+      <text class="num8" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 21.35 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box9" opacity="0" width="4.16666666667" x="62.5" y="0"/>
+      <text class="num9" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.19 10^6 m^3</text>
+      <text class="num9" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1915</text>
+      <text class="num9" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 13.62 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box10" opacity="0" width="4.16666666667" x="66.6666666667" y="0"/>
+      <text class="num10" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.33 10^6 m^3</text>
+      <text class="num10" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1916</text>
+      <text class="num10" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 20.14 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box11" opacity="0" width="4.16666666667" x="70.8333333333" y="0"/>
+      <text class="num11" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.54 10^6 m^3</text>
+      <text class="num11" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1917</text>
+      <text class="num11" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 22.94 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box12" opacity="0" width="4.16666666667" x="75.0" y="0"/>
+      <text class="num12" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.95 10^6 m^3</text>
+      <text class="num12" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1918</text>
+      <text class="num12" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 15.87 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box13" opacity="0" width="4.16666666667" x="79.1666666667" y="0"/>
+      <text class="num13" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.0 10^6 m^3</text>
+      <text class="num13" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1919</text>
+      <text class="num13" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 12.65 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box14" opacity="0" width="4.16666666667" x="83.3333333333" y="0"/>
+      <text class="num14" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.77 10^6 m^3</text>
+      <text class="num14" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1920</text>
+      <text class="num14" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 22.29 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box15" opacity="0" width="4.16666666667" x="87.5" y="0"/>
+      <text class="num15" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 18.46 10^6 m^3</text>
+      <text class="num15" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1921</text>
+      <text class="num15" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 22.53 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box16" opacity="0" width="4.16666666667" x="91.6666666667" y="0"/>
+      <text class="num16" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 18.44 10^6 m^3</text>
+      <text class="num16" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1922</text>
+      <text class="num16" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 18.45 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box17" opacity="0" width="4.16666666667" x="95.8333333333" y="0"/>
+      <text class="num17" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 18.89 10^6 m^3</text>
+      <text class="num17" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1923</text>
+      <text class="num17" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 19.02 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box18" opacity="0" width="4.16666666667" x="100.0" y="0"/>
+      <text class="num18" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 18.14 10^6 m^3</text>
+      <text class="num18" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1924</text>
+      <text class="num18" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 13.88 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box19" opacity="0" width="4.16666666667" x="104.166666667" y="0"/>
+      <text class="num19" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 18.22 10^6 m^3</text>
+      <text class="num19" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1925</text>
+      <text class="num19" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.43 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box20" opacity="0" width="4.16666666667" x="108.333333333" y="0"/>
+      <text class="num20" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.73 10^6 m^3</text>
+      <text class="num20" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1926</text>
+      <text class="num20" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 15.21 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box21" opacity="0" width="4.16666666667" x="112.5" y="0"/>
+      <text class="num21" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.39 10^6 m^3</text>
+      <text class="num21" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1927</text>
+      <text class="num21" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 19.54 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box22" opacity="0" width="4.16666666667" x="116.666666667" y="0"/>
+      <text class="num22" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.5 10^6 m^3</text>
+      <text class="num22" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1928</text>
+      <text class="num22" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 16.95 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box23" opacity="0" width="4.16666666667" x="120.833333333" y="0"/>
+      <text class="num23" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 18.41 10^6 m^3</text>
+      <text class="num23" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1929</text>
+      <text class="num23" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 21.83 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box24" opacity="0" width="4.16666666667" x="125.0" y="0"/>
+      <text class="num24" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.65 10^6 m^3</text>
+      <text class="num24" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1930</text>
+      <text class="num24" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.62 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box25" opacity="0" width="4.16666666667" x="129.166666667" y="0"/>
+      <text class="num25" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 16.24 10^6 m^3</text>
+      <text class="num25" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1931</text>
+      <text class="num25" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 8.47 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box26" opacity="0" width="4.16666666667" x="133.333333333" y="0"/>
+      <text class="num26" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 16.14 10^6 m^3</text>
+      <text class="num26" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1932</text>
+      <text class="num26" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 17.42 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box27" opacity="0" width="4.16666666667" x="137.5" y="0"/>
+      <text class="num27" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 15.45 10^6 m^3</text>
+      <text class="num27" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1933</text>
+      <text class="num27" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 12.18 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box28" opacity="0" width="4.16666666667" x="141.666666667" y="0"/>
+      <text class="num28" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.68 10^6 m^3</text>
+      <text class="num28" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1934</text>
+      <text class="num28" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 6.18 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box29" opacity="0" width="4.16666666667" x="145.833333333" y="0"/>
+      <text class="num29" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.5 10^6 m^3</text>
+      <text class="num29" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1935</text>
+      <text class="num29" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 12.63 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box30" opacity="0" width="4.16666666667" x="150.0" y="0"/>
+      <text class="num30" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.45 10^6 m^3</text>
+      <text class="num30" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1936</text>
+      <text class="num30" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.65 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box31" opacity="0" width="4.16666666667" x="154.166666667" y="0"/>
+      <text class="num31" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.92 10^6 m^3</text>
+      <text class="num31" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1937</text>
+      <text class="num31" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.31 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box32" opacity="0" width="4.16666666667" x="158.333333333" y="0"/>
+      <text class="num32" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.04 10^6 m^3</text>
+      <text class="num32" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1938</text>
+      <text class="num32" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 18.15 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box33" opacity="0" width="4.16666666667" x="162.5" y="0"/>
+      <text class="num33" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 12.98 10^6 m^3</text>
+      <text class="num33" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1939</text>
+      <text class="num33" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 11.16 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box34" opacity="0" width="4.16666666667" x="166.666666667" y="0"/>
+      <text class="num34" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 12.51 10^6 m^3</text>
+      <text class="num34" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1940</text>
+      <text class="num34" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 9.93 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box35" opacity="0" width="4.16666666667" x="170.833333333" y="0"/>
+      <text class="num35" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.67 10^6 m^3</text>
+      <text class="num35" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1941</text>
+      <text class="num35" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 20.12 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box36" opacity="0" width="4.16666666667" x="175.0" y="0"/>
+      <text class="num36" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.65 10^6 m^3</text>
+      <text class="num36" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1942</text>
+      <text class="num36" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 17.23 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box37" opacity="0" width="4.16666666667" x="179.166666667" y="0"/>
+      <text class="num37" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.81 10^6 m^3</text>
+      <text class="num37" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1943</text>
+      <text class="num37" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 13.73 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box38" opacity="0" width="4.16666666667" x="183.333333333" y="0"/>
+      <text class="num38" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.73 10^6 m^3</text>
+      <text class="num38" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1944</text>
+      <text class="num38" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 15.37 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box39" opacity="0" width="4.16666666667" x="187.5" y="0"/>
+      <text class="num39" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.88 10^6 m^3</text>
+      <text class="num39" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1945</text>
+      <text class="num39" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.14 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box40" opacity="0" width="4.16666666667" x="191.666666667" y="0"/>
+      <text class="num40" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.52 10^6 m^3</text>
+      <text class="num40" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1946</text>
+      <text class="num40" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 11.1 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box41" opacity="0" width="4.16666666667" x="195.833333333" y="0"/>
+      <text class="num41" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.74 10^6 m^3</text>
+      <text class="num41" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1947</text>
+      <text class="num41" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 16.44 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box42" opacity="0" width="4.16666666667" x="200.0" y="0"/>
+      <text class="num42" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.44 10^6 m^3</text>
+      <text class="num42" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1948</text>
+      <text class="num42" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 15.14 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box43" opacity="0" width="4.16666666667" x="204.166666667" y="0"/>
+      <text class="num43" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 15.01 10^6 m^3</text>
+      <text class="num43" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1949</text>
+      <text class="num43" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 16.93 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box44" opacity="0" width="4.16666666667" x="208.333333333" y="0"/>
+      <text class="num44" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 15.33 10^6 m^3</text>
+      <text class="num44" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1950</text>
+      <text class="num44" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 13.14 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box45" opacity="0" width="4.16666666667" x="212.5" y="0"/>
+      <text class="num45" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.57 10^6 m^3</text>
+      <text class="num45" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1951</text>
+      <text class="num45" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 12.51 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box46" opacity="0" width="4.16666666667" x="216.666666667" y="0"/>
+      <text class="num46" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.93 10^6 m^3</text>
+      <text class="num46" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1952</text>
+      <text class="num46" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 20.81 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box47" opacity="0" width="4.16666666667" x="220.833333333" y="0"/>
+      <text class="num47" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.67 10^6 m^3</text>
+      <text class="num47" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1953</text>
+      <text class="num47" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 11.17 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box48" opacity="0" width="4.16666666667" x="225.0" y="0"/>
+      <text class="num48" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.99 10^6 m^3</text>
+      <text class="num48" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1954</text>
+      <text class="num48" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 8.5 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box49" opacity="0" width="4.16666666667" x="229.166666667" y="0"/>
+      <text class="num49" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.51 10^6 m^3</text>
+      <text class="num49" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1955</text>
+      <text class="num49" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 9.41 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box50" opacity="0" width="4.16666666667" x="233.333333333" y="0"/>
+      <text class="num50" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.55 10^6 m^3</text>
+      <text class="num50" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1956</text>
+      <text class="num50" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 11.43 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box51" opacity="0" width="4.16666666667" x="237.5" y="0"/>
+      <text class="num51" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.05 10^6 m^3</text>
+      <text class="num51" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1957</text>
+      <text class="num51" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 21.5 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box52" opacity="0" width="4.16666666667" x="241.666666667" y="0"/>
+      <text class="num52" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.13 10^6 m^3</text>
+      <text class="num52" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1958</text>
+      <text class="num52" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 15.86 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box53" opacity="0" width="4.16666666667" x="245.833333333" y="0"/>
+      <text class="num53" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.39 10^6 m^3</text>
+      <text class="num53" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1959</text>
+      <text class="num53" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 9.6 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box54" opacity="0" width="4.16666666667" x="250.0" y="0"/>
+      <text class="num54" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.23 10^6 m^3</text>
+      <text class="num54" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1960</text>
+      <text class="num54" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 11.52 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box55" opacity="0" width="4.16666666667" x="254.166666667" y="0"/>
+      <text class="num55" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 12.98 10^6 m^3</text>
+      <text class="num55" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1961</text>
+      <text class="num55" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 10.01 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box56" opacity="0" width="4.16666666667" x="258.333333333" y="0"/>
+      <text class="num56" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 12.64 10^6 m^3</text>
+      <text class="num56" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1962</text>
+      <text class="num56" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 17.38 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box57" opacity="0" width="4.16666666667" x="262.5" y="0"/>
+      <text class="num57" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 12.39 10^6 m^3</text>
+      <text class="num57" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1963</text>
+      <text class="num57" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 8.67 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box58" opacity="0" width="4.16666666667" x="266.666666667" y="0"/>
+      <text class="num58" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 12.58 10^6 m^3</text>
+      <text class="num58" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1964</text>
+      <text class="num58" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 10.38 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box59" opacity="0" width="4.16666666667" x="270.833333333" y="0"/>
+      <text class="num59" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.59 10^6 m^3</text>
+      <text class="num59" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1965</text>
+      <text class="num59" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 19.52 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box60" opacity="0" width="4.16666666667" x="275.0" y="0"/>
+      <text class="num60" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.47 10^6 m^3</text>
+      <text class="num60" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1966</text>
+      <text class="num60" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 10.23 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box61" opacity="0" width="4.16666666667" x="279.166666667" y="0"/>
+      <text class="num61" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 12.47 10^6 m^3</text>
+      <text class="num61" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1967</text>
+      <text class="num61" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 11.57 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box62" opacity="0" width="4.16666666667" x="283.333333333" y="0"/>
+      <text class="num62" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 12.25 10^6 m^3</text>
+      <text class="num62" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1968</text>
+      <text class="num62" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 13.63 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box63" opacity="0" width="4.16666666667" x="287.5" y="0"/>
+      <text class="num63" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 12.79 10^6 m^3</text>
+      <text class="num63" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1969</text>
+      <text class="num63" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 15.01 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box64" opacity="0" width="4.16666666667" x="291.666666667" y="0"/>
+      <text class="num64" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.13 10^6 m^3</text>
+      <text class="num64" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1970</text>
+      <text class="num64" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.95 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box65" opacity="0" width="4.16666666667" x="295.833333333" y="0"/>
+      <text class="num65" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.63 10^6 m^3</text>
+      <text class="num65" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1971</text>
+      <text class="num65" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.99 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box66" opacity="0" width="4.16666666667" x="300.0" y="0"/>
+      <text class="num66" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.2 10^6 m^3</text>
+      <text class="num66" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1972</text>
+      <text class="num66" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 13.12 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box67" opacity="0" width="4.16666666667" x="304.166666667" y="0"/>
+      <text class="num67" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.15 10^6 m^3</text>
+      <text class="num67" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1973</text>
+      <text class="num67" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 18.16 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box68" opacity="0" width="4.16666666667" x="308.333333333" y="0"/>
+      <text class="num68" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.41 10^6 m^3</text>
+      <text class="num68" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1974</text>
+      <text class="num68" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 12.92 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box69" opacity="0" width="4.16666666667" x="312.5" y="0"/>
+      <text class="num69" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.11 10^6 m^3</text>
+      <text class="num69" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1975</text>
+      <text class="num69" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 16.53 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box70" opacity="0" width="4.16666666667" x="316.666666667" y="0"/>
+      <text class="num70" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.19 10^6 m^3</text>
+      <text class="num70" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1976</text>
+      <text class="num70" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 11.04 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box71" opacity="0" width="4.16666666667" x="320.833333333" y="0"/>
+      <text class="num71" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.57 10^6 m^3</text>
+      <text class="num71" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1977</text>
+      <text class="num71" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 5.36 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box72" opacity="0" width="4.16666666667" x="325.0" y="0"/>
+      <text class="num72" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.72 10^6 m^3</text>
+      <text class="num72" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1978</text>
+      <text class="num72" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 15.14 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box73" opacity="0" width="4.16666666667" x="329.166666667" y="0"/>
+      <text class="num73" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.96 10^6 m^3</text>
+      <text class="num73" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1979</text>
+      <text class="num73" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 17.43 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box74" opacity="0" width="4.16666666667" x="333.333333333" y="0"/>
+      <text class="num74" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.21 10^6 m^3</text>
+      <text class="num74" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1980</text>
+      <text class="num74" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 17.44 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box75" opacity="0" width="4.16666666667" x="337.5" y="0"/>
+      <text class="num75" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.6 10^6 m^3</text>
+      <text class="num75" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1981</text>
+      <text class="num75" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 8.9 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box76" opacity="0" width="4.16666666667" x="341.666666667" y="0"/>
+      <text class="num76" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.02 10^6 m^3</text>
+      <text class="num76" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1982</text>
+      <text class="num76" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 17.31 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box77" opacity="0" width="4.16666666667" x="345.833333333" y="0"/>
+      <text class="num77" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.57 10^6 m^3</text>
+      <text class="num77" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1983</text>
+      <text class="num77" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 23.59 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box78" opacity="0" width="4.16666666667" x="350.0" y="0"/>
+      <text class="num78" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 15.71 10^6 m^3</text>
+      <text class="num78" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1984</text>
+      <text class="num78" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 24.34 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box79" opacity="0" width="4.16666666667" x="354.166666667" y="0"/>
+      <text class="num79" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 16.15 10^6 m^3</text>
+      <text class="num79" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1985</text>
+      <text class="num79" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 20.99 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box80" opacity="0" width="4.16666666667" x="358.333333333" y="0"/>
+      <text class="num80" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.34 10^6 m^3</text>
+      <text class="num80" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1986</text>
+      <text class="num80" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 22.95 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box81" opacity="0" width="4.16666666667" x="362.5" y="0"/>
+      <text class="num81" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 18.34 10^6 m^3</text>
+      <text class="num81" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1987</text>
+      <text class="num81" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 15.27 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box82" opacity="0" width="4.16666666667" x="366.666666667" y="0"/>
+      <text class="num82" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.94 10^6 m^3</text>
+      <text class="num82" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1988</text>
+      <text class="num82" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 11.14 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box83" opacity="0" width="4.16666666667" x="370.833333333" y="0"/>
+      <text class="num83" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 17.14 10^6 m^3</text>
+      <text class="num83" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1989</text>
+      <text class="num83" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 9.43 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box84" opacity="0" width="4.16666666667" x="375.0" y="0"/>
+      <text class="num84" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 16.32 10^6 m^3</text>
+      <text class="num84" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1990</text>
+      <text class="num84" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 9.32 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box85" opacity="0" width="4.16666666667" x="379.166666667" y="0"/>
+      <text class="num85" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 16.66 10^6 m^3</text>
+      <text class="num85" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1991</text>
+      <text class="num85" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 12.3 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box86" opacity="0" width="4.16666666667" x="383.333333333" y="0"/>
+      <text class="num86" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 16.03 10^6 m^3</text>
+      <text class="num86" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1992</text>
+      <text class="num86" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 10.92 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box87" opacity="0" width="4.16666666667" x="387.5" y="0"/>
+      <text class="num87" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 15.56 10^6 m^3</text>
+      <text class="num87" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1993</text>
+      <text class="num87" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 18.88 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box88" opacity="0" width="4.16666666667" x="391.666666667" y="0"/>
+      <text class="num88" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.17 10^6 m^3</text>
+      <text class="num88" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1994</text>
+      <text class="num88" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 10.54 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box89" opacity="0" width="4.16666666667" x="395.833333333" y="0"/>
+      <text class="num89" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.07 10^6 m^3</text>
+      <text class="num89" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1995</text>
+      <text class="num89" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 19.97 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box90" opacity="0" width="4.16666666667" x="400.0" y="0"/>
+      <text class="num90" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.2 10^6 m^3</text>
+      <text class="num90" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1996</text>
+      <text class="num90" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.2 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box91" opacity="0" width="4.16666666667" x="404.166666667" y="0"/>
+      <text class="num91" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.84 10^6 m^3</text>
+      <text class="num91" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1997</text>
+      <text class="num91" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 21.66 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box92" opacity="0" width="4.16666666667" x="408.333333333" y="0"/>
+      <text class="num92" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.39 10^6 m^3</text>
+      <text class="num92" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1998</text>
+      <text class="num92" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 16.69 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box93" opacity="0" width="4.16666666667" x="412.5" y="0"/>
+      <text class="num93" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 15.03 10^6 m^3</text>
+      <text class="num93" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 1999</text>
+      <text class="num93" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 15.83 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box94" opacity="0" width="4.16666666667" x="416.666666667" y="0"/>
+      <text class="num94" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 15.15 10^6 m^3</text>
+      <text class="num94" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2000</text>
+      <text class="num94" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 10.51 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box95" opacity="0" width="4.16666666667" x="420.833333333" y="0"/>
+      <text class="num95" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.99 10^6 m^3</text>
+      <text class="num95" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2001</text>
+      <text class="num95" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 10.72 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box96" opacity="0" width="4.16666666667" x="425.0" y="0"/>
+      <text class="num96" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 14.5 10^6 m^3</text>
+      <text class="num96" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2002</text>
+      <text class="num96" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 6.03 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box97" opacity="0" width="4.16666666667" x="429.166666667" y="0"/>
+      <text class="num97" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.66 10^6 m^3</text>
+      <text class="num97" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2003</text>
+      <text class="num97" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 10.5 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box98" opacity="0" width="4.16666666667" x="433.333333333" y="0"/>
+      <text class="num98" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.6 10^6 m^3</text>
+      <text class="num98" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2004</text>
+      <text class="num98" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 9.9 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box99" opacity="0" width="4.16666666667" x="437.5" y="0"/>
+      <text class="num99" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.31 10^6 m^3</text>
+      <text class="num99" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2005</text>
+      <text class="num99" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 17.08 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box100" opacity="0" width="4.16666666667" x="441.666666667" y="0"/>
+      <text class="num100" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.24 10^6 m^3</text>
+      <text class="num100" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2006</text>
+      <text class="num100" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 13.52 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box101" opacity="0" width="4.16666666667" x="445.833333333" y="0"/>
+      <text class="num101" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 12.22 10^6 m^3</text>
+      <text class="num101" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2007</text>
+      <text class="num101" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 11.38 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box102" opacity="0" width="4.16666666667" x="450.0" y="0"/>
+      <text class="num102" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 12.16 10^6 m^3</text>
+      <text class="num102" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2008</text>
+      <text class="num102" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 16.09 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box103" opacity="0" width="4.16666666667" x="454.166666667" y="0"/>
+      <text class="num103" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 11.98 10^6 m^3</text>
+      <text class="num103" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2009</text>
+      <text class="num103" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.1 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box104" opacity="0" width="4.16666666667" x="458.333333333" y="0"/>
+      <text class="num104" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 12.2 10^6 m^3</text>
+      <text class="num104" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2010</text>
+      <text class="num104" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 12.72 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box105" opacity="0" width="4.16666666667" x="462.5" y="0"/>
+      <text class="num105" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.15 10^6 m^3</text>
+      <text class="num105" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2011</text>
+      <text class="num105" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 20.14 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box106" opacity="0" width="4.16666666667" x="466.666666667" y="0"/>
+      <text class="num106" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.3 10^6 m^3</text>
+      <text class="num106" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2012</text>
+      <text class="num106" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 7.55 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box107" opacity="0" width="4.16666666667" x="470.833333333" y="0"/>
+      <text class="num107" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.23 10^6 m^3</text>
+      <text class="num107" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2013</text>
+      <text class="num107" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 9.85 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box108" opacity="0" width="4.16666666667" x="475.0" y="0"/>
+      <text class="num108" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.68 10^6 m^3</text>
+      <text class="num108" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2014</text>
+      <text class="num108" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.41 10^6 m^3</text>
+      <rect class="linebox" fill="black" height="250" id="box109" opacity="0" width="4.16666666667" x="479.166666667" y="0"/>
+      <text class="num109" fill="blue" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="245">Promedios móviles de 10 años: 13.4 10^6 m^3</text>
+      <text class="num109" fill="black" font-size="12" font-weight="bold" opacity="0" x="96.666666" y="215">Año: 2015</text>
+      <text class="num109" fill="#9999FF" font-size="12" font-weight="bold" opacity="0" stroke-width=".5" x="96.666666" y="230">Caudal anual: 14.27 10^6 m^3</text>
+      <line stroke="black" stroke-width="2" x1="0.0" x2="0.0" y1="250" y2="245"/>
+      <text fill="black" x="-20.0" y="270">1900</text>
+      <line stroke="black" stroke-width="2" x1="83.3333333333" x2="83.3333333333" y1="250" y2="245"/>
+      <text fill="black" x="63.3333333333" y="270">1920</text>
+      <line stroke="black" stroke-width="2" x1="166.666666667" x2="166.666666667" y1="250" y2="245"/>
+      <text fill="black" x="146.666666667" y="270">1940</text>
+      <line stroke="black" stroke-width="2" x1="250.0" x2="250.0" y1="250" y2="245"/>
+      <text fill="black" x="230.0" y="270">1960</text>
+      <line stroke="black" stroke-width="2" x1="333.333333333" x2="333.333333333" y1="250" y2="245"/>
+      <text fill="black" x="313.333333333" y="270">1980</text>
+      <line stroke="black" stroke-width="2" x1="416.666666667" x2="416.666666667" y1="250" y2="245"/>
+      <text fill="black" x="396.666666667" y="270">2000</text>
+      <line stroke="black" stroke-width="2" x1="500.0" x2="500.0" y1="250" y2="245"/>
+      <text fill="black" x="480.0" y="270">2020</text>
+      <line stroke="black" stroke-width="2" x1="0" x2="5" y1="0.0" y2="0.0"/>
+      <text fill="black" text-anchor="end" x="-5" y="255.0">0</text>
+      <line stroke="black" stroke-width="2" x1="0" x2="5" y1="50.0" y2="50.0"/>
+      <text fill="black" text-anchor="end" x="-5" y="205.0">5</text>
+      <line stroke="black" stroke-width="2" x1="0" x2="5" y1="100.0" y2="100.0"/>
+      <text fill="black" text-anchor="end" x="-5" y="155.0">10</text>
+      <line stroke="black" stroke-width="2" x1="0" x2="5" y1="150.0" y2="150.0"/>
+      <text fill="black" text-anchor="end" x="-5" y="105.0">15</text>
+      <line stroke="black" stroke-width="2" x1="0" x2="5" y1="200.0" y2="200.0"/>
+      <text fill="black" text-anchor="end" x="-5" y="55.0">20</text>
+      <line stroke="black" stroke-width="2" x1="0" x2="5" y1="250.0" y2="250.0"/>
+      <text fill="black" text-anchor="end" x="-5" y="5.0">25</text>
+      <line stroke="black" stroke-width="2" x1="0" x2="500" y1="250" y2="250"/>
+      <line stroke="black" stroke-width="2" x1="0" x2="0" y1="250" y2="0"/>
+      <line stroke="black" stroke-width="2" x1="0" x2="500" y1="0" y2="0"/>
+      <line stroke="black" stroke-width="2" x1="500" x2="500" y1="0" y2="250"/>
+    </g>
+    <text fill="black" transform="rotate(-90 25,271)" x="25" y="271">Caudal(millones de metros cúbicos)</text>
+    <text fill="black" x="300" y="300">Año</text>
+  </g>
+</svg>

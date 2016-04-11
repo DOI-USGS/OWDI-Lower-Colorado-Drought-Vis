@@ -4,10 +4,19 @@ from xml.etree.ElementTree import Element, SubElement, Comment, parse
 import csv
 import os
 import math
+import codecs
+import sys
 
-def main(language):
+def main(argv):
     global lang
-    lang = language
+    lang = argv[1] if len(argv) > 1 else 'none'
+    if lang == 'en':
+        outsvg = codecs.open(getScriptLoc() + '/../../public_html/en/img/droughtMovingAverage.svg','w+', 'utf-8')
+    elif lang == 'es':
+        outsvg = codecs.open(getScriptLoc() + '/../../public_html/es/img/droughtMovingAverage.svg','w+', 'utf-8')
+    else:
+        print 'You must specify language (en or es)'
+        return
     svg = Element('svg')
     svg.set('xmlns', 'http://www.w3.org/2000/svg')
     svg.set('xmlns:xlink', 'http://www.w3.org/1999/xlink')
@@ -29,10 +38,6 @@ def main(language):
     graph.set('transform', 'translate(65 10)')
     renderGraph(graph, getScriptLoc() + '/../../src_data/flow10yrProcessed.csv')
     renderLabels(main)
-    if lang:
-        outsvg = open(getScriptLoc() + '/../../public_html/en/img/droughtMovingAverage.svg','w+')
-    else:
-        outsvg = open(getScriptLoc() + '/../../public_html/es/img/droughtMovingAverage.svg','w+')
     outsvg.truncate()
     outsvg.write(fixIndentation(svg))
     outsvg.close()
@@ -147,10 +152,12 @@ def renderGraph(ele, floc):
         drawLine(ele, 500, 0, 500, 250, 2, 'black')
 
 def renderLabels(ele):
-    if lang:
+    if lang == 'en':
         unit = getValue('unitsImperialVolume')
-    else:
+    elif lang == 'es':
         unit = getValue('unitsMetricVolume')
+    else:
+        raise Exception('invalid language')
     botl =  getValue('natFlowFigXlab')
     sidel = getValue('natFlowFigYlab') + '(' + unit + ')'
     tex = drawText(ele, 25, 10 + 250 - (250 - (8* len(sidel))) / 2, sidel)
@@ -158,10 +165,12 @@ def renderLabels(ele):
     drawText(ele, (65+250) - (len(botl)*10)/2, 300, botl)
     
 def createLineBox(ele, x1, x2, ymin, yrange, avg, raw, year, rot):
-    if lang:
+    if lang == 'en':
         unit = getValue('unitsImperialVolumeAbbr')
-    else:
+    elif lang == 'es':
         unit = getValue('unitsMetricVolumeAbbr')
+    else:
+        raise Exception('invalid language')
     box = highlightRange(ele, x1, x2, ymin, yrange)
     box.set('class', 'linebox')
     box.set('fill', 'black')
@@ -230,11 +239,13 @@ def highlightRange(ele, x1, x2, ymin, yrange):
     return rect
     
 def getValue(key):
-    if lang:
+    if lang == 'en':
         data = parse(getScriptLoc() + '/../../src_data/full_text.en.xml').getroot()
-    else:
+    elif lang == 'es':
         data = parse(getScriptLoc() + '/../../src_data/full_text.es.xml').getroot()
+    else:
+        raise Exception('invalid language')
     return data.find(key).text
-    
-main(True)
-#main(False)
+   
+if __name__ == '__main__':
+    main(sys.argv)

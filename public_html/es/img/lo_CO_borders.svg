@@ -161,8 +161,8 @@
       <circle r="300" stroke="none" fill="url(#Gradient)" cx="300" cy="200"/>
     </mask>
   </defs>
-  <text x="320" y="230" fill="#B22C2C" text-anchor="start">***lowCoFigLowerBasin***</text>
-  <text x="338" y="130" fill="#B22C2C" text-anchor="start">***lowCoFigUpperBasin***</text>
-  <text x="345" y="70" fill="#1975d1" text-anchor="start">***lowCoFigRiver***</text>
+  <text x="320" y="230" fill="#B22C2C" text-anchor="start">Cuenca Baja</text>
+  <text x="338" y="130" fill="#B22C2C" text-anchor="start">Cuenca Alta</text>
+  <text x="345" y="70" fill="#1975d1" text-anchor="start">Río Colorado</text>
 </svg>
  
