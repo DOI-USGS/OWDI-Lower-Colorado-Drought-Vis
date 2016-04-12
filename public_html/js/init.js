@@ -269,13 +269,12 @@ $( document ).ready( function () {
 		});
 	 })();
 	 
-	$('#languageChanger').click(function(){
-		if(window.location.href.indexOf('/en/') > -1){
-			window.location.replace('/es/', '/en/');
-		}else if(window.location.href.indexOf('/es/') > -1){
-			window.location.replace('/en/', '/es/');
-		}
-	});
+	
+	if(window.location.href.indexOf('/en/') > -1){
+		$('#english').css('display', 'none');
+	}else if(window.location.href.indexOf('/es/') > -1){
+		$('#spanish').css('display', 'none');
+	}
 
     // Update the last modified timestamp in the footer
     $( "#last-mod-timestamp" ).html( document.lastModified );
