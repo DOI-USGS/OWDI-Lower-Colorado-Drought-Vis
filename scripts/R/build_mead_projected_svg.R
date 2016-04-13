@@ -2,7 +2,7 @@
 
 if(!require(dinosvg) || packageVersion('dinosvg') != '0.1.9'){
   devtools::install_github('jread-usgs/dinosvg@v0.1.9')
-  instalibrary(dinosvg)
+  library(dinosvg)
 }
 
 
