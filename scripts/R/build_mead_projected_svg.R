@@ -8,6 +8,7 @@ if(!require(dinosvg) || packageVersion('dinosvg') != '0.1.9'){
 
 library(XML)
 library(dplyr)
+library(xml2)
 source('scripts/R/build_ecmascript.R')
 source('scripts/R/manipulate_lowCO_borders_svg.R')
 source('scripts/R/manipulate_mead_projected.R')
