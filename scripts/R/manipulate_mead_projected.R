@@ -192,9 +192,7 @@ add_lines <- function(g_id, data, form.factor, language){
   is.model <- data$Model != "Historical"
   is.most <- data$RunType == 0 # most probable run
   is.hist <- data$RunType == 99
-  is.minP <- data$RunType == 1 # minimum probable run
-  is.maxP <- data$RunType == 2 # maximum probable run
-  
+
   prob_run_title <- data$Model[is.most][1] # - assuming these are all the same
   
   dinosvg:::linepath(g_id, c(x[is.most][1],x[is.most][1]),c(fig$px_lim$y[2],fig$px_lim$y[2]+fig$px_lim$y[1]-fig$px_lim$y[2]),fill = 'none', 
@@ -218,8 +216,8 @@ add_lines <- function(g_id, data, form.factor, language){
                                     supply_col,line_width))
   
   dinosvg:::linepath(g_id, x[is.most],y[is.most],fill = 'none', id='dashed-projection',class='hidden',
-                     style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-dasharray:9;stroke-linecap:round",
-                                    '#FFFFFF',line_width))
+                     style =sprintf("stroke:%s;stroke-width:%s;stroke-linejoin:round;stroke-dasharray:9,5;stroke-linecap:round",
+                                    '#FFFFFF',as.numeric(line_width)-1.5))
   
   
   
@@ -274,6 +272,11 @@ get_mead_filename <- function(){
   paste0(toupper(format(date,'%b%y')), '.csv')
 }
 
+get_probable_name <- function(){
+  date <- Sys.time()-86400*14 # two weeks earlier
+  format(date,'%B')
+}
+
 read_mead_projected <- function(){
   # GET DATE!
   
@@ -299,6 +302,7 @@ read_mead_projected <- function(){
   
   hData <- read_mead_historical()
   
+  prob.name <- get_probable_name()
   # modeled:
   all.data <- filter(data, Historical.Flag != 'X') %>% 
     select(Date, EOM.Elevation..Ft., Scenario) %>% 
@@ -308,7 +312,9 @@ read_mead_projected <- function(){
     mutate(Slot.Name="Pool Elevation", units="ft", RunType=0, Object.Name = "Mead") %>% 
     filter(!posDate %in% old.hist$posDate) %>% 
     arrange(posDate) %>% 
-    full_join(x=hData)
+    full_join(x=hData) %>% 
+    mutate(Model = ifelse(Model == "Most Probable", paste0(prob.name, " ", Model), Model))
+
     
   return(all.data)
 }
