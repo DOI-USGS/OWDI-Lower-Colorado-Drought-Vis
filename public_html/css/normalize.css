@@ -34,7 +34,7 @@ body{
 	color:#000;
 	}
 	
-#languageChanger{
+.languageChanger{
 	background:#003366;
 	color:#fff;
 	position:absolute;
@@ -42,7 +42,7 @@ body{
 	right:10px;
 	top:10px;
 	height:30px;
-	width:130px;
+	width:100px;
 	border:none;
 	border-radius:5px;
 	padding:8px 10px 0 10px;
@@ -53,14 +53,14 @@ body{
 	cursor:pointer;
 	}
 	
-#languageChanger:hover{
+.languageChanger:hover{
 	background:#fff;
 	color:#003366;
 	}
 	
 @media screen and (min-width:768px){
 	
-	#languageChanger{
+	.languageChanger{
 		top:20px;
 		}
 	
