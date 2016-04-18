@@ -147,8 +147,15 @@
 </div>
   </div>
       <div class="l-region l-region--navigation">
-	  <!--<a href="../en/index.html"><div id="english" class="languageChanger"><p>English</p></div></a>
-	  <a href="../es/index.html"><div id="spanish" class="languageChanger"><p>Espa&#241;ol</p></div></a>-->
+	  
+		{{#isEs}}
+	  		<a href="../en/index.html" rel="external"><div id="english" class="languageChanger"><p>English</p></div></a>
+		{{/isEs}}
+	  
+		{{#isEn}}
+	  		<a href="../es/index.html" rel="external"><div id="spanish" class="languageChanger"><p>Espa&#241;ol</p></div></a>
+		{{/isEn}}
+	  
     <div id="block-panels-mini-doi-navigation" class="block block--panels-mini block--panels-mini-doi-navigation">
         <div class="block__content">
     <div class="one-column panels-container" id="mini-panel-doi_navigation">
