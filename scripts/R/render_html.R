@@ -20,7 +20,10 @@ for (file in dir(src)) {
   }
 }
 for (lang in c("en", "es")) {
-  data <- list(tr=translation[[lang]], lang=lang, locale=locale[[lang]], version=version)
+  isEn <- lang == "en"
+  isEs <- lang == "es"
+  data <- list(tr=translation[[lang]], lang=lang, locale=locale[[lang]], isEn=isEn, isEs=isEs,
+               version=version)
   cat(whisker.render(template = template, partials = partials, data = data),
       file=paste0("public_html/", lang, "/index.html"))
 }
