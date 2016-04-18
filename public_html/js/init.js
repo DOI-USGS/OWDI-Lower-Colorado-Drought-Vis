@@ -269,13 +269,15 @@ $( document ).ready( function () {
 		});
 	 })();
 	 
+	Handlebars.registerHelper('isEn',function(opts){
+		return opts.fn(this);
+	});
 	
-	if(window.location.href.indexOf('/en/') > -1){
-		$('#english').css('display', 'none');
-	}else if(window.location.href.indexOf('/es/') > -1){
-		$('#spanish').css('display', 'none');
-	}
-
+	Handlebars.registerHelper('isEs',function(opts){
+		return opts.fn(this);
+	});
+	
+	
     // Update the last modified timestamp in the footer
     $( "#last-mod-timestamp" ).html( document.lastModified );
 	
