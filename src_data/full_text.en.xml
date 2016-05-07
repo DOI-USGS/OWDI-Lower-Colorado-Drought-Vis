@@ -161,6 +161,8 @@
 	
 	<allocation-state-flood>flood</allocation-state-flood>
 	
+	<var-condition-flood>Flood Control Surplus</var-condition-flood>
+	
 	<var-condition-surplus>Quantified and Domestic Surplus</var-condition-surplus>
 	
 	<var-condition-normal>Normal Condition</var-condition-normal>
