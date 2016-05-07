@@ -140,6 +140,101 @@
 	<lakeMeadAnimated17>Consistent with the 2007 Interim Guidelines, a Level 3 Shortage Condition exists when Lake Mead's January 1 elevation is projected to be below an elevation of 1,025 feet. Annual delivery reductions for Nevada and Arizona are 20,000 acre-feet and 480,000 acre-feet, respectively. In addition, if Lake Mead is below an elevation of 1,025 feet, the Secretary of the Departement of Interior is required to consult with the seven Colorado River Basin States to consider further measures that may be taken under applicable Federal law. Yellow boxes indicate delivery reductions to states. Hover over the blue squares and states to see detailed delivery information.</lakeMeadAnimated17>
 	<lakeMeadAnimated18>Under the terms of Minute 319, when Lake Mead's January 1 elevation is projected to be below an elevation of 1,025 feet, Mexico's annual delivery may be reduced by 125,000 acre-feet. This reduction may be offset by delivery of water deferred under Minute 319 for a total annual delivery of 1.5 million acre-feet.</lakeMeadAnimated18>
 	<lakeMeadAnimated19>To learn more about Lower Colorado River water entitlement holders and consumptive use data from the Bureau of Reclamation, click button below.</lakeMeadAnimated19>
+	
+	<mead-pictogram-legend>Legend</mead-pictogram-legend>
+	
+	<mead-pictogram-legend-units>acre-feet</mead-pictogram-legend-units>
+		
+	<mead-scene-units>acre-feet/year</mead-scene-units>
+			
+	<Mexico-pictos-disclaimer>location of blue boxes does not represent location of water use.</Mexico-pictos-disclaimer>
+				
+	<x-pictogram-label>Lower Colorado River Water Entitlement Holders</x-pictogram-label>
+	
+	<x-pictogram-sub-label>(with an Average Annual Consumptive Use above 15,000 acre-feet)</x-pictogram-sub-label> 
+	
+	<y-pictogram-label>Average Consumptive Use 2010 to 2014</y-pictogram-label>
+	
+	<mead-label>Lake Mead</mead-label>
+	
+	<mead-storage-label>Live Storage:</mead-storage-label>
+	
+	<allocation-state-flood>flood</allocation-state-flood>
+	
+	<var-condition-surplus>Quantified and Domestic Surplus</var-condition-surplus>
+	
+	<var-condition-normal>Normal Condition</var-condition-normal>
+	
+	<var-condition-shortage-1>Shortage Condition Level 1</var-condition-shortage-1>
+	
+	<var-condition-shortage-2>Shortage Condition Level 2</var-condition-shortage-2>
+	
+	<var-condition-shortage-3>Shortage Condition Level 3</var-condition-shortage-3>
+	
+	<var-state-California>California</var-state-California>
+	
+	<var-state-Arizona>Arizona</var-state-Arizona>
+	
+	<var-state-Nevada>Nevada</var-state-Nevada>
+	
+	<var-state-Mexico>Mexico</var-state-Mexico>
+	
+	<var-data-text-Californnia-flood>plus additional deliveries as requested.</var-data-text-Californnia-flood>
+	
+	<var-data-text-Californnia-surplus>plus surplus water.</var-data-text-Californnia-surplus>
+	
+	<var-data-text-Californnia-normal>plus or minus any ICS created or delivered.</var-data-text-Californnia-normal>
+
+	
+	<var-data-text-Arizona-flood>plus additional deliveries as requested.</var-data-text-Arizona-flood>
+	
+	<var-data-text-Arizona-surplus>plus surplus water.</var-data-text-Arizona-surplus>
+	
+	<var-data-text-Arizona-normal>plus or minus any ICS created or delivered.</var-data-text-Arizona-normal>
+	
+	<var-data-text-Arizona-shortage-1>(deliveries reduced by 320,000 acre-feet).</var-data-text-Arizona-shortage-1>
+	
+	<var-data-text-Arizona-shortage-2>(deliveries reduced by 400,000 acre-feet).</var-data-text-Arizona-shortage-2>
+	
+	<var-data-text-Arizona-shortage-3>(deliveries reduced by 480,000 acre-feet).</var-data-text-Arizona-shortage-3>
+	
+	<var-data-text-Nevada-flood>plus additional deliveries as requested.</var-data-text-Nevada-flood>
+	
+	<var-data-text-Nevada-surplus>plus surplus water.</var-data-text-Nevada-surplus>
+	
+	<var-data-text-Nevada-normal>plus or minus any ICS created or delivered.</var-data-text-Nevada-normal>
+	
+	<var-data-text-Nevada-shortage-1>(deliveries reduced by 13,000 acre-feet).</var-data-text-Nevada-shortage-1>
+	
+	<var-data-text-Nevada-shortage-2>(deliveries reduced by 17,000 acre-feet).</var-data-text-Nevada-shortage-2>
+	
+	<var-data-text-Nevada-shortage-3>(deliveries reduced by 20,000 acre-feet).</var-data-text-Nevada-shortage-3>
+	
+	
+	<var-data-text-Mexico-surplus>plus surplus water.</var-data-text-Mexico-surplus>
+	
+	<var-data-text-Mexico-normala>plus or minus</var-data-text-Mexico-normala>
+	
+	<var-data-text-Mexico-normalb>any water deferred or delivered under Minute 319.</var-data-text-Mexico-normalb>
+	
+	<var-data-text-Mexico-shortage-1a>(deliveries reduced by</var-data-text-Mexico-shortage-1a>
+	
+	<var-data-text-Mexico-shortage-1b>reductions may be offset under Minute 319).</var-data-text-Mexico-shortage-1b>
+	
+	<var-data-text-Mexico-shortage-2a>(deliveries reduced by</var-data-text-Mexico-shortage-2a>
+	
+	<var-data-text-Mexico-shortage-2b>reductions may be offset under Minute 319).</var-data-text-Mexico-shortage-2b>
+			
+	<var-data-text-Mexico-shortage-3a>(deliveries reduced by</var-data-text-Mexico-shortage-3a>
+	
+	<var-data-text-Mexico-shortage-3b>reductions may be offset under Minute 319).</var-data-text-Mexico-shortage-3b>
+	
+	<elevation>Elevation:</elevation>
+	<maf>maf</maf>
+	<text-to-indicate-range-of-storage>to</text-to-indicate-range-of-storage>
+	
+	
+	
 	<endEra>An era of hope - communication, cooperation, and collaboration.</endEra>
 	<credits1>In the Colorado River Basin, stakeholders, States, and Federal and local agencies are collaborating to develop creative strategies to reduce the impacts of drought and increase reservoir storage at Lake Powell and Lake Mead. Activities related to drought response include a system conservation program and drought contingency planning efforts in both the Upper and Lower Basins. Additional ongoing activities are being conducted with stakeholders through the Basin Study Moving Forward process and with Native American Tribes through the Ten Tribes Partnership Tribal Water Study. Lastly, the implementation of Minute 319 and related binational discussions also underscore the importance of the partnership and continued collaboration between the United States and Mexico. </credits1>
 	<credits2h>Pilot System Conservation Program</credits2h>
