@@ -22,42 +22,42 @@ var elevations = {"flood":"> 1,200",
   "shortage-2":"6.0 to 7.7",
   "shortage-3":"< 6.0"}
   var conditions = 
-  {"flood":"Flood Control Surplus",
-  "surplus":"Quantified & Domestic Surplus",
-  "normal":"Normal Condition",
-  "shortage-1":"Shortage Condition Level 1",
-  "shortage-2":"Shortage Condition Level 2",
-  "shortage-3":"Shortage Condition Level 3"}
-  function displayAllocationName(evt, name) {
+{"flood":"Flood Control Surplus",
+"surplus":"Quantified and Domestic Surplus",
+"normal":"Normal Condition",
+"shortage-1":"Shortage Condition Level 1",
+"shortage-2":"Shortage Condition Level 2",
+"shortage-3":"Shortage Condition Level 3"}
+function displayAllocationName(evt, name) {
   var data = {"California":{
-  "flood":["4,400,000 acre-feet/year,","plus additional deliveries as requested."],
-  "surplus":["4,400,000 acre-feet/year,","plus surplus water."],
-  "normal":["4,400,000 acre-feet/year,","plus or minus any ICS created or delivered."],
-  "shortage-1":["","4,400,000 acre-feet/year"],
+"flood":["4,400,000 acre-feet/year,","plus additional deliveries as requested."],
+"surplus":["4,400,000 acre-feet/year,","plus surplus water."],
+"normal":["4,400,000 acre-feet/year,","plus or minus any ICS created or delivered."],
+"shortage-1":["","4,400,000 acre-feet/year"],
   "shortage-2":["","4,400,000 acre-feet/year"],
   "shortage-3":["","4,400,000 acre-feet/year"]},
   "Arizona":{
-  "flood":["2,800,000 acre-feet/year,","plus additional deliveries as requested."],
-  "surplus":["2,800,000 acre-feet/year,","plus surplus water."],
-  "normal":["2,800,000 acre-feet/year,","plus or minus any ICS created or delivered."],
-  "shortage-1":["2,480,000 acre-feet/year,","(deliveries reduced by 320,000 acre-feet)."],
-  "shortage-2":["2,400,000 acre-feet/year,","(deliveries reduced by 400,000 acre-feet)."],
-  "shortage-3":["2,320,000 acre-feet/year,","(deliveries reduced by 480,000 acre-feet)."]},
-  "Nevada":{
-  "flood":["300,000 acre-feet/year,","plus additional deliveries as requested."],
-  "surplus":["300,000 acre-feet/year,","plus surplus water."],
-  "normal":["300,000 acre-feet/year,","plus or minus any ICS created or delivered."],
-  "shortage-1":["287,000 acre-feet/year,","(deliveries reduced by 13,000 acre-feet)."],
-  "shortage-2":["283,000 acre-feet/year,","(deliveries reduced by 17,000 acre-feet)."],
-  "shortage-3":["280,000 acre-feet/year,","(deliveries reduced by 20,000 acre-feet)."]},
-  "Mexico":{
+"flood":["2,800,000 acre-feet/year,","plus additional deliveries as requested."],
+"surplus":["2,800,000 acre-feet/year,","plus surplus water."],
+"normal":["2,800,000 acre-feet/year,","plus or minus any ICS created or delivered."],
+"shortage-1":["2,480,000 acre-feet/year,","(deliveries reduced by 320,000 acre-feet)."],
+"shortage-2":["2,400,000 acre-feet/year,","(deliveries reduced by 400,000 acre-feet)."],
+"shortage-3":["2,320,000 acre-feet/year,","(deliveries reduced by 480,000 acre-feet)."]},
+"Nevada":{
+"flood":["300,000 acre-feet/year,","plus additional deliveries as requested."],
+"surplus":["300,000 acre-feet/year,","plus surplus water."],
+"normal":["300,000 acre-feet/year,","plus or minus any ICS created or delivered."],
+"shortage-1":["287,000 acre-feet/year,","(deliveries reduced by 13,000 acre-feet)."],
+"shortage-2":["283,000 acre-feet/year,","(deliveries reduced by 17,000 acre-feet)."],
+"shortage-3":["280,000 acre-feet/year,","(deliveries reduced by 20,000 acre-feet)."]},
+"Mexico":{
   "flood":["","1,700,000 acre-feet/year."],
-  "surplus":["1,500,000 acre-feet/year,","plus surplus water."],
-  "normal":["1,500,000 acre-feet/year, plus or minus","any water deferred or delivered under Minute 319."],
-  "shortage-1":["1,500,000 acre-feet/year, (deliveries reduced by","50,000 acre-feet; reductions may be offset under Minute 319)."],
-  "shortage-2":["1,500,000 acre-feet/year, (deliveries reduced by","70,000 acre-feet; reductions may be offset under Minute 319)."],
-  "shortage-3":["1,500,000 acre-feet/year, (deliveries reduced by","125,000 acre-feet; reductions may be offset under Minute 319)."]}};
-  var state = document.getElementById("allocation-state").firstChild.data
+"surplus":["1,500,000 acre-feet/year,","plus surplus water."],
+"normal":["1,500,000 acre-feet/year, plus or minus","any water deferred or delivered under Minute 319."],
+"shortage-1":["1,500,000 acre-feet/year, (deliveries reduced by","reductions may be offset under Minute 319)."],
+"shortage-2":["1,500,000 acre-feet/year, (deliveries reduced by","reductions may be offset under Minute 319)."],
+"shortage-3":["1,500,000 acre-feet/year, (deliveries reduced by","reductions may be offset under Minute 319)."]}};
+var state = document.getElementById("allocation-state").firstChild.data
   document.getElementById("allocation-value-1").firstChild.data = name + ": " + data[name][state][0];
   document.getElementById("allocation-value-2").firstChild.data = data[name][state][1];
   document.getElementById("allocation-context").firstChild.data = " ";

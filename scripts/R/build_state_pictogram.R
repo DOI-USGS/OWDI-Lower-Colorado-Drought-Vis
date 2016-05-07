@@ -1,5 +1,5 @@
 
-build_state_pictos <- function(svg, scale=100000){
+build_state_pictos <- function(svg, scale=100000, language){
   
   picto_lw <<- '1.5'
   root_nd <- xmlRoot(svg)
@@ -31,7 +31,7 @@ build_state_pictos <- function(svg, scale=100000){
   
   add_nevada(root_nd,scale)
   add_arizona(root_nd,scale)
-  add_mexico(root_nd,scale)
+  add_mexico(root_nd,scale, language=language)
 
   invisible(svg)
 }
@@ -158,13 +158,13 @@ add_arizona <- function(root_nd,scale){
                      onmouseout="hideAllocationName(evt);lowlightState(evt,'Arizona')"))
 }
 
-add_mexico <- function(root_nd,scale){
+add_mexico <- function(root_nd,scale,language){
   # mexico- 15
   MX_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='Mexico-pictos','stroke'='#1975d1','stroke-width'=picto_lw,'fill'='#1975d1',class='hidden'))
   txt_id <- newXMLNode('text', parent = MX_id, 
              attrs = c(y='535', fill='#FFFFFF',stroke='none',style='text-anchor:start;',class='small-text'))
-  newXMLNode('tspan', parent=txt_id, newXMLTextNode('location of blue boxes does not represent location of water use.'), attrs = c('font-style' = "italic"))
+  newXMLNode('tspan', parent=txt_id, newXMLTextNode(lt('Mexico-pictos-disclaimer',language)), attrs = c('font-style' = "italic"))
   
   x_start = 70
   y_start = 254

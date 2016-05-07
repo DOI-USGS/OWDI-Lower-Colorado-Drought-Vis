@@ -55,7 +55,7 @@ for (form.factor in c('desktop','mobile')){
       edit_attr_svg(c('viewBox'=view.box[[form.factor]], 'onload'='init(evt)')) %>% 
       add_rect(x=x.edge[[form.factor]], width="100%", height="100%", style="max-width=950px", fill="url(#background-image)", at=0, rx='6',ry='6', id='background-panel') %>%
       add_scene_buttons(form.factor) %>% 
-      add_picto_legend() %>% 
+      add_picto_legend(language=lang) %>% 
       attr_svg_paths(attrs = list('mexico-border'=border_line)) %>% 
       remove_svg_elements(elements = c('delete_group'='g')) %>% 
       add_ecmascript(ecmascript_mead_map(language=lang)) %>%
@@ -64,9 +64,9 @@ for (form.factor in c('desktop','mobile')){
       add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'draw-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="351;0;") %>%
       add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'reset-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values="0;351;") %>%
       usage_bar_pictogram(values = non_zero_cont, value_mouse = contract_titles, value_contract = contract_values, 
-                          scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
-      add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
-      build_state_pictos() %>%
+                          scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles, language=lang) %>%
+      add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']], language=lang) %>%
+      build_state_pictos(language=lang) %>%
       add_sankey_lines()
     
     if (form.factor == 'mobile'){

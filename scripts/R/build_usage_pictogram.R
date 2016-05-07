@@ -1,8 +1,8 @@
-  #' @param svg an open svg doc (see xml_doc <- xmlParse(svg_file, useInternalNode=TRUE))
+#' @param svg an open svg doc (see xml_doc <- xmlParse(svg_file, useInternalNode=TRUE))
 #' @param values numeric vector of values to picto-scale
 #' @param scale scale of values to single picto-icon
 #' @import XML
-usage_bar_pictogram <- function(svg, values, value_mouse, value_contract, scale=100000, group_name, group_styles){
+usage_bar_pictogram <- function(svg, values, value_mouse, value_contract, scale=100000, group_name, group_styles, language){
   
   picto_lw <- '1.5'
   
@@ -28,12 +28,13 @@ usage_bar_pictogram <- function(svg, values, value_mouse, value_contract, scale=
   newXMLNode("text", parent = ax_g, newXMLTextNode('  '),
              attrs = c(class="label", id="picto-value",x="55",y="-290", 'fill'='#FFFFFF', dy='-1.0em','stroke'='none', style="text-anchor: left;"))
     
-  newXMLNode("text", parent = ax_g, newXMLTextNode('Lower Colorado River Water Entitlement Holders'),
+  newXMLNode("text", parent = ax_g, newXMLTextNode(lt('x-pictogram-label', language)),
              attrs = c(id="x-pictogram-label",x=x_axis_length/2,y=y_offset+12, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;"))
-  newXMLNode("text", parent = ax_g, newXMLTextNode('(with an Average Annual Consumptive Use above 15,000 acre-feet)'),
+  sub.label.x <- c('es'=lt('x-pictogram-sub-label-metric',language), 'en'=lt('x-pictogram-sub-label-imperial',language))
+  newXMLNode("text", parent = ax_g, newXMLTextNode(sub.label.x[[language]]),
              attrs = c(id="x-pictogram-sub-label",x=x_axis_length/2,y=y_offset+12, 'fill'='#FFFFFF', dy="1.5em",'stroke'='none', style="text-anchor: middle;"))
   
-  newXMLNode("text", parent = ax_g, newXMLTextNode('Average Consumptive Use 2010 to 2014'),
+  newXMLNode("text", parent = ax_g, newXMLTextNode(lt('y-pictogram-label',language)),
              attrs = c(id="y-pictogram-label",x=-15,y=y_offset/2, 'fill'='#FFFFFF', dy=".3em",'stroke'='none', style="text-anchor: middle;",
                        'transform'="rotate(-90,-15,-97.5),translate(280,0)"))
 
@@ -69,7 +70,9 @@ usage_bar_pictogram <- function(svg, values, value_mouse, value_contract, scale=
                attrs=c(x=x,y=-(bin_full+bin_buffer)*j, width=bin_full, height=bin_full, 
                        rx='2',ry='2','fill'='none'))
     # -- add clear mouseover rect on top --
-    on_mouseovr <- sprintf("displayPictoName(evt, '%s');displayPictoValue(evt, '%s acre-feet');document.getElementById('picto-highlight-%s').setAttribute('opacity','0.8');document.getElementById('usage-%s').setAttribute('opacity','0.8');",value_mouse[i], value_contract[i], i, i)
+    units <- c('en'=lt('mead-pictogram-legend-units-imperial',language), 'es'=lt('mead-pictogram-legend-units-metric',language))
+    on_mouseovr <- sprintf("displayPictoName(evt, '%s');displayPictoValue(evt, '%s %s');document.getElementById('picto-highlight-%s').setAttribute('opacity','0.8');document.getElementById('usage-%s').setAttribute('opacity','0.8');",
+                           value_mouse[i], value_contract[i], units[[language]], i, i)
     on_mouseout <- sprintf("hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-%s').setAttribute('opacity','0.0');document.getElementById('usage-%s').setAttribute('opacity','0.0');",i,i)
     newXMLNode('rect',parent=g_pict_par,
                attrs=c(id = paste0('picto-',i),x=x-bin_buffer/2,y=-(bin_full+bin_buffer)*num_full-bin_buffer/2, 

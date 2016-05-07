@@ -22,42 +22,42 @@ var elevations = {"flood":"> 1,200",
   "shortage-2":"6.0 to 7.7",
   "shortage-3":"< 6.0"}
   var conditions = 
-  {"flood":"Flood Control Surplus",
-  "surplus":"Quantified & Domestic Surplus",
-  "normal":"Normal Condition",
-  "shortage-1":"Shortage Condition Level 1",
-  "shortage-2":"Shortage Condition Level 2",
-  "shortage-3":"Shortage Condition Level 3"}
-  function displayAllocationName(evt, name) {
+{"flood":"***var-condition-flood***",
+"surplus":"***var-condition-surplus***",
+"normal":"***var-condition-normal***",
+"shortage-1":"***var-condition-shortage-1***",
+"shortage-2":"***var-condition-shortage-2***",
+"shortage-3":"***var-condition-shortage-3***"}
+function displayAllocationName(evt, name) {
   var data = {"California":{
-  "flood":["4,400,000 acre-feet/year,","plus additional deliveries as requested."],
-  "surplus":["4,400,000 acre-feet/year,","plus surplus water."],
-  "normal":["4,400,000 acre-feet/year,","plus or minus any ICS created or delivered."],
-  "shortage-1":["","4,400,000 acre-feet/year"],
+"flood":["4,400,000 acre-feet/year,","***var-data-text-Californnia-flood***"],
+"surplus":["4,400,000 acre-feet/year,","***var-data-text-Californnia-surplus***"],
+"normal":["4,400,000 acre-feet/year,","***var-data-text-Californnia-normal***"],
+"shortage-1":["","4,400,000 acre-feet/year"],
   "shortage-2":["","4,400,000 acre-feet/year"],
   "shortage-3":["","4,400,000 acre-feet/year"]},
   "Arizona":{
-  "flood":["2,800,000 acre-feet/year,","plus additional deliveries as requested."],
-  "surplus":["2,800,000 acre-feet/year,","plus surplus water."],
-  "normal":["2,800,000 acre-feet/year,","plus or minus any ICS created or delivered."],
-  "shortage-1":["2,480,000 acre-feet/year,","(deliveries reduced by 320,000 acre-feet)."],
-  "shortage-2":["2,400,000 acre-feet/year,","(deliveries reduced by 400,000 acre-feet)."],
-  "shortage-3":["2,320,000 acre-feet/year,","(deliveries reduced by 480,000 acre-feet)."]},
-  "Nevada":{
-  "flood":["300,000 acre-feet/year,","plus additional deliveries as requested."],
-  "surplus":["300,000 acre-feet/year,","plus surplus water."],
-  "normal":["300,000 acre-feet/year,","plus or minus any ICS created or delivered."],
-  "shortage-1":["287,000 acre-feet/year,","(deliveries reduced by 13,000 acre-feet)."],
-  "shortage-2":["283,000 acre-feet/year,","(deliveries reduced by 17,000 acre-feet)."],
-  "shortage-3":["280,000 acre-feet/year,","(deliveries reduced by 20,000 acre-feet)."]},
-  "Mexico":{
+"flood":["2,800,000 acre-feet/year,","***var-data-text-Arizona-flood***"],
+"surplus":["2,800,000 acre-feet/year,","***var-data-text-Arizona-surplus***"],
+"normal":["2,800,000 acre-feet/year,","***var-data-text-Arizona-normal***"],
+"shortage-1":["2,480,000 acre-feet/year,","***var-data-text-Arizona-shortage-1***"],
+"shortage-2":["2,400,000 acre-feet/year,","***var-data-text-Arizona-shortage-2***"],
+"shortage-3":["2,320,000 acre-feet/year,","***var-data-text-Arizona-shortage-3***"]},
+"Nevada":{
+"flood":["300,000 acre-feet/year,","***var-data-text-Nevada-flood***"],
+"surplus":["300,000 acre-feet/year,","***var-data-text-Nevada-surplus***"],
+"normal":["300,000 acre-feet/year,","***var-data-text-Nevada-normal***"],
+"shortage-1":["287,000 acre-feet/year,","***var-data-text-Nevada-shortage-1***"],
+"shortage-2":["283,000 acre-feet/year,","***var-data-text-Nevada-shortage-2***"],
+"shortage-3":["280,000 acre-feet/year,","***var-data-text-Nevada-shortage-3***"]},
+"Mexico":{
   "flood":["","1,700,000 acre-feet/year."],
-  "surplus":["1,500,000 acre-feet/year,","plus surplus water."],
-  "normal":["1,500,000 acre-feet/year, plus or minus","any water deferred or delivered under Minute 319."],
-  "shortage-1":["1,500,000 acre-feet/year, (deliveries reduced by","50,000 acre-feet; reductions may be offset under Minute 319)."],
-  "shortage-2":["1,500,000 acre-feet/year, (deliveries reduced by","70,000 acre-feet; reductions may be offset under Minute 319)."],
-  "shortage-3":["1,500,000 acre-feet/year, (deliveries reduced by","125,000 acre-feet; reductions may be offset under Minute 319)."]}};
-  var state = document.getElementById("allocation-state").firstChild.data
+"surplus":["1,500,000 acre-feet/year,","***var-data-text-Mexico-surplus***"],
+"normal":["1,500,000 acre-feet/year, ***var-data-text-Mexico-normala***","***var-data-text-Mexico-normalb***"],
+"shortage-1":["1,500,000 acre-feet/year, ***var-data-text-Mexico-shortage-1a***","***var-data-text-Mexico-shortage-1b***"],
+"shortage-2":["1,500,000 acre-feet/year, ***var-data-text-Mexico-shortage-2a***","***var-data-text-Mexico-shortage-2b***"],
+"shortage-3":["1,500,000 acre-feet/year, ***var-data-text-Mexico-shortage-3a***","***var-data-text-Mexico-shortage-3b***"]}};
+var state = document.getElementById("allocation-state").firstChild.data
   document.getElementById("allocation-value-1").firstChild.data = name + ": " + data[name][state][0];
   document.getElementById("allocation-value-2").firstChild.data = data[name][state][1];
   document.getElementById("allocation-context").firstChild.data = " ";
@@ -520,18 +520,18 @@ var elevations = {"flood":"> 1,200",
   </g>
   <g id="mead-pictogram-legend" transform="translate(200,135)" class="legend-hidden">
     <rect x="150" y="270" width="130" height="45" stroke="#FFFFFF" fill="none"/>
-    <text class="legend-text" x="215" y="278" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: middle;">Legend</text>
+    <text class="legend-text" x="215" y="278" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: middle;">***mead-pictogram-legend***</text>
     <rect x="156" y="300" width="10" height="10" rx="2" ry="2" fill="#1975d1" stroke="#1975d1" stroke-width="1.5"/>
-    <text class="small-text" x="175" y="300" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: left;">100,000 acre-feet</text>
+    <text class="small-text" x="175" y="300" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: left;">XYZ ***mead-pictogram-legend-units-metric***</text>
   </g>
   <g id="pictogram-topfive" fill="none" stroke-width="2.5" stroke="#FFFFFF" class="hidden">
     <g transform="translate(25.0,680.0)">
       <path d="M-2.0 -582.0 l0 388.0 l300.0 0" id="picto-axes"/>
       <text class="label" id="picto-info" x="55" y="-290" fill="#FFFFFF" stroke="none" style="text-anchor: left;">  </text>
       <text class="label" id="picto-value" x="55" y="-290" fill="#FFFFFF" dy="-1.0em" stroke="none" style="text-anchor: left;">  </text>
-      <text id="x-pictogram-label" x="150" y="-182" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;">Lower Colorado River Water Entitlement Holders</text>
-      <text id="x-pictogram-sub-label" x="150" y="-182" fill="#FFFFFF" dy="1.5em" stroke="none" style="text-anchor: middle;">(with an Average Annual Consumptive Use above 15,000 acre-feet)</text>
-      <text id="y-pictogram-label" x="-15" y="-97" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;" transform="rotate(-90,-15,-97.5),translate(280,0)">Average Consumptive Use 2010 to 2014</text>
+      <text id="x-pictogram-label" x="150" y="-182" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;">***x-pictogram-label***</text>
+      <text id="x-pictogram-sub-label" x="150" y="-182" fill="#FFFFFF" dy="1.5em" stroke="none" style="text-anchor: middle;">***x-pictogram-sub-label-metric***</text>
+      <text id="y-pictogram-label" x="-15" y="-97" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;" transform="rotate(-90,-15,-97.5),translate(280,0)">***y-pictogram-label***</text>
     </g>
     <g id="picto-usage-parent-1" transform="translate(25.0,486.0)">
       <rect x="0" y="-380" width="14" height="378" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-1"/>
@@ -565,7 +565,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="2" y="-377.0572" width="10" height="9.05719999999999" rx="0" ry="0" stroke="none"/>
         <rect x="2" y="-378" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-1" x="0" y="-380" width="14" height="378" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Imperial Irrigation District');displayPictoValue(evt, '2,690,572 acre-feet');document.getElementById('picto-highlight-1').setAttribute('opacity','0.8');document.getElementById('usage-1').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-1').setAttribute('opacity','0.0');document.getElementById('usage-1').setAttribute('opacity','0.0');"/>
+      <rect id="picto-1" x="0" y="-380" width="14" height="378" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Imperial Irrigation District');displayPictoValue(evt, '2,690,572 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-1').setAttribute('opacity','0.8');document.getElementById('usage-1').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-1').setAttribute('opacity','0.0');document.getElementById('usage-1').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-2" transform="translate(25.0,486.0)">
       <rect x="14" y="-240" width="14" height="238" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-2"/>
@@ -589,7 +589,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="16" y="-231.7163" width="10" height="3.7163" rx="0" ry="0" stroke="none"/>
         <rect x="16" y="-238" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-2" x="14" y="-240" width="14" height="238" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Central Arizona Water Conservation District');displayPictoValue(evt, '1,637,163 acre-feet');document.getElementById('picto-highlight-2').setAttribute('opacity','0.8');document.getElementById('usage-2').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-2').setAttribute('opacity','0.0');document.getElementById('usage-2').setAttribute('opacity','0.0');"/>
+      <rect id="picto-2" x="14" y="-240" width="14" height="238" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Central Arizona Water Conservation District');displayPictoValue(evt, '1,637,163 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-2').setAttribute('opacity','0.8');document.getElementById('usage-2').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-2').setAttribute('opacity','0.0');document.getElementById('usage-2').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-3" transform="translate(25.0,486.0)">
       <rect x="28" y="-142" width="14" height="140" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-3"/>
@@ -606,7 +606,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="30" y="-134.4644" width="10" height="4.46440000000001" rx="0" ry="0" stroke="none"/>
         <rect x="30" y="-140" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-3" x="28" y="-142" width="14" height="140" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Metropolitan Water District Of Southern California');displayPictoValue(evt, '944,644 acre-feet');document.getElementById('picto-highlight-3').setAttribute('opacity','0.8');document.getElementById('usage-3').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-3').setAttribute('opacity','0.0');document.getElementById('usage-3').setAttribute('opacity','0.0');"/>
+      <rect id="picto-3" x="28" y="-142" width="14" height="140" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Metropolitan Water District Of Southern California');displayPictoValue(evt, '944,644 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-3').setAttribute('opacity','0.8');document.getElementById('usage-3').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-3').setAttribute('opacity','0.0');document.getElementById('usage-3').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-4" transform="translate(25.0,486.0)">
       <rect x="42" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-4"/>
@@ -617,7 +617,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="44" y="-52.2061" width="10" height="6.2061" rx="0" ry="0" stroke="none"/>
         <rect x="44" y="-56" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-4" x="42" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Palo Verde Irrigation District');displayPictoValue(evt, '362,061 acre-feet');document.getElementById('picto-highlight-4').setAttribute('opacity','0.8');document.getElementById('usage-4').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-4').setAttribute('opacity','0.0');document.getElementById('usage-4').setAttribute('opacity','0.0');"/>
+      <rect id="picto-4" x="42" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Palo Verde Irrigation District');displayPictoValue(evt, '362,061 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-4').setAttribute('opacity','0.8');document.getElementById('usage-4').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-4').setAttribute('opacity','0.0');document.getElementById('usage-4').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-5" transform="translate(25.0,486.0)">
       <rect x="56" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-5"/>
@@ -628,7 +628,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="58" y="-50.2636" width="10" height="4.2636" rx="0" ry="0" stroke="none"/>
         <rect x="58" y="-56" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-5" x="56" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Colorado River Indian Tribes');displayPictoValue(evt, '342,636 acre-feet');document.getElementById('picto-highlight-5').setAttribute('opacity','0.8');document.getElementById('usage-5').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-5').setAttribute('opacity','0.0');document.getElementById('usage-5').setAttribute('opacity','0.0');"/>
+      <rect id="picto-5" x="56" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Colorado River Indian Tribes');displayPictoValue(evt, '342,636 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-5').setAttribute('opacity','0.8');document.getElementById('usage-5').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-5').setAttribute('opacity','0.0');document.getElementById('usage-5').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-6" transform="translate(25.0,486.0)">
       <rect x="70" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-6"/>
@@ -639,7 +639,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="72" y="-48.5115" width="10" height="2.5115" rx="0" ry="0" stroke="none"/>
         <rect x="72" y="-56" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-6" x="70" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Coachella Valley Water District');displayPictoValue(evt, '325,115 acre-feet');document.getElementById('picto-highlight-6').setAttribute('opacity','0.8');document.getElementById('usage-6').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-6').setAttribute('opacity','0.0');document.getElementById('usage-6').setAttribute('opacity','0.0');"/>
+      <rect id="picto-6" x="70" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Coachella Valley Water District');displayPictoValue(evt, '325,115 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-6').setAttribute('opacity','0.8');document.getElementById('usage-6').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-6').setAttribute('opacity','0.0');document.getElementById('usage-6').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-7" transform="translate(25.0,486.0)">
       <rect x="84" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-7"/>
@@ -649,7 +649,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="86" y="-37.0159" width="10" height="5.0159" rx="0" ry="0" stroke="none"/>
         <rect x="86" y="-42" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-7" x="84" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Wellton-Mohawk Irrigation And Drainage District');displayPictoValue(evt, '250,159 acre-feet');document.getElementById('picto-highlight-7').setAttribute('opacity','0.8');document.getElementById('usage-7').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-7').setAttribute('opacity','0.0');document.getElementById('usage-7').setAttribute('opacity','0.0');"/>
+      <rect id="picto-7" x="84" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Wellton-Mohawk Irrigation And Drainage District');displayPictoValue(evt, '250,159 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-7').setAttribute('opacity','0.8');document.getElementById('usage-7').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-7').setAttribute('opacity','0.0');document.getElementById('usage-7').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-8" transform="translate(25.0,486.0)">
       <rect x="98" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-8"/>
@@ -659,7 +659,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="100" y="-35.7301" width="10" height="3.7301" rx="0" ry="0" stroke="none"/>
         <rect x="100" y="-42" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-8" x="98" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma County Water Users\' Association');displayPictoValue(evt, '237,301 acre-feet');document.getElementById('picto-highlight-8').setAttribute('opacity','0.8');document.getElementById('usage-8').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-8').setAttribute('opacity','0.0');document.getElementById('usage-8').setAttribute('opacity','0.0');"/>
+      <rect id="picto-8" x="98" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma County Water Users\' Association');displayPictoValue(evt, '237,301 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-8').setAttribute('opacity','0.8');document.getElementById('usage-8').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-8').setAttribute('opacity','0.0');document.getElementById('usage-8').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-9" transform="translate(25.0,486.0)">
       <rect x="112" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-9"/>
@@ -669,7 +669,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="114" y="-34.316" width="10" height="2.316" rx="0" ry="0" stroke="none"/>
         <rect x="114" y="-42" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-9" x="112" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Southern Nevada Water Authority And Other Users (Nv)');displayPictoValue(evt, '223,160 acre-feet');document.getElementById('picto-highlight-9').setAttribute('opacity','0.8');document.getElementById('usage-9').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-9').setAttribute('opacity','0.0');document.getElementById('usage-9').setAttribute('opacity','0.0');"/>
+      <rect id="picto-9" x="112" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Southern Nevada Water Authority And Other Users (Nv)');displayPictoValue(evt, '223,160 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-9').setAttribute('opacity','0.8');document.getElementById('usage-9').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-9').setAttribute('opacity','0.0');document.getElementById('usage-9').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-10" transform="translate(25.0,486.0)">
       <rect x="126" y="-30" width="14" height="28" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-10"/>
@@ -678,7 +678,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="128" y="-18.8161" width="10" height="0.8161" rx="0" ry="0" stroke="none"/>
         <rect x="128" y="-28" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-10" x="126" y="-30" width="14" height="28" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Mesa Irrigation And Drainage District');displayPictoValue(evt, '108,161 acre-feet');document.getElementById('picto-highlight-10').setAttribute('opacity','0.8');document.getElementById('usage-10').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-10').setAttribute('opacity','0.0');document.getElementById('usage-10').setAttribute('opacity','0.0');"/>
+      <rect id="picto-10" x="126" y="-30" width="14" height="28" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Mesa Irrigation And Drainage District');displayPictoValue(evt, '108,161 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-10').setAttribute('opacity','0.8');document.getElementById('usage-10').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-10').setAttribute('opacity','0.0');document.getElementById('usage-10').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-11" transform="translate(25.0,486.0)">
       <rect x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-11"/>
@@ -686,7 +686,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="142" y="-8.8636" width="10" height="4.8636" rx="0" ry="0" stroke="none"/>
         <rect x="142" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-11" x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Project, Reservation Division (Bard Unit And Indian Unit)');displayPictoValue(evt, '48,636 acre-feet');document.getElementById('picto-highlight-11').setAttribute('opacity','0.8');document.getElementById('usage-11').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-11').setAttribute('opacity','0.0');document.getElementById('usage-11').setAttribute('opacity','0.0');"/>
+      <rect id="picto-11" x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Project, Reservation Division (Bard Unit And Indian Unit)');displayPictoValue(evt, '48,636 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-11').setAttribute('opacity','0.8');document.getElementById('usage-11').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-11').setAttribute('opacity','0.0');document.getElementById('usage-11').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-12" transform="translate(25.0,486.0)">
       <rect x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-12"/>
@@ -694,7 +694,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="156" y="-8.6279" width="10" height="4.6279" rx="0" ry="0" stroke="none"/>
         <rect x="156" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-12" x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Fort Mojave Indian Reservation');displayPictoValue(evt, '46,279 acre-feet');document.getElementById('picto-highlight-12').setAttribute('opacity','0.8');document.getElementById('usage-12').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-12').setAttribute('opacity','0.0');document.getElementById('usage-12').setAttribute('opacity','0.0');"/>
+      <rect id="picto-12" x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Fort Mojave Indian Reservation');displayPictoValue(evt, '46,279 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-12').setAttribute('opacity','0.8');document.getElementById('usage-12').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-12').setAttribute('opacity','0.0');document.getElementById('usage-12').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-13" transform="translate(25.0,486.0)">
       <rect x="168" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-13"/>
@@ -702,7 +702,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="170" y="-7.7368" width="10" height="3.7368" rx="0" ry="0" stroke="none"/>
         <rect x="170" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-13" x="168" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Irrigation District');displayPictoValue(evt, '37,368 acre-feet');document.getElementById('picto-highlight-13').setAttribute('opacity','0.8');document.getElementById('usage-13').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-13').setAttribute('opacity','0.0');document.getElementById('usage-13').setAttribute('opacity','0.0');"/>
+      <rect id="picto-13" x="168" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Irrigation District');displayPictoValue(evt, '37,368 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-13').setAttribute('opacity','0.8');document.getElementById('usage-13').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-13').setAttribute('opacity','0.0');document.getElementById('usage-13').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-14" transform="translate(25.0,486.0)">
       <rect x="182" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-14"/>
@@ -710,7 +710,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="184" y="-5.8491" width="10" height="1.8491" rx="0" ry="0" stroke="none"/>
         <rect x="184" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-14" x="182" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Auxiliary Project (Unit b)');displayPictoValue(evt, '18,491 acre-feet');document.getElementById('picto-highlight-14').setAttribute('opacity','0.8');document.getElementById('usage-14').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-14').setAttribute('opacity','0.0');document.getElementById('usage-14').setAttribute('opacity','0.0');"/>
+      <rect id="picto-14" x="182" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Auxiliary Project (Unit b)');displayPictoValue(evt, '18,491 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-14').setAttribute('opacity','0.8');document.getElementById('usage-14').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-14').setAttribute('opacity','0.0');document.getElementById('usage-14').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-15" transform="translate(25.0,486.0)">
       <rect x="196" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-15"/>
@@ -718,7 +718,7 @@ var elevations = {"flood":"> 1,200",
         <rect x="198" y="-5.5083" width="10" height="1.5083" rx="0" ry="0" stroke="none"/>
         <rect x="198" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-15" x="196" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Mohave Valley Irrigation &amp; Drainage District');displayPictoValue(evt, '15,083 acre-feet');document.getElementById('picto-highlight-15').setAttribute('opacity','0.8');document.getElementById('usage-15').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-15').setAttribute('opacity','0.0');document.getElementById('usage-15').setAttribute('opacity','0.0');"/>
+      <rect id="picto-15" x="196" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Mohave Valley Irrigation &amp; Drainage District');displayPictoValue(evt, '15,083 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-15').setAttribute('opacity','0.8');document.getElementById('usage-15').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-15').setAttribute('opacity','0.0');document.getElementById('usage-15').setAttribute('opacity','0.0');"/>
     </g>
   </g>
   <g id="Mead-2D" class="hidden">
@@ -727,17 +727,17 @@ var elevations = {"flood":"> 1,200",
     </g>
     <path id="Mead-2D-border" d="M 545 20 L 545 450 L 410 450 L 290 20" fill="none" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round"/>
     <g id="mead-elevation-text-position">
-      <text id="mead-label" x="475" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor:middle;">Lake Mead</text>
+      <text id="mead-label" x="475" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor:middle;">***mead-label***</text>
       <text id="mead-elevation-text" class="small-text" x="539" fill="#FFFFFF" dy="2.6em" stroke="none" style="text-anchor:end;">  </text>
       <text id="mead-condition-text" class="tiny-text" x="539" fill="#FFFFFF" dy="4.2em" stroke="none" style="text-anchor:end;">  </text>
     </g>
     <text id="mead-storage-text" class="label" x="476" y="443" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
-    <text id="mead-storage-label" class="label" dy="-1.1em" x="476" y="443" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">Live Storage:</text>
+    <text id="mead-storage-label" class="label" dy="-1.1em" x="476" y="443" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">***mead-storage-label***</text>
     <text id="allocation-info" class="label" x="55" y="450" fill="#FFFFFF" stroke="none" style="text-anchor:start;">  </text>
     <text id="allocation-value-1" class="small-text" x="380" y="495" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
     <text id="allocation-value-2" class="small-text" x="380" y="495" dy="1.1em" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
     <text id="allocation-context" class="label" x="380" y="480" dy="2.0em" fill="#FFFFFF" stroke="none" style="text-anchor:middle;">  </text>
-    <text id="allocation-state" class="label" x="55" y="400" fill="none" stroke="none" style="text-anchor:start;">flood</text>
+    <text id="allocation-state" class="label" x="55" y="400" fill="none" stroke="none" style="text-anchor:start;">***allocation-state-flood***</text>
   </g>
   <g id="California-pictos" stroke="#1975d1" stroke-width="1.5" fill="#1975d1" class="hidden">
     <rect x="114" y="201" width="10" height="10" rx="2" ry="2"/>
@@ -877,7 +877,7 @@ var elevations = {"flood":"> 1,200",
   </g>
   <g id="Mexico-pictos" stroke="#1975d1" stroke-width="1.5" fill="#1975d1" class="hidden">
     <text y="535" fill="#FFFFFF" stroke="none" style="text-anchor:start;" class="small-text">
-      <tspan font-style="italic">location of blue boxes does not represent location of water use.</tspan>
+      <tspan font-style="italic">***Mexico-pictos-disclaimer***</tspan>
     </text>
     <rect x="156" y="272" width="10" height="10" rx="2" ry="2" fill="none"/>
     <rect x="170" y="272" width="10" height="10" rx="2" ry="2" fill="none"/>
