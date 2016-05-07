@@ -1,5 +1,5 @@
-ecmascript_mead_map <- function(){
-  
+ecmascript_mead_map <- function(language='en'){
+  ltl <- function(x) lt(x, lang=language)
   scripts <- c('function init(evt){',
                'if ( window.svgDocument == null ) {',
   'svgDocument = evt.target.ownerDocument;',
@@ -20,43 +20,43 @@ ecmascript_mead_map <- function(){
   "shortage-1":"7.7 to 9.6",
   "shortage-2":"6.0 to 7.7",
   "shortage-3":"< 6.0"}
-  var conditions = 
-  {"flood":"Flood Control Surplus",
-  "surplus":"Quantified & Domestic Surplus",
-  "normal":"Normal Condition",
-  "shortage-1":"Shortage Condition Level 1",
-  "shortage-2":"Shortage Condition Level 2",
-  "shortage-3":"Shortage Condition Level 3"}
-  function displayAllocationName(evt, name) {
-  var data = {"California":{
-  "flood":["4,400,000 acre-feet/year,","plus additional deliveries as requested."],
-  "surplus":["4,400,000 acre-feet/year,","plus surplus water."],
-  "normal":["4,400,000 acre-feet/year,","plus or minus any ICS created or delivered."],
-  "shortage-1":["","4,400,000 acre-feet/year"],
+  var conditions = ',
+  sprintf('{"flood":"%s",',ltl('var-condition-flood')), 
+  sprintf('"surplus":"%s",',ltl('var-condition-surplus')),
+  sprintf('"normal":"%s",',ltl('var-condition-normal')),
+  sprintf('"shortage-1":"%s",',ltl('var-condition-shortage-1')),
+  sprintf('"shortage-2":"%s",',ltl('var-condition-shortage-2')),
+  sprintf('"shortage-3":"%s"}',ltl('var-condition-shortage-3')),
+  'function displayAllocationName(evt, name) {
+  var data = {"California":{',
+  sprintf('"flood":["4,400,000 acre-feet/year,","%s"],',ltl('var-data-text-Californnia-flood')),
+  sprintf('"surplus":["4,400,000 acre-feet/year,","%s"],',ltl('var-data-text-Californnia-surplus')),
+  sprintf('"normal":["4,400,000 acre-feet/year,","%s"],',ltl('var-data-text-Californnia-normal')),
+  '"shortage-1":["","4,400,000 acre-feet/year"],
   "shortage-2":["","4,400,000 acre-feet/year"],
   "shortage-3":["","4,400,000 acre-feet/year"]},
-  "Arizona":{
-  "flood":["2,800,000 acre-feet/year,","plus additional deliveries as requested."],
-  "surplus":["2,800,000 acre-feet/year,","plus surplus water."],
-  "normal":["2,800,000 acre-feet/year,","plus or minus any ICS created or delivered."],
-  "shortage-1":["2,480,000 acre-feet/year,","(deliveries reduced by 320,000 acre-feet)."],
-  "shortage-2":["2,400,000 acre-feet/year,","(deliveries reduced by 400,000 acre-feet)."],
-  "shortage-3":["2,320,000 acre-feet/year,","(deliveries reduced by 480,000 acre-feet)."]},
-  "Nevada":{
-  "flood":["300,000 acre-feet/year,","plus additional deliveries as requested."],
-  "surplus":["300,000 acre-feet/year,","plus surplus water."],
-  "normal":["300,000 acre-feet/year,","plus or minus any ICS created or delivered."],
-  "shortage-1":["287,000 acre-feet/year,","(deliveries reduced by 13,000 acre-feet)."],
-  "shortage-2":["283,000 acre-feet/year,","(deliveries reduced by 17,000 acre-feet)."],
-  "shortage-3":["280,000 acre-feet/year,","(deliveries reduced by 20,000 acre-feet)."]},
-  "Mexico":{
-  "flood":["","1,700,000 acre-feet/year."],
-  "surplus":["1,500,000 acre-feet/year,","plus surplus water."],
-  "normal":["1,500,000 acre-feet/year, plus or minus","any water deferred or delivered under Minute 319."],
-  "shortage-1":["1,500,000 acre-feet/year, (deliveries reduced by","50,000 acre-feet; reductions may be offset under Minute 319)."],
-  "shortage-2":["1,500,000 acre-feet/year, (deliveries reduced by","70,000 acre-feet; reductions may be offset under Minute 319)."],
-  "shortage-3":["1,500,000 acre-feet/year, (deliveries reduced by","125,000 acre-feet; reductions may be offset under Minute 319)."]}};
-  var state = document.getElementById("allocation-state").firstChild.data
+  "Arizona":{',
+  sprintf('"flood":["2,800,000 acre-feet/year,","%s"],',ltl('var-data-text-Arizona-flood')),
+  sprintf('"surplus":["2,800,000 acre-feet/year,","%s"],',ltl('var-data-text-Arizona-surplus')),
+  sprintf('"normal":["2,800,000 acre-feet/year,","%s"],',ltl('var-data-text-Arizona-normal')),
+  sprintf('"shortage-1":["2,480,000 acre-feet/year,","%s"],',ltl('var-data-text-Arizona-shortage-1')),
+  sprintf('"shortage-2":["2,400,000 acre-feet/year,","%s"],',ltl('var-data-text-Arizona-shortage-2')),
+  sprintf('"shortage-3":["2,320,000 acre-feet/year,","%s"]},',ltl('var-data-text-Arizona-shortage-3')),
+  '"Nevada":{',
+  sprintf('"flood":["300,000 acre-feet/year,","%s"],',ltl('var-data-text-Nevada-flood')),
+  sprintf('"surplus":["300,000 acre-feet/year,","%s"],',ltl('var-data-text-Nevada-surplus')),
+  sprintf('"normal":["300,000 acre-feet/year,","%s"],',ltl('var-data-text-Nevada-normal')),
+  sprintf('"shortage-1":["287,000 acre-feet/year,","%s"],',ltl('var-data-text-Nevada-shortage-1')),
+  sprintf('"shortage-2":["283,000 acre-feet/year,","%s"],',ltl('var-data-text-Nevada-shortage-2')),
+  sprintf('"shortage-3":["280,000 acre-feet/year,","%s"]},',ltl('var-data-text-Nevada-shortage-3')),
+  '"Mexico":{
+  "flood":["","1,700,000 acre-feet/year."],',
+  sprintf('"surplus":["1,500,000 acre-feet/year,","%s"],',ltl('var-data-text-Mexico-surplus')),
+  sprintf('"normal":["1,500,000 acre-feet/year, %s","%s"],',ltl('var-data-text-Mexico-normala'),ltl('var-data-text-Mexico-normalb')),
+  sprintf('"shortage-1":["1,500,000 acre-feet/year, %s","%s"],',ltl('var-data-text-Mexico-shortage-1a'),ltl('var-data-text-Mexico-shortage-1b')),
+  sprintf('"shortage-2":["1,500,000 acre-feet/year, %s","%s"],',ltl('var-data-text-Mexico-shortage-2a'),ltl('var-data-text-Mexico-shortage-2b')),
+  sprintf('"shortage-3":["1,500,000 acre-feet/year, %s","%s"]}};',ltl('var-data-text-Mexico-shortage-3a'),ltl('var-data-text-Mexico-shortage-3b')),
+  'var state = document.getElementById("allocation-state").firstChild.data
   document.getElementById("allocation-value-1").firstChild.data = name + ": " + data[name][state][0];
   document.getElementById("allocation-value-2").firstChild.data = data[name][state][1];
   document.getElementById("allocation-context").firstChild.data = " ";

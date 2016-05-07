@@ -58,7 +58,7 @@ for (form.factor in c('desktop','mobile')){
       add_picto_legend() %>% 
       attr_svg_paths(attrs = list('mexico-border'=border_line)) %>% 
       remove_svg_elements(elements = c('delete_group'='g')) %>% 
-      add_ecmascript(ecmascript_mead_map()) %>%
+      add_ecmascript(ecmascript_mead_map(language=lang)) %>%
       attr_svg_groups(attrs = list('co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles, 'mexico' = mexico_styles, "top-users"=c('class'='hidden'),"Mexico"=c("class"="mexico"))) %>%
       attr_svg_paths(attrs = list('California'=c("class"="california"), 'Nevada'=c("class"="nevada"), 'Arizona'=c("class"="arizona"))) %>% #,"Mexico"=c("class"="mexico")
       add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'draw-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="351;0;") %>%
