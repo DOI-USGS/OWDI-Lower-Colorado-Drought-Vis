@@ -265,7 +265,7 @@ add_picto_legend <- function(svg, language){
   newXMLNode('text', parent=g_nd, newXMLTextNode(lt('mead-pictogram-legend',language)), attrs=c(class='legend-text', x="215", y="278", fill="#FFFFFF", dy="0.7em", stroke="none", style="text-anchor: middle;"))
   newXMLNode('rect',parent=g_nd,attrs=c(x="156", y="300", width="10", height="10", rx="2", ry="2", fill="#1975d1", stroke="#1975d1", 'stroke-width'="1.5"))
   key.units <- c('en'=paste0("100,000 ",lt('mead-pictogram-legend-units-imperial',language)),
-                 'es'=paste0("XYZ ",lt('mead-pictogram-legend-units-metric',language)))
+                 'es'=paste0("100 ",lt('mead-pictogram-legend-units-metric',language)))
   newXMLNode('text', parent=g_nd, newXMLTextNode(key.units[[language]]), attrs=c(class='small-text', x="175", y="300", fill="#FFFFFF", dy="0.7em", stroke="none", style="text-anchor: left;"))
   invisible(svg)
 }

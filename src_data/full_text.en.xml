@@ -144,7 +144,7 @@
 	<mead-pictogram-legend>Legend</mead-pictogram-legend>
 	
 	<mead-pictogram-legend-units-imperial>acre-feet</mead-pictogram-legend-units-imperial>
-	<mead-pictogram-legend-units-metric>cubic meters</mead-pictogram-legend-units-metric>
+	<mead-pictogram-legend-units-metric>million cubic meters</mead-pictogram-legend-units-metric>
 		
 	<mead-scene-units>acre-feet/year</mead-scene-units>
 			
@@ -154,7 +154,7 @@
 	
 	<x-pictogram-sub-label-imperial>(with an Average Annual Consumptive Use above 15,000 acre-feet)</x-pictogram-sub-label-imperial>
 	
-	<x-pictogram-sub-label-metric>(with an Average Annual Consumptive Use above XYZ cubic meters)</x-pictogram-sub-label-metric>
+	<x-pictogram-sub-label-metric>(with an Average Annual Consumptive Use above 18.5 million cubic meters)</x-pictogram-sub-label-metric>
 	
 	<y-pictogram-label>Average Consumptive Use 2010 to 2014</y-pictogram-label>
 	
