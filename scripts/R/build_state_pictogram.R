@@ -4,7 +4,7 @@ build_state_pictos <- function(svg, scale=100000, language){
   picto_lw <<- '1.5'
   root_nd <- xmlRoot(svg)
   
-  add_california(root_nd,scale)
+  add_california(root_nd,scale, language)
   g_id <- newXMLNode('g',parent=root_nd,
              attrs=c(id="allocation-picto-highlight-3", class='hidden', stroke="none", fill="yellow"))
   
@@ -88,7 +88,7 @@ add_nevada <- function(root_nd,scale){
                      onmouseout="hideAllocationName(evt);lowlightState(evt,'Nevada')"))
 }
 
-add_california <- function(root_nd,scale){
+add_california <- function(root_nd,scale, language){
   CA_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='California-pictos','stroke'='#1975d1','stroke-width'=picto_lw,'fill'='#1975d1',class='hidden'))
   y_start = 183
@@ -102,9 +102,19 @@ add_california <- function(root_nd,scale){
   y = block_picto(CA_id,x=x_start-70,y=y,number=5)
   y = block_picto(CA_id,x=x_start-84,y=y,number=5)
   y = block_picto(CA_id,x=x_start-84,y=y,number=4)
+  if (language == 'es'){
+    #need 54.273 blocks for metric
+    y = block_picto(CA_id,x=x_start-84,y=y,number=3)
+    y = block_picto(CA_id,x=x_start-98,y=y,number=4)
+    block_picto(CA_id,x=x_start-98,y=y,number=3)
+    # now one 27.3 % block...
+    block_picto(CA_id,x=x_start-56,y=y,number=1,rx="0",ry="0", perc_full = 27.3,'stroke'='none')
+    block_picto(CA_id,x=x_start-56,y=y,number=1, perc_full = 100,'fill'='none')
+  }
   
   m_id = newXMLNode('g', parent=CA_id,
-             attrs = c('id'='california-mouseovers', opacity='0', visibility='hidden'))
+                    attrs = c('id'='california-mouseovers', opacity='0', visibility='hidden'))
+  
   newXMLNode('rect',parent=m_id,
              attrs=c(x="28", y="87", width="70", height='56', onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')",
                      onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"))
@@ -117,6 +127,14 @@ add_california <- function(root_nd,scale){
   newXMLNode('rect',parent=m_id,
              attrs=c(x="112", y="185", width="42", height='28', onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')",
                      onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"))
+  
+  if (language == 'es'){
+    newXMLNode('rect',parent=m_id,
+               attrs=c(x="14", y="45", width="70", height='42', onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')",
+                       onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"))
+    
+  }
+  
 }
 
 add_arizona <- function(root_nd,scale){
