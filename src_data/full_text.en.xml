@@ -143,15 +143,19 @@
 	
 	<mead-pictogram-legend>Legend</mead-pictogram-legend>
 	
-	<mead-pictogram-legend-units>acre-feet</mead-pictogram-legend-units>
+	<mead-pictogram-legend-units-imperial>acre-feet</mead-pictogram-legend-units-imperial>
+	<mead-pictogram-legend-units-metric>million cubic meters</mead-pictogram-legend-units-metric>
 		
-	<mead-scene-units>acre-feet/year</mead-scene-units>
+	<mead-scene-units-imperial>acre-feet/year</mead-scene-units-imperial>
+	<mead-scene-units-metric>million cubic meters/year</mead-scene-units-metric>
 			
 	<Mexico-pictos-disclaimer>location of blue boxes does not represent location of water use.</Mexico-pictos-disclaimer>
 				
 	<x-pictogram-label>Lower Colorado River Water Entitlement Holders</x-pictogram-label>
 	
-	<x-pictogram-sub-label>(with an Average Annual Consumptive Use above 15,000 acre-feet)</x-pictogram-sub-label> 
+	<x-pictogram-sub-label-imperial>(with an Average Annual Consumptive Use above 15,000 acre-feet)</x-pictogram-sub-label-imperial>
+	
+	<x-pictogram-sub-label-metric>(with an Average Annual Consumptive Use above 18.5 million cubic meters)</x-pictogram-sub-label-metric>
 	
 	<y-pictogram-label>Average Consumptive Use 2010 to 2014</y-pictogram-label>
 	
@@ -160,6 +164,8 @@
 	<mead-storage-label>Live Storage:</mead-storage-label>
 	
 	<allocation-state-flood>flood</allocation-state-flood>
+	
+	<var-condition-flood>Flood Control Surplus</var-condition-flood>
 	
 	<var-condition-surplus>Quantified and Domestic Surplus</var-condition-surplus>
 	
@@ -229,7 +235,7 @@
 	
 	<var-data-text-Mexico-shortage-3b>reductions may be offset under Minute 319).</var-data-text-Mexico-shortage-3b>
 	
-	<elevation>Elevation:</elevation>
+	<elevation>Elevation</elevation>
 	<maf>maf</maf>
 	<text-to-indicate-range-of-storage>to</text-to-indicate-range-of-storage>
 	

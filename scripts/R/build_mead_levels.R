@@ -1,4 +1,4 @@
-add_mead_levels <- function(svg, mead_poly, mead_water_styles, mead_border_styles, group_id, water_id, border_id){
+add_mead_levels <- function(svg, mead_poly, mead_water_styles, mead_border_styles, group_id, water_id, border_id, language){
   full_mead_path <- sprintf('M %1.0f %1.0f L %1.0f %1.0f L %1.0f %1.0f L %1.0f %1.0f', 
                             mead_poly[[1]],mead_poly[[2]],mead_poly[[3]],mead_poly[[4]],mead_poly[[5]],mead_poly[[6]],mead_poly[[7]],mead_poly[[8]])
   
@@ -12,16 +12,16 @@ add_mead_levels <- function(svg, mead_poly, mead_water_styles, mead_border_style
   
   newXMLNode('path', parent = g_id, attrs=c(id=border_id, d=full_mead_path, mead_border_styles))
   t_id <- newXMLNode('g',parent=g_id, attrs = c(id = "mead-elevation-text-position"))
-  newXMLNode('text', parent = t_id, newXMLTextNode('Lake Mead'), attrs = c(id = "mead-label", x='475', fill='#FFFFFF',dy="0.7em",stroke='none',style='text-anchor:middle;'))
+  newXMLNode('text', parent = t_id, newXMLTextNode(lt('mead-label',language)), attrs = c(id = "mead-label", x='475', fill='#FFFFFF',dy="0.7em",stroke='none',style='text-anchor:middle;'))
   newXMLNode('text', parent = t_id, newXMLTextNode('  '), attrs = c(id = "mead-elevation-text", class='small-text', x='539', fill='#FFFFFF',dy="2.6em",stroke='none',style='text-anchor:end;'))
   newXMLNode('text', parent = t_id, newXMLTextNode('  '), attrs = c(id = "mead-condition-text", class='tiny-text', x="539", fill='#FFFFFF',dy="4.2em",stroke='none',style='text-anchor:end;'))
   newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "mead-storage-text", class='label', x='476',y='443',fill='#FFFFFF',stroke='none',style='text-anchor:middle;'))
-  newXMLNode('text', parent = g_id, newXMLTextNode('Live Storage:'),attrs = c(id = "mead-storage-label", class='label', dy="-1.1em", x='476',y='443',fill='#FFFFFF',stroke='none',style='text-anchor:middle;'))
+  newXMLNode('text', parent = g_id, newXMLTextNode(lt('mead-storage-label',language)),attrs = c(id = "mead-storage-label", class='label', dy="-1.1em", x='476',y='443',fill='#FFFFFF',stroke='none',style='text-anchor:middle;'))
   newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "allocation-info", class='label', x='55',y='450',fill='#FFFFFF',stroke='none',style='text-anchor:start;'))
   newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "allocation-value-1", class='small-text', x='380',y='495',fill='#FFFFFF',stroke='none',style='text-anchor:middle;'))
   newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "allocation-value-2", class='small-text', x='380',y='495',dy="1.1em",fill='#FFFFFF',stroke='none',style='text-anchor:middle;'))
   newXMLNode('text', parent = g_id, newXMLTextNode('  '),attrs = c(id = "allocation-context", class='label', x='380',y='480',dy="2.0em", fill='#FFFFFF',stroke='none',style='text-anchor:middle;'))
-  newXMLNode('text', parent = g_id, newXMLTextNode('flood'),attrs = c(id = "allocation-state", class='label', x='55',y='400',fill='none',stroke='none',style='text-anchor:start;'))
+  newXMLNode('text', parent = g_id, newXMLTextNode(lt('allocation-state-flood',language)),attrs = c(id = "allocation-state", class='label', x='55',y='400',fill='none',stroke='none',style='text-anchor:start;'))
   invisible(svg)
 }
 

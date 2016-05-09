@@ -16,13 +16,14 @@ sorted_contracts <- sort(as.numeric(contracts$FiveYrAvg_),decreasing = T, index.
 non_zero_cont <- as.numeric(contracts$FiveYrAvg_[sorted_contracts$ix])
 non_zero_cont <- non_zero_cont[non_zero_cont > 15000]
 
-contract_values <- prettyNum(round(as.numeric(contracts[sorted_contracts$ix,]$FiveYrAvg_)),big.mark=",",scientific=FALSE)
+
 contract_titles <- gsub("\\b([a-z])([a-z]+)", "\\U\\1\\L\\2" ,tolower(contracts[sorted_contracts$ix,]$Contractor), perl=TRUE)
 contract_titles <- gsub("'", "\\\\'", contract_titles)
 #escaping apostrophes so that they don't cause the svg animation to error
 
 # 100,000 acre-feet =~ 123 million m3
-picto_scale = ifelse(lang=='en',100000,100000) # acre-feet per bin, vs million m3 *CONVERT TO ACTUAL!!!*
+picto_scale = c('en'=100000, 'es'=81071.31) # acre-feet per bin, vs million m3 *CONVERT TO ACTUAL!!!* 100 mcm
+conversion <- c('en'=1,'es'=0.00123348185532)
 mead_poly <- c(x1=545,y1=20,x2=545,y2=450,x3=410,y3=450,x4=290,y4= 20)
 mead_yvals <- get_mead_yval(mead_poly, storage = c(26.2, 23.1, 16.2, 9.6, 7.7, 6.0)) # flood, surplus, normal, shortage 1,2,3
 mead_names <- c(group_id='Mead-2D', water_id='Mead-water-level', border_id='Mead-2D-border')
@@ -33,6 +34,8 @@ view.box = c('desktop'='-50 0 640 547', 'mobile'='-65 0 670 547')
 x.edge = c('desktop'='-50', 'mobile'='-65')
 for (form.factor in c('desktop','mobile')){
   for (lang in c('en','es')){
+    contract.nums <- round(as.numeric(contracts[sorted_contracts$ix,]$FiveYrAvg_)*conversion[[lang]])
+    contract_values <- prettyNum(contract.nums, big.mark=",", scientific=FALSE)
     
     plot_dir = sprintf('public_html/%s/img',lang)
     read_dir = 'src_data/lower-co-map'
@@ -55,18 +58,18 @@ for (form.factor in c('desktop','mobile')){
       edit_attr_svg(c('viewBox'=view.box[[form.factor]], 'onload'='init(evt)')) %>% 
       add_rect(x=x.edge[[form.factor]], width="100%", height="100%", style="max-width=950px", fill="url(#background-image)", at=0, rx='6',ry='6', id='background-panel') %>%
       add_scene_buttons(form.factor) %>% 
-      add_picto_legend() %>% 
+      add_picto_legend(language=lang) %>% 
       attr_svg_paths(attrs = list('mexico-border'=border_line)) %>% 
       remove_svg_elements(elements = c('delete_group'='g')) %>% 
-      add_ecmascript(ecmascript_mead_map()) %>%
+      add_ecmascript(ecmascript_mead_map(language=lang)) %>%
       attr_svg_groups(attrs = list('co-river-polyline' = co_river_styles, 'co-basin-polygon'=co_basin_styles, 'mexico' = mexico_styles, "top-users"=c('class'='hidden'),"Mexico"=c("class"="mexico"))) %>%
       attr_svg_paths(attrs = list('California'=c("class"="california"), 'Nevada'=c("class"="nevada"), 'Arizona'=c("class"="arizona"))) %>% #,"Mexico"=c("class"="mexico")
       add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'draw-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-draw']], values="351;0;") %>%
       add_animation(attr = 'stroke-dashoffset', parent_id='Colorado-river', id = 'reset-colorado-river', begin="indefinite", fill="freeze", dur=ani_dur[['river-reset']], values="0;351;") %>%
       usage_bar_pictogram(values = non_zero_cont, value_mouse = contract_titles, value_contract = contract_values, 
-                          scale=picto_scale, group_name = 'pictogram-topfive', group_style = pictogram_styles) %>%
-      add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']]) %>%
-      build_state_pictos() %>%
+                          scale=picto_scale[[lang]], group_name = 'pictogram-topfive', group_style = pictogram_styles, language=lang) %>%
+      add_mead_levels(mead_poly, mead_water_styles, mead_border_styles,mead_names[['group_id']], mead_names[['water_id']],mead_names[['border_id']], language=lang) %>%
+      build_state_pictos(scale=picto_scale[[lang]], language=lang) %>%
       add_sankey_lines()
     
     if (form.factor == 'mobile'){
