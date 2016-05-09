@@ -146,7 +146,8 @@
 	<mead-pictogram-legend-units-imperial>acre-feet</mead-pictogram-legend-units-imperial>
 	<mead-pictogram-legend-units-metric>million cubic meters</mead-pictogram-legend-units-metric>
 		
-	<mead-scene-units>acre-feet/year</mead-scene-units>
+	<mead-scene-units-imperial>acre-feet/year</mead-scene-units-imperial>
+	<mead-scene-units-metric>million cubic meters/year</mead-scene-units-metric>
 			
 	<Mexico-pictos-disclaimer>location of blue boxes does not represent location of water use.</Mexico-pictos-disclaimer>
 				
@@ -234,7 +235,7 @@
 	
 	<var-data-text-Mexico-shortage-3b>reductions may be offset under Minute 319).</var-data-text-Mexico-shortage-3b>
 	
-	<elevation>Elevation:</elevation>
+	<elevation>Elevation</elevation>
 	<maf>maf</maf>
 	<text-to-indicate-range-of-storage>to</text-to-indicate-range-of-storage>
 	

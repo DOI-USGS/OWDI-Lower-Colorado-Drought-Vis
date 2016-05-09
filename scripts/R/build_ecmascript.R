@@ -1,5 +1,7 @@
 ecmascript_mead_map <- function(language='en'){
+  
   ltl <- function(x) lt(x, lang=language)
+  flux.units <- ifelse(language=='en',ltl('mead-scene-units-imperial'),ltl('mead-scene-units-metric'))
   scripts <- c('function init(evt){',
                'if ( window.svgDocument == null ) {',
   'svgDocument = evt.target.ownerDocument;',
@@ -8,19 +10,19 @@ ecmascript_mead_map <- function(language='en'){
                'svgDocument.sceneNum = 0;',
                'svgDocument.drawRiver = this.scene1;}',
                '}',
-  'var elevations = {"flood":"> 1,200",
-"surplus":"1,145-1,200",
-  "normal":"1,075-1,145",
-  "shortage-1":"1,050-1,075",
-  "shortage-2":"1,025-1,050",
-  "shortage-3":"< 1,025"}
-  var storages = {"flood":"> 23.1",
-  "surplus":"16.2 to 23.1",
-  "normal":"9.6 to 16.2",
-  "shortage-1":"7.7 to 9.6",
-  "shortage-2":"6.0 to 7.7",
-  "shortage-3":"< 6.0"}
-  var conditions = ',
+  sprintf('var elevations = {"flood":"> %s",',ifelse(language=='en','1,200','365.8')),
+  sprintf('"surplus":"%s",',ifelse(language=='en','1,145-1,200','349-365.8')),
+  sprintf('"normal":"%s",',ifelse(language=='en',"1,075-1,145",'327.7-349')),
+  sprintf('"shortage-1":"%s",',ifelse(language=='en',"1,050-1,075",'320-327.7')),
+  sprintf('"shortage-2":"%s",',ifelse(language=='en',"1,025-1,050",'312.4-320')),
+  sprintf('"shortage-3":"< %s"}',ifelse(language=='en',"1,025",'312.4')),
+  sprintf('var storages = {"flood":"> %s",', ifelse(language=='en','23.1', '28,493')),
+  sprintf('"surplus":"%s",', ifelse(language=='en',"16.2 to 23.1", "19,982 to 28,493")),
+  sprintf('"normal":"%s",', ifelse(language=='en',"9.6 to 16.2", "11,841 to 19,982")),
+  sprintf('"shortage-1":"%s",', ifelse(language=='en',"7.7 to 9.6", "9,498 to 11,841")),
+  sprintf('"shortage-2":"%s",', ifelse(language=='en',"6.0 to 7.7", "7,401 to 9,498")),
+  sprintf('"shortage-3":"< %s"}', ifelse(language=='en',"6.0", "7,401")),
+  'var conditions = ',
   sprintf('{"flood":"%s",',ltl('var-condition-flood')), 
   sprintf('"surplus":"%s",',ltl('var-condition-surplus')),
   sprintf('"normal":"%s",',ltl('var-condition-normal')),
@@ -29,43 +31,45 @@ ecmascript_mead_map <- function(language='en'){
   sprintf('"shortage-3":"%s"}',ltl('var-condition-shortage-3')),
   'function displayAllocationName(evt, name) {
   var data = {"California":{',
-  sprintf('"flood":["4,400,000 acre-feet/year,","%s"],',ltl('var-data-text-Californnia-flood')),
-  sprintf('"surplus":["4,400,000 acre-feet/year,","%s"],',ltl('var-data-text-Californnia-surplus')),
-  sprintf('"normal":["4,400,000 acre-feet/year,","%s"],',ltl('var-data-text-Californnia-normal')),
-  '"shortage-1":["","4,400,000 acre-feet/year"],
-  "shortage-2":["","4,400,000 acre-feet/year"],
-  "shortage-3":["","4,400,000 acre-feet/year"]},
-  "Arizona":{',
-  sprintf('"flood":["2,800,000 acre-feet/year,","%s"],',ltl('var-data-text-Arizona-flood')),
-  sprintf('"surplus":["2,800,000 acre-feet/year,","%s"],',ltl('var-data-text-Arizona-surplus')),
-  sprintf('"normal":["2,800,000 acre-feet/year,","%s"],',ltl('var-data-text-Arizona-normal')),
-  sprintf('"shortage-1":["2,480,000 acre-feet/year,","%s"],',ltl('var-data-text-Arizona-shortage-1')),
-  sprintf('"shortage-2":["2,400,000 acre-feet/year,","%s"],',ltl('var-data-text-Arizona-shortage-2')),
-  sprintf('"shortage-3":["2,320,000 acre-feet/year,","%s"]},',ltl('var-data-text-Arizona-shortage-3')),
+  sprintf('"flood":["%s %s,","%s"],',ifelse(language=='en', '4,400,000', '5,427.3'),flux.units, ltl('var-data-text-Californnia-flood')),
+  sprintf('"surplus":["%s %s,","%s"],',ifelse(language=='en', '4,400,000', '5,427.3'),flux.units, ltl('var-data-text-Californnia-surplus')),
+  sprintf('"normal":["%s %s,","%s"],',ifelse(language=='en', '4,400,000', '5,427.3'),flux.units, ltl('var-data-text-Californnia-normal')),
+  sprintf('"shortage-1":["","%s %s"],',ifelse(language=='en', '4,400,000', '5,427.3'),flux.units),
+  sprintf('"shortage-2":["","%s %s"],',ifelse(language=='en', '4,400,000', '5,427.3'),flux.units),
+  sprintf('"shortage-3":["","%s %s"]},',ifelse(language=='en', '4,400,000', '5,427.3'),flux.units),
+  '"Arizona":{',
+  sprintf('"flood":["%s %s,","%s"],',ifelse(language=='en', '2,800,000', '3,453.7'),flux.units, ltl('var-data-text-Arizona-flood')),
+  sprintf('"surplus":["%s %s,","%s"],',ifelse(language=='en', '2,800,000', '3,453.7'),flux.units, ltl('var-data-text-Arizona-surplus')),
+  sprintf('"normal":["%s %s,","%s"],',ifelse(language=='en', '2,800,000', '3,453.7'),flux.units, ltl('var-data-text-Arizona-normal')),
+  sprintf('"shortage-1":["%s %s,","%s"],',ifelse(language=='en', '2,480,000', '3,059.0'),flux.units, ltl('var-data-text-Arizona-shortage-1')),#3059.0
+  sprintf('"shortage-2":["%s %s,","%s"],',ifelse(language=='en', '2,400,000', '2,960.0'),flux.units, ltl('var-data-text-Arizona-shortage-2')),#2960
+  sprintf('"shortage-3":["%s %s,","%s"]},',ifelse(language=='en', '2,320,000', '2,861.7'),flux.units, ltl('var-data-text-Arizona-shortage-3')), #2861.7 #2,320,000
   '"Nevada":{',
-  sprintf('"flood":["300,000 acre-feet/year,","%s"],',ltl('var-data-text-Nevada-flood')),
-  sprintf('"surplus":["300,000 acre-feet/year,","%s"],',ltl('var-data-text-Nevada-surplus')),
-  sprintf('"normal":["300,000 acre-feet/year,","%s"],',ltl('var-data-text-Nevada-normal')),
-  sprintf('"shortage-1":["287,000 acre-feet/year,","%s"],',ltl('var-data-text-Nevada-shortage-1')),
-  sprintf('"shortage-2":["283,000 acre-feet/year,","%s"],',ltl('var-data-text-Nevada-shortage-2')),
-  sprintf('"shortage-3":["280,000 acre-feet/year,","%s"]},',ltl('var-data-text-Nevada-shortage-3')),
-  '"Mexico":{
-  "flood":["","1,700,000 acre-feet/year."],',
-  sprintf('"surplus":["1,500,000 acre-feet/year,","%s"],',ltl('var-data-text-Mexico-surplus')),
-  sprintf('"normal":["1,500,000 acre-feet/year, %s","%s"],',ltl('var-data-text-Mexico-normala'),ltl('var-data-text-Mexico-normalb')),
-  sprintf('"shortage-1":["1,500,000 acre-feet/year, %s","%s"],',ltl('var-data-text-Mexico-shortage-1a'),ltl('var-data-text-Mexico-shortage-1b')),
-  sprintf('"shortage-2":["1,500,000 acre-feet/year, %s","%s"],',ltl('var-data-text-Mexico-shortage-2a'),ltl('var-data-text-Mexico-shortage-2b')),
-  sprintf('"shortage-3":["1,500,000 acre-feet/year, %s","%s"]}};',ltl('var-data-text-Mexico-shortage-3a'),ltl('var-data-text-Mexico-shortage-3b')),
+  sprintf('"flood":["%s %s,","%s"],', ifelse(language=='en', '300,000', '370.0'), flux.units, ltl('var-data-text-Nevada-flood')),
+  sprintf('"surplus":["%s %s,","%s"],',ifelse(language=='en', '300,000', '370.0'), flux.units, ltl('var-data-text-Nevada-surplus')),
+  sprintf('"normal":["%s %s,","%s"],',ifelse(language=='en', '300,000', '370.0'), flux.units, ltl('var-data-text-Nevada-normal')),
+  sprintf('"shortage-1":["%s %s,","%s"],',ifelse(language=='en', '287,000', '354.0'), flux.units, ltl('var-data-text-Nevada-shortage-1')), #287,000 354
+  sprintf('"shortage-2":["%s %s,","%s"],',ifelse(language=='en', '283,000', '349.1'), flux.units, ltl('var-data-text-Nevada-shortage-2')), #283,000
+  sprintf('"shortage-3":["%s %s,","%s"]},',ifelse(language=='en', '280,000', '345.4'), flux.units, ltl('var-data-text-Nevada-shortage-3')), #280,000
+  '"Mexico":{',
+  sprintf('"flood":["","%s %s."],',ifelse(language=='en', '1,700,000', '2,096.9'), flux.units), #2096.9
+  sprintf('"surplus":["%s %s,","%s"],',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-surplus')), #1850.2
+  sprintf('"normal":["%s %s,","%s"],',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-normala'),ltl('var-data-text-Mexico-normalb')),
+  sprintf('"shortage-1":["%s %s,","%s"],',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-shortage-1a'),ltl('var-data-text-Mexico-shortage-1b')),
+  sprintf('"shortage-2":["%s %s,","%s"],',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-shortage-2a'),ltl('var-data-text-Mexico-shortage-2b')),
+  sprintf('"shortage-3":["%s %s, %s","%s"]}};',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-shortage-3a'),ltl('var-data-text-Mexico-shortage-3b')),
   'var state = document.getElementById("allocation-state").firstChild.data
   document.getElementById("allocation-value-1").firstChild.data = name + ": " + data[name][state][0];
   document.getElementById("allocation-value-2").firstChild.data = data[name][state][1];
   document.getElementById("allocation-context").firstChild.data = " ";
   }
   function setMeadCondition(storage_id){
-  document.getElementById("allocation-state").firstChild.data = storage_id
-  document.getElementById("mead-storage-text").firstChild.data = storages[storage_id] + " maf"
-  document.getElementById("mead-elevation-text").firstChild.data = "Elevation: " + elevations[storage_id] + " feet"
-  document.getElementById("mead-condition-text").firstChild.data = conditions[storage_id]
+  document.getElementById("allocation-state").firstChild.data = storage_id',
+  sprintf('document.getElementById("mead-storage-text").firstChild.data = storages[storage_id] + " %s"', ifelse(language=='en','maf','mcm')),
+  sprintf('document.getElementById("mead-elevation-text").firstChild.data = "%s: " + elevations[storage_id] + " %s"',
+          ltl('elevation'),
+          ifelse(language=='en',ltl('unitsImperialElevation'),ltl('unitsMetricElevation'))),
+  'document.getElementById("mead-condition-text").firstChild.data = conditions[storage_id]
   }
   function showStateMouseovers(){
   document.getElementById("california-mouseovers").setAttribute("visibility","visbile");

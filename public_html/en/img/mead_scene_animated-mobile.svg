@@ -11,17 +11,17 @@ svgDocument.drawRiver = this.scene1;}
 }
 var elevations = {"flood":"> 1,200",
 "surplus":"1,145-1,200",
-  "normal":"1,075-1,145",
-  "shortage-1":"1,050-1,075",
-  "shortage-2":"1,025-1,050",
-  "shortage-3":"< 1,025"}
-  var storages = {"flood":"> 23.1",
-  "surplus":"16.2 to 23.1",
-  "normal":"9.6 to 16.2",
-  "shortage-1":"7.7 to 9.6",
-  "shortage-2":"6.0 to 7.7",
-  "shortage-3":"< 6.0"}
-  var conditions = 
+"normal":"1,075-1,145",
+"shortage-1":"1,050-1,075",
+"shortage-2":"1,025-1,050",
+"shortage-3":"< 1,025"}
+var storages = {"flood":"> 23.1",
+"surplus":"16.2 to 23.1",
+"normal":"9.6 to 16.2",
+"shortage-1":"7.7 to 9.6",
+"shortage-2":"6.0 to 7.7",
+"shortage-3":"< 6.0"}
+var conditions = 
 {"flood":"Flood Control Surplus",
 "surplus":"Quantified and Domestic Surplus",
 "normal":"Normal Condition",
@@ -34,9 +34,9 @@ function displayAllocationName(evt, name) {
 "surplus":["4,400,000 acre-feet/year,","plus surplus water."],
 "normal":["4,400,000 acre-feet/year,","plus or minus any ICS created or delivered."],
 "shortage-1":["","4,400,000 acre-feet/year"],
-  "shortage-2":["","4,400,000 acre-feet/year"],
-  "shortage-3":["","4,400,000 acre-feet/year"]},
-  "Arizona":{
+"shortage-2":["","4,400,000 acre-feet/year"],
+"shortage-3":["","4,400,000 acre-feet/year"]},
+"Arizona":{
 "flood":["2,800,000 acre-feet/year,","plus additional deliveries as requested."],
 "surplus":["2,800,000 acre-feet/year,","plus surplus water."],
 "normal":["2,800,000 acre-feet/year,","plus or minus any ICS created or delivered."],
@@ -51,11 +51,11 @@ function displayAllocationName(evt, name) {
 "shortage-2":["283,000 acre-feet/year,","(deliveries reduced by 17,000 acre-feet)."],
 "shortage-3":["280,000 acre-feet/year,","(deliveries reduced by 20,000 acre-feet)."]},
 "Mexico":{
-  "flood":["","1,700,000 acre-feet/year."],
+"flood":["","1,700,000 acre-feet/year."],
 "surplus":["1,500,000 acre-feet/year,","plus surplus water."],
-"normal":["1,500,000 acre-feet/year, plus or minus","any water deferred or delivered under Minute 319."],
-"shortage-1":["1,500,000 acre-feet/year, (deliveries reduced by","reductions may be offset under Minute 319)."],
-"shortage-2":["1,500,000 acre-feet/year, (deliveries reduced by","reductions may be offset under Minute 319)."],
+"normal":["1,500,000 acre-feet/year,","plus or minus"],
+"shortage-1":["1,500,000 acre-feet/year,","(deliveries reduced by"],
+"shortage-2":["1,500,000 acre-feet/year,","(deliveries reduced by"],
 "shortage-3":["1,500,000 acre-feet/year, (deliveries reduced by","reductions may be offset under Minute 319)."]}};
 var state = document.getElementById("allocation-state").firstChild.data
   document.getElementById("allocation-value-1").firstChild.data = name + ": " + data[name][state][0];
@@ -64,9 +64,9 @@ var state = document.getElementById("allocation-state").firstChild.data
   }
   function setMeadCondition(storage_id){
   document.getElementById("allocation-state").firstChild.data = storage_id
-  document.getElementById("mead-storage-text").firstChild.data = storages[storage_id] + " maf"
-  document.getElementById("mead-elevation-text").firstChild.data = "Elevation: " + elevations[storage_id] + " feet"
-  document.getElementById("mead-condition-text").firstChild.data = conditions[storage_id]
+document.getElementById("mead-storage-text").firstChild.data = storages[storage_id] + " maf"
+document.getElementById("mead-elevation-text").firstChild.data = "Elevation: " + elevations[storage_id] + " feet"
+document.getElementById("mead-condition-text").firstChild.data = conditions[storage_id]
   }
   function showStateMouseovers(){
   document.getElementById("california-mouseovers").setAttribute("visibility","visbile");
@@ -793,7 +793,7 @@ var state = document.getElementById("allocation-state").firstChild.data
   </g>
   <g id="allocation-picto-highlight-3" class="hidden" stroke="none" fill="yellow">
     <rect x="199" y="220" width="56" height="14" rx="3" ry="3"/>
-    <rect x="269" y="200" width="14" height="14" rx="3" ry="3"/>
+    <rect x="269" y="206" width="14" height="14" rx="3" ry="3"/>
     <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
   </g>
   <g id="allocation-picto-highlight-2" class="hidden" stroke="none" fill="yellow">
