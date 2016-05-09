@@ -10,8 +10,13 @@ build_state_pictos <- function(svg, scale=100000, language){
   
   newXMLNode('rect',parent=g_id,
              attrs=c(x="199", y="220", width="56", height="14", rx="3", ry="3"))
-  newXMLNode('rect',parent=g_id,
-             attrs=c(x="269", y="200", width="14", height="14", rx="3", ry="3"))
+  if (language == 'es'){
+    newXMLNode('rect',parent=g_id,
+               attrs=c(x="255", y="206", width="28", height="14", rx="3", ry="3"))
+  } else {
+    newXMLNode('rect',parent=g_id,
+               attrs=c(x="269", y="206", width="14", height="14", rx="3", ry="3"))
+  }
   newXMLNode('rect',parent=g_id,
              attrs=c(x="157", y="104", width="14", height="14", rx="3", ry="3"))
   
@@ -21,6 +26,10 @@ build_state_pictos <- function(svg, scale=100000, language){
              attrs=c(x="199", y="220", width="56", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
              attrs=c(x="157", y="104", width="14", height="14", rx="3", ry="3"))
+  if (language == 'es'){
+    newXMLNode('rect',parent=g_id,
+               attrs=c(x="269", y="206", width="14", height="14", rx="3", ry="3"))
+  }
   
   g_id <- newXMLNode('g',parent=root_nd,
                      attrs=c(id="allocation-picto-highlight-1", class='hidden', stroke="none", fill="yellow"))
@@ -175,8 +184,15 @@ add_arizona <- function(root_nd,scale, language){
   y_start = 204
   
   y = block_picto(AR_id,x=x_start,y=y_start,number=4, 'fill'='none')
-  block_picto(AR_id,x=x_start+14*5,y=y,number=1, 'fill'='none')
-  y = block_picto(AR_id,x=x_start,y=y,number=5)
+  if (language == 'es'){
+    block_picto(AR_id,x=x_start+14*4,y=y,number=2, 'fill'='none')
+    y = block_picto(AR_id,x=x_start,y=y,number=4)
+  } else {
+    block_picto(AR_id,x=x_start+14*5,y=y,number=1, 'fill'='none')
+    y = block_picto(AR_id,x=x_start,y=y,number=5)
+  }
+  
+  
   y = block_picto(AR_id,x=x_start,y=y,number=6)
   y = block_picto(AR_id,x=x_start,y=y,number=6)
   y = block_picto(AR_id,x=x_start,y=y,number=6)
@@ -211,12 +227,25 @@ add_arizona <- function(root_nd,scale, language){
   AR <- newXMLNode('g', parent=AR_id,
                    attrs = c('id'='Arizona-pictos-shortage2',class='shown'))
   
-  block_picto(AR,x=x_start,y=y_start,number=1,rx="0",ry="0", perc_full = 0,'stroke'='none')
-  block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
-
+  if (language == 'es'){
+    block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0", perc_full = 60.35,'stroke'='none')
+    block_picto(AR,x=x_start+14*4,y=y_start-14,number=1,rx="0",ry="0", perc_full = 100,'stroke'='none')
+  } else {
+    block_picto(AR,x=x_start,y=y_start,number=1,rx="0",ry="0", perc_full = 0,'stroke'='none')
+    block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
+  }
+  
+  # 28.6168 if es
   AR <- newXMLNode('g', parent=AR_id,
                    attrs = c('id'='Arizona-pictos-shortage3',class='shown'))
-  block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0", perc_full = (1-80000/scale)*100,'stroke'='none')
+  if (language == 'es'){
+    block_picto(AR,x=x_start+14*4,y=y_start-14,number=1,rx="0",ry="0", perc_full = 61.68,'stroke'='none')
+  } else {
+    block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0", perc_full = (1-80000/scale)*100,'stroke'='none')
+  }
+  
+  
+  
   m_id = newXMLNode('g', parent=AR_id,
                     attrs = c('id'='arizona-mouseovers', opacity='0', visibility='hidden'))
   newXMLNode('rect',parent=m_id,
