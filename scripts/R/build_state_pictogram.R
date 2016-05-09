@@ -4,12 +4,12 @@ build_state_pictos <- function(svg, scale=100000, language){
   picto_lw <<- '1.5'
   root_nd <- xmlRoot(svg)
   
-  add_california(root_nd,scale, language)
+  add_california(root_nd, scale, language)
   g_id <- newXMLNode('g',parent=root_nd,
              attrs=c(id="allocation-picto-highlight-3", class='hidden', stroke="none", fill="yellow"))
   
   newXMLNode('rect',parent=g_id,
-             attrs=c(x="199", y="214", width="56", height="14", rx="3", ry="3"))
+             attrs=c(x="199", y="220", width="56", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
              attrs=c(x="269", y="200", width="14", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
@@ -18,19 +18,19 @@ build_state_pictos <- function(svg, scale=100000, language){
   g_id <- newXMLNode('g',parent=root_nd,
                      attrs=c(id="allocation-picto-highlight-2", class='hidden', stroke="none", fill="yellow"))
   newXMLNode('rect',parent=g_id,
-             attrs=c(x="199", y="214", width="56", height="14", rx="3", ry="3"))
+             attrs=c(x="199", y="220", width="56", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
              attrs=c(x="157", y="104", width="14", height="14", rx="3", ry="3"))
   
   g_id <- newXMLNode('g',parent=root_nd,
                      attrs=c(id="allocation-picto-highlight-1", class='hidden', stroke="none", fill="yellow"))
   newXMLNode('rect',parent=g_id,
-             attrs=c(x="199", y="214", width="56", height="14", rx="3", ry="3"))
+             attrs=c(x="199", y="220", width="56", height="14", rx="3", ry="3"))
   newXMLNode('rect',parent=g_id,
              attrs=c(x="157", y="104", width="14", height="14", rx="3", ry="3"))
   
-  add_nevada(root_nd,scale)
-  add_arizona(root_nd,scale)
+  add_nevada(root_nd,scale, language=language)
+  add_arizona(root_nd,scale, language=language)
   add_mexico(root_nd,scale, language=language)
 
   invisible(svg)
@@ -55,37 +55,66 @@ block_picto <- function(parent, x, y, rx='2',ry='2',number,width = 10, height=10
   invisible(y-(bin_full+bin_buffer))
 }
 
-add_nevada <- function(root_nd,scale){
+add_nevada <- function(root_nd,scale, language){
+  
+  # for es, 3.7 mcm
   # nevada - 3
   NV_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='Nevada-pictos','stroke'='#1975d1','stroke-width'=picto_lw,'fill'='#1975d1',class='hidden'))
   y_start = 102
   x_start = 157
   y = block_picto(NV_id,x=x_start,y=y_start,number=1)
-  block_picto(NV_id,x=x_start-14,y=y,number=1)
+  if (language=='es'){
+    block_picto(NV_id,x=x_start+14,y=y+14,number=1)
+  } 
   block_picto(NV_id,x=x_start,y=y,number=1,'fill'='none')
+  block_picto(NV_id,x=x_start-14,y=y,number=1)
   
   NV_nrm <- newXMLNode('g', parent=NV_id,
                        attrs = c('id'='Nevada-pictos-normal',class='shown'))
   # -- full bucket, then partials
-  block_picto(NV_nrm,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
-  
+  if (language=='es'){
+    block_picto(NV_nrm,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = 70.04,'stroke'='none')
+  } else {
+    block_picto(NV_nrm,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
+  }
   NV_srt <- newXMLNode('g', parent=NV_id,
                        attrs = c('id'='Nevada-pictos-shortage1',class='shown'))
-  block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-13000/scale)*100,'stroke'='none')
+  if (language=='es'){
+    block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = 54.01,'stroke'='none')
+  } else {
+    block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-13000/scale)*100,'stroke'='none')
+  }
+  
   
   NV_srt <- newXMLNode('g', parent=NV_id,
                        attrs = c('id'='Nevada-pictos-shortage2',class='shown'))
-  block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-17000/scale)*100,'stroke'='none')
+  
+  if (language=='es'){
+    block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = 49.08,'stroke'='none')
+  } else {
+    block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-17000/scale)*100,'stroke'='none')
+  }
   NV_srt <- newXMLNode('g', parent=NV_id,
                        attrs = c('id'='Nevada-pictos-shortage3',class='shown'))
-  block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-20000/scale)*100,'stroke'='none')
+  
+  if (language=='es'){
+    block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = 45.37,'stroke'='none')
+  } else {
+    block_picto(NV_srt,x=x_start,y=y,number=1,rx="0",ry="0",perc_full = (1-20000/scale)*100,'stroke'='none')
+  }
   
   m_id = newXMLNode('g', parent=NV_id,
                     attrs = c('id'='nevada-mouseovers', opacity='0', visibility='hidden'))
-  newXMLNode('rect',parent=m_id,
-             attrs=c(x="143", y="104", width="28", height='28', onmouseover="displayAllocationName(evt,'Nevada');highlightState(evt,'Nevada')",
-                     onmouseout="hideAllocationName(evt);lowlightState(evt,'Nevada')"))
+  if (language=='es'){
+    newXMLNode('rect',parent=m_id,
+               attrs=c(x=x_start-14, y="104", width="42", height='28', onmouseover="displayAllocationName(evt,'Nevada');highlightState(evt,'Nevada')",
+                       onmouseout="hideAllocationName(evt);lowlightState(evt,'Nevada')"))
+  } else {
+    newXMLNode('rect',parent=m_id,
+               attrs=c(x=x_start-14, y="104", width="28", height='28', onmouseover="displayAllocationName(evt,'Nevada');highlightState(evt,'Nevada')",
+                       onmouseout="hideAllocationName(evt);lowlightState(evt,'Nevada')"))
+  }
 }
 
 add_california <- function(root_nd,scale, language){
@@ -137,32 +166,51 @@ add_california <- function(root_nd,scale, language){
   
 }
 
-add_arizona <- function(root_nd,scale){
+add_arizona <- function(root_nd,scale, language){
   # arizona - 28
+  # if es, 34.5475
   AR_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='Arizona-pictos','stroke'='#1975d1','stroke-width'=picto_lw,'fill'='#1975d1',class='hidden'))
   x_start = 199
-  y_start = 198
+  y_start = 204
+  
   y = block_picto(AR_id,x=x_start,y=y_start,number=4, 'fill'='none')
   block_picto(AR_id,x=x_start+14*5,y=y,number=1, 'fill'='none')
   y = block_picto(AR_id,x=x_start,y=y,number=5)
   y = block_picto(AR_id,x=x_start,y=y,number=6)
   y = block_picto(AR_id,x=x_start,y=y,number=6)
-  block_picto(AR_id,x=x_start,y=y,number=6)
+  y = block_picto(AR_id,x=x_start,y=y,number=6)
+  if (language =='es'){
+    y = block_picto(AR_id,x=x_start,y=y,number=6)
+  }
   
   AR <- newXMLNode('g', parent=AR_id,
                        attrs = c('id'='Arizona-pictos-normal',class='shown'))
   # -- full bucket, then partials
-  block_picto(AR,x=x_start,y=y_start,number=4,rx="0",ry="0",perc_full = 100,'stroke'='none')
+  if (language == 'es'){
+    block_picto(AR,x=x_start,y=y_start,number=3,rx="0",ry="0",perc_full = 100,'stroke'='none')
+    block_picto(AR,x=x_start+3*14,y=y_start,number=1,rx="0",ry="0",perc_full = 54.75,'stroke'='none')
+  } else {
+    block_picto(AR,x=x_start,y=y_start,number=4,rx="0",ry="0",perc_full = 100,'stroke'='none')
+  }
+  
   block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
   
   AR <- newXMLNode('g', parent=AR_id,
                       attrs = c('id'='Arizona-pictos-shortage1',class='shown'))
-  block_picto(AR,x=x_start,y=y_start,number=1,rx="0",ry="0", perc_full = (1-20000/scale)*100,'stroke'='none')
+  # 30.5903
+  if (language == 'es'){
+    block_picto(AR,x=x_start,y=y_start,number=1,rx="0",ry="0", perc_full = 59.03,'stroke'='none')
+  } else {
+    block_picto(AR,x=x_start,y=y_start,number=1,rx="0",ry="0", perc_full = (1-20000/scale)*100,'stroke'='none')
+  }
+  
   block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
   
+  # 29.6035 if es
   AR <- newXMLNode('g', parent=AR_id,
                    attrs = c('id'='Arizona-pictos-shortage2',class='shown'))
+  
   block_picto(AR,x=x_start,y=y_start,number=1,rx="0",ry="0", perc_full = 0,'stroke'='none')
   block_picto(AR,x=x_start+14*5,y=y_start-14,number=1,rx="0",ry="0",perc_full = 100,'stroke'='none')
 
@@ -178,6 +226,7 @@ add_arizona <- function(root_nd,scale){
 
 add_mexico <- function(root_nd,scale,language){
   # mexico- 15
+  # for es, 18.5022 blocks
   MX_id <- newXMLNode('g', parent=root_nd,
                       attrs = c('id'='Mexico-pictos','stroke'='#1975d1','stroke-width'=picto_lw,'fill'='#1975d1',class='hidden'))
   txt_id <- newXMLNode('text', parent = MX_id, 
@@ -190,11 +239,16 @@ add_mexico <- function(root_nd,scale,language){
   y = block_picto(MX_id,x=x_start+28,y=y_start,number=6)
   y = block_picto(MX_id,x=x_start,y=y,number=5)
   y = block_picto(MX_id,x=x_start,y=y,number=4)
+  if (language == 'es'){
+    block_picto(MX_id,x=x_start+42,y=y_start+14,number=3)
+    block_picto(MX_id,x=x_start+84,y=y_start+14,number=1,rx="0",ry="0",perc_full = 50.22,'stroke'='none')
+    block_picto(MX_id,x=x_start+84,y=y_start+14,number=1, perc_full = 100,'fill'='none')
+  }
   
   MX <- newXMLNode('g', parent=MX_id,
                    attrs = c('id'='Mexico-pictos-normal',class='shown'))
 #   # -- full bucket, then partials
-   block_picto(MX,x=x_start+14*6,y=y_start,number=2,rx="0",ry="0",perc_full = 100,'stroke'='none')
+   #
 
   
   m_id = newXMLNode('g', parent=MX_id,
@@ -205,5 +259,9 @@ add_mexico <- function(root_nd,scale,language){
   newXMLNode('rect',parent=m_id,
              attrs=c(x="98", y="270", width="84", height='14', onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')",
                      onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"))
-  
+  if (language == 'es'){
+    newXMLNode('rect',parent=m_id,
+               attrs=c(x="112", y="284", width="56", height='14', onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')",
+                       onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"))
+  }
 }

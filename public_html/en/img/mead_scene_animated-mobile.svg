@@ -792,22 +792,22 @@ var state = document.getElementById("allocation-state").firstChild.data
     </g>
   </g>
   <g id="allocation-picto-highlight-3" class="hidden" stroke="none" fill="yellow">
-    <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
+    <rect x="199" y="220" width="56" height="14" rx="3" ry="3"/>
     <rect x="269" y="200" width="14" height="14" rx="3" ry="3"/>
     <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
   </g>
   <g id="allocation-picto-highlight-2" class="hidden" stroke="none" fill="yellow">
-    <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
+    <rect x="199" y="220" width="56" height="14" rx="3" ry="3"/>
     <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
   </g>
   <g id="allocation-picto-highlight-1" class="hidden" stroke="none" fill="yellow">
-    <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
+    <rect x="199" y="220" width="56" height="14" rx="3" ry="3"/>
     <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
   </g>
   <g id="Nevada-pictos" stroke="#1975d1" stroke-width="1.5" fill="#1975d1" class="hidden">
     <rect x="159" y="120" width="10" height="10" rx="2" ry="2"/>
-    <rect x="145" y="106" width="10" height="10" rx="2" ry="2"/>
     <rect x="159" y="106" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="145" y="106" width="10" height="10" rx="2" ry="2"/>
     <g id="Nevada-pictos-normal" class="shown">
       <rect x="159" y="106" width="10" height="10" rx="0" ry="0" stroke="none"/>
     </g>
@@ -825,51 +825,51 @@ var state = document.getElementById("allocation-state").firstChild.data
     </g>
   </g>
   <g id="Arizona-pictos" stroke="#1975d1" stroke-width="1.5" fill="#1975d1" class="hidden">
-    <rect x="201" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
-    <rect x="215" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
-    <rect x="229" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
-    <rect x="243" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
-    <rect x="271" y="202" width="10" height="10" rx="2" ry="2" fill="none"/>
-    <rect x="201" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="160" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="222" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="215" y="222" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="229" y="222" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="243" y="222" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="271" y="208" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="201" y="208" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="208" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="208" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="208" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="208" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="194" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="194" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="194" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="194" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="194" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="194" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="180" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="180" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="180" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="180" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="180" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="180" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="166" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="166" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="166" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="166" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="166" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="166" width="10" height="10" rx="2" ry="2"/>
     <g id="Arizona-pictos-normal" class="shown">
-      <rect x="201" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
-      <rect x="215" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
-      <rect x="229" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
-      <rect x="243" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
-      <rect x="271" y="202" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="201" y="222" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="215" y="222" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="229" y="222" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="243" y="222" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="271" y="208" width="10" height="10" rx="0" ry="0" stroke="none"/>
     </g>
     <g id="Arizona-pictos-shortage1" class="shown">
-      <rect x="201" y="218" width="10" height="8" rx="0" ry="0" stroke="none"/>
-      <rect x="271" y="202" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="201" y="224" width="10" height="8" rx="0" ry="0" stroke="none"/>
+      <rect x="271" y="208" width="10" height="10" rx="0" ry="0" stroke="none"/>
     </g>
     <g id="Arizona-pictos-shortage2" class="shown">
-      <rect x="201" y="226" width="10" height="0" rx="0" ry="0" stroke="none"/>
-      <rect x="271" y="202" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="201" y="232" width="10" height="0" rx="0" ry="0" stroke="none"/>
+      <rect x="271" y="208" width="10" height="10" rx="0" ry="0" stroke="none"/>
     </g>
     <g id="Arizona-pictos-shortage3" class="shown">
-      <rect x="271" y="210" width="10" height="2" rx="0" ry="0" stroke="none"/>
+      <rect x="271" y="216" width="10" height="2" rx="0" ry="0" stroke="none"/>
     </g>
     <g id="arizona-mouseovers" opacity="0" visibility="hidden">
       <rect x="199" y="158" width="84" height="70" onmouseover="displayAllocationName(evt,'Arizona');highlightState(evt,'Arizona')" onmouseout="hideAllocationName(evt);lowlightState(evt,'Arizona')"/>
@@ -896,10 +896,7 @@ var state = document.getElementById("allocation-state").firstChild.data
     <rect x="86" y="244" width="10" height="10" rx="2" ry="2"/>
     <rect x="100" y="244" width="10" height="10" rx="2" ry="2"/>
     <rect x="114" y="244" width="10" height="10" rx="2" ry="2"/>
-    <g id="Mexico-pictos-normal" class="shown">
-      <rect x="156" y="272" width="10" height="10" rx="0" ry="0" stroke="none"/>
-      <rect x="170" y="272" width="10" height="10" rx="0" ry="0" stroke="none"/>
-    </g>
+    <g id="Mexico-pictos-normal" class="shown"/>
     <g id="mexico-mouseovers" opacity="0" visibility="hidden">
       <rect x="70" y="242" width="70" height="28" onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')" onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"/>
       <rect x="98" y="270" width="84" height="14" onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')" onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"/>

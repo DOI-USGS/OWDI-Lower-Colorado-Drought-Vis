@@ -522,7 +522,7 @@ var state = document.getElementById("allocation-state").firstChild.data
     <rect x="150" y="270" width="130" height="45" stroke="#FFFFFF" fill="none"/>
     <text class="legend-text" x="215" y="278" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: middle;">***mead-pictogram-legend***</text>
     <rect x="156" y="300" width="10" height="10" rx="2" ry="2" fill="#1975d1" stroke="#1975d1" stroke-width="1.5"/>
-    <text class="small-text" x="175" y="300" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: left;">XYZ ***mead-pictogram-legend-units-metric***</text>
+    <text class="small-text" x="175" y="300" fill="#FFFFFF" dy="0.7em" stroke="none" style="text-anchor: left;">100 ***mead-pictogram-legend-units-metric***</text>
   </g>
   <g id="pictogram-topfive" fill="none" stroke-width="2.5" stroke="#FFFFFF" class="hidden">
     <g transform="translate(25.0,680.0)">
@@ -534,7 +534,7 @@ var state = document.getElementById("allocation-state").firstChild.data
       <text id="y-pictogram-label" x="-15" y="-97" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;" transform="rotate(-90,-15,-97.5),translate(280,0)">***y-pictogram-label***</text>
     </g>
     <g id="picto-usage-parent-1" transform="translate(25.0,486.0)">
-      <rect x="0" y="-380" width="14" height="378" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-1"/>
+      <rect x="0" y="-478" width="14" height="476" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-1"/>
       <g id="picto-usage-1" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
         <rect x="2" y="-14" width="10" height="10" rx="2" ry="2"/>
         <rect x="2" y="-28" width="10" height="10" rx="2" ry="2"/>
@@ -562,13 +562,20 @@ var state = document.getElementById("allocation-state").firstChild.data
         <rect x="2" y="-336" width="10" height="10" rx="2" ry="2"/>
         <rect x="2" y="-350" width="10" height="10" rx="2" ry="2"/>
         <rect x="2" y="-364" width="10" height="10" rx="2" ry="2"/>
-        <rect x="2" y="-377.0572" width="10" height="9.05719999999999" rx="0" ry="0" stroke="none"/>
-        <rect x="2" y="-378" width="10" height="10" rx="2" ry="2" fill="none"/>
+        <rect x="2" y="-378" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-392" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-406" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-420" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-434" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-448" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-462" width="10" height="10" rx="2" ry="2"/>
+        <rect x="2" y="-467.877207855652" width="10" height="1.87720785565205" rx="0" ry="0" stroke="none"/>
+        <rect x="2" y="-476" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-1" x="0" y="-380" width="14" height="378" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Imperial Irrigation District');displayPictoValue(evt, '2,690,572 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-1').setAttribute('opacity','0.8');document.getElementById('usage-1').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-1').setAttribute('opacity','0.0');document.getElementById('usage-1').setAttribute('opacity','0.0');"/>
+      <rect id="picto-1" x="0" y="-478" width="14" height="476" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Imperial Irrigation District');displayPictoValue(evt, '3,319 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-1').setAttribute('opacity','0.8');document.getElementById('usage-1').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-1').setAttribute('opacity','0.0');document.getElementById('usage-1').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-2" transform="translate(25.0,486.0)">
-      <rect x="14" y="-240" width="14" height="238" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-2"/>
+      <rect x="14" y="-296" width="14" height="294" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-2"/>
       <g id="picto-usage-2" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
         <rect x="16" y="-14" width="10" height="10" rx="2" ry="2"/>
         <rect x="16" y="-28" width="10" height="10" rx="2" ry="2"/>
@@ -586,13 +593,17 @@ var state = document.getElementById("allocation-state").firstChild.data
         <rect x="16" y="-196" width="10" height="10" rx="2" ry="2"/>
         <rect x="16" y="-210" width="10" height="10" rx="2" ry="2"/>
         <rect x="16" y="-224" width="10" height="10" rx="2" ry="2"/>
-        <rect x="16" y="-231.7163" width="10" height="3.7163" rx="0" ry="0" stroke="none"/>
-        <rect x="16" y="-238" width="10" height="10" rx="2" ry="2" fill="none"/>
+        <rect x="16" y="-238" width="10" height="10" rx="2" ry="2"/>
+        <rect x="16" y="-252" width="10" height="10" rx="2" ry="2"/>
+        <rect x="16" y="-266" width="10" height="10" rx="2" ry="2"/>
+        <rect x="16" y="-280" width="10" height="10" rx="2" ry="2"/>
+        <rect x="16" y="-285.941105922675" width="10" height="1.94110592267474" rx="0" ry="0" stroke="none"/>
+        <rect x="16" y="-294" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-2" x="14" y="-240" width="14" height="238" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Central Arizona Water Conservation District');displayPictoValue(evt, '1,637,163 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-2').setAttribute('opacity','0.8');document.getElementById('usage-2').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-2').setAttribute('opacity','0.0');document.getElementById('usage-2').setAttribute('opacity','0.0');"/>
+      <rect id="picto-2" x="14" y="-296" width="14" height="294" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Central Arizona Water Conservation District');displayPictoValue(evt, '2,019 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-2').setAttribute('opacity','0.8');document.getElementById('usage-2').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-2').setAttribute('opacity','0.0');document.getElementById('usage-2').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-3" transform="translate(25.0,486.0)">
-      <rect x="28" y="-142" width="14" height="140" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-3"/>
+      <rect x="28" y="-170" width="14" height="168" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-3"/>
       <g id="picto-usage-3" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
         <rect x="30" y="-14" width="10" height="10" rx="2" ry="2"/>
         <rect x="30" y="-28" width="10" height="10" rx="2" ry="2"/>
@@ -603,122 +614,128 @@ var state = document.getElementById("allocation-state").firstChild.data
         <rect x="30" y="-98" width="10" height="10" rx="2" ry="2"/>
         <rect x="30" y="-112" width="10" height="10" rx="2" ry="2"/>
         <rect x="30" y="-126" width="10" height="10" rx="2" ry="2"/>
-        <rect x="30" y="-134.4644" width="10" height="4.46440000000001" rx="0" ry="0" stroke="none"/>
-        <rect x="30" y="-140" width="10" height="10" rx="2" ry="2" fill="none"/>
+        <rect x="30" y="-140" width="10" height="10" rx="2" ry="2"/>
+        <rect x="30" y="-154" width="10" height="10" rx="2" ry="2"/>
+        <rect x="30" y="-164.520135174823" width="10" height="6.52013517482326" rx="0" ry="0" stroke="none"/>
+        <rect x="30" y="-168" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-3" x="28" y="-142" width="14" height="140" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Metropolitan Water District Of Southern California');displayPictoValue(evt, '944,644 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-3').setAttribute('opacity','0.8');document.getElementById('usage-3').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-3').setAttribute('opacity','0.0');document.getElementById('usage-3').setAttribute('opacity','0.0');"/>
+      <rect id="picto-3" x="28" y="-170" width="14" height="168" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Metropolitan Water District Of Southern California');displayPictoValue(evt, '1,165 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-3').setAttribute('opacity','0.8');document.getElementById('usage-3').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-3').setAttribute('opacity','0.0');document.getElementById('usage-3').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-4" transform="translate(25.0,486.0)">
-      <rect x="42" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-4"/>
+      <rect x="42" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-4"/>
       <g id="picto-usage-4" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
         <rect x="44" y="-14" width="10" height="10" rx="2" ry="2"/>
         <rect x="44" y="-28" width="10" height="10" rx="2" ry="2"/>
         <rect x="44" y="-42" width="10" height="10" rx="2" ry="2"/>
-        <rect x="44" y="-52.2061" width="10" height="6.2061" rx="0" ry="0" stroke="none"/>
-        <rect x="44" y="-56" width="10" height="10" rx="2" ry="2" fill="none"/>
+        <rect x="44" y="-56" width="10" height="10" rx="2" ry="2"/>
+        <rect x="44" y="-64.6595719250127" width="10" height="4.65957192501269" rx="0" ry="0" stroke="none"/>
+        <rect x="44" y="-70" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-4" x="42" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Palo Verde Irrigation District');displayPictoValue(evt, '362,061 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-4').setAttribute('opacity','0.8');document.getElementById('usage-4').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-4').setAttribute('opacity','0.0');document.getElementById('usage-4').setAttribute('opacity','0.0');"/>
+      <rect id="picto-4" x="42" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Palo Verde Irrigation District');displayPictoValue(evt, '447 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-4').setAttribute('opacity','0.8');document.getElementById('usage-4').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-4').setAttribute('opacity','0.0');document.getElementById('usage-4').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-5" transform="translate(25.0,486.0)">
-      <rect x="56" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-5"/>
+      <rect x="56" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-5"/>
       <g id="picto-usage-5" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
         <rect x="58" y="-14" width="10" height="10" rx="2" ry="2"/>
         <rect x="58" y="-28" width="10" height="10" rx="2" ry="2"/>
         <rect x="58" y="-42" width="10" height="10" rx="2" ry="2"/>
-        <rect x="58" y="-50.2636" width="10" height="4.2636" rx="0" ry="0" stroke="none"/>
-        <rect x="58" y="-56" width="10" height="10" rx="2" ry="2" fill="none"/>
+        <rect x="58" y="-56" width="10" height="10" rx="2" ry="2"/>
+        <rect x="58" y="-62.2635331783833" width="10" height="2.26353317838333" rx="0" ry="0" stroke="none"/>
+        <rect x="58" y="-70" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-5" x="56" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Colorado River Indian Tribes');displayPictoValue(evt, '342,636 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-5').setAttribute('opacity','0.8');document.getElementById('usage-5').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-5').setAttribute('opacity','0.0');document.getElementById('usage-5').setAttribute('opacity','0.0');"/>
+      <rect id="picto-5" x="56" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Colorado River Indian Tribes');displayPictoValue(evt, '423 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-5').setAttribute('opacity','0.8');document.getElementById('usage-5').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-5').setAttribute('opacity','0.0');document.getElementById('usage-5').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-6" transform="translate(25.0,486.0)">
-      <rect x="70" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-6"/>
+      <rect x="70" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-6"/>
       <g id="picto-usage-6" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
         <rect x="72" y="-14" width="10" height="10" rx="2" ry="2"/>
         <rect x="72" y="-28" width="10" height="10" rx="2" ry="2"/>
         <rect x="72" y="-42" width="10" height="10" rx="2" ry="2"/>
-        <rect x="72" y="-48.5115" width="10" height="2.5115" rx="0" ry="0" stroke="none"/>
-        <rect x="72" y="-56" width="10" height="10" rx="2" ry="2" fill="none"/>
+        <rect x="72" y="-56" width="10" height="10" rx="2" ry="2"/>
+        <rect x="72" y="-60.102349400793" width="10" height="0.102349400792958" rx="0" ry="0" stroke="none"/>
+        <rect x="72" y="-70" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-6" x="70" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Coachella Valley Water District');displayPictoValue(evt, '325,115 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-6').setAttribute('opacity','0.8');document.getElementById('usage-6').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-6').setAttribute('opacity','0.0');document.getElementById('usage-6').setAttribute('opacity','0.0');"/>
+      <rect id="picto-6" x="70" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Coachella Valley Water District');displayPictoValue(evt, '401 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-6').setAttribute('opacity','0.8');document.getElementById('usage-6').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-6').setAttribute('opacity','0.0');document.getElementById('usage-6').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-7" transform="translate(25.0,486.0)">
-      <rect x="84" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-7"/>
+      <rect x="84" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-7"/>
       <g id="picto-usage-7" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
         <rect x="86" y="-14" width="10" height="10" rx="2" ry="2"/>
         <rect x="86" y="-28" width="10" height="10" rx="2" ry="2"/>
-        <rect x="86" y="-37.0159" width="10" height="5.0159" rx="0" ry="0" stroke="none"/>
-        <rect x="86" y="-42" width="10" height="10" rx="2" ry="2" fill="none"/>
+        <rect x="86" y="-42" width="10" height="10" rx="2" ry="2"/>
+        <rect x="86" y="-46.8566618696552" width="10" height="0.856661869655246" rx="0" ry="0" stroke="none"/>
+        <rect x="86" y="-56" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-7" x="84" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Wellton-Mohawk Irrigation And Drainage District');displayPictoValue(evt, '250,159 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-7').setAttribute('opacity','0.8');document.getElementById('usage-7').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-7').setAttribute('opacity','0.0');document.getElementById('usage-7').setAttribute('opacity','0.0');"/>
+      <rect id="picto-7" x="84" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Wellton-Mohawk Irrigation And Drainage District');displayPictoValue(evt, '309 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-7').setAttribute('opacity','0.8');document.getElementById('usage-7').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-7').setAttribute('opacity','0.0');document.getElementById('usage-7').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-8" transform="translate(25.0,486.0)">
       <rect x="98" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-8"/>
       <g id="picto-usage-8" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
         <rect x="100" y="-14" width="10" height="10" rx="2" ry="2"/>
         <rect x="100" y="-28" width="10" height="10" rx="2" ry="2"/>
-        <rect x="100" y="-35.7301" width="10" height="3.7301" rx="0" ry="0" stroke="none"/>
+        <rect x="100" y="-41.2706507394539" width="10" height="9.27065073945395" rx="0" ry="0" stroke="none"/>
         <rect x="100" y="-42" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-8" x="98" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma County Water Users\' Association');displayPictoValue(evt, '237,301 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-8').setAttribute('opacity','0.8');document.getElementById('usage-8').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-8').setAttribute('opacity','0.0');document.getElementById('usage-8').setAttribute('opacity','0.0');"/>
+      <rect id="picto-8" x="98" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma County Water Users\' Association');displayPictoValue(evt, '293 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-8').setAttribute('opacity','0.8');document.getElementById('usage-8').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-8').setAttribute('opacity','0.0');document.getElementById('usage-8').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-9" transform="translate(25.0,486.0)">
       <rect x="112" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-9"/>
       <g id="picto-usage-9" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
         <rect x="114" y="-14" width="10" height="10" rx="2" ry="2"/>
         <rect x="114" y="-28" width="10" height="10" rx="2" ry="2"/>
-        <rect x="114" y="-34.316" width="10" height="2.316" rx="0" ry="0" stroke="none"/>
+        <rect x="114" y="-39.526383871187" width="10" height="7.52638387118699" rx="0" ry="0" stroke="none"/>
         <rect x="114" y="-42" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-9" x="112" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Southern Nevada Water Authority And Other Users (Nv)');displayPictoValue(evt, '223,160 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-9').setAttribute('opacity','0.8');document.getElementById('usage-9').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-9').setAttribute('opacity','0.0');document.getElementById('usage-9').setAttribute('opacity','0.0');"/>
+      <rect id="picto-9" x="112" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Southern Nevada Water Authority And Other Users (Nv)');displayPictoValue(evt, '275 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-9').setAttribute('opacity','0.8');document.getElementById('usage-9').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-9').setAttribute('opacity','0.0');document.getElementById('usage-9').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-10" transform="translate(25.0,486.0)">
       <rect x="126" y="-30" width="14" height="28" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-10"/>
       <g id="picto-usage-10" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
         <rect x="128" y="-14" width="10" height="10" rx="2" ry="2"/>
-        <rect x="128" y="-18.8161" width="10" height="0.8161" rx="0" ry="0" stroke="none"/>
+        <rect x="128" y="-21.3414644465471" width="10" height="3.34146444654712" rx="0" ry="0" stroke="none"/>
         <rect x="128" y="-28" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-10" x="126" y="-30" width="14" height="28" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Mesa Irrigation And Drainage District');displayPictoValue(evt, '108,161 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-10').setAttribute('opacity','0.8');document.getElementById('usage-10').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-10').setAttribute('opacity','0.0');document.getElementById('usage-10').setAttribute('opacity','0.0');"/>
+      <rect id="picto-10" x="126" y="-30" width="14" height="28" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Mesa Irrigation And Drainage District');displayPictoValue(evt, '133 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-10').setAttribute('opacity','0.8');document.getElementById('usage-10').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-10').setAttribute('opacity','0.0');document.getElementById('usage-10').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-11" transform="translate(25.0,486.0)">
       <rect x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-11"/>
       <g id="picto-usage-11" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
-        <rect x="142" y="-8.8636" width="10" height="4.8636" rx="0" ry="0" stroke="none"/>
+        <rect x="142" y="-9.9991629591282" width="10" height="5.9991629591282" rx="0" ry="0" stroke="none"/>
         <rect x="142" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-11" x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Project, Reservation Division (Bard Unit And Indian Unit)');displayPictoValue(evt, '48,636 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-11').setAttribute('opacity','0.8');document.getElementById('usage-11').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-11').setAttribute('opacity','0.0');document.getElementById('usage-11').setAttribute('opacity','0.0');"/>
+      <rect id="picto-11" x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Project, Reservation Division (Bard Unit And Indian Unit)');displayPictoValue(evt, '60 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-11').setAttribute('opacity','0.8');document.getElementById('usage-11').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-11').setAttribute('opacity','0.0');document.getElementById('usage-11').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-12" transform="translate(25.0,486.0)">
       <rect x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-12"/>
       <g id="picto-usage-12" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
-        <rect x="156" y="-8.6279" width="10" height="4.6279" rx="0" ry="0" stroke="none"/>
+        <rect x="156" y="-9.70843125638404" width="10" height="5.70843125638404" rx="0" ry="0" stroke="none"/>
         <rect x="156" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-12" x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Fort Mojave Indian Reservation');displayPictoValue(evt, '46,279 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-12').setAttribute('opacity','0.8');document.getElementById('usage-12').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-12').setAttribute('opacity','0.0');document.getElementById('usage-12').setAttribute('opacity','0.0');"/>
+      <rect id="picto-12" x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Fort Mojave Indian Reservation');displayPictoValue(evt, '57 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-12').setAttribute('opacity','0.8');document.getElementById('usage-12').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-12').setAttribute('opacity','0.0');document.getElementById('usage-12').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-13" transform="translate(25.0,486.0)">
       <rect x="168" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-13"/>
       <g id="picto-usage-13" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
-        <rect x="170" y="-7.7368" width="10" height="3.7368" rx="0" ry="0" stroke="none"/>
+        <rect x="170" y="-8.60927546378614" width="10" height="4.60927546378614" rx="0" ry="0" stroke="none"/>
         <rect x="170" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-13" x="168" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Irrigation District');displayPictoValue(evt, '37,368 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-13').setAttribute('opacity','0.8');document.getElementById('usage-13').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-13').setAttribute('opacity','0.0');document.getElementById('usage-13').setAttribute('opacity','0.0');"/>
+      <rect id="picto-13" x="168" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Irrigation District');displayPictoValue(evt, '46 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-13').setAttribute('opacity','0.8');document.getElementById('usage-13').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-13').setAttribute('opacity','0.0');document.getElementById('usage-13').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-14" transform="translate(25.0,486.0)">
       <rect x="182" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-14"/>
       <g id="picto-usage-14" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
-        <rect x="184" y="-5.8491" width="10" height="1.8491" rx="0" ry="0" stroke="none"/>
+        <rect x="184" y="-6.28083152967431" width="10" height="2.28083152967431" rx="0" ry="0" stroke="none"/>
         <rect x="184" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-14" x="182" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Auxiliary Project (Unit b)');displayPictoValue(evt, '18,491 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-14').setAttribute('opacity','0.8');document.getElementById('usage-14').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-14').setAttribute('opacity','0.0');document.getElementById('usage-14').setAttribute('opacity','0.0');"/>
+      <rect id="picto-14" x="182" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Auxiliary Project (Unit b)');displayPictoValue(evt, '23 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-14').setAttribute('opacity','0.8');document.getElementById('usage-14').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-14').setAttribute('opacity','0.0');document.getElementById('usage-14').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-15" transform="translate(25.0,486.0)">
       <rect x="196" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-15"/>
       <g id="picto-usage-15" stroke="#0066CC" stroke-width="1.5" fill="#0066CC">
-        <rect x="198" y="-5.5083" width="10" height="1.5083" rx="0" ry="0" stroke="none"/>
+        <rect x="198" y="-5.86046087080621" width="10" height="1.86046087080621" rx="0" ry="0" stroke="none"/>
         <rect x="198" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-15" x="196" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Mohave Valley Irrigation &amp; Drainage District');displayPictoValue(evt, '15,083 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-15').setAttribute('opacity','0.8');document.getElementById('usage-15').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-15').setAttribute('opacity','0.0');document.getElementById('usage-15').setAttribute('opacity','0.0');"/>
+      <rect id="picto-15" x="196" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Mohave Valley Irrigation &amp; Drainage District');displayPictoValue(evt, '19 ***mead-pictogram-legend-units-metric***');document.getElementById('picto-highlight-15').setAttribute('opacity','0.8');document.getElementById('usage-15').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-15').setAttribute('opacity','0.0');document.getElementById('usage-15').setAttribute('opacity','0.0');"/>
     </g>
   </g>
   <g id="Mead-2D" class="hidden">
@@ -784,92 +801,112 @@ var state = document.getElementById("allocation-state").firstChild.data
     <rect x="44" y="89" width="10" height="10" rx="2" ry="2"/>
     <rect x="58" y="89" width="10" height="10" rx="2" ry="2"/>
     <rect x="72" y="89" width="10" height="10" rx="2" ry="2"/>
+    <rect x="30" y="75" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="75" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="75" width="10" height="10" rx="2" ry="2"/>
+    <rect x="16" y="61" width="10" height="10" rx="2" ry="2"/>
+    <rect x="30" y="61" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="61" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="61" width="10" height="10" rx="2" ry="2"/>
+    <rect x="16" y="47" width="10" height="10" rx="2" ry="2"/>
+    <rect x="30" y="47" width="10" height="10" rx="2" ry="2"/>
+    <rect x="44" y="47" width="10" height="10" rx="2" ry="2"/>
+    <rect x="58" y="54.27" width="10" height="2.73" rx="0" ry="0" stroke="none"/>
+    <rect x="58" y="47" width="10" height="10" rx="2" ry="2" fill="none"/>
     <g id="california-mouseovers" opacity="0" visibility="hidden">
       <rect x="28" y="87" width="70" height="56" onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
       <rect x="98" y="115" width="28" height="28" onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
       <rect x="56" y="143" width="98" height="42" onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
       <rect x="112" y="185" width="42" height="28" onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
+      <rect x="14" y="45" width="70" height="42" onmouseover="displayAllocationName(evt,'California');highlightState(evt,'California')" onmouseout="hideAllocationName(evt);lowlightState(evt,'California')"/>
     </g>
   </g>
   <g id="allocation-picto-highlight-3" class="hidden" stroke="none" fill="yellow">
-    <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
+    <rect x="199" y="220" width="56" height="14" rx="3" ry="3"/>
     <rect x="269" y="200" width="14" height="14" rx="3" ry="3"/>
     <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
   </g>
   <g id="allocation-picto-highlight-2" class="hidden" stroke="none" fill="yellow">
-    <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
+    <rect x="199" y="220" width="56" height="14" rx="3" ry="3"/>
     <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
   </g>
   <g id="allocation-picto-highlight-1" class="hidden" stroke="none" fill="yellow">
-    <rect x="199" y="214" width="56" height="14" rx="3" ry="3"/>
+    <rect x="199" y="220" width="56" height="14" rx="3" ry="3"/>
     <rect x="157" y="104" width="14" height="14" rx="3" ry="3"/>
   </g>
   <g id="Nevada-pictos" stroke="#1975d1" stroke-width="1.5" fill="#1975d1" class="hidden">
     <rect x="159" y="120" width="10" height="10" rx="2" ry="2"/>
-    <rect x="145" y="106" width="10" height="10" rx="2" ry="2"/>
+    <rect x="173" y="120" width="10" height="10" rx="2" ry="2"/>
     <rect x="159" y="106" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="145" y="106" width="10" height="10" rx="2" ry="2"/>
     <g id="Nevada-pictos-normal" class="shown">
-      <rect x="159" y="106" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="159" y="108.996" width="10" height="7.004" rx="0" ry="0" stroke="none"/>
     </g>
     <g id="Nevada-pictos-shortage1" class="shown">
-      <rect x="159" y="107.3" width="10" height="8.7" rx="0" ry="0" stroke="none"/>
+      <rect x="159" y="110.599" width="10" height="5.401" rx="0" ry="0" stroke="none"/>
     </g>
     <g id="Nevada-pictos-shortage2" class="shown">
-      <rect x="159" y="107.7" width="10" height="8.3" rx="0" ry="0" stroke="none"/>
+      <rect x="159" y="111.092" width="10" height="4.908" rx="0" ry="0" stroke="none"/>
     </g>
     <g id="Nevada-pictos-shortage3" class="shown">
-      <rect x="159" y="108" width="10" height="8" rx="0" ry="0" stroke="none"/>
+      <rect x="159" y="111.463" width="10" height="4.537" rx="0" ry="0" stroke="none"/>
     </g>
     <g id="nevada-mouseovers" opacity="0" visibility="hidden">
-      <rect x="143" y="104" width="28" height="28" onmouseover="displayAllocationName(evt,'Nevada');highlightState(evt,'Nevada')" onmouseout="hideAllocationName(evt);lowlightState(evt,'Nevada')"/>
+      <rect x="143" y="104" width="42" height="28" onmouseover="displayAllocationName(evt,'Nevada');highlightState(evt,'Nevada')" onmouseout="hideAllocationName(evt);lowlightState(evt,'Nevada')"/>
     </g>
   </g>
   <g id="Arizona-pictos" stroke="#1975d1" stroke-width="1.5" fill="#1975d1" class="hidden">
-    <rect x="201" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
-    <rect x="215" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
-    <rect x="229" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
-    <rect x="243" y="216" width="10" height="10" rx="2" ry="2" fill="none"/>
-    <rect x="271" y="202" width="10" height="10" rx="2" ry="2" fill="none"/>
-    <rect x="201" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="202" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="188" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="174" width="10" height="10" rx="2" ry="2"/>
-    <rect x="201" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="215" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="229" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="243" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="257" y="160" width="10" height="10" rx="2" ry="2"/>
-    <rect x="271" y="160" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="222" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="215" y="222" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="229" y="222" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="243" y="222" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="271" y="208" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <rect x="201" y="208" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="208" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="208" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="208" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="208" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="194" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="194" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="194" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="194" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="194" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="194" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="180" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="180" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="180" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="180" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="180" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="180" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="166" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="166" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="166" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="166" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="166" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="166" width="10" height="10" rx="2" ry="2"/>
+    <rect x="201" y="152" width="10" height="10" rx="2" ry="2"/>
+    <rect x="215" y="152" width="10" height="10" rx="2" ry="2"/>
+    <rect x="229" y="152" width="10" height="10" rx="2" ry="2"/>
+    <rect x="243" y="152" width="10" height="10" rx="2" ry="2"/>
+    <rect x="257" y="152" width="10" height="10" rx="2" ry="2"/>
+    <rect x="271" y="152" width="10" height="10" rx="2" ry="2"/>
     <g id="Arizona-pictos-normal" class="shown">
-      <rect x="201" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
-      <rect x="215" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
-      <rect x="229" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
-      <rect x="243" y="216" width="10" height="10" rx="0" ry="0" stroke="none"/>
-      <rect x="271" y="202" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="201" y="222" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="215" y="222" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="229" y="222" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="243" y="226.525" width="10" height="5.475" rx="0" ry="0" stroke="none"/>
+      <rect x="271" y="208" width="10" height="10" rx="0" ry="0" stroke="none"/>
     </g>
     <g id="Arizona-pictos-shortage1" class="shown">
-      <rect x="201" y="218" width="10" height="8" rx="0" ry="0" stroke="none"/>
-      <rect x="271" y="202" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="201" y="224.466963960494" width="10" height="7.53303603950645" rx="0" ry="0" stroke="none"/>
+      <rect x="271" y="208" width="10" height="10" rx="0" ry="0" stroke="none"/>
     </g>
     <g id="Arizona-pictos-shortage2" class="shown">
-      <rect x="201" y="226" width="10" height="0" rx="0" ry="0" stroke="none"/>
-      <rect x="271" y="202" width="10" height="10" rx="0" ry="0" stroke="none"/>
+      <rect x="201" y="232" width="10" height="0" rx="0" ry="0" stroke="none"/>
+      <rect x="271" y="208" width="10" height="10" rx="0" ry="0" stroke="none"/>
     </g>
     <g id="Arizona-pictos-shortage3" class="shown">
-      <rect x="271" y="210" width="10" height="2" rx="0" ry="0" stroke="none"/>
+      <rect x="271" y="217.867855841974" width="10" height="0.132144158025816" rx="0" ry="0" stroke="none"/>
     </g>
     <g id="arizona-mouseovers" opacity="0" visibility="hidden">
       <rect x="199" y="158" width="84" height="70" onmouseover="displayAllocationName(evt,'Arizona');highlightState(evt,'Arizona')" onmouseout="hideAllocationName(evt);lowlightState(evt,'Arizona')"/>
@@ -896,13 +933,16 @@ var state = document.getElementById("allocation-state").firstChild.data
     <rect x="86" y="244" width="10" height="10" rx="2" ry="2"/>
     <rect x="100" y="244" width="10" height="10" rx="2" ry="2"/>
     <rect x="114" y="244" width="10" height="10" rx="2" ry="2"/>
-    <g id="Mexico-pictos-normal" class="shown">
-      <rect x="156" y="272" width="10" height="10" rx="0" ry="0" stroke="none"/>
-      <rect x="170" y="272" width="10" height="10" rx="0" ry="0" stroke="none"/>
-    </g>
+    <rect x="114" y="286" width="10" height="10" rx="2" ry="2"/>
+    <rect x="128" y="286" width="10" height="10" rx="2" ry="2"/>
+    <rect x="142" y="286" width="10" height="10" rx="2" ry="2"/>
+    <rect x="156" y="290.978" width="10" height="5.022" rx="0" ry="0" stroke="none"/>
+    <rect x="156" y="286" width="10" height="10" rx="2" ry="2" fill="none"/>
+    <g id="Mexico-pictos-normal" class="shown"/>
     <g id="mexico-mouseovers" opacity="0" visibility="hidden">
       <rect x="70" y="242" width="70" height="28" onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')" onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"/>
       <rect x="98" y="270" width="84" height="14" onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')" onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"/>
+      <rect x="112" y="284" width="56" height="14" onmouseover="displayAllocationName(evt,'Mexico');highlightState(evt,'mexico')" onmouseout="hideAllocationName(evt);lowlightState(evt,'mexico')"/>
     </g>
   </g>
   <g id="sankey-mouseovers" opacity="0">
