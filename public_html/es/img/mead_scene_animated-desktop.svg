@@ -53,9 +53,9 @@ function displayAllocationName(evt, name) {
 "Mexico":{
 "flood":["","2,096.9 millones de metros cúbicos/año."],
 "surplus":["1,850.2 millones de metros cúbicos/año,","más aguas excedentes."],
-"normal":["1,850.2 millones de metros cúbicos/año,","más o menos"],
-"shortage-1":["1,850.2 millones de metros cúbicos/año,","(se reducen las entregas por "],
-"shortage-2":["1,850.2 millones de metros cúbicos/año,","(se reducen las entregas por "],
+"normal":["1,850.2 millones de metros cúbicos/año, más o menos","los volúmenes diferidos o entregados conforme al Acta 319."],
+"shortage-1":["1,850.2 millones de metros cúbicos/año, (se reducen las entregas por ","las reducciones pueden compensarse conforme al Acta 319)."],
+"shortage-2":["1,850.2 millones de metros cúbicos/año, (se reducen las entregas por ","las reducciones pueden compensarse conforme al Acta 319)."],
 "shortage-3":["1,850.2 millones de metros cúbicos/año, (se reducen las entregas por ","las reducciones pueden compensarse conforme al Acta 319)."]}};
 var state = document.getElementById("allocation-state").firstChild.data
   document.getElementById("allocation-value-1").firstChild.data = name + ": " + data[name][state][0];
