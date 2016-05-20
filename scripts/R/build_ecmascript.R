@@ -54,9 +54,9 @@ ecmascript_mead_map <- function(language='en'){
   '"Mexico":{',
   sprintf('"flood":["","%s %s."],',ifelse(language=='en', '1,700,000', '2,096.9'), flux.units), #2096.9
   sprintf('"surplus":["%s %s,","%s"],',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-surplus')), #1850.2
-  sprintf('"normal":["%s %s,","%s"],',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-normala'),ltl('var-data-text-Mexico-normalb')),
-  sprintf('"shortage-1":["%s %s,","%s"],',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-shortage-1a'),ltl('var-data-text-Mexico-shortage-1b')),
-  sprintf('"shortage-2":["%s %s,","%s"],',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-shortage-2a'),ltl('var-data-text-Mexico-shortage-2b')),
+  sprintf('"normal":["%s %s, %s","%s"],',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-normala'),ltl('var-data-text-Mexico-normalb')),
+  sprintf('"shortage-1":["%s %s, %s","%s"],',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-shortage-1a'),ltl('var-data-text-Mexico-shortage-1b')),
+  sprintf('"shortage-2":["%s %s, %s","%s"],',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-shortage-2a'),ltl('var-data-text-Mexico-shortage-2b')),
   sprintf('"shortage-3":["%s %s, %s","%s"]}};',ifelse(language=='en', '1,500,000', '1,850.2'), flux.units, ltl('var-data-text-Mexico-shortage-3a'),ltl('var-data-text-Mexico-shortage-3b')),
   'var state = document.getElementById("allocation-state").firstChild.data
   document.getElementById("allocation-value-1").firstChild.data = name + ": " + data[name][state][0];

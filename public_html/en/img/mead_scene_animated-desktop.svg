@@ -53,9 +53,9 @@ function displayAllocationName(evt, name) {
 "Mexico":{
 "flood":["","1,700,000 acre-feet/year."],
 "surplus":["1,500,000 acre-feet/year,","plus surplus water."],
-"normal":["1,500,000 acre-feet/year,","plus or minus"],
-"shortage-1":["1,500,000 acre-feet/year,","(deliveries reduced by"],
-"shortage-2":["1,500,000 acre-feet/year,","(deliveries reduced by"],
+"normal":["1,500,000 acre-feet/year, plus or minus","any water deferred or delivered under Minute 319."],
+"shortage-1":["1,500,000 acre-feet/year, (deliveries reduced by","reductions may be offset under Minute 319)."],
+"shortage-2":["1,500,000 acre-feet/year, (deliveries reduced by","reductions may be offset under Minute 319)."],
 "shortage-3":["1,500,000 acre-feet/year, (deliveries reduced by","reductions may be offset under Minute 319)."]}};
 var state = document.getElementById("allocation-state").firstChild.data
   document.getElementById("allocation-value-1").firstChild.data = name + ": " + data[name][state][0];
