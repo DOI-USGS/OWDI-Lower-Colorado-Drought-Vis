@@ -19,6 +19,9 @@ for (file in dir(src)) {
     partials[[name]] <- readLines(paste(src, file, sep="/"))
   }
 }
+
+utah <- readLines("src_data/utah.svg")
+
 for (lang in c("en", "es")) {
   isEn <- lang == "en"
   isEs <- lang == "es"
@@ -26,4 +29,8 @@ for (lang in c("en", "es")) {
                version=version)
   cat(whisker.render(template = template, partials = partials, data = data),
       file=paste0("public_html/", lang, "/index.html"))
+  
+  # also template the utah svg
+  cat(whisker.render(template = utah, data = data), 
+      file=file.path("public_html", lang, "img", "utah.svg"))
 }
