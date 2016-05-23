@@ -38,8 +38,8 @@ document.getElementById('condition-markers').setAttribute('class','shown');}
     <text x="840" y="52" dy="1.0em" dx="0.4em" class="small-text">Condiciones</text>
     <text x="840" y="135" dx="0.4em" class="small-text">Condiciones de</text>
     <text x="840" y="135" dy="1.0em" dx="0.4em" class="small-text">excedentes</text>
-    <text x="840" y="273.5" dx="0.4em" class="small-text">Condiciones normales</text>
-    <text x="840" y="273.5" dy="1.0em" dx="0.4em" class="small-text"> </text>
+    <text x="840" y="273.5" dx="0.4em" class="small-text">Condiciones</text>
+    <text x="840" y="273.5" dy="1.0em" dx="0.4em" class="small-text">normales</text>
     <text x="840" y="445.5" dx="0.4em" class="small-text">Condiciones de</text>
     <text x="840" y="445.5" dy="1.0em" dx="0.4em" class="small-text">escasez</text>
   </g>
