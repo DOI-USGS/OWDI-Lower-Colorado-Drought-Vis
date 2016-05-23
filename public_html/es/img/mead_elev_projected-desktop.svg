@@ -36,9 +36,22 @@ document.getElementById('condition-markers').setAttribute('class','shown');}
   <g class="hidden" id="condition-markers">
     <text x="840" y="52" dx="0.4em" class="small-text">Control de avenidas</text>
     <text x="840" y="52" dy="1.0em" dx="0.4em" class="small-text">Condiciones</text>
-    <text x="840" y="135" dy="0.5em" dx="0.4em" class="small-text">Condiciones de excedentes</text>
-    <text x="840" y="273.5" dy="0.5em" dx="0.4em" class="small-text">Condiciones normales</text>
-    <text x="840" y="445.5" dy="0.5em" dx="0.4em" class="small-text">Condiciones de escasez</text>
+    <text x="840" y="135" dx="0.4em" class="small-text">Condiciones de</text>
+    <text x="840" y="135" dy="1.0em" dx="0.4em" class="small-text">excedentes</text>
+    <text x="840" y="273.5" dx="0.4em" class="small-text">Condiciones normales</text>
+    <text x="840" y="273.5" dy="1.0em" dx="0.4em" class="small-text"> </text>
+    <text x="840" y="445.5" dx="0.4em" class="small-text">Condiciones de</text>
+    <text x="840" y="445.5" dy="1.0em" dx="0.4em" class="small-text">escasez</text>
+  </g>
+  <g class="hidden" id="condition-markers">
+    <rect x="100" y="574" width="162.5" height="20" fill="#0066CC" opacity="0.8"/>
+    <text x="181.25" y="594" dy="1.0em" class="small-text" text-anchor="middle">Control de avenidas</text>
+    <rect x="292.5" y="574" width="162.5" height="20" fill="#0066CC" opacity="0.7"/>
+    <text x="373.75" y="594" dy="1.0em" class="small-text" text-anchor="middle">Excedentes</text>
+    <rect x="485" y="574" width="162.5" height="20" fill="#0066CC" opacity="0.6"/>
+    <text x="566.25" y="594" dy="1.0em" class="small-text" text-anchor="middle">Normal</text>
+    <rect x="677.5" y="574" width="162.5" height="20" fill="#0066CC" opacity="0.4"/>
+    <text x="758.75" y="594" dy="1.0em" class="small-text" text-anchor="middle">Escasez</text>
   </g>
   <g id="axes" class="label">
     <rect id="axis.box" x="100.0" y="10.0" width="740.0" height="530.0" style="fill:none;stroke:black"/>
