@@ -290,9 +290,12 @@
 	<projFigProjected>Projected</projFigProjected>
 	<projFigFloodDesktop1>Flood Control</projFigFloodDesktop1>
 	<projFigFloodDesktop2>Conditions</projFigFloodDesktop2>
-	<projFigSurplusDesktop>Surplus Conditions</projFigSurplusDesktop>
-	<projFigNormalDesktop>Normal Conditions</projFigNormalDesktop>
-	<projFigShortageDesktop>Shortage Conditions</projFigShortageDesktop>
+	<projFigSurplusDesktop1>Surplus Conditions</projFigSurplusDesktop1>
+	<projFigSurplusDesktop2> </projFigSurplusDesktop2>
+	<projFigNormalDesktop1>Normal Conditions</projFigNormalDesktop1>
+	<projFigNormalDesktop2> </projFigNormalDesktop2>
+	<projFigShortageDesktop1>Shortage Conditions</projFigShortageDesktop1>
+	<projFigShortageDesktop2> </projFigShortageDesktop2>
 	<projFigFloodMobile>Flood Control</projFigFloodMobile>
 	<projFigSurplusMobile>Surplus</projFigSurplusMobile>
 	<projFigNormalMobile>Normal</projFigNormalMobile>
