@@ -98,7 +98,6 @@
 	height:60px;
 	float:left;
 	border-right:1px solid #fff;
-	position:relative;
 	}
 
 .navLink{
@@ -928,16 +927,14 @@
 		}
 
 	.navBox:hover .navToolTip{
-	display:block !important;
+		display:block !important;
 	}
 
 	.navToolTip{
 		background:rgb(220,220,220);
 		padding:10px;
-		width:160px;
 		position:absolute;
 		bottom:-55px;
-		display:none;
 	}
 
 	.navToolTip:after{
