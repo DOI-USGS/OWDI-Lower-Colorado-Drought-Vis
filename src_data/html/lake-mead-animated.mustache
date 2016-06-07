@@ -187,12 +187,12 @@
 		
 		$('#lakeMeadHidden06').toggle();
 		
-		if($(this).text() == 'Read More >>'){
-			$(this).text('Hide Text');
+		if($(this).text() == '{{{ tr.readMore }}}'){
+			$(this).text('{{{ tr.hideText }}}');
 			}else{
-				$(this).text('Read More >>');
+				$(this).text('{{{ tr.readMore }}}');
 				}
-	});	
+		});	
 	
 	$('#lakeMeadRead07').on('click', function(){
 		
