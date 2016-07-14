@@ -40,16 +40,16 @@ function displayAllocationName(evt, name) {
 "flood":["3,453.7 millones de metros cúbicos/año,","más entregas adicionales según se soliciten."],
 "surplus":["3,453.7 millones de metros cúbicos/año,","más aguas excedentes."],
 "normal":["3,453.7 millones de metros cúbicos/año,","más o menos cualquier ICS creado o entregado."],
-"shortage-1":["3,059.0 millones de metros cúbicos/año,","(se reducen las entregas por 320,000 acres-pies)."],
-"shortage-2":["2,960.0 millones de metros cúbicos/año,","(se reducen las entregas por 400,000 acres-pies)."],
-"shortage-3":["2,861.7 millones de metros cúbicos/año,","(se reducen las entregas por 480,000 acres-pies)."]},
+"shortage-1":["3,059.0 millones de metros cúbicos/año,","(se reducen las entregas por 395 mcm)."],
+"shortage-2":["2,960.0 millones de metros cúbicos/año,","(se reducen las entregas por 493 mcm)."],
+"shortage-3":["2,861.7 millones de metros cúbicos/año,","(se reducen las entregas por 592 mcm)."]},
 "Nevada":{
 "flood":["370.0 millones de metros cúbicos/año,","más entregas adicionales según se soliciten."],
 "surplus":["370.0 millones de metros cúbicos/año,","más aguas excedentes."],
 "normal":["370.0 millones de metros cúbicos/año,","más o menos cualquier ICS creado o entregado."],
-"shortage-1":["354.0 millones de metros cúbicos/año,","(se reducen las entregas por 13,000 acres-pies)."],
-"shortage-2":["349.1 millones de metros cúbicos/año,","(se reducen las entregas por 17,000 acres-pies)."],
-"shortage-3":["345.4 millones de metros cúbicos/año,","(se reducen las entregas por 20,000 acres-pies)."]},
+"shortage-1":["354.0 millones de metros cúbicos/año,","(se reducen las entregas por 16 mcm)."],
+"shortage-2":["349.1 millones de metros cúbicos/año,","(se reducen las entregas por 21 mcm)."],
+"shortage-3":["345.4 millones de metros cúbicos/año,","(se reducen las entregas por 25 mcm)."]},
 "Mexico":{
 "flood":["","2,096.9 millones de metros cúbicos/año."],
 "surplus":["1,850.2 millones de metros cúbicos/año,","más aguas excedentes."],
@@ -530,7 +530,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
       <text class="label" id="picto-info" x="55" y="-290" fill="#FFFFFF" stroke="none" style="text-anchor: left;">  </text>
       <text class="label" id="picto-value" x="55" y="-290" fill="#FFFFFF" dy="-1.0em" stroke="none" style="text-anchor: left;">  </text>
       <text id="x-pictogram-label" x="150" y="-182" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;">Derechohabientes de agua de la Cuenca Baja del Río Colorado</text>
-      <text id="x-pictogram-sub-label" x="150" y="-182" fill="#FFFFFF" dy="1.5em" stroke="none" style="text-anchor: middle;">(Con un uso consuntivo medio anual por encima de 18.5 millones de metros cúbicos).</text>
+      <text id="x-pictogram-sub-label" x="150" y="-182" fill="#FFFFFF" dy="1.5em" stroke="none" style="text-anchor: middle;">(Con un uso consuntivo medio anual por encima de 18.5 mcm).</text>
       <text id="y-pictogram-label" x="-15" y="-97" fill="#FFFFFF" dy=".3em" stroke="none" style="text-anchor: middle;" transform="rotate(-90,-15,-97.5),translate(280,0)">Uso consuntivo promedio del año 2010 a 2014</text>
     </g>
     <g id="picto-usage-parent-1" transform="translate(25.0,486.0)">
@@ -631,7 +631,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
         <rect x="44" y="-64.6595719250127" width="10" height="4.65957192501269" rx="0" ry="0" stroke="none"/>
         <rect x="44" y="-70" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-4" x="42" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Palo Verde Irrigation District');displayPictoValue(evt, '447 millones de metros cúbicos');document.getElementById('picto-highlight-4').setAttribute('opacity','0.8');document.getElementById('usage-4').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-4').setAttribute('opacity','0.0');document.getElementById('usage-4').setAttribute('opacity','0.0');"/>
+      <rect id="picto-4" x="42" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Palo Verde Irrigation District');displayPictoValue(evt, '  447 millones de metros cúbicos');document.getElementById('picto-highlight-4').setAttribute('opacity','0.8');document.getElementById('usage-4').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-4').setAttribute('opacity','0.0');document.getElementById('usage-4').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-5" transform="translate(25.0,486.0)">
       <rect x="56" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-5"/>
@@ -643,7 +643,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
         <rect x="58" y="-62.2635331783833" width="10" height="2.26353317838333" rx="0" ry="0" stroke="none"/>
         <rect x="58" y="-70" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-5" x="56" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Colorado River Indian Tribes');displayPictoValue(evt, '423 millones de metros cúbicos');document.getElementById('picto-highlight-5').setAttribute('opacity','0.8');document.getElementById('usage-5').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-5').setAttribute('opacity','0.0');document.getElementById('usage-5').setAttribute('opacity','0.0');"/>
+      <rect id="picto-5" x="56" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Colorado River Indian Tribes');displayPictoValue(evt, '  423 millones de metros cúbicos');document.getElementById('picto-highlight-5').setAttribute('opacity','0.8');document.getElementById('usage-5').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-5').setAttribute('opacity','0.0');document.getElementById('usage-5').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-6" transform="translate(25.0,486.0)">
       <rect x="70" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-6"/>
@@ -655,7 +655,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
         <rect x="72" y="-60.102349400793" width="10" height="0.102349400792958" rx="0" ry="0" stroke="none"/>
         <rect x="72" y="-70" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-6" x="70" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Coachella Valley Water District');displayPictoValue(evt, '401 millones de metros cúbicos');document.getElementById('picto-highlight-6').setAttribute('opacity','0.8');document.getElementById('usage-6').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-6').setAttribute('opacity','0.0');document.getElementById('usage-6').setAttribute('opacity','0.0');"/>
+      <rect id="picto-6" x="70" y="-72" width="14" height="70" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Coachella Valley Water District');displayPictoValue(evt, '  401 millones de metros cúbicos');document.getElementById('picto-highlight-6').setAttribute('opacity','0.8');document.getElementById('usage-6').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-6').setAttribute('opacity','0.0');document.getElementById('usage-6').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-7" transform="translate(25.0,486.0)">
       <rect x="84" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-7"/>
@@ -666,7 +666,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
         <rect x="86" y="-46.8566618696552" width="10" height="0.856661869655246" rx="0" ry="0" stroke="none"/>
         <rect x="86" y="-56" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-7" x="84" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Wellton-Mohawk Irrigation And Drainage District');displayPictoValue(evt, '309 millones de metros cúbicos');document.getElementById('picto-highlight-7').setAttribute('opacity','0.8');document.getElementById('usage-7').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-7').setAttribute('opacity','0.0');document.getElementById('usage-7').setAttribute('opacity','0.0');"/>
+      <rect id="picto-7" x="84" y="-58" width="14" height="56" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Wellton-Mohawk Irrigation And Drainage District');displayPictoValue(evt, '  309 millones de metros cúbicos');document.getElementById('picto-highlight-7').setAttribute('opacity','0.8');document.getElementById('usage-7').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-7').setAttribute('opacity','0.0');document.getElementById('usage-7').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-8" transform="translate(25.0,486.0)">
       <rect x="98" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-8"/>
@@ -676,7 +676,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
         <rect x="100" y="-41.2706507394539" width="10" height="9.27065073945395" rx="0" ry="0" stroke="none"/>
         <rect x="100" y="-42" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-8" x="98" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma County Water Users\' Association');displayPictoValue(evt, '293 millones de metros cúbicos');document.getElementById('picto-highlight-8').setAttribute('opacity','0.8');document.getElementById('usage-8').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-8').setAttribute('opacity','0.0');document.getElementById('usage-8').setAttribute('opacity','0.0');"/>
+      <rect id="picto-8" x="98" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma County Water Users\' Association');displayPictoValue(evt, '  293 millones de metros cúbicos');document.getElementById('picto-highlight-8').setAttribute('opacity','0.8');document.getElementById('usage-8').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-8').setAttribute('opacity','0.0');document.getElementById('usage-8').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-9" transform="translate(25.0,486.0)">
       <rect x="112" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-9"/>
@@ -686,7 +686,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
         <rect x="114" y="-39.526383871187" width="10" height="7.52638387118699" rx="0" ry="0" stroke="none"/>
         <rect x="114" y="-42" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-9" x="112" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Southern Nevada Water Authority And Other Users (Nv)');displayPictoValue(evt, '275 millones de metros cúbicos');document.getElementById('picto-highlight-9').setAttribute('opacity','0.8');document.getElementById('usage-9').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-9').setAttribute('opacity','0.0');document.getElementById('usage-9').setAttribute('opacity','0.0');"/>
+      <rect id="picto-9" x="112" y="-44" width="14" height="42" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Southern Nevada Water Authority And Other Users (Nv)');displayPictoValue(evt, '  275 millones de metros cúbicos');document.getElementById('picto-highlight-9').setAttribute('opacity','0.8');document.getElementById('usage-9').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-9').setAttribute('opacity','0.0');document.getElementById('usage-9').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-10" transform="translate(25.0,486.0)">
       <rect x="126" y="-30" width="14" height="28" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-10"/>
@@ -695,7 +695,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
         <rect x="128" y="-21.3414644465471" width="10" height="3.34146444654712" rx="0" ry="0" stroke="none"/>
         <rect x="128" y="-28" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-10" x="126" y="-30" width="14" height="28" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Mesa Irrigation And Drainage District');displayPictoValue(evt, '133 millones de metros cúbicos');document.getElementById('picto-highlight-10').setAttribute('opacity','0.8');document.getElementById('usage-10').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-10').setAttribute('opacity','0.0');document.getElementById('usage-10').setAttribute('opacity','0.0');"/>
+      <rect id="picto-10" x="126" y="-30" width="14" height="28" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Mesa Irrigation And Drainage District');displayPictoValue(evt, '  133 millones de metros cúbicos');document.getElementById('picto-highlight-10').setAttribute('opacity','0.8');document.getElementById('usage-10').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-10').setAttribute('opacity','0.0');document.getElementById('usage-10').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-11" transform="translate(25.0,486.0)">
       <rect x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-11"/>
@@ -703,7 +703,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
         <rect x="142" y="-9.9991629591282" width="10" height="5.9991629591282" rx="0" ry="0" stroke="none"/>
         <rect x="142" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-11" x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Project, Reservation Division (Bard Unit And Indian Unit)');displayPictoValue(evt, '60 millones de metros cúbicos');document.getElementById('picto-highlight-11').setAttribute('opacity','0.8');document.getElementById('usage-11').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-11').setAttribute('opacity','0.0');document.getElementById('usage-11').setAttribute('opacity','0.0');"/>
+      <rect id="picto-11" x="140" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Project, Reservation Division (Bard Unit And Indian Unit)');displayPictoValue(evt, '   60 millones de metros cúbicos');document.getElementById('picto-highlight-11').setAttribute('opacity','0.8');document.getElementById('usage-11').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-11').setAttribute('opacity','0.0');document.getElementById('usage-11').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-12" transform="translate(25.0,486.0)">
       <rect x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-12"/>
@@ -711,7 +711,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
         <rect x="156" y="-9.70843125638404" width="10" height="5.70843125638404" rx="0" ry="0" stroke="none"/>
         <rect x="156" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-12" x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Fort Mojave Indian Reservation');displayPictoValue(evt, '57 millones de metros cúbicos');document.getElementById('picto-highlight-12').setAttribute('opacity','0.8');document.getElementById('usage-12').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-12').setAttribute('opacity','0.0');document.getElementById('usage-12').setAttribute('opacity','0.0');"/>
+      <rect id="picto-12" x="154" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Fort Mojave Indian Reservation');displayPictoValue(evt, '   57 millones de metros cúbicos');document.getElementById('picto-highlight-12').setAttribute('opacity','0.8');document.getElementById('usage-12').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-12').setAttribute('opacity','0.0');document.getElementById('usage-12').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-13" transform="translate(25.0,486.0)">
       <rect x="168" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-13"/>
@@ -719,7 +719,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
         <rect x="170" y="-8.60927546378614" width="10" height="4.60927546378614" rx="0" ry="0" stroke="none"/>
         <rect x="170" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-13" x="168" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Irrigation District');displayPictoValue(evt, '46 millones de metros cúbicos');document.getElementById('picto-highlight-13').setAttribute('opacity','0.8');document.getElementById('usage-13').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-13').setAttribute('opacity','0.0');document.getElementById('usage-13').setAttribute('opacity','0.0');"/>
+      <rect id="picto-13" x="168" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Irrigation District');displayPictoValue(evt, '   46 millones de metros cúbicos');document.getElementById('picto-highlight-13').setAttribute('opacity','0.8');document.getElementById('usage-13').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-13').setAttribute('opacity','0.0');document.getElementById('usage-13').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-14" transform="translate(25.0,486.0)">
       <rect x="182" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-14"/>
@@ -727,7 +727,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
         <rect x="184" y="-6.28083152967431" width="10" height="2.28083152967431" rx="0" ry="0" stroke="none"/>
         <rect x="184" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-14" x="182" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Auxiliary Project (Unit b)');displayPictoValue(evt, '23 millones de metros cúbicos');document.getElementById('picto-highlight-14').setAttribute('opacity','0.8');document.getElementById('usage-14').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-14').setAttribute('opacity','0.0');document.getElementById('usage-14').setAttribute('opacity','0.0');"/>
+      <rect id="picto-14" x="182" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Yuma Auxiliary Project (Unit b)');displayPictoValue(evt, '   23 millones de metros cúbicos');document.getElementById('picto-highlight-14').setAttribute('opacity','0.8');document.getElementById('usage-14').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-14').setAttribute('opacity','0.0');document.getElementById('usage-14').setAttribute('opacity','0.0');"/>
     </g>
     <g id="picto-usage-parent-15" transform="translate(25.0,486.0)">
       <rect x="196" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" id="picto-highlight-15"/>
@@ -735,7 +735,7 @@ document.getElementById("mead-condition-text").firstChild.data = conditions[stor
         <rect x="198" y="-5.86046087080621" width="10" height="1.86046087080621" rx="0" ry="0" stroke="none"/>
         <rect x="198" y="-14" width="10" height="10" rx="2" ry="2" fill="none"/>
       </g>
-      <rect id="picto-15" x="196" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Mohave Valley Irrigation &amp; Drainage District');displayPictoValue(evt, '19 millones de metros cúbicos');document.getElementById('picto-highlight-15').setAttribute('opacity','0.8');document.getElementById('usage-15').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-15').setAttribute('opacity','0.0');document.getElementById('usage-15').setAttribute('opacity','0.0');"/>
+      <rect id="picto-15" x="196" y="-16" width="14" height="14" rx="3" ry="3" stroke-width="0" fill="#00CC99" opacity="0.0" onmouseover="displayPictoName(evt, 'Mohave Valley Irrigation &amp; Drainage District');displayPictoValue(evt, '   19 millones de metros cúbicos');document.getElementById('picto-highlight-15').setAttribute('opacity','0.8');document.getElementById('usage-15').setAttribute('opacity','0.8');" onmouseout="hidePictoName(evt);hidePictoValue(evt);document.getElementById('picto-highlight-15').setAttribute('opacity','0.0');document.getElementById('usage-15').setAttribute('opacity','0.0');"/>
     </g>
   </g>
   <g id="Mead-2D" class="hidden">
