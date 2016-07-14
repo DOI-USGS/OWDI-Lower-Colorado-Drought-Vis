@@ -33,16 +33,6 @@ document.getElementById('condition-markers').setAttribute('class','shown');}
   <rect id="surplus" x="80" y="48" width="410" height="74.2" fill="#0066CC" opacity="0.7" class="level-fill"/>
   <rect id="normal" x="80" y="122" width="410" height="94.2" fill="#0066CC" opacity="0.6" class="level-fill"/>
   <rect id="shortage" x="80" y="216" width="410" height="114.2" fill="#0066CC" opacity="0.4" class="level-fill"/>
-  <g class="hidden" id="condition-markers">
-    <rect x="80" y="364" width="80" height="20" fill="#0066CC" opacity="0.8"/>
-    <text x="120" y="384" dy="1.0em" class="small-text" text-anchor="middle">Control de avenidas</text>
-    <rect x="190" y="364" width="80" height="20" fill="#0066CC" opacity="0.7"/>
-    <text x="230" y="384" dy="1.0em" class="small-text" text-anchor="middle">Excedentes</text>
-    <rect x="300" y="364" width="80" height="20" fill="#0066CC" opacity="0.6"/>
-    <text x="340" y="384" dy="1.0em" class="small-text" text-anchor="middle">Normal</text>
-    <rect x="410" y="364" width="80" height="20" fill="#0066CC" opacity="0.4"/>
-    <text x="450" y="384" dy="1.0em" class="small-text" text-anchor="middle">Escasez</text>
-  </g>
   <g id="axes" class="label">
     <rect id="axis.box" x="80.0" y="10.0" width="410.0" height="320.0" style="fill:none;stroke:black"/>
     <text transform="translate(40.0,170.0)rotate(270)" text-anchor="middle" id="y-label" dy="-0.4em">Elevaci&#xF3;n de Lago Mead (metros)</text>

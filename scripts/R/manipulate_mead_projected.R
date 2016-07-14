@@ -119,13 +119,18 @@ add_annotations <- function(svg_nd, form.factor, language, fig, axes){
                attrs = c(x = fig$px_lim$x[2], y = mean(c(x$surplus,x$flood)),dx="0.4em",class='small-text'))
     newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigFloodDesktop2',language)),
                attrs = c(x = fig$px_lim$x[2], y = mean(c(x$surplus,x$flood)), dy="1.0em", dx="0.4em",class='small-text'))
-    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigSurplusDesktop',language)),
-               attrs = c(x = fig$px_lim$x[2], y = mean(c(x$normal,x$surplus)),dy="0.5em", dx="0.4em",class='small-text'))
-    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigNormalDesktop',language)),
-               attrs = c(x = fig$px_lim$x[2], y = mean(c(x$shortage,x$normal)),dy="0.5em", dx="0.4em",class='small-text'))
-    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigShortageDesktop',language)),
-               attrs = c(x = fig$px_lim$x[2], y = mean(c(x$bottom,x$shortage)),dy="0.5em", dx="0.4em",class='small-text')) 
-  } else {
+    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigSurplusDesktop1',language)),
+               attrs = c(x = fig$px_lim$x[2], y = mean(c(x$normal,x$surplus)), dx="0.4em",class='small-text'))
+    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigSurplusDesktop2',language)),
+               attrs = c(x = fig$px_lim$x[2], y = mean(c(x$normal,x$surplus)),dy="1.0em", dx="0.4em",class='small-text'))
+    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigNormalDesktop1',language)),
+               attrs = c(x = fig$px_lim$x[2], y = mean(c(x$shortage,x$normal)), dx="0.4em",class='small-text'))
+    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigNormalDesktop2',language)),
+               attrs = c(x = fig$px_lim$x[2], y = mean(c(x$shortage,x$normal)),dy="1.0em", dx="0.4em",class='small-text'))
+    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigShortageDesktop1',language)),
+               attrs = c(x = fig$px_lim$x[2], y = mean(c(x$bottom,x$shortage)), dx="0.4em",class='small-text'))
+    newXMLNode("text", parent = g_id, newXMLTextNode(lt('projFigShortageDesktop2',language)),
+               attrs = c(x = fig$px_lim$x[2], y = mean(c(x$bottom,x$shortage)),dy="1.0em", dx="0.4em",class='small-text'))
     g_id = newXMLNode("g", parent = svg_nd, attrs=c(class='hidden', id='condition-markers'))
     x1 = fig$px_lim$x[1]
     x2 = fig$px_lim$x[2]

@@ -84,7 +84,7 @@
 	<mainMessage3>The Colorado River Basin's abundant water storage capacity has made the Southwest more resilient to drought.</mainMessage3>
 	<coBasinReservoir1>The basin-wide storage capacity of the Colorado River totals about 60 million acre-feet (maf), approximately four times the average annual inflow in the Upper Basin (14.8 maf). The Basin’s two largest reservoirs, Lake Powell and Lake Mead hold about 50 maf combined, which is approximately 83 percent of the total system storage capacity. This large storage capacity creates a buffer against year-to-year hydrologic variability and longer-term drought periods by allowing excess water to be stored during wet years and used during dry years. </coBasinReservoir1>
 	<coBasinReservoir2>It is this large amount of basin-wide storage capacity that has allowed the Bureau of Reclamation to continue to meet water delivery requirements during the current drought period. It should be noted, however, that headwater reaches in the Upper Basin can experience localized shortages due to insufficient in-stream flows during dry years.</coBasinReservoir2>
-	<coBasinReservoir3>Utah under a foot of water</coBasinReservoir3>
+	<coBasinReservoir3>foot of water</coBasinReservoir3>
 	<coBasinReservoir4>The volume of water that can be stored in the Colorado River system reservoirs (60 million acre-feet) is enough to cover the State of Utah in about 1 foot of water. Dimensions shown above are not to scale.</coBasinReservoir4>
 	<coBasinReservoir5>Bureau of Reclamation. Colorado River Basin Supply and Demand Study, 2012.</coBasinReservoir5>
 	<mainMessage4>Development in the West continues, leading to increased water demand in the Colorado River Basin.</mainMessage4>
@@ -116,7 +116,7 @@
 	<lakeMeadStatic2>Continue with the visualization to learn more about Lake Mead's operational conditions, how operational conditions are determined, and the potential impacts of drought on water deliveries in the Lower Basin.</lakeMeadStatic2>
 	<lakeMeadStatic4>National Oceanic and Atmospheric Administration Colorado River Basin River Forecast Center</lakeMeadStatic4>
 	<lakeMeadStatic5>U.S. Geological Survey Stream Gage Information</lakeMeadStatic5>
-	<lakeMeadStatic6>Bureau of Reclamation Reclamation's 24-Month Study reports:</lakeMeadStatic6>
+	<lakeMeadStatic6>Bureau of Reclamation Reclamation's Colorado River Basin 24-Month Study reports</lakeMeadStatic6>
 	<lakeMeadStatic7>Upper Colorado Region Water Operations website</lakeMeadStatic7>
 	<lakeMeadStatic8>Lower Colorado Region Water Operations</lakeMeadStatic8>
 	<lakeMeadStatic9>2007 Record of Decision on Colorado River Interim Guidelines for Lower Basin Shortages and the Coordinated Operations for Lake Powell and Lake Mead (2007 Interim Guidelines)</lakeMeadStatic9>
@@ -290,9 +290,12 @@
 	<projFigProjected>Projected</projFigProjected>
 	<projFigFloodDesktop1>Flood Control</projFigFloodDesktop1>
 	<projFigFloodDesktop2>Conditions</projFigFloodDesktop2>
-	<projFigSurplusDesktop>Surplus Conditions</projFigSurplusDesktop>
-	<projFigNormalDesktop>Normal Conditions</projFigNormalDesktop>
-	<projFigShortageDesktop>Shortage Conditions</projFigShortageDesktop>
+	<projFigSurplusDesktop1>Surplus Conditions</projFigSurplusDesktop1>
+	<projFigSurplusDesktop2> </projFigSurplusDesktop2>
+	<projFigNormalDesktop1>Normal Conditions</projFigNormalDesktop1>
+	<projFigNormalDesktop2> </projFigNormalDesktop2>
+	<projFigShortageDesktop1>Shortage Conditions</projFigShortageDesktop1>
+	<projFigShortageDesktop2> </projFigShortageDesktop2>
 	<projFigFloodMobile>Flood Control</projFigFloodMobile>
 	<projFigSurplusMobile>Surplus</projFigSurplusMobile>
 	<projFigNormalMobile>Normal</projFigNormalMobile>
