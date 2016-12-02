@@ -9,7 +9,7 @@ info:
   description: >-
     "Drought in the Colorado River Basin: Insights using open data"
   thumbnail: 
-    url: https://www.doi.gov/water/owdi.cr.drought/img/thumbnail.jpg
+    url: images/thumbnail.jpg
     width: 250    
     height: 250   
     type: image/jpg
