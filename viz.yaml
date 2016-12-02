@@ -9,7 +9,7 @@ info:
   description: >-
     "Drought in the Colorado River Basin: Insights using open data"
   thumbnail: 
-    url: images/thumbnail.jpg
+    url: img/thumbnail_vizlab.jpg
     width: 250    
     height: 250   
     type: image/jpg
