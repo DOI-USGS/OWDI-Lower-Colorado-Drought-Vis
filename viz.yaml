@@ -1,0 +1,20 @@
+vizlab: "0.1.5"
+info:
+  id: lower-colorado-drought
+  name: OWDI Lower Colorado Drought Viz
+  date: 2016-12-02
+  publish-date: 2015-12-16
+  path: https://www.doi.gov/water/owdi.cr.drought/en/index.html
+  analytics-id: UA-78530187-1
+  description: >-
+    "Drought in the Colorado River Basin: Insights using open data"
+  thumbnail: 
+    url: https://www.doi.gov/water/owdi.cr.drought/img/thumbnail.jpg
+    width: 250    
+    height: 250   
+    type: image/jpg
+    alttext: Lower Colorado basin water shortage
+fetch:
+process:
+visualize:
+publish:
