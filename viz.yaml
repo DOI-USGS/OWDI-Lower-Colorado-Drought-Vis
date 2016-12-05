@@ -4,7 +4,7 @@ info:
   name: OWDI Lower Colorado Drought Viz
   date: 2016-12-02
   publish-date: 2015-12-16
-  path: https://www.doi.gov/water/owdi.cr.drought/en/index.html
+  path: https://www.doi.gov/water/owdi.cr.drought
   analytics-id: UA-78530187-1
   description: >-
     "Drought in the Colorado River Basin: Insights using open data"
